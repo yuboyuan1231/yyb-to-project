@@ -1,0 +1,19 @@
+{
+  "status": "C7_B3_OFFICIAL_READY",
+  "official_val_used": false,
+  "promoted": false,
+  "selected_candidate": "calibrated_A4",
+  "selected_config": {
+    "T": 0.5,
+    "lambda": 1.0,
+    "clip": 3.0,
+    "normalization": "per_query_z"
+  },
+  "freeze_package": {
+    "path": "c7_audit/C7_B3_FINAL_FREEZE_PACKAGE.json",
+    "exists": true,
+    "size": 1566,
+    "sha256": "e35145edc87c2767366839e382614db5f750edeebd2b570c8acffeed4c3fc7a8"
+  },
+  "requires_human_authorization_before_official_val": true
+}

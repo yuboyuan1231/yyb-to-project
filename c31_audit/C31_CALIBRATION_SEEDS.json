@@ -1,0 +1,284 @@
+{
+  "status": "PASS",
+  "scope": "train_calib_only",
+  "official_val_used": false,
+  "source_full_grids": [
+    "results/rlem_c31_capacity/models/cap_F_wd0/full_grid_results.json",
+    "results/rlem_c31_capacity/models/fp_bce/full_grid_results.json",
+    "results/rlem_c31_capacity/models/cap_E_wd1e4/full_grid_results.json"
+  ],
+  "top_per_family": 3,
+  "seed_count": 27,
+  "configs": [
+    {
+      "config_id": "grid_0060",
+      "family": "A_additive",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.207193805546018
+    },
+    {
+      "config_id": "grid_0189",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.186215051302588
+    },
+    {
+      "config_id": "grid_0185",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.25,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.1580844490216275
+    },
+    {
+      "config_id": "grid_0589",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.26917648853797
+    },
+    {
+      "config_id": "grid_0573",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.5,
+      "b_bd": 0.75,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.223881450966929
+    },
+    {
+      "config_id": "grid_0460",
+      "family": "B_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.207193805546018
+    },
+    {
+      "config_id": "grid_0997",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 1.0,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.223881450966929
+    },
+    {
+      "config_id": "grid_0860",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.207193805546018
+    },
+    {
+      "config_id": "grid_0993",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.75,
+      "d_fp": 0.5,
+      "model_id": "cap_F_wd0",
+      "unit_temperature_selection_score": 4.181923942480068
+    },
+    {
+      "config_id": "grid_0166",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.5,
+      "b_bd": 0.25,
+      "d_fp": 0.75,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.1933668993401225
+    },
+    {
+      "config_id": "grid_0189",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.1895525803867715
+    },
+    {
+      "config_id": "grid_0060",
+      "family": "A_additive",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.177156043788382
+    },
+    {
+      "config_id": "grid_0589",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.219113552275241
+    },
+    {
+      "config_id": "grid_0460",
+      "family": "B_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.177156043788382
+    },
+    {
+      "config_id": "grid_0573",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.5,
+      "b_bd": 0.75,
+      "d_fp": 0.5,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.145211122554067
+    },
+    {
+      "config_id": "grid_0860",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.177156043788382
+    },
+    {
+      "config_id": "grid_0997",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 1.0,
+      "d_fp": 0.5,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.118510889880611
+    },
+    {
+      "config_id": "grid_0993",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.75,
+      "d_fp": 0.5,
+      "model_id": "fp_bce",
+      "unit_temperature_selection_score": 4.0999160849830245
+    },
+    {
+      "config_id": "grid_0166",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.5,
+      "b_bd": 0.25,
+      "d_fp": 0.75,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.16857382614334
+    },
+    {
+      "config_id": "grid_0060",
+      "family": "A_additive",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.1523629705916
+    },
+    {
+      "config_id": "grid_0189",
+      "family": "A_additive",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.090857077468817
+    },
+    {
+      "config_id": "grid_0577",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.5,
+      "b_bd": 1.0,
+      "d_fp": 0.5,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.259163901285425
+    },
+    {
+      "config_id": "grid_0589",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 0.5,
+      "d_fp": 0.5,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.216729602929396
+    },
+    {
+      "config_id": "grid_0460",
+      "family": "B_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.1523629705916
+    },
+    {
+      "config_id": "grid_0860",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.5,
+      "b_bd": 0.0,
+      "d_fp": 0.25,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.1523629705916
+    },
+    {
+      "config_id": "grid_0997",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 1.0,
+      "d_fp": 0.5,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.142350383339054
+    },
+    {
+      "config_id": "grid_0825",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.5,
+      "a_joint": 1.0,
+      "b_bd": 0.25,
+      "d_fp": 0.5,
+      "model_id": "cap_E_wd1e4",
+      "unit_temperature_selection_score": 4.116126940534768
+    }
+  ]
+}

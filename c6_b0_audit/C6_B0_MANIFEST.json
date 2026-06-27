@@ -1,0 +1,39 @@
+{
+  "C4_final_retained": true,
+  "C6_A_R2": "negative",
+  "C6_B1_used": false,
+  "C6_C_used": false,
+  "R1_primary": true,
+  "R5_secondary_safety": true,
+  "decision": {
+    "C6_B1_used": false,
+    "C6_C_used": false,
+    "official_val_used": false,
+    "r1_primary_r5_safety_policy": "R@1 is the primary observation; R@5 is a safety/secondary constraint. B0 is not a final VCMR result.",
+    "status": "C6_B0_NEGATIVE",
+    "variant_decisions": {
+      "boundary_oracle_candidates": {
+        "candidate_generation_oracle_positive": false,
+        "no_severe_r5_collapse": false,
+        "r1_primary_delta_min": 0.1830873097608432,
+        "r5_safety_delta_min": -3.8105046343975317,
+        "recommend_c6_b1_review": false
+      },
+      "hybrid_candidates": {
+        "candidate_generation_oracle_positive": false,
+        "no_severe_r5_collapse": false,
+        "r1_primary_delta_min": 0.1830873097608432,
+        "r5_safety_delta_min": -3.8105046343975317,
+        "recommend_c6_b1_review": false
+      }
+    }
+  },
+  "evaluator_modified": false,
+  "fixed_candidate_adapter_line": "stopped",
+  "full_backbone_finetuning": false,
+  "official_val_authorized": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "stage": "C6-B0 Candidate Generation Diagnostic",
+  "status": "C6_B0_NEGATIVE"
+}

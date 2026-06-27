@@ -1,0 +1,112 @@
+{
+  "status": "FROZEN_BEFORE_C31_EXECUTION",
+  "date": "2026-06-22",
+  "stage": "C3.1 capacity and calibration strengthening",
+  "scope": "train_fit and train_calib only",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "forbidden": [
+    "official val evidence",
+    "official val learned rerank",
+    "QSP",
+    "REG",
+    "AMD",
+    "R2 or VS head",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "feature_schema": {
+    "name": "c2_no_r2",
+    "feature_count": 31,
+    "disabled": ["r2_raw", "r2_prob", "r2_tilde", "rank_r2", "r_abs_gap"]
+  },
+  "inputs": {
+    "train_evidence": {
+      "path": "results/rlem_c1/train_evidence.jsonl.gz",
+      "sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48"
+    },
+    "train_fit_ids": {
+      "path": "results/rlem_c2/splits/train_fit_desc_ids.txt",
+      "sha256": "e333aa4935ff3648367dff454987a6b6764a24df52cf3412fcc75a8213ca9fd2"
+    },
+    "train_calib_ids": {
+      "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+      "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a"
+    },
+    "c2_cache": "results/rlem_c2/cache",
+    "frozen_c3_strong_config": {
+      "path": "results/rlem_c3_strong/best_config.json",
+      "sha256": "5008fb07200bcf0efc0d9ee4514a5a7d8fffa81531c7f7a5693d299071708360"
+    },
+    "frozen_official_val_manifest_expected_sha256": "cfb24087a7e2ae72d2624407155fed42adbd9ee2f72a91fee0e87b9133e66d07"
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 1024,
+    "lr": 0.001,
+    "seed": 13,
+    "checkpoint_selection": "minimum train_calib loss within each config",
+    "fp_pos_weight_mode": "automatic train_fit negative_to_positive ratio",
+    "sanity_rows": {"train": 500000, "calib": 100000}
+  },
+  "staged_search": {
+    "capacity_stage": {
+      "architectures": {
+        "A": {"hidden_dims": [128], "dropout": 0.0},
+        "B": {"hidden_dims": [128, 128], "dropout": 0.1},
+        "C": {"hidden_dims": [256], "dropout": 0.1},
+        "D": {"hidden_dims": [256, 128], "dropout": 0.1},
+        "E": {"hidden_dims": [256, 256], "dropout": 0.1},
+        "F": {"hidden_dims": [256, 256, 128], "dropout": 0.1}
+      },
+      "weight_decay": [0.0, 0.00001, 0.0001],
+      "model_count": 18,
+      "loss": {"joint_reg": 1.0, "joint_bin": 0.25, "boundary": 1.0, "fp": 0.5},
+      "fp_loss": "bce"
+    },
+    "loss_stage": {
+      "architecture": "capacity-stage winner with simplicity tie-break",
+      "joint_reg": [1.0],
+      "joint_bin": [0.5, 1.0],
+      "boundary": [0.5, 1.0],
+      "fp": [0.5, 1.0, 1.5],
+      "model_count": 12
+    },
+    "fp_stage": {
+      "architecture_and_loss": "loss-stage winner",
+      "variants": ["bce", "bce_pos_weight_auto", "focal_gamma_1", "focal_gamma_2"],
+      "model_count": 4
+    },
+    "screening": {
+      "all_full_models": 34,
+      "probe": "frozen C3-strong weights across A/B/C families with T=1",
+      "full_grid_finalists": 3
+    },
+    "score_grid_per_finalist": {
+      "base_scale": [0.5, 0.75, 1.0, 1.25],
+      "a_joint": [0.75, 1.0, 1.25, 1.5, 1.75],
+      "b_bd": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "d_fp": [0.25, 0.5, 0.75, 1.0],
+      "families": ["A_additive", "B_gated_boundary", "C_centered_gated_boundary"],
+      "temperature": 1.0,
+      "config_count": 1200
+    },
+    "calibration_per_finalist": {
+      "applied_to": "top three feasible score configs per family",
+      "q_joint_temperature": [0.75, 1.0, 1.25, 1.5],
+      "e_fp_temperature": [0.75, 1.0, 1.25, 1.5],
+      "q_bd_temperature": [1.0, 1.25],
+      "accept_nonunit_temperature_min_selection_gain": 0.05
+    },
+    "local_refinement_rounds_max": 1
+  },
+  "selection": {
+    "inherits_c3_strong_safety_constraints": true,
+    "selection_score": "mean six primary deltas + 0.25*mean two R100 deltas",
+    "simplicity_tolerance": 0.1,
+    "c31_breakthrough_min_gain_vs_frozen_c3_strong": 0.1,
+    "if_gain_below_threshold": "retain frozen C3-strong and conclude scalar capacity near plateau"
+  },
+  "next_stage_authorized": false
+}

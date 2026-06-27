@@ -1,0 +1,2567 @@
+{
+  "status": "C7_B6_COUNTERFACTUAL_TOP1_SWAP_ORACLE_COMPLETE",
+  "official_val_used": false,
+  "baseline": "C7-B2.1 A4 fixed-pool ranking",
+  "systems": {
+    "standard_train_calib": {
+      "S0_top5_internal_SN": {
+        "name": "S0_top5_internal_SN",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 50.6579704284668,
+          "0.5-r5": 72.52545928955078,
+          "0.5-r10": 76.6906967163086,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 30.89598274230957,
+          "0.7-r5": 58.48495101928711,
+          "0.7-r10": 66.42636108398438,
+          "0.7-r100": 71.98764038085938
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -0.19453048706054688,
+          "0.5-r5": 0.011444091796875,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -0.1373157501220703,
+          "0.7-r5": -0.06866073608398438,
+          "0.7-r10": 0.0,
+          "0.7-r100": -0.011444091796875
+        },
+        "changed_query_count": 6748,
+        "changed_query_rate": 0.772170728916352,
+        "top1_changed_rate": 0.21283899759697905,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 302,
+            "loss_queries": 319
+          },
+          "0.5-r5": {
+            "gain_queries": 3,
+            "loss_queries": 2
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 191,
+            "loss_queries": 203
+          },
+          "0.7-r5": {
+            "gain_queries": 6,
+            "loss_queries": 12
+          },
+          "0.7-r10": {
+            "gain_queries": 4,
+            "loss_queries": 4
+          },
+          "0.7-r100": {
+            "gain_queries": 3,
+            "loss_queries": 4
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 191,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 203,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.011444091796875
+          }
+        }
+      },
+      "S1_top10_internal_SN": {
+        "name": "S1_top10_internal_SN",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 49.170387268066406,
+          "0.5-r5": 72.54834747314453,
+          "0.5-r10": 76.6906967163086,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 30.117862701416016,
+          "0.7-r5": 58.45062255859375,
+          "0.7-r10": 66.460693359375,
+          "0.7-r100": 71.99908447265625
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -1.6821136474609375,
+          "0.5-r5": 0.034332275390625,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -0.915435791015625,
+          "0.7-r5": -0.10298919677734375,
+          "0.7-r10": 0.034332275390625,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 7468,
+        "changed_query_rate": 0.854560018308731,
+        "top1_changed_rate": 0.29522828698935805,
+        "top5_set_changed_rate": 0.082389289392379,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 396,
+            "loss_queries": 543
+          },
+          "0.5-r5": {
+            "gain_queries": 9,
+            "loss_queries": 6
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 251,
+            "loss_queries": 331
+          },
+          "0.7-r5": {
+            "gain_queries": 19,
+            "loss_queries": 28
+          },
+          "0.7-r10": {
+            "gain_queries": 8,
+            "loss_queries": 5
+          },
+          "0.7-r100": {
+            "gain_queries": 5,
+            "loss_queries": 5
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 191,
+          "<=10": 60,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 203,
+          "<=10": 128,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S2_top20_diagnostic_SN": {
+        "name": "S2_top20_diagnostic_SN",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 46.60716247558594,
+          "0.5-r5": 72.47969055175781,
+          "0.5-r10": 76.6906967163086,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 28.44719123840332,
+          "0.7-r5": 58.34763717651367,
+          "0.7-r10": 66.49502563476562,
+          "0.7-r100": 71.99908447265625
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -4.245338439941406,
+          "0.5-r5": -0.03432464599609375,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -2.5861072540283203,
+          "0.7-r5": -0.20597457885742188,
+          "0.7-r10": 0.06866455078125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 8109,
+        "changed_query_rate": 0.9279093717816684,
+        "top1_changed_rate": 0.36857764046229546,
+        "top5_set_changed_rate": 0.15573864286531638,
+        "top10_set_changed_rate": 0.0733493534729374,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 429,
+            "loss_queries": 800
+          },
+          "0.5-r5": {
+            "gain_queries": 19,
+            "loss_queries": 22
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 269,
+            "loss_queries": 495
+          },
+          "0.7-r5": {
+            "gain_queries": 27,
+            "loss_queries": 45
+          },
+          "0.7-r10": {
+            "gain_queries": 12,
+            "loss_queries": 6
+          },
+          "0.7-r100": {
+            "gain_queries": 5,
+            "loss_queries": 5
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 191,
+          "<=10": 60,
+          ">10": 18
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 203,
+          "<=10": 128,
+          ">10": 164
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S0_top5_internal_RRF": {
+        "name": "S0_top5_internal_RRF",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 59.045658111572266,
+          "0.5-r5": 72.49113464355469,
+          "0.5-r10": 76.67925262451172,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 35.5647087097168,
+          "0.7-r5": 58.48495101928711,
+          "0.7-r10": 66.3805923461914,
+          "0.7-r100": 71.96475219726562
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 8.193157196044922,
+          "0.5-r5": -0.02288055419921875,
+          "0.5-r10": -0.011444091796875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 4.531410217285156,
+          "0.7-r5": -0.06866073608398438,
+          "0.7-r10": -0.04576873779296875,
+          "0.7-r100": -0.034332275390625
+        },
+        "changed_query_count": 7162,
+        "changed_query_rate": 0.8195445703169699,
+        "top1_changed_rate": 0.19464469618949537,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 736,
+            "loss_queries": 20
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 413,
+            "loss_queries": 17
+          },
+          "0.7-r5": {
+            "gain_queries": 2,
+            "loss_queries": 8
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 5
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 413,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 17,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.034332275390625
+          }
+        }
+      },
+      "S1_top10_internal_RRF": {
+        "name": "S1_top10_internal_RRF",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 61.826297760009766,
+          "0.5-r5": 72.85730743408203,
+          "0.5-r10": 76.67925262451172,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 37.246826171875,
+          "0.7-r5": 58.62226867675781,
+          "0.7-r10": 66.3805923461914,
+          "0.7-r100": 71.95331573486328
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 10.973796844482422,
+          "0.5-r5": 0.343292236328125,
+          "0.5-r10": -0.011444091796875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 6.213527679443359,
+          "0.7-r5": 0.06865692138671875,
+          "0.7-r10": -0.04576873779296875,
+          "0.7-r100": -0.04576873779296875
+        },
+        "changed_query_count": 8005,
+        "changed_query_rate": 0.9160086966472136,
+        "top1_changed_rate": 0.2911088225197391,
+        "top5_set_changed_rate": 0.09646412633024373,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 995,
+            "loss_queries": 36
+          },
+          "0.5-r5": {
+            "gain_queries": 33,
+            "loss_queries": 3
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 566,
+            "loss_queries": 23
+          },
+          "0.7-r5": {
+            "gain_queries": 18,
+            "loss_queries": 12
+          },
+          "0.7-r10": {
+            "gain_queries": 2,
+            "loss_queries": 6
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 4
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 413,
+          "<=10": 153,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 17,
+          "<=10": 6,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.04576873779296875
+          }
+        }
+      },
+      "S2_top20_diagnostic_RRF": {
+        "name": "S2_top20_diagnostic_RRF",
+        "query_count": 8739,
+        "metrics": {
+          "0.5-r1": 62.764617919921875,
+          "0.5-r5": 73.36079406738281,
+          "0.5-r10": 76.71358489990234,
+          "0.5-r100": 78.36136627197266,
+          "0.7-r1": 37.77320098876953,
+          "0.7-r5": 58.81679916381836,
+          "0.7-r10": 66.36914825439453,
+          "0.7-r100": 71.95331573486328
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 11.912117004394531,
+          "0.5-r5": 0.8467788696289062,
+          "0.5-r10": 0.02288818359375,
+          "0.5-r100": 0.0,
+          "0.7-r1": 6.739902496337891,
+          "0.7-r5": 0.2631874084472656,
+          "0.7-r10": -0.05721282958984375,
+          "0.7-r100": -0.04576873779296875
+        },
+        "changed_query_count": 8546,
+        "changed_query_rate": 0.9779150932600984,
+        "top1_changed_rate": 0.35301521913262385,
+        "top5_set_changed_rate": 0.1583705229431285,
+        "top10_set_changed_rate": 0.061906396612884766,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 1083,
+            "loss_queries": 42
+          },
+          "0.5-r5": {
+            "gain_queries": 81,
+            "loss_queries": 7
+          },
+          "0.5-r10": {
+            "gain_queries": 4,
+            "loss_queries": 2
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 613,
+            "loss_queries": 24
+          },
+          "0.7-r5": {
+            "gain_queries": 39,
+            "loss_queries": 16
+          },
+          "0.7-r10": {
+            "gain_queries": 3,
+            "loss_queries": 8
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 4
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 413,
+          "<=10": 153,
+          ">10": 47
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 17,
+          "<=10": 6,
+          ">10": 1
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.04576873779296875
+          }
+        }
+      }
+    },
+    "calib_A": {
+      "S0_top5_internal_SN": {
+        "name": "S0_top5_internal_SN",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 50.815025329589844,
+          "0.5-r5": 70.94259643554688,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 29.766122817993164,
+          "0.7-r5": 56.90999221801758,
+          "0.7-r10": 65.69808959960938,
+          "0.7-r100": 71.50956726074219
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -1.1339454650878906,
+          "0.5-r5": -0.07086944580078125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -0.49610328674316406,
+          "0.7-r5": -0.2834892272949219,
+          "0.7-r10": -0.07086944580078125,
+          "0.7-r100": -0.07086944580078125
+        },
+        "changed_query_count": 1099,
+        "changed_query_rate": 0.778880226789511,
+        "top1_changed_rate": 0.21545003543586108,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 43,
+            "loss_queries": 59
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 28,
+            "loss_queries": 35
+          },
+          "0.7-r5": {
+            "gain_queries": 0,
+            "loss_queries": 4
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 35,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07086944580078125
+          }
+        }
+      },
+      "S1_top10_internal_SN": {
+        "name": "S1_top10_internal_SN",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 48.5471305847168,
+          "0.5-r5": 70.94259643554688,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 28.561304092407227,
+          "0.7-r5": 56.90999221801758,
+          "0.7-r10": 65.69808959960938,
+          "0.7-r100": 71.50956726074219
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -3.4018402099609375,
+          "0.5-r5": -0.07086944580078125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -1.7009220123291016,
+          "0.7-r5": -0.2834892272949219,
+          "0.7-r10": -0.07086944580078125,
+          "0.7-r100": -0.07086944580078125
+        },
+        "changed_query_count": 1202,
+        "changed_query_rate": 0.8518781006378455,
+        "top1_changed_rate": 0.2884479092841956,
+        "top5_set_changed_rate": 0.07299787384833452,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 50,
+            "loss_queries": 98
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 32,
+            "loss_queries": 56
+          },
+          "0.7-r5": {
+            "gain_queries": 0,
+            "loss_queries": 4
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 4,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 35,
+          "<=10": 21,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07086944580078125
+          }
+        }
+      },
+      "S2_top20_diagnostic_SN": {
+        "name": "S2_top20_diagnostic_SN",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 45.21615982055664,
+          "0.5-r5": 70.87171936035156,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 26.29340934753418,
+          "0.7-r5": 57.051734924316406,
+          "0.7-r10": 65.83982849121094,
+          "0.7-r100": 71.50956726074219
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -6.732810974121094,
+          "0.5-r5": -0.14174652099609375,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -3.9688167572021484,
+          "0.7-r5": -0.14174652099609375,
+          "0.7-r10": 0.07086944580078125,
+          "0.7-r100": -0.07086944580078125
+        },
+        "changed_query_count": 1308,
+        "changed_query_rate": 0.9270021261516654,
+        "top1_changed_rate": 0.3635719347980156,
+        "top5_set_changed_rate": 0.1481218993621545,
+        "top10_set_changed_rate": 0.07512402551381998,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 54,
+            "loss_queries": 149
+          },
+          "0.5-r5": {
+            "gain_queries": 1,
+            "loss_queries": 3
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 34,
+            "loss_queries": 90
+          },
+          "0.7-r5": {
+            "gain_queries": 2,
+            "loss_queries": 4
+          },
+          "0.7-r10": {
+            "gain_queries": 2,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 4,
+          ">10": 2
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 35,
+          "<=10": 21,
+          ">10": 34
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07086944580078125
+          }
+        }
+      },
+      "S0_top5_internal_RRF": {
+        "name": "S0_top5_internal_RRF",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 58.82352828979492,
+          "0.5-r5": 70.94259643554688,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 33.80581283569336,
+          "0.7-r5": 57.12260818481445,
+          "0.7-r10": 65.69808959960938,
+          "0.7-r100": 71.58043670654297
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 6.8745574951171875,
+          "0.5-r5": -0.07086944580078125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 3.5435867309570312,
+          "0.7-r5": -0.07087326049804688,
+          "0.7-r10": -0.07086944580078125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1171,
+        "changed_query_rate": 0.8299078667611623,
+        "top1_changed_rate": 0.18922749822820695,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 103,
+            "loss_queries": 6
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 56,
+            "loss_queries": 6
+          },
+          "0.7-r5": {
+            "gain_queries": 1,
+            "loss_queries": 2
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 56,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 6,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S1_top10_internal_RRF": {
+        "name": "S1_top10_internal_RRF",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 60.94968032836914,
+          "0.5-r5": 71.22608184814453,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 35.22324752807617,
+          "0.7-r5": 57.26435089111328,
+          "0.7-r10": 65.69808959960938,
+          "0.7-r100": 71.58043670654297
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 9.000709533691406,
+          "0.5-r5": 0.212615966796875,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 4.961021423339844,
+          "0.7-r5": 0.07086944580078125,
+          "0.7-r10": -0.07086944580078125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1296,
+        "changed_query_rate": 0.9184975194897236,
+        "top1_changed_rate": 0.27781715095676823,
+        "top5_set_changed_rate": 0.0885896527285613,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 135,
+            "loss_queries": 8
+          },
+          "0.5-r5": {
+            "gain_queries": 4,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 76,
+            "loss_queries": 6
+          },
+          "0.7-r5": {
+            "gain_queries": 3,
+            "loss_queries": 2
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 56,
+          "<=10": 20,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 6,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S2_top20_diagnostic_RRF": {
+        "name": "S2_top20_diagnostic_RRF",
+        "query_count": 1411,
+        "metrics": {
+          "0.5-r1": 61.51665496826172,
+          "0.5-r5": 71.58043670654297,
+          "0.5-r10": 76.04535675048828,
+          "0.5-r100": 78.24237823486328,
+          "0.7-r1": 35.43585968017578,
+          "0.7-r5": 57.33522415161133,
+          "0.7-r10": 65.69808959960938,
+          "0.7-r100": 71.58043670654297
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 9.567684173583984,
+          "0.5-r5": 0.5669708251953125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 5.173633575439453,
+          "0.7-r5": 0.14174270629882812,
+          "0.7-r10": -0.07086944580078125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1376,
+        "changed_query_rate": 0.9751948972360028,
+        "top1_changed_rate": 0.3345145287030475,
+        "top5_set_changed_rate": 0.14528703047484054,
+        "top10_set_changed_rate": 0.05669737774627923,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 143,
+            "loss_queries": 8
+          },
+          "0.5-r5": {
+            "gain_queries": 9,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 79,
+            "loss_queries": 6
+          },
+          "0.7-r5": {
+            "gain_queries": 4,
+            "loss_queries": 2
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 56,
+          "<=10": 20,
+          ">10": 3
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 6,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      }
+    },
+    "calib_B": {
+      "S0_top5_internal_SN": {
+        "name": "S0_top5_internal_SN",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 50.818450927734375,
+          "0.5-r5": 73.58631134033203,
+          "0.5-r10": 77.75297546386719,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 32.36606979370117,
+          "0.7-r5": 58.85416793823242,
+          "0.7-r10": 67.33631134033203,
+          "0.7-r100": 72.24702453613281
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 0.14880752563476562,
+          "0.5-r5": 0.0,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 0.7440452575683594,
+          "0.7-r5": -0.07440185546875,
+          "0.7-r10": 0.0,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1026,
+        "changed_query_rate": 0.7633928571428571,
+        "top1_changed_rate": 0.20833333333333334,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 42,
+            "loss_queries": 40
+          },
+          "0.5-r5": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 28,
+            "loss_queries": 18
+          },
+          "0.7-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 18,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S1_top10_internal_SN": {
+        "name": "S1_top10_internal_SN",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 49.925594329833984,
+          "0.5-r5": 73.4375,
+          "0.5-r10": 77.75297546386719,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 32.068450927734375,
+          "0.7-r5": 58.48214340209961,
+          "0.7-r10": 67.48512268066406,
+          "0.7-r100": 72.24702453613281
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -0.744049072265625,
+          "0.5-r5": -0.14881134033203125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 0.4464263916015625,
+          "0.7-r5": -0.4464263916015625,
+          "0.7-r10": 0.14881134033203125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1153,
+        "changed_query_rate": 0.8578869047619048,
+        "top1_changed_rate": 0.30282738095238093,
+        "top5_set_changed_rate": 0.09449404761904762,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 63,
+            "loss_queries": 73
+          },
+          "0.5-r5": {
+            "gain_queries": 1,
+            "loss_queries": 3
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 40,
+            "loss_queries": 34
+          },
+          "0.7-r5": {
+            "gain_queries": 3,
+            "loss_queries": 9
+          },
+          "0.7-r10": {
+            "gain_queries": 2,
+            "loss_queries": 0
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 12,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 18,
+          "<=10": 16,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S2_top20_diagnostic_SN": {
+        "name": "S2_top20_diagnostic_SN",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 47.842262268066406,
+          "0.5-r5": 73.4375,
+          "0.5-r10": 77.75297546386719,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 31.026784896850586,
+          "0.7-r5": 58.25893020629883,
+          "0.7-r10": 67.41071319580078,
+          "0.7-r100": 72.24702453613281
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -2.827381134033203,
+          "0.5-r5": -0.14881134033203125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -0.5952396392822266,
+          "0.7-r5": -0.6696395874023438,
+          "0.7-r10": 0.07440185546875,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1238,
+        "changed_query_rate": 0.9211309523809523,
+        "top1_changed_rate": 0.36607142857142855,
+        "top5_set_changed_rate": 0.15773809523809523,
+        "top10_set_changed_rate": 0.06324404761904762,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 69,
+            "loss_queries": 107
+          },
+          "0.5-r5": {
+            "gain_queries": 4,
+            "loss_queries": 6
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 42,
+            "loss_queries": 50
+          },
+          "0.7-r5": {
+            "gain_queries": 5,
+            "loss_queries": 14
+          },
+          "0.7-r10": {
+            "gain_queries": 2,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 28,
+          "<=10": 12,
+          ">10": 2
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 18,
+          "<=10": 16,
+          ">10": 16
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S0_top5_internal_RRF": {
+        "name": "S0_top5_internal_RRF",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 59.300594329833984,
+          "0.5-r5": 73.58631134033203,
+          "0.5-r10": 77.75297546386719,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 36.38393020629883,
+          "0.7-r5": 58.779762268066406,
+          "0.7-r10": 67.26190185546875,
+          "0.7-r100": 72.17262268066406
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 8.630950927734375,
+          "0.5-r5": 0.0,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 4.761905670166016,
+          "0.7-r5": -0.14880752563476562,
+          "0.7-r10": -0.07440948486328125,
+          "0.7-r100": -0.07440185546875
+        },
+        "changed_query_count": 1107,
+        "changed_query_rate": 0.8236607142857143,
+        "top1_changed_rate": 0.1956845238095238,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 118,
+            "loss_queries": 2
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 66,
+            "loss_queries": 2
+          },
+          "0.7-r5": {
+            "gain_queries": 1,
+            "loss_queries": 3
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 66,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 2,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07440185546875
+          }
+        }
+      },
+      "S1_top10_internal_RRF": {
+        "name": "S1_top10_internal_RRF",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 62.05356979370117,
+          "0.5-r5": 73.95833587646484,
+          "0.5-r10": 77.75297546386719,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 37.7976188659668,
+          "0.7-r5": 58.92856979370117,
+          "0.7-r10": 67.26190185546875,
+          "0.7-r100": 72.17262268066406
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 11.383926391601562,
+          "0.5-r5": 0.3720245361328125,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 6.175594329833984,
+          "0.7-r5": 0.0,
+          "0.7-r10": -0.07440948486328125,
+          "0.7-r100": -0.07440185546875
+        },
+        "changed_query_count": 1234,
+        "changed_query_rate": 0.9181547619047619,
+        "top1_changed_rate": 0.29017857142857145,
+        "top5_set_changed_rate": 0.09449404761904762,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 159,
+            "loss_queries": 6
+          },
+          "0.5-r5": {
+            "gain_queries": 5,
+            "loss_queries": 0
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 89,
+            "loss_queries": 6
+          },
+          "0.7-r5": {
+            "gain_queries": 4,
+            "loss_queries": 4
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 66,
+          "<=10": 23,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 2,
+          "<=10": 4,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07440185546875
+          }
+        }
+      },
+      "S2_top20_diagnostic_RRF": {
+        "name": "S2_top20_diagnostic_RRF",
+        "query_count": 1344,
+        "metrics": {
+          "0.5-r1": 62.87202453613281,
+          "0.5-r5": 74.47916412353516,
+          "0.5-r10": 77.82737731933594,
+          "0.5-r100": 79.31547546386719,
+          "0.7-r1": 38.39285659790039,
+          "0.7-r5": 59.300594329833984,
+          "0.7-r10": 67.26190185546875,
+          "0.7-r100": 72.17262268066406
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 12.202381134033203,
+          "0.5-r5": 0.892852783203125,
+          "0.5-r10": 0.07440185546875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 6.770832061767578,
+          "0.7-r5": 0.3720245361328125,
+          "0.7-r10": -0.07440948486328125,
+          "0.7-r100": -0.07440185546875
+        },
+        "changed_query_count": 1311,
+        "changed_query_rate": 0.9754464285714286,
+        "top1_changed_rate": 0.3474702380952381,
+        "top5_set_changed_rate": 0.15178571428571427,
+        "top10_set_changed_rate": 0.057291666666666664,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 170,
+            "loss_queries": 6
+          },
+          "0.5-r5": {
+            "gain_queries": 12,
+            "loss_queries": 0
+          },
+          "0.5-r10": {
+            "gain_queries": 1,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 97,
+            "loss_queries": 6
+          },
+          "0.7-r5": {
+            "gain_queries": 9,
+            "loss_queries": 4
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 66,
+          "<=10": 23,
+          ">10": 8
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 2,
+          "<=10": 4,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.07440185546875
+          }
+        }
+      }
+    },
+    "calib_C": {
+      "S0_top5_internal_SN": {
+        "name": "S0_top5_internal_SN",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 49.51845932006836,
+          "0.5-r5": 72.07062530517578,
+          "0.5-r10": 76.00321197509766,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 29.61476707458496,
+          "0.7-r5": 56.82183074951172,
+          "0.7-r10": 65.24879455566406,
+          "0.7-r100": 70.3852310180664
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -0.4815406799316406,
+          "0.5-r5": 0.0,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -0.3210277557373047,
+          "0.7-r5": -0.08025741577148438,
+          "0.7-r10": 0.0,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 972,
+        "changed_query_rate": 0.7800963081861958,
+        "top1_changed_rate": 0.2231139646869984,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 44,
+            "loss_queries": 50
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 27,
+            "loss_queries": 31
+          },
+          "0.7-r5": {
+            "gain_queries": 1,
+            "loss_queries": 2
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 27,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 31,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S1_top10_internal_SN": {
+        "name": "S1_top10_internal_SN",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 47.99357986450195,
+          "0.5-r5": 72.15088653564453,
+          "0.5-r10": 76.00321197509766,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 28.65168571472168,
+          "0.7-r5": 56.82183074951172,
+          "0.7-r10": 65.24879455566406,
+          "0.7-r100": 70.3852310180664
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -2.006420135498047,
+          "0.5-r5": 0.08026123046875,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -1.284109115600586,
+          "0.7-r5": -0.08025741577148438,
+          "0.7-r10": 0.0,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1064,
+        "changed_query_rate": 0.8539325842696629,
+        "top1_changed_rate": 0.2969502407704655,
+        "top5_set_changed_rate": 0.0738362760834671,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 56,
+            "loss_queries": 81
+          },
+          "0.5-r5": {
+            "gain_queries": 2,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 33,
+            "loss_queries": 49
+          },
+          "0.7-r5": {
+            "gain_queries": 4,
+            "loss_queries": 5
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 27,
+          "<=10": 6,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 31,
+          "<=10": 18,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S2_top20_diagnostic_SN": {
+        "name": "S2_top20_diagnostic_SN",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 45.42536163330078,
+          "0.5-r5": 72.15088653564453,
+          "0.5-r10": 76.00321197509766,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 26.966291427612305,
+          "0.7-r5": 56.66131591796875,
+          "0.7-r10": 65.24879455566406,
+          "0.7-r100": 70.3852310180664
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": -4.574638366699219,
+          "0.5-r5": 0.08026123046875,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": -2.969503402709961,
+          "0.7-r5": -0.24077224731445312,
+          "0.7-r10": 0.0,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 1163,
+        "changed_query_rate": 0.9333868378812199,
+        "top1_changed_rate": 0.37640449438202245,
+        "top5_set_changed_rate": 0.15329052969502407,
+        "top10_set_changed_rate": 0.07945425361155699,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 60,
+            "loss_queries": 117
+          },
+          "0.5-r5": {
+            "gain_queries": 3,
+            "loss_queries": 2
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 37,
+            "loss_queries": 74
+          },
+          "0.7-r5": {
+            "gain_queries": 5,
+            "loss_queries": 8
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.7-r100": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 27,
+          "<=10": 6,
+          ">10": 4
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 31,
+          "<=10": 18,
+          ">10": 25
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S0_top5_internal_RRF": {
+        "name": "S0_top5_internal_RRF",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 58.90850830078125,
+          "0.5-r5": 71.99037170410156,
+          "0.5-r10": 75.9229507446289,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 33.78812026977539,
+          "0.7-r5": 56.82183074951172,
+          "0.7-r10": 65.0882797241211,
+          "0.7-r100": 70.22471618652344
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 8.90850830078125,
+          "0.5-r5": -0.08025360107421875,
+          "0.5-r10": -0.08026123046875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 3.852325439453125,
+          "0.7-r5": -0.08025741577148438,
+          "0.7-r10": -0.16051483154296875,
+          "0.7-r100": -0.16051483154296875
+        },
+        "changed_query_count": 1012,
+        "changed_query_rate": 0.812199036918138,
+        "top1_changed_rate": 0.18780096308186195,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 112,
+            "loss_queries": 1
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 49,
+            "loss_queries": 1
+          },
+          "0.7-r5": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 1,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.16051483154296875
+          }
+        }
+      },
+      "S1_top10_internal_RRF": {
+        "name": "S1_top10_internal_RRF",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 62.19903564453125,
+          "0.5-r5": 72.55216979980469,
+          "0.5-r10": 75.9229507446289,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 35.71428680419922,
+          "0.7-r5": 57.062599182128906,
+          "0.7-r10": 65.0882797241211,
+          "0.7-r100": 70.22471618652344
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 12.19903564453125,
+          "0.5-r5": 0.48154449462890625,
+          "0.5-r10": -0.08026123046875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 5.778491973876953,
+          "0.7-r5": 0.16051101684570312,
+          "0.7-r10": -0.16051483154296875,
+          "0.7-r100": -0.16051483154296875
+        },
+        "changed_query_count": 1144,
+        "changed_query_rate": 0.9181380417335474,
+        "top1_changed_rate": 0.29373996789727125,
+        "top5_set_changed_rate": 0.10593900481540931,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 156,
+            "loss_queries": 4
+          },
+          "0.5-r5": {
+            "gain_queries": 7,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 73,
+            "loss_queries": 1
+          },
+          "0.7-r5": {
+            "gain_queries": 3,
+            "loss_queries": 1
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 24,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 1,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.16051483154296875
+          }
+        }
+      },
+      "S2_top20_diagnostic_RRF": {
+        "name": "S2_top20_diagnostic_RRF",
+        "query_count": 1246,
+        "metrics": {
+          "0.5-r1": 63.08186340332031,
+          "0.5-r5": 73.27447509765625,
+          "0.5-r10": 76.00321197509766,
+          "0.5-r100": 77.28732299804688,
+          "0.7-r1": 35.955055236816406,
+          "0.7-r5": 57.14285659790039,
+          "0.7-r10": 65.0882797241211,
+          "0.7-r100": 70.22471618652344
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 13.081863403320312,
+          "0.5-r5": 1.2038497924804688,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 6.019260406494141,
+          "0.7-r5": 0.2407684326171875,
+          "0.7-r10": -0.16051483154296875,
+          "0.7-r100": -0.16051483154296875
+        },
+        "changed_query_count": 1225,
+        "changed_query_rate": 0.9831460674157303,
+        "top1_changed_rate": 0.35874799357945425,
+        "top5_set_changed_rate": 0.1709470304975923,
+        "top10_set_changed_rate": 0.06500802568218299,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 168,
+            "loss_queries": 5
+          },
+          "0.5-r5": {
+            "gain_queries": 16,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 1,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 76,
+            "loss_queries": 1
+          },
+          "0.7-r5": {
+            "gain_queries": 5,
+            "loss_queries": 2
+          },
+          "0.7-r10": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 24,
+          ">10": 3
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 1,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.16051483154296875
+          }
+        }
+      }
+    },
+    "official_like_stress": {
+      "S0_top5_internal_SN": {
+        "name": "S0_top5_internal_SN",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 11.62915325164795,
+          "0.5-r5": 39.01393508911133,
+          "0.5-r10": 46.70418167114258,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 6.136119842529297,
+          "0.7-r5": 26.25937843322754,
+          "0.7-r10": 34.83386993408203,
+          "0.7-r100": 41.82743835449219
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 3.5905675888061523,
+          "0.5-r5": 0.053592681884765625,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 1.473740577697754,
+          "0.7-r5": -0.08038520812988281,
+          "0.7-r10": 0.0,
+          "0.7-r100": -0.0535888671875
+        },
+        "changed_query_count": 2555,
+        "changed_query_rate": 0.6846195069667739,
+        "top1_changed_rate": 0.2915326902465166,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 211,
+            "loss_queries": 77
+          },
+          "0.5-r5": {
+            "gain_queries": 3,
+            "loss_queries": 1
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 104,
+            "loss_queries": 49
+          },
+          "0.7-r5": {
+            "gain_queries": 3,
+            "loss_queries": 6
+          },
+          "0.7-r10": {
+            "gain_queries": 3,
+            "loss_queries": 3
+          },
+          "0.7-r100": {
+            "gain_queries": 1,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 104,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.0535888671875
+          }
+        }
+      },
+      "S1_top10_internal_SN": {
+        "name": "S1_top10_internal_SN",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 12.995712280273438,
+          "0.5-r5": 39.01393508911133,
+          "0.5-r10": 46.70418167114258,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 6.9935688972473145,
+          "0.7-r5": 26.312969207763672,
+          "0.7-r10": 34.91425323486328,
+          "0.7-r100": 41.88102722167969
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 4.957126617431641,
+          "0.5-r5": 0.053592681884765625,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 2.3311896324157715,
+          "0.7-r5": -0.02679443359375,
+          "0.7-r10": 0.08038330078125,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 3013,
+        "changed_query_rate": 0.8073419078242229,
+        "top1_changed_rate": 0.4142550911039657,
+        "top5_set_changed_rate": 0.1227224008574491,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 293,
+            "loss_queries": 108
+          },
+          "0.5-r5": {
+            "gain_queries": 7,
+            "loss_queries": 5
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 152,
+            "loss_queries": 65
+          },
+          "0.7-r5": {
+            "gain_queries": 13,
+            "loss_queries": 14
+          },
+          "0.7-r10": {
+            "gain_queries": 6,
+            "loss_queries": 3
+          },
+          "0.7-r100": {
+            "gain_queries": 3,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 104,
+          "<=10": 48,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 16,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S2_top20_diagnostic_SN": {
+        "name": "S2_top20_diagnostic_SN",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 13.04930305480957,
+          "0.5-r5": 38.93354797363281,
+          "0.5-r10": 46.70418167114258,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 7.020364284515381,
+          "0.7-r5": 26.339763641357422,
+          "0.7-r10": 34.96784591674805,
+          "0.7-r100": 41.88102722167969
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 5.010717391967773,
+          "0.5-r5": -0.02679443359375,
+          "0.5-r10": 0.0,
+          "0.5-r100": 0.0,
+          "0.7-r1": 2.357985019683838,
+          "0.7-r5": 0.0,
+          "0.7-r10": 0.13397598266601562,
+          "0.7-r100": 0.0
+        },
+        "changed_query_count": 3379,
+        "changed_query_rate": 0.9054126473740621,
+        "top1_changed_rate": 0.5123258306538049,
+        "top5_set_changed_rate": 0.2207931404072883,
+        "top10_set_changed_rate": 0.09807073954983923,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 325,
+            "loss_queries": 138
+          },
+          "0.5-r5": {
+            "gain_queries": 17,
+            "loss_queries": 18
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 170,
+            "loss_queries": 82
+          },
+          "0.7-r5": {
+            "gain_queries": 21,
+            "loss_queries": 21
+          },
+          "0.7-r10": {
+            "gain_queries": 9,
+            "loss_queries": 4
+          },
+          "0.7-r100": {
+            "gain_queries": 3,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 104,
+          "<=10": 48,
+          ">10": 18
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 49,
+          "<=10": 16,
+          ">10": 17
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "S0_top5_internal_RRF": {
+        "name": "S0_top5_internal_RRF",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 24.35691261291504,
+          "0.5-r5": 38.90675354003906,
+          "0.5-r10": 46.67738342285156,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 13.665595054626465,
+          "0.7-r5": 26.25937843322754,
+          "0.7-r10": 34.753482818603516,
+          "0.7-r100": 41.82743835449219
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 16.318326950073242,
+          "0.5-r5": -0.0535888671875,
+          "0.5-r10": -0.026798248291015625,
+          "0.5-r100": 0.0,
+          "0.7-r1": 9.003215789794922,
+          "0.7-r5": -0.08038520812988281,
+          "0.7-r10": -0.08038711547851562,
+          "0.7-r100": -0.0535888671875
+        },
+        "changed_query_count": 2190,
+        "changed_query_rate": 0.5868167202572347,
+        "top1_changed_rate": 0.3992497320471597,
+        "top5_set_changed_rate": 0.0,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 618,
+            "loss_queries": 9
+          },
+          "0.5-r5": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 344,
+            "loss_queries": 8
+          },
+          "0.7-r5": {
+            "gain_queries": 2,
+            "loss_queries": 5
+          },
+          "0.7-r10": {
+            "gain_queries": 1,
+            "loss_queries": 4
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 2
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 344,
+          "<=10": 0,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 8,
+          "<=10": 0,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.0535888671875
+          }
+        }
+      },
+      "S1_top10_internal_RRF": {
+        "name": "S1_top10_internal_RRF",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 31.136119842529297,
+          "0.5-r5": 39.76420211791992,
+          "0.5-r10": 46.67738342285156,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 17.71168327331543,
+          "0.7-r5": 26.580921173095703,
+          "0.7-r10": 34.753482818603516,
+          "0.7-r100": 41.80064392089844
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 23.0975341796875,
+          "0.5-r5": 0.8038597106933594,
+          "0.5-r10": -0.026798248291015625,
+          "0.5-r100": 0.0,
+          "0.7-r1": 13.049304008483887,
+          "0.7-r5": 0.24115753173828125,
+          "0.7-r10": -0.08038711547851562,
+          "0.7-r100": -0.08038330078125
+        },
+        "changed_query_count": 3019,
+        "changed_query_rate": 0.8089496248660236,
+        "top1_changed_rate": 0.6213826366559485,
+        "top5_set_changed_rate": 0.22213290460878884,
+        "top10_set_changed_rate": 0.0,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 877,
+            "loss_queries": 15
+          },
+          "0.5-r5": {
+            "gain_queries": 33,
+            "loss_queries": 3
+          },
+          "0.5-r10": {
+            "gain_queries": 0,
+            "loss_queries": 1
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 496,
+            "loss_queries": 9
+          },
+          "0.7-r5": {
+            "gain_queries": 18,
+            "loss_queries": 9
+          },
+          "0.7-r10": {
+            "gain_queries": 2,
+            "loss_queries": 5
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 344,
+          "<=10": 152,
+          ">10": 0
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 8,
+          "<=10": 1,
+          ">10": 0
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.08038330078125
+          }
+        }
+      },
+      "S2_top20_diagnostic_RRF": {
+        "name": "S2_top20_diagnostic_RRF",
+        "query_count": 3732,
+        "metrics": {
+          "0.5-r1": 33.30653762817383,
+          "0.5-r5": 40.91639709472656,
+          "0.5-r10": 46.75777053833008,
+          "0.5-r100": 49.59807205200195,
+          "0.7-r1": 18.890674591064453,
+          "0.7-r5": 27.009645462036133,
+          "0.7-r10": 34.726688385009766,
+          "0.7-r100": 41.80064392089844
+        },
+        "delta_vs_C7_B2_1_A4": {
+          "0.5-r1": 25.26795196533203,
+          "0.5-r5": 1.9560546875,
+          "0.5-r10": 0.0535888671875,
+          "0.5-r100": 0.0,
+          "0.7-r1": 14.22829532623291,
+          "0.7-r5": 0.6698818206787109,
+          "0.7-r10": -0.10718154907226562,
+          "0.7-r100": -0.08038330078125
+        },
+        "changed_query_count": 3550,
+        "changed_query_rate": 0.9512325830653805,
+        "top1_changed_rate": 0.7636655948553055,
+        "top5_set_changed_rate": 0.36441586280814575,
+        "top10_set_changed_rate": 0.1422829581993569,
+        "gain_loss_vs_baseline": {
+          "0.5-r1": {
+            "gain_queries": 963,
+            "loss_queries": 20
+          },
+          "0.5-r5": {
+            "gain_queries": 80,
+            "loss_queries": 7
+          },
+          "0.5-r10": {
+            "gain_queries": 4,
+            "loss_queries": 2
+          },
+          "0.5-r100": {
+            "gain_queries": 0,
+            "loss_queries": 0
+          },
+          "0.7-r1": {
+            "gain_queries": 541,
+            "loss_queries": 10
+          },
+          "0.7-r5": {
+            "gain_queries": 38,
+            "loss_queries": 13
+          },
+          "0.7-r10": {
+            "gain_queries": 3,
+            "loss_queries": 7
+          },
+          "0.7-r100": {
+            "gain_queries": 0,
+            "loss_queries": 3
+          }
+        },
+        "r1_07_gain_by_A4_rank_of_replacement": {
+          "<=5": 344,
+          "<=10": 152,
+          ">10": 45
+        },
+        "r1_07_loss_by_A4_rank_of_replacement": {
+          "<=5": 8,
+          "<=10": 1,
+          ">10": 1
+        },
+        "movement": {
+          "hard_positive_top100_query_exits": 0,
+          "hard_positive_top100_query_entries": 0,
+          "hard_positive_exit_ratio": 0.0,
+          "invalid_span_count": 0,
+          "duplicate_span_count_after_nms": 0,
+          "fixed_pool_invariant": true,
+          "R100_delta": {
+            "0.5-r100": 0.0,
+            "0.7-r100": -0.08038330078125
+          }
+        }
+      }
+    }
+  }
+}

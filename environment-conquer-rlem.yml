@@ -1,0 +1,18 @@
+name: conquer-rlem
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.19
+  - pip=23.3.1
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu117
+      - torch==2.0.1+cu117
+      - numpy==1.26.4
+      - scipy==1.10.1
+      - scikit-learn==1.6.1
+      - tqdm==4.65.2
+      - easydict==1.13
+      - lmdb==1.5.1
+      - msgpack==1.1.2
+      - msgpack-numpy==0.4.8
+      - tensorboard==2.20.0

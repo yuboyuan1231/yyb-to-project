@@ -1,0 +1,57 @@
+{
+  "C4_final_modified": false,
+  "C5_official_negative_modified": false,
+  "C6_B_used": false,
+  "C6_C_used": false,
+  "boundary_oracle_key_deltas_vs_frozen": {
+    "best_iou_rank_delta": -0.4789152349850916,
+    "end_abs_error_delta": -0.021155757489706106,
+    "end_ce_delta": -0.37566782245836805,
+    "oracle_video_r1_05_delta": 0.0018458043447394656,
+    "oracle_video_r1_07_delta": 0.0028396989919068916,
+    "peak_inside_gt_delta": 0.004543518387050971,
+    "selected_span_iou_delta": 0.0011520798655415554,
+    "start_abs_error_delta": -0.0029816839415022223,
+    "start_ce_delta": -0.3860126394049188
+  },
+  "c4_final": "C4-r2-cal-v2.1 v21_00444",
+  "candidate_regeneration_used": false,
+  "full_finetune_used": false,
+  "official_val_used": false,
+  "phase1_diagnostics_status": "PASS",
+  "phase2_boundary_oracle_status": "PASS",
+  "phase3_teacher_status": "FAIL",
+  "post_val_adjustment": false,
+  "previous_stage": "C6-A",
+  "previous_status": "C6A_NEGATIVE",
+  "stage": "C6-A-R failure diagnosis + teacher-guided repair",
+  "status": "C6A_R_NEGATIVE",
+  "stop_phase": "Phase 3 A3b teacher distillation",
+  "stop_reason": "teacher_adapter_failed_to_inherit_a3b_endpoint_delta_direction",
+  "teacher_adapter_key_deltas_vs_a3b": {
+    "best_iou_rank_delta": -0.22916370864688407,
+    "end_abs_error_delta": 0.0009938946471674814,
+    "end_ce_delta": -0.45881926050851307,
+    "oracle_video_r1_05_delta": -0.0002839698991907724,
+    "oracle_video_r1_07_delta": 0.0001419849495953862,
+    "peak_inside_gt_delta": 0.0005679397983813783,
+    "selected_span_iou_delta": -0.00010011541171450755,
+    "start_abs_error_delta": 0.0008519096975720952,
+    "start_ce_delta": -0.48816304944015787
+  },
+  "teacher_adapter_key_deltas_vs_frozen": {
+    "best_iou_rank_delta": -0.23100951299162364,
+    "end_abs_error_delta": -0.0002839698991905504,
+    "end_ce_delta": -0.2759473412681088,
+    "oracle_video_r1_05_delta": -0.0002839698991907724,
+    "oracle_video_r1_07_delta": 0.0002839698991907169,
+    "peak_inside_gt_delta": 0.0012778645463580873,
+    "selected_span_iou_delta": -0.00010243305323154317,
+    "start_abs_error_delta": 0.0004259548487859366,
+    "start_ce_delta": -0.29488264926552565
+  },
+  "teacher_endpoint_delta_correlation_with_a3b_raw": {
+    "pearson": -0.47737492034476703,
+    "spearman": -0.40910982150592745
+  }
+}

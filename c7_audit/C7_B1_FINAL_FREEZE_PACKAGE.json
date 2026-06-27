@@ -1,0 +1,115 @@
+{
+  "status": "C7_B1_OFFICIAL_READY",
+  "promoted": false,
+  "official_val_used": false,
+  "training_started": false,
+  "config_selection_changed": false,
+  "selected_config": {
+    "mode": "S1_span_level_bounded_residual",
+    "mu": 0.1,
+    "eta": 0.1
+  },
+  "selected_deterministic_rerun": {
+    "config": {
+      "mode": "S1_span_level_bounded_residual",
+      "mu": 0.1,
+      "eta": 0.1
+    },
+    "metrics": {
+      "0.5-r1": 42.91108822519739,
+      "0.5-r5": 65.3049548003204,
+      "0.5-r10": 72.2622725712324,
+      "0.5-r100": 78.36136857764046,
+      "0.7-r1": 26.36457260556128,
+      "0.7-r5": 51.378876301636346,
+      "0.7-r10": 60.636228401418926,
+      "0.7-r100": 71.99908456345119
+    },
+    "base_metrics_reconstructed": {
+      "0.5-r1": 41.56081931571118,
+      "0.5-r5": 65.39649845520083,
+      "0.5-r10": 72.29660144181257,
+      "0.5-r100": 78.33848266392036,
+      "0.7-r1": 25.666552237098067,
+      "0.7-r5": 49.94850669412976,
+      "0.7-r10": 59.07998626845177,
+      "0.7-r100": 71.98764160659114
+    },
+    "diagnostics": {
+      "top1_gain_queries": 98,
+      "top1_loss_queries": 37,
+      "R5_gain_queries": 189,
+      "R5_loss_queries": 64,
+      "R10_gain_queries": 173,
+      "R10_loss_queries": 37,
+      "hard_positive_top100_entries": 2,
+      "hard_positive_top100_exits": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "runtime_sec": 25.509621143341064
+    },
+    "hashes": {
+      "metric_hash": "15bcfc52c84ecdad091606f59dda97531eddb48bf914952df14d5b62ba6a20f7",
+      "prediction_hash": "7bdb546ff5a2dae302d6dd0689e469f8e8af7c0f97667f4aa756cd6ac70e7361",
+      "score_hash": "efbf61e5cea314e70b35593ecb45c4962d05b678e01c09113b1401a71c9b15cb",
+      "prediction_file": {
+        "path": "results/rlem_c7/freeze/selected_mu0p1_eta0p1_predictions.jsonl",
+        "exists": true,
+        "size": 26812243,
+        "sha256": "7bdb546ff5a2dae302d6dd0689e469f8e8af7c0f97667f4aa756cd6ac70e7361"
+      },
+      "score_file": {
+        "path": "results/rlem_c7/freeze/selected_mu0p1_eta0p1_scores.jsonl",
+        "exists": true,
+        "size": 16178726,
+        "sha256": "efbf61e5cea314e70b35593ecb45c4962d05b678e01c09113b1401a71c9b15cb"
+      }
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 1.602013960407369,
+      "0.5-r5": -0.022885913720102735,
+      "0.5-r10": -0.04577182744021968,
+      "0.5-r100": -0.011442956860051368,
+      "0.7-r1": 1.064194987984898,
+      "0.7-r5": 1.4875843918068483,
+      "0.7-r10": 1.5791280466872664,
+      "0.7-r100": 0.022885913720102735
+    },
+    "delta_vs_C6_B2": {
+      "0.5-r1": 1.3502689094862106,
+      "0.5-r5": -0.09154365488042515,
+      "0.5-r10": -0.034328870580168314,
+      "0.5-r100": 0.022885913720102735,
+      "0.7-r1": 0.6980203684632116,
+      "0.7-r5": 1.4303696075065844,
+      "0.7-r10": 1.5562421329671565,
+      "0.7-r100": 0.011442956860051368
+    }
+  },
+  "metric_abs_diff_vs_C7_B1_FINAL_DECISION": {
+    "0.5-r1": 0.0,
+    "0.5-r5": 0.0,
+    "0.5-r10": 0.0,
+    "0.5-r100": 0.0,
+    "0.7-r1": 0.0,
+    "0.7-r5": 0.0,
+    "0.7-r10": 0.0,
+    "0.7-r100": 0.0
+  },
+  "consistent_with_C7_B1_FINAL_DECISION": true,
+  "zero_residual_control_pass": true,
+  "neighbor_stability_pass": true,
+  "leakage_audit_pass": true,
+  "topk_safety_pass": true,
+  "frozen_conquer_pass": true,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "C6_B1_modified": false,
+  "C6_B2_modified": false,
+  "C4_final_modified": false,
+  "enter_C7_B2": false,
+  "enter_C7_C": false,
+  "enter_C8": false,
+  "decision": "Stop and wait for human authorization for exactly-one official-val one-shot."
+}

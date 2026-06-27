@@ -1,0 +1,14 @@
+{
+  "status": "FROZEN_BEFORE_FULL_GRID",
+  "date": "2026-06-22",
+  "scope": "train_calib_only",
+  "official_val_used": false,
+  "amendment": "Deduplicate finalist models by exact predictions_train_calib.npz SHA256 before selecting top 3 for the full score grid.",
+  "reason": "Two independently named weight-decay configurations produced byte-identical cached logits. Repeating 1200 score configurations on identical logits has no information value.",
+  "selection_metrics_changed": false,
+  "search_grid_changed": false,
+  "safety_constraints_changed": false,
+  "model_training_results_discarded": false,
+  "duplicate_models_remain_in_34_model_audit": true,
+  "full_grid_finalists_must_have_distinct_prediction_cache_sha256": true
+}

@@ -1,0 +1,79 @@
+{
+  "status": "MATERIALIZED_BEFORE_OFFICIAL_VAL",
+  "purpose": "clarify_C5_metric_hierarchy_without_rescuing_or_reselecting_a_configuration",
+  "primary_front_rank_metrics": [
+    "0.5-r1",
+    "0.5-r5",
+    "0.5-r10",
+    "0.7-r1",
+    "0.7-r5",
+    "0.7-r10"
+  ],
+  "core_front_rank_metrics": [
+    "0.5-r1",
+    "0.7-r1",
+    "0.5-r5",
+    "0.7-r5"
+  ],
+  "safety_metrics": [
+    "0.5-r100",
+    "0.7-r100",
+    "hard_positive_top100_exit_ratio",
+    "top1_changed_ratio",
+    "pearson_C4_final_candidate",
+    "mean_within_query_spearman",
+    "video_multiset_drift",
+    "video_slot_sequence_drift",
+    "quota_violation_count",
+    "duplicate_span_count"
+  ],
+  "localization_diagnostics": [
+    "oracle_video_r1_05_delta",
+    "oracle_video_r1_07_delta",
+    "selected_span_miou_delta",
+    "mean_best_iou_rank_delta",
+    "best_iou_improved_worsened_ratio"
+  ],
+  "classification_rules": {
+    "C5_PROMOTE": {
+      "minimum_positive_front_rank": 4,
+      "both_r1_nonnegative": true,
+      "minimum_positive_r1": 1,
+      "minimum_positive_localization": 2,
+      "minimum_each_r100_delta": -0.05,
+      "maximum_hard_positive_exit_ratio": 0.005,
+      "structural_constraints_satisfied": true,
+      "official_val_used_at_selection": false
+    },
+    "C5_STRONG_PROMOTE": {
+      "minimum_positive_front_rank": 6,
+      "minimum_each_r100_delta": 0.0,
+      "minimum_positive_localization": 3,
+      "maximum_hard_positive_exit_ratio": 0.005,
+      "structural_constraints_satisfied": true
+    },
+    "C5_FRONT_RANK_POSITIVE": {
+      "minimum_positive_front_rank": 3,
+      "minimum_positive_r1": 1,
+      "localization_positive": true,
+      "minimum_each_r100_delta": -0.1,
+      "maximum_hard_positive_exit_ratio": 0.0075
+    },
+    "C5_LOCALIZATION_ONLY": "localization_positive_but_front_rank_below_C5_FRONT_RANK_POSITIVE",
+    "C5_RECALL_TRADEOFF": "front_rank_positive_but_recall_safety_failed",
+    "C5_NEGATIVE": "neither_localization_nor_front_rank_improves"
+  },
+  "frozen_config_review": {
+    "config_id": "c5ma_0214",
+    "passes_earlier_strict_all_eight_positive_gate": true,
+    "passes_front_rank_gate": true,
+    "addendum_rescues_failed_configuration": false
+  },
+  "r100_role": "safety_metric_not_hard_primary_metric",
+  "modifies_C4_final": false,
+  "modifies_completed_C5_grids": false,
+  "allows_reselection": false,
+  "official_val_one_shot_only": true,
+  "post_val_adjustment_allowed": false,
+  "official_val_used": false
+}

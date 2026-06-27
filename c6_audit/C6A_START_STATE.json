@@ -1,0 +1,10 @@
+{
+  "backbone_full_finetune_allowed": false,
+  "c4_final": "C4-r2-cal-v2.1 v21_00444",
+  "c5_fixed_candidate_status": "official-val negative / not promoted",
+  "c6_protocol_new_stage": true,
+  "candidate_regeneration_allowed": false,
+  "official_val_allowed_now": false,
+  "official_val_used_for_c6_selection": false,
+  "stage": "C6-A adapter-only trainable mutualization"
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "stage": "C3-minimal",
+  "status": "C3_MINIMAL_PASS",
+  "date": "2026-06-22",
+  "scope": "train_calib_only fixed-default rerank",
+  "official_val_used": false,
+  "weight_search_performed": false,
+  "c3_strong_executed": false,
+  "eligible_for_c3_strong_train_calib_search": true,
+  "next_stage_authorized": false,
+  "source_integrity": {
+    "c1_train_evidence": {
+      "path": "results/rlem_c1/train_evidence.jsonl.gz",
+      "sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48"
+    },
+    "c1_official_val_evidence_untouched": {
+      "path": "results/rlem_c1/val_evidence.jsonl.gz",
+      "sha256": "ce9184e6b9e87581328850e6479231832e471caabae8881db9d6bbe1047f9884"
+    },
+    "c2_checkpoint": {
+      "path": "results/rlem_c2/basic_heads/model_best.pt",
+      "sha256": "e4a8944d836075139211202eac5caf0cb708de878447893b10dd8af34ac6bda9",
+      "epoch": 3
+    },
+    "train_calib_ids": {
+      "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+      "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a",
+      "queries": 8739
+    }
+  },
+  "protocol": {
+    "checkpoint": "C0 official epoch-9 candidate source plus C2 accepted epoch-3 evidence heads",
+    "eval_query_bsz": 5,
+    "max_vcmr_video": 10,
+    "candidate_rows_per_query": 200,
+    "base_score_mode": "log",
+    "base_scale": 1.0,
+    "a_joint": 1.0,
+    "b_bd": 0.5,
+    "d_fp": 0.5,
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100,
+    "clip_length": 1.5
+  },
+  "derived_train_calib_data": {
+    "evidence": {
+      "path": "results/rlem_c3_minimal/train_calib_evidence.jsonl.gz",
+      "sha256": "ef0bdd42eb0d77fd621bf82a71b3ab61df1c1ddcaf5b0e86c95215a52a4e5d1b",
+      "queries": 8739,
+      "rows": 1747800,
+      "rows_per_query": 200
+    },
+    "evaluation_gt": {
+      "path": "results/rlem_c3_minimal/train_calib_gt.jsonl",
+      "sha256": "bd83185b2b4368a6285efb2be63f38ed4b2704b1159d37d6b78f2fa561cbe80a",
+      "source": "C1 train evidence gt fields only"
+    },
+    "one_time_full_scan_wall_seconds": 259.70
+  },
+  "base_reconstruction": {
+    "status": "PASS",
+    "submission": {
+      "path": "results/rlem_c3_minimal/train_calib_base_reconstructed_nms_0.7.json",
+      "sha256": "737a5d45f7cae8eed3f55dcf71159c0f7932fdb8eddd35d97db0c90369d37262"
+    },
+    "metrics_artifact": {
+      "path": "results/rlem_c3_minimal/train_calib_base_reconstructed_nms_0.7_metrics.json",
+      "sha256": "392a401c66c4f0f186017d8cbc6c66ad0b65e2e65446e5b318684758d5ed3963"
+    },
+    "metrics": {
+      "0.5-r1": 30.63,
+      "0.5-r5": 57.68,
+      "0.5-r10": 66.67,
+      "0.5-r100": 75.81,
+      "0.7-r1": 20.73,
+      "0.7-r5": 41.41,
+      "0.7-r10": 49.67,
+      "0.7-r100": 63.84
+    }
+  },
+  "c3_default": {
+    "status": "PASS",
+    "rerank_wall_seconds": 84.42,
+    "submission": {
+      "path": "results/rlem_c3_minimal/train_calib_c3_default_submission.json",
+      "sha256": "ff10a3eaad46037303ce2d568297974b48903f30aa3db0739fae4ed8f2a2ea8a"
+    },
+    "metrics_artifact": {
+      "path": "results/rlem_c3_minimal/train_calib_c3_default_metrics.json",
+      "sha256": "58ad5264cc224dcdce2f437a36ac80b678e8da82e262165fcb79a5459d4db8bb"
+    },
+    "scored_candidates": {
+      "path": "results/rlem_c3_minimal/train_calib_c3_default_scored.jsonl.gz",
+      "sha256": "3b599c6c61f3e9decf66470ad47af646b657aa65d553af6c7427e86a9a028f43"
+    },
+    "metrics": {
+      "0.5-r1": 35.29,
+      "0.5-r5": 59.97,
+      "0.5-r10": 67.87,
+      "0.5-r100": 75.92,
+      "0.7-r1": 23.92,
+      "0.7-r5": 44.06,
+      "0.7-r10": 51.79,
+      "0.7-r100": 64.08
+    },
+    "delta_c3_minus_base": {
+      "0.5-r1": 4.66,
+      "0.5-r5": 2.29,
+      "0.5-r10": 1.20,
+      "0.5-r100": 0.11,
+      "0.7-r1": 3.19,
+      "0.7-r5": 2.65,
+      "0.7-r10": 2.12,
+      "0.7-r100": 0.24
+    }
+  },
+  "diagnostics": {
+    "status": "PASS",
+    "json": {
+      "path": "results/rlem_c3_minimal/c3_minimal_train_calib_diagnostics.json",
+      "sha256": "41789a5f371fbd6ff8ef68479e2a59d3b7be23a95baa9b34ffc4a7d84d122bee"
+    },
+    "markdown": {
+      "path": "results/rlem_c3_minimal/c3_minimal_train_calib_diagnostics.md",
+      "sha256": "4ec126ec6af6fc31fa424d46b8841a732cc0ef6ab4d4273982d4dbba89260396"
+    },
+    "score_formula_max_abs_error": 0.0,
+    "pearson_base_vs_c3": 0.9938706069024226,
+    "spearman_base_vs_c3": 0.9950923358772032,
+    "top1_changed_queries": 1258,
+    "top1_changed_query_ratio": 0.1439523972994622,
+    "gt_video_best_rank": {
+      "eligible_queries": 7043,
+      "improved": 1670,
+      "unchanged": 4486,
+      "degraded": 887
+    },
+    "gt_video_best_iou_span_rank": {
+      "eligible_queries": 7043,
+      "improved": 754,
+      "unchanged": 5520,
+      "degraded": 769
+    },
+    "false_positive_rank_degraded_ratio": 0.520815793195886,
+    "false_positive_mean_rank_delta_c3_minus_base": 1.252126706585213,
+    "hard_positive_rank_degraded_ratio": 0.09597577496214837,
+    "hard_positive_mean_rank_delta_c3_minus_base": -8.960889313889552,
+    "hard_positive_top100_exits": 107,
+    "hard_positive_top100_entries": 3264,
+    "hard_positive_top100_exit_ratio": 0.0017053151645549445,
+    "e_fp_penalty_exceeds_positive_boost_ratio": 0.05983464927337224,
+    "weighted_wrong_video_q_bd_mean_bonus": 0.19624185340785572,
+    "weighted_component_std_share": {
+      "base": 0.8297744247123642,
+      "q_joint": 0.052868319222217124,
+      "q_bd": 0.048166513297870805,
+      "negative_e_fp": 0.06919074276754782
+    },
+    "base_submission_exact_to_recomputed_top100_nms": true,
+    "c3_submission_exact_to_recomputed_top100_nms": true,
+    "max_post_nms_prediction_length": 78
+  },
+  "code": {
+    "reconstruct_base_submission.py": "60a56f0321acddc8740958537dee338a24067fcd2bfd3e161401651d404338da",
+    "rerank_with_evidence.py": "6a8aa4da22ddddccc40d9288894d898801746c0404061aa69a45d31256ccb279",
+    "diagnose_c3_minimal.py": "2f11a5d9da050615c16589c60182d44d2054896e823a511cce3a65f79ee556cd"
+  },
+  "gates": {
+    "base_reconstruction_complete": true,
+    "c3_default_submission_complete": true,
+    "all_eight_metrics_positive_delta": true,
+    "score_formula_exact": true,
+    "score_components_finite_and_not_auxiliary_dominated": true,
+    "top1_change_ratio_reasonable": true,
+    "hard_positives_not_mass_suppressed": true,
+    "effective_top100_exact": true,
+    "nms_0_7_exact": true,
+    "post_nms_max_100": true,
+    "official_val_not_used": true,
+    "c1_c2_artifacts_unchanged": true
+  }
+}

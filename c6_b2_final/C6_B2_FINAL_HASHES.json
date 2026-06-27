@@ -1,0 +1,115 @@
+{
+  "status": "C6_B2_FINAL_HASHES",
+  "date": "2026-06-26",
+  "current_promoted_system": "C6-B2 pairwise_main_0005",
+  "artifacts": {
+    "final_summary": {
+      "path": "c6_b2_final/C6_B2_FINAL_SUMMARY.md",
+      "exists": true,
+      "size": 2180,
+      "sha256": "05dd69176e1fb53aff76ec44f093d4e0d96169ec2c1055386bdb01f50cdfb75e"
+    },
+    "final_manifest": {
+      "path": "c6_b2_final/C6_B2_FINAL_MANIFEST.json",
+      "exists": true,
+      "size": 5878,
+      "sha256": "776b8d12d18ec4b06dab7b224a6bf786622c536af69561a89be92246cfddbbf8"
+    },
+    "official_val_audit": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_AUDIT.md",
+      "exists": true,
+      "size": 1512,
+      "sha256": "6586a3a58e01adf7493175730e2c95630ba78ffd2d6377436dade3c535a92b48"
+    },
+    "official_val_manifest": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+      "exists": true,
+      "size": 4486,
+      "sha256": "4c051776c288fe1ba5ab0f1f4121fbdd5189bebe5abb395e286819896860b1a6"
+    },
+    "official_val_hashes": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_HASHES.json",
+      "exists": true,
+      "size": 5183,
+      "sha256": "dce338ecb03db343708fa41403d0a34076eb939e06349e4830a644a4f16bb76d"
+    },
+    "freeze_review": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_REVIEW.md",
+      "exists": true,
+      "size": 1903,
+      "sha256": "15035556c101d3f12dca903f6be6537ea48fffa8f1cd9aa47a141e28563b8dfd"
+    },
+    "freeze_manifest": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "freeze_hashes": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+      "exists": true,
+      "size": 2704,
+      "sha256": "058b32d12098c82a86cb7ccadb8b65999f39910e8b61b510aa3dd0fcb89d527f"
+    },
+    "best_config": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "exists": true,
+      "size": 1180,
+      "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+    },
+    "selector_ckpt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "exists": true,
+      "size": 3504043,
+      "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+    },
+    "official_val_scores": {
+      "path": "results/rlem_c6_b2_official_val/official_val_scores.npz",
+      "exists": true,
+      "size": 5420828,
+      "sha256": "be3ea2748d7bb4c7058662e2200ea10f8df2b01d576bed2d7aacb259cc727b03"
+    },
+    "official_val_predictions": {
+      "path": "results/rlem_c6_b2_official_val/official_val_predictions.jsonl",
+      "exists": true,
+      "size": 19673277,
+      "sha256": "ca43d7380872e16bd82760ca6d24748725a81c67318534de8d9ac6ded1f10e91"
+    },
+    "official_val_submission": {
+      "path": "results/rlem_c6_b2_official_val/official_val_submission.json",
+      "exists": true,
+      "size": 52364075,
+      "sha256": "35277121e74295a4f35e273941e68f3416836af430e9a855b7d271dff298f4a2"
+    },
+    "official_val_metrics": {
+      "path": "results/rlem_c6_b2_official_val/official_val_metrics.json",
+      "exists": true,
+      "size": 838,
+      "sha256": "639b947c2fb23f3cb1eaf266ffe401ede1d6fd9e3cfb76cdfb6e18eaaecc1eed"
+    },
+    "one_shot_code": {
+      "path": "rlem_c6_b2/run_c6_b2_official_val_one_shot.py",
+      "exists": true,
+      "size": 29889,
+      "sha256": "2d344fc242f844c9500432ff326eaa86c8ac95895695025689d60782d7ebe644"
+    },
+    "b2_goal_code": {
+      "path": "rlem_c6_b2/run_c6_b2_goal.py",
+      "exists": true,
+      "size": 39405,
+      "sha256": "8fccb8e7951d519866ecd5c14c615375b66fd0de064c9cf9275f99df8a934975"
+    },
+    "evaluator": {
+      "path": "standalone_eval/eval.py",
+      "exists": true,
+      "size": 14692,
+      "sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+    },
+    "model_conquer": {
+      "path": "model/conquer.py",
+      "exists": true,
+      "size": 9802,
+      "sha256": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc"
+    }
+  }
+}

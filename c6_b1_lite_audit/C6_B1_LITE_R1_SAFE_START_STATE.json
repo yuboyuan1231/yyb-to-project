@@ -1,0 +1,16 @@
+{
+  "C4_final_retained": true,
+  "C6_C_used": false,
+  "design": "medium MLP candidate selector + conservative top-slot replacement gate",
+  "model": {
+    "dropout": 0.1,
+    "hidden": 384,
+    "layers": 4
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "primary_metric_focus": "R@1",
+  "scope": "train_fit/train_calib only",
+  "secondary_safety_focus": "R@5",
+  "stage": "C6-B1-lite R1-safe selector"
+}

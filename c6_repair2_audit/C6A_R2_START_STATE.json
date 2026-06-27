@@ -1,0 +1,9 @@
+{
+  "a3b_teacher_loss_allowed": false,
+  "c4_final": "C4-r2-cal-v2.1 v21_00444",
+  "candidate_regeneration_allowed": false,
+  "full_finetune_allowed": false,
+  "official_val_used": false,
+  "reason": "Boundary oracle passed while A3b teacher distillation failed; A3b is no longer treated as boundary teacher.",
+  "stage": "C6-A-R2"
+}

@@ -1,0 +1,37 @@
+{
+  "a3b_metrics": {
+    "best_iou_rank": 5.67897202896493,
+    "end_abs_error": 1.5662359789862275,
+    "end_ce": 3.5117561166793183,
+    "oracle_video_r1_05": 0.7694164418571632,
+    "oracle_video_r1_07": 0.4999290075252023,
+    "peak_inside_gt": 0.29149510151923896,
+    "selected_span_iou": 0.6585067054867717,
+    "start_abs_error": 1.1962232003407638,
+    "start_ce": 3.4546221649664366
+  },
+  "a3b_teacher_used_for_training": false,
+  "checks": {
+    "a3b_boundary_ce_worse_than_frozen": true,
+    "a3b_z_raw_centered_delta_mixing_risk": "diagnosed; R2 uses no A3b teacher loss",
+    "kl_direction_no_longer_main_training": "A3b KL removed from R2 objective",
+    "teacher_distillation_endpoint_delta_correlation_failed": {
+      "pearson": -0.47737492034476703,
+      "spearman": -0.40910982150592745
+    }
+  },
+  "frozen_metrics": {
+    "best_iou_rank": 5.6808178333096695,
+    "end_abs_error": 1.5675138435325855,
+    "end_ce": 3.328884197438914,
+    "oracle_video_r1_05": 0.7694164418571632,
+    "oracle_video_r1_07": 0.499787022575607,
+    "peak_inside_gt": 0.29078517677126225,
+    "selected_span_iou": 0.6585090231282887,
+    "start_abs_error": 1.19664915518955,
+    "start_ce": 3.2613417647918044
+  },
+  "official_val_used": false,
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "teacher_phase_status": "FAIL"
+}

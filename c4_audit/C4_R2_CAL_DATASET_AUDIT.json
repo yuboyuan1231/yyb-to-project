@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "train_fit_train_calib_only",
+  "unit": "query_video",
+  "feature_dim": 27,
+  "train_fit": {
+    "queries": 78045,
+    "candidate_rows": 15609000,
+    "video_rows": 779142,
+    "positive_video_rows": 63090,
+    "negative_video_rows": 716052,
+    "iou05_positive_video_rows": 60954,
+    "iou07_positive_video_rows": 54066,
+    "dataset_sha256": "97a42fd9b219ba7ddbe836881e354235d0587ec9f50253df97a70aaa1bdc31a8",
+    "scored_candidates_sha256": "38cacfbbf2bf3748ea657cbf997a631dec929537270896787f4edf5b8970f451",
+    "cache_sha256": "426f95fe6ac59d57d5ad848b039df6b29a3ec08652ea2d647728524ea9adaae3"
+  },
+  "train_calib": {
+    "queries": 8739,
+    "candidate_rows": 1747800,
+    "video_rows": 87230,
+    "positive_video_rows": 7043,
+    "negative_video_rows": 80187,
+    "iou05_positive_video_rows": 6781,
+    "iou07_positive_video_rows": 6050,
+    "dataset_sha256": "ef61a67556ec0b3f327767e4f29c66d932659670b5d9640f12b9aa74595ebaf4",
+    "scored_candidates_sha256": "a7b26b7fc6ba51d8b460834d218a5f5a2a86ea4c5d773a2a27c88e027bd46104",
+    "cache_sha256": "bcbd0caf12d194b31a4460fd78276832a0b2408434c7e190af6b8c511edff1cf"
+  },
+  "split_integrity": {
+    "train_fit_query_ids": 78045,
+    "train_calib_query_ids": 8739,
+    "query_id_overlap": 0,
+    "all_video_rows_for_query_in_one_split": true,
+    "split_inherited_from_c2_c31": true
+  },
+  "feature_sources": [
+    "frozen_C3.1_score_statistics",
+    "frozen_C4_lite_c4_00394_score_statistics",
+    "G_video_and_topk_G_span",
+    "q_joint_q_bd_e_fp_aggregates",
+    "rank_and_candidate_count"
+  ],
+  "frozen_constants": {
+    "mean_qbd": 0.3990069627761841,
+    "alpha_bd": 1.25,
+    "gamma_fp": 0.5,
+    "mu_video_rows": 0.13249324262142181,
+    "mu_span_rows": 0.03713987395167351
+  },
+  "baseline_definitions": {
+    "primary": "frozen_C4_lite_c4_00394",
+    "secondary": "frozen_C3.1",
+    "raw_base_log_control": false
+  },
+  "nonfinite_values": 0,
+  "targets_from_train_evidence_only": true,
+  "normalization_fit_on_train_fit_only": true,
+  "aggregation_device": "cuda",
+  "official_val_used": false,
+  "official_val_evidence_opened": false,
+  "post_val_adjustment": false
+}

@@ -1,0 +1,77 @@
+{
+  "status": "C6_B1_LITE_FINAL_HASHES",
+  "artifacts": {
+    "final_summary": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_FINAL_SUMMARY.md",
+      "exists": true,
+      "size": 2012,
+      "sha256": "48765d77086752769d005a1f5ba39500575ce26375c06792a1803d43e95b95ce"
+    },
+    "final_manifest": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_FINAL_MANIFEST.json",
+      "exists": true,
+      "size": 3746,
+      "sha256": "80540222f108e6c07f2545b5ecf54ede9db7d41ea70b21ce4e361ede1af8216a"
+    },
+    "official_metric_table": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_OFFICIAL_METRIC_TABLE.json",
+      "exists": true,
+      "size": 1318,
+      "sha256": "03a15ccc88672f42c4d15e612f1a7a9950cefae997d83bb85a3156534a04dc55"
+    },
+    "mechanism_md": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_MECHANISM_ANALYSIS.md",
+      "exists": true,
+      "size": 960,
+      "sha256": "30a2d3b45720bb5f7bba463a919581643c1171d8b354bafe6703400e040ad177"
+    },
+    "mechanism_json": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_MECHANISM_ANALYSIS.json",
+      "exists": true,
+      "size": 4560,
+      "sha256": "47debf3878b6f6a7cc38289eeaa365aea46891dde2e7b940c3b262ea512c8123"
+    },
+    "ceiling_md": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_CEILING_ANALYSIS.md",
+      "exists": true,
+      "size": 1549,
+      "sha256": "e851ebec6a59514fae01575aa39b2c942babc5c9de59e785ffde1324a8089aab"
+    },
+    "ceiling_json": {
+      "path": "c6_b1_lite_final/C6_B1_LITE_CEILING_ANALYSIS.json",
+      "exists": true,
+      "size": 8150,
+      "sha256": "2baed43c3bb534144724a6a630cf8c4cc8a3712f9707c2785956fabb123c71fa"
+    },
+    "c4_submission": {
+      "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_submission.json",
+      "exists": true,
+      "size": 19747239,
+      "sha256": "fea4c1f4f963faf3ce0dbde8b42027df208e87f706ae799723e0a551818fcbdc"
+    },
+    "c6_submission": {
+      "path": "results/rlem_c6_b1_lite_r1_safe/official_val_submission.json",
+      "exists": true,
+      "size": 52375264,
+      "sha256": "657566f73b4f2b684ce0b556df01fafbea201050f0a4d2883c2c39cea416ff31"
+    },
+    "c6_manifest": {
+      "path": "c6_b1_lite_official_val/C6_B1_LITE_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+      "exists": true,
+      "size": 3838,
+      "sha256": "f033d02c78279fbeaed2cabc289d82864d6fc42a5ecd2ff40f3f4788e94ab379"
+    },
+    "c6_hashes": {
+      "path": "c6_b1_lite_official_val/C6_B1_LITE_OFFICIAL_VAL_ONE_SHOT_HASHES.json",
+      "exists": true,
+      "size": 4588,
+      "sha256": "8eadaf1987f9c0defb5754254e80e7975672543ea426bdc0daa1465e7542d82a"
+    },
+    "script": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c6_b1_lite/finalize_c6_b1_lite.py",
+      "exists": true,
+      "size": 34598,
+      "sha256": "c674869ea84f1528b39a0eb6d9186a97d6bb881bd16979abefb91290af78c2a0"
+    }
+  }
+}

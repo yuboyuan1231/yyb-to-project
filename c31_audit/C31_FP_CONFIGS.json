@@ -1,0 +1,62 @@
+[
+  {
+    "config_id": "fp_bce",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "fp_pos_weight_auto",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce_pos_weight",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "fp_focal_gamma1",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "focal",
+    "focal_gamma": 1.0
+  },
+  {
+    "config_id": "fp_focal_gamma2",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "focal",
+    "focal_gamma": 2.0
+  }
+]

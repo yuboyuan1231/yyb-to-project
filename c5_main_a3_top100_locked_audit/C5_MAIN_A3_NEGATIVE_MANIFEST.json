@@ -1,0 +1,100 @@
+{
+  "status": "NO_PROMOTION",
+  "mode": "top100_locked",
+  "selected_config": {
+    "config_id": "c5ma_0000",
+    "family": "zero_control",
+    "gamma": 0.0,
+    "alpha": 0.0,
+    "beta": 0.0,
+    "tau": 1.0,
+    "lambda": 0.0
+  },
+  "promotion_candidate_count": 0,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "training_used": false,
+  "C5_main_B_used": false,
+  "candidate_regeneration_used": false,
+  "C6_used": false,
+  "selected_metrics": {
+    "0.5-r1": 39.375214555441126,
+    "0.5-r5": 62.28401418926651,
+    "0.5-r10": 69.48163405423962,
+    "0.5-r100": 76.22153564481061,
+    "0.7-r1": 26.37601556242133,
+    "0.7-r5": 48.66689552580387,
+    "0.7-r10": 56.23069001029866,
+    "0.7-r100": 65.24774001602015
+  },
+  "selected_deltas_vs_c4_final": {
+    "0.5-r1": 0.0,
+    "0.5-r5": 0.0,
+    "0.5-r10": 0.0,
+    "0.7-r1": 0.0,
+    "0.7-r5": 0.0,
+    "0.7-r10": 0.0,
+    "0.5-r100": 0.0,
+    "0.7-r100": 0.0
+  },
+  "selected_movement": {
+    "queries": 8739,
+    "top1_changed_ratio": 0.0,
+    "hard_positive_top100_exits": 0,
+    "hard_positive_top100_entries": 0,
+    "hard_positive_top100_exit_ratio": 0.0,
+    "pearson_base_localization_score": 1.0,
+    "mean_within_query_spearman": 1.0
+  },
+  "selected_localization": {
+    "gt_video_queries": 7043,
+    "affected_same_video_query_ratio": 0.0,
+    "oracle_video_r1_05_base": 76.89904870083771,
+    "oracle_video_r1_05_new": 76.89904870083771,
+    "oracle_video_r1_05_delta": 0.0,
+    "oracle_video_r1_07_base": 49.481754933977,
+    "oracle_video_r1_07_new": 49.481754933977,
+    "oracle_video_r1_07_delta": 0.0,
+    "selected_span_miou_base": 0.6572716441456385,
+    "selected_span_miou_new": 0.6572716441456385,
+    "selected_span_miou_delta": 0.0,
+    "best_iou_span_rank_base_mean": 5.7225614084907,
+    "best_iou_span_rank_new_mean": 5.7225614084907,
+    "best_iou_span_rank_delta_mean": 0.0,
+    "positive_span_upward_ratio": 0.0,
+    "positive_span_downward_ratio": 0.0,
+    "hard_negative_downward_ratio": 0.0,
+    "hard_negative_upward_ratio": 0.0,
+    "positive_span_count": 62749,
+    "hard_negative_count": 13383,
+    "best_iou_rank_improved_ratio": 0.0,
+    "best_iou_rank_worsened_ratio": 0.0,
+    "best_iou_rank_unchanged_ratio": 1.0,
+    "best_iou_rank_delta_mean": 0.0,
+    "delta_bd_improves_more_often_than_worsens": false
+  },
+  "selected_structure": {
+    "top100_membership_drift_query_ratio": 0.0,
+    "top100_membership_symmetric_difference_rows": 0,
+    "video_multiset_drift_query_ratio": 0.0,
+    "video_slot_sequence_drift_query_ratio": 0.0,
+    "quota_violation_count": 0,
+    "duplicate_span_count": 0,
+    "constraint_satisfied": true
+  },
+  "selected_neighbor_robustness": {
+    "passing_neighbor_count": 0,
+    "passing_neighbor_ids": [],
+    "isolated_boundary": false
+  },
+  "highest_selection_nonzero_config": {
+    "config_id": "c5ma_0273",
+    "family": "role_endpoint_injection",
+    "alpha": 0.25,
+    "beta": 0.1,
+    "tau": 2.0,
+    "lambda": 0.025,
+    "gamma": 0.025
+  }
+}

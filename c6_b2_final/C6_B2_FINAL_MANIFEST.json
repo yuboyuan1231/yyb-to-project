@@ -1,0 +1,180 @@
+{
+  "status": "C6_B2_FINAL_PROMOTED_SYSTEM",
+  "date": "2026-06-26",
+  "current_promoted_system": "C6-B2",
+  "current_promoted_config": "pairwise_main_0005",
+  "previous_promoted_system": "C6-B1-lite c6b1r1_0057",
+  "secondary_baseline": "C4_final v21_00444",
+  "finalization_source_status": "C6_B2_OFFICIAL_POSITIVE",
+  "official_val_one_shot": true,
+  "successful_metric_result_count": 1,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false,
+  "learned_config_count_on_val": 0,
+  "training_used_in_official_val_stage": false,
+  "selector_retrained_in_official_val_stage": false,
+  "C6_C_used": false,
+  "C4_final_modified": false,
+  "C6_B1_lite_modified": false,
+  "model_conquer_modified": false,
+  "candidate_generation_modified_for_official_val": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "no_second_official_val": true,
+  "frozen_config": {
+    "arm": "pairwise_main",
+    "config_id": "pairwise_main_0005",
+    "apply_slots": 5,
+    "threshold0": 4.337798070907593,
+    "threshold_rest": 6.729127645492554,
+    "max_replacements": 2,
+    "effective_top_n": 100,
+    "NMS": 0.7,
+    "max_after_nms": 100
+  },
+  "official_val_metrics": {
+    "0.5-r1": 14.98,
+    "0.5-r5": 28.66,
+    "0.5-r10": 34.9,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.45,
+    "0.7-r5": 18.78,
+    "0.7-r10": 24.76,
+    "0.7-r100": 35.82
+  },
+  "baseline_metrics": {
+    "C6_B1_lite_c6b1r1_0057": {
+      "0.5-r1": 14.92,
+      "0.5-r5": 28.66,
+      "0.5-r10": 34.93,
+      "0.5-r100": 46.56,
+      "0.7-r1": 8.39,
+      "0.7-r5": 18.82,
+      "0.7-r10": 24.82,
+      "0.7-r100": 35.88
+    },
+    "C4_final_v21_00444": {
+      "0.5-r1": 14.81,
+      "0.5-r5": 28.57,
+      "0.5-r10": 34.81,
+      "0.5-r100": 46.45,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.64,
+      "0.7-r10": 24.63,
+      "0.7-r100": 35.7
+    }
+  },
+  "deltas": {
+    "vs_C6_B1_lite": {
+      "0.5-r1": 0.0600000000000005,
+      "0.5-r5": 0.0,
+      "0.5-r10": -0.030000000000001137,
+      "0.5-r100": -0.020000000000003126,
+      "0.7-r1": 0.05999999999999872,
+      "0.7-r5": -0.03999999999999915,
+      "0.7-r10": -0.05999999999999872,
+      "0.7-r100": -0.060000000000002274
+    },
+    "vs_C4_final": {
+      "0.5-r1": 0.16999999999999993,
+      "0.5-r5": 0.08999999999999986,
+      "0.5-r10": 0.0899999999999963,
+      "0.5-r100": 0.0899999999999963,
+      "0.7-r1": 0.09999999999999964,
+      "0.7-r5": 0.14000000000000057,
+      "0.7-r10": 0.13000000000000256,
+      "0.7-r100": 0.11999999999999744
+    }
+  },
+  "movement": {
+    "structural_absolute": {
+      "replacement_rate_top_slots": 0.006773749426342359,
+      "candidate_replacement_count": 369,
+      "replacement_by_slot": {
+        "0": 120,
+        "1": 28,
+        "2": 43,
+        "3": 82,
+        "4": 96
+      },
+      "top1_changed_ratio_vs_c4_final": 0.01101422670949977,
+      "video_slot_drift": 0.0,
+      "video_multiset_drift": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "queries": 10895
+    },
+    "relative_to_C6_B1_lite": {
+      "top1_changed_ratio": 0.03129876089949518,
+      "queries_compared": 10895,
+      "hard_positive_top100_exits": 9,
+      "hard_positive_top100_entries": 6,
+      "base_positive_top100_queries": 5072,
+      "new_positive_top100_queries": 5069,
+      "hard_positive_top100_exit_ratio": 0.001774447949526814
+    },
+    "relative_to_C4_final": {
+      "top1_changed_ratio": 0.01101422670949977,
+      "queries_compared": 10895,
+      "hard_positive_top100_exits": 1,
+      "hard_positive_top100_entries": 10,
+      "base_positive_top100_queries": 5060,
+      "new_positive_top100_queries": 5069,
+      "hard_positive_top100_exit_ratio": 0.0001976284584980237
+    }
+  },
+  "promotion_decision": "PROMOTE_C6_B2_PAIRWISE_MAIN_0005_AS_CURRENT_SYSTEM",
+  "next_recommended_stage": "C6-C design review for retrieval-localization mutualization",
+  "stop_condition": "Do not run further official val or C6-C without explicit new authorization.",
+  "key_inputs": {
+    "freeze_manifest": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "freeze_hashes": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+      "exists": true,
+      "size": 2704,
+      "sha256": "058b32d12098c82a86cb7ccadb8b65999f39910e8b61b510aa3dd0fcb89d527f"
+    },
+    "official_val_manifest": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+      "exists": true,
+      "size": 4486,
+      "sha256": "4c051776c288fe1ba5ab0f1f4121fbdd5189bebe5abb395e286819896860b1a6"
+    },
+    "official_val_hashes": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_HASHES.json",
+      "exists": true,
+      "size": 5183,
+      "sha256": "dce338ecb03db343708fa41403d0a34076eb939e06349e4830a644a4f16bb76d"
+    },
+    "selector_ckpt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "exists": true,
+      "size": 3504043,
+      "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+    },
+    "best_config": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "exists": true,
+      "size": 1180,
+      "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+    },
+    "official_val_submission": {
+      "path": "results/rlem_c6_b2_official_val/official_val_submission.json",
+      "exists": true,
+      "size": 52364075,
+      "sha256": "35277121e74295a4f35e273941e68f3416836af430e9a855b7d271dff298f4a2"
+    },
+    "official_val_metrics": {
+      "path": "results/rlem_c6_b2_official_val/official_val_metrics.json",
+      "exists": true,
+      "size": 838,
+      "sha256": "639b947c2fb23f3cb1eaf266ffe401ede1d6fd9e3cfb76cdfb6e18eaaecc1eed"
+    }
+  }
+}

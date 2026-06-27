@@ -1,0 +1,151 @@
+{
+  "all_eight_positive_count": 217,
+  "baseline_primary": "frozen_C4_lite_c4_00394",
+  "baseline_secondary": "frozen_C3.1",
+  "best_config": {
+    "a_rel": 0.05,
+    "active_parameter_on_grid_boundary": true,
+    "all_eight_strictly_positive": true,
+    "all_six_primary_nonnegative": true,
+    "b_iou05": 0.075,
+    "c_iou07": 0.025,
+    "config_id": "v2_cb_00651",
+    "d_quality": 0.0,
+    "deltas_vs_frozen_c31": {
+      "0.5-r1": 1.6134569172674205,
+      "0.5-r10": 0.6064767135827935,
+      "0.5-r100": 0.148758439180682,
+      "0.5-r5": 0.6064767135827864,
+      "0.7-r1": 0.8696647213639999,
+      "0.7-r10": 2.2313765877102654,
+      "0.7-r100": 0.7552351527634755,
+      "0.7-r5": 2.2084906739901555
+    },
+    "deltas_vs_frozen_c4_lite": {
+      "0.5-r1": 0.03432887058016121,
+      "0.5-r10": 0.011442956860051368,
+      "0.5-r100": 0.04577182744020547,
+      "0.5-r5": 0.022885913720102735,
+      "0.7-r1": 0.022885913720106288,
+      "0.7-r10": 0.09154365488041805,
+      "0.7-r100": 0.05721478430027105,
+      "0.7-r5": 0.04577182744020547
+    },
+    "grid_index": [
+      3,
+      1,
+      2,
+      1,
+      2
+    ],
+    "group": "v2_cb",
+    "hard_constraints_pass": true,
+    "isolated_boundary_point": false,
+    "metrics": {
+      "0.5-r1": 39.363771598581074,
+      "0.5-r10": 69.42441926993935,
+      "0.5-r100": 76.23297860167067,
+      "0.5-r5": 62.29545714612656,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.162032269138344,
+      "0.7-r100": 65.27062592974025,
+      "0.7-r5": 48.67833848266392
+    },
+    "movement_vs_frozen_c4_lite": {
+      "hard_positive_top100_entries": 210,
+      "hard_positive_top100_exit_ratio": 0.00015936508948349775,
+      "hard_positive_top100_exits": 10,
+      "pearson_c4_lite_v2": 0.9999030232933852,
+      "queries": 8739,
+      "relative_to": "frozen_C4_lite_c4_00394",
+      "top1_changed_ratio": 0.0026318800778121067
+    },
+    "official_val_used": false,
+    "passing_neighbor_count": 9,
+    "passing_neighbor_ids": [
+      "v2_cb_00460",
+      "v2_cb_00603",
+      "v2_cb_00639",
+      "v2_cb_00647",
+      "v2_cb_00650",
+      "v2_cb_00652",
+      "v2_cb_00655",
+      "v2_cb_00663",
+      "v2_cb_00699"
+    ],
+    "pearson_c4_lite_v2": 0.9999030232933906,
+    "r100_both_nonnegative": true,
+    "robust_neighbor_supported": true,
+    "selection_score_delta_vs_frozen_c4_lite": 0.05101651600106708,
+    "tau": 0.1,
+    "top1_changed_ratio": 0.0026318800778121067,
+    "z_stats_train_calib": {
+      "iou05_logit": {
+        "row_expanded_mean": -3.92142653465271,
+        "row_expanded_std": 2.1069819927215576
+      },
+      "iou07_logit": {
+        "row_expanded_mean": -4.213388919830322,
+        "row_expanded_std": 2.1755518913269043
+      },
+      "quality_logit": {
+        "row_expanded_mean": -3.8732757568359375,
+        "row_expanded_std": 1.7478158473968506
+      },
+      "rel_logit": {
+        "row_expanded_mean": -3.862743616104126,
+        "row_expanded_std": 2.063218832015991
+      }
+    },
+    "zero_residual_control": false
+  },
+  "deduplicated_grid_size": 765,
+  "effective_top_n": 100,
+  "fast_bundled_parity": {
+    "best": 0.0,
+    "c31": 0.0,
+    "c4_lite": 0.0
+  },
+  "frozen_effective_top_n": 100,
+  "frozen_max_after_nms": 100,
+  "frozen_nms_thd": 0.7,
+  "future_stages_used": {
+    "c4_main": false,
+    "c5": false,
+    "c6": false,
+    "official_val": false,
+    "r2_head": false,
+    "vs_head": false
+  },
+  "group": "v2_cb",
+  "hard_constraint_pass_count": 511,
+  "logits_sha256": "56c90d617d5c5005cd50cbaff24effccb2d4285f331b36dae6ecc38baa4ce9a1",
+  "max_after_nms": 100,
+  "modifies_conquer": false,
+  "movement_vs_frozen_c4_lite": {
+    "hard_positive_top100_entries": 210,
+    "hard_positive_top100_exit_ratio": 0.00015936508948349775,
+    "hard_positive_top100_exits": 10,
+    "pearson_c4_lite_v2": 0.9999030232933852,
+    "queries": 8739,
+    "relative_to": "frozen_C4_lite_c4_00394",
+    "top1_changed_ratio": 0.0026318800778121067
+  },
+  "nms_thd": 0.7,
+  "official_val_allowed": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "protocol_validated": true,
+  "r2_features_enabled": false,
+  "r2_main_allowed": false,
+  "raw_base_log_selection": false,
+  "raw_grid_size": 768,
+  "reads_official_val": false,
+  "recommend_freeze_review": true,
+  "robustness_pass": true,
+  "scope": "train_calib_only",
+  "split": "train",
+  "stage": "c4_r2_grid_search",
+  "status": "PASS",
+  "workers": 8
+}

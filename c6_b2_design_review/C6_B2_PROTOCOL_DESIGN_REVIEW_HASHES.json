@@ -1,0 +1,30 @@
+{
+  "status": "C6_B2_PROTOCOL_DESIGN_REVIEW_HASHES",
+  "artifacts": {
+    "c6_b2_design_review/C6_B2_PROTOCOL_DESIGN_REVIEW.md": {
+      "exists": true,
+      "size": 14453,
+      "sha256": "c2149d2cd896fa2a222026c2a35cc265cb76c21825321e32accd0d6c6da22f1b"
+    },
+    "c6_b2_design_review/C6_B2_PROTOCOL_DESIGN_REVIEW_MANIFEST.json": {
+      "exists": true,
+      "size": 1015,
+      "sha256": "6f5240679875f28c9fcf4752c9cdb4974a195daf932ea69712cc745c8f9bcb63"
+    },
+    "c6_b1_lite_final/C6_B1_LITE_FINAL_SUMMARY.md": {
+      "exists": true,
+      "size": 2012,
+      "sha256": "48765d77086752769d005a1f5ba39500575ce26375c06792a1803d43e95b95ce"
+    },
+    "c6_b1_lite_final/C6_B1_LITE_CEILING_ANALYSIS.md": {
+      "exists": true,
+      "size": 1549,
+      "sha256": "e851ebec6a59514fae01575aa39b2c942babc5c9de59e785ffde1324a8089aab"
+    },
+    "c6_b1_lite_final/C6_B1_LITE_MECHANISM_ANALYSIS.md": {
+      "exists": true,
+      "size": 960,
+      "sha256": "30a2d3b45720bb5f7bba463a919581643c1171d8b354bafe6703400e040ad177"
+    }
+  }
+}

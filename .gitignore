@@ -1,0 +1,41 @@
+# Runtime outputs and large experiment artifacts
+results/
+outputs/
+runs/
+wandb/
+
+# Model weights and binary experiment caches
+c7_models/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.lmdb
+*.mdb
+
+# Large prediction/evidence dumps
+*.jsonl
+*.jsonl.gz
+*.tsv.gz
+*.csv.gz
+
+# Python/cache/editor noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+*.log

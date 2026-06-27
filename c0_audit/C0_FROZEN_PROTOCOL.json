@@ -1,0 +1,23 @@
+{
+  "status": "C0_BASELINE_REPRODUCED",
+  "date": "2026-06-21",
+  "project_root": "/home/a/yybcounter/CONQUER-RLEM-c2c3",
+  "source_archive": "/home/a/yybcounter/plan/CONQUER-RLEM-c2c3.zip",
+  "source_archive_sha256": "7cd88654f8dd9f57519c1dd43a930fb1068bdc8adf4a46302652505836e3a24e",
+  "feature_root": "/home/a/data/yyb/tvr_feature_release",
+  "feature_root_mode": "read_only",
+  "checkpoint": "results/tvr-conquer_c0_repro_20260621/model.ckpt",
+  "checkpoint_sha256": "bf7aa90b6b2db212233c37d27b81a1e9b254b2a7be6bee7cbf75bb269cdf0264",
+  "split": "val",
+  "val_queries": 10895,
+  "device": 0,
+  "max_vcmr_video": 10,
+  "candidate_generation_topk": 200,
+  "effective_nms_input_limit": 100,
+  "max_after_nms": 100,
+  "nms_thd": 0.7,
+  "clip_length": 1.5,
+  "candidate_definition": "fixed 200-row CONQUER pool; official implementation truncates to score top-100 before NMS",
+  "headline_task": "VCMR",
+  "next_stage_authorized": false
+}

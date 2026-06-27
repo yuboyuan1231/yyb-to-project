@@ -1,0 +1,291 @@
+{
+  "status": "C6_B2_TRAINING_AUDIT",
+  "official_val_used": false,
+  "retry_policy": {
+    "underperforming_arm_retry_limit": 2,
+    "listwise_retries_used": 2,
+    "no_more_listwise_retries": true
+  },
+  "arms": {
+    "listwise_set": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.901676719413378,
+          "elapsed_sec": 10.652018070220947,
+          "examples_per_sec": 36633.895926548415,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 2,
+          "loss": 1.8186867957963992,
+          "elapsed_sec": 10.04080319404602,
+          "examples_per_sec": 38863.91539915443,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 3,
+          "loss": 1.7849450829141427,
+          "elapsed_sec": 10.039978265762329,
+          "examples_per_sec": 38867.10770390349,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 4,
+          "loss": 1.757949903685385,
+          "elapsed_sec": 10.052199840545654,
+          "examples_per_sec": 38819.85449974857,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        }
+      ],
+      "history_artifact": {
+        "path": "results/rlem_c6_b2/arms/listwise_set/history.json",
+        "exists": true,
+        "size": 865,
+        "sha256": "731a28b43816bd423eaed832f35545b7b43e9967e4677e1a1ab24c20d6a3dfa2"
+      },
+      "model": {
+        "path": "results/rlem_c6_b2/arms/listwise_set/model_best.pt",
+        "exists": true,
+        "size": 50592811,
+        "sha256": "beb6daba7c76c64a0edf3a03cb6a68a3285ca1c81adaa2036dd8fcff3e2abc20"
+      },
+      "score": {
+        "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_scores.npz",
+        "exists": true,
+        "size": 823512,
+        "sha256": "1081ee90f28d011b9e886e241b2a0a9db2011923d04ef7f51579f77ec1bd2b3f"
+      },
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/best_config.json",
+        "exists": true,
+        "size": 1179,
+        "sha256": "0d33834d47c055984433780a54cbc3e21b86ce02f0dcadf115e3e54744d2e2fe"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/grid_results.json",
+        "exists": true,
+        "size": 10072,
+        "sha256": "ee37f7c8d25b565458ead199ff94a89cc5049c7a42e6cf8fd744d543efb03935"
+      }
+    },
+    "listwise_set_retry1": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.610816163542383,
+          "elapsed_sec": 10.660673379898071,
+          "examples_per_sec": 36604.15400390476,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 2,
+          "loss": 1.5436217132663228,
+          "elapsed_sec": 10.0598783493042,
+          "examples_per_sec": 38790.22314822636,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 3,
+          "loss": 1.5155516791094037,
+          "elapsed_sec": 10.07412838935852,
+          "examples_per_sec": 38735.351840455594,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 4,
+          "loss": 1.4963983369123248,
+          "elapsed_sec": 10.0835702419281,
+          "examples_per_sec": 38699.083442169824,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 5,
+          "loss": 1.4828434942280435,
+          "elapsed_sec": 10.078617572784424,
+          "examples_per_sec": 38718.10030820296,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        }
+      ],
+      "history_artifact": {
+        "path": "results/rlem_c6_b2/arms/listwise_set_retry1/history.json",
+        "exists": true,
+        "size": 1079,
+        "sha256": "b5e73d04b7a6f509e0233c114db51ff4cdb879b74451f3b4df8bd27d39aeab7f"
+      },
+      "model": {
+        "path": "results/rlem_c6_b2/arms/listwise_set_retry1/model_best.pt",
+        "exists": true,
+        "size": 50592875,
+        "sha256": "7da4eafe36def9c490f6a21768ee57d6601ecc24251162469a02683de169b962"
+      },
+      "score": {
+        "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry1_scores.npz",
+        "exists": true,
+        "size": 814628,
+        "sha256": "7e306c332df4f024e0f8282709213651424b7e9c063efa3bc60a27d6f1b197c5"
+      },
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/best_config.json",
+        "exists": true,
+        "size": 1195,
+        "sha256": "d38d28fcc394e565d3572b849c16c286438e64dc685b1b1a09243d8cfce048d3"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/grid_results.json",
+        "exists": true,
+        "size": 10186,
+        "sha256": "844d621f34c25805475bbec6818e177e64491ca4bd6c8da8b0cf43dd4e1f728c"
+      }
+    },
+    "listwise_set_retry2": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.0185857131219036,
+          "elapsed_sec": 10.603463411331177,
+          "examples_per_sec": 36801.64485621213,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 2,
+          "loss": 0.9756731161584404,
+          "elapsed_sec": 9.977819919586182,
+          "examples_per_sec": 39109.233404943014,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 3,
+          "loss": 0.9597136514037067,
+          "elapsed_sec": 10.00302243232727,
+          "examples_per_sec": 39010.699049245435,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 4,
+          "loss": 0.9490922904763547,
+          "elapsed_sec": 10.033201456069946,
+          "examples_per_sec": 38893.36003592579,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        },
+        {
+          "epoch": 5,
+          "loss": 0.9416360357356945,
+          "elapsed_sec": 10.048376560211182,
+          "examples_per_sec": 38834.6221972044,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 1065482752
+        }
+      ],
+      "history_artifact": {
+        "path": "results/rlem_c6_b2/arms/listwise_set_retry2/history.json",
+        "exists": true,
+        "size": 1082,
+        "sha256": "985883666dfcbb65a72521a4fc2227295eec893c069ed56d33def1e0f1c07383"
+      },
+      "model": {
+        "path": "results/rlem_c6_b2/arms/listwise_set_retry2/model_best.pt",
+        "exists": true,
+        "size": 50592875,
+        "sha256": "3625988ef87d9a30fbfb10df85c98cbb474aee288a62afda789f4e584463da92"
+      },
+      "score": {
+        "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry2_scores.npz",
+        "exists": true,
+        "size": 810786,
+        "sha256": "33be370d3e11ce587f674b56c7010de37a6b6e1ad637b7794548db867404de21"
+      },
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/best_config.json",
+        "exists": true,
+        "size": 1196,
+        "sha256": "772a96929fcb230d8bfd645d8a4d77435a456d60c90937ca7bc8ed3ebc3417f1"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/grid_results.json",
+        "exists": true,
+        "size": 10157,
+        "sha256": "5a8b6f94e52cd4f697d26014c8caf6c112ab3764719ce3e840cb3f48e92c3abf"
+      }
+    },
+    "pairwise_main": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 4.104688710081363,
+          "elapsed_sec": 2.7611935138702393,
+          "examples_per_sec": 989272.0116739917,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 466094592
+        },
+        {
+          "epoch": 2,
+          "loss": 3.900186413062547,
+          "elapsed_sec": 2.3012194633483887,
+          "examples_per_sec": 1187010.4731172503,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 466094592
+        },
+        {
+          "epoch": 3,
+          "loss": 3.8318536224479445,
+          "elapsed_sec": 2.3014817237854004,
+          "examples_per_sec": 1186875.3329932017,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 466094592
+        },
+        {
+          "epoch": 4,
+          "loss": 3.784226127727303,
+          "elapsed_sec": 2.2845141887664795,
+          "examples_per_sec": 1195690.2292224139,
+          "gpu": "NVIDIA GeForce RTX 3090",
+          "max_memory_allocated": 466094592
+        }
+      ],
+      "history_artifact": {
+        "path": "results/rlem_c6_b2/arms/pairwise_main/history.json",
+        "exists": true,
+        "size": 863,
+        "sha256": "751e8b85e91cca3515d1043d9944489a41b28f339961a86cf0ed0aa454e5f151"
+      },
+      "model": {
+        "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+        "exists": true,
+        "size": 3504043,
+        "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+      },
+      "score": {
+        "path": "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz",
+        "exists": true,
+        "size": 2319243,
+        "sha256": "18c0be1cfee3de904424a1e91b4b86f5bb251fc9911e8f8c38bde3e79aa2e2aa"
+      },
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+        "exists": true,
+        "size": 1180,
+        "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json",
+        "exists": true,
+        "size": 10035,
+        "sha256": "3bfa61395fa6ddc2e28299bb3697622161cffa5162c266ea3ffb93e182af7562"
+      }
+    }
+  }
+}

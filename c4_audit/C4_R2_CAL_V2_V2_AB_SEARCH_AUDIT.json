@@ -1,0 +1,147 @@
+{
+  "all_eight_positive_count": 10,
+  "baseline_primary": "frozen_C4_lite_c4_00394",
+  "baseline_secondary": "frozen_C3.1",
+  "best_config": {
+    "a_rel": 0.1,
+    "active_parameter_on_grid_boundary": true,
+    "all_eight_strictly_positive": true,
+    "all_six_primary_nonnegative": true,
+    "b_iou05": 0.0,
+    "c_iou07": 0.0,
+    "config_id": "v2_ab_00044",
+    "d_quality": 0.0,
+    "deltas_vs_frozen_c31": {
+      "0.5-r1": 1.602013960407369,
+      "0.5-r10": 0.6179196704428449,
+      "0.5-r100": 0.11442956860052789,
+      "0.5-r5": 0.6064767135827864,
+      "0.7-r1": 0.8582217645039485,
+      "0.7-r10": 2.2084906739901626,
+      "0.7-r100": 0.7323492390433728,
+      "0.7-r5": 2.197047717130104
+    },
+    "deltas_vs_frozen_c4_lite": {
+      "0.5-r1": 0.02288591372010984,
+      "0.5-r10": 0.022885913720102735,
+      "0.5-r100": 0.011442956860051368,
+      "0.5-r5": 0.022885913720102735,
+      "0.7-r1": 0.01144295686005492,
+      "0.7-r10": 0.06865774116031531,
+      "0.7-r100": 0.034328870580168314,
+      "0.7-r5": 0.0343288705801541
+    },
+    "grid_index": [
+      2,
+      3,
+      0,
+      0,
+      2
+    ],
+    "group": "v2_ab",
+    "hard_constraints_pass": true,
+    "isolated_boundary_point": false,
+    "metrics": {
+      "0.5-r1": 39.35232864172102,
+      "0.5-r10": 69.4358622267994,
+      "0.5-r100": 76.19864973109051,
+      "0.5-r5": 62.29545714612656,
+      "0.7-r1": 26.36457260556128,
+      "0.7-r10": 56.13914635541824,
+      "0.7-r100": 65.24774001602015,
+      "0.7-r5": 48.66689552580387
+    },
+    "movement_vs_frozen_c4_lite": {
+      "hard_positive_top100_entries": 101,
+      "hard_positive_top100_exit_ratio": 7.968254474174887e-05,
+      "hard_positive_top100_exits": 5,
+      "pearson_c4_lite_v2": 0.9999737393275887,
+      "queries": 8739,
+      "relative_to": "frozen_C4_lite_c4_00394",
+      "top1_changed_ratio": 0.0016020139604073693
+    },
+    "official_val_used": false,
+    "passing_neighbor_count": 5,
+    "passing_neighbor_ids": [
+      "v2_ab_00029",
+      "v2_ab_00040",
+      "v2_ab_00043",
+      "v2_ab_00045",
+      "v2_ab_00059"
+    ],
+    "pearson_c4_lite_v2": 0.9999737393275894,
+    "r100_both_nonnegative": true,
+    "robust_neighbor_supported": true,
+    "selection_score_delta_vs_frozen_c4_lite": 0.03623603005683407,
+    "tau": 0.075,
+    "top1_changed_ratio": 0.0016020139604073693,
+    "z_stats_train_calib": {
+      "iou05_logit": {
+        "row_expanded_mean": 0.4161711633205414,
+        "row_expanded_std": 0.13586843013763428
+      },
+      "iou07_logit": {
+        "row_expanded_mean": -0.2593781352043152,
+        "row_expanded_std": 0.09467041492462158
+      },
+      "quality_logit": {
+        "row_expanded_mean": -4.144503593444824,
+        "row_expanded_std": 1.9213553667068481
+      },
+      "rel_logit": {
+        "row_expanded_mean": -3.9379138946533203,
+        "row_expanded_std": 2.1405134201049805
+      }
+    },
+    "zero_residual_control": false
+  },
+  "deduplicated_grid_size": 61,
+  "effective_top_n": 100,
+  "fast_bundled_parity": {
+    "best": 0.0,
+    "c31": 0.0,
+    "c4_lite": 0.0
+  },
+  "frozen_effective_top_n": 100,
+  "frozen_max_after_nms": 100,
+  "frozen_nms_thd": 0.7,
+  "future_stages_used": {
+    "c4_main": false,
+    "c5": false,
+    "c6": false,
+    "official_val": false,
+    "r2_head": false,
+    "vs_head": false
+  },
+  "group": "v2_ab",
+  "hard_constraint_pass_count": 36,
+  "logits_sha256": "972d686f52b8d76f93dee1f793774ed068997c9933fe7dd60e6422ddbe65d333",
+  "max_after_nms": 100,
+  "modifies_conquer": false,
+  "movement_vs_frozen_c4_lite": {
+    "hard_positive_top100_entries": 101,
+    "hard_positive_top100_exit_ratio": 7.968254474174887e-05,
+    "hard_positive_top100_exits": 5,
+    "pearson_c4_lite_v2": 0.9999737393275887,
+    "queries": 8739,
+    "relative_to": "frozen_C4_lite_c4_00394",
+    "top1_changed_ratio": 0.0016020139604073693
+  },
+  "nms_thd": 0.7,
+  "official_val_allowed": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "protocol_validated": true,
+  "r2_features_enabled": false,
+  "r2_main_allowed": false,
+  "raw_base_log_selection": false,
+  "raw_grid_size": 64,
+  "reads_official_val": false,
+  "recommend_freeze_review": true,
+  "robustness_pass": true,
+  "scope": "train_calib_only",
+  "split": "train",
+  "stage": "c4_r2_grid_search",
+  "status": "PASS",
+  "workers": 8
+}

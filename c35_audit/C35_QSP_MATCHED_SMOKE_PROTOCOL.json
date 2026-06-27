@@ -1,0 +1,72 @@
+{
+  "status": "FROZEN_BEFORE_SMOKE",
+  "stage": "C3.5 matched control/treatment preparation and smoke",
+  "scope": "train_fit_train_calib_only",
+  "inputs": {
+    "coverage_fixed_evidence": {
+      "path": "results/rlem_c35_qsp/train_qsp_evidence_covfix.jsonl.gz",
+      "sha256": "d8b4c1548ff7fbb7c149615bd21cf33f75e5d552a0c7d07e9e6693b2fa1f07cb"
+    },
+    "train_fit_ids": {
+      "path": "results/rlem_c2/splits/train_fit_desc_ids.txt",
+      "sha256": "e333aa4935ff3648367dff454987a6b6764a24df52cf3412fcc75a8213ca9fd2",
+      "queries": 78045,
+      "rows": 15609000
+    },
+    "train_calib_ids": {
+      "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+      "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a",
+      "queries": 8739,
+      "rows": 1747800
+    }
+  },
+  "feature_sets": {
+    "control31": "frozen C3.1 no-R2 31 features",
+    "qsp52_drop_coverage": "control31 plus 21 QSP features excluding qsp_sub_coverage",
+    "qsp53_with_coverage": "control31 plus all 22 QSP features"
+  },
+  "matched_initialization": {
+    "control": "FlexibleEvidenceMLP(31) initialized with torch seed 13",
+    "shared_parameters": "copied exactly from control into both treatments",
+    "additional_first_layer_columns": "zero initialized",
+    "required_epoch0_logit_max_abs_diff": 0.0
+  },
+  "architecture": {
+    "hidden_dims": [256, 256, 128],
+    "dropout": 0.1
+  },
+  "loss": {
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.25,
+    "lambda_bd": 1.0,
+    "lambda_fp": 0.5,
+    "fp_loss_type": "bce"
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "grad_clip_norm": 5.0
+  },
+  "smoke_budget": {
+    "epochs": 1,
+    "batch_size": 1024,
+    "max_train_rows": 524288,
+    "max_calib_rows": 131072,
+    "shuffle_block_rows": 262144,
+    "seed": 13
+  },
+  "cache": {
+    "canonical_schema": "qsp53_with_coverage",
+    "storage": "NVMe float32 memmap",
+    "training_modes_to_compare": ["cpu_memmap_to_cuda", "gpu_resident"],
+    "input_batch_max_abs_diff_required": 0.0,
+    "post_training_state_max_abs_diff_atol": 1e-06,
+    "post_training_metric_max_abs_diff_atol": 1e-08
+  },
+  "stop_after_smoke": true,
+  "full_training_authorized": false,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "excluded": ["R2", "REG", "AMD", "C4", "C5", "C6", "score_grid"]
+}

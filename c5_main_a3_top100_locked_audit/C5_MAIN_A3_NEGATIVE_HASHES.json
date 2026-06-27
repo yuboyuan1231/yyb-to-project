@@ -1,0 +1,50 @@
+{
+  "status": "HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "artifacts": {
+    "grid_csv": {
+      "path": "results/rlem_c5_main_a3_top100_locked/grid_results.csv",
+      "sha256": "bf07660c4dd828fdc9dcbeb2e4d7df3c195bd75f95e3e30520e968b1bce72617"
+    },
+    "grid_json": {
+      "path": "results/rlem_c5_main_a3_top100_locked/grid_results.json",
+      "sha256": "b2035a789d4e5fd51a416619277cab6aa184d6b3c2205d944634476b294868e5"
+    },
+    "best": {
+      "path": "results/rlem_c5_main_a3_top100_locked/best_config.json",
+      "sha256": "c24d9054ebc1dd356473bc2d68b387d7e8e0f501288447a0e5d0e4c86b557dce"
+    },
+    "loc": {
+      "path": "results/rlem_c5_main_a3_top100_locked/localization_diagnostics.json",
+      "sha256": "1017e4f91f3355508529f6baf4b8399961b941f27be4255c6c545e0b82e9712b"
+    },
+    "move": {
+      "path": "results/rlem_c5_main_a3_top100_locked/movement_diagnostics.json",
+      "sha256": "31f840f99f101f5892ee82a4b3e1eec6684318508e9f622b1a115940e097b3f6"
+    },
+    "nonzero": {
+      "path": "results/rlem_c5_main_a3_top100_locked/best_nonzero_diagnostics.json",
+      "sha256": "3b35b950fa68475f2c61f0d912af13becbf68c609e1020062ca213068bc625c8"
+    },
+    "strict": {
+      "path": "results/rlem_c5_main_a3_top100_locked/strict_diagnostics.json",
+      "sha256": "3b35b950fa68475f2c61f0d912af13becbf68c609e1020062ca213068bc625c8"
+    },
+    "audit": {
+      "path": "results/rlem_c5_main_a3_top100_locked/train_calib_search_audit.json",
+      "sha256": "86ba3451c2e1c9aa850201ee8b7138bfbb8c5437e33d85153a2cd5cd2f50e09e"
+    },
+    "review": {
+      "path": "c5_main_a3_top100_locked_audit/C5_MAIN_A3_NEGATIVE_AUDIT.md",
+      "sha256": "0695261bc20a1fa9375ffe26938ecc43f2fea110e09bbecddab895b488af2af0"
+    },
+    "manifest": {
+      "path": "c5_main_a3_top100_locked_audit/C5_MAIN_A3_NEGATIVE_MANIFEST.json",
+      "sha256": "e3436ee49ecb3d218d8ce36e3f211fbca7fb7fb65d49ba69cf00a383afa6c2db"
+    },
+    "code": {
+      "path": "rlem/grid_search_c5_main_a3.py",
+      "sha256": "c0163b50c7f81eab0eb204fac86ce2d9770e32f8bbb375e7cb318e5fc9e6d93c"
+    }
+  }
+}

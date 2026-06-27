@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "stage": "C3.5 QSP train-only subtitle coverage semantic fix",
+  "source_evidence": {
+    "path": "results/rlem_c35_qsp/train_qsp_evidence.jsonl.gz",
+    "sha256": "cc588882e1ac0da45de374204ad1cd1e0aa4701730be7368e2e9d4c4b7856c6c"
+  },
+  "corrected_evidence": {
+    "path": "results/rlem_c35_qsp/train_qsp_evidence_covfix.jsonl.gz",
+    "sha256": "d8b4c1548ff7fbb7c149615bd21cf33f75e5d552a0c7d07e9e6693b2fa1f07cb",
+    "rows": 17356800,
+    "queries": 86784
+  },
+  "coverage_definition": "mean(raw subtitle row L2 norm > 1e-8) over inclusive candidate span",
+  "coverage_stats": {
+    "mean": 0.8407369691734023,
+    "std": 0.2654483246450205,
+    "min": 0.0,
+    "p5": 0.1666666716337204,
+    "p50": 1.0,
+    "p95": 1.0,
+    "max": 1.0
+  },
+  "repair_audit": {
+    "path": "c35_audit/C35_QSP_COVERAGE_FIX_FULL_REPAIR_AUDIT.json",
+    "sha256": "258fbc3b058435d6be5d0bf02ec58e4d1592f12918c5213a222ca69e89517f65"
+  },
+  "full_evidence_audit": {
+    "path": "c35_audit/C35_QSP_COVERAGE_FIX_FULL_EVIDENCE_AUDIT.json",
+    "sha256": "16446c5035bfc0e563ba65194a87a7c9bc179eb7db65eac691068422a8960cd5",
+    "identity_mismatches": 0,
+    "duplicate_candidates": 0,
+    "nonfinite_features": 0,
+    "range_violations": 0,
+    "collapsed_features": 0
+  },
+  "code_sha256": {
+    "rlem/qsp_features.py": "97330675c7794894353effea2f36a40ec16e10e342dab599a38003f23fbf6397",
+    "rlem/export_qsp_evidence.py": "789227564ea3c6207f9f8c24bcdb2389d6250c5457b2e5d74c1789f7f5caf8c6",
+    "rlem/repair_qsp_sub_coverage.py": "ec8f3d7cba5af71bf44425222ed576a5b52330c81b10abefaada059f56cb32ad",
+    "rlem/evidence_dataset.py": "29f39b57d00373e9b8ee08b7d7f6a5b1bce299f3baa2dbf8df2dd2a446058e06"
+  },
+  "candidate_or_other_feature_mutations": 0,
+  "gpu_full_export_rerun": false,
+  "official_val_used": false,
+  "training_started": false
+}

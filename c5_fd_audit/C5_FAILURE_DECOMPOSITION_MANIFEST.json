@@ -1,0 +1,48 @@
+{
+  "status": "C5_FAILURE_DECOMPOSITION_COMPLETE",
+  "classification": "B_C5_MAIN_CANDIDATE",
+  "recommendation": "Human review may consider a future C5-main experiment that injects retrieval-conditioned boundary evidence into begin/end logits; do not continue external C5-lite-prior residual tuning.",
+  "primary_baseline": "C4_final = C4-r2-cal-v2.1 v21_00444",
+  "evidence": {
+    "prior_alignment": {
+      "p_ctx_peak_inside_gt_ratio": 0.19352548629845237,
+      "p_bd_peak_inside_gt_ratio": 0.8710776657674286,
+      "p_retloc_peak_inside_gt_ratio": 0.797103507028255,
+      "prior_only_r1_05": 30.200198778929433,
+      "prior_only_r1_07": 11.557574897060912,
+      "gt_mass_above_best_hard_negative_ratio": 0.37125091441111924
+    },
+    "redundancy": {
+      "mean_same_video_spearman": 0.06111901235196389,
+      "mean_gt_video_spearman": 0.05844396737443845,
+      "high_consistency_ratio_ge_0_7": 0.030645975850511913,
+      "p_retloc_qbd_pearson": 0.3102533515974421,
+      "p_retloc_qbd_spearman": 0.3387441945727022
+    },
+    "candidate_oracle": {
+      "raw_iou05_availability_ratio": 0.9626579582564249,
+      "raw_iou07_availability_ratio": 0.8561692460599176,
+      "post_nms_r1_05": 94.5761749254579,
+      "post_nms_r1_07": 80.93142126934545,
+      "rejected_c5p_00138_best_iou_rank_improved_ratio": 0.020871787590515407
+    }
+  },
+  "causal_interpretation": "Boundary prior peaks align with GT, but span-mass aggregation is duration-sensitive and ranks best-IoU spans poorly. The signal is not strongly rank-redundant with C4_final, and candidate oracle coverage remains high.",
+  "c5_lite_prior_grid_extended": false,
+  "c5_lite_prior_scorer_frozen": false,
+  "c5p_00138_promoted": false,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "C5_main_used": false,
+  "C6_used": false,
+  "C4_final_modified": false,
+  "model_conquer_modified": false,
+  "begin_end_logits_modified": false,
+  "candidate_generation_modified": false,
+  "nms_modified": false,
+  "evaluator_modified": false,
+  "stop_boundary": "STOP_AFTER_FAILURE_DECOMPOSITION_PENDING_HUMAN_REVIEW"
+}

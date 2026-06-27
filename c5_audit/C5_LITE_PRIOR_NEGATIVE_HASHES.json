@@ -1,0 +1,34 @@
+{
+  "status": "C5_LITE_PRIOR_NEGATIVE_HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "artifacts": {
+    "negative_audit": {
+      "path": "c5_audit/C5_LITE_PRIOR_NEGATIVE_AUDIT.md",
+      "sha256": "fae3054d94ada9d9283c17b0afa2a75fe989339a38c95fa4a8988261970d6457"
+    },
+    "negative_manifest": {
+      "path": "c5_audit/C5_LITE_PRIOR_NEGATIVE_MANIFEST.json",
+      "sha256": "18bb4710384591e8b5d0104ed60e49e8ff0033bceec082a64c9837508e94ce00"
+    },
+    "train_calib_audit_md": {
+      "path": "c5_audit/C5_LITE_PRIOR_TRAIN_CALIB_AUDIT.md",
+      "sha256": "b592a44198ade6f66ff5e50727e4fee76b1ae88058d42d3062e46ccb3d0ade87"
+    },
+    "decision_json": {
+      "path": "c5_audit/C5_LITE_PRIOR_DECISION.json",
+      "sha256": "89b8f34a354034cc08fbbfada3b8324f423de2ac3dfcd0897cdeb03e7fb6fa26"
+    },
+    "search_audit_json": {
+      "path": "results/rlem_c5_lite_prior/c5_lite_prior_train_calib_audit.json",
+      "sha256": "00bd9abd4b47b083ace9a78e767e62705f9597f23fc97ff04f852cd2840ac3a4"
+    },
+    "grid_results_json": {
+      "path": "results/rlem_c5_lite_prior/c5_lite_prior_grid_results.json",
+      "sha256": "c671dbc4b24ffe5e67188b4f50de449083e7664d43c18351c0d43ddeec0c895e"
+    },
+    "best_config_json": {
+      "path": "results/rlem_c5_lite_prior/best_config.json",
+      "sha256": "91eced95a8e87bd4125e6bc45a758bed10213a176cac28f143ad4c4b9f6163b4"
+    }
+  }
+}

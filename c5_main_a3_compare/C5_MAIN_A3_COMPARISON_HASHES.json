@@ -1,0 +1,36 @@
+{
+  "status": "C5_MAIN_A3_COMPARISON_HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "comparison": {
+    "summary": "dc7e72775b9ed3f2d04a24e8ac5eb02d394275f98a1fefc863ebc2d0f3bd8349",
+    "manifest": "3a9f9df9a8240ac4270f635725c9579537f311e9ed3737b33c9e9e3d64a519bd"
+  },
+  "A3a_top100_locked": {
+    "negative_audit": "0695261bc20a1fa9375ffe26938ecc43f2fea110e09bbecddab895b488af2af0",
+    "negative_manifest": "e3436ee49ecb3d218d8ce36e3f211fbca7fb7fb65d49ba69cf00a383afa6c2db",
+    "negative_hashes": "685d8211eb81012fa48f2d6ccf464b48b325b01cdf9fddac134c90537f41ea8d",
+    "search_audit": "86ba3451c2e1c9aa850201ee8b7138bfbb8c5437e33d85153a2cd5cd2f50e09e",
+    "grid_json": "b2035a789d4e5fd51a416619277cab6aa184d6b3c2205d944634476b294868e5",
+    "best_nonzero_diagnostics": "3b35b950fa68475f2c61f0d912af13becbf68c609e1020062ca213068bc625c8"
+  },
+  "A3b_video_slot": {
+    "freeze_review": "f4cc17e1e828a49617183c56476de51fa4b7e48016c6d73db1f8e730d79b6ebb",
+    "freeze_manifest": "6e6360cb9da487a7efd96c82cd6e275034eac589f05e88bac7042ae4fa9af057",
+    "freeze_hashes": "8104f27cca9810d2cb549bba6f1599e80af6bbe15324848747525adbc49dc93d",
+    "search_audit": "fc024c1e13107aea7ce38c3c25f7c7b7fa2868fb22e9f479f755c0776008c3bd",
+    "grid_json": "6fc69c27495dca368cd24b469533bfab91431f9da786a5f419ec232b98f5f354",
+    "selected_config": "b28080b9a5359d36c19f5eaa0e98563a50189d95fd825ceabffbc23fb4af88c6",
+    "selected_localization": "61fe46e0a065fce00153c101a71aea0f2ad786d87d0ce050f459ee4a108ecad2",
+    "selected_movement": "a7552a5308dfc260f9074674fa7de07d9fae74929bc7a5bd4650fc6174e0516c",
+    "strict_diagnostic": "c69a9ea37eaa5d3dae4c13e539077a0881de98f0fa0ff02c4e66ad699b906781"
+  },
+  "shared": {
+    "A2a_trainfit_stats": "8d0e0a0cf2dbfd7190fd7916c64f1954ceac12f30436c84b10a7fefe4b15a1bc",
+    "code": "c0163b50c7f81eab0eb204fac86ce2d9770e32f8bbb375e7cb318e5fc9e6d93c"
+  },
+  "frozen_upstream": {
+    "model/conquer.py": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "standalone_eval/eval.py": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+    "c4_audit/C4_STAGE_FINAL_MANIFEST.json": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b"
+  }
+}

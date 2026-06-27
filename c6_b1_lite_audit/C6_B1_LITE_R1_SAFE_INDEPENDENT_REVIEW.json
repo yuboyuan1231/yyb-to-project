@@ -1,0 +1,51 @@
+{
+  "review_status": "PASS_FOR_TRAIN_CALIB_FREEZE_REVIEW",
+  "stage_status": "C6_B1_LITE_R1_SAFE_POSITIVE",
+  "selected_config": {
+    "config_id": "c6b1r1_0057",
+    "apply_slots": 3,
+    "threshold0": 0.4,
+    "threshold_rest": 1.8,
+    "max_replacements": 2
+  },
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "C6_C_used": false,
+  "C4_final_retained": true,
+  "baseline": "pseudo_C4_final_fixed_video_slots",
+  "deltas_vs_baseline": {
+    "0.5-r1": 0.20597322348094593,
+    "0.5-r5": 0.148758439180682,
+    "0.5-r10": 0.12587252546057925,
+    "0.5-r100": 0.09154365488042515,
+    "0.7-r1": 0.28607392150131616,
+    "0.7-r5": 0.20597322348094593,
+    "0.7-r10": 0.19453026662089457,
+    "0.7-r100": 0.16020139604073336
+  },
+  "movement": {
+    "replacement_rate_top_slots": 0.01643971468894229,
+    "replacements": 431,
+    "top1_changed_ratio": 0.03936377159858107,
+    "hard_positive_top100_query_exits": 0,
+    "hard_positive_top100_query_entries": 8,
+    "video_slot_drift": 0.0,
+    "video_multiset_drift": 0.0
+  },
+  "grid_diagnostics": {
+    "grid_size": 78,
+    "feasible_count": 31,
+    "r1_positive_count": 78,
+    "r5_safe_count": 71,
+    "best_raw_selection_configs_rejected_by_movement_gate": true,
+    "selected_config_is_best_feasible": true
+  },
+  "issue_found_and_fixed": {
+    "movement_hard_positive_reference_was_pre_nms": true,
+    "fix": "compare post-NMS candidate output against post-NMS pseudo C4_final baseline",
+    "metrics_changed_after_fix": false,
+    "selected_config_changed_after_fix": false
+  },
+  "recommendation": "freeze c6b1r1_0057 for formal one-shot review decision; do not run official val without explicit authorization"
+}

@@ -1,0 +1,73 @@
+{
+  "status": "C5_FAILURE_DECOMPOSITION_HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "implementation": {
+    "path": "rlem/analyze_c5_failure_decomposition.py",
+    "sha256": "569c0e9901677d65fd896629cda42a339911e3e752c1a693613869d7a93aa8b0"
+  },
+  "inputs": {
+    "train_calib_c4_cache": {
+      "path": "results/rlem_c4_lite/train_calib_c4_cache.npz",
+      "sha256": "bcbd0caf12d194b31a4460fd78276832a0b2408434c7e190af6b8c511edff1cf"
+    },
+    "train_calib_c5_features": {
+      "path": "results/rlem_c5_lite_prior/train_calib_c5_prior_features.npz",
+      "sha256": "370ed08ae878de87c088ac616f528a95af590f39e7d6c3d16900ed5fe731de86"
+    },
+    "train_calib_temporal_prior": {
+      "path": "results/rlem_c5_lite_prior_prep/train_calib_temporal_prior.npz",
+      "sha256": "39aa03f9635ac848b1d5873b9221088528ec325f7b34bf4f949211ef47bc5194"
+    },
+    "train_fit_term_stats": {
+      "path": "c5_audit/C5_LITE_PRIOR_TERM_STATS_FREEZE.json",
+      "sha256": "fc0427c3b84fbb75cab1191359a2eb82cc86eb34ff47ea59e7fe33bd219522e3"
+    },
+    "train_calib_gt": {
+      "path": "results/rlem_c3_minimal/train_calib_gt.jsonl",
+      "sha256": "bd83185b2b4368a6285efb2be63f38ed4b2704b1159d37d6b78f2fa561cbe80a"
+    }
+  },
+  "diagnostic_json": {
+    "prior_gt_alignment": {
+      "path": "results/rlem_c5_failure_decomposition/prior_gt_alignment.json",
+      "sha256": "3e7a00252a285de676923e17adaeb31bddfb0c43954ef4ff0c5df517d3cd8a0e"
+    },
+    "prior_c4_redundancy": {
+      "path": "results/rlem_c5_failure_decomposition/prior_c4_redundancy.json",
+      "sha256": "b4ffad063989e4325212e2f63eb7a558a257f989f74c1fc7f29651b9e4a2a740"
+    },
+    "candidate_oracle_bottleneck": {
+      "path": "results/rlem_c5_failure_decomposition/candidate_oracle_bottleneck.json",
+      "sha256": "3bec50b8548c3ed886a093ce348b3fd88b57642936eca20ad41693592657a484"
+    }
+  },
+  "diagnostic_markdown": {
+    "prior_gt_alignment": {
+      "path": "c5_fd_audit/C5_FD_PRIOR_GT_ALIGNMENT.md",
+      "sha256": "e9d5ae5b19a63f41e38b81c2c36e246f9cb8b4277eaf23c33127038c6003177a"
+    },
+    "prior_c4_redundancy": {
+      "path": "c5_fd_audit/C5_FD_PRIOR_C4_REDUNDANCY.md",
+      "sha256": "c3e0bf003332eb7190f3e2717f7842fc1160f27f80e9c3dd211381f0620a7051"
+    },
+    "candidate_oracle_bottleneck": {
+      "path": "c5_fd_audit/C5_FD_CANDIDATE_ORACLE_BOTTLENECK.md",
+      "sha256": "44dbe06f2c1c588881a01ab02b55a12e08cdd3568bba48d2fe1d7194ed5fc790"
+    }
+  },
+  "conclusion": {
+    "summary": {
+      "path": "c5_fd_audit/C5_FAILURE_DECOMPOSITION_SUMMARY.md",
+      "sha256": "926dfe1cb74a081a107bc057731ee4b6d44ba43151c87db389cdc7860b9dc0c8"
+    },
+    "manifest": {
+      "path": "c5_fd_audit/C5_FAILURE_DECOMPOSITION_MANIFEST.json",
+      "sha256": "e41f5717d7c182627bf5c2482581cd8fa47d82798376840e8c74b456717f4013"
+    }
+  },
+  "negative_closure": {
+    "audit_sha256": "fae3054d94ada9d9283c17b0afa2a75fe989339a38c95fa4a8988261970d6457",
+    "manifest_sha256": "18bb4710384591e8b5d0104ed60e49e8ff0033bceec082a64c9837508e94ce00",
+    "hashes_sha256": "704167fd923da83f73c4ebdad06f7588cf746fe9005797cd69b8e4ca5a3a3004"
+  }
+}

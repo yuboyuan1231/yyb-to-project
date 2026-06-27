@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "train_cache": {
+      "exists": true,
+      "path": "results/rlem_c6a/cache/train_fit_c6_cache.npz",
+      "sha256": "e087e37d8e48c6cce17145421225c634ecdd5c0e0d276123facd3eb75afba107",
+      "size": 262265887
+    },
+    "train_calib_cache": {
+      "exists": true,
+      "path": "results/rlem_c6a/cache/train_calib_c6_cache.npz",
+      "sha256": "4aa5f0e5943bd876d7b3acbf96efb1b0366fe989a790e346dc977c52d0d4b682",
+      "size": 29376700
+    }
+  },
+  "checks": {
+    "batch_groups": 4,
+    "gpu_forward_device": "cuda",
+    "train_calib_p_b_finite": true,
+    "train_calib_p_b_nonnegative": true,
+    "train_calib_p_b_sum_max_abs_error": 2.384185791015625e-07,
+    "train_calib_p_ctx_finite": true,
+    "train_calib_p_ctx_nonnegative": true,
+    "train_calib_p_ctx_sum_max_abs_error": 2.384185791015625e-07,
+    "train_calib_p_e_finite": true,
+    "train_calib_p_e_nonnegative": true,
+    "train_calib_p_e_sum_max_abs_error": 2.384185791015625e-07,
+    "train_fit_p_b_finite": true,
+    "train_fit_p_b_nonnegative": true,
+    "train_fit_p_b_sum_max_abs_error": 2.980232238769531e-07,
+    "train_fit_p_ctx_finite": true,
+    "train_fit_p_ctx_nonnegative": true,
+    "train_fit_p_ctx_sum_max_abs_error": 2.384185791015625e-07,
+    "train_fit_p_e_finite": true,
+    "train_fit_p_e_nonnegative": true,
+    "train_fit_p_e_sum_max_abs_error": 2.980232238769531e-07,
+    "zero_adapter_max_abs_diff": 0.0
+  },
+  "official_val_used": false,
+  "status": "PASS"
+}

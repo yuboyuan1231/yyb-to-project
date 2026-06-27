@@ -1,0 +1,85 @@
+{
+  "stage": "C7 integrated RLEM design",
+  "official_val_used": false,
+  "training_started": false,
+  "design_principle": "Move RLEM evidence inside CONQUER scoring, before tuple ranking and unchanged NMS, while freezing base CONQUER in C7-B.",
+  "components": {
+    "A_moment_aware_vr_head": {
+      "formula": "S_video_C7 = S_video_CONQUER + beta * MomentAwareEvidence(q,v) - rho * VideoRisk(q,v)",
+      "inputs": [
+        "G",
+        "Contextual_QAL",
+        "begin/end logits",
+        "proposal confidence",
+        "span utility",
+        "partial relevance pooling",
+        "moment evidence concentration"
+      ],
+      "outputs": [
+        "video_residual_score",
+        "video_risk_score",
+        "moment_aware_evidence"
+      ],
+      "C7_B_scope": "train frozen-backbone residual head only; beta/rho selected on train_calib",
+      "C7_C_scope": "optionally unfreeze VR/ML heads only after C7-B passes"
+    },
+    "B_partial_relevance_MIL_aggregator": {
+      "goal": "Treat each video as a bag of candidate moments; local relevant moments dominate video relevance.",
+      "pooling": {
+        "top1": "C7-B first; low capacity and directly comparable to current VCMR max.",
+        "topk_mean": "C7-B first with k in {3,5}; more stable than top1.",
+        "logsumexp": "C7-B first with temperature search on train_calib.",
+        "attention_MIL": "C7-C unless C7-B simple poolings pass; higher capacity/risk.",
+        "noisy_or": "C7-C diagnostic; useful for multi-evidence aggregation but can overcount correlated spans."
+      },
+      "outputs": [
+        "mil_video_evidence",
+        "moment_density",
+        "evidence_entropy"
+      ]
+    },
+    "C_proposal_confidence_head": {
+      "goal": "BMN/BSN-style proposal confidence because start/end boundary logits alone were insufficient.",
+      "inputs": [
+        "query-aware clip features",
+        "start logits",
+        "end logits",
+        "inside span evidence",
+        "boundary neighborhood evidence",
+        "span length embedding"
+      ],
+      "outputs": [
+        "proposal_confidence",
+        "proposal_iou05_logit",
+        "proposal_iou07_logit",
+        "span_quality_logit"
+      ],
+      "C7_B_scope": "small head over top candidate spans; no backbone update.",
+      "risk_control": "Use as span-level score and MIL evidence, not direct video-order override without safety gate."
+    },
+    "D_hard_negative_contrastive_video_loss": {
+      "goal": "Separate correct video from semantically similar wrong videos without correct moment.",
+      "hard_negative_sources": [
+        "CONQUER high-score wrong videos",
+        "C6-B1 high-score wrong videos",
+        "C6-B2 high-score wrong videos",
+        "moment-evidence high but wrong videos",
+        "same-show/same-episode metadata if available"
+      ],
+      "loss_formula": "L_total = L_CONQUER_original + lambda_vr * L_moment_aware_video + lambda_mil * L_partial_relevance_MIL + lambda_prop * L_proposal_confidence + lambda_hn * L_hard_negative_contrastive",
+      "C7_B_scope": "contrast new residual video embeddings/scores only; base CONQUER frozen."
+    }
+  },
+  "score_composition": {
+    "video_level": "anchored to original CONQUER/external VR score plus bounded residual",
+    "span_level": "proposal confidence and span_quality modify within-video moment ranking first",
+    "tuple_level": "VCMR tuple score uses unchanged top100/NMS after C7 score tensor is formed"
+  },
+  "safety_rules": [
+    "No official val in C7-B/C design or training search.",
+    "NMS/evaluator remain unchanged.",
+    "Do not promote if train_calib feasible_count=0.",
+    "Require non-zero integrated contribution, not B2-equivalent no-op.",
+    "Report deltas vs C6-B2 and C6-B1 safety anchor."
+  ]
+}

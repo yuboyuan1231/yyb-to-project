@@ -1,0 +1,88 @@
+{
+  "status": "C6_C1_TRAINING_COMPLETE",
+  "official_val_used": false,
+  "device": "cuda",
+  "model": "C6CVideoReranker multi-head gated residual video reranker",
+  "architecture": {
+    "hidden": 512,
+    "layers": 4,
+    "heads": [
+      "relevance",
+      "moment",
+      "iou",
+      "risk",
+      "gate"
+    ],
+    "full_backbone_finetuning": false
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.1926182087179253,
+      "elapsed_sec": 3.7783758640289307,
+      "examples": 779142,
+      "device": "cuda"
+    },
+    {
+      "epoch": 2,
+      "loss": 1.1189777504711251,
+      "elapsed_sec": 3.474550247192383,
+      "examples": 779142,
+      "device": "cuda"
+    },
+    {
+      "epoch": 3,
+      "loss": 1.1106378916670514,
+      "elapsed_sec": 3.2580533027648926,
+      "examples": 779142,
+      "device": "cuda"
+    },
+    {
+      "epoch": 4,
+      "loss": 1.10469084291558,
+      "elapsed_sec": 3.2508745193481445,
+      "examples": 779142,
+      "device": "cuda"
+    },
+    {
+      "epoch": 5,
+      "loss": 1.1015752220028983,
+      "elapsed_sec": 3.3879873752593994,
+      "examples": 779142,
+      "device": "cuda"
+    }
+  ],
+  "final_loss": 1.1015752220028983,
+  "artifacts": {
+    "model": {
+      "path": "results/rlem_c6_c/arms/mavr_pr_mil/model_best.pt",
+      "exists": true,
+      "size": 3306859,
+      "sha256": "8a43ac5889c7a2282689d50775dbc86c8db7311306172a6a56d4df8acf50b960"
+    },
+    "history": {
+      "path": "results/rlem_c6_c/arms/mavr_pr_mil/history.json",
+      "exists": true,
+      "size": 705,
+      "sha256": "010f8c3cfc89e8fad85ac21ef9adba3b1c88e3627676876663a8d3e378d28cad"
+    },
+    "train_features": {
+      "path": "results/rlem_c6_c/train_fit_video_features.npz",
+      "exists": true,
+      "size": 143095940,
+      "sha256": "47d73f51d1aa7831484b11e5a4bdc010789db2cb2afb838880363695622b702f"
+    },
+    "calib_features": {
+      "path": "results/rlem_c6_c/train_calib_video_features.npz",
+      "exists": true,
+      "size": 16029279,
+      "sha256": "9b2da5949335aeaec7a22e51d70d6b3ee2574d0f8dbf8e14bc6f13dd21f51229"
+    },
+    "calib_scores": {
+      "path": "results/rlem_c6_c/train_calib_video_scores.npz",
+      "exists": true,
+      "size": 1284593,
+      "sha256": "7a648c5686289f6f76d73e08584aa35aa8bcdc5bc5b4952b2136ce1ed20e854a"
+    }
+  }
+}

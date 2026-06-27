@@ -1,0 +1,20 @@
+# C7-B3 leakage audit
+
+```json
+{
+  "status": "PASS",
+  "official_val_used": false,
+  "inference_features": [
+    "C7-B1 fixed-pool candidate score",
+    "C7-B2.1 residual score",
+    "per-query residual mean/std/rank distribution"
+  ],
+  "forbidden_features_present": [],
+  "per_query_z_uses_only_current_query_residual_distribution": true,
+  "GT_IoU_used_as_inference_feature": false,
+  "hit_label_used_as_inference_feature": false,
+  "official_prediction_used": false,
+  "official_metric_used": false,
+  "train_calib_label_used_as_inference_feature": false
+}
+```

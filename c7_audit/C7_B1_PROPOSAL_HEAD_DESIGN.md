@@ -1,0 +1,30 @@
+# C7-B1 proposal head design
+
+```json
+{
+  "stage": "C7-B1 proposal confidence head design",
+  "inputs": [
+    "temporal/context span statistics from frozen CONQUER/C6 cache",
+    "boundary prior start/end values",
+    "span length and rank anchors",
+    "C6-B1/B2 span utility side features",
+    "frozen video/group features"
+  ],
+  "outputs": [
+    "proposal_confidence",
+    "proposal_iou05_logit",
+    "proposal_iou07_logit",
+    "span_quality_logit"
+  ],
+  "loss": "BCE(iou05)+BCE(iou07)+0.5*SmoothL1(span_quality_iou)+0.2*calibration",
+  "frozen": [
+    "CONQUER backbone",
+    "QDF",
+    "QAL",
+    "Contextual_QAL",
+    "original ML head",
+    "original VR head"
+  ],
+  "official_val_used": false
+}
+```

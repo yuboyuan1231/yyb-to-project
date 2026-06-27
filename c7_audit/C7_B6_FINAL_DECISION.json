@@ -1,0 +1,194 @@
+{
+  "status": "C7_B6_R1_SELECTIVE_PROMISING",
+  "official_val_used": false,
+  "second_official_val": false,
+  "post_val_adjustment": false,
+  "C7_B2_1_promoted_decision_modified": false,
+  "C7_B3_C7_B4_C7_B5_1_archived_decisions_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "CONQUER_QDF_QAL_original_ML_VR_frozen": true,
+  "full_fine_tuning": false,
+  "top100_full_rerank_promoted_candidate": false,
+  "S_MINUTE_like_direct_replacement": false,
+  "selected_source": "phase_c_gate_model",
+  "selected_config": {
+    "K_guard": 10,
+    "tau": 0.20000000000000007,
+    "model": "GateMLP_15_32_16_3",
+    "train_split": "calib_A+calib_B",
+    "tau_tune_reference": "calib_C/stress train-only"
+  },
+  "selected_stress_record": {
+    "name": "selective_gate_model",
+    "query_count": 3732,
+    "metrics": {
+      "0.5-r1": 15.594855308532715,
+      "0.5-r5": 39.04072952270508,
+      "0.5-r10": 46.70418167114258,
+      "0.5-r100": 49.59807205200195,
+      "0.7-r1": 8.708467483520508,
+      "0.7-r5": 26.446945190429688,
+      "0.7-r10": 34.88745880126953,
+      "0.7-r100": 41.88102722167969
+    },
+    "delta_vs_C7_B2_1_A4": {
+      "0.5-r1": 7.556269645690918,
+      "0.5-r5": 0.08038711547851562,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.0,
+      "0.7-r1": 4.046088218688965,
+      "0.7-r5": 0.10718154907226562,
+      "0.7-r10": 0.0535888671875,
+      "0.7-r100": 0.0
+    },
+    "changed_query_count": 366,
+    "changed_query_rate": 0.09807073954983923,
+    "top1_changed_rate": 0.09807073954983923,
+    "top5_set_changed_rate": 0.028135048231511254,
+    "top10_set_changed_rate": 0.0,
+    "gain_loss_vs_baseline": {
+      "0.5-r1": {
+        "gain_queries": 285,
+        "loss_queries": 3
+      },
+      "0.5-r5": {
+        "gain_queries": 5,
+        "loss_queries": 2
+      },
+      "0.5-r10": {
+        "gain_queries": 0,
+        "loss_queries": 0
+      },
+      "0.5-r100": {
+        "gain_queries": 0,
+        "loss_queries": 0
+      },
+      "0.7-r1": {
+        "gain_queries": 151,
+        "loss_queries": 0
+      },
+      "0.7-r5": {
+        "gain_queries": 12,
+        "loss_queries": 8
+      },
+      "0.7-r10": {
+        "gain_queries": 4,
+        "loss_queries": 2
+      },
+      "0.7-r100": {
+        "gain_queries": 2,
+        "loss_queries": 2
+      }
+    },
+    "r1_07_gain_by_A4_rank_of_replacement": {
+      "<=5": 103,
+      "<=10": 48,
+      ">10": 0
+    },
+    "r1_07_loss_by_A4_rank_of_replacement": {
+      "<=5": 0,
+      "<=10": 0,
+      ">10": 0
+    },
+    "movement": {
+      "hard_positive_top100_query_exits": 0,
+      "hard_positive_top100_query_entries": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "fixed_pool_invariant": true,
+      "R100_delta": {
+        "0.5-r100": 0.0,
+        "0.7-r100": 0.0
+      }
+    }
+  },
+  "selected_standard_train_calib_record": {
+    "name": "selective_gate_model",
+    "query_count": 8739,
+    "metrics": {
+      "0.5-r1": 54.80031967163086,
+      "0.5-r5": 72.53690338134766,
+      "0.5-r10": 76.6906967163086,
+      "0.5-r100": 78.36136627197266,
+      "0.7-r1": 33.2303466796875,
+      "0.7-r5": 58.5650520324707,
+      "0.7-r10": 66.44924926757812,
+      "0.7-r100": 71.99908447265625
+    },
+    "delta_vs_C7_B2_1_A4": {
+      "0.5-r1": 3.9478187561035156,
+      "0.5-r5": 0.02288818359375,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.0,
+      "0.7-r1": 2.1970481872558594,
+      "0.7-r5": 0.011440277099609375,
+      "0.7-r10": 0.02288818359375,
+      "0.7-r100": 0.0
+    },
+    "changed_query_count": 580,
+    "changed_query_rate": 0.0663691497883053,
+    "top1_changed_rate": 0.0663691497883053,
+    "top5_set_changed_rate": 0.012472822977457375,
+    "top10_set_changed_rate": 0.0,
+    "gain_loss_vs_baseline": {
+      "0.5-r1": {
+        "gain_queries": 362,
+        "loss_queries": 17
+      },
+      "0.5-r5": {
+        "gain_queries": 5,
+        "loss_queries": 3
+      },
+      "0.5-r10": {
+        "gain_queries": 0,
+        "loss_queries": 0
+      },
+      "0.5-r100": {
+        "gain_queries": 0,
+        "loss_queries": 0
+      },
+      "0.7-r1": {
+        "gain_queries": 212,
+        "loss_queries": 20
+      },
+      "0.7-r5": {
+        "gain_queries": 15,
+        "loss_queries": 14
+      },
+      "0.7-r10": {
+        "gain_queries": 5,
+        "loss_queries": 3
+      },
+      "0.7-r100": {
+        "gain_queries": 3,
+        "loss_queries": 3
+      }
+    },
+    "r1_07_gain_by_A4_rank_of_replacement": {
+      "<=5": 163,
+      "<=10": 49,
+      ">10": 0
+    },
+    "r1_07_loss_by_A4_rank_of_replacement": {
+      "<=5": 20,
+      "<=10": 0,
+      ">10": 0
+    },
+    "movement": {
+      "hard_positive_top100_query_exits": 0,
+      "hard_positive_top100_query_entries": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "fixed_pool_invariant": true,
+      "R100_delta": {
+        "0.5-r100": 0.0,
+        "0.7-r100": 0.0
+      }
+    }
+  },
+  "calib_ABC_0.7_r1_median_delta": 1.7656497955322266,
+  "selection_notes": "Candidate is train-only only; do not run official val automatically."
+}

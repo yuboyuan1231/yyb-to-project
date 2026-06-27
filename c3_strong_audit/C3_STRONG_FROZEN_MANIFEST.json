@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "stage": "C3-strong",
+  "status": "C3_STRONG_PASS",
+  "date": "2026-06-22",
+  "scope": "train_calib_only weight search",
+  "official_val_used": false,
+  "official_val_submission_generated": false,
+  "recommend_official_val_one_shot": true,
+  "next_stage_authorized": false,
+  "source_integrity": {
+    "c1_train_evidence": {
+      "path": "results/rlem_c1/train_evidence.jsonl.gz",
+      "sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48"
+    },
+    "c1_official_val_evidence_untouched": {
+      "path": "results/rlem_c1/val_evidence.jsonl.gz",
+      "sha256": "ce9184e6b9e87581328850e6479231832e471caabae8881db9d6bbe1047f9884"
+    },
+    "c2_checkpoint": {
+      "path": "results/rlem_c2/basic_heads/model_best.pt",
+      "sha256": "e4a8944d836075139211202eac5caf0cb708de878447893b10dd8af34ac6bda9",
+      "epoch": 3
+    },
+    "train_calib_ids": {
+      "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+      "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a",
+      "queries": 8739
+    },
+    "train_calib_evidence": {
+      "path": "results/rlem_c3_minimal/train_calib_evidence.jsonl.gz",
+      "sha256": "ef0bdd42eb0d77fd621bf82a71b3ab61df1c1ddcaf5b0e86c95215a52a4e5d1b",
+      "rows": 1747800
+    },
+    "train_calib_gt": {
+      "path": "results/rlem_c3_minimal/train_calib_gt.jsonl",
+      "sha256": "bd83185b2b4368a6285efb2be63f38ed4b2704b1159d37d6b78f2fa561cbe80a"
+    }
+  },
+  "protocol": {
+    "candidate_rows_per_query": 200,
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100,
+    "base_score_mode": "log",
+    "families": [
+      "A_additive",
+      "B_gated_boundary"
+    ],
+    "workers": 8,
+    "model_inference_passes": 1,
+    "runtime_seconds": 273.64495944976807
+  },
+  "selection_rule": {
+    "primary_metrics": [
+      "0.5-r1",
+      "0.5-r5",
+      "0.5-r10",
+      "0.7-r1",
+      "0.7-r5",
+      "0.7-r10"
+    ],
+    "primary_metrics_all_positive": true,
+    "positive_delta_count_min": 6,
+    "r100_delta_floor": -0.25,
+    "hard_positive_top100_exit_ratio_max": 0.005,
+    "top1_changed_ratio_max": 0.4,
+    "pearson_min": 0.98,
+    "spearman_mean_within_query_min": 0.9,
+    "base_component_std_share_min": 0.6,
+    "boundary_component_std_share_max": 0.2,
+    "selection_score": "mean six primary deltas plus 0.25 times mean two R100 deltas",
+    "family_b_preference_tolerance": 0.1,
+    "frozen_before_search": true
+  },
+  "search": {
+    "coarse_config_count": 800,
+    "coarse_grid": {
+      "base_scale": [0.75, 1.0, 1.25, 1.5],
+      "a_joint": [0.25, 0.5, 0.75, 1.0, 1.5],
+      "b_bd": [0.0, 0.25, 0.5, 0.75],
+      "d_fp": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "family": ["A_additive", "B_gated_boundary"]
+    },
+    "boundary_refinement_trigger": [
+      {
+        "parameter": "base_scale",
+        "boundary": "low",
+        "value": 0.75,
+        "top10_count": 7
+      },
+      {
+        "parameter": "a_joint",
+        "boundary": "high",
+        "value": 1.5,
+        "top10_count": 9
+      },
+      {
+        "parameter": "b_bd",
+        "boundary": "high",
+        "value": 0.75,
+        "top10_count": 4
+      }
+    ],
+    "refinement_rounds": 1,
+    "refined_config_count": 80,
+    "total_config_count": 880,
+    "feasible_config_count": 803,
+    "family_counts": {
+      "A_additive": 400,
+      "B_gated_boundary": 480
+    }
+  },
+  "evaluator_precision_correction": {
+    "initial_fast_result_accepted": false,
+    "reason": "C1 exported threshold labels differed from bundled evaluator float32 IoU semantics on boundary rows",
+    "y05_disagreement_rows": 34,
+    "y07_disagreement_rows": 65,
+    "total_rows": 1747800,
+    "correction": "precompute candidate correctness with bundled evaluator float32 timestamp and IoU semantics, then rerun the complete grid",
+    "final_baseline_exact_to_official_evaluator": true,
+    "final_default_exact_to_official_evaluator": true,
+    "final_best_exact_to_official_evaluator": true,
+    "final_best_submission_exact_to_official_nms": true
+  },
+  "best_config": {
+    "config_id": "refine_0048",
+    "phase": "refine_once",
+    "family": "B_gated_boundary",
+    "base_scale": 0.75,
+    "a_joint": 1.625,
+    "b_bd": 0.75,
+    "d_fp": 0.5,
+    "score": "0.75*log(S_base) + 1.625*Q_joint + 0.75*Q_joint*Q_bd - 0.5*E_fp"
+  },
+  "metrics": {
+    "s_base": {
+      "0.5-r1": 30.63,
+      "0.5-r5": 57.68,
+      "0.5-r10": 66.67,
+      "0.5-r100": 75.81,
+      "0.7-r1": 20.73,
+      "0.7-r5": 41.41,
+      "0.7-r10": 49.67,
+      "0.7-r100": 63.84
+    },
+    "c3_minimal_default": {
+      "0.5-r1": 35.29,
+      "0.5-r5": 59.97,
+      "0.5-r10": 67.87,
+      "0.5-r100": 75.92,
+      "0.7-r1": 23.92,
+      "0.7-r5": 44.06,
+      "0.7-r10": 51.79,
+      "0.7-r100": 64.08
+    },
+    "c3_strong_best": {
+      "0.5-r1": 37.3,
+      "0.5-r5": 61.06,
+      "0.5-r10": 68.35,
+      "0.5-r100": 76.04,
+      "0.7-r1": 25.06,
+      "0.7-r5": 45.97,
+      "0.7-r10": 53.32,
+      "0.7-r100": 64.26
+    },
+    "best_delta_vs_s_base": {
+      "0.5-r1": 6.67,
+      "0.5-r5": 3.38,
+      "0.5-r10": 1.68,
+      "0.5-r100": 0.23,
+      "0.7-r1": 4.33,
+      "0.7-r5": 4.55,
+      "0.7-r10": 3.65,
+      "0.7-r100": 0.42
+    },
+    "best_delta_vs_c3_minimal": {
+      "0.5-r1": 2.01,
+      "0.5-r5": 1.09,
+      "0.5-r10": 0.48,
+      "0.5-r100": 0.12,
+      "0.7-r1": 1.14,
+      "0.7-r5": 1.91,
+      "0.7-r10": 1.53,
+      "0.7-r100": 0.18
+    }
+  },
+  "best_diagnostics": {
+    "selection_score": 4.124709158179808,
+    "top1_changed_ratio": 0.22657054582904224,
+    "hard_positive_top100_exits": 92,
+    "hard_positive_top100_entries": 5600,
+    "hard_positive_top100_exit_ratio": 0.0014662522910192047,
+    "y_fp_down_move_ratio": 0.6277539419003294,
+    "y_joint_05_down_move_ratio": 0.0986214040959439,
+    "wrong_video_gated_boundary_bonus_mean": 0.009731178171932697,
+    "weighted_component_std_share": {
+      "base": 0.7754173324549212,
+      "q_joint": 0.10704420175132363,
+      "gated_boundary": 0.03132757773218087,
+      "negative_e_fp": 0.08621088806157429
+    },
+    "pearson_base_vs_c3": 0.980297698096665,
+    "spearman_mean_within_query": 0.9852781377893527,
+    "all_constraints_pass": true
+  },
+  "family_comparison": {
+    "best_a_selection_score": 4.026967235000191,
+    "best_b_selection_score": 4.124709158179808,
+    "best_a_wrong_video_boundary_bonus_mean": 0.09812095016241074,
+    "best_b_wrong_video_boundary_bonus_mean": 0.009731178171932697,
+    "best_a_hard_positive_exits": 103,
+    "best_b_hard_positive_exits": 92,
+    "selection": "B_gated_boundary"
+  },
+  "artifacts": {
+    "grid_json": {
+      "path": "results/rlem_c3_strong/train_calib_grid_results.json",
+      "sha256": "a4e4e4cc0702346353b6c46b87cfc1ab76837068b69b065231ba17e963bd388f"
+    },
+    "grid_csv": {
+      "path": "results/rlem_c3_strong/train_calib_grid_results.csv",
+      "sha256": "117e2b0c8fa9003cb5f5655c57d1bc01df87299a5909a213b005d5475b9c77f4"
+    },
+    "best_config": {
+      "path": "results/rlem_c3_strong/best_config.json",
+      "sha256": "5008fb07200bcf0efc0d9ee4514a5a7d8fffa81531c7f7a5693d299071708360"
+    },
+    "best_submission": {
+      "path": "results/rlem_c3_strong/best_train_calib_submission.json",
+      "sha256": "70585118693c492005a0ff5a0dbad182fff85d6971dca35d3792567f82c46b31"
+    },
+    "best_metrics": {
+      "path": "results/rlem_c3_strong/best_train_calib_metrics.json",
+      "sha256": "5d3478151dedbaff955428aa4d091869bfc27859dc61a0e8b256bfee40dac0ed"
+    },
+    "diagnostics_json": {
+      "path": "results/rlem_c3_strong/c3_strong_diagnostics.json",
+      "sha256": "47e02b4862c4b9646fbd8312aaf422377045690859806a0f3e3538fc34649960"
+    },
+    "diagnostics_md": {
+      "path": "results/rlem_c3_strong/c3_strong_diagnostics.md",
+      "sha256": "e6374b1851d5719ed722caa3800ef528f5bc3d35ecd9a1cfae2c94c8ba757667"
+    },
+    "grid_search_code": {
+      "path": "rlem/grid_search_c3_weights.py",
+      "sha256": "8f992aa2420522037bdb8806edcf91224ca71a00c98af59c9437a676766460fd"
+    }
+  },
+  "gates": {
+    "train_calib_only": true,
+    "official_val_not_used": true,
+    "all_880_configs_recorded": true,
+    "selection_rule_frozen_before_search": true,
+    "all_best_primary_deltas_positive": true,
+    "both_best_r100_deltas_positive": true,
+    "best_improves_all_eight_vs_c3_minimal": true,
+    "hard_positive_exit_constraint_pass": true,
+    "wrong_video_boundary_bonus_not_dominant": true,
+    "base_component_remains_dominant": true,
+    "correlation_constraints_pass": true,
+    "original_nms_exact": true,
+    "original_evaluator_exact": true,
+    "c1_c2_artifacts_unchanged": true,
+    "official_val_one_shot_not_executed": true
+  }
+}

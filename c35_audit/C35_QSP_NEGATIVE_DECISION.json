@@ -1,0 +1,47 @@
+{
+  "status": "FROZEN",
+  "stage": "C3.5-QSP matched epoch-8 decision",
+  "decision": "STOP_C35_QSP_NEGATIVE",
+  "formulation": "52/53-feature matched MLP",
+  "reason": "QSP52 and QSP53 do not exceed the matched control31 after matched epoch-8 training and fixed C3.1 score probing.",
+  "selected_checkpoints": {
+    "control31": {
+      "path": "results/rlem_c35_qsp/matched_extended_epoch8/control31/model_best.pt",
+      "epoch": 7,
+      "train_calib_loss": 0.0899081171129126
+    },
+    "qsp52_drop_coverage": {
+      "path": "results/rlem_c35_qsp/matched_extended_epoch8/qsp52_drop_coverage/model_best.pt",
+      "epoch": 5,
+      "train_calib_loss": 0.09035582318105718,
+      "loss_delta_vs_control31": 0.00044770606814458,
+      "fixed_probe_selection_delta_vs_control31": -0.170213983293283
+    },
+    "qsp53_with_coverage": {
+      "path": "results/rlem_c35_qsp/matched_extended_epoch8/qsp53_with_coverage/model_best.pt",
+      "epoch": 5,
+      "train_calib_loss": 0.09046467692106672,
+      "loss_delta_vs_control31": 0.00055655980815412,
+      "fixed_probe_selection_delta_vs_control31": -0.205019643742611
+    }
+  },
+  "authorization": {
+    "official_val_qsp_one_shot": false,
+    "score_grid": false,
+    "temperature_search": false,
+    "epoch_9_plus": false,
+    "qsp_capacity_search": false
+  },
+  "used": {
+    "official_val": false,
+    "R2": false,
+    "REG": false,
+    "AMD": false,
+    "C4": false,
+    "C5": false,
+    "C6": false
+  },
+  "c31_frozen_artifacts_unchanged": true,
+  "next_stage_authorized": false
+}
+

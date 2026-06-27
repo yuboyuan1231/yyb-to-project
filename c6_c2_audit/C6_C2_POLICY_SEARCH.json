@@ -1,0 +1,4430 @@
+{
+  "baselines": {
+    "C6_B1_lite_eval": {
+      "metrics": {
+        "0.5-r1": 41.30907426479002,
+        "0.5-r5": 65.3278407140405,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.37281153450051,
+        "0.7-r1": 25.30037761757638,
+        "0.7-r5": 49.8912919098295,
+        "0.7-r10": 59.05710035473166,
+        "0.7-r100": 71.97619864973109
+      },
+      "video_metrics": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.69905023458061,
+        "GT_video_R@10": 75.68371667238814,
+        "GT_video_R@100": 80.37532898500973
+      },
+      "movement": {
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "evaluation_basis": "index_iou_reconstruction",
+      "official_val_used": false
+    },
+    "C6_B2_eval_reconstructed_from_action_A0": {
+      "metrics": {
+        "0.5-r1": 41.56081931571118,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.33848266392036,
+        "0.7-r1": 25.666552237098067,
+        "0.7-r5": 49.94850669412976,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.98764160659114
+      }
+    },
+    "C6_B2_eval_policy_function": {
+      "metrics": {
+        "0.5-r1": 41.56081931571118,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.33848266392036,
+        "0.7-r1": 25.666552237098067,
+        "0.7-r5": 49.94850669412976,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.98764160659114
+      },
+      "video_metrics": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.76770797574093,
+        "GT_video_R@10": 75.70660258610825,
+        "GT_video_R@100": 80.37532898500973
+      },
+      "movement": {
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "evaluation_basis": "index_iou_reconstruction",
+      "official_val_used": false
+    }
+  },
+  "result_count": 1296,
+  "feasible_count": 0,
+  "nonnoop_count": 816,
+  "best_feasible": null,
+  "best_nonnoop": {
+    "config": {
+      "config_id": "c6c2_policy_00435",
+      "allowed_actions": [
+        "A1_MAVR_soft_rerank",
+        "A2_PREM_PRVR_MIL_promote",
+        "A3_topK_preserving_promote",
+        "A5_BMN_proposal_confidence_boost"
+      ],
+      "enable_threshold": 0.17919921875,
+      "utility_margin": 0.0,
+      "max_enabled_query_rate": 0.02,
+      "max_video_slot_change_rate": 0.05,
+      "max_actions_per_query": 1,
+      "fallback": "A0_noop_B2"
+    },
+    "metrics": {
+      "0.5-r1": 41.58370522943129,
+      "0.5-r5": 65.38505549834078,
+      "0.5-r10": 72.29660144181257,
+      "0.5-r100": 78.34992562078041,
+      "0.7-r1": 25.677995193958118,
+      "0.7-r5": 49.93706373726971,
+      "0.7-r10": 59.07998626845177,
+      "0.7-r100": 71.99908456345119
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 0.27463096464126835,
+      "0.5-r5": 0.05721478430027105,
+      "0.5-r10": -0.011442956860051368,
+      "0.5-r100": -0.022885913720102735,
+      "0.7-r1": 0.37761757638173776,
+      "0.7-r5": 0.045771827440212576,
+      "0.7-r10": 0.02288591372010984,
+      "0.7-r100": 0.022885913720102735
+    },
+    "delta_vs_C6_B2": {
+      "0.5-r1": 0.02288591372010984,
+      "0.5-r5": -0.011442956860051368,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.011442956860051368,
+      "0.7-r1": 0.011442956860051368,
+      "0.7-r5": -0.011442956860051368,
+      "0.7-r10": 0.0,
+      "0.7-r100": 0.011442956860051368
+    },
+    "movement": {
+      "enabled_queries": 125,
+      "enabled_query_rate": 0.014303696075065797,
+      "enabled_non_noop_queries": 125,
+      "action_distribution": {
+        "A0_noop_B2": 8614,
+        "A1_MAVR_soft_rerank": 0,
+        "A2_PREM_PRVR_MIL_promote": 20,
+        "A3_topK_preserving_promote": 0,
+        "A4_raw200_video_insertion": 0,
+        "A5_BMN_proposal_confidence_boost": 105
+      },
+      "video_slot_drift_rate": 0.00018766449250486326,
+      "positive_video_entries": 0,
+      "positive_video_exits": 0,
+      "wrong_video_to_correct_video": 1,
+      "correct_video_to_wrong_video": 0,
+      "hard_positive_top100_query_entries": 1,
+      "hard_positive_top100_query_exits": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "R5_loss_queries_07": 2,
+      "R10_loss_queries_07": 1,
+      "R1_gain_queries_07": 5,
+      "R1_loss_queries_07": 4
+    },
+    "video_metrics": {
+      "GT_video_R@1": 25.677995193958118,
+      "GT_video_R@100_entry_proxy": 0.011442956860052637
+    },
+    "feasible": false,
+    "no_op_equivalent": false,
+    "selection_score": 1.0853358507838458,
+    "official_val_used": false
+  },
+  "best_overall": {
+    "config": {
+      "config_id": "c6c2_policy_00435",
+      "allowed_actions": [
+        "A1_MAVR_soft_rerank",
+        "A2_PREM_PRVR_MIL_promote",
+        "A3_topK_preserving_promote",
+        "A5_BMN_proposal_confidence_boost"
+      ],
+      "enable_threshold": 0.17919921875,
+      "utility_margin": 0.0,
+      "max_enabled_query_rate": 0.02,
+      "max_video_slot_change_rate": 0.05,
+      "max_actions_per_query": 1,
+      "fallback": "A0_noop_B2"
+    },
+    "metrics": {
+      "0.5-r1": 41.58370522943129,
+      "0.5-r5": 65.38505549834078,
+      "0.5-r10": 72.29660144181257,
+      "0.5-r100": 78.34992562078041,
+      "0.7-r1": 25.677995193958118,
+      "0.7-r5": 49.93706373726971,
+      "0.7-r10": 59.07998626845177,
+      "0.7-r100": 71.99908456345119
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 0.27463096464126835,
+      "0.5-r5": 0.05721478430027105,
+      "0.5-r10": -0.011442956860051368,
+      "0.5-r100": -0.022885913720102735,
+      "0.7-r1": 0.37761757638173776,
+      "0.7-r5": 0.045771827440212576,
+      "0.7-r10": 0.02288591372010984,
+      "0.7-r100": 0.022885913720102735
+    },
+    "delta_vs_C6_B2": {
+      "0.5-r1": 0.02288591372010984,
+      "0.5-r5": -0.011442956860051368,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.011442956860051368,
+      "0.7-r1": 0.011442956860051368,
+      "0.7-r5": -0.011442956860051368,
+      "0.7-r10": 0.0,
+      "0.7-r100": 0.011442956860051368
+    },
+    "movement": {
+      "enabled_queries": 125,
+      "enabled_query_rate": 0.014303696075065797,
+      "enabled_non_noop_queries": 125,
+      "action_distribution": {
+        "A0_noop_B2": 8614,
+        "A1_MAVR_soft_rerank": 0,
+        "A2_PREM_PRVR_MIL_promote": 20,
+        "A3_topK_preserving_promote": 0,
+        "A4_raw200_video_insertion": 0,
+        "A5_BMN_proposal_confidence_boost": 105
+      },
+      "video_slot_drift_rate": 0.00018766449250486326,
+      "positive_video_entries": 0,
+      "positive_video_exits": 0,
+      "wrong_video_to_correct_video": 1,
+      "correct_video_to_wrong_video": 0,
+      "hard_positive_top100_query_entries": 1,
+      "hard_positive_top100_query_exits": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "R5_loss_queries_07": 2,
+      "R10_loss_queries_07": 1,
+      "R1_gain_queries_07": 5,
+      "R1_loss_queries_07": 4
+    },
+    "video_metrics": {
+      "GT_video_R@1": 25.677995193958118,
+      "GT_video_R@100_entry_proxy": 0.011442956860052637
+    },
+    "feasible": false,
+    "no_op_equivalent": false,
+    "selection_score": 1.0853358507838458,
+    "official_val_used": false
+  },
+  "top_results": [
+    {
+      "config": {
+        "config_id": "c6c2_policy_00435",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00436",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00437",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00438",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00439",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00440",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00441",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00442",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00443",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00483",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00484",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00485",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00486",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00487",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00488",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00489",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00490",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00491",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00867",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00868",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00869",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00870",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00871",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00872",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00873",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00874",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00875",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.17919921875,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00915",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00916",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00917",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00918",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00919",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00920",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00921",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00922",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00923",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.2,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.38505549834078,
+        "0.5-r10": 72.29660144181257,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.05721478430027105,
+        "0.5-r10": -0.011442956860051368,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 125,
+        "enabled_query_rate": 0.014303696075065797,
+        "enabled_non_noop_queries": 125,
+        "action_distribution": {
+          "A0_noop_B2": 8614,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 20,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 105
+        },
+        "video_slot_drift_rate": 0.00018766449250486326,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0853358507838458,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00531",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00532",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00533",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00534",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00535",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00536",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00537",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00538",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00539",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.1,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00963",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00964",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00965",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.02,
+        "max_video_slot_change_rate": 0.2,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00966",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.05,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    },
+    {
+      "config": {
+        "config_id": "c6c2_policy_00967",
+        "allowed_actions": [
+          "A1_MAVR_soft_rerank",
+          "A2_PREM_PRVR_MIL_promote",
+          "A3_topK_preserving_promote",
+          "A4_raw200_video_insertion",
+          "A5_BMN_proposal_confidence_boost"
+        ],
+        "enable_threshold": 0.35,
+        "utility_margin": 0.0,
+        "max_enabled_query_rate": 0.05,
+        "max_video_slot_change_rate": 0.1,
+        "max_actions_per_query": 1,
+        "fallback": "A0_noop_B2"
+      },
+      "metrics": {
+        "0.5-r1": 41.58370522943129,
+        "0.5-r5": 65.39649845520083,
+        "0.5-r10": 72.30804439867262,
+        "0.5-r100": 78.34992562078041,
+        "0.7-r1": 25.677995193958118,
+        "0.7-r5": 49.93706373726971,
+        "0.7-r10": 59.07998626845177,
+        "0.7-r100": 71.99908456345119
+      },
+      "delta_vs_C6_B1": {
+        "0.5-r1": 0.27463096464126835,
+        "0.5-r5": 0.06865774116032242,
+        "0.5-r10": 0.0,
+        "0.5-r100": -0.022885913720102735,
+        "0.7-r1": 0.37761757638173776,
+        "0.7-r5": 0.045771827440212576,
+        "0.7-r10": 0.02288591372010984,
+        "0.7-r100": 0.022885913720102735
+      },
+      "delta_vs_C6_B2": {
+        "0.5-r1": 0.02288591372010984,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.011442956860051368,
+        "0.5-r100": 0.011442956860051368,
+        "0.7-r1": 0.011442956860051368,
+        "0.7-r5": -0.011442956860051368,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.011442956860051368
+      },
+      "movement": {
+        "enabled_queries": 112,
+        "enabled_query_rate": 0.012816111683258954,
+        "enabled_non_noop_queries": 112,
+        "action_distribution": {
+          "A0_noop_B2": 8627,
+          "A1_MAVR_soft_rerank": 0,
+          "A2_PREM_PRVR_MIL_promote": 10,
+          "A3_topK_preserving_promote": 0,
+          "A4_raw200_video_insertion": 0,
+          "A5_BMN_proposal_confidence_boost": 102
+        },
+        "video_slot_drift_rate": 0.00010527520311248427,
+        "positive_video_entries": 0,
+        "positive_video_exits": 0,
+        "wrong_video_to_correct_video": 1,
+        "correct_video_to_wrong_video": 0,
+        "hard_positive_top100_query_entries": 1,
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0,
+        "R5_loss_queries_07": 2,
+        "R10_loss_queries_07": 1,
+        "R1_gain_queries_07": 5,
+        "R1_loss_queries_07": 4
+      },
+      "video_metrics": {
+        "GT_video_R@1": 25.677995193958118,
+        "GT_video_R@100_entry_proxy": 0.011442956860052637
+      },
+      "feasible": false,
+      "no_op_equivalent": false,
+      "selection_score": 1.0593358507838457,
+      "official_val_used": false
+    }
+  ],
+  "oracle_upper_bound_train_calib_diagnostic_only": {
+    "config": {
+      "diagnostic_only": true,
+      "uses_labels": true,
+      "promotion_allowed": false
+    },
+    "metrics": {
+      "0.5-r1": 47.12209634969676,
+      "0.5-r5": 66.98706945874814,
+      "0.5-r10": 73.0861654651562,
+      "0.5-r100": 78.38425449136056,
+      "0.7-r1": 34.76370294083991,
+      "0.7-r5": 52.21421215242019,
+      "0.7-r10": 60.235724911317085,
+      "0.7-r100": 72.2165007437922
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 5.813022084906741,
+      "0.5-r5": 1.659228744707633,
+      "0.5-r10": 0.7781210664835783,
+      "0.5-r100": 0.011442956860051368,
+      "0.7-r1": 9.463325323263533,
+      "0.7-r5": 2.3229202425906905,
+      "0.7-r10": 1.1786245565854259,
+      "0.7-r100": 0.24030209406110714
+    },
+    "delta_vs_C6_B2": {
+      "0.5-r1": 5.561277033985583,
+      "0.5-r5": 1.5905710035473106,
+      "0.5-r10": 0.7895640233436296,
+      "0.5-r100": 0.04577182744020547,
+      "0.7-r1": 9.097150703741846,
+      "0.7-r5": 2.2657054582904266,
+      "0.7-r10": 1.155738642865316,
+      "0.7-r100": 0.22885913720105577
+    },
+    "movement": {
+      "enabled_queries": 1151,
+      "enabled_query_rate": 0.13170843345920585,
+      "enabled_non_noop_queries": 1151,
+      "action_distribution": {
+        "A0_noop_B2": 7588,
+        "A1_MAVR_soft_rerank": 0,
+        "A2_PREM_PRVR_MIL_promote": 117,
+        "A3_topK_preserving_promote": 0,
+        "A4_raw200_video_insertion": 0,
+        "A5_BMN_proposal_confidence_boost": 1034
+      },
+      "video_slot_drift_rate": 0.001392607849868406,
+      "positive_video_entries": 0,
+      "positive_video_exits": 0,
+      "wrong_video_to_correct_video": 117,
+      "correct_video_to_wrong_video": 0,
+      "hard_positive_top100_query_entries": 4,
+      "hard_positive_top100_query_exits": 0,
+      "hard_positive_exit_ratio": 0.0,
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 950,
+      "R5_loss_queries_07": 0,
+      "R10_loss_queries_07": 0,
+      "R1_gain_queries_07": 795,
+      "R1_loss_queries_07": 0
+    },
+    "video_metrics": {
+      "GT_video_R@1": 27.005378189724226,
+      "GT_video_R@100_entry_proxy": 0.04577182744021055
+    },
+    "feasible": false,
+    "no_op_equivalent": false,
+    "selection_score": 65.95916901247283,
+    "official_val_used": false
+  },
+  "official_val_used": false
+}

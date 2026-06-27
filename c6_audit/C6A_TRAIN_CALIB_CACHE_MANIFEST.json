@@ -1,0 +1,90 @@
+{
+  "bad_alignment_count": 0,
+  "desc_ids_filter": {
+    "exists": true,
+    "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+    "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a",
+    "size": 51327
+  },
+  "elapsed_sec": 246.01786613464355,
+  "endpoint_index_audit": {
+    "clip_length": 1.5,
+    "end_grid_max_abs_error": 0.0,
+    "end_index_clipped_count": 0,
+    "start_grid_max_abs_error": 0.0,
+    "start_index_clipped_count": 0
+  },
+  "evidence_jsonl_sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48",
+  "groups": 87230,
+  "missing_filtered_queries": 0,
+  "nonfinite_values": 0,
+  "official_val_used": false,
+  "output_npz": {
+    "exists": true,
+    "path": "results/rlem_c6a/cache/train_calib_c6_cache.npz",
+    "sha256": "4aa5f0e5943bd876d7b3acbf96efb1b0366fe989a790e346dc977c52d0d4b682",
+    "size": 29376700
+  },
+  "queries": 8739,
+  "row_feature_count": 34,
+  "row_feature_names": [
+    "ctx_mass",
+    "ctx_mean",
+    "ctx_max",
+    "ctx_peak_inside",
+    "ctx_boundary_agree",
+    "ctx_center_proximity",
+    "bd_mass",
+    "bd_mean",
+    "bd_max",
+    "bd_peak_inside",
+    "bd_boundary_agree",
+    "bd_center_proximity",
+    "retctx_mass",
+    "retbd_mass",
+    "retloc_mass",
+    "retloc_mean",
+    "retloc_max",
+    "retloc_peak_inside",
+    "r_video_z",
+    "r_video_sig",
+    "margin_z",
+    "rank_inv",
+    "term_retctx_mass",
+    "term_retbd_mass",
+    "term_retctx_peak_inside",
+    "term_retbd_peak_inside",
+    "term_retctx_boundary_agree",
+    "term_retbd_boundary_agree",
+    "term_retctx_center_proximity",
+    "term_retbd_center_proximity",
+    "term_low_conf_efp_neg",
+    "term_low_conf_unc_neg",
+    "term_margin_z_x_retbd_mass",
+    "term_rank_inv_x_retbd_mass"
+  ],
+  "rows": 1747800,
+  "rows_per_query": 200,
+  "source_features": {
+    "exists": true,
+    "path": "results/rlem_c5_lite_prior/train_calib_c5_prior_features.npz",
+    "sha256": "370ed08ae878de87c088ac616f528a95af590f39e7d6c3d16900ed5fe731de86",
+    "size": 156912212
+  },
+  "source_temporal_prior": {
+    "exists": true,
+    "path": "results/rlem_c5_lite_prior_prep/train_calib_temporal_prior.npz",
+    "sha256": "39aa03f9635ac848b1d5873b9221088528ec325f7b34bf4f949211ef47bc5194",
+    "size": 105549550
+  },
+  "source_video_dataset": {
+    "exists": true,
+    "path": "results/rlem_c4_r2_cal/train_calib_video_dataset.npz",
+    "sha256": "ef61a67556ec0b3f327767e4f29c66d932659670b5d9640f12b9aa74595ebaf4",
+    "size": 9013591
+  },
+  "split_name": "train_calib",
+  "status": "PASS",
+  "temporal_bad_values": 0,
+  "temporal_sum_max_abs_error": 2.384185791015625e-07
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "train_calib_only",
+  "official_val_used": false,
+  "search_performed": false,
+  "source": "frozen C3.1 best_config.json",
+  "configs": [
+    {
+      "config_id": "fixed_c31_score_probe",
+      "phase": "fixed_c31_score_probe",
+      "family": "C_centered_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.75,
+      "b_bd": 1.0,
+      "d_fp": 0.5,
+      "t_joint": 1.5,
+      "t_bd": 1.0,
+      "t_fp": 1.0
+    }
+  ]
+}

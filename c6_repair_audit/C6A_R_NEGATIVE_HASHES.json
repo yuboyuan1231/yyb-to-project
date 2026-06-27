@@ -1,0 +1,73 @@
+{
+  "artifacts": {
+    "boundary_metrics": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair/boundary_oracle/metrics.json",
+      "sha256": "32fc40b455456ecb43e2686deac3bc3d510d36ee36875f1997b5e81a28054c7d",
+      "size": 3441
+    },
+    "boundary_model": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair/boundary_oracle/model_best.pt",
+      "sha256": "77fbf5d90477b489cff43442ad3b4ab1aa9fe7d7d387e9f9117d453a028e115b",
+      "size": 10728107
+    },
+    "boundary_oracle_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_BOUNDARY_ORACLE_AUDIT.json",
+      "sha256": "32fc40b455456ecb43e2686deac3bc3d510d36ee36875f1997b5e81a28054c7d",
+      "size": 3441
+    },
+    "diagnostic_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_DIAGNOSTIC_AUDIT.json",
+      "sha256": "56d924cac5d52ad35a28d3900306292ea3e53a8a6d774f42a09c9a0a2c3c72be",
+      "size": 9421
+    },
+    "diagnostics_json": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair/diagnostics/diagnostics.json",
+      "sha256": "56d924cac5d52ad35a28d3900306292ea3e53a8a6d774f42a09c9a0a2c3c72be",
+      "size": 9421
+    },
+    "negative_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_NEGATIVE_AUDIT.md",
+      "sha256": "49b9c08ccf70e788d7e14b8885b575282b019ab6b79ef41d669d808cfffa234c",
+      "size": 4092
+    },
+    "negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_NEGATIVE_MANIFEST.json",
+      "sha256": "d0c014ff7f1c8da9f6063f64d6f535d4654fcdf937822d99aa9b6a33ff300ffc",
+      "size": 2339
+    },
+    "start_state": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_START_STATE.json",
+      "sha256": "b4b1071e9823328860043f3b0e3c5d5e74dce77f2420c07348a71e03b844b8c7",
+      "size": 280
+    },
+    "teacher_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_TEACHER_AUDIT.json",
+      "sha256": "9dc4e08774e9afd2ee27c945c43eeafa91688a9ccabdb57d0a8ac0b850520b5d",
+      "size": 3388
+    },
+    "teacher_metrics": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair/teacher_adapter/metrics.json",
+      "sha256": "9dc4e08774e9afd2ee27c945c43eeafa91688a9ccabdb57d0a8ac0b850520b5d",
+      "size": 3388
+    },
+    "teacher_model": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair/teacher_adapter/model_best.pt",
+      "sha256": "5580cec5a9e02a07463aa53eb25f69103a659bd4da0bdd8c70464eb8ed10332e",
+      "size": 10728107
+    }
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "status": "HASHES_MATERIALIZED"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "C7_B1_OFFICIAL_READY",
+  "official_val_used": false,
+  "promoted": false,
+  "selected_config": {
+    "mode": "S1_span_level_bounded_residual",
+    "mu": 0.1,
+    "eta": 0.1
+  },
+  "model": {
+    "path": "c7_models/c7_b1_proposal_confidence_head.pt",
+    "exists": true,
+    "size": 3298099,
+    "sha256": "19996ba91ced3de49b88c3cdee8643c397d49d43ed0669210c22efcf8652eb0a"
+  },
+  "freeze_package": {
+    "path": "c7_audit/C7_B1_FINAL_FREEZE_PACKAGE.json",
+    "exists": true,
+    "size": 3660,
+    "sha256": "92b2a3b9d72f35ea9b0082e792ce0293d0839e01febb147518fceb02eae14be9"
+  },
+  "requires_human_authorization_before_official_val": true
+}

@@ -1,0 +1,9 @@
+{
+  "c4_final": "C4-r2-cal-v2.1 v21_00444",
+  "c5_a3b_official_status": "OFFICIAL_C5_NEGATIVE",
+  "candidate_regeneration_allowed": false,
+  "full_finetune_allowed": false,
+  "official_val_used_for_repair": false,
+  "previous_stage": "C6-A",
+  "previous_status": "C6A_NEGATIVE"
+}

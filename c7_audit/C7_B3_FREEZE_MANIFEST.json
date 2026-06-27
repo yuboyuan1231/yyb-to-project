@@ -1,0 +1,12 @@
+{
+  "status": "C7_B3_FREEZE_REVIEW_PASS",
+  "official_val_used": false,
+  "selected_candidate": "calibrated_A4",
+  "freeze_review_pass": true,
+  "final_decision": {
+    "path": "c7_audit/C7_B3_FINAL_DECISION.json",
+    "exists": true,
+    "size": 3431,
+    "sha256": "12412fa22eb6d94b33ae7235826beeef50f6d8232762f53f4f229ef47c7971f2"
+  }
+}

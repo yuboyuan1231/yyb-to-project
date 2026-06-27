@@ -1,0 +1,25 @@
+config_id: c6a_regularized
+hidden_dim: 256
+temporal_layers: 3
+heads: 8
+ffn_dim: 512
+span_head_hidden: 384
+span_head_layers: 3
+dropout: 0.15
+batch_groups: 128
+lr: 0.0001
+weight_decay: 0.0003
+epochs: 8
+amp: true
+gradient_clip: 1.0
+scale_b: 0.5
+scale_e: 0.5
+alpha_rank: 0.05
+alpha_bd: 0.05
+alpha_q: 0.02
+lambda_iou: 1.0
+lambda_bd: 0.25
+lambda_fp: 0.25
+lambda_stab: 0.05
+lambda_sparse: 0.001
+

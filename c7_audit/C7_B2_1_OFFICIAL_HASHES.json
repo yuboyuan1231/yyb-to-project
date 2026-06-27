@@ -1,0 +1,89 @@
+{
+  "status": "C7_B2_1_OFFICIAL_HASHES",
+  "official_val_used": true,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "metric_hash": "e91155023b0de20f39f769ff0d41eb6b422ab3b32b0eae00ba076fe51967922e",
+  "prediction_hash": "b3bf3f683a23c84601564958c501a6428317dfee74ef0864c499da7e2ad4d901",
+  "score_hash": "d4dd4b25e45d710d4bf77f1eb7b1afc353d8a23f6ae2cd489815904e913b264c",
+  "artifacts": {
+    "one_shot_json": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_VAL_ONE_SHOT.json",
+      "exists": true,
+      "size": 5027,
+      "sha256": "3ad8b705828dbcf74cc9704ccafaac843dd101a9d90931a1a8b0c8062c4b07dc"
+    },
+    "one_shot_md": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_VAL_ONE_SHOT.md",
+      "exists": true,
+      "size": 1224,
+      "sha256": "f68a1c8edacf0d1175136a7b972b4f5792aa8737dd89f9ad1ddf1a0e2ad446c4"
+    },
+    "decision_json": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_DECISION.json",
+      "exists": true,
+      "size": 1395,
+      "sha256": "751d0a5a6f13f8fc1661704dd77bcd74eb563917137cf309cf2299ad17180b02"
+    },
+    "decision_md": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_DECISION.md",
+      "exists": true,
+      "size": 1253,
+      "sha256": "d19fa072a44b99d507691ba3b2b64ef5fac4f8a0f75864ead7b40ea03f7c0810"
+    },
+    "manifest_json": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_MANIFEST.json",
+      "exists": true,
+      "size": 5085,
+      "sha256": "e60cc621f3b6149b89c5bd7777296469dd7b88d9159a8b4ae354ad29a6e1bbba"
+    },
+    "scores_npz": {
+      "path": "results/rlem_c7_b2_1_official_val/official_val_scores.npz",
+      "exists": true,
+      "size": 7602258,
+      "sha256": "d4dd4b25e45d710d4bf77f1eb7b1afc353d8a23f6ae2cd489815904e913b264c"
+    },
+    "predictions_jsonl": {
+      "path": "results/rlem_c7_b2_1_official_val/official_val_predictions.jsonl",
+      "exists": true,
+      "size": 19698913,
+      "sha256": "b3bf3f683a23c84601564958c501a6428317dfee74ef0864c499da7e2ad4d901"
+    },
+    "submission_json": {
+      "path": "results/rlem_c7_b2_1_official_val/official_val_submission.json",
+      "exists": true,
+      "size": 52403785,
+      "sha256": "06b03132ac2a2a2a75e2d4e292552afdf0e1a8706631540db5adf753ccf433ac"
+    },
+    "metrics_json": {
+      "path": "results/rlem_c7_b2_1_official_val/official_val_metrics.json",
+      "exists": true,
+      "size": 836,
+      "sha256": "159cf97f91c0c132133c1e2ea463a27bb04f6db5218a84db9cdb1f82b8989266"
+    },
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/run_c7_b2_1_official_val_one_shot.py",
+      "exists": true,
+      "size": 33824,
+      "sha256": "7da6d4d0a591965c076972af855c7cf1f972491f436de3a230f1b0083ca4a8d2"
+    },
+    "model": {
+      "path": "results/rlem_c7_b2/c7_b2_mil_video_residual_head.pt",
+      "exists": true,
+      "size": 1276979,
+      "sha256": "8db8ae4b65737f166e66a023b36c50312e2ee2bc78f50088a9b87c78e00e86de"
+    },
+    "ready_manifest": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_READY_MANIFEST.json",
+      "exists": true,
+      "size": 611,
+      "sha256": "f8b29c05e2518c6e5f4e7dc9e8f3f0a17171c77c3abcce8c9f167729990637dc"
+    },
+    "freeze_package": {
+      "path": "c7_audit/C7_B2_1_FINAL_FREEZE_PACKAGE.json",
+      "exists": true,
+      "size": 2212,
+      "sha256": "60644f05a7b0b72f4d1c61c03363681e069985c0940caeb0a70bb9761d48aa2f"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+# C6-B2 final decision
+
+{
+  "status": "C6_B2_FREEZE_REVIEW_PASS",
+  "selected_arm": "pairwise_main",
+  "selected_config_id": "pairwise_main_0005",
+  "best_config": {
+    "arm": "pairwise_main",
+    "config_id": "pairwise_main_0005",
+    "apply_slots": 5,
+    "threshold0": 4.337798070907593,
+    "threshold_rest": 6.729127645492554,
+    "max_replacements": 2,
+    "metrics": {
+      "0.5-r1": 39.82148987298318,
+      "0.5-r5": 62.42132967158714,
+      "0.5-r10": 69.61894953656025,
+      "0.5-r100": 76.29019338597094,
+      "0.7-r1": 27.051150017164435,
+      "0.7-r5": 48.89575466300492,
+      "0.7-r10": 56.49387801807987,
+      "0.7-r100": 65.5223709806614
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 0.24030209406110714,
+      "0.5-r5": -0.011442956860051368,
+      "0.5-r10": 0.011442956860051368,
+      "0.5-r100": -0.022885913720102735,
+      "0.7-r1": 0.38906053324178913,
+      "0.7-r5": 0.045771827440212576,
+      "0.7-r10": 0.05721478430025684,
+      "0.7-r100": 0.05721478430027105
+    },
+    "movement": {
+      "replacement_rate_top_slots": 0.04638974711065339,
+      "replacements": 2027,
+      "top1_changed_ratio": 0.05000572147843003,
+      "hard_positive_top100_query_exits": 1,
+      "hard_positive_top100_query_entries": 7,
+      "video_slot_drift": 0.0,
+      "video_multiset_drift": 0.0
+    },
+    "selection_score": 2.071175191669529,
+    "feasible": true,
+    "official_val_used": false
+  },
+  "primary_metric": "0.7-r1",
+  "secondary_metric": "0.5-r1",
+  "primary_baseline": "C6-B1-lite c6b1r1_0057",
+  "secondary_baseline": "C4_final v21_00444",
+  "freeze_gate_passed": true,
+  "score_grid_on_official_val": false,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "C6_C_used": false,
+  "C4_final_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "next_step": "STOP_AND_WAIT_FOR_HUMAN_REVIEW"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "stage": "C5-0 temporal prior input gate",
+  "split_role": "train_fit",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "cache_npz": {
+    "path": "/tmp/c4_r2_work/train_fit_c4_cache.npz",
+    "sha256": "426f95fe6ac59d57d5ad848b039df6b29a3ec08652ea2d647728524ea9adaae3"
+  },
+  "temporal_prior_npz": {
+    "path": "results/rlem_c5_lite_prior_prep/train_fit_temporal_prior.npz",
+    "sha256": "81fb31423d0313795c5364efaa23f719858b83569cd7f97ea29459a322278fb9"
+  },
+  "diagnostics": {
+    "group_count": 779142,
+    "dense": true,
+    "min_temporal_len": 2,
+    "max_temporal_len": 100,
+    "mean_temporal_len": 50.800284158728445,
+    "bad_group_or_nonfinite_count": 0,
+    "negative_value_count": 0,
+    "zero_sum_distribution_count": 0,
+    "normalization_required_count": 0,
+    "sum_ranges": {
+      "p_ctx": {
+        "min": 0.9999998045968823,
+        "max": 1.0000001641456038
+      },
+      "p_b": {
+        "min": 0.9999997924642906,
+        "max": 1.0000001956680649
+      },
+      "p_e": {
+        "min": 0.9999997990641845,
+        "max": 1.0000001998180963
+      }
+    }
+  },
+  "required_arrays": [
+    "group_id",
+    "p_ctx",
+    "p_b",
+    "p_e"
+  ],
+  "note": "P_ctx/P_b/P_e must be exported read-only from CONQUER/QAL/ML outputs; row-level candidate scores are not accepted as temporal priors.",
+  "used": {
+    "C5-lite-prior": false,
+    "C5-main": false,
+    "C6": false,
+    "CONQUER_modified": false
+  }
+}

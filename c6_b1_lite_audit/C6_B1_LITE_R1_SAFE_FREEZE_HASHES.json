@@ -1,0 +1,86 @@
+{
+  "c6_b0_audit/C6_B0_FINAL_SUMMARY.md": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_FINAL_SUMMARY.md",
+    "sha256": "ba990f571be8fd75e7e148d9b737021c2367b2bb1baf2306d6bfc509cdcbcd26",
+    "size": 2442
+  },
+  "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_AUDIT.json": {
+    "exists": true,
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_AUDIT.json",
+    "sha256": "680bed096f704c00cecdebb2b80c68280b047c770f09eda5c0256b2afe229ee3",
+    "size": 6438
+  },
+  "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_CODE_REVIEW.md": {
+    "exists": true,
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_CODE_REVIEW.md",
+    "sha256": "234022368876f49ffbed1a297e17a3e0d13604c9d9d7cea45248e2adfb69c489",
+    "size": 6140
+  },
+  "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_MANIFEST.json": {
+    "exists": true,
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_MANIFEST.json",
+    "sha256": "c6221fdb4109928c7ea860df730f0989b39f1f5757fc8a5683b61d3ad6856bdf",
+    "size": 1778
+  },
+  "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_REVIEW.md": {
+    "exists": true,
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_REVIEW.md",
+    "sha256": "e6483fe6f7125c3284f82f61b6a5c05f754888aa7e80710de6eb272aebba2828",
+    "size": 4761
+  },
+  "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_INDEPENDENT_REVIEW.json": {
+    "exists": true,
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_INDEPENDENT_REVIEW.json",
+    "sha256": "9cdb27da32cf44061e3e738835b0bdb6b307a7c858b4e69f6485a31c1f3ef54c",
+    "size": 1722
+  },
+  "c6_b1_lite_v2_audit/C6_B1_LITE_V2_HYBRID_EXPERIMENTS_SUMMARY.md": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_audit/C6_B1_LITE_V2_HYBRID_EXPERIMENTS_SUMMARY.md",
+    "sha256": "74e7cd7cbdbd5ec76a34695478302213d242df31cd18d9ffc49d9eef6b57d8c5",
+    "size": 3114
+  },
+  "results/rlem_c6_b1_lite_r1_safe/best_config.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/best_config.json",
+    "sha256": "d4a2b3f6c4af90aedaf61b51d0b19f70e71572a732a206cb594ccdb04cd24c5d",
+    "size": 1133
+  },
+  "results/rlem_c6_b1_lite_r1_safe/grid_results.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/grid_results.json",
+    "sha256": "394cc0d4f1496bbceea8693b7077adab2656904e2da13f2ac387e63eef7dee7a",
+    "size": 94758
+  },
+  "results/rlem_c6_b1_lite_r1_safe/model_best.pt": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/model_best.pt",
+    "sha256": "1dd442966921e8d17511af48aa411ce24f541a01103d12346995affc8fa37be5",
+    "size": 1877675
+  },
+  "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_pool_top_slots.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_pool_top_slots.npz",
+    "sha256": "08029943dece218fa5c1cbf016fe3bb9b4330dd83a05d759e2dea2d85ecceb15",
+    "size": 12624246
+  },
+  "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_scores.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_scores.npz",
+    "sha256": "0ee937a8cf0a388d03fbd1882a1b37240eb0416d2f57405d55b7451325c6e52e",
+    "size": 1292852
+  },
+  "results/rlem_c6_b1_lite_r1_safe/train_fit_candidate_pool_top_slots.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_candidate_pool_top_slots.npz",
+    "sha256": "6167fc888fc53a1f9004588d225661f9b5487746bb00b1b594ffc06e2c226fab",
+    "size": 112176367
+  },
+  "rlem_c6_b1_lite/run_c6_b1_r1_safe_selector.py": {
+    "exists": true,
+    "path": "rlem_c6_b1_lite/run_c6_b1_r1_safe_selector.py",
+    "sha256": "b889e75414d8d84e2f48b78dc6de285d99708dc293fe3df5eb86cebfb3b2cccc",
+    "size": 35595
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "stage": "C5-0 read-only temporal prior export",
+  "split_role": "train_calib",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "queries": 8739,
+  "video_groups": 87230,
+  "temporal_shape": [
+    87230,
+    100
+  ],
+  "min_temporal_length": 2,
+  "max_temporal_length": 100,
+  "nonfinite_values": 0,
+  "source_tensors": {
+    "p_b": "softmax(CONQUER moment_localization_head begin_score_distribution)",
+    "p_e": "softmax(CONQUER moment_localization_head end_score_distribution)",
+    "p_ctx": "QAL qal_aux.q2v_attention"
+  },
+  "label_used_for_prior": false,
+  "candidate_generation_modified": false,
+  "model_conquer_modified": false,
+  "artifacts": {
+    "cache_npz": {
+      "path": "results/rlem_c4_lite/train_calib_c4_cache.npz",
+      "sha256": "bcbd0caf12d194b31a4460fd78276832a0b2408434c7e190af6b8c511edff1cf"
+    },
+    "checkpoint": {
+      "path": "results/tvr-conquer_general_paper_performance/model.ckpt",
+      "sha256": "bf7aa90b6b2db212233c37d27b81a1e9b254b2a7be6bee7cbf75bb269cdf0264"
+    },
+    "output_npz": {
+      "path": "results/rlem_c5_lite_prior_prep/train_calib_temporal_prior.npz",
+      "sha256": "39aa03f9635ac848b1d5873b9221088528ec325f7b34bf4f949211ef47bc5194"
+    }
+  },
+  "runtime": {
+    "device": "cuda:0",
+    "num_workers": 8,
+    "eval_query_bsz": 10,
+    "compressed": false,
+    "work_dir": "/tmp/c5_temporal_export_work/train_calib"
+  },
+  "used": {
+    "C5_lite_prior": true,
+    "C5_main": false,
+    "C6": false
+  }
+}

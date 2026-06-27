@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "a3b_diag": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_A3B_TEACHER_DIAGNOSTIC.json",
+      "sha256": "3d2b0b49638a3827076047de5bd6766147eaca67087f2fbfeaade440813e9873",
+      "size": 1318
+    },
+    "boundary_init": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_BOUNDARY_INIT_AUDIT.json",
+      "sha256": "f96eaaac9259c9bfa529ca08eb07bd90c1a22f075daf6771dc01946624118c2e",
+      "size": 5212
+    },
+    "c6a_r2_default_history": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_default/history.json",
+      "sha256": "f69e7bbac5414186a0b34c7f60fbe6a2d4b8fd15373a52bce6b16ddadfa877ae",
+      "size": 19966
+    },
+    "c6a_r2_default_model_best": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_default/model_best.pt",
+      "sha256": "4aa99c8d10620169bd704212b65274b27241c994188b0ae4310365dfa930d4f8",
+      "size": 10728363
+    },
+    "c6a_r2_default_scores": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_default/train_calib_scores_best.npz",
+      "sha256": "c0175ad0e3f872da0a7a823f206ec834609138d6feb1cbb5d038d2371e875cff",
+      "size": 5938706
+    },
+    "c6a_r2_default_train_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_default/train_audit.json",
+      "sha256": "b097f5de8a5b61d6245f099d486f973cc3416e3470c53b09a57c11c7ca3386be",
+      "size": 5200
+    },
+    "c6a_r2_large_history": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_large/history.json",
+      "sha256": "904e80be7d12b71e7aa6a7a4368c37c6d32a25937e4bd5310f71bf740ad33448",
+      "size": 19993
+    },
+    "c6a_r2_large_model_best": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_large/model_best.pt",
+      "sha256": "86b91721ff300d407c0ba498e3c8fbb0e7e245f71d7e69eb5a6c512384fdf44e",
+      "size": 23315819
+    },
+    "c6a_r2_large_scores": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_large/train_calib_scores_best.npz",
+      "sha256": "fdf133e787e75f5841b853b5866fae495bad7c6d4d736ecd649b5058065a6e5d",
+      "size": 5939492
+    },
+    "c6a_r2_large_train_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_large/train_audit.json",
+      "sha256": "9922a93ffd5e15495df6aaca57950eaf821bd74444db3e163cc72a749d535338",
+      "size": 5208
+    },
+    "c6a_r2_safe_history": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_safe/history.json",
+      "sha256": "8d742ca0472949637f79cbcb36b2e1b267d0b95ba9b88efbd9dc2c9623efeca8",
+      "size": 20046
+    },
+    "c6a_r2_safe_model_best": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_safe/model_best.pt",
+      "sha256": "070228e6d8b077a1e5a1feaa400f19f775751b8ca2ce9f0411c08cc5353df029",
+      "size": 10728299
+    },
+    "c6a_r2_safe_scores": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_safe/train_calib_scores_best.npz",
+      "sha256": "516ba20dc424e7baa40e72393a2668637221aad974fe424584d7ec7d3c9f27f7",
+      "size": 5970666
+    },
+    "c6a_r2_safe_train_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/rlem_c6a_repair2/train_logs/c6a_r2_safe/train_audit.json",
+      "sha256": "88146d9b7c9667dac44611b4791ffe3e74bd565b947f181e572bb402d28bc05c",
+      "size": 5233
+    },
+    "negative_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_NEGATIVE_AUDIT.md",
+      "sha256": "4f7c62e41887dad17b30514d4d33cece1750af5a1760596c21cddee188181f91",
+      "size": 1213
+    },
+    "negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_NEGATIVE_MANIFEST.json",
+      "sha256": "16345634d80543b2e7b396794444474c472eb96abbc4eaf4cb49562bdf09bfa0",
+      "size": 3081
+    },
+    "protocol": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_PROTOCOL.md",
+      "sha256": "d7bca9752344bf1d421d1f68c6858c35801660b7e5ce0ba7cfb8b78a6217758b",
+      "size": 370
+    },
+    "start_state": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_START_STATE.json",
+      "sha256": "8fd91d68ed3367cb55f5a1bf528e105b1aec76c9e3eed17773cf8bb4671ff784",
+      "size": 334
+    },
+    "training_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_TRAINING_AUDIT.json",
+      "sha256": "9f4d047ca68fa70a13f6503a9483d9b4f4dbafd13a4218b390891df24e23d9d8",
+      "size": 17805
+    }
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "status": "HASHES_MATERIALIZED"
+}

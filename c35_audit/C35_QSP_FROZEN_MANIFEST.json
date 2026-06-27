@@ -1,0 +1,111 @@
+{
+  "status": "FROZEN",
+  "frozen_date": "2026-06-24",
+  "stage": "C3.5-QSP matched epoch-8 negative decision",
+  "decision": "STOP_C35_QSP_NEGATIVE",
+  "scope": "train_fit_train_calib_only",
+  "official_val_used": false,
+  "official_val_metrics_used_for_selection": false,
+  "post_val_adjustment": false,
+  "authorization": {
+    "official_val_qsp_one_shot": false,
+    "score_grid": false,
+    "temperature_search": false,
+    "epoch_9_plus": false,
+    "qsp_capacity_search": false,
+    "next_stage_authorized": false
+  },
+  "used": {
+    "score_grid": false,
+    "temperature_search": false,
+    "R2": false,
+    "REG": false,
+    "AMD": false,
+    "C4": false,
+    "C5": false,
+    "C6": false
+  },
+  "matched_protocol": {
+    "variants": [
+      "control31",
+      "qsp52_drop_coverage",
+      "qsp53_with_coverage"
+    ],
+    "maximum_epoch": 8,
+    "checkpoint_selection": "train_calib_only",
+    "hidden_dims": [256, 256, 128],
+    "dropout": 0.1,
+    "batch_size": 1024,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "seed": 13,
+    "matched_epoch0_logits_max_abs_diff": 0.0
+  },
+  "selected_results": {
+    "control31": {
+      "best_epoch": 7,
+      "train_calib_loss": 0.0899081171129126,
+      "fixed_probe_selection_score": 4.769329061296105
+    },
+    "qsp52_drop_coverage": {
+      "best_epoch": 5,
+      "train_calib_loss": 0.09035582318105718,
+      "train_calib_loss_delta_vs_control31": 0.00044770606814458,
+      "fixed_probe_selection_score": 4.599115078002822,
+      "fixed_probe_selection_delta_vs_control31": -0.170213983293283,
+      "fixed_probe_metric_delta_vs_control31": {
+        "0.5-r1": 0.068657741160316,
+        "0.5-r5": -0.217416180340996,
+        "0.5-r10": -0.14875843918069,
+        "0.5-r100": 0.0,
+        "0.7-r1": -0.137315482320632,
+        "0.7-r5": -0.366174619521686,
+        "0.7-r10": -0.12587252546058,
+        "0.7-r100": -0.12587252546056
+      },
+      "exceeds_control31": false
+    },
+    "qsp53_with_coverage": {
+      "best_epoch": 5,
+      "train_calib_loss": 0.09046467692106672,
+      "train_calib_loss_delta_vs_control31": 0.00055655980815412,
+      "fixed_probe_selection_score": 4.564309417553494,
+      "fixed_probe_selection_delta_vs_control31": -0.205019643742611,
+      "fixed_probe_metric_delta_vs_control31": {
+        "0.5-r1": 0.08010069802037,
+        "0.5-r5": -0.205973223480946,
+        "0.5-r10": -0.217416180340996,
+        "0.5-r100": -0.02288591372010,
+        "0.7-r1": -0.308959835221422,
+        "0.7-r5": -0.377617576381736,
+        "0.7-r10": -0.08010069802037,
+        "0.7-r100": -0.13731548232063
+      },
+      "exceeds_control31": false
+    }
+  },
+  "decision_artifacts": {
+    "c35_audit/C35_QSP_MATCHED_EPOCH8_AUDIT.md": "4867c54da9fe2d6280d11ac68dcfbea3a3b81b219e1c69b1cf32379ce2605e35",
+    "c35_audit/C35_QSP_NEGATIVE_DECISION.json": "1497e873aad1cf2e675f4aa53bb7a848ba2114fd68629662224b18cc0e78d1da",
+    "results/rlem_c35_qsp/matched_training/model_comparison.csv": "aa6ae614d456f1ebc8d96347802cdafa6b98d956b20b25a91f95d2fd03ff6942",
+    "results/rlem_c35_qsp/matched_training/fixed_probe_metrics.json": "ae006fb77957d1936bff5812853e376619d7e240fede17769c3834517c79e100",
+    "results/rlem_c35_qsp/matched_training/fixed_probe_diagnostics.json": "ed831831c536ea70a2b4e9852461e59e934ba3e04e0b170d3077fb935134aafd"
+  },
+  "selected_checkpoints": {
+    "results/rlem_c35_qsp/matched_extended_epoch8/control31/model_best.pt": "ceab4318eaa15daf8c7015d25f892acd0022b1def9084207785ad61f4fd8cb97",
+    "results/rlem_c35_qsp/matched_extended_epoch8/qsp52_drop_coverage/model_best.pt": "89a7c5ce1880b101fdedae885149cd2cf8a42059a1711996163b1c9b3458eeb3",
+    "results/rlem_c35_qsp/matched_extended_epoch8/qsp53_with_coverage/model_best.pt": "e2a86c47679b4f412784a2b6b4edc31bf058c55701f9d94c5a93b515ef2ae2b6"
+  },
+  "c31_frozen_artifacts": {
+    "unchanged": true,
+    "runtime_checker_status": "PASS",
+    "results/rlem_c31_capacity/best_config.json": "ed9ac0f5a30596d1c6fbbf87cd5dbf017edd5ad9ed0a869c2ae899a1841b6eb8",
+    "c31_audit/C31_FROZEN_MANIFEST.json": "530f4466b3bc80d75fd246127f01de0274c8eecb3a941a494d5fc749b98d1408",
+    "results/rlem_c31_official_val/VAL_C31_ONE_SHOT_MANIFEST.json": "a3a46899ee2411cd0da63e0d015330c80375375a9bf54114cc55b6413ba87599",
+    "results/rlem_c31_capacity/models/cap_F_wd0/model_best.pt": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42"
+  },
+  "official_val_qsp_authorization": false,
+  "frozen_artifacts_modified": false,
+  "stop_after_freeze": true
+}

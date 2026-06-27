@@ -1,0 +1,18 @@
+{
+  "status": "DISCARDED_IMPLEMENTATION_CHECK",
+  "used_for_final_selection": false,
+  "formula": "lambda*gate*(log(P_s_prior[i])+log(P_e_prior[j]))",
+  "discard_reason": "The formula depends on arbitrary per-video normalized-prior constants and leaked localization entropy into cross-video retrieval scores. Frozen exports provide probabilities, so only the gauge-invariant normalized posterior update is identifiable.",
+  "observed_diagnostic": "A nonzero setting improved oracle R@1@0.7 and mIoU but produced mixed R@100 movement, consistent with group-constant leakage.",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "training_used": false,
+  "checkpoint_modified": false,
+  "candidate_generation_modified": false,
+  "evaluator_modified": false,
+  "artifacts": {
+    "raw_stats_sha256": "4d15aeab5705ceb738ca03c34179b5dd026cf64943452bc9338aa09529151cd7",
+    "raw_search_audit_sha256": "22137634de25df57693a528e6ee2dcc8d47f1679fbd1a00110d61f7c227bcf7b",
+    "raw_grid_results_sha256": "57ffcfb34870789db2edbf6c64dac5af253942561b4b5ffaba7b2c19b56d61ba"
+  }
+}

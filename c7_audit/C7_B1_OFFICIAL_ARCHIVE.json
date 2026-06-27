@@ -1,0 +1,21 @@
+{
+  "status": "C7_B1_OFFICIAL_ARCHIVED",
+  "source_status": "C7_B1_R1_TRADEOFF_NO_PROMOTION",
+  "promoted": false,
+  "human_summary": "official core-positive integrated proposal-confidence branch; not promoted only due strict pre-registered 0.5-r10 nonnegative rule.",
+  "official_val_used": true,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "mu_eta_adjusted": false,
+  "C7_B1_retrained": false,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "C6_C4_artifacts_modified": false,
+  "next_stage": "C7-B2 train_fit/train_calib only",
+  "source_manifest": {
+    "path": "c7_audit/C7_B1_OFFICIAL_MANIFEST.json",
+    "exists": true,
+    "size": 7820,
+    "sha256": "3072c9a6bdeaeb0e4282bdd940cc187d2424304d5c92de12f61e15c003d0a70f"
+  }
+}

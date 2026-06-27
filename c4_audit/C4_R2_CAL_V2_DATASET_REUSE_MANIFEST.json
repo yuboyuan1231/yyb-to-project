@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "stage": "C4-r2-cal-v2 train_fit/train_calib-only",
+  "reuse_only": true,
+  "feature_dim": 27,
+  "train_fit": {
+    "path": "results/rlem_c4_r2_cal/train_fit_video_dataset.npz",
+    "sha256": "97a42fd9b219ba7ddbe836881e354235d0587ec9f50253df97a70aaa1bdc31a8",
+    "queries": 78045,
+    "video_rows": 779142
+  },
+  "train_calib": {
+    "path": "results/rlem_c4_r2_cal/train_calib_video_dataset.npz",
+    "sha256": "ef61a67556ec0b3f327767e4f29c66d932659670b5d9640f12b9aa74595ebaf4",
+    "queries": 8739,
+    "video_rows": 87230
+  },
+  "split_overlap": 0,
+  "normalization_fit_split": "train_fit_only",
+  "checkpoint_selection_split": "train_calib_only",
+  "frozen_constants_modified": false,
+  "frozen_c4_lite_config_sha256": "9364d5a6bfce032bace814e9953ea4b45ca433f594f848a344735d0fcda5f5d4",
+  "frozen_c4_lite_official_manifest_sha256": "80957a988f8b138d9c7d85048ca30ba7a664a4795e2f9ad5a3c7694a79b2af22",
+  "frozen_c31_checkpoint_sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42",
+  "model_conquer_sha256": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+  "evaluator_sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+  "official_val_used": false,
+  "official_val_evidence_opened": false,
+  "post_val_adjustment": false
+}

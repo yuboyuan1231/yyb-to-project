@@ -1,0 +1,139 @@
+{
+  "status": "C6_B2_OFFICIAL_VAL_HASHES",
+  "official_val_one_shot": true,
+  "successful_metric_result_count": 1,
+  "artifacts": {
+    "start_manifest": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_START_MANIFEST.json",
+      "exists": true,
+      "size": 837,
+      "sha256": "55edb6f76be124fde9916de65e7a0042288dabd5c2755a8ed63778a4dff52bfe"
+    },
+    "preflight_json": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_PREFLIGHT_AUDIT.json",
+      "exists": true,
+      "size": 4162,
+      "sha256": "735b6e7f4d240c1881e5d90d64d9ce71eae7b54bcde0e473bfa2e247a6bc2277"
+    },
+    "preflight_md": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_PREFLIGHT_AUDIT.md",
+      "exists": true,
+      "size": 324,
+      "sha256": "33b9a73f04b325b1f1615377ac7d853b8041ba64afcadf5c7a281fd9f2ad1306"
+    },
+    "one_shot_manifest": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+      "exists": true,
+      "size": 4486,
+      "sha256": "4c051776c288fe1ba5ab0f1f4121fbdd5189bebe5abb395e286819896860b1a6"
+    },
+    "one_shot_audit": {
+      "path": "c6_b2_official_val/C6_B2_OFFICIAL_VAL_ONE_SHOT_AUDIT.md",
+      "exists": true,
+      "size": 1512,
+      "sha256": "6586a3a58e01adf7493175730e2c95630ba78ffd2d6377436dade3c535a92b48"
+    },
+    "scores_npz": {
+      "path": "results/rlem_c6_b2_official_val/official_val_scores.npz",
+      "exists": true,
+      "size": 5420828,
+      "sha256": "be3ea2748d7bb4c7058662e2200ea10f8df2b01d576bed2d7aacb259cc727b03"
+    },
+    "predictions_jsonl": {
+      "path": "results/rlem_c6_b2_official_val/official_val_predictions.jsonl",
+      "exists": true,
+      "size": 19673277,
+      "sha256": "ca43d7380872e16bd82760ca6d24748725a81c67318534de8d9ac6ded1f10e91"
+    },
+    "submission_json": {
+      "path": "results/rlem_c6_b2_official_val/official_val_submission.json",
+      "exists": true,
+      "size": 52364075,
+      "sha256": "35277121e74295a4f35e273941e68f3416836af430e9a855b7d271dff298f4a2"
+    },
+    "metrics_json": {
+      "path": "results/rlem_c6_b2_official_val/official_val_metrics.json",
+      "exists": true,
+      "size": 838,
+      "sha256": "639b947c2fb23f3cb1eaf266ffe401ede1d6fd9e3cfb76cdfb6e18eaaecc1eed"
+    },
+    "freeze_manifest": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "freeze_hashes": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+      "exists": true,
+      "size": 2704,
+      "sha256": "058b32d12098c82a86cb7ccadb8b65999f39910e8b61b510aa3dd0fcb89d527f"
+    },
+    "best_config": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "exists": true,
+      "size": 1180,
+      "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+    },
+    "selector_ckpt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "exists": true,
+      "size": 3504043,
+      "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+    },
+    "official_cache_npz": {
+      "path": "results/rlem_c6_b1_lite_r1_safe/official_val_c6_cache.npz",
+      "exists": true,
+      "size": 34729580,
+      "sha256": "3bb84bc26a66d85319e77c247de51bdd41de63d8ec42b01d25149e40d1e41b53"
+    },
+    "candidate_pool_npz": {
+      "path": "results/rlem_c6_b1_lite_r1_safe/official_val_candidate_pool_top_slots.npz",
+      "exists": true,
+      "size": 16026840,
+      "sha256": "45a7b81657b79d1b6f6cf09e6329317aaf4a95473144dbf5ca00e251c6b3d668"
+    },
+    "c6_b1_submission_json": {
+      "path": "results/rlem_c6_b1_lite_r1_safe/official_val_submission.json",
+      "exists": true,
+      "size": 52375264,
+      "sha256": "657566f73b4f2b684ce0b556df01fafbea201050f0a4d2883c2c39cea416ff31"
+    },
+    "c6_b1_metrics_json": {
+      "path": "results/rlem_c6_b1_lite_r1_safe/official_val_metrics.json",
+      "exists": true,
+      "size": 838,
+      "sha256": "542279c3e92ee1b29911b5e39a05c30ea01598f26db619e6d179ce73eb25d3a1"
+    },
+    "c4_final_submission_json": {
+      "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_submission.json",
+      "exists": true,
+      "size": 19747239,
+      "sha256": "fea4c1f4f963faf3ce0dbde8b42027df208e87f706ae799723e0a551818fcbdc"
+    },
+    "c4_final_metrics_json": {
+      "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_metrics.json",
+      "exists": true,
+      "size": 837,
+      "sha256": "11a92c9aa90ed6fbd124051c886e2fdb4a6d2eaaec020fde0a11e54fcc86e04f"
+    },
+    "one_shot_code": {
+      "path": "rlem_c6_b2/run_c6_b2_official_val_one_shot.py",
+      "exists": true,
+      "size": 29889,
+      "sha256": "2d344fc242f844c9500432ff326eaa86c8ac95895695025689d60782d7ebe644"
+    },
+    "evaluator": {
+      "path": "standalone_eval/eval.py",
+      "exists": true,
+      "size": 14692,
+      "sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+    },
+    "model_conquer": {
+      "path": "model/conquer.py",
+      "exists": true,
+      "size": 9802,
+      "sha256": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc"
+    }
+  }
+}

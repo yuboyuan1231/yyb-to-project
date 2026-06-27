@@ -1,0 +1,83 @@
+{
+  "status": "C6_C11_DIAGNOSTICS_COMPLETE",
+  "official_val_used": false,
+  "query_level_counts": {
+    "conservative": {
+      "enabled_queries": 0,
+      "top1_gain_queries": 86,
+      "top1_loss_queries": 52,
+      "top5_gain_queries": 30,
+      "top5_loss_queries": 26,
+      "top10_gain_queries": 24,
+      "top10_loss_queries": 19,
+      "lost_R5_but_gain_R1_queries": 0,
+      "lost_R10_but_gain_R1_queries": 0
+    },
+    "balanced": {
+      "enabled_queries": 0,
+      "top1_gain_queries": 86,
+      "top1_loss_queries": 52,
+      "top5_gain_queries": 30,
+      "top5_loss_queries": 26,
+      "top10_gain_queries": 24,
+      "top10_loss_queries": 19,
+      "lost_R5_but_gain_R1_queries": 0,
+      "lost_R10_but_gain_R1_queries": 0
+    },
+    "R1-only": {
+      "enabled_queries": 0,
+      "top1_gain_queries": 86,
+      "top1_loss_queries": 52,
+      "top5_gain_queries": 30,
+      "top5_loss_queries": 26,
+      "top10_gain_queries": 24,
+      "top10_loss_queries": 19,
+      "lost_R5_but_gain_R1_queries": 0,
+      "lost_R10_but_gain_R1_queries": 0
+    }
+  },
+  "positive_video_rank_before_after": {
+    "conservative": {
+      "before": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.69905023458061,
+        "GT_video_R@10": 75.68371667238814
+      },
+      "after": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.76770797574093,
+        "GT_video_R@10": 75.70660258610825
+      }
+    },
+    "balanced": {
+      "before": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.69905023458061,
+        "GT_video_R@10": 75.68371667238814
+      },
+      "after": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.76770797574093,
+        "GT_video_R@10": 75.70660258610825
+      }
+    },
+    "R1-only": {
+      "before": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.69905023458061,
+        "GT_video_R@10": 75.68371667238814
+      },
+      "after": {
+        "GT_video_R@1": 48.621123698363654,
+        "GT_video_R@5": 69.76770797574093,
+        "GT_video_R@10": 75.70660258610825
+      }
+    }
+  },
+  "proposal_confidence_oracle_note": {
+    "observation": "C6-C0 proposal_confidence oracle has identical 0.7 R@1/R@5/R@10/R@100.",
+    "interpretation": "This is caused by the oracle definition: it ranks with GT-derived y07/y05 proposal labels, so queries with an available 0.7-positive proposal place it at rank 1, while queries without one have no later positive. It is a single-best oracle diagnostic, not evidence of evaluator/NMS correctness and not eligible for promotion decisions.",
+    "evaluator_bug_suspected": false,
+    "promotion_allowed_from_oracle": false
+  }
+}

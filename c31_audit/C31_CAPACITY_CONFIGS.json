@@ -1,0 +1,20 @@
+[
+  {"config_id":"cap_A_wd0","hidden_dims":[128],"dropout":0.0,"weight_decay":0.0},
+  {"config_id":"cap_A_wd1e5","hidden_dims":[128],"dropout":0.0,"weight_decay":0.00001},
+  {"config_id":"cap_A_wd1e4","hidden_dims":[128],"dropout":0.0,"weight_decay":0.0001},
+  {"config_id":"cap_B_wd0","hidden_dims":[128,128],"dropout":0.1,"weight_decay":0.0},
+  {"config_id":"cap_B_wd1e5","hidden_dims":[128,128],"dropout":0.1,"weight_decay":0.00001},
+  {"config_id":"cap_B_wd1e4","hidden_dims":[128,128],"dropout":0.1,"weight_decay":0.0001},
+  {"config_id":"cap_C_wd0","hidden_dims":[256],"dropout":0.1,"weight_decay":0.0},
+  {"config_id":"cap_C_wd1e5","hidden_dims":[256],"dropout":0.1,"weight_decay":0.00001},
+  {"config_id":"cap_C_wd1e4","hidden_dims":[256],"dropout":0.1,"weight_decay":0.0001},
+  {"config_id":"cap_D_wd0","hidden_dims":[256,128],"dropout":0.1,"weight_decay":0.0},
+  {"config_id":"cap_D_wd1e5","hidden_dims":[256,128],"dropout":0.1,"weight_decay":0.00001},
+  {"config_id":"cap_D_wd1e4","hidden_dims":[256,128],"dropout":0.1,"weight_decay":0.0001},
+  {"config_id":"cap_E_wd0","hidden_dims":[256,256],"dropout":0.1,"weight_decay":0.0},
+  {"config_id":"cap_E_wd1e5","hidden_dims":[256,256],"dropout":0.1,"weight_decay":0.00001},
+  {"config_id":"cap_E_wd1e4","hidden_dims":[256,256],"dropout":0.1,"weight_decay":0.0001},
+  {"config_id":"cap_F_wd0","hidden_dims":[256,256,128],"dropout":0.1,"weight_decay":0.0},
+  {"config_id":"cap_F_wd1e5","hidden_dims":[256,256,128],"dropout":0.1,"weight_decay":0.00001},
+  {"config_id":"cap_F_wd1e4","hidden_dims":[256,256,128],"dropout":0.1,"weight_decay":0.0001}
+]

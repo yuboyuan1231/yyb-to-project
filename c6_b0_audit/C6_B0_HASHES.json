@@ -1,0 +1,50 @@
+{
+  "c6_b0_audit/C6_B0_CANDIDATE_DIAGNOSTIC.json": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_CANDIDATE_DIAGNOSTIC.json",
+    "sha256": "16dad2dcddb8709dfae1420b3276bc00b070adfbd141457a1dc1f53adcf4ea7c",
+    "size": 10098
+  },
+  "c6_b0_audit/C6_B0_CANDIDATE_DIAGNOSTIC.md": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_CANDIDATE_DIAGNOSTIC.md",
+    "sha256": "1a2c3f2d0dcb52da4bae49b7c25d5b52519ebd73612aed98c77a1c621874d988",
+    "size": 7772
+  },
+  "c6_b0_audit/C6_B0_FINAL_SUMMARY.md": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_FINAL_SUMMARY.md",
+    "sha256": "ba990f571be8fd75e7e148d9b737021c2367b2bb1baf2306d6bfc509cdcbcd26",
+    "size": 2442
+  },
+  "c6_b0_audit/C6_B0_MANIFEST.json": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_MANIFEST.json",
+    "sha256": "10c1033b5e5578256f895dc60b1e57d6932280ff13db38367a28457a0626f961",
+    "size": 1316
+  },
+  "c6_b0_audit/C6_B0_START_STATE.json": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_START_STATE.json",
+    "sha256": "174ab2e384c91af9c38b17cd09c53fa4ef122f6a1f3c5c868bf0a6fe6ef95085",
+    "size": 928
+  },
+  "c6_b0_audit/C6_B0_START_STATE.md": {
+    "exists": true,
+    "path": "c6_b0_audit/C6_B0_START_STATE.md",
+    "sha256": "3d4489f9f7fa9ceecf8169b74399c002e7b9ae2cf5a508e34ea991abe5f507e1",
+    "size": 326
+  },
+  "results/rlem_c6_b0/train_calib_boundary_oracle_prior.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b0/train_calib_boundary_oracle_prior.npz",
+    "sha256": "4ba51431d6f0b93a9659bd927c47ee755e6f216883c565d2e162775f2e5eb14c",
+    "size": 34513216
+  },
+  "rlem_c6_b0/run_c6_b0_candidate_diagnostic.py": {
+    "exists": true,
+    "path": "rlem_c6_b0/run_c6_b0_candidate_diagnostic.py",
+    "sha256": "f8436c6583b37f2c7b6517fc365fdba0f69ea13e9b55f036fe243f4de3e7320d",
+    "size": 35909
+  }
+}

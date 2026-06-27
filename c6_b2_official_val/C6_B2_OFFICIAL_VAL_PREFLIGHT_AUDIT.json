@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "official_val_used_before_this_run": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "py_compile_returncode": 0,
+  "py_compile_stderr": "",
+  "partial_files": [],
+  "freeze_manifest": {
+    "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+    "exists": true,
+    "size": 1880,
+    "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+  },
+  "freeze_hashes": {
+    "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+    "exists": true,
+    "size": 2704,
+    "sha256": "058b32d12098c82a86cb7ccadb8b65999f39910e8b61b510aa3dd0fcb89d527f"
+  },
+  "best_config": {
+    "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+    "exists": true,
+    "size": 1180,
+    "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+  },
+  "selector_ckpt": {
+    "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+    "exists": true,
+    "size": 3504043,
+    "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+  },
+  "script": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c6_b2/run_c6_b2_official_val_one_shot.py",
+    "exists": true,
+    "size": 29889,
+    "sha256": "2d344fc242f844c9500432ff326eaa86c8ac95895695025689d60782d7ebe644"
+  },
+  "official_cache_npz": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/official_val_c6_cache.npz",
+    "exists": true,
+    "size": 34729580,
+    "sha256": "3bb84bc26a66d85319e77c247de51bdd41de63d8ec42b01d25149e40d1e41b53"
+  },
+  "candidate_pool_npz": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/official_val_candidate_pool_top_slots.npz",
+    "exists": true,
+    "size": 16026840,
+    "sha256": "45a7b81657b79d1b6f6cf09e6329317aaf4a95473144dbf5ca00e251c6b3d668"
+  },
+  "c6_b1_submission": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/official_val_submission.json",
+    "exists": true,
+    "size": 52375264,
+    "sha256": "657566f73b4f2b684ce0b556df01fafbea201050f0a4d2883c2c39cea416ff31"
+  },
+  "c6_b1_metrics": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/official_val_metrics.json",
+    "exists": true,
+    "size": 838,
+    "sha256": "542279c3e92ee1b29911b5e39a05c30ea01598f26db619e6d179ce73eb25d3a1"
+  },
+  "c4_final_submission": {
+    "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_submission.json",
+    "exists": true,
+    "size": 19747239,
+    "sha256": "fea4c1f4f963faf3ce0dbde8b42027df208e87f706ae799723e0a551818fcbdc"
+  },
+  "c4_final_metrics": {
+    "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_metrics.json",
+    "exists": true,
+    "size": 837,
+    "sha256": "11a92c9aa90ed6fbd124051c886e2fdb4a6d2eaaec020fde0a11e54fcc86e04f"
+  },
+  "config_exact_match": true,
+  "freeze_selected_config": "pairwise_main_0005",
+  "best_config_selected": "pairwise_main_0005",
+  "freeze_hash_consistency": {
+    "freeze_manifest": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "recorded_sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1",
+      "actual_sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1",
+      "match": true
+    },
+    "best_config": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "recorded_sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d",
+      "actual_sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d",
+      "match": true
+    },
+    "selector_ckpt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "recorded_sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1",
+      "actual_sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1",
+      "match": true
+    },
+    "selected_scores_train_calib": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz",
+      "recorded_sha256": "18c0be1cfee3de904424a1e91b4b86f5bb251fc9911e8f8c38bde3e79aa2e2aa",
+      "actual_sha256": "18c0be1cfee3de904424a1e91b4b86f5bb251fc9911e8f8c38bde3e79aa2e2aa",
+      "match": true
+    }
+  },
+  "freeze_hash_consistency_pass": true
+}

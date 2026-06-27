@@ -1,0 +1,25 @@
+{
+  "metric_hash": "15bcfc52c84ecdad091606f59dda97531eddb48bf914952df14d5b62ba6a20f7",
+  "prediction_hash": "7bdb546ff5a2dae302d6dd0689e469f8e8af7c0f97667f4aa756cd6ac70e7361",
+  "score_hash": "efbf61e5cea314e70b35593ecb45c4962d05b678e01c09113b1401a71c9b15cb",
+  "zero_prediction_hash": "329c53c06956a0d12ed2839fd87a5aa90f226307ff1648f2441e36ea29ee5379",
+  "zero_score_hash": "35e171422207c7620a1ed01498c0fafcc0a9598056fc9dac09d2dd4753c59fa6",
+  "model": {
+    "path": "c7_models/c7_b1_proposal_confidence_head.pt",
+    "exists": true,
+    "size": 3298099,
+    "sha256": "19996ba91ced3de49b88c3cdee8643c397d49d43ed0669210c22efcf8652eb0a"
+  },
+  "final_decision": {
+    "path": "c7_audit/C7_B1_FINAL_DECISION.json",
+    "exists": true,
+    "size": 2160,
+    "sha256": "0d468457bf8e9ebc2d2095e86e7d493eb8cc1ec825c21202bcc919a062a7cfce"
+  },
+  "freeze_package": {
+    "path": "c7_audit/C7_B1_FINAL_FREEZE_PACKAGE.json",
+    "exists": true,
+    "size": 3660,
+    "sha256": "92b2a3b9d72f35ea9b0082e792ce0293d0839e01febb147518fceb02eae14be9"
+  }
+}

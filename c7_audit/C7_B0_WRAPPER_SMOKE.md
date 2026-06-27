@@ -1,0 +1,66 @@
+# C7-B0 wrapper smoke
+
+- Status: `C7_B0_PASS`
+- Official val used: `false`
+- Training started: `false`
+- CONQUER trainable parameter tensors: `0`
+
+```json
+{
+  "status": "C7_B0_PASS",
+  "scope": "train_calib small subset only",
+  "smoke_queries": 512,
+  "wrapper_class": "CONQUER_RLEM_Wrapper",
+  "checkpoint_loaded": {
+    "path": "results/tvr-conquer_general_paper_performance/model.ckpt",
+    "exists": true,
+    "size": 190739129,
+    "sha256": "bf7aa90b6b2db212233c37d27b81a1e9b254b2a7be6bee7cbf75bb269cdf0264"
+  },
+  "base_conquer_parameters_frozen": true,
+  "frozen_parameter_tensors": 122,
+  "trainable_conquer_parameter_tensors": 0,
+  "rlem_head_default_disabled": true,
+  "score_injection_position": "before VCMR flatten/sort; disabled smoke uses mu=eta=0 and base path",
+  "nms_function_reused": "utils.inference_utils.post_processing_vcmr_nms / temporal_non_maximum_suppression; not modified",
+  "original_metrics": {
+    "0.5-r1": 40.4296875,
+    "0.5-r5": 66.015625,
+    "0.5-r10": 73.2421875,
+    "0.5-r100": 77.34375,
+    "0.7-r1": 25.9765625,
+    "0.7-r5": 50.390625,
+    "0.7-r10": 59.5703125,
+    "0.7-r100": 72.265625
+  },
+  "disabled_metrics": {
+    "0.5-r1": 40.4296875,
+    "0.5-r5": 66.015625,
+    "0.5-r10": 73.2421875,
+    "0.5-r100": 77.34375,
+    "0.7-r1": 25.9765625,
+    "0.7-r5": 50.390625,
+    "0.7-r10": 59.5703125,
+    "0.7-r100": 72.265625
+  },
+  "metric_delta": {
+    "0.5-r1": 0.0,
+    "0.5-r5": 0.0,
+    "0.5-r10": 0.0,
+    "0.5-r100": 0.0,
+    "0.7-r1": 0.0,
+    "0.7-r5": 0.0,
+    "0.7-r10": 0.0,
+    "0.7-r100": 0.0
+  },
+  "prediction_count_consistent": true,
+  "invalid_span_count": 0,
+  "duplicate_span_count_after_nms": 0,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "training_started": false,
+  "runtime_sec": 1.3458333015441895,
+  "note": "Disabled equivalence is verified on the C6-B2-compatible train_calib tuple path because the task forbids official val and NMS/evaluator changes."
+}
+```

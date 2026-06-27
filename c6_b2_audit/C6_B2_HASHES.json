@@ -1,0 +1,288 @@
+{
+  "status": "C6_B2_HASHES",
+  "official_val_used": false,
+  "artifacts": {
+    "c6_b2_audit/C6_B2_ARM_COMPARISON.json": {
+      "path": "c6_b2_audit/C6_B2_ARM_COMPARISON.json",
+      "exists": true,
+      "size": 9553,
+      "sha256": "20f65d20d6baa869af2d56aa1855b0731aaae65b7e2f9fefad96bbef6f0faa58"
+    },
+    "c6_b2_audit/C6_B2_CODE_REVIEW.json": {
+      "path": "c6_b2_audit/C6_B2_CODE_REVIEW.json",
+      "exists": true,
+      "size": 1062,
+      "sha256": "d02f4914ee9deeacfc1bd0dfa140062397c5df7a4ef193774d42e23f97463d3b"
+    },
+    "c6_b2_audit/C6_B2_COMPLETION_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_COMPLETION_AUDIT.json",
+      "exists": true,
+      "size": 4867,
+      "sha256": "7921c06cab7a19041ec4fc1395f6d78f10c68304e92e3e5ec1c7dd49f7dcab79"
+    },
+    "c6_b2_audit/C6_B2_DATA_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_DATA_AUDIT.json",
+      "exists": true,
+      "size": 2887,
+      "sha256": "63e0ad972c14164ea7d1e5cf007f6889d2df57dcfa18028c5454ea051cc12887"
+    },
+    "c6_b2_audit/C6_B2_FINAL_DECISION.json": {
+      "path": "c6_b2_audit/C6_B2_FINAL_DECISION.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "c6_b2_audit/C6_B2_FREEZE_HASHES.json": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+      "exists": true,
+      "size": 2228,
+      "sha256": "477890c886f3576ac91685f1d5b4b5cc6a0b515252e1bc22449b8b4322847d39"
+    },
+    "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "c6_b2_audit/C6_B2_HASHES.json": {
+      "path": "c6_b2_audit/C6_B2_HASHES.json",
+      "exists": true,
+      "size": 8656,
+      "sha256": "c5a27022a08174f7f92565600681cad7a2e949e2da677f24555e8d7568e7da5e"
+    },
+    "c6_b2_audit/C6_B2_P0_POOL_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_P0_POOL_AUDIT.json",
+      "exists": true,
+      "size": 1225,
+      "sha256": "5b3c89763d067bef7c2c5502daff39cb8c451bec7d9ea0f342fff6cfac9ad1f1"
+    },
+    "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.json",
+      "exists": true,
+      "size": 1348,
+      "sha256": "ebd9959181710901b3d0db6a46b4e3261676c8dcf58bf0ad96a95dbee79d287f"
+    },
+    "c6_b2_audit/C6_B2_SAFETY_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_SAFETY_AUDIT.json",
+      "exists": true,
+      "size": 1476,
+      "sha256": "dba6abec11c53efec9bb6c1e4bb6aeb668a5fb02f7a978b0c558180ccc2f9adf"
+    },
+    "c6_b2_audit/C6_B2_START_STATE.json": {
+      "path": "c6_b2_audit/C6_B2_START_STATE.json",
+      "exists": true,
+      "size": 504,
+      "sha256": "ff9d03a6c930912ff169acd0b6733322eefda34ac7c981b4e1185c7ba32ea10f"
+    },
+    "c6_b2_audit/C6_B2_TRAINING_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_TRAINING_AUDIT.json",
+      "exists": true,
+      "size": 10162,
+      "sha256": "8e2c101357bd209f2f0e5805c12d170d2a0bf026abea395a17e5597af4549290"
+    },
+    "c6_b2_audit/C6_B2_ARM_COMPARISON.md": {
+      "path": "c6_b2_audit/C6_B2_ARM_COMPARISON.md",
+      "exists": true,
+      "size": 480,
+      "sha256": "e7ebf0a8a3424084ab4f3115092f7b2117bd067bc8f0b927ab0995dec630a1d1"
+    },
+    "c6_b2_audit/C6_B2_CODE_REVIEW.md": {
+      "path": "c6_b2_audit/C6_B2_CODE_REVIEW.md",
+      "exists": true,
+      "size": 1095,
+      "sha256": "8ae5b75c8a9dab02745238e23d55bbf578e2cf07ac7b8d58aac7567dfac318db"
+    },
+    "c6_b2_audit/C6_B2_COMPLETION_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_COMPLETION_AUDIT.md",
+      "exists": true,
+      "size": 474,
+      "sha256": "2a57b995bae6c7258f58c687c2107039da3b749070ec946625bba86bac6ba73a"
+    },
+    "c6_b2_audit/C6_B2_DATA_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_DATA_AUDIT.md",
+      "exists": true,
+      "size": 2907,
+      "sha256": "2e9e670d00950b4709d563bf7c8c585bd3326cdfc75641ebe6641b0d40357c93"
+    },
+    "c6_b2_audit/C6_B2_FINAL_DECISION.md": {
+      "path": "c6_b2_audit/C6_B2_FINAL_DECISION.md",
+      "exists": true,
+      "size": 1904,
+      "sha256": "00772890428e4a6357972f4605fa158ed0eb854a38d8ee3107892a689c89c10f"
+    },
+    "c6_b2_audit/C6_B2_FINAL_SUMMARY.md": {
+      "path": "c6_b2_audit/C6_B2_FINAL_SUMMARY.md",
+      "exists": true,
+      "size": 3004,
+      "sha256": "68e0eaa7a9efcf9c8a87ad1f04eb622a4a1d90a1b97ec65bbfd9469961e7f8f3"
+    },
+    "c6_b2_audit/C6_B2_FREEZE_REVIEW.md": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_REVIEW.md",
+      "exists": true,
+      "size": 1903,
+      "sha256": "15035556c101d3f12dca903f6be6537ea48fffa8f1cd9aa47a141e28563b8dfd"
+    },
+    "c6_b2_audit/C6_B2_P0_POOL_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_P0_POOL_AUDIT.md",
+      "exists": true,
+      "size": 1274,
+      "sha256": "42ce453b090f0b3f5eecc58bc89115d3927df8762623b7d35f0932c99f978409"
+    },
+    "c6_b2_audit/C6_B2_PROTOCOL.md": {
+      "path": "c6_b2_audit/C6_B2_PROTOCOL.md",
+      "exists": true,
+      "size": 14453,
+      "sha256": "c2149d2cd896fa2a222026c2a35cc265cb76c21825321e32accd0d6c6da22f1b"
+    },
+    "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.md",
+      "exists": true,
+      "size": 1397,
+      "sha256": "369a8316e42918c0e891ceb0cddaabc39ad1f3fd447103c925da7424e532157f"
+    },
+    "c6_b2_audit/C6_B2_SAFETY_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_SAFETY_AUDIT.md",
+      "exists": true,
+      "size": 1526,
+      "sha256": "adcce1c9da22c5167727c81970e34de0e28ad155f7c7ba1d799ec49d7b4ff2ad"
+    },
+    "c6_b2_audit/C6_B2_START_STATE.md": {
+      "path": "c6_b2_audit/C6_B2_START_STATE.md",
+      "exists": true,
+      "size": 592,
+      "sha256": "4a7c2c413a21df7fbd104efe9b2a88aefeeeae31b5af13fea4b5f77bb8dbe77c"
+    },
+    "c6_b2_audit/C6_B2_TRAINING_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_TRAINING_AUDIT.md",
+      "exists": true,
+      "size": 718,
+      "sha256": "4bef7fe6e900fa800fa1ae35faffd20e9dd06ca49cd2d00fc7592f860540418f"
+    },
+    "rlem_c6_b2/run_c6_b2_goal.py": {
+      "path": "rlem_c6_b2/run_c6_b2_goal.py",
+      "exists": true,
+      "size": 39405,
+      "sha256": "8fccb8e7951d519866ecd5c14c615375b66fd0de064c9cf9275f99df8a934975"
+    },
+    "results/rlem_c6_b2/arms/listwise_set/model_best.pt": {
+      "path": "results/rlem_c6_b2/arms/listwise_set/model_best.pt",
+      "exists": true,
+      "size": 50592811,
+      "sha256": "beb6daba7c76c64a0edf3a03cb6a68a3285ca1c81adaa2036dd8fcff3e2abc20"
+    },
+    "results/rlem_c6_b2/arms/listwise_set/history.json": {
+      "path": "results/rlem_c6_b2/arms/listwise_set/history.json",
+      "exists": true,
+      "size": 865,
+      "sha256": "731a28b43816bd423eaed832f35545b7b43e9967e4677e1a1ab24c20d6a3dfa2"
+    },
+    "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_scores.npz": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_scores.npz",
+      "exists": true,
+      "size": 823512,
+      "sha256": "1081ee90f28d011b9e886e241b2a0a9db2011923d04ef7f51579f77ec1bd2b3f"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set/best_config.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/best_config.json",
+      "exists": true,
+      "size": 1179,
+      "sha256": "0d33834d47c055984433780a54cbc3e21b86ce02f0dcadf115e3e54744d2e2fe"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set/grid_results.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/grid_results.json",
+      "exists": true,
+      "size": 10072,
+      "sha256": "ee37f7c8d25b565458ead199ff94a89cc5049c7a42e6cf8fd744d543efb03935"
+    },
+    "results/rlem_c6_b2/arms/listwise_set_retry1/model_best.pt": {
+      "path": "results/rlem_c6_b2/arms/listwise_set_retry1/model_best.pt",
+      "exists": true,
+      "size": 50592875,
+      "sha256": "7da4eafe36def9c490f6a21768ee57d6601ecc24251162469a02683de169b962"
+    },
+    "results/rlem_c6_b2/arms/listwise_set_retry1/history.json": {
+      "path": "results/rlem_c6_b2/arms/listwise_set_retry1/history.json",
+      "exists": true,
+      "size": 1079,
+      "sha256": "b5e73d04b7a6f509e0233c114db51ff4cdb879b74451f3b4df8bd27d39aeab7f"
+    },
+    "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry1_scores.npz": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry1_scores.npz",
+      "exists": true,
+      "size": 814628,
+      "sha256": "7e306c332df4f024e0f8282709213651424b7e9c063efa3bc60a27d6f1b197c5"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/best_config.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/best_config.json",
+      "exists": true,
+      "size": 1195,
+      "sha256": "d38d28fcc394e565d3572b849c16c286438e64dc685b1b1a09243d8cfce048d3"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/grid_results.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/grid_results.json",
+      "exists": true,
+      "size": 10186,
+      "sha256": "844d621f34c25805475bbec6818e177e64491ca4bd6c8da8b0cf43dd4e1f728c"
+    },
+    "results/rlem_c6_b2/arms/listwise_set_retry2/model_best.pt": {
+      "path": "results/rlem_c6_b2/arms/listwise_set_retry2/model_best.pt",
+      "exists": true,
+      "size": 50592875,
+      "sha256": "3625988ef87d9a30fbfb10df85c98cbb474aee288a62afda789f4e584463da92"
+    },
+    "results/rlem_c6_b2/arms/listwise_set_retry2/history.json": {
+      "path": "results/rlem_c6_b2/arms/listwise_set_retry2/history.json",
+      "exists": true,
+      "size": 1082,
+      "sha256": "985883666dfcbb65a72521a4fc2227295eec893c069ed56d33def1e0f1c07383"
+    },
+    "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry2_scores.npz": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_listwise_set_retry2_scores.npz",
+      "exists": true,
+      "size": 810786,
+      "sha256": "33be370d3e11ce587f674b56c7010de37a6b6e1ad637b7794548db867404de21"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/best_config.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/best_config.json",
+      "exists": true,
+      "size": 1196,
+      "sha256": "772a96929fcb230d8bfd645d8a4d77435a456d60c90937ca7bc8ed3ebc3417f1"
+    },
+    "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/grid_results.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/grid_results.json",
+      "exists": true,
+      "size": 10157,
+      "sha256": "5a8b6f94e52cd4f697d26014c8caf6c112ab3764719ce3e840cb3f48e92c3abf"
+    },
+    "results/rlem_c6_b2/arms/pairwise_main/model_best.pt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "exists": true,
+      "size": 3504043,
+      "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+    },
+    "results/rlem_c6_b2/arms/pairwise_main/history.json": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/history.json",
+      "exists": true,
+      "size": 863,
+      "sha256": "751e8b85e91cca3515d1043d9944489a41b28f339961a86cf0ed0aa454e5f151"
+    },
+    "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz",
+      "exists": true,
+      "size": 2319243,
+      "sha256": "18c0be1cfee3de904424a1e91b4b86f5bb251fc9911e8f8c38bde3e79aa2e2aa"
+    },
+    "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "exists": true,
+      "size": 1180,
+      "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+    },
+    "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json",
+      "exists": true,
+      "size": 10035,
+      "sha256": "3bfa61395fa6ddc2e28299bb3697622161cffa5162c266ea3ffb93e182af7562"
+    }
+  }
+}

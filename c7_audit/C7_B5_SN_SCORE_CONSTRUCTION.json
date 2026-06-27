@@ -1,0 +1,13 @@
+{
+  "status": "C7_B5_SN_ALIGNMENT_INFEASIBLE",
+  "official_val_used": false,
+  "strict_alignment_required": true,
+  "strict_alignment": false,
+  "S_MINUTE_like": "log(r1) + b_start_logit + e_end_logit",
+  "S_logprob_like": "log(r1) + log(p_b_i) + log(p_e_j); diagnostic only unless proven equivalent to raw-logit ranking",
+  "fixed_pool_only": true,
+  "candidate_added": false,
+  "candidate_removed": false,
+  "NMS_modified": false,
+  "evaluator_modified": false
+}

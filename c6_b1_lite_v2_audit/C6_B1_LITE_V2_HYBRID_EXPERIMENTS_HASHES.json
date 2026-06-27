@@ -1,0 +1,116 @@
+{
+  "c6_b1_lite_v2_audit/C6_B1_LITE_V2_HYBRID_EXPERIMENTS_SUMMARY.md": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_audit/C6_B1_LITE_V2_HYBRID_EXPERIMENTS_SUMMARY.md",
+    "sha256": "74e7cd7cbdbd5ec76a34695478302213d242df31cd18d9ffc49d9eef6b57d8c5",
+    "size": 3114
+  },
+  "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_AUDIT.json": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_AUDIT.json",
+    "sha256": "fefe2d272c02e4a49f7ece1ea3aca11a7fd71c2ebc3135dba37001255fe0ef65",
+    "size": 5203
+  },
+  "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_AUDIT.md": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_AUDIT.md",
+    "sha256": "5f3688504c209bafad285e1f34e3cb373deef216493c1bcff15435739cdfc0ba",
+    "size": 1448
+  },
+  "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_MANIFEST.json": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_distill_audit/C6_B1_LITE_V2_LISTWISE_DISTILL_MANIFEST.json",
+    "sha256": "85d942d84cc4b2a8db91792db3dd20086ea753e4c39c5f5e8e067b05683c6282",
+    "size": 434
+  },
+  "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_AUDIT.json": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_AUDIT.json",
+    "sha256": "fce7602f327620061c75fc83513d6990607d2c778e09f16a036f1e2c857b3af0",
+    "size": 5040
+  },
+  "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_AUDIT.md": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_AUDIT.md",
+    "sha256": "160871ebe9d9102d7664dff50f056995f5e29c3eeba3354436d9b023e6e6f4df",
+    "size": 1269
+  },
+  "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_MANIFEST.json": {
+    "exists": true,
+    "path": "c6_b1_lite_v2_pairwise_audit/C6_B1_LITE_V2_LISTWISE_PAIRWISE_MANIFEST.json",
+    "sha256": "235e50c3081c6178137c8cb069ad63b111508340028f08e4129a8275ee26a6cd",
+    "size": 437
+  },
+  "results/rlem_c6_b1_lite_v2_distill/best_config_v2_listwise_distill.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/best_config_v2_listwise_distill.json",
+    "sha256": "7a5c8fbf7f3c9f9e0d99c344c2eea51716c5d7929ddbde6b8a45ec98e7718b0e",
+    "size": 1143
+  },
+  "results/rlem_c6_b1_lite_v2_distill/grid_results_v2_listwise_distill.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/grid_results_v2_listwise_distill.json",
+    "sha256": "7afa95f643bbfce069eba01604ee2a159858a660818a1e22622ac619dd787d59",
+    "size": 86085
+  },
+  "results/rlem_c6_b1_lite_v2_distill/history_v2_listwise_distill.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/history_v2_listwise_distill.json",
+    "sha256": "b60900c88711b719de04a9fb19b47009052f5e331c9699459712e1955b059dc5",
+    "size": 525
+  },
+  "results/rlem_c6_b1_lite_v2_distill/model_best_v2_listwise_distill.pt": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/model_best_v2_listwise_distill.pt",
+    "sha256": "70afd09f9a8784df37d2c285ba121afd255fd15570ad27e2683689a65624dd16",
+    "size": 17870287
+  },
+  "results/rlem_c6_b1_lite_v2_distill/train_calib_candidate_scores_v2_listwise_distill.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/train_calib_candidate_scores_v2_listwise_distill.npz",
+    "sha256": "844dd2db9a87de5f4da3e4c1bef4c595beb62a23d717557ec4da5f7a0ea75d04",
+    "size": 1111246
+  },
+  "results/rlem_c6_b1_lite_v2_distill/train_fit_v1_teacher_scores.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_distill/train_fit_v1_teacher_scores.npz",
+    "sha256": "b9e45e026c5676790993298f2aa9beff54ffa3c3447ffd3844c4234070837c92",
+    "size": 11551386
+  },
+  "results/rlem_c6_b1_lite_v2_pairwise/best_config_v2_listwise_pairwise.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_pairwise/best_config_v2_listwise_pairwise.json",
+    "sha256": "3da8ef7ef3db6a799c3d41dd6b530f377229d7a25502125a168700b90d8c05b9",
+    "size": 963
+  },
+  "results/rlem_c6_b1_lite_v2_pairwise/grid_results_v2_listwise_pairwise.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_pairwise/grid_results_v2_listwise_pairwise.json",
+    "sha256": "3f7400fed581e469607c5a94ca30946ca817f5b6df7cb3a032627dc93f7e8c5f",
+    "size": 95059
+  },
+  "results/rlem_c6_b1_lite_v2_pairwise/history_v2_listwise_pairwise.json": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_pairwise/history_v2_listwise_pairwise.json",
+    "sha256": "1b67fd8781a8cee8e8d638c380c70ba61f7d23bcc1fa52c43d2847a749dc8163",
+    "size": 530
+  },
+  "results/rlem_c6_b1_lite_v2_pairwise/model_best_v2_listwise_pairwise.pt": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_pairwise/model_best_v2_listwise_pairwise.pt",
+    "sha256": "8fc7bfbe3cf6bdba4bf1bf797dd88a7bd6172641fff6a1655f4835475869da18",
+    "size": 17870287
+  },
+  "results/rlem_c6_b1_lite_v2_pairwise/train_calib_candidate_scores_v2_listwise_pairwise.npz": {
+    "exists": true,
+    "path": "results/rlem_c6_b1_lite_v2_pairwise/train_calib_candidate_scores_v2_listwise_pairwise.npz",
+    "sha256": "e3f2703a93b5f9e891b532fa8d08b1877e58a7878e84222a462bae9754d57d43",
+    "size": 1190916
+  },
+  "rlem_c6_b1_lite/run_c6_b1_listwise_selector.py": {
+    "exists": true,
+    "path": "rlem_c6_b1_lite/run_c6_b1_listwise_selector.py",
+    "sha256": "d3d5edb540213f612a8abef3a81dd10b089b3bea290f7ed521a81f679476ae11",
+    "size": 23565
+  }
+}

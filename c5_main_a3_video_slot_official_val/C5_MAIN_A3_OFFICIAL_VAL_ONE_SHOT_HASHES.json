@@ -1,0 +1,75 @@
+{
+  "status": "HASHES_MATERIALIZED_AFTER_ONE_SHOT",
+  "official_val_one_shot": true,
+  "successful_metric_result_count": 1,
+  "artifacts": {
+    "freeze_manifest": {
+      "path": "c5_main_a3_video_slot_audit/C5_MAIN_A3_FREEZE_MANIFEST.json",
+      "sha256": "4254776aa1c4734454462eceaee6be6f2e4d01a3f008187c69f43dfae3fd3117"
+    },
+    "gate_addendum_json": {
+      "path": "c5_gate_audit/C5_FRONT_RANK_PROMOTION_GATE_ADDENDUM.json",
+      "sha256": "d7cdd194320684ef982a9f9ef67a565d20957223ddbaf7e4bd79fb7d08a8b394"
+    },
+    "stats_json": {
+      "path": "c5_main_a2_video_neutral_audit/C5_MAIN_A2A_STATS_FREEZE.json",
+      "sha256": "8d0e0a0cf2dbfd7190fd7916c64f1954ceac12f30436c84b10a7fefe4b15a1bc"
+    },
+    "official_val_cache": {
+      "path": "results/rlem_c4_lite_official_val/val_c4_cache.npz",
+      "sha256": "b24f32831331f24b905eb547d66b9f4c67b3c48d17d9e9579be4e81ccd0d5796"
+    },
+        "official_val_temporal_prior": {
+            "path": "results/rlem_c5_main_a3_video_slot/official_val_temporal_prior.npz",
+            "sha256": "7289a1641cf16a726d0c0cf58caa364fe9e420ee6bd8e96f79fdc12305f3c2a2"
+        },
+        "official_val_temporal_prior_audit": {
+            "path": "results/rlem_c5_main_a3_video_slot/official_val_temporal_prior_audit.json",
+            "sha256": "7196c7dbc15f65e2178b6e219b266a1a97c9b96342f424bf99c86facd78c662e"
+        },
+    "official_val_c4_final_scores": {
+      "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_row_scores.npz",
+      "sha256": "3a6bdfe5b80ddfcaf054b1d5ee25af28a330f1a2ffbd52d508359489533de1fa"
+    },
+    "official_val_predictions_jsonl": {
+      "path": "results/rlem_c5_main_a3_video_slot/official_val_predictions.jsonl",
+      "sha256": "1d050b508b93ba6136ee735fdcb604a84b421a037f0cef3a2875e4d32fd3c47d"
+    },
+    "official_val_submission_json": {
+      "path": "results/rlem_c5_main_a3_video_slot/official_val_submission.json",
+      "sha256": "4c613fe2e879c47d7d2e76b76b18104c34fe97daf066dd40a26de203038689a2"
+    },
+    "official_val_scores_npz": {
+      "path": "results/rlem_c5_main_a3_video_slot/official_val_scores.npz",
+      "sha256": "82044755b2afbf2fed7c2a12b5fafb44acbca9e3e33fc1bcc0b7b640c8e2242e"
+    },
+    "official_val_metrics_json": {
+      "path": "results/rlem_c5_main_a3_video_slot/official_val_metrics.json",
+      "sha256": "aca22bdd738f09e2fb2966307994674a3516e24be5a2eda03835adb8fbfb089a"
+    },
+        "one_shot_manifest": {
+            "path": "c5_main_a3_video_slot_official_val/C5_MAIN_A3_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+            "sha256": "5fcefd31769287021ea9c67d69721b77a7e8879b6d7c8da2f96a6238f0eea981"
+        },
+        "one_shot_audit": {
+            "path": "c5_main_a3_video_slot_official_val/C5_MAIN_A3_OFFICIAL_VAL_ONE_SHOT_AUDIT.md",
+            "sha256": "3a15a2015a29f244cf124a67b6048b3492efc69fcb1d77d2d31d121743e6d618"
+        },
+        "one_shot_code": {
+            "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem/rerank_c5_main_a3_official_val_one_shot.py",
+            "sha256": "b7d60678195d772c8b4600283b58a7e4a0cbcbf0ccf797fb9bae6bd1f0aa518d"
+        },
+        "temporal_prior_export_code": {
+            "path": "rlem/export_c5_temporal_prior.py",
+            "sha256": "ad3da803ca820c7f8a2cc6476f8fe104bf92e44d0f4925b4a0b0cd901950a636"
+        },
+    "model_conquer": {
+      "path": "model/conquer.py",
+      "sha256": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc"
+    },
+    "evaluator": {
+      "path": "standalone_eval/eval.py",
+      "sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+    }
+  }
+}

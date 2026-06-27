@@ -1,0 +1,61 @@
+{
+  "status": "C7_B3_SPLITS_READY",
+  "official_val_used": false,
+  "split_method": "deterministic sha256(desc_id) buckets plus stress_split by query-group stress score",
+  "splits": {
+    "train_core": {
+      "query_count": 4268,
+      "positive_pool_rate": 0.7846766710281372,
+      "anchor_hit_rate_r100_05_or_07": 0.7828022492970946,
+      "query_length_mean": 12.231255531311035,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "f2ca830763802b974113afc29efea42a31ba7f619137978c0bb0c51acaaeca7f"
+    },
+    "calib_A": {
+      "query_count": 1411,
+      "positive_pool_rate": 0.7859674096107483,
+      "anchor_hit_rate_r100_05_or_07": 0.7824238128986535,
+      "query_length_mean": 12.225372314453125,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "e29ae5beaa7352a610c381693dd814ead3058443f7b58048f045e5ff3c60ff8a"
+    },
+    "calib_B": {
+      "query_count": 1344,
+      "positive_pool_rate": 0.7953869104385376,
+      "anchor_hit_rate_r100_05_or_07": 0.7931547619047619,
+      "query_length_mean": 12.290922164916992,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "3497de880b934b51cb70d5a183fc5fb5f283d51899264da9cea3aea3bb29cb3d"
+    },
+    "calib_C": {
+      "query_count": 1246,
+      "positive_pool_rate": 0.7800962924957275,
+      "anchor_hit_rate_r100_05_or_07": 0.7728731942215089,
+      "query_length_mean": 12.101123809814453,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "24ff013688413f4533bc9bc50d766d524b3847d069d2c8191fd860ec01b1d193"
+    },
+    "stress_split": {
+      "query_count": 1748,
+      "positive_pool_rate": 0.9210526347160339,
+      "anchor_hit_rate_r100_05_or_07": 0.915903890160183,
+      "query_length_mean": 12.455377578735352,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "1726a24e91f2536e43ae3da5c17ffe30e643ae97fcc7210bf5ebe75b085e352d"
+    },
+    "train_calib_final_review": {
+      "query_count": 8739,
+      "positive_pool_rate": 0.7864744067192078,
+      "anchor_hit_rate_r100_05_or_07": 0.7836136857764047,
+      "query_length_mean": 12.231719970703125,
+      "query_length_p50": 11.0,
+      "query_length_p90": 17.0,
+      "hash": "1ba9829704c299bcd5e24917a03709d24f124106d9aee4edfbddd625fda3efb5"
+    }
+  }
+}

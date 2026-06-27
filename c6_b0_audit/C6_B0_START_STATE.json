@@ -1,0 +1,26 @@
+{
+  "C4_final": "C4-r2-cal-v2.1 v21_00444",
+  "C6_A_R2": "negative",
+  "C6_B1_used": false,
+  "C6_C_used": false,
+  "current_scope": "train_calib candidate-generation diagnostic only",
+  "evaluator_modified": false,
+  "fixed_candidate_adapter_line": "stopped",
+  "full_backbone_finetuning": false,
+  "inputs": {
+    "boundary_oracle_ckpt": "results/rlem_c6a_repair/boundary_oracle/model_best.pt",
+    "cache_npz": "results/rlem_c6a/cache/train_calib_c6_cache.npz",
+    "effective_top_n": 100,
+    "gt_jsonl": "results/rlem_c3_minimal/train_calib_gt.jsonl",
+    "max_after_nms": 100,
+    "nms_thd": 0.7,
+    "temporal_npz": "results/rlem_c5_lite_prior_prep/train_calib_temporal_prior.npz"
+  },
+  "official_val_authorized": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "primary_focus": "R@1",
+  "secondary_safety_focus": "R@5",
+  "stage": "C6-B0 Candidate Generation Diagnostic",
+  "status": "STARTED"
+}

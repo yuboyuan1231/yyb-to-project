@@ -1,0 +1,24 @@
+config_id: c6a_r2_large
+hidden_dim: 384
+temporal_layers: 4
+heads: 8
+ffn_dim: 768
+span_head_hidden: 512
+span_head_layers: 3
+dropout: 0.10
+stage1_epochs: 2
+stage2_epochs: 5
+batch_groups: 96
+lr_encoder: 0.00003
+lr_new_heads: 0.00008
+weight_decay: 0.0001
+amp: true
+gradient_clip: 1.0
+scale_b: 0.5
+scale_e: 0.5
+alpha_endpoint: 0.05
+alpha_quality: 0.02
+alpha_rank: 0.02
+boundary_stability: 0.05
+hard_negative_ratio: 3
+

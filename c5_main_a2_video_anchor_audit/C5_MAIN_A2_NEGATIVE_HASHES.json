@@ -1,0 +1,50 @@
+{
+  "status": "HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "artifacts": {
+    "stats": {
+      "path": "c5_main_a2_video_anchor_audit/C5_MAIN_A2B_STATS_FREEZE.json",
+      "sha256": "8cf8e894cb4d8ef64ee47c47963e605960f79234b0deebbdaec971381e8fb54e"
+    },
+    "grid_csv": {
+      "path": "results/rlem_c5_main_a2_video_anchor/grid_results.csv",
+      "sha256": "4d55ac39ae3d790fed660d9002b831eecf5a4755c8ad3daf2d8e949d64bdca12"
+    },
+    "grid_json": {
+      "path": "results/rlem_c5_main_a2_video_anchor/grid_results.json",
+      "sha256": "83cdd431a259a3c0940e36eb53826e76930efc0f00c5835cc8f1cb64e689a90d"
+    },
+    "best": {
+      "path": "results/rlem_c5_main_a2_video_anchor/best_config.json",
+      "sha256": "c24d9054ebc1dd356473bc2d68b387d7e8e0f501288447a0e5d0e4c86b557dce"
+    },
+    "search_audit": {
+      "path": "results/rlem_c5_main_a2_video_anchor/train_calib_search_audit.json",
+      "sha256": "46dd29d6f58b3b62ebfd8f15f71900ece466f1a8504f47523d69f24ecad9bae1"
+    },
+    "localization": {
+      "path": "results/rlem_c5_main_a2_video_anchor/localization_diagnostics.json",
+      "sha256": "1017e4f91f3355508529f6baf4b8399961b941f27be4255c6c545e0b82e9712b"
+    },
+    "movement": {
+      "path": "results/rlem_c5_main_a2_video_anchor/movement_diagnostics.json",
+      "sha256": "5977d58e2f3511a18e4814d5f3fb5152a7e5de178a0215bb59f2fc17f1027af4"
+    },
+    "best_nonzero": {
+      "path": "results/rlem_c5_main_a2_video_anchor/best_nonzero_diagnostics.json",
+      "sha256": "77c64da960e94517970b2ea8f6d30883ae0d57dc629dc1d5a9b28d9e5a589e06"
+    },
+    "review": {
+      "path": "c5_main_a2_video_anchor_audit/C5_MAIN_A2_NEGATIVE_AUDIT.md",
+      "sha256": "81161a6059e4fa37376e67e1839b9e1187292868de93b73216af8fa9ab8e11bc"
+    },
+    "manifest": {
+      "path": "c5_main_a2_video_anchor_audit/C5_MAIN_A2_NEGATIVE_MANIFEST.json",
+      "sha256": "ecdadf832d7599adb9faeb418b5053aabfaec8893906849862dca71037d6372e"
+    },
+    "code": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem/grid_search_c5_main_a2.py",
+      "sha256": "36f391b870c8ee044e90701138b8325359e51518ec6400a1d336afbea15c644c"
+    }
+  }
+}

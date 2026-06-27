@@ -1,0 +1,17 @@
+{
+  "status": "LOCKED_COMPATIBILITY_RETRY",
+  "reason": "The first evaluator process failed before writing metrics because standalone_eval/eval.py uses removed NumPy alias np.bool under NumPy 1.26.4.",
+  "failed_attempt_metrics_generated": false,
+  "failed_attempt_log_sha256": "4587517a33566f623fbb365a999d9f1a3bf064380b8f5b07cab529eaa6e0c9ea",
+  "submission_sha256_before_retry": "ccd71e6c104667e58c18f29bacd0b8ee7eebc05d808a2f89a8c2151ce4f764b7",
+  "evaluator_sha256_unchanged": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+  "model_conquer_sha256_unchanged": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+  "compatibility_injection": "np.bool = np.bool_ before runpy.run_path('standalone_eval/eval.py', run_name='__main__')",
+  "changes_submission": false,
+  "changes_config": false,
+  "changes_evaluator_source": false,
+  "changes_evaluator_semantics": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false
+}

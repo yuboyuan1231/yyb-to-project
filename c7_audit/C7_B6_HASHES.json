@@ -1,0 +1,14 @@
+{
+  "status": "C7_B6_HASHES",
+  "official_val_used": false,
+  "artifacts": {
+    "c7_audit/C7_B6_COUNTERFACTUAL_TOP1_SWAP_ORACLE.json": "aef5625a812a1012bee64b258fd00e4e66133dbb9123702e53f9286cb6a135c2",
+    "c7_audit/C7_B6_RULE_GATED_TOP1_OVERRIDE.json": "87b2cd3bfc1f3f81dae2919bdebde27087a72db5de59d7df1152573453ba0798",
+    "c7_audit/C7_B6_SELECTIVE_GATE_MODEL.json": "a78038acd63b74f3bbf9b6e78e517aef887ef03838adbd95d327358aaf753036",
+    "c7_audit/C7_B6_FINAL_DECISION.json": "1377085a4d51d42a3e27facc287f1832484f4ecd89bfa55e2f04b4dbf6b045da",
+    "c7_audit/C7_B6_MANIFEST.json": "5b45165a2ad3e3513db0a078b466d4187c646fc8bbda82c2c217e42ae7943de7"
+  },
+  "runner_sha256": "1e08bab850872320136fd81bf0cb90dcfb18406ace146a8ac0e5efac2ff483d3",
+  "fixed_pool_logits_sha256": "b22292bb746395c836dc41a7843e66ebbf381eced14d34f8f23cd0970fc357fb",
+  "manifest_hash": "5d808b097c79dc2249fb187a48ffede7b40acbbc384c65650fa16d90a55cddbd"
+}

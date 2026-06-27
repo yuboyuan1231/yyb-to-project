@@ -1,0 +1,3336 @@
+# C7-B3 group-stable selection
+
+```json
+{
+  "status": "C7_B3_GROUP_STABLE_SELECTION_COMPLETE",
+  "official_val_used": false,
+  "selected_candidate": "calibrated_A4",
+  "records": {
+    "A4_baseline": {
+      "summary": {
+        "median_delta_0.7_r1": 0.0,
+        "median_delta_0.5_r1": 0.0,
+        "median_delta_0.7_r5": 0.0,
+        "median_delta_0.7_r10": 0.0,
+        "worst_delta_0.7_r1": 0.0,
+        "worst_delta_0.5_r1": 0.0,
+        "instability_0.7_r1": 0.0,
+        "hard_exits": 0,
+        "invalid": 0,
+        "duplicate": 0
+      },
+      "group_records": {
+        "G1_anchor_top1_hit": {
+          "name": "A4_baseline_G1_anchor_top1_hit",
+          "query_count": 3750,
+          "metrics": {
+            "0.5-r1": 100.0,
+            "0.5-r5": 100.0,
+            "0.5-r10": 100.0,
+            "0.5-r100": 100.0,
+            "0.7-r1": 61.44,
+            "0.7-r5": 91.57333333333334,
+            "0.7-r10": 95.81333333333333,
+            "0.7-r100": 97.54666666666667
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 95,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 80,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G1_anchor_top1_miss": {
+          "name": "A4_baseline_G1_anchor_top1_miss",
+          "query_count": 4989,
+          "metrics": {
+            "0.5-r1": 13.910603327320104,
+            "0.5-r5": 51.85407897374223,
+            "0.5-r10": 59.17017438364402,
+            "0.5-r100": 62.09661254760473,
+            "0.7-r1": 8.177991581479255,
+            "0.7-r5": 33.734215273601926,
+            "0.7-r10": 44.337542593706154,
+            "0.7-r100": 52.79615153337342
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 694,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 630,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 387,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 408,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 532,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 426,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_hit": {
+          "name": "A4_baseline_G2_anchor_top5_hit",
+          "query_count": 5707,
+          "metrics": {
+            "0.5-r1": 77.2910460837568,
+            "0.5-r5": 100.0,
+            "0.5-r10": 100.0,
+            "0.5-r100": 100.0,
+            "0.7-r1": 47.205186612931485,
+            "0.7-r5": 83.49395479236026,
+            "0.7-r10": 90.99351673383563,
+            "0.7-r100": 95.33905729805502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 661,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 390,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 275,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 228,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_miss": {
+          "name": "A4_baseline_G2_anchor_top5_miss",
+          "query_count": 3032,
+          "metrics": {
+            "0.5-r1": 1.0883905013192612,
+            "0.5-r5": 20.778364116094988,
+            "0.5-r10": 32.81662269129288,
+            "0.5-r100": 37.63192612137203,
+            "0.7-r1": 0.5936675461741425,
+            "0.7-r5": 11.609498680738787,
+            "0.7-r10": 20.184696569920845,
+            "0.7-r100": 28.067282321899736
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 33,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 630,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 387,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 18,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 352,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 278,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_high_anchor_margin": {
+          "name": "A4_baseline_G3_high_anchor_margin",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 53.1350114416476,
+            "0.5-r5": 77.00228832951944,
+            "0.5-r10": 80.25171624713958,
+            "0.5-r100": 81.55606407322655,
+            "0.7-r1": 32.265446224256294,
+            "0.7-r5": 63.11212814645309,
+            "0.7-r10": 70.77803203661327,
+            "0.7-r100": 75.76659038901602
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 173,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 283,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 149,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 99,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 317,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 227,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_low_anchor_margin": {
+          "name": "A4_baseline_G3_low_anchor_margin",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 48.56946669718471,
+            "0.5-r5": 68.02471961547265,
+            "0.5-r10": 73.1288624399176,
+            "0.5-r100": 75.16594186312658,
+            "0.7-r1": 29.800869764248112,
+            "0.7-r5": 53.99404898146029,
+            "0.7-r10": 62.07370107576104,
+            "0.7-r100": 68.23071641107805
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 521,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 347,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 238,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 309,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 310,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 279,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_high_conf_concentration": {
+          "name": "A4_baseline_G4_high_conf_concentration",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 61.922196796338675,
+            "0.5-r5": 82.90617848970251,
+            "0.5-r10": 85.94965675057209,
+            "0.5-r100": 87.27688787185355,
+            "0.7-r1": 38.12356979405034,
+            "0.7-r5": 69.10755148741418,
+            "0.7-r10": 77.11670480549199,
+            "0.7-r100": 81.67048054919908
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 167,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 229,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 121,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 104,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 245,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 192,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_flat_confidence": {
+          "name": "A4_baseline_G4_flat_confidence",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 39.78027008468757,
+            "0.5-r5": 62.11947814145113,
+            "0.5-r10": 67.42961776150149,
+            "0.5-r100": 69.44380865186541,
+            "0.7-r1": 23.941405355916686,
+            "0.7-r5": 47.997253376058595,
+            "0.7-r10": 55.73357747768368,
+            "0.7-r100": 62.32547493705653
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 527,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 401,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 266,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 304,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 382,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 314,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_short_query": {
+          "name": "A4_baseline_G5_short_query",
+          "query_count": 4600,
+          "metrics": {
+            "0.5-r1": 47.369565217391305,
+            "0.5-r5": 70.08695652173913,
+            "0.5-r10": 74.78260869565217,
+            "0.5-r100": 76.43478260869566,
+            "0.7-r1": 27.847826086956523,
+            "0.7-r5": 55.17391304347826,
+            "0.7-r10": 63.56521739130435,
+            "0.7-r100": 70.0
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 369,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 355,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 235,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 203,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 368,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 291,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_long_query": {
+          "name": "A4_baseline_G5_long_query",
+          "query_count": 4139,
+          "metrics": {
+            "0.5-r1": 54.72336313119111,
+            "0.5-r5": 75.21140372070549,
+            "0.5-r10": 78.81130707900459,
+            "0.5-r100": 80.50253684464846,
+            "0.7-r1": 34.57356849480551,
+            "0.7-r5": 62.309736651365064,
+            "0.7-r10": 69.60618506885722,
+            "0.7-r100": 74.22082628654265
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 325,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 275,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 152,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 205,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 259,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 215,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_agreement": {
+          "name": "A4_baseline_G7_high_residual_agreement",
+          "query_count": 7791,
+          "metrics": {
+            "0.5-r1": 48.581696829675266,
+            "0.5-r5": 71.21037094082916,
+            "0.5-r10": 75.52303940444102,
+            "0.5-r100": 77.21730201514568,
+            "0.7-r1": 29.80361956103196,
+            "0.7-r5": 58.19535361314337,
+            "0.7-r10": 66.08907714029007,
+            "0.7-r100": 71.1975356180208
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 35,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 559,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 352,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 18,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 534,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 433,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_conflict": {
+          "name": "A4_baseline_G7_high_residual_conflict",
+          "query_count": 948,
+          "metrics": {
+            "0.5-r1": 69.51476793248945,
+            "0.5-r5": 83.22784810126582,
+            "0.5-r10": 86.28691983122363,
+            "0.5-r100": 87.76371308016877,
+            "0.7-r1": 41.139240506329116,
+            "0.7-r5": 61.49789029535865,
+            "0.7-r10": 69.19831223628692,
+            "0.7-r100": 78.58649789029536
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 659,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 71,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 35,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 390,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 93,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 73,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_high_positive_density_proxy": {
+          "name": "A4_baseline_G8_high_positive_density_proxy",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 62.10526315789474,
+            "0.5-r5": 82.83752860411899,
+            "0.5-r10": 86.36155606407323,
+            "0.5-r100": 87.68878718535468,
+            "0.7-r1": 43.68421052631579,
+            "0.7-r5": 71.69336384439359,
+            "0.7-r10": 79.26773455377574,
+            "0.7-r100": 82.44851258581235
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 253,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 226,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 121,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 178,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 216,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 181,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_low_positive_density_proxy": {
+          "name": "A4_baseline_G8_low_positive_density_proxy",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 39.597161821927216,
+            "0.5-r5": 62.188143739986266,
+            "0.5-r10": 67.01762417029069,
+            "0.5-r100": 69.03181506065461,
+            "0.7-r1": 18.37949187457084,
+            "0.7-r5": 45.41084916456855,
+            "0.7-r10": 53.58205539024949,
+            "0.7-r100": 61.54726482032502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 441,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 404,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 266,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 230,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 411,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 325,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 0.0,
+            "0.7-r10": 0.0,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "worst_group_delta_0.7_r1": 0.0,
+      "instability": 0.0,
+      "stable_score": 0.0
+    },
+    "calibrated_A4": {
+      "summary": {
+        "median_delta_0.7_r1": 7.171281433921884,
+        "median_delta_0.5_r1": 14.034075708935259,
+        "median_delta_0.7_r5": 8.959340513313755,
+        "median_delta_0.7_r10": 4.927034819952077,
+        "worst_delta_0.7_r1": 6.378454996456412,
+        "worst_delta_0.5_r1": 12.402551381998578,
+        "instability_0.7_r1": 0.7512235374000495,
+        "hard_exits": 0,
+        "invalid": 0,
+        "duplicate": 0
+      },
+      "group_records": {
+        "G1_anchor_top1_hit": {
+          "name": "calibrated_A4_G1_anchor_top1_hit",
+          "query_count": 3750,
+          "metrics": {
+            "0.5-r1": 99.86666666666666,
+            "0.5-r5": 99.94666666666667,
+            "0.5-r10": 99.97333333333333,
+            "0.5-r100": 100.0,
+            "0.7-r1": 61.44,
+            "0.7-r5": 94.37333333333333,
+            "0.7-r10": 97.25333333333333,
+            "0.7-r100": 97.54666666666667
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 0,
+              "loss_queries": 5
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 2
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 200,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 136,
+              "loss_queries": 2
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -0.13333333333333997,
+            "0.5-r5": -0.05333333333332746,
+            "0.5-r10": -0.026666666666670835,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": 2.799999999999997,
+            "0.7-r10": 1.4399999999999977,
+            "0.7-r100": 0.0
+          }
+        },
+        "G1_anchor_top1_miss": {
+          "name": "calibrated_A4_G1_anchor_top1_miss",
+          "query_count": 4989,
+          "metrics": {
+            "0.5-r1": 38.40448987773101,
+            "0.5-r5": 60.45299659250351,
+            "0.5-r10": 61.87612748045701,
+            "0.5-r100": 62.09661254760473,
+            "0.7-r1": 21.52736019242333,
+            "0.7-r5": 45.780717578673084,
+            "0.7-r10": 52.07456404088996,
+            "0.7-r100": 52.79615153337342
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1916,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 1065,
+              "loss_queries": 6
+            },
+            "0.5-r10": {
+              "gain_queries": 528,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 1074,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 1134,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 815,
+              "loss_queries": 3
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 24.493886550410906,
+            "0.5-r5": 8.598917618761277,
+            "0.5-r10": 2.7059530968129906,
+            "0.5-r100": 0.0,
+            "0.7-r1": 13.349368610944076,
+            "0.7-r5": 12.046502305071158,
+            "0.7-r10": 7.737021447183807,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_hit": {
+          "name": "calibrated_A4_G2_anchor_top5_hit",
+          "query_count": 5707,
+          "metrics": {
+            "0.5-r1": 88.8382687927107,
+            "0.5-r5": 99.85982127212196,
+            "0.5-r10": 99.89486595409147,
+            "0.5-r100": 100.0,
+            "0.7-r1": 53.916243210092865,
+            "0.7-r5": 89.22376029437532,
+            "0.7-r10": 94.76082004555809,
+            "0.7-r100": 95.33905729805502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1325,
+              "loss_queries": 5
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 8
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 773,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 603,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 448,
+              "loss_queries": 5
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 11.54722270895391,
+            "0.5-r5": -0.14017872787803753,
+            "0.5-r10": -0.10513404590852815,
+            "0.5-r100": 0.0,
+            "0.7-r1": 6.711056597161381,
+            "0.7-r5": 5.729805502015068,
+            "0.7-r10": 3.7673033117224577,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_miss": {
+          "name": "calibrated_A4_G2_anchor_top5_miss",
+          "query_count": 3032,
+          "metrics": {
+            "0.5-r1": 19.49208443271768,
+            "0.5-r5": 35.12532981530343,
+            "0.5-r10": 37.434036939313984,
+            "0.5-r100": 37.63192612137203,
+            "0.7-r1": 9.927440633245382,
+            "0.7-r5": 24.109498680738785,
+            "0.7-r10": 27.605540897097626,
+            "0.7-r100": 28.067282321899736
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 591,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 1065,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 528,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 301,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 731,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 503,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 18.40369393139842,
+            "0.5-r5": 14.346965699208443,
+            "0.5-r10": 4.617414248021106,
+            "0.5-r100": 0.0,
+            "0.7-r1": 9.33377308707124,
+            "0.7-r5": 12.499999999999998,
+            "0.7-r10": 7.4208443271767806,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_high_anchor_margin": {
+          "name": "calibrated_A4_G3_high_anchor_margin",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 68.92448512585813,
+            "0.5-r5": 80.80091533180779,
+            "0.5-r10": 81.46453089244851,
+            "0.5-r100": 81.55606407322655,
+            "0.7-r1": 40.80091533180778,
+            "0.7-r5": 70.68649885583524,
+            "0.7-r10": 75.37757437070938,
+            "0.7-r100": 75.76659038901602
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 866,
+              "loss_queries": 3
+            },
+            "0.5-r5": {
+              "gain_queries": 454,
+              "loss_queries": 5
+            },
+            "0.5-r10": {
+              "gain_queries": 206,
+              "loss_queries": 4
+            },
+            "0.7-r1": {
+              "gain_queries": 472,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 648,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 429,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 15.789473684210527,
+            "0.5-r5": 3.7986270022883417,
+            "0.5-r10": 1.2128146453089244,
+            "0.5-r100": 0.0,
+            "0.7-r1": 8.535469107551485,
+            "0.7-r5": 7.574370709382151,
+            "0.7-r10": 4.599542334096114,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_low_anchor_margin": {
+          "name": "calibrated_A4_G3_low_anchor_margin",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 60.63172350652323,
+            "0.5-r5": 73.99862668802929,
+            "0.5-r10": 74.98283360036622,
+            "0.5-r100": 75.16594186312658,
+            "0.7-r1": 36.50720988784619,
+            "0.7-r5": 62.577248798352024,
+            "0.7-r10": 67.54406042572671,
+            "0.7-r100": 68.23071641107805
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1050,
+              "loss_queries": 2
+            },
+            "0.5-r5": {
+              "gain_queries": 611,
+              "loss_queries": 3
+            },
+            "0.5-r10": {
+              "gain_queries": 322,
+              "loss_queries": 3
+            },
+            "0.7-r1": {
+              "gain_queries": 602,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 686,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 522,
+              "loss_queries": 4
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 12.062256809338521,
+            "0.5-r5": 5.973907072556642,
+            "0.5-r10": 1.8539711604486229,
+            "0.5-r100": 0.0,
+            "0.7-r1": 6.706340123598075,
+            "0.7-r5": 8.583199816891735,
+            "0.7-r10": 5.470359349965669,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_high_conf_concentration": {
+          "name": "calibrated_A4_G4_high_conf_concentration",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 74.21052631578948,
+            "0.5-r5": 86.47597254004576,
+            "0.5-r10": 87.16247139588101,
+            "0.5-r100": 87.27688787185355,
+            "0.7-r1": 45.35469107551487,
+            "0.7-r5": 75.97254004576659,
+            "0.7-r10": 81.32723112128147,
+            "0.7-r100": 81.67048054919908
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 706,
+              "loss_queries": 2
+            },
+            "0.5-r5": {
+              "gain_queries": 388,
+              "loss_queries": 3
+            },
+            "0.5-r10": {
+              "gain_queries": 177,
+              "loss_queries": 3
+            },
+            "0.7-r1": {
+              "gain_queries": 420,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 546,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 378,
+              "loss_queries": 2
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 12.288329519450805,
+            "0.5-r5": 3.5697940503432477,
+            "0.5-r10": 1.2128146453089244,
+            "0.5-r100": 0.0,
+            "0.7-r1": 7.231121281464532,
+            "0.7-r5": 6.864988558352408,
+            "0.7-r10": 4.21052631578948,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_flat_confidence": {
+          "name": "calibrated_A4_G4_flat_confidence",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 55.344472419317924,
+            "0.5-r5": 68.32227054245823,
+            "0.5-r10": 69.2835889219501,
+            "0.5-r100": 69.44380865186541,
+            "0.7-r1": 31.952391851682307,
+            "0.7-r5": 57.28999771114672,
+            "0.7-r10": 61.59304188601511,
+            "0.7-r100": 62.32547493705653
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1210,
+              "loss_queries": 3
+            },
+            "0.5-r5": {
+              "gain_queries": 677,
+              "loss_queries": 5
+            },
+            "0.5-r10": {
+              "gain_queries": 351,
+              "loss_queries": 4
+            },
+            "0.7-r1": {
+              "gain_queries": 654,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 788,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 573,
+              "loss_queries": 3
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 15.564202334630352,
+            "0.5-r5": 6.202792401007095,
+            "0.5-r10": 1.8539711604486087,
+            "0.5-r100": 0.0,
+            "0.7-r1": 8.010986495765621,
+            "0.7-r5": 9.292744335088123,
+            "0.7-r10": 5.8594644083314265,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_short_query": {
+          "name": "calibrated_A4_G5_short_query",
+          "query_count": 4600,
+          "metrics": {
+            "0.5-r1": 61.84782608695652,
+            "0.5-r5": 75.32608695652173,
+            "0.5-r10": 76.26086956521739,
+            "0.5-r100": 76.43478260869566,
+            "0.7-r1": 35.32608695652174,
+            "0.7-r5": 64.08695652173913,
+            "0.7-r10": 69.3913043478261,
+            "0.7-r100": 70.0
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1040,
+              "loss_queries": 5
+            },
+            "0.5-r5": {
+              "gain_queries": 601,
+              "loss_queries": 5
+            },
+            "0.5-r10": {
+              "gain_queries": 307,
+              "loss_queries": 4
+            },
+            "0.7-r1": {
+              "gain_queries": 547,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 779,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 562,
+              "loss_queries": 3
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 14.478260869565219,
+            "0.5-r5": 5.239130434782609,
+            "0.5-r10": 1.4782608695652186,
+            "0.5-r100": 0.0,
+            "0.7-r1": 7.478260869565219,
+            "0.7-r5": 8.913043478260867,
+            "0.7-r10": 5.826086956521742,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_long_query": {
+          "name": "calibrated_A4_G5_long_query",
+          "query_count": 4139,
+          "metrics": {
+            "0.5-r1": 68.03575742933076,
+            "0.5-r5": 79.7052428122735,
+            "0.5-r10": 80.40589514375453,
+            "0.5-r100": 80.50253684464846,
+            "0.7-r1": 42.35322541676734,
+            "0.7-r5": 69.4612225175163,
+            "0.7-r10": 73.76177820729644,
+            "0.7-r100": 74.22082628654265
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 876,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 464,
+              "loss_queries": 3
+            },
+            "0.5-r10": {
+              "gain_queries": 221,
+              "loss_queries": 3
+            },
+            "0.7-r1": {
+              "gain_queries": 527,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 555,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 389,
+              "loss_queries": 2
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 13.312394298139651,
+            "0.5-r5": 4.493839091568006,
+            "0.5-r10": 1.5945880647499422,
+            "0.5-r100": 0.0,
+            "0.7-r1": 7.779656921961831,
+            "0.7-r5": 7.151485866151241,
+            "0.7-r10": 4.1555931384392295,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_agreement": {
+          "name": "calibrated_A4_G7_high_residual_agreement",
+          "query_count": 7791,
+          "metrics": {
+            "0.5-r1": 63.97124887690926,
+            "0.5-r5": 76.28032345013477,
+            "0.5-r10": 77.06327814144525,
+            "0.5-r100": 77.21730201514568,
+            "0.7-r1": 38.21075600051341,
+            "0.7-r5": 65.93505326658965,
+            "0.7-r10": 70.68412270568605,
+            "0.7-r100": 71.1975356180208
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1239,
+              "loss_queries": 5
+            },
+            "0.5-r5": {
+              "gain_queries": 962,
+              "loss_queries": 8
+            },
+            "0.5-r10": {
+              "gain_queries": 479,
+              "loss_queries": 7
+            },
+            "0.7-r1": {
+              "gain_queries": 673,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 1138,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 795,
+              "loss_queries": 4
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 15.389552047233991,
+            "0.5-r5": 5.069952509305608,
+            "0.5-r10": 1.5402387370042305,
+            "0.5-r100": 0.0,
+            "0.7-r1": 8.407136439481452,
+            "0.7-r5": 7.73969965344628,
+            "0.7-r10": 4.595045565395978,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_conflict": {
+          "name": "calibrated_A4_G7_high_residual_conflict",
+          "query_count": 948,
+          "metrics": {
+            "0.5-r1": 71.41350210970464,
+            "0.5-r5": 86.60337552742617,
+            "0.5-r10": 87.76371308016877,
+            "0.5-r100": 87.76371308016877,
+            "0.7-r1": 42.29957805907173,
+            "0.7-r5": 72.36286919831224,
+            "0.7-r10": 77.84810126582279,
+            "0.7-r100": 78.58649789029536
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 677,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 103,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 49,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 401,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 196,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 156,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.8987341772151893,
+            "0.5-r5": 3.375527426160346,
+            "0.5-r10": 1.4767932489451425,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.160337552742611,
+            "0.7-r5": 10.864978902953588,
+            "0.7-r10": 8.649789029535867,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_high_positive_density_proxy": {
+          "name": "calibrated_A4_G8_high_positive_density_proxy",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 75.28604118993135,
+            "0.5-r5": 86.75057208237986,
+            "0.5-r10": 87.62013729977117,
+            "0.5-r100": 87.68878718535468,
+            "0.7-r1": 52.10526315789474,
+            "0.7-r5": 77.7116704805492,
+            "0.7-r10": 82.01372997711671,
+            "0.7-r100": 82.44851258581235
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 829,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 398,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 178,
+              "loss_queries": 2
+            },
+            "0.7-r1": {
+              "gain_queries": 546,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 480,
+              "loss_queries": 1
+            },
+            "0.7-r10": {
+              "gain_queries": 302,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 13.180778032036613,
+            "0.5-r5": 3.9130434782608745,
+            "0.5-r10": 1.258581235697946,
+            "0.5-r100": 0.0,
+            "0.7-r1": 8.421052631578952,
+            "0.7-r5": 6.018306636155614,
+            "0.7-r10": 2.745995423340972,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_low_positive_density_proxy": {
+          "name": "calibrated_A4_G8_low_positive_density_proxy",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 54.26871137560082,
+            "0.5-r5": 68.04760814831769,
+            "0.5-r10": 68.82581826504921,
+            "0.5-r100": 69.03181506065461,
+            "0.7-r1": 25.20027466239414,
+            "0.7-r5": 55.550469214923325,
+            "0.7-r10": 60.906385900663764,
+            "0.7-r100": 61.54726482032502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1087,
+              "loss_queries": 5
+            },
+            "0.5-r5": {
+              "gain_queries": 667,
+              "loss_queries": 7
+            },
+            "0.5-r10": {
+              "gain_queries": 350,
+              "loss_queries": 5
+            },
+            "0.7-r1": {
+              "gain_queries": 528,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 854,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 649,
+              "loss_queries": 4
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 14.671549553673607,
+            "0.5-r5": 5.8594644083314265,
+            "0.5-r10": 1.8081940947585196,
+            "0.5-r100": 0.0,
+            "0.7-r1": 6.820782787823301,
+            "0.7-r5": 10.139620050354772,
+            "0.7-r10": 7.324330510414278,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "worst_group_delta_0.7_r1": 0.0,
+      "instability": 3.12893599087502,
+      "stable_score": 13.260588135090828
+    },
+    "query_gate": {
+      "summary": {
+        "median_delta_0.7_r1": 0.5500936329588022,
+        "median_delta_0.5_r1": 0.6236078768856963,
+        "median_delta_0.7_r5": -1.8673025994394905,
+        "median_delta_0.7_r10": -1.9933482753196188,
+        "worst_delta_0.7_r1": 0.28348688873139594,
+        "worst_delta_0.5_r1": 0.1144164759725399,
+        "instability_0.7_r1": 0.27065635976167807,
+        "hard_exits": 0,
+        "invalid": 0,
+        "duplicate": 0
+      },
+      "group_records": {
+        "G1_anchor_top1_hit": {
+          "name": "query_gate_G1_anchor_top1_hit",
+          "query_count": 3750,
+          "metrics": {
+            "0.5-r1": 100.0,
+            "0.5-r5": 100.0,
+            "0.5-r10": 100.0,
+            "0.5-r100": 100.0,
+            "0.7-r1": 61.44,
+            "0.7-r5": 91.28,
+            "0.7-r10": 94.96,
+            "0.7-r100": 97.54666666666667
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 0,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 84,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 49,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.0,
+            "0.5-r5": 0.0,
+            "0.5-r10": 0.0,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.0,
+            "0.7-r5": -0.29333333333333655,
+            "0.7-r10": -0.8533333333333388,
+            "0.7-r100": 0.0
+          }
+        },
+        "G1_anchor_top1_miss": {
+          "name": "query_gate_G1_anchor_top1_miss",
+          "query_count": 4989,
+          "metrics": {
+            "0.5-r1": 16.877129685307676,
+            "0.5-r5": 47.785127280016034,
+            "0.5-r10": 55.46201643615955,
+            "0.5-r100": 62.09661254760473,
+            "0.7-r1": 10.202445379835638,
+            "0.7-r5": 33.3132892363199,
+            "0.7-r10": 42.794147123672076,
+            "0.7-r100": 52.79615153337342
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 842,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 428,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 203,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 509,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 511,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 349,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 2.966526357987572,
+            "0.5-r5": -4.0689516937261985,
+            "0.5-r10": -3.708157947484466,
+            "0.5-r100": 0.0,
+            "0.7-r1": 2.024453798356383,
+            "0.7-r5": -0.4209260372820225,
+            "0.7-r10": -1.5433954700340777,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_hit": {
+          "name": "query_gate_G2_anchor_top5_hit",
+          "query_count": 5707,
+          "metrics": {
+            "0.5-r1": 78.16716313299457,
+            "0.5-r5": 99.98247765901525,
+            "0.5-r10": 99.98247765901525,
+            "0.5-r100": 100.0,
+            "0.7-r1": 47.76590152444366,
+            "0.7-r5": 84.03714736288768,
+            "0.7-r10": 90.52041352724724,
+            "0.7-r100": 95.33905729805502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 711,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 422,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 306,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 202,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.8761170492377772,
+            "0.5-r5": -0.017522340984754692,
+            "0.5-r10": -0.017522340984754692,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.5607149115121786,
+            "0.7-r5": 0.5431925705274239,
+            "0.7-r10": -0.4731032065883909,
+            "0.7-r100": 0.0
+          }
+        },
+        "G2_anchor_top5_miss": {
+          "name": "query_gate_G2_anchor_top5_miss",
+          "query_count": 3032,
+          "metrics": {
+            "0.5-r1": 4.320580474934037,
+            "0.5-r5": 14.116094986807388,
+            "0.5-r10": 26.74802110817942,
+            "0.5-r100": 37.63192612137203,
+            "0.7-r1": 2.8693931398416885,
+            "0.7-r5": 9.531662269129287,
+            "0.7-r10": 17.480211081794195,
+            "0.7-r100": 28.067282321899736
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 131,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 428,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 203,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 87,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 289,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 196,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 3.2321899736147754,
+            "0.5-r5": -6.6622691292875995,
+            "0.5-r10": -6.068601583113459,
+            "0.5-r100": 0.0,
+            "0.7-r1": 2.275725593667546,
+            "0.7-r5": -2.0778364116095,
+            "0.7-r10": -2.7044854881266502,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_high_anchor_margin": {
+          "name": "query_gate_G3_high_anchor_margin",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 55.67505720823799,
+            "0.5-r5": 74.89702517162472,
+            "0.5-r10": 78.60411899313502,
+            "0.5-r100": 81.55606407322655,
+            "0.7-r1": 33.63844393592677,
+            "0.7-r5": 62.65446224256293,
+            "0.7-r10": 69.58810068649886,
+            "0.7-r100": 75.76659038901602
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 284,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 192,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 78,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 159,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 297,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 175,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 2.5400457665903886,
+            "0.5-r5": -2.1052631578947256,
+            "0.5-r10": -1.647597254004566,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.3729977116704788,
+            "0.7-r5": -0.4576659038901596,
+            "0.7-r10": -1.1899313501144064,
+            "0.7-r100": 0.0
+          }
+        },
+        "G3_low_anchor_margin": {
+          "name": "query_gate_G3_low_anchor_margin",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 49.416342412451364,
+            "0.5-r5": 65.48409246967269,
+            "0.5-r10": 70.54245822842756,
+            "0.5-r100": 75.16594186312658,
+            "0.7-r1": 30.739299610894943,
+            "0.7-r5": 53.719386587319754,
+            "0.7-r10": 60.7690547035935,
+            "0.7-r100": 68.23071641107805
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 558,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 236,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 125,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 350,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 298,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 223,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 0.8468757152666555,
+            "0.5-r5": -2.5406271457999594,
+            "0.5-r10": -2.5864042114900343,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.9384298466468302,
+            "0.7-r5": -0.2746623941405346,
+            "0.7-r10": -1.3046463721675465,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_high_conf_concentration": {
+          "name": "query_gate_G4_high_conf_concentration",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 63.47826086956522,
+            "0.5-r5": 81.25858123569795,
+            "0.5-r10": 84.71395881006865,
+            "0.5-r100": 87.27688787185355,
+            "0.7-r1": 39.153318077803206,
+            "0.7-r5": 68.558352402746,
+            "0.7-r10": 75.88100686498856,
+            "0.7-r100": 81.67048054919908
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 235,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 157,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 67,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 149,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 221,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 138,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.556064073226544,
+            "0.5-r5": -1.647597254004566,
+            "0.5-r10": -1.2356979405034423,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.0297482837528662,
+            "0.7-r5": -0.5491990846681887,
+            "0.7-r10": -1.235697940503428,
+            "0.7-r100": 0.0
+          }
+        },
+        "G4_flat_confidence": {
+          "name": "query_gate_G4_flat_confidence",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 41.61135271229114,
+            "0.5-r5": 59.12108033875029,
+            "0.5-r10": 64.43121995880064,
+            "0.5-r100": 69.44380865186541,
+            "0.7-r1": 25.223163195239184,
+            "0.7-r5": 47.81414511329824,
+            "0.7-r10": 54.474708171206224,
+            "0.7-r100": 62.32547493705653
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 607,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 271,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 136,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 360,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 374,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 260,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.8310826276035712,
+            "0.5-r5": -2.9983978027008433,
+            "0.5-r10": -2.9983978027008504,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.2817578393224984,
+            "0.7-r5": -0.1831082627603564,
+            "0.7-r10": -1.2588693064774574,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_short_query": {
+          "name": "query_gate_G5_short_query",
+          "query_count": 4600,
+          "metrics": {
+            "0.5-r1": 48.73913043478261,
+            "0.5-r5": 68.0,
+            "0.5-r10": 72.52173913043478,
+            "0.5-r100": 76.43478260869566,
+            "0.7-r1": 28.717391304347824,
+            "0.7-r5": 54.71739130434783,
+            "0.7-r10": 62.43478260869565,
+            "0.7-r100": 70.0
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 432,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 259,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 131,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 243,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 347,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 239,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.3695652173913047,
+            "0.5-r5": -2.0869565217391255,
+            "0.5-r10": -2.2608695652173907,
+            "0.5-r100": 0.0,
+            "0.7-r1": 0.8695652173913011,
+            "0.7-r5": -0.45652173913043015,
+            "0.7-r10": -1.1304347826087024,
+            "0.7-r100": 0.0
+          }
+        },
+        "G5_long_query": {
+          "name": "query_gate_G5_long_query",
+          "query_count": 4139,
+          "metrics": {
+            "0.5-r1": 56.776999275187244,
+            "0.5-r5": 72.6262382217927,
+            "0.5-r10": 76.85431263590239,
+            "0.5-r100": 80.50253684464846,
+            "0.7-r1": 36.04735443343803,
+            "0.7-r5": 62.04397197390674,
+            "0.7-r10": 68.22904083111862,
+            "0.7-r100": 74.22082628654265
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 410,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 169,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 72,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 266,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 248,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 159,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 2.053636143996137,
+            "0.5-r5": -2.5851654989127866,
+            "0.5-r10": -1.9569944431022037,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.473785938632524,
+            "0.7-r5": -0.26576467745832133,
+            "0.7-r10": -1.377144237738591,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_agreement": {
+          "name": "query_gate_G7_high_residual_agreement",
+          "query_count": 7791,
+          "metrics": {
+            "0.5-r1": 51.13592606854063,
+            "0.5-r5": 68.6176357335387,
+            "0.5-r10": 73.25118726735977,
+            "0.5-r100": 77.21730201514568,
+            "0.7-r1": 31.21550506995251,
+            "0.7-r5": 57.04017456039019,
+            "0.7-r10": 64.2022846874599,
+            "0.7-r100": 71.1975356180208
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 234,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 358,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 176,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 128,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 444,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 287,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 2.5542292388653607,
+            "0.5-r5": -2.5927352072904597,
+            "0.5-r10": -2.271852137081254,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.4118855089205482,
+            "0.7-r5": -1.1551790527531764,
+            "0.7-r10": -1.8867924528301785,
+            "0.7-r100": 0.0
+          }
+        },
+        "G7_high_residual_conflict": {
+          "name": "query_gate_G7_high_residual_conflict",
+          "query_count": 948,
+          "metrics": {
+            "0.5-r1": 64.13502109704642,
+            "0.5-r5": 83.12236286919831,
+            "0.5-r10": 85.44303797468355,
+            "0.5-r100": 87.76371308016877,
+            "0.7-r1": 40.18987341772152,
+            "0.7-r5": 67.61603375527426,
+            "0.7-r10": 73.20675105485232,
+            "0.7-r100": 78.58649789029536
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 608,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 70,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 27,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 381,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 151,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 111,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -5.379746835443029,
+            "0.5-r5": -0.10548523206750815,
+            "0.5-r10": -0.8438818565400794,
+            "0.5-r100": 0.0,
+            "0.7-r1": -0.9493670886075947,
+            "0.7-r5": 6.118143459915608,
+            "0.7-r10": 4.008438818565395,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_high_positive_density_proxy": {
+          "name": "query_gate_G8_high_positive_density_proxy",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 63.47826086956522,
+            "0.5-r5": 80.80091533180779,
+            "0.5-r10": 85.1258581235698,
+            "0.5-r100": 87.68878718535468,
+            "0.7-r1": 44.73684210526316,
+            "0.7-r5": 70.80091533180779,
+            "0.7-r10": 77.94050343249428,
+            "0.7-r100": 82.44851258581235
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 313,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 137,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 67,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 224,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 177,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 123,
+              "loss_queries": 0
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.3729977116704788,
+            "0.5-r5": -2.0366132723112003,
+            "0.5-r10": -1.235697940503428,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.05263157894737,
+            "0.7-r5": -0.8924485125858013,
+            "0.7-r10": -1.3272311212814571,
+            "0.7-r100": 0.0
+          }
+        },
+        "G8_low_positive_density_proxy": {
+          "name": "query_gate_G8_low_positive_density_proxy",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 41.61135271229114,
+            "0.5-r5": 59.57885099565118,
+            "0.5-r10": 64.01922636758984,
+            "0.5-r100": 69.03181506065461,
+            "0.7-r1": 19.638361181048296,
+            "0.7-r5": 45.571068894483865,
+            "0.7-r10": 52.41474021515221,
+            "0.7-r100": 61.54726482032502
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 0,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 529,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 291,
+              "loss_queries": 1
+            },
+            "0.5-r10": {
+              "gain_queries": 136,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 285,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 418,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 275,
+              "loss_queries": 1
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 2.0141908903639276,
+            "0.5-r5": -2.609292744335086,
+            "0.5-r10": -2.9983978027008504,
+            "0.5-r100": 0.0,
+            "0.7-r1": 1.2588693064774574,
+            "0.7-r5": 0.16021972991531186,
+            "0.7-r10": -1.1673151750972792,
+            "0.7-r100": 0.0
+          }
+        }
+      },
+      "worst_group_delta_0.7_r1": -0.9493670886075947,
+      "instability": 0.7722082313900084,
+      "stable_score": -4.964459609644706
+    },
+    "fixed_pool_lambdarank": {
+      "summary": {
+        "median_delta_0.7_r1": -12.270050838800392,
+        "median_delta_0.5_r1": -3.641997641881943,
+        "median_delta_0.7_r5": 0.7983610306078219,
+        "median_delta_0.7_r10": 4.061700489049009,
+        "worst_delta_0.7_r1": -12.5,
+        "worst_delta_0.5_r1": -5.81148121899362,
+        "instability_0.7_r1": 0.19339181342003958,
+        "hard_exits": 9,
+        "invalid": 0,
+        "duplicate": 0
+      },
+      "group_records": {
+        "G1_anchor_top1_hit": {
+          "name": "fixed_pool_lambdarank_G1_anchor_top1_hit",
+          "query_count": 3750,
+          "metrics": {
+            "0.5-r1": 66.93333333333334,
+            "0.5-r5": 98.90666666666667,
+            "0.5-r10": 99.94666666666667,
+            "0.5-r100": 99.97333333333333,
+            "0.7-r1": 23.30666666666667,
+            "0.7-r5": 77.25333333333333,
+            "0.7-r10": 95.78666666666666,
+            "0.7-r100": 97.73333333333333
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 1,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0002666666666666667,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 0,
+              "loss_queries": 1240
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 41
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 2
+            },
+            "0.7-r1": {
+              "gain_queries": 199,
+              "loss_queries": 1629
+            },
+            "0.7-r5": {
+              "gain_queries": 248,
+              "loss_queries": 690
+            },
+            "0.7-r10": {
+              "gain_queries": 161,
+              "loss_queries": 82
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -33.06666666666666,
+            "0.5-r5": -1.0933333333333337,
+            "0.5-r10": -0.05333333333332746,
+            "0.5-r100": -0.026666666666670835,
+            "0.7-r1": -38.133333333333326,
+            "0.7-r5": -14.320000000000007,
+            "0.7-r10": -0.026666666666670835,
+            "0.7-r100": 0.18666666666666742
+          }
+        },
+        "G1_anchor_top1_miss": {
+          "name": "fixed_pool_lambdarank_G1_anchor_top1_miss",
+          "query_count": 4989,
+          "metrics": {
+            "0.5-r1": 32.85227500501102,
+            "0.5-r5": 59.65123271196632,
+            "0.5-r10": 61.87612748045701,
+            "0.5-r100": 62.17678893565845,
+            "0.7-r1": 13.569853678091802,
+            "0.7-r5": 43.41551413108839,
+            "0.7-r10": 51.93425536179595,
+            "0.7-r100": 52.77610743635999
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 11,
+            "hard_positive_top100_query_entries": 15,
+            "hard_positive_exit_ratio": 0.00220485067147725,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1639,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 1076,
+              "loss_queries": 57
+            },
+            "0.5-r10": {
+              "gain_queries": 536,
+              "loss_queries": 14
+            },
+            "0.7-r1": {
+              "gain_queries": 677,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 1186,
+              "loss_queries": 171
+            },
+            "0.7-r10": {
+              "gain_queries": 850,
+              "loss_queries": 45
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 18.94167167769092,
+            "0.5-r5": 7.79715373822409,
+            "0.5-r10": 2.7059530968129906,
+            "0.5-r100": 0.08017638805372229,
+            "0.7-r1": 5.391862096612547,
+            "0.7-r5": 9.681298857486468,
+            "0.7-r10": 7.596712768089795,
+            "0.7-r100": -0.020044097013425244
+          }
+        },
+        "G2_anchor_top5_hit": {
+          "name": "fixed_pool_lambdarank_G2_anchor_top5_hit",
+          "query_count": 5707,
+          "metrics": {
+            "0.5-r1": 63.658664797616964,
+            "0.5-r5": 98.44051165235676,
+            "0.5-r10": 99.91238829507623,
+            "0.5-r100": 99.94743297704574,
+            "0.7-r1": 24.303486945855965,
+            "0.7-r5": 76.3798843525495,
+            "0.7-r10": 93.83213597336604,
+            "0.7-r100": 95.47923602593306
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 3,
+            "hard_positive_top100_query_entries": 0,
+            "hard_positive_exit_ratio": 0.0005256702295426669,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1118,
+              "loss_queries": 1235
+            },
+            "0.5-r5": {
+              "gain_queries": 0,
+              "loss_queries": 89
+            },
+            "0.5-r10": {
+              "gain_queries": 0,
+              "loss_queries": 5
+            },
+            "0.7-r1": {
+              "gain_queries": 680,
+              "loss_queries": 1597
+            },
+            "0.7-r5": {
+              "gain_queries": 745,
+              "loss_queries": 876
+            },
+            "0.7-r10": {
+              "gain_queries": 500,
+              "loss_queries": 110
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -13.632381286139832,
+            "0.5-r5": -1.5594883476432386,
+            "0.5-r10": -0.08761170492377346,
+            "0.5-r100": -0.052567022954264075,
+            "0.7-r1": -22.90169966707552,
+            "0.7-r5": -7.11407043981076,
+            "0.7-r10": 2.838619239530402,
+            "0.7-r100": 0.14017872787803753
+          }
+        },
+        "G2_anchor_top5_miss": {
+          "name": "fixed_pool_lambdarank_G2_anchor_top5_miss",
+          "query_count": 3032,
+          "metrics": {
+            "0.5-r1": 18.700527704485488,
+            "0.5-r5": 35.68601583113456,
+            "0.5-r10": 37.53298153034301,
+            "0.5-r100": 37.82981530343008,
+            "0.7-r1": 7.9485488126649075,
+            "0.7-r5": 23.944591029023748,
+            "0.7-r10": 27.869393139841687,
+            "0.7-r100": 28.529023746701846
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 7,
+            "hard_positive_top100_query_entries": 13,
+            "hard_positive_exit_ratio": 0.002308707124010554,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 567,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 1082,
+              "loss_queries": 0
+            },
+            "0.5-r10": {
+              "gain_queries": 536,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 241,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 726,
+              "loss_queries": 0
+            },
+            "0.7-r10": {
+              "gain_queries": 520,
+              "loss_queries": 9
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 17.612137203166228,
+            "0.5-r5": 14.907651715039574,
+            "0.5-r10": 4.71635883905013,
+            "0.5-r100": 0.19788918205804862,
+            "0.7-r1": 7.354881266490765,
+            "0.7-r5": 12.335092348284961,
+            "0.7-r10": 7.684696569920842,
+            "0.7-r100": 0.4617414248021099
+          }
+        },
+        "G3_high_anchor_margin": {
+          "name": "fixed_pool_lambdarank_G3_high_anchor_margin",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 49.79405034324943,
+            "0.5-r5": 80.0228832951945,
+            "0.5-r10": 81.46453089244851,
+            "0.5-r100": 81.53318077803203,
+            "0.7-r1": 18.42105263157895,
+            "0.7-r5": 60.80091533180778,
+            "0.7-r10": 74.73684210526316,
+            "0.7-r100": 75.9954233409611
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 4,
+            "hard_positive_top100_query_entries": 3,
+            "hard_positive_exit_ratio": 0.0009153318077803204,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 756,
+              "loss_queries": 729
+            },
+            "0.5-r5": {
+              "gain_queries": 458,
+              "loss_queries": 43
+            },
+            "0.5-r10": {
+              "gain_queries": 208,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 418,
+              "loss_queries": 924
+            },
+            "0.7-r5": {
+              "gain_queries": 699,
+              "loss_queries": 483
+            },
+            "0.7-r10": {
+              "gain_queries": 455,
+              "loss_queries": 55
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -3.340961098398168,
+            "0.5-r5": 3.020594965675059,
+            "0.5-r10": 1.2128146453089244,
+            "0.5-r100": -0.022883295194517927,
+            "0.7-r1": -13.844393592677346,
+            "0.7-r5": -2.311212814645309,
+            "0.7-r10": 3.958810068649896,
+            "0.7-r100": 0.2288329519450798
+          }
+        },
+        "G3_low_anchor_margin": {
+          "name": "fixed_pool_lambdarank_G3_low_anchor_margin",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 44.953078507667655,
+            "0.5-r5": 72.9228656443122,
+            "0.5-r10": 74.91416800183109,
+            "0.5-r100": 75.12016479743649,
+            "0.7-r1": 18.67704280155642,
+            "0.7-r5": 55.61913481345846,
+            "0.7-r10": 67.08628976882582,
+            "0.7-r100": 68.6655985351339
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 10,
+            "hard_positive_top100_query_entries": 8,
+            "hard_positive_exit_ratio": 0.0022888532845044634,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 922,
+              "loss_queries": 559
+            },
+            "0.5-r5": {
+              "gain_queries": 615,
+              "loss_queries": 54
+            },
+            "0.5-r10": {
+              "gain_queries": 324,
+              "loss_queries": 8
+            },
+            "0.7-r1": {
+              "gain_queries": 507,
+              "loss_queries": 684
+            },
+            "0.7-r5": {
+              "gain_queries": 757,
+              "loss_queries": 376
+            },
+            "0.7-r10": {
+              "gain_queries": 566,
+              "loss_queries": 68
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -3.6163881895170533,
+            "0.5-r5": 4.898146028839548,
+            "0.5-r10": 1.7853055619134892,
+            "0.5-r100": -0.0457770656900891,
+            "0.7-r1": -11.123826962691691,
+            "0.7-r5": 1.6250858319981702,
+            "0.7-r10": 5.012588693064778,
+            "0.7-r100": 0.4348821240558465
+          }
+        },
+        "G4_high_conf_concentration": {
+          "name": "fixed_pool_lambdarank_G4_high_conf_concentration",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 53.84439359267734,
+            "0.5-r5": 85.44622425629291,
+            "0.5-r10": 87.29977116704805,
+            "0.5-r100": 87.34553775743707,
+            "0.7-r1": 18.19221967963387,
+            "0.7-r5": 64.62242562929062,
+            "0.7-r10": 80.0228832951945,
+            "0.7-r100": 81.69336384439359
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 3,
+            "hard_positive_top100_query_entries": 6,
+            "hard_positive_exit_ratio": 0.0006864988558352403,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 660,
+              "loss_queries": 846
+            },
+            "0.5-r5": {
+              "gain_queries": 395,
+              "loss_queries": 55
+            },
+            "0.5-r10": {
+              "gain_queries": 181,
+              "loss_queries": 1
+            },
+            "0.7-r1": {
+              "gain_queries": 372,
+              "loss_queries": 1139
+            },
+            "0.7-r5": {
+              "gain_queries": 624,
+              "loss_queries": 575
+            },
+            "0.7-r10": {
+              "gain_queries": 404,
+              "loss_queries": 85
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -8.077803203661333,
+            "0.5-r5": 2.5400457665903957,
+            "0.5-r10": 1.3501144164759609,
+            "0.5-r100": 0.06864988558352536,
+            "0.7-r1": -19.93135011441647,
+            "0.7-r5": -4.485125858123567,
+            "0.7-r10": 2.906178489702512,
+            "0.7-r100": 0.022883295194503717
+          }
+        },
+        "G4_flat_confidence": {
+          "name": "fixed_pool_lambdarank_G4_flat_confidence",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 40.901808194094755,
+            "0.5-r5": 67.65850308995194,
+            "0.5-r10": 69.30647745479514,
+            "0.5-r100": 69.4895857175555,
+            "0.7-r1": 17.853055619134814,
+            "0.7-r5": 51.91119249256123,
+            "0.7-r10": 61.34126802471962,
+            "0.7-r100": 62.62302586404211
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 7,
+            "hard_positive_top100_query_entries": 9,
+            "hard_positive_exit_ratio": 0.0016021972991531242,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1005,
+              "loss_queries": 429
+            },
+            "0.5-r5": {
+              "gain_queries": 688,
+              "loss_queries": 45
+            },
+            "0.5-r10": {
+              "gain_queries": 357,
+              "loss_queries": 9
+            },
+            "0.7-r1": {
+              "gain_queries": 504,
+              "loss_queries": 466
+            },
+            "0.7-r5": {
+              "gain_queries": 819,
+              "loss_queries": 266
+            },
+            "0.7-r10": {
+              "gain_queries": 613,
+              "loss_queries": 54
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": 1.121538109407183,
+            "0.5-r5": 5.539024948500803,
+            "0.5-r10": 1.8768596932936532,
+            "0.5-r100": 0.0457770656900891,
+            "0.7-r1": -6.088349736781872,
+            "0.7-r5": 3.9139391165026325,
+            "0.7-r10": 5.607690547035936,
+            "0.7-r100": 0.29755092698557917
+          }
+        },
+        "G5_short_query": {
+          "name": "fixed_pool_lambdarank_G5_short_query",
+          "query_count": 4600,
+          "metrics": {
+            "0.5-r1": 44.52173913043478,
+            "0.5-r5": 74.52173913043478,
+            "0.5-r10": 76.3913043478261,
+            "0.5-r100": 76.56521739130434,
+            "0.7-r1": 16.217391304347824,
+            "0.7-r5": 55.130434782608695,
+            "0.7-r10": 68.58695652173913,
+            "0.7-r100": 70.19565217391305
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 4,
+            "hard_positive_top100_query_entries": 10,
+            "hard_positive_exit_ratio": 0.0008695652173913044,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 889,
+              "loss_queries": 651
+            },
+            "0.5-r5": {
+              "gain_queries": 610,
+              "loss_queries": 51
+            },
+            "0.5-r10": {
+              "gain_queries": 315,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 452,
+              "loss_queries": 784
+            },
+            "0.7-r5": {
+              "gain_queries": 823,
+              "loss_queries": 457
+            },
+            "0.7-r10": {
+              "gain_queries": 592,
+              "loss_queries": 70
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -2.8478260869565233,
+            "0.5-r5": 4.434782608695656,
+            "0.5-r10": 1.608695652173921,
+            "0.5-r100": 0.13043478260868824,
+            "0.7-r1": -11.630434782608699,
+            "0.7-r5": -0.043478260869562746,
+            "0.7-r10": 5.021739130434774,
+            "0.7-r100": 0.19565217391304657
+          }
+        },
+        "G5_long_query": {
+          "name": "fixed_pool_lambdarank_G5_long_query",
+          "query_count": 4139,
+          "metrics": {
+            "0.5-r1": 51.14762019811549,
+            "0.5-r5": 79.05291133123943,
+            "0.5-r10": 80.33341386808408,
+            "0.5-r100": 80.47837641942498,
+            "0.7-r1": 20.488040589514377,
+            "0.7-r5": 61.24667794153177,
+            "0.7-r10": 73.01280502536845,
+            "0.7-r100": 74.26914713698962
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 6,
+            "hard_positive_top100_query_entries": 5,
+            "hard_positive_exit_ratio": 0.001449625513409036,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 767,
+              "loss_queries": 590
+            },
+            "0.5-r5": {
+              "gain_queries": 467,
+              "loss_queries": 33
+            },
+            "0.5-r10": {
+              "gain_queries": 224,
+              "loss_queries": 9
+            },
+            "0.7-r1": {
+              "gain_queries": 411,
+              "loss_queries": 789
+            },
+            "0.7-r5": {
+              "gain_queries": 615,
+              "loss_queries": 400
+            },
+            "0.7-r10": {
+              "gain_queries": 416,
+              "loss_queries": 60
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -3.5757429330756167,
+            "0.5-r5": 3.841507610533938,
+            "0.5-r10": 1.522106789079487,
+            "0.5-r100": -0.02416042522348505,
+            "0.7-r1": -14.08552790529113,
+            "0.7-r5": -1.0630587098332924,
+            "0.7-r10": 3.4066199565112356,
+            "0.7-r100": 0.0483208504469701
+          }
+        },
+        "G7_high_residual_agreement": {
+          "name": "fixed_pool_lambdarank_G7_high_residual_agreement",
+          "query_count": 7791,
+          "metrics": {
+            "0.5-r1": 46.155820818893595,
+            "0.5-r5": 75.39468617635734,
+            "0.5-r10": 77.03760749582852,
+            "0.5-r100": 77.1659607239122,
+            "0.7-r1": 17.366191759722756,
+            "0.7-r5": 57.18136311128225,
+            "0.7-r10": 69.70863817225003,
+            "0.7-r100": 71.28738287767938
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 15,
+            "hard_positive_top100_query_entries": 11,
+            "hard_positive_exit_ratio": 0.0019252984212552945,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 1135,
+              "loss_queries": 1289
+            },
+            "0.5-r5": {
+              "gain_queries": 973,
+              "loss_queries": 88
+            },
+            "0.5-r10": {
+              "gain_queries": 486,
+              "loss_queries": 16
+            },
+            "0.7-r1": {
+              "gain_queries": 664,
+              "loss_queries": 1615
+            },
+            "0.7-r5": {
+              "gain_queries": 1231,
+              "loss_queries": 776
+            },
+            "0.7-r10": {
+              "gain_queries": 835,
+              "loss_queries": 120
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -2.4258760107816713,
+            "0.5-r5": 4.1843152355281745,
+            "0.5-r10": 1.5145680913875026,
+            "0.5-r100": -0.05134129123347009,
+            "0.7-r1": -12.437427801309205,
+            "0.7-r5": -1.013990501861116,
+            "0.7-r10": 3.619561031959961,
+            "0.7-r100": 0.08984725965858331
+          }
+        },
+        "G7_high_residual_conflict": {
+          "name": "fixed_pool_lambdarank_G7_high_residual_conflict",
+          "query_count": 948,
+          "metrics": {
+            "0.5-r1": 51.687763713080166,
+            "0.5-r5": 85.9704641350211,
+            "0.5-r10": 87.65822784810126,
+            "0.5-r100": 87.76371308016877,
+            "0.7-r1": 22.046413502109704,
+            "0.7-r5": 65.61181434599156,
+            "0.7-r10": 78.79746835443038,
+            "0.7-r100": 79.32489451476793
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 2,
+            "hard_positive_top100_query_entries": 2,
+            "hard_positive_exit_ratio": 0.002109704641350211,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 490,
+              "loss_queries": 0
+            },
+            "0.5-r5": {
+              "gain_queries": 105,
+              "loss_queries": 8
+            },
+            "0.5-r10": {
+              "gain_queries": 48,
+              "loss_queries": 0
+            },
+            "0.7-r1": {
+              "gain_queries": 209,
+              "loss_queries": 0
+            },
+            "0.7-r5": {
+              "gain_queries": 205,
+              "loss_queries": 73
+            },
+            "0.7-r10": {
+              "gain_queries": 172,
+              "loss_queries": 8
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -17.827004219409282,
+            "0.5-r5": 2.742616033755283,
+            "0.5-r10": 1.3713080168776344,
+            "0.5-r100": 0.0,
+            "0.7-r1": -19.092827004219412,
+            "0.7-r5": 4.11392405063291,
+            "0.7-r10": 9.599156118143455,
+            "0.7-r100": 0.7383966244725713
+          }
+        },
+        "G8_high_positive_density_proxy": {
+          "name": "fixed_pool_lambdarank_G8_high_positive_density_proxy",
+          "query_count": 4370,
+          "metrics": {
+            "0.5-r1": 58.443935926773456,
+            "0.5-r5": 86.22425629290618,
+            "0.5-r10": 87.59725400457666,
+            "0.5-r100": 87.68878718535468,
+            "0.7-r1": 23.615560640732266,
+            "0.7-r5": 69.29061784897026,
+            "0.7-r10": 81.1212814645309,
+            "0.7-r100": 82.6086956521739
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 6,
+            "hard_positive_top100_query_entries": 6,
+            "hard_positive_exit_ratio": 0.0013729977116704805,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 775,
+              "loss_queries": 682
+            },
+            "0.5-r5": {
+              "gain_queries": 414,
+              "loss_queries": 40
+            },
+            "0.5-r10": {
+              "gain_queries": 180,
+              "loss_queries": 5
+            },
+            "0.7-r1": {
+              "gain_queries": 453,
+              "loss_queries": 1152
+            },
+            "0.7-r5": {
+              "gain_queries": 571,
+              "loss_queries": 460
+            },
+            "0.7-r10": {
+              "gain_queries": 337,
+              "loss_queries": 75
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -3.661327231121284,
+            "0.5-r5": 3.3867276887871895,
+            "0.5-r10": 1.235697940503428,
+            "0.5-r100": 0.0,
+            "0.7-r1": -20.068649885583522,
+            "0.7-r5": -2.402745995423331,
+            "0.7-r10": 1.8535469107551563,
+            "0.7-r100": 0.16018306636155444
+          }
+        },
+        "G8_low_positive_density_proxy": {
+          "name": "fixed_pool_lambdarank_G8_low_positive_density_proxy",
+          "query_count": 4369,
+          "metrics": {
+            "0.5-r1": 36.8734264133669,
+            "0.5-r5": 66.74296177615015,
+            "0.5-r10": 68.96314946211947,
+            "0.5-r100": 69.12336919203479,
+            "0.7-r1": 11.970702677958343,
+            "0.7-r5": 47.26482032501717,
+            "0.7-r10": 60.402838178072784,
+            "0.7-r100": 61.730373083085375
+          },
+          "movement": {
+            "hard_positive_top100_query_exits": 6,
+            "hard_positive_top100_query_entries": 10,
+            "hard_positive_exit_ratio": 0.001373311970702678,
+            "invalid_span_count": 0,
+            "duplicate_span_count_after_nms": 0,
+            "fixed_pool_invariant": true
+          },
+          "rank_gain_loss_vs_anchor": {
+            "0.5-r1": {
+              "gain_queries": 866,
+              "loss_queries": 544
+            },
+            "0.5-r5": {
+              "gain_queries": 666,
+              "loss_queries": 63
+            },
+            "0.5-r10": {
+              "gain_queries": 357,
+              "loss_queries": 6
+            },
+            "0.7-r1": {
+              "gain_queries": 399,
+              "loss_queries": 449
+            },
+            "0.7-r5": {
+              "gain_queries": 906,
+              "loss_queries": 414
+            },
+            "0.7-r10": {
+              "gain_queries": 683,
+              "loss_queries": 60
+            }
+          },
+          "delta_vs_A4": {
+            "0.5-r1": -2.723735408560316,
+            "0.5-r5": 4.554818036163887,
+            "0.5-r10": 1.9455252918287869,
+            "0.5-r100": 0.0915541313801782,
+            "0.7-r1": -6.408789196612496,
+            "0.7-r5": 1.8539711604486158,
+            "0.7-r10": 6.820782787823298,
+            "0.7-r100": 0.1831082627603564
+          }
+        }
+      },
+      "worst_group_delta_0.7_r1": -38.133333333333326,
+      "instability": 11.071807836351581,
+      "stable_score": -60.48763338094681
+    }
+  },
+  "selection_rule": "stable_score = median_gain - alpha*worst_split_loss - beta*worst_group_loss - gamma*instability"
+}
+```

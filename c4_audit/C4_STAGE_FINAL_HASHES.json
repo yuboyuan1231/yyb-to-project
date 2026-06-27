@@ -1,0 +1,25 @@
+{
+  "status": "C4_STAGE_FINAL_HASHES_COMPLETE",
+  "algorithm": "sha256",
+  "C4_stage_status": "COMPLETE",
+  "C4_final_system": "C4-r2-cal-v2.1",
+  "C4_final_config": "v21_00444",
+  "C5_started": false,
+  "files": {
+    "c4_audit/C4_STAGE_FINAL_SUMMARY.md": "8181c4d9e2e95c1c38b0c7dcc7912b72e5825fc47abed34f12cd30d90adc3397",
+    "c4_audit/C4_STAGE_FINAL_MANIFEST.json": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b",
+    "c4_audit/C4_R2_CAL_V21_FREEZE_MANIFEST.json": "a4feaa3a86ba49e585c3e6b989ed10e56d598052d3f316f098d9d86464c97a9e",
+    "c4_audit/C4_R2_CAL_V21_FREEZE_HASHES.json": "2f75dda96d42435a61fa35686661b829c20eb023c78b183dbb7c5eb33c8f73b9",
+    "c4_audit/C4_R2_CAL_V21_OFFICIAL_VAL_ONE_SHOT_AUDIT.md": "c09cae18929d457b6a9b08ca818c1fe62b5283fca2af1ffb4ff6f209af524e08",
+    "results/rlem_c4_r2_cal_v21_official_val/VAL_V21_ONE_SHOT_MANIFEST.json": "e3ba764a183c2be82f188119eb09be7a875dc1eec97c91e066c14e6d5e3ca829",
+    "results/rlem_c4_r2_cal_v21_official_val/val_v21_metrics.json": "11a92c9aa90ed6fbd124051c886e2fdb4a6d2eaaec020fde0a11e54fcc86e04f",
+    "c4_audit/C4_LITE_FREEZE_MANIFEST.json": "f59aaf23c37563a83a3f37fa518a6f5a77c8c88d4e1d62440c693f5360e35a9a",
+    "c4_audit/C4_LITE_OFFICIAL_VAL_FREEZE_MANIFEST.json": "80957a988f8b138d9c7d85048ca30ba7a664a4795e2f9ad5a3c7694a79b2af22",
+    "results/rlem_c4_lite_official_val/val_c4_lite_metrics.json": "435ee34e1a433e2e5bb086dccfa38cb03c28260d0abb829deee3b131a27904cb",
+    "results/rlem_c31_official_val/val_c31_one_shot_metrics.json": "79ef14bcf137018beb9e6b5e634dffde16c8f0d27b25c8bed100c390085acb2e",
+    "results/rlem_c4_r2_cal_v2/v2_cb/model_best.pt": "e7a37e0ca761e82513feb50ff4877f25b0fb514d4b403f1bd8c173948c912d64",
+    "model/conquer.py": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "standalone_eval/eval.py": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+  },
+  "self_hash_note": "The SHA256 of this hashes file is reported externally to avoid circular self-reference."
+}

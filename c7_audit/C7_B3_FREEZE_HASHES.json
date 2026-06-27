@@ -1,0 +1,33 @@
+{
+  "status": "C7_B3_FREEZE_HASHES",
+  "official_val_used": false,
+  "metric_hash": "4f66dc29b72cbccecfcb0a5dc736d3d8150d04eeb57486c4186729e899b2e1ac",
+  "prediction_hash": "7e20f32de6b54c8a98f17eea3dd0e2d84db08896047d0e85f96a3fafaeb71e16",
+  "score_hash": "9d0c1964581a78a81480d9c648f67f0de60334f5c66fa8b35465c6ac43b810ab",
+  "artifacts": {
+    "final_freeze": {
+      "path": "c7_audit/C7_B3_FINAL_FREEZE_PACKAGE.json",
+      "exists": true,
+      "size": 1566,
+      "sha256": "e35145edc87c2767366839e382614db5f750edeebd2b570c8acffeed4c3fc7a8"
+    },
+    "ready": {
+      "path": "c7_audit/C7_B3_OFFICIAL_READY_MANIFEST.json",
+      "exists": true,
+      "size": 506,
+      "sha256": "428d589be850084a8497617016fd22f503ad0ed9ce0676f4534166cd66d34e1b"
+    },
+    "deterministic": {
+      "path": "c7_audit/C7_B3_DETERMINISTIC_RERUN.json",
+      "exists": true,
+      "size": 1111,
+      "sha256": "1adca495875899608baebb413c233fa95431d0b8f090829d4b44478571985d98"
+    },
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/freeze_c7_b3.py",
+      "exists": true,
+      "size": 21826,
+      "sha256": "502c4b0c9cd1afbf9064d6a25d24e29efe6ec4358f03a0a3554a8aefac465049"
+    }
+  }
+}

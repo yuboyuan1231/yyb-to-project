@@ -1,0 +1,89 @@
+{
+  "status": "C7_B6_OFFICIAL_HASHES",
+  "official_val_used": true,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "metric_hash": "13f33b27d79169c90ec246b83d537c81683f489f508ce5ed9b22f8c56cafb05b",
+  "prediction_hash": "dd484d76672390a7aa7d6218120b0ab5566c63be6cd5b1d0df4de7f0903e8b4b",
+  "score_hash": "236a230a8594f2c62df591a9bcdde6e5396a5ff8be929870f57867b175b6498d",
+  "artifacts": {
+    "one_shot_json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_VAL_ONE_SHOT.json",
+      "exists": true,
+      "size": 5805,
+      "sha256": "881ab0e70a4d80f64378ccfbcbe146617d60b344755178b28fe147dc8f4ffa9b"
+    },
+    "one_shot_md": {
+      "path": "c7_audit/C7_B6_OFFICIAL_VAL_ONE_SHOT.md",
+      "exists": true,
+      "size": 1626,
+      "sha256": "d716a7a5b679c9431c542cfdda67851328bd0e0e1d373b97d05021c22631097c"
+    },
+    "decision_json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_DECISION.json",
+      "exists": true,
+      "size": 1936,
+      "sha256": "98245ae5ea234211aac2039c30b286257b4d5155220d1e46ecdb0b056621fcaf"
+    },
+    "decision_md": {
+      "path": "c7_audit/C7_B6_OFFICIAL_DECISION.md",
+      "exists": true,
+      "size": 1653,
+      "sha256": "eea7f573c6710372e1d1958f65135f330c0af7ee950c5ce4c55e64371126e8f8"
+    },
+    "manifest_json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_MANIFEST.json",
+      "exists": true,
+      "size": 5825,
+      "sha256": "ca911449105d40d086f4f79102f93ddec664ed08d9233ca18c86f99fece06cf2"
+    },
+    "scores_npz": {
+      "path": "results/rlem_c7_b6_official_val/official_val_scores.npz",
+      "exists": true,
+      "size": 3106723,
+      "sha256": "236a230a8594f2c62df591a9bcdde6e5396a5ff8be929870f57867b175b6498d"
+    },
+    "predictions_jsonl": {
+      "path": "results/rlem_c7_b6_official_val/official_val_predictions.jsonl",
+      "exists": true,
+      "size": 19724785,
+      "sha256": "dd484d76672390a7aa7d6218120b0ab5566c63be6cd5b1d0df4de7f0903e8b4b"
+    },
+    "submission_json": {
+      "path": "results/rlem_c7_b6_official_val/official_val_submission.json",
+      "exists": true,
+      "size": 52428603,
+      "sha256": "9ed763409a0aa1ed50b103123687466f1f9a1d27c09dc8402b87e83e291ce104"
+    },
+    "metrics_json": {
+      "path": "results/rlem_c7_b6_official_val/official_val_metrics.json",
+      "exists": true,
+      "size": 839,
+      "sha256": "85720229408ceb9ddd515ca6a7349f3570f82e0c8a6b52f302cf858882a36746"
+    },
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/run_c7_b6_official_val_one_shot.py",
+      "exists": true,
+      "size": 31077,
+      "sha256": "7dadeb696f8f0625a1e00fb6f35cb3eb43d0e7cbe2a2b13cfc613e97a5cd6385"
+    },
+    "b6_model": {
+      "path": "c7_models/c7_b6_r1_selective_gate.pt",
+      "exists": true,
+      "size": 7831,
+      "sha256": "7383bdfca67bb1b9ae4aa38f09f0eadecdfdf89de89188d8066ce948ab18b517"
+    },
+    "official_raw_logits": {
+      "path": "results/rlem_c7_b6_official_val/aux/official_val_fixed_pool_raw_logits.npz",
+      "exists": true,
+      "size": 28473460,
+      "sha256": "a2af9837027c79d1f63e7481dcf5c28fbfc8951983972c0ed18b70481ca3603c"
+    },
+    "official_raw_export_audit": {
+      "path": "c7_audit/C7_B6_OFFICIAL_FIXED_POOL_RAW_LOGIT_EXPORT.json",
+      "exists": true,
+      "size": 1453,
+      "sha256": "fb73cc1929bf844b7952ceecaacd6e64c3b1e51d00b1b201b1ad3d4256f47197"
+    }
+  }
+}

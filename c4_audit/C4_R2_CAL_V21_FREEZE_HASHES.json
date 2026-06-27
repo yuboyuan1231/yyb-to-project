@@ -1,0 +1,22 @@
+{
+  "status": "C4_R2_CAL_V21_FREEZE_HASHES_COMPLETE",
+  "algorithm": "sha256",
+  "selected_config": "v21_00444",
+  "official_val_used": false,
+  "files": {
+    "c4_audit/C4_R2_CAL_V21_FREEZE_REVIEW.md": "42a5428a74759e87ab1e33bfbb716fb4cd1fb18ee98b5bdd03b27c65c077d688",
+    "c4_audit/C4_R2_CAL_V21_FREEZE_MANIFEST.json": "a4feaa3a86ba49e585c3e6b989ed10e56d598052d3f316f098d9d86464c97a9e",
+    "c4_audit/C4_R2_CAL_V21_WEAK_FUSION_AUDIT.json": "ba28546d80eab3fd19e4436f12acd219d6724d4a368b807129c7f548412f764d",
+    "results/rlem_c4_r2_cal_v21_weak_fusion/best_config.json": "0e0ec1bc9eb95ac5923d26de11b9f9bf70abe30b8375ba87c2c32abb927ded62",
+    "results/rlem_c4_r2_cal_v21_weak_fusion/best_robust_strict_config.json": "327f154ee432354e536652e94fc3fbff29c4ef8edd424e6bb31c7b47155f1372",
+    "results/rlem_c4_r2_cal_v21_weak_fusion/grid_results.json": "d60cb589f742f02b75bf7aeae106e134b070cac4945fbf23736cae055be86d67",
+    "results/rlem_c4_r2_cal_v2/v2_cb/model_best.pt": "e7a37e0ca761e82513feb50ff4877f25b0fb514d4b403f1bd8c173948c912d64",
+    "results/rlem_c4_r2_cal_v2/v2_cb/train_calib_logits.npz": "56c90d617d5c5005cd50cbaff24effccb2d4285f331b36dae6ecc38baa4ce9a1",
+    "c4_audit/C4_LITE_FREEZE_MANIFEST.json": "f59aaf23c37563a83a3f37fa518a6f5a77c8c88d4e1d62440c693f5360e35a9a",
+    "c4_audit/C4_LITE_OFFICIAL_VAL_FREEZE_MANIFEST.json": "80957a988f8b138d9c7d85048ca30ba7a664a4795e2f9ad5a3c7694a79b2af22",
+    "results/rlem_c31_capacity/models/cap_F_wd0/model_best.pt": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42",
+    "model/conquer.py": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "standalone_eval/eval.py": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+  },
+  "self_hash_note": "The SHA256 of this hashes file is reported externally to avoid a circular self-reference."
+}

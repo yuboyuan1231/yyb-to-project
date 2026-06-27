@@ -1,0 +1,53 @@
+{
+  "status": "C5_LITE_PRIOR_HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "source_bundle": {
+    "path": "/home/a/yybwork/yybcounter/fix/CONQUER_RLEM_C5_LITE_PRIOR_CODE_BUNDLE_20260624.zip",
+    "sha256": "e99a7bb37b6075bebb7ff0ee80d68d6c9be60bd172b3dbab55387227f3e15ea8"
+  },
+  "upstream": {
+    "C4_stage_final_manifest": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b",
+    "model_conquer.py": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "standalone_eval/eval.py": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+  },
+  "code": {
+    "rlem/score_c4_r2_v21_split.py": "5225920863cdcfa18aaaec8c8ec6590b2aae3f38a62f495154c6f3c4ed51adb0",
+    "rlem/c5_prior_utils.py": "ba2857ecec7bb0fa07a40529a032f875648c3befd5536904a4f9ec30d2a7a710",
+    "rlem/check_c5_temporal_prior_inputs.py": "cf73e6f80d7ac327bae6a39967a7c32d67505a48625856f4410d4ab4ba607c86",
+    "rlem/export_c5_temporal_prior_from_jsonl.py": "2789ba707bf9542e50b1d6774a38f1e9388eac439e6ff46e1344af682b954c5f",
+    "rlem/export_c5_temporal_prior.py": "640e633736b03527d72403a810d18091430c21df4214d2dc420126317931f519",
+    "rlem/build_c5_lite_prior_features.py": "7f6957dc35604538ce184d46279b1a924e637c5d9f9578dc48ee5a14b4ebc86f",
+    "rlem/fit_c5_lite_prior_stats.py": "3c11e2a1ac69829c578cefce8c0ba4869abe755ef46175952efb7cc945228b19",
+    "rlem/grid_search_c5_lite_prior.py": "d8727de9a843b01cbc4901c7eb113b29366065118b0aa3a810cef2b97ce71821",
+    "rlem/freeze_c5_lite_prior.py": "296f2e3622e6984ae16fa0469d095079abe2aee619672acf528d699399ef69f2",
+    "rlem/rerank_c5_lite_prior_one_shot.py": "5e2a01617d1ebed814834ed284e7d243a8c6eaf0a93cdde0617a06124c8d92d4"
+  },
+  "temporal_prior_artifacts": {
+    "train_fit": "81fb31423d0313795c5364efaa23f719858b83569cd7f97ea29459a322278fb9",
+    "train_calib": "39aa03f9635ac848b1d5873b9221088528ec325f7b34bf4f949211ef47bc5194"
+  },
+  "feature_artifacts": {
+    "train_fit": "8b2d804190c85979e0bc0c247a67549cf0b28fd41519e36c088baa89cb041af2",
+    "train_calib": "370ed08ae878de87c088ac616f528a95af590f39e7d6c3d16900ed5fe731de86"
+  },
+  "audit_artifacts": {
+    "C5_LITE_PRIOR_PROTOCOL_FREEZE.json": "0ac35fd5dffcf5aa2cd84bd3eb3985bf0d1203094b543b32df599c22ec467367",
+    "C5_TEMPORAL_EXPORT_AUDIT_TRAIN_FIT.json": "7b95ab348d7359847006eaf46b996bf9027f07f94afa4a7934b991443d1c5919",
+    "C5_TEMPORAL_EXPORT_AUDIT_TRAIN_CALIB.json": "13983906eb9303553bcd1f3e42479d45c2f1a0bb089934509846b111d6700ea4",
+    "C5_TEMPORAL_PRIOR_INPUT_CHECK_TRAIN_FIT.json": "0a752ed53a1a38f24b49577cdd0f4d326f4f0b80e09ea36ac97166e55073a552",
+    "C5_TEMPORAL_PRIOR_INPUT_CHECK_TRAIN_CALIB.json": "2c40ee956b31e048e4e4357a5cf1f52be97bcc5402401a4b37278e5948f4e7d6",
+    "C5_LITE_PRIOR_FEATURE_AUDIT_TRAIN_FIT.json": "3c2638d690385531301aab511877712caa5a12f3a108e95f3303d7e908bb131a",
+    "C5_LITE_PRIOR_FEATURE_AUDIT_TRAIN_CALIB.json": "5827bf62b3f74fa2f689b3cd1c5e234dfef44ca3e676c6c2d1f819256fff7057",
+    "C5_LITE_PRIOR_TERM_STATS_FREEZE.json": "fc0427c3b84fbb75cab1191359a2eb82cc86eb34ff47ea59e7fe33bd219522e3",
+    "C5_LITE_PRIOR_TRAIN_CALIB_AUDIT.md": "b592a44198ade6f66ff5e50727e4fee76b1ae88058d42d3062e46ccb3d0ade87",
+    "C5_LITE_PRIOR_DECISION.json": "89b8f34a354034cc08fbbfada3b8324f423de2ac3dfcd0897cdeb03e7fb6fa26"
+  },
+  "search_artifacts": {
+    "c5_lite_prior_train_calib_audit.json": "00bd9abd4b47b083ace9a78e767e62705f9597f23fc97ff04f852cd2840ac3a4",
+    "c5_lite_prior_grid_results.csv": "d1ab772750651885df1c801b68b3be910421783e40e3f95c3060350872dcbeea",
+    "c5_lite_prior_grid_results.json": "c671dbc4b24ffe5e67188b4f50de449083e7664d43c18351c0d43ddeec0c895e",
+    "best_config.json": "91eced95a8e87bd4125e6bc45a758bed10213a176cac28f143ad4c4b9f6163b4",
+    "localization_diagnostics.json": "8c8bc5ca1578daa5f6a05edad664b2417e899a32bd03cb012d3588a8c85ce0d9",
+    "movement_diagnostics.json": "5977d58e2f3511a18e4814d5f3fb5152a7e5de178a0215bb59f2fc17f1027af4"
+  }
+}

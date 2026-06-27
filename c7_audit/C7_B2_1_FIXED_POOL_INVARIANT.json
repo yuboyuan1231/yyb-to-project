@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "official_val_used": false,
+  "pre_nms_top100_candidate_pool_identical": true,
+  "post_nms_output_identity_set_identical": true,
+  "post_nms_note": "A4 fixed-pool invariant is defined on the C7-B1 frozen pre-NMS top100 candidate pool; post-NMS set may differ because ranking changes NMS order.",
+  "top100_lost_query_count": 0,
+  "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "hard_positive_top100_query_exits": 0,
+  "hard_positive_top100_query_entries": 0,
+  "delta_vs_C7_B1_frozen": {
+    "0.5-r1": 7.94141206087653,
+    "0.5-r5": 7.209062821833157,
+    "0.5-r10": 4.428424304840377,
+    "0.5-r100": 0.0,
+    "0.7-r1": 4.668726398901473,
+    "0.7-r5": 7.174733951253003,
+    "0.7-r10": 5.790136171186639,
+    "0.7-r100": 0.0
+  },
+  "metrics": {
+    "0.5-r1": 50.85250028607392,
+    "0.5-r5": 72.51401762215356,
+    "0.5-r10": 76.69069687607278,
+    "0.5-r100": 78.36136857764046,
+    "0.7-r1": 31.03329900446275,
+    "0.7-r5": 58.55361025288935,
+    "0.7-r10": 66.42636457260556,
+    "0.7-r100": 71.99908456345119
+  }
+}

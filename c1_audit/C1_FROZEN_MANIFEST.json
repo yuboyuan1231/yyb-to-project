@@ -1,0 +1,47 @@
+{
+  "status": "C1_PASS",
+  "date": "2026-06-21",
+  "project_root": "/home/a/yybcounter/CONQUER-RLEM-c2c3",
+  "feature_root": "/home/a/data/yyb/tvr_feature_release",
+  "baseline_checkpoint_sha256": "bf7aa90b6b2db212233c37d27b81a1e9b254b2a7be6bee7cbf75bb269cdf0264",
+  "protocol": {
+    "eval_query_bsz": 5,
+    "max_vcmr_video": 10,
+    "candidate_rows_per_query": 200,
+    "effective_nms_input_limit": 100,
+    "nms_thd": 0.7,
+    "clip_length": 1.5
+  },
+  "train_evidence": {
+    "path": "results/rlem_c1/train_evidence.jsonl.gz",
+    "sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48",
+    "compressed_bytes": 2793579331,
+    "queries": 86784,
+    "rows": 17356800,
+    "audit": "c1_audit/train_evidence_audit.json"
+  },
+  "val_evidence": {
+    "path": "results/rlem_c1/val_evidence.jsonl.gz",
+    "sha256": "ce9184e6b9e87581328850e6479231832e471caabae8881db9d6bbe1047f9884",
+    "compressed_bytes": 344042257,
+    "queries": 10895,
+    "rows": 2179000,
+    "audit": "c1_audit/val_evidence_audit.json"
+  },
+  "base_reconstruction": {
+    "submission": "results/rlem_c1/val_base_reconstructed_nms_0.7.json",
+    "submission_sha256": "cd1d72e06f62f5a18e90f3d1d924ba49d5afbe49337b061ee88ebd1e0c61f539",
+    "metrics": "results/rlem_c1/val_base_reconstructed_nms_0.7_metrics.json",
+    "metrics_sha256": "f35dbd7de2d08b511381bcb15254eaf64c5e9cbd57b442393e967b8bf56dc3e4",
+    "object_exact_to_c0_vcmr": true,
+    "queries": 10895
+  },
+  "architecture_notes": {
+    "similarity_measure": "general",
+    "r2_available": false,
+    "r2_fields_present_as_null": true,
+    "modality_evidence_complete": true,
+    "context_evidence_complete": true
+  },
+  "next_stage_authorized": false
+}

@@ -1,0 +1,55 @@
+{
+  "status": "C7_B3_HASHES",
+  "official_val_used": false,
+  "artifacts": {
+    "split_manifest": {
+      "path": "c7_audit/C7_B3_SPLIT_MANIFEST.json",
+      "exists": true,
+      "size": 2314,
+      "sha256": "f4277840df458839078e4519272c86ac7e5128b3d58ab1237646b1ee8c7878a2"
+    },
+    "shrinkage": {
+      "path": "c7_audit/C7_B3_SHRINKAGE_DIAGNOSIS.json",
+      "exists": true,
+      "size": 17405,
+      "sha256": "28819c70d6117c37ef2517cbd890821930bbf0cd0fda1e043888a2e7ec3de8d6"
+    },
+    "calibrated": {
+      "path": "c7_audit/C7_B3_CALIBRATED_A4_RESIDUAL.json",
+      "exists": true,
+      "size": 72117,
+      "sha256": "6f0d8cfb7f7c290d3953327354d0ac1a7272357190601e00340a867a755b8385"
+    },
+    "query_gate": {
+      "path": "c7_audit/C7_B3_QUERY_GATE.json",
+      "exists": true,
+      "size": 8723,
+      "sha256": "805790bf2394c6c16acb0c3cc7a5b079987c25917fcb988e23d1b11122e091ef"
+    },
+    "lambdarank": {
+      "path": "c7_audit/C7_B3_FIXED_POOL_LAMBDARANK.json",
+      "exists": true,
+      "size": 8672,
+      "sha256": "f20c788fb0f9c3dbcd51c0a8df3011196dc6f2683b5dbe41dae97c025af1555b"
+    },
+    "group_stable": {
+      "path": "c7_audit/C7_B3_GROUP_STABLE_SELECTION.json",
+      "exists": true,
+      "size": 105842,
+      "sha256": "976d159a237a01bbb2b32781d9ed6ee3743e07deaa542cdf33cf8de0619fd73c"
+    },
+    "final": {
+      "path": "c7_audit/C7_B3_FINAL_DECISION.json",
+      "exists": true,
+      "size": 3431,
+      "sha256": "12412fa22eb6d94b33ae7235826beeef50f6d8232762f53f4f229ef47c7971f2"
+    },
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/run_c7_b3_stable_generalization.py",
+      "exists": true,
+      "size": 39274,
+      "sha256": "5b37fde2835b705d87f49e5f0b3b10968357451b73f1c82a89cfc6cb49634751"
+    }
+  },
+  "selected_summary_hash": "ad5968f099b088ad03e876183f73ed52ed5fd8b295d5da1540e8767106f36baa"
+}

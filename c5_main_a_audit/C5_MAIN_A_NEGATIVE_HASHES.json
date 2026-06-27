@@ -1,0 +1,46 @@
+{
+  "status": "C5_MAIN_A_NEGATIVE_HASHES_MATERIALIZED",
+  "official_val_used": false,
+  "audit": {
+    "protocol_review": {
+      "path": "c5_main_a_audit/C5_MAIN_A_PROTOCOL_REVIEW.json",
+      "sha256": "9922d42cb436b61ba952cb110f9aff86f7ae5adb02cecdc5324c7f8200147511"
+    },
+    "stats_freeze": {
+      "path": "c5_main_a_audit/C5_MAIN_A_STATS_FREEZE.json",
+      "sha256": "d02ce242564ca8826518f2edd0683ff8557b438dae83c0ddf782ca659295e596"
+    },
+    "negative_audit": {
+      "path": "c5_main_a_audit/C5_MAIN_A_NEGATIVE_AUDIT.md",
+      "sha256": "88beb78e14303003e983476471c9ab4b469872160f82565291457cc568a67025"
+    },
+    "negative_manifest": {
+      "path": "c5_main_a_audit/C5_MAIN_A_NEGATIVE_MANIFEST.json",
+      "sha256": "ae8f697c6220cc14f5e1ea748a2fa7b346e067f3ac0b52a602d8466e9a1b67bc"
+    },
+    "discarded_attempt_manifest": {
+      "path": "c5_main_a_audit/discarded_raw_logit_attempt/DISCARDED_ATTEMPT_MANIFEST.json",
+      "sha256": "7b2a79c7e76037e27e0a5fe6e23b139429b0f1af7bd667f842609cb6665694b7"
+    }
+  },
+  "results": {
+    "search_audit": "ce89c5c7a9882bf932d5e8daeb108fecabcc7483079d3000153a12451a73b0c9",
+    "grid_csv": "109bdfc360a2b728be14139c11fe3114c213ee6abefb1001e77478280d8f9f05",
+    "grid_json": "4d64857e3867802695aebf4aaeaf69936c9c104df6e74c9e8033478daa930df7",
+    "best_config": "c24d9054ebc1dd356473bc2d68b387d7e8e0f501288447a0e5d0e4c86b557dce",
+    "localization_diagnostics": "1017e4f91f3355508529f6baf4b8399961b941f27be4255c6c545e0b82e9712b",
+    "movement_diagnostics": "5977d58e2f3511a18e4814d5f3fb5152a7e5de178a0215bb59f2fc17f1027af4",
+    "best_nonzero_diagnostics": "695f5b6ab0156581db61a8120ff49640a52588ac44cd18827e61bcfe57c32569"
+  },
+  "code": {
+    "rlem/c5_main_a_utils.py": "b0ba81d5defe4fad4167b25003587f664ce43aac6bbbaff27d7222457aa1d21e",
+    "rlem/fit_c5_main_a_stats.py": "4407c1259d302ba266a4743e84ff59d97642a1951766baddf235f59ddfc60c3f",
+    "rlem/grid_search_c5_main_a.py": "a7915559dd5a17be4d547850f77e85b6c90be6aeb212a537cdb0707bf1c39e95",
+    "rlem/diagnose_c5_main_a_nonzero.py": "4a2d1af0b1b0f3b9c11b84a0dd97f3a5894c79d1cea298591ae1c0b81066a0a9"
+  },
+  "frozen_upstream": {
+    "model/conquer.py": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "standalone_eval/eval.py": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+    "c4_audit/C4_STAGE_FINAL_MANIFEST.json": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "C6_B2_FREEZE_HASHES",
+  "selected_config_id": "pairwise_main_0005",
+  "official_val_used": false,
+  "artifacts": {
+    "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "c6_b2_audit/C6_B2_FREEZE_REVIEW.md": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_REVIEW.md",
+      "exists": true,
+      "size": 1903,
+      "sha256": "15035556c101d3f12dca903f6be6537ea48fffa8f1cd9aa47a141e28563b8dfd"
+    },
+    "c6_b2_audit/C6_B2_FINAL_SUMMARY.md": {
+      "path": "c6_b2_audit/C6_B2_FINAL_SUMMARY.md",
+      "exists": true,
+      "size": 3004,
+      "sha256": "68e0eaa7a9efcf9c8a87ad1f04eb622a4a1d90a1b97ec65bbfd9469961e7f8f3"
+    },
+    "c6_b2_audit/C6_B2_SAFETY_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_SAFETY_AUDIT.json",
+      "exists": true,
+      "size": 1476,
+      "sha256": "dba6abec11c53efec9bb6c1e4bb6aeb668a5fb02f7a978b0c558180ccc2f9adf"
+    },
+    "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.json",
+      "exists": true,
+      "size": 1348,
+      "sha256": "ebd9959181710901b3d0db6a46b4e3261676c8dcf58bf0ad96a95dbee79d287f"
+    },
+    "c6_b2_audit/C6_B2_COMPLETION_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_COMPLETION_AUDIT.json",
+      "exists": true,
+      "size": 4867,
+      "sha256": "7921c06cab7a19041ec4fc1395f6d78f10c68304e92e3e5ec1c7dd49f7dcab79"
+    },
+    "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+      "exists": true,
+      "size": 1180,
+      "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+    },
+    "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json": {
+      "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json",
+      "exists": true,
+      "size": 10035,
+      "sha256": "3bfa61395fa6ddc2e28299bb3697622161cffa5162c266ea3ffb93e182af7562"
+    },
+    "results/rlem_c6_b2/arms/pairwise_main/model_best.pt": {
+      "path": "results/rlem_c6_b2/arms/pairwise_main/model_best.pt",
+      "exists": true,
+      "size": 3504043,
+      "sha256": "b1a0a8234bd7d8e1f7aeb7491d29673cfbbd64f4d6d8215bf776f878a6f802a1"
+    },
+    "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz": {
+      "path": "results/rlem_c6_b2/train_calib_scores/train_calib_pairwise_main_scores.npz",
+      "exists": true,
+      "size": 2319243,
+      "sha256": "18c0be1cfee3de904424a1e91b4b86f5bb251fc9911e8f8c38bde3e79aa2e2aa"
+    }
+  }
+}

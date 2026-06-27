@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scored_jsonl": "/tmp/c4_r2_work/train_fit_c31_scored.jsonl.gz",
+  "output_npz": "/tmp/c4_r2_work/train_fit_c4_cache.npz",
+  "queries": 78045,
+  "rows": 15609000,
+  "rows_per_query_expected": 200,
+  "bad_query_counts": 0,
+  "duplicate_candidates": 0,
+  "nonfinite_values": 0,
+  "missing_filtered_queries": 0,
+  "extra_filtered_queries": 0,
+  "video_groups": 779142,
+  "preallocated_arrays": true,
+  "compressed": false,
+  "official_val_used": false
+}

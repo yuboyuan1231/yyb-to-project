@@ -1,0 +1,205 @@
+{
+  "C4_final_retained": true,
+  "C6_C_used": false,
+  "artifacts": {
+    "best_config": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/best_config.json",
+      "sha256": "d4a2b3f6c4af90aedaf61b51d0b19f70e71572a732a206cb594ccdb04cd24c5d",
+      "size": 1133
+    },
+    "calib_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_pool_top_slots.npz",
+      "sha256": "08029943dece218fa5c1cbf016fe3bb9b4330dd83a05d759e2dea2d85ecceb15",
+      "size": 12624246
+    },
+    "calib_prior": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_boundary_oracle_prior.npz",
+      "sha256": "4ba51431d6f0b93a9659bd927c47ee755e6f216883c565d2e162775f2e5eb14c",
+      "size": 34513216
+    },
+    "calib_scores": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_scores.npz",
+      "sha256": "0ee937a8cf0a388d03fbd1882a1b37240eb0416d2f57405d55b7451325c6e52e",
+      "size": 1292852
+    },
+    "grid_results": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/grid_results.json",
+      "sha256": "394cc0d4f1496bbceea8693b7077adab2656904e2da13f2ac387e63eef7dee7a",
+      "size": 94758
+    },
+    "history": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/history.json",
+      "sha256": "eb364ac39a5c845130ab21d7dd777f3d231a9730d3bd4dd1daab84e57952ece4",
+      "size": 284
+    },
+    "model_best": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/model_best.pt",
+      "sha256": "1dd442966921e8d17511af48aa411ce24f541a01103d12346995affc8fa37be5",
+      "size": 1877675
+    },
+    "train_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_candidate_pool_top_slots.npz",
+      "sha256": "6167fc888fc53a1f9004588d225661f9b5487746bb00b1b594ffc06e2c226fab",
+      "size": 112176367
+    },
+    "train_prior": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_boundary_oracle_prior.npz",
+      "sha256": "71f04731ce477f13e7b2309356630b7e4dcc9dde8363f76036ac53298df568e4",
+      "size": 307245446
+    }
+  },
+  "baseline_pseudo_C4_final": {
+    "hard_positive_top100_query_entries": 0,
+    "hard_positive_top100_query_exits": 0,
+    "metrics": {
+      "0.5-r1": 39.375214555441126,
+      "0.5-r10": 69.48163405423962,
+      "0.5-r100": 76.22153564481061,
+      "0.5-r5": 62.28401418926651,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.24213296715872,
+      "0.7-r100": 65.3049548003204,
+      "0.7-r5": 48.644009612083764
+    },
+    "replacement_rate_top_slots": 0.0,
+    "replacements": 0,
+    "top1_changed_ratio": 0.0,
+    "video_multiset_drift": 0.0,
+    "video_slot_drift": 0.0
+  },
+  "best_config": {
+    "apply_slots": 3,
+    "config_id": "c6b1r1_0057",
+    "delta_vs_pseudo_C4_final": {
+      "0.5-r1": 0.20597322348094593,
+      "0.5-r10": 0.12587252546057925,
+      "0.5-r100": 0.09154365488042515,
+      "0.5-r5": 0.148758439180682,
+      "0.7-r1": 0.28607392150131616,
+      "0.7-r10": 0.19453026662089457,
+      "0.7-r100": 0.16020139604073336,
+      "0.7-r5": 0.20597322348094593
+    },
+    "feasible": true,
+    "max_replacements": 2,
+    "metrics": {
+      "0.5-r1": 39.58118777892207,
+      "0.5-r10": 69.6075065797002,
+      "0.5-r100": 76.31307929969104,
+      "0.5-r5": 62.43277262844719,
+      "0.7-r1": 26.662089483922646,
+      "0.7-r10": 56.43666323377961,
+      "0.7-r100": 65.46515619636114,
+      "0.7-r5": 48.84998283556471
+    },
+    "movement": {
+      "hard_positive_top100_query_entries": 8,
+      "hard_positive_top100_query_exits": 0,
+      "replacement_rate_top_slots": 0.01643971468894229,
+      "replacements": 431,
+      "top1_changed_ratio": 0.03936377159858107,
+      "video_multiset_drift": 0.0,
+      "video_slot_drift": 0.0
+    },
+    "r1_positive": true,
+    "r5_safe": true,
+    "selection_score": 0.3241217530609896,
+    "threshold0": 0.4,
+    "threshold_rest": 1.8
+  },
+  "feasible_count": 31,
+  "grid_size": 78,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "r1_positive_count": 78,
+  "r5_safe_count": 71,
+  "references": {
+    "BMN": "Boundary-Matching Network motivates boundary pair proposal confidence.",
+    "BSN_DBG_family": "Boundary-sensitive/dense-boundary proposal generation motivates not trusting boundary peaks without proposal confidence."
+  },
+  "runtime": {
+    "infer_calib": {
+      "artifact": {
+        "exists": true,
+        "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_boundary_oracle_prior.npz",
+        "sha256": "4ba51431d6f0b93a9659bd927c47ee755e6f216883c565d2e162775f2e5eb14c",
+        "size": 34513216
+      },
+      "p_b_new_shape": [
+        87230,
+        100
+      ],
+      "p_e_new_shape": [
+        87230,
+        100
+      ],
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_boundary_oracle_prior.npz",
+      "reused": true
+    },
+    "infer_train": {
+      "artifact": {
+        "exists": true,
+        "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_boundary_oracle_prior.npz",
+        "sha256": "71f04731ce477f13e7b2309356630b7e4dcc9dde8363f76036ac53298df568e4",
+        "size": 307245446
+      },
+      "p_b_new_shape": [
+        779142,
+        100
+      ],
+      "p_e_new_shape": [
+        779142,
+        100
+      ],
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_boundary_oracle_prior.npz",
+      "reused": true
+    },
+    "pool": {
+      "alt_count": 8,
+      "calib_examples": 349560,
+      "elapsed_sec": 1.0575323104858398,
+      "slots": 5,
+      "train_examples": 3121800
+    },
+    "training": {
+      "device": "cuda",
+      "feature_dim": 51,
+      "history": [
+        {
+          "elapsed_sec": 37.36175274848938,
+          "epoch": 1,
+          "loss": 3.385569746295611
+        },
+        {
+          "elapsed_sec": 37.240370988845825,
+          "epoch": 2,
+          "loss": 3.209423323472341
+        },
+        {
+          "elapsed_sec": 37.84022307395935,
+          "epoch": 3,
+          "loss": 3.1674370219310126
+        }
+      ],
+      "model_artifact": {
+        "exists": true,
+        "path": "results/rlem_c6_b1_lite_r1_safe/model_best.pt",
+        "sha256": "1dd442966921e8d17511af48aa411ce24f541a01103d12346995affc8fa37be5",
+        "size": 1877675
+      },
+      "reused": true,
+      "train_examples": 3121800
+    }
+  },
+  "stage": "C6-B1-lite R1-safe selector",
+  "status": "C6_B1_LITE_R1_SAFE_POSITIVE"
+}

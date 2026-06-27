@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "cache_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_CACHE_AUDIT.json",
+      "sha256": "6b65adfbbd59700101c8a3826d7a79695f2fb7e4ceb398c21b3dbe5c4ed7dd10",
+      "size": 1476
+    },
+    "execution_report": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_EXECUTION_REPORT.md",
+      "sha256": "80163dfc89e2817b8b49a9e393811661ce96d38a90b0267993eccb440034d87a",
+      "size": 11097
+    },
+    "negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_NEGATIVE_MANIFEST.json",
+      "sha256": "f816a68b5746621fc6ba3c8166e45664acb29645ae69e95ff6c702f564e7dcc5",
+      "size": 3808
+    },
+    "training_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_TRAINING_AUDIT.json",
+      "sha256": "46f02cfb59b3334c45fa3ff2697828ae0def7f82000b407b34c5eac73b114d2b",
+      "size": 13074
+    }
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "status": "HASHES_MATERIALIZED"
+}

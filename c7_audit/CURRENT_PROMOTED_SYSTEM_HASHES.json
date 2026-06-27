@@ -1,0 +1,55 @@
+{
+  "status": "CURRENT_PROMOTED_SYSTEM_HASHES",
+  "archive_date": "2026-06-27",
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "artifacts": {
+    "c7_audit/CURRENT_PROMOTED_SYSTEM.json": {
+      "path": "c7_audit/CURRENT_PROMOTED_SYSTEM.json",
+      "exists": true,
+      "size": 5464,
+      "sha256": "cb03f4e068c54a83a11a90aa3c6229d9676cf755ed9c64fde80d32bd945dfe2a"
+    },
+    "c7_audit/CURRENT_PROMOTED_SYSTEM.md": {
+      "path": "c7_audit/CURRENT_PROMOTED_SYSTEM.md",
+      "exists": true,
+      "size": 1997,
+      "sha256": "07e6a60153adb2ff3abf9ad0a7cfa26d89aaa3c900e2a7bd6b70036bf33db694"
+    },
+    "c7_audit/C7_B6_OFFICIAL_ARCHIVE.json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_ARCHIVE.json",
+      "exists": true,
+      "size": 3816,
+      "sha256": "557cf404061dd5ff40310068f68010f912684ae9c02f206f6eff5a883b85d14a"
+    },
+    "c7_audit/C7_B6_OFFICIAL_ARCHIVE.md": {
+      "path": "c7_audit/C7_B6_OFFICIAL_ARCHIVE.md",
+      "exists": true,
+      "size": 511,
+      "sha256": "12071a471232399abf7f2b42a6d5071a5fec63c889c5dc2f0c2940f5dd4e8c6f"
+    },
+    "c7_audit/C7_CURRENT_STAGE_SUMMARY.md": {
+      "path": "c7_audit/C7_CURRENT_STAGE_SUMMARY.md",
+      "exists": true,
+      "size": 1997,
+      "sha256": "07e6a60153adb2ff3abf9ad0a7cfa26d89aaa3c900e2a7bd6b70036bf33db694"
+    },
+    "c7_audit/C7_B6_OFFICIAL_MANIFEST.json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_MANIFEST.json",
+      "exists": true,
+      "size": 5825,
+      "sha256": "ca911449105d40d086f4f79102f93ddec664ed08d9233ca18c86f99fece06cf2"
+    },
+    "c7_audit/C7_B6_OFFICIAL_DECISION.json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_DECISION.json",
+      "exists": true,
+      "size": 1936,
+      "sha256": "98245ae5ea234211aac2039c30b286257b4d5155220d1e46ecdb0b056621fcaf"
+    },
+    "c7_audit/C7_B6_OFFICIAL_HASHES.json": {
+      "path": "c7_audit/C7_B6_OFFICIAL_HASHES.json",
+      "exists": true,
+      "size": 3356,
+      "sha256": "e5882fa2afb4bb3b0011685886b9d65a8d93252f698739d07c69067a230fab63"
+    }
+  }
+}

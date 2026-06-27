@@ -1,0 +1,1916 @@
+{
+  "status": "PASS",
+  "scope": "train_calib_only",
+  "official_val_used": false,
+  "model_root": "results/rlem_c31_capacity/models",
+  "configs_json": "c31_audit/C31_CAPACITY_CONFIGS.json",
+  "model_count": 18,
+  "simplicity_tolerance": 0.1,
+  "top_raw_selection_score": 4.283003394743867,
+  "models_within_simplicity_tolerance": [
+    "cap_E_wd1e4",
+    "cap_F_wd0",
+    "cap_F_wd1e5",
+    "cap_F_wd1e4"
+  ],
+  "selection_rule": "lowest parameter count within 0.10 of best probe; then score, loss, id",
+  "winner": {
+    "config_id": "cap_E_wd1e4",
+    "config": {
+      "config_id": "cap_E_wd1e4",
+      "hidden_dims": [
+        256,
+        256
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.0001
+    },
+    "parameter_count": 75779,
+    "best_epoch": 3,
+    "best_val_loss": 0.09023841389114408,
+    "probe_best": {
+      "config_id": "probe_B_gated_boundary",
+      "phase": "fixed_probe",
+      "family": "B_gated_boundary",
+      "base_scale": 0.75,
+      "a_joint": 1.625,
+      "b_bd": 0.75,
+      "d_fp": 0.5,
+      "t_joint": 1.0,
+      "t_bd": 1.0,
+      "t_fp": 1.0,
+      "model_id": "cap_E_wd1e4",
+      "metrics": {
+        "0.5-r1": 37.43,
+        "0.5-r5": 61.23,
+        "0.5-r10": 68.38,
+        "0.5-r100": 76.04,
+        "0.7-r1": 25.16,
+        "0.7-r5": 46.18,
+        "0.7-r10": 53.39,
+        "0.7-r100": 64.25
+      },
+      "raw_metrics": {
+        "0.5-r1": 37.42991188923218,
+        "0.5-r5": 61.23126215814166,
+        "0.5-r10": 68.38311019567456,
+        "0.5-r100": 76.03844833504978,
+        "0.7-r1": 25.16306213525575,
+        "0.7-r5": 46.18377388717244,
+        "0.7-r10": 53.39283670900561,
+        "0.7-r100": 64.25220276919556
+      },
+      "delta_vs_s_base": {
+        "0.5-r1": 6.797116,
+        "0.5-r5": 3.547317,
+        "0.5-r10": 1.716444,
+        "0.5-r100": 0.228859,
+        "0.7-r1": 4.428424,
+        "0.7-r5": 4.771713,
+        "0.7-r10": 3.718961,
+        "0.7-r100": 0.411946
+      },
+      "positive_delta_count": 8,
+      "min_primary_delta": 1.7164435290078899,
+      "primary_mean_delta": 4.163329137582482,
+      "r100_mean_delta": 0.32040279208147737,
+      "selection_score": 4.243429835602852,
+      "top1_changed_ratio": 0.23194873555326698,
+      "hard_positive_top100_exits": 88,
+      "hard_positive_top100_entries": 5609,
+      "hard_positive_top100_exit_ratio": 0.001402502191409674,
+      "y_fp_down_move_ratio": 0.6273430817207633,
+      "y_joint_05_down_move_ratio": 0.10061359470874173,
+      "wrong_video_boundary_bonus_mean": 0.00964296143501997,
+      "mean_qbd_train_calib": 0.40486693382263184,
+      "weighted_component_std": {
+        "base": 1.0253400790820935,
+        "q_joint": 0.13978759944438934,
+        "boundary": 0.041188694536685944,
+        "negative_e_fp": 0.11353527754545212
+      },
+      "weighted_component_std_share": {
+        "base": 0.776860095306378,
+        "q_joint": 0.10591159951948337,
+        "boundary": 0.031207063701206628,
+        "negative_e_fp": 0.08602124147293205
+      },
+      "pearson_base_vs_c3": 0.9805465835272732,
+      "spearman_mean_within_query": 0.9852401614189148,
+      "constraints": {
+        "primary_metrics_all_positive": true,
+        "positive_delta_count_min_6": true,
+        "r100_delta_floor": true,
+        "hard_positive_exit_ratio": true,
+        "top1_changed_ratio": true,
+        "pearson": true,
+        "spearman": true,
+        "base_component_dominant": true,
+        "boundary_component_not_dominant": true
+      },
+      "feasible": true
+    },
+    "probe_selection_score": 4.243429835602852,
+    "probe_family": "B_gated_boundary",
+    "checkpoint_sha256": "f451b5d5ad4c320c3a10d0720afb23257591005c9aa10e2088d0f7355b4106eb"
+  },
+  "records": [
+    {
+      "config_id": "cap_A_wd0",
+      "config": {
+        "config_id": "cap_A_wd0",
+        "hidden_dims": [
+          128
+        ],
+        "dropout": 0.0,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 4739,
+      "best_epoch": 3,
+      "best_val_loss": 0.0909961954507065,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_A_wd0",
+        "metrics": {
+          "0.5-r1": 37.11,
+          "0.5-r5": 60.85,
+          "0.5-r10": 68.25,
+          "0.5-r100": 76.05,
+          "0.7-r1": 24.92,
+          "0.7-r5": 45.79,
+          "0.7-r10": 53.28,
+          "0.7-r100": 64.3
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.109509097150706,
+          "0.5-r5": 60.85364458175993,
+          "0.5-r10": 68.24579471335393,
+          "0.5-r100": 76.04989129190983,
+          "0.7-r1": 24.922760041194646,
+          "0.7-r5": 45.79471335393065,
+          "0.7-r10": 53.27840714040508,
+          "0.7-r100": 64.29797459663577
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.476714,
+          "0.5-r5": 3.169699,
+          "0.5-r10": 1.579128,
+          "0.5-r100": 0.240302,
+          "0.7-r1": 4.188122,
+          "0.7-r5": 4.382652,
+          "0.7-r10": 3.604531,
+          "0.7-r100": 0.457718
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.5791280466872593,
+        "primary_mean_delta": 3.9001411298012734,
+        "r100_mean_delta": 0.3490101842316058,
+        "selection_score": 3.987393675859175,
+        "top1_changed_ratio": 0.2222222222222222,
+        "hard_positive_top100_exits": 84,
+        "hard_positive_top100_entries": 5670,
+        "hard_positive_top100_exit_ratio": 0.0013387520918001434,
+        "y_fp_down_move_ratio": 0.6292626743629983,
+        "y_joint_05_down_move_ratio": 0.09908359231811299,
+        "wrong_video_boundary_bonus_mean": 0.010229050181806087,
+        "mean_qbd_train_calib": 0.41803187131881714,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14271531999111176,
+          "boundary": 0.041514720767736435,
+          "negative_e_fp": 0.11325067281723022
+        },
+        "weighted_component_std_share": {
+          "base": 0.7751163912548584,
+          "q_joint": 0.1078871157629215,
+          "boundary": 0.031383480663555154,
+          "negative_e_fp": 0.08561301231866497
+        },
+        "pearson_base_vs_c3": 0.9802067417060245,
+        "spearman_mean_within_query": 0.984398365020752,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 3.987393675859175,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "04b3f2331395d003bc5dee16e24046415544a003fc38cc3bb3ee86acfd6f3478"
+    },
+    {
+      "config_id": "cap_A_wd1e5",
+      "config": {
+        "config_id": "cap_A_wd1e5",
+        "hidden_dims": [
+          128
+        ],
+        "dropout": 0.0,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 4739,
+      "best_epoch": 3,
+      "best_val_loss": 0.0909961954507065,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_A_wd1e5",
+        "metrics": {
+          "0.5-r1": 37.11,
+          "0.5-r5": 60.85,
+          "0.5-r10": 68.25,
+          "0.5-r100": 76.05,
+          "0.7-r1": 24.92,
+          "0.7-r5": 45.79,
+          "0.7-r10": 53.28,
+          "0.7-r100": 64.3
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.109509097150706,
+          "0.5-r5": 60.85364458175993,
+          "0.5-r10": 68.24579471335393,
+          "0.5-r100": 76.04989129190983,
+          "0.7-r1": 24.922760041194646,
+          "0.7-r5": 45.79471335393065,
+          "0.7-r10": 53.27840714040508,
+          "0.7-r100": 64.29797459663577
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.476714,
+          "0.5-r5": 3.169699,
+          "0.5-r10": 1.579128,
+          "0.5-r100": 0.240302,
+          "0.7-r1": 4.188122,
+          "0.7-r5": 4.382652,
+          "0.7-r10": 3.604531,
+          "0.7-r100": 0.457718
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.5791280466872593,
+        "primary_mean_delta": 3.9001411298012734,
+        "r100_mean_delta": 0.3490101842316058,
+        "selection_score": 3.987393675859175,
+        "top1_changed_ratio": 0.2222222222222222,
+        "hard_positive_top100_exits": 84,
+        "hard_positive_top100_entries": 5670,
+        "hard_positive_top100_exit_ratio": 0.0013387520918001434,
+        "y_fp_down_move_ratio": 0.6292626743629983,
+        "y_joint_05_down_move_ratio": 0.09908359231811299,
+        "wrong_video_boundary_bonus_mean": 0.010229050181806087,
+        "mean_qbd_train_calib": 0.41803187131881714,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14271531999111176,
+          "boundary": 0.041514720767736435,
+          "negative_e_fp": 0.11325067281723022
+        },
+        "weighted_component_std_share": {
+          "base": 0.7751163912548584,
+          "q_joint": 0.1078871157629215,
+          "boundary": 0.031383480663555154,
+          "negative_e_fp": 0.08561301231866497
+        },
+        "pearson_base_vs_c3": 0.9802067417060245,
+        "spearman_mean_within_query": 0.984398365020752,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 3.987393675859175,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "1ea8ccd10bc0db1bffad22fc369b0fc52229699c252eeca40bed04988ab6cf39"
+    },
+    {
+      "config_id": "cap_A_wd1e4",
+      "config": {
+        "config_id": "cap_A_wd1e4",
+        "hidden_dims": [
+          128
+        ],
+        "dropout": 0.0,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 4739,
+      "best_epoch": 3,
+      "best_val_loss": 0.09099856189383373,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_A_wd1e4",
+        "metrics": {
+          "0.5-r1": 37.11,
+          "0.5-r5": 60.84,
+          "0.5-r10": 68.25,
+          "0.5-r100": 76.05,
+          "0.7-r1": 24.92,
+          "0.7-r5": 45.78,
+          "0.7-r10": 53.28,
+          "0.7-r100": 64.3
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.109509097150706,
+          "0.5-r5": 60.84220162489987,
+          "0.5-r10": 68.24579471335393,
+          "0.5-r100": 76.04989129190983,
+          "0.7-r1": 24.922760041194646,
+          "0.7-r5": 45.7832703970706,
+          "0.7-r10": 53.27840714040508,
+          "0.7-r100": 64.29797459663577
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.476714,
+          "0.5-r5": 3.158256,
+          "0.5-r10": 1.579128,
+          "0.5-r100": 0.240302,
+          "0.7-r1": 4.188122,
+          "0.7-r5": 4.37121,
+          "0.7-r10": 3.604531,
+          "0.7-r100": 0.457718
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.5791280466872593,
+        "primary_mean_delta": 3.896326810847922,
+        "r100_mean_delta": 0.3490101842316058,
+        "selection_score": 3.9835793569058233,
+        "top1_changed_ratio": 0.2222222222222222,
+        "hard_positive_top100_exits": 84,
+        "hard_positive_top100_entries": 5666,
+        "hard_positive_top100_exit_ratio": 0.0013387520918001434,
+        "y_fp_down_move_ratio": 0.6292559389502186,
+        "y_joint_05_down_move_ratio": 0.09900390469360108,
+        "wrong_video_boundary_bonus_mean": 0.01022883877158165,
+        "mean_qbd_train_calib": 0.41805797815322876,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1427031010389328,
+          "boundary": 0.041513580828905106,
+          "negative_e_fp": 0.1132475882768631
+        },
+        "weighted_component_std_share": {
+          "base": 0.7751260265219306,
+          "q_joint": 0.10787921972160555,
+          "boundary": 0.031383009024101426,
+          "negative_e_fp": 0.08561174473236241
+        },
+        "pearson_base_vs_c3": 0.9802101366174244,
+        "spearman_mean_within_query": 0.9844076037406921,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 3.9835793569058233,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "2309cda77c23710750861e8e818e6d58de05000a71a39fec16038491a54c0ac5"
+    },
+    {
+      "config_id": "cap_B_wd0",
+      "config": {
+        "config_id": "cap_B_wd0",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 21507,
+      "best_epoch": 3,
+      "best_val_loss": 0.08975538981664725,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_B_wd0",
+        "metrics": {
+          "0.5-r1": 37.34,
+          "0.5-r5": 61.03,
+          "0.5-r10": 68.33,
+          "0.5-r100": 76.02,
+          "0.7-r1": 25.09,
+          "0.7-r5": 45.97,
+          "0.7-r10": 53.32,
+          "0.7-r100": 64.28
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.338368234351755,
+          "0.5-r5": 61.025288934660715,
+          "0.5-r10": 68.3258954113743,
+          "0.5-r100": 76.01556242132968,
+          "0.7-r1": 25.094404394095434,
+          "0.7-r5": 45.966357706831445,
+          "0.7-r10": 53.32417896784529,
+          "0.7-r100": 64.27508868291567
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.705573,
+          "0.5-r5": 3.341343,
+          "0.5-r10": 1.659229,
+          "0.5-r100": 0.205973,
+          "0.7-r1": 4.359767,
+          "0.7-r5": 4.554297,
+          "0.7-r10": 3.650303,
+          "0.7-r100": 0.434832
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.659228744707633,
+        "primary_mean_delta": 4.045085250028607,
+        "r100_mean_delta": 0.32040279208147737,
+        "selection_score": 4.125185948048976,
+        "top1_changed_ratio": 0.22485410230003433,
+        "hard_positive_top100_exits": 96,
+        "hard_positive_top100_entries": 5586,
+        "hard_positive_top100_exit_ratio": 0.0015300023906287354,
+        "y_fp_down_move_ratio": 0.6280233584115202,
+        "y_joint_05_down_move_ratio": 0.09753765240258187,
+        "wrong_video_boundary_bonus_mean": 0.009700510650873184,
+        "mean_qbd_train_calib": 0.39730802178382874,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14156967401504517,
+          "boundary": 0.04148899018764496,
+          "negative_e_fp": 0.11397690325975418
+        },
+        "weighted_component_std_share": {
+          "base": 0.7753773156374896,
+          "q_joint": 0.10705707896615978,
+          "boundary": 0.03137458731643967,
+          "negative_e_fp": 0.08619101807991095
+        },
+        "pearson_base_vs_c3": 0.9802962394246714,
+        "spearman_mean_within_query": 0.985325276851654,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.125185948048976,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "b4c428192775ac4f1b454b492c5f837e804ac4c3b365416adf4e6d4ec40ada7b"
+    },
+    {
+      "config_id": "cap_B_wd1e5",
+      "config": {
+        "config_id": "cap_B_wd1e5",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 21507,
+      "best_epoch": 3,
+      "best_val_loss": 0.08975538981664725,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_B_wd1e5",
+        "metrics": {
+          "0.5-r1": 37.34,
+          "0.5-r5": 61.03,
+          "0.5-r10": 68.33,
+          "0.5-r100": 76.02,
+          "0.7-r1": 25.09,
+          "0.7-r5": 45.97,
+          "0.7-r10": 53.32,
+          "0.7-r100": 64.28
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.338368234351755,
+          "0.5-r5": 61.025288934660715,
+          "0.5-r10": 68.3258954113743,
+          "0.5-r100": 76.01556242132968,
+          "0.7-r1": 25.094404394095434,
+          "0.7-r5": 45.966357706831445,
+          "0.7-r10": 53.32417896784529,
+          "0.7-r100": 64.27508868291567
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.705573,
+          "0.5-r5": 3.341343,
+          "0.5-r10": 1.659229,
+          "0.5-r100": 0.205973,
+          "0.7-r1": 4.359767,
+          "0.7-r5": 4.554297,
+          "0.7-r10": 3.650303,
+          "0.7-r100": 0.434832
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.659228744707633,
+        "primary_mean_delta": 4.045085250028607,
+        "r100_mean_delta": 0.32040279208147737,
+        "selection_score": 4.125185948048976,
+        "top1_changed_ratio": 0.22485410230003433,
+        "hard_positive_top100_exits": 96,
+        "hard_positive_top100_entries": 5586,
+        "hard_positive_top100_exit_ratio": 0.0015300023906287354,
+        "y_fp_down_move_ratio": 0.6280233584115202,
+        "y_joint_05_down_move_ratio": 0.09753765240258187,
+        "wrong_video_boundary_bonus_mean": 0.009700510650873184,
+        "mean_qbd_train_calib": 0.39730802178382874,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14156967401504517,
+          "boundary": 0.04148899018764496,
+          "negative_e_fp": 0.11397690325975418
+        },
+        "weighted_component_std_share": {
+          "base": 0.7753773156374896,
+          "q_joint": 0.10705707896615978,
+          "boundary": 0.03137458731643967,
+          "negative_e_fp": 0.08619101807991095
+        },
+        "pearson_base_vs_c3": 0.9802962394246714,
+        "spearman_mean_within_query": 0.985325276851654,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.125185948048976,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "3083afafde07bcd20188678266de67f2118de02a1c5430254f26fdf89e8cbfba"
+    },
+    {
+      "config_id": "cap_B_wd1e4",
+      "config": {
+        "config_id": "cap_B_wd1e4",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 21507,
+      "best_epoch": 3,
+      "best_val_loss": 0.08972053773889609,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_B_wd1e4",
+        "metrics": {
+          "0.5-r1": 37.3,
+          "0.5-r5": 61.06,
+          "0.5-r10": 68.35,
+          "0.5-r100": 76.04,
+          "0.7-r1": 25.06,
+          "0.7-r5": 45.97,
+          "0.7-r10": 53.32,
+          "0.7-r100": 64.26
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.3040393637716,
+          "0.5-r5": 61.059617805240876,
+          "0.5-r10": 68.34878132509441,
+          "0.5-r100": 76.03844833504978,
+          "0.7-r1": 25.060075523515277,
+          "0.7-r5": 45.966357706831445,
+          "0.7-r10": 53.32417896784529,
+          "0.7-r100": 64.26364572605561
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.671244,
+          "0.5-r5": 3.375672,
+          "0.5-r10": 1.682115,
+          "0.5-r100": 0.228859,
+          "0.7-r1": 4.325438,
+          "0.7-r5": 4.554297,
+          "0.7-r10": 3.650303,
+          "0.7-r100": 0.423389
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6821146584277358,
+        "primary_mean_delta": 4.043178090551932,
+        "r100_mean_delta": 0.32612427051150306,
+        "selection_score": 4.124709158179808,
+        "top1_changed_ratio": 0.22657054582904224,
+        "hard_positive_top100_exits": 92,
+        "hard_positive_top100_entries": 5600,
+        "hard_positive_top100_exit_ratio": 0.0014662522910192047,
+        "y_fp_down_move_ratio": 0.6277539419003294,
+        "y_joint_05_down_move_ratio": 0.0986214040959439,
+        "wrong_video_boundary_bonus_mean": 0.009731179103255272,
+        "mean_qbd_train_calib": 0.39785927534103394,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1415453404188156,
+          "boundary": 0.04142468795180321,
+          "negative_e_fp": 0.11399729549884796
+        },
+        "weighted_component_std_share": {
+          "base": 0.7754173324549212,
+          "q_joint": 0.10704420175132363,
+          "boundary": 0.03132757773218087,
+          "negative_e_fp": 0.08621088806157429
+        },
+        "pearson_base_vs_c3": 0.9802976980021649,
+        "spearman_mean_within_query": 0.9852781295776367,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.124709158179808,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "81179dffb4822698083572d6fc4ed9050bacd4901877c7ad4d36897222cf5150"
+    },
+    {
+      "config_id": "cap_C_wd0",
+      "config": {
+        "config_id": "cap_C_wd0",
+        "hidden_dims": [
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 9475,
+      "best_epoch": 3,
+      "best_val_loss": 0.0911307889264022,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_C_wd0",
+        "metrics": {
+          "0.5-r1": 36.96,
+          "0.5-r5": 60.95,
+          "0.5-r10": 68.25,
+          "0.5-r100": 76.07,
+          "0.7-r1": 24.98,
+          "0.7-r5": 45.94,
+          "0.7-r10": 53.35,
+          "0.7-r100": 64.36
+        },
+        "raw_metrics": {
+          "0.5-r1": 36.96075065797002,
+          "0.5-r5": 60.94518823664035,
+          "0.5-r10": 68.24579471335393,
+          "0.5-r100": 76.07277720562993,
+          "0.7-r1": 24.979974825494907,
+          "0.7-r5": 45.94347179311134,
+          "0.7-r10": 53.347064881565395,
+          "0.7-r100": 64.35518938093604
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.327955,
+          "0.5-r5": 3.261243,
+          "0.5-r10": 1.579128,
+          "0.5-r100": 0.263188,
+          "0.7-r1": 4.245337,
+          "0.7-r5": 4.531411,
+          "0.7-r10": 3.673189,
+          "0.7-r100": 0.514933
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.5791280466872593,
+        "primary_mean_delta": 3.9363771598581057,
+        "r100_mean_delta": 0.3890605332417927,
+        "selection_score": 4.033642293168554,
+        "top1_changed_ratio": 0.21672960292939697,
+        "hard_positive_top100_exits": 97,
+        "hard_positive_top100_entries": 5712,
+        "hard_positive_top100_exit_ratio": 0.001545939915531118,
+        "y_fp_down_move_ratio": 0.6330547117580101,
+        "y_joint_05_down_move_ratio": 0.10032671926049884,
+        "wrong_video_boundary_bonus_mean": 0.010304921306669712,
+        "mean_qbd_train_calib": 0.41829073429107666,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14289239048957825,
+          "boundary": 0.041434891521930695,
+          "negative_e_fp": 0.11393195390701294
+        },
+        "weighted_component_std_share": {
+          "base": 0.7746604787881873,
+          "q_joint": 0.10795743762492943,
+          "boundary": 0.031304709100662714,
+          "negative_e_fp": 0.08607737448622053
+        },
+        "pearson_base_vs_c3": 0.9801806944506524,
+        "spearman_mean_within_query": 0.9844151139259338,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.033642293168554,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "d1789aeaac163d026557c4c3153ad6d729a5261a8ee1a7abf91c4920dd4bcfbe"
+    },
+    {
+      "config_id": "cap_C_wd1e5",
+      "config": {
+        "config_id": "cap_C_wd1e5",
+        "hidden_dims": [
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 9475,
+      "best_epoch": 3,
+      "best_val_loss": 0.0911307889264022,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_C_wd1e5",
+        "metrics": {
+          "0.5-r1": 36.96,
+          "0.5-r5": 60.95,
+          "0.5-r10": 68.25,
+          "0.5-r100": 76.07,
+          "0.7-r1": 24.98,
+          "0.7-r5": 45.94,
+          "0.7-r10": 53.35,
+          "0.7-r100": 64.36
+        },
+        "raw_metrics": {
+          "0.5-r1": 36.96075065797002,
+          "0.5-r5": 60.94518823664035,
+          "0.5-r10": 68.24579471335393,
+          "0.5-r100": 76.07277720562993,
+          "0.7-r1": 24.979974825494907,
+          "0.7-r5": 45.94347179311134,
+          "0.7-r10": 53.347064881565395,
+          "0.7-r100": 64.35518938093604
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.327955,
+          "0.5-r5": 3.261243,
+          "0.5-r10": 1.579128,
+          "0.5-r100": 0.263188,
+          "0.7-r1": 4.245337,
+          "0.7-r5": 4.531411,
+          "0.7-r10": 3.673189,
+          "0.7-r100": 0.514933
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.5791280466872593,
+        "primary_mean_delta": 3.9363771598581057,
+        "r100_mean_delta": 0.3890605332417927,
+        "selection_score": 4.033642293168554,
+        "top1_changed_ratio": 0.21672960292939697,
+        "hard_positive_top100_exits": 97,
+        "hard_positive_top100_entries": 5712,
+        "hard_positive_top100_exit_ratio": 0.001545939915531118,
+        "y_fp_down_move_ratio": 0.6330547117580101,
+        "y_joint_05_down_move_ratio": 0.10032671926049884,
+        "wrong_video_boundary_bonus_mean": 0.010304921306669712,
+        "mean_qbd_train_calib": 0.41829073429107666,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.14289239048957825,
+          "boundary": 0.041434891521930695,
+          "negative_e_fp": 0.11393195390701294
+        },
+        "weighted_component_std_share": {
+          "base": 0.7746604787881873,
+          "q_joint": 0.10795743762492943,
+          "boundary": 0.031304709100662714,
+          "negative_e_fp": 0.08607737448622053
+        },
+        "pearson_base_vs_c3": 0.9801806944506524,
+        "spearman_mean_within_query": 0.9844151139259338,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.033642293168554,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "50a8a96dcf46202f7987cdb039f893a55095e996bc27e6534bdf26859a4ef0a3"
+    },
+    {
+      "config_id": "cap_C_wd1e4",
+      "config": {
+        "config_id": "cap_C_wd1e4",
+        "hidden_dims": [
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 9475,
+      "best_epoch": 3,
+      "best_val_loss": 0.09111382773087845,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_C_wd1e4",
+        "metrics": {
+          "0.5-r1": 36.87,
+          "0.5-r5": 60.91,
+          "0.5-r10": 68.3,
+          "0.5-r100": 76.07,
+          "0.7-r1": 24.95,
+          "0.7-r5": 45.92,
+          "0.7-r10": 53.37,
+          "0.7-r100": 64.36
+        },
+        "raw_metrics": {
+          "0.5-r1": 36.8692070030896,
+          "0.5-r5": 60.91085936606019,
+          "0.5-r10": 68.30300949765419,
+          "0.5-r100": 76.07277720562993,
+          "0.7-r1": 24.94564595491475,
+          "0.7-r5": 45.92058587939123,
+          "0.7-r10": 53.369950795285504,
+          "0.7-r100": 64.35518938093604
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.236411,
+          "0.5-r5": 3.226914,
+          "0.5-r10": 1.636343,
+          "0.5-r100": 0.263188,
+          "0.7-r1": 4.211008,
+          "0.7-r5": 4.508525,
+          "0.7-r10": 3.696075,
+          "0.7-r100": 0.514933
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.636342830987516,
+        "primary_mean_delta": 3.9192127245680255,
+        "r100_mean_delta": 0.3890605332417927,
+        "selection_score": 4.016477857878474,
+        "top1_changed_ratio": 0.21684403249799747,
+        "hard_positive_top100_exits": 97,
+        "hard_positive_top100_entries": 5697,
+        "hard_positive_top100_exit_ratio": 0.001545939915531118,
+        "y_fp_down_move_ratio": 0.6330749179963494,
+        "y_joint_05_down_move_ratio": 0.10048609450952267,
+        "wrong_video_boundary_bonus_mean": 0.010306152515113354,
+        "mean_qbd_train_calib": 0.41760048270225525,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1428215354681015,
+          "boundary": 0.04140183702111244,
+          "negative_e_fp": 0.11391555517911911
+        },
+        "weighted_component_std_share": {
+          "base": 0.7747308977719551,
+          "q_joint": 0.10791371433897924,
+          "boundary": 0.031282579330644225,
+          "negative_e_fp": 0.08607280855842137
+        },
+        "pearson_base_vs_c3": 0.9802032681830831,
+        "spearman_mean_within_query": 0.9844380021095276,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.016477857878474,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "d0068c3d95e703d0161f1e3e20f20823a3114089015c8eb392491f4e9ab6d900"
+    },
+    {
+      "config_id": "cap_D_wd0",
+      "config": {
+        "config_id": "cap_D_wd0",
+        "hidden_dims": [
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 42243,
+      "best_epoch": 3,
+      "best_val_loss": 0.09001838911860578,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_D_wd0",
+        "metrics": {
+          "0.5-r1": 37.22,
+          "0.5-r5": 61.05,
+          "0.5-r10": 68.36,
+          "0.5-r100": 76.05,
+          "0.7-r1": 25.05,
+          "0.7-r5": 45.98,
+          "0.7-r10": 53.29,
+          "0.7-r100": 64.23
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.22393866575123,
+          "0.5-r5": 61.048174848380825,
+          "0.5-r10": 68.36022428195446,
+          "0.5-r100": 76.04989129190983,
+          "0.7-r1": 25.048632566655225,
+          "0.7-r5": 45.9778006636915,
+          "0.7-r10": 53.28985009726513,
+          "0.7-r100": 64.22931685547546
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.591143,
+          "0.5-r5": 3.364229,
+          "0.5-r10": 1.693558,
+          "0.5-r100": 0.240302,
+          "0.7-r1": 4.313995,
+          "0.7-r5": 4.56574,
+          "0.7-r10": 3.615974,
+          "0.7-r100": 0.389061
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6935576152877871,
+        "primary_mean_delta": 4.024106495785176,
+        "r100_mean_delta": 0.3146813136514517,
+        "selection_score": 4.102776824198039,
+        "top1_changed_ratio": 0.22668497539764276,
+        "hard_positive_top100_exits": 92,
+        "hard_positive_top100_entries": 5466,
+        "hard_positive_top100_exit_ratio": 0.0014662522910192047,
+        "y_fp_down_move_ratio": 0.6245950333066161,
+        "y_joint_05_down_move_ratio": 0.09929078014184398,
+        "wrong_video_boundary_bonus_mean": 0.009590894915163517,
+        "mean_qbd_train_calib": 0.40386080741882324,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1378326267004013,
+          "boundary": 0.040165603160858154,
+          "negative_e_fp": 0.1139787957072258
+        },
+        "weighted_component_std_share": {
+          "base": 0.7783547905529301,
+          "q_joint": 0.1046313193792179,
+          "boundary": 0.030490458993555822,
+          "negative_e_fp": 0.08652343107429622
+        },
+        "pearson_base_vs_c3": 0.9811538886551157,
+        "spearman_mean_within_query": 0.9857425689697266,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.102776824198039,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "61c19880c19d11b0dac8597e10d342784df42c411b25e42a04c096762a4f3b17"
+    },
+    {
+      "config_id": "cap_D_wd1e5",
+      "config": {
+        "config_id": "cap_D_wd1e5",
+        "hidden_dims": [
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 42243,
+      "best_epoch": 3,
+      "best_val_loss": 0.09001838911860578,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_D_wd1e5",
+        "metrics": {
+          "0.5-r1": 37.22,
+          "0.5-r5": 61.05,
+          "0.5-r10": 68.36,
+          "0.5-r100": 76.05,
+          "0.7-r1": 25.05,
+          "0.7-r5": 45.98,
+          "0.7-r10": 53.29,
+          "0.7-r100": 64.23
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.22393866575123,
+          "0.5-r5": 61.048174848380825,
+          "0.5-r10": 68.36022428195446,
+          "0.5-r100": 76.04989129190983,
+          "0.7-r1": 25.048632566655225,
+          "0.7-r5": 45.9778006636915,
+          "0.7-r10": 53.28985009726513,
+          "0.7-r100": 64.22931685547546
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.591143,
+          "0.5-r5": 3.364229,
+          "0.5-r10": 1.693558,
+          "0.5-r100": 0.240302,
+          "0.7-r1": 4.313995,
+          "0.7-r5": 4.56574,
+          "0.7-r10": 3.615974,
+          "0.7-r100": 0.389061
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6935576152877871,
+        "primary_mean_delta": 4.024106495785176,
+        "r100_mean_delta": 0.3146813136514517,
+        "selection_score": 4.102776824198039,
+        "top1_changed_ratio": 0.22668497539764276,
+        "hard_positive_top100_exits": 92,
+        "hard_positive_top100_entries": 5466,
+        "hard_positive_top100_exit_ratio": 0.0014662522910192047,
+        "y_fp_down_move_ratio": 0.6245950333066161,
+        "y_joint_05_down_move_ratio": 0.09929078014184398,
+        "wrong_video_boundary_bonus_mean": 0.009590894915163517,
+        "mean_qbd_train_calib": 0.40386080741882324,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1378326267004013,
+          "boundary": 0.040165603160858154,
+          "negative_e_fp": 0.1139787957072258
+        },
+        "weighted_component_std_share": {
+          "base": 0.7783547905529301,
+          "q_joint": 0.1046313193792179,
+          "boundary": 0.030490458993555822,
+          "negative_e_fp": 0.08652343107429622
+        },
+        "pearson_base_vs_c3": 0.9811538886551157,
+        "spearman_mean_within_query": 0.9857425689697266,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.102776824198039,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "463a1405da98f97c8966d6c5bbb817e532fdad1a7088376e706747c7499ba7cd"
+    },
+    {
+      "config_id": "cap_D_wd1e4",
+      "config": {
+        "config_id": "cap_D_wd1e4",
+        "hidden_dims": [
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 42243,
+      "best_epoch": 3,
+      "best_val_loss": 0.09004159478386066,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_D_wd1e4",
+        "metrics": {
+          "0.5-r1": 37.33,
+          "0.5-r5": 61.08,
+          "0.5-r10": 68.37,
+          "0.5-r100": 76.03,
+          "0.7-r1": 25.07,
+          "0.7-r5": 45.99,
+          "0.7-r10": 53.31,
+          "0.7-r100": 64.21
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.3269252774917,
+          "0.5-r5": 61.08250371896098,
+          "0.5-r10": 68.37166723881451,
+          "0.5-r100": 76.02700537818973,
+          "0.7-r1": 25.071518480375328,
+          "0.7-r5": 45.98924362055155,
+          "0.7-r10": 53.31273601098524,
+          "0.7-r100": 64.20643094175534
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.69413,
+          "0.5-r5": 3.398558,
+          "0.5-r10": 1.705001,
+          "0.5-r100": 0.217416,
+          "0.7-r1": 4.336881,
+          "0.7-r5": 4.577183,
+          "0.7-r10": 3.63886,
+          "0.7-r100": 0.366175
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.7050005721478385,
+        "primary_mean_delta": 4.058435366365334,
+        "r100_mean_delta": 0.29179539993134185,
+        "selection_score": 4.131384216348169,
+        "top1_changed_ratio": 0.22542625014303697,
+        "hard_positive_top100_exits": 94,
+        "hard_positive_top100_entries": 5444,
+        "hard_positive_top100_exit_ratio": 0.00149812734082397,
+        "y_fp_down_move_ratio": 0.6238069900113828,
+        "y_joint_05_down_move_ratio": 0.10061359470874173,
+        "wrong_video_boundary_bonus_mean": 0.009476985782384872,
+        "mean_qbd_train_calib": 0.4025329053401947,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.13659238815307617,
+          "boundary": 0.03986627236008644,
+          "negative_e_fp": 0.11404170840978622
+        },
+        "weighted_component_std_share": {
+          "base": 0.7792282724221017,
+          "q_joint": 0.10380619349417715,
+          "boundary": 0.030297193265739826,
+          "negative_e_fp": 0.08666834081798132
+        },
+        "pearson_base_vs_c3": 0.981429642321158,
+        "spearman_mean_within_query": 0.98602694272995,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.131384216348169,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "c7905fd96e6e79f313e5675658780daa873e377c6d2688f02ffbb7eefc446cac"
+    },
+    {
+      "config_id": "cap_E_wd0",
+      "config": {
+        "config_id": "cap_E_wd0",
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 75779,
+      "best_epoch": 3,
+      "best_val_loss": 0.09003604793974185,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_E_wd0",
+        "metrics": {
+          "0.5-r1": 37.51,
+          "0.5-r5": 61.09,
+          "0.5-r10": 68.36,
+          "0.5-r100": 76.02,
+          "0.7-r1": 25.15,
+          "0.7-r5": 46.09,
+          "0.7-r10": 53.23,
+          "0.7-r100": 64.21
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.51001258725255,
+          "0.5-r5": 61.09394667582103,
+          "0.5-r10": 68.36022428195446,
+          "0.5-r100": 76.01556242132968,
+          "0.7-r1": 25.1516191783957,
+          "0.7-r5": 46.092230232292025,
+          "0.7-r10": 53.23263531296487,
+          "0.7-r100": 64.20643094175534
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.877217,
+          "0.5-r5": 3.410001,
+          "0.5-r10": 1.693558,
+          "0.5-r100": 0.205973,
+          "0.7-r1": 4.416981,
+          "0.7-r5": 4.680169,
+          "0.7-r10": 3.55876,
+          "0.7-r100": 0.366175
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6935576152877871,
+        "primary_mean_delta": 4.10611435328222,
+        "r100_mean_delta": 0.28607392150131616,
+        "selection_score": 4.177632833657549,
+        "top1_changed_ratio": 0.2259983979860396,
+        "hard_positive_top100_exits": 83,
+        "hard_positive_top100_entries": 5587,
+        "hard_positive_top100_exit_ratio": 0.0013228145668977608,
+        "y_fp_down_move_ratio": 0.6269187507156376,
+        "y_joint_05_down_move_ratio": 0.09980078093872022,
+        "wrong_video_boundary_bonus_mean": 0.009446133859455585,
+        "mean_qbd_train_calib": 0.40312135219573975,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1383167952299118,
+          "boundary": 0.04063212499022484,
+          "negative_e_fp": 0.1136651560664177
+        },
+        "weighted_component_std_share": {
+          "base": 0.7779785623842836,
+          "q_joint": 0.10494810814661677,
+          "boundary": 0.030829695270287713,
+          "negative_e_fp": 0.08624363419881184
+        },
+        "pearson_base_vs_c3": 0.9808220871499574,
+        "spearman_mean_within_query": 0.9854379296302795,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.177632833657549,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "1332daa19f26e5df576587ca323e92b79bf3eec95ca562d462813a3430385045"
+    },
+    {
+      "config_id": "cap_E_wd1e5",
+      "config": {
+        "config_id": "cap_E_wd1e5",
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 75779,
+      "best_epoch": 3,
+      "best_val_loss": 0.09003604793974185,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_E_wd1e5",
+        "metrics": {
+          "0.5-r1": 37.51,
+          "0.5-r5": 61.09,
+          "0.5-r10": 68.36,
+          "0.5-r100": 76.02,
+          "0.7-r1": 25.15,
+          "0.7-r5": 46.09,
+          "0.7-r10": 53.23,
+          "0.7-r100": 64.21
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.51001258725255,
+          "0.5-r5": 61.09394667582103,
+          "0.5-r10": 68.36022428195446,
+          "0.5-r100": 76.01556242132968,
+          "0.7-r1": 25.1516191783957,
+          "0.7-r5": 46.092230232292025,
+          "0.7-r10": 53.23263531296487,
+          "0.7-r100": 64.20643094175534
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.877217,
+          "0.5-r5": 3.410001,
+          "0.5-r10": 1.693558,
+          "0.5-r100": 0.205973,
+          "0.7-r1": 4.416981,
+          "0.7-r5": 4.680169,
+          "0.7-r10": 3.55876,
+          "0.7-r100": 0.366175
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6935576152877871,
+        "primary_mean_delta": 4.10611435328222,
+        "r100_mean_delta": 0.28607392150131616,
+        "selection_score": 4.177632833657549,
+        "top1_changed_ratio": 0.2259983979860396,
+        "hard_positive_top100_exits": 83,
+        "hard_positive_top100_entries": 5587,
+        "hard_positive_top100_exit_ratio": 0.0013228145668977608,
+        "y_fp_down_move_ratio": 0.6269187507156376,
+        "y_joint_05_down_move_ratio": 0.09980078093872022,
+        "wrong_video_boundary_bonus_mean": 0.009446133859455585,
+        "mean_qbd_train_calib": 0.40312135219573975,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1383167952299118,
+          "boundary": 0.04063212499022484,
+          "negative_e_fp": 0.1136651560664177
+        },
+        "weighted_component_std_share": {
+          "base": 0.7779785623842836,
+          "q_joint": 0.10494810814661677,
+          "boundary": 0.030829695270287713,
+          "negative_e_fp": 0.08624363419881184
+        },
+        "pearson_base_vs_c3": 0.9808220871499574,
+        "spearman_mean_within_query": 0.9854379296302795,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.177632833657549,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "d545332c2fb743e0e2662dc5cfbc17a6343e7e05f77deaa34161d9842d0a470d"
+    },
+    {
+      "config_id": "cap_E_wd1e4",
+      "config": {
+        "config_id": "cap_E_wd1e4",
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 75779,
+      "best_epoch": 3,
+      "best_val_loss": 0.09023841389114408,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_E_wd1e4",
+        "metrics": {
+          "0.5-r1": 37.43,
+          "0.5-r5": 61.23,
+          "0.5-r10": 68.38,
+          "0.5-r100": 76.04,
+          "0.7-r1": 25.16,
+          "0.7-r5": 46.18,
+          "0.7-r10": 53.39,
+          "0.7-r100": 64.25
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.42991188923218,
+          "0.5-r5": 61.23126215814166,
+          "0.5-r10": 68.38311019567456,
+          "0.5-r100": 76.03844833504978,
+          "0.7-r1": 25.16306213525575,
+          "0.7-r5": 46.18377388717244,
+          "0.7-r10": 53.39283670900561,
+          "0.7-r100": 64.25220276919556
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.797116,
+          "0.5-r5": 3.547317,
+          "0.5-r10": 1.716444,
+          "0.5-r100": 0.228859,
+          "0.7-r1": 4.428424,
+          "0.7-r5": 4.771713,
+          "0.7-r10": 3.718961,
+          "0.7-r100": 0.411946
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.7164435290078899,
+        "primary_mean_delta": 4.163329137582482,
+        "r100_mean_delta": 0.32040279208147737,
+        "selection_score": 4.243429835602852,
+        "top1_changed_ratio": 0.23194873555326698,
+        "hard_positive_top100_exits": 88,
+        "hard_positive_top100_entries": 5609,
+        "hard_positive_top100_exit_ratio": 0.001402502191409674,
+        "y_fp_down_move_ratio": 0.6273430817207633,
+        "y_joint_05_down_move_ratio": 0.10061359470874173,
+        "wrong_video_boundary_bonus_mean": 0.00964296143501997,
+        "mean_qbd_train_calib": 0.40486693382263184,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.13978759944438934,
+          "boundary": 0.041188694536685944,
+          "negative_e_fp": 0.11353527754545212
+        },
+        "weighted_component_std_share": {
+          "base": 0.776860095306378,
+          "q_joint": 0.10591159951948337,
+          "boundary": 0.031207063701206628,
+          "negative_e_fp": 0.08602124147293205
+        },
+        "pearson_base_vs_c3": 0.9805465835272732,
+        "spearman_mean_within_query": 0.9852401614189148,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.243429835602852,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "f451b5d5ad4c320c3a10d0720afb23257591005c9aa10e2088d0f7355b4106eb"
+    },
+    {
+      "config_id": "cap_F_wd0",
+      "config": {
+        "config_id": "cap_F_wd0",
+        "hidden_dims": [
+          256,
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0
+      },
+      "parameter_count": 108547,
+      "best_epoch": 3,
+      "best_val_loss": 0.09029530301166626,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_F_wd0",
+        "metrics": {
+          "0.5-r1": 37.65,
+          "0.5-r5": 61.13,
+          "0.5-r10": 68.38,
+          "0.5-r100": 76.06,
+          "0.7-r1": 25.31,
+          "0.7-r5": 46.08,
+          "0.7-r10": 53.39,
+          "0.7-r100": 64.33
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.64732806957318,
+          "0.5-r5": 61.12827554640119,
+          "0.5-r10": 68.38311019567456,
+          "0.5-r100": 76.06133424876988,
+          "0.7-r1": 25.311820574436435,
+          "0.7-r5": 46.08078727543197,
+          "0.7-r10": 53.39283670900561,
+          "0.7-r100": 64.33230346721592
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 7.014533,
+          "0.5-r5": 3.44433,
+          "0.5-r10": 1.716444,
+          "0.5-r100": 0.251745,
+          "0.7-r1": 4.577183,
+          "0.7-r5": 4.668726,
+          "0.7-r10": 3.718961,
+          "0.7-r100": 0.492047
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.7164435290078899,
+        "primary_mean_delta": 4.19002937025594,
+        "r100_mean_delta": 0.3718960979517085,
+        "selection_score": 4.283003394743867,
+        "top1_changed_ratio": 0.2295457146126559,
+        "hard_positive_top100_exits": 106,
+        "hard_positive_top100_entries": 5586,
+        "hard_positive_top100_exit_ratio": 0.001689377639652562,
+        "y_fp_down_move_ratio": 0.6278953855687046,
+        "y_joint_05_down_move_ratio": 0.10085265758227747,
+        "wrong_video_boundary_bonus_mean": 0.009757025167346,
+        "mean_qbd_train_calib": 0.3990069627761841,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1418398916721344,
+          "boundary": 0.04196947440505028,
+          "negative_e_fp": 0.11389375478029251
+        },
+        "weighted_component_std_share": {
+          "base": 0.7749860920103935,
+          "q_joint": 0.10720730183157501,
+          "boundary": 0.03172192291753377,
+          "negative_e_fp": 0.08608468324049778
+        },
+        "pearson_base_vs_c3": 0.9801178998377353,
+        "spearman_mean_within_query": 0.9851996898651123,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.283003394743867,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42"
+    },
+    {
+      "config_id": "cap_F_wd1e5",
+      "config": {
+        "config_id": "cap_F_wd1e5",
+        "hidden_dims": [
+          256,
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 1e-05
+      },
+      "parameter_count": 108547,
+      "best_epoch": 3,
+      "best_val_loss": 0.09029530301166626,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_F_wd1e5",
+        "metrics": {
+          "0.5-r1": 37.65,
+          "0.5-r5": 61.13,
+          "0.5-r10": 68.38,
+          "0.5-r100": 76.06,
+          "0.7-r1": 25.31,
+          "0.7-r5": 46.08,
+          "0.7-r10": 53.39,
+          "0.7-r100": 64.33
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.64732806957318,
+          "0.5-r5": 61.12827554640119,
+          "0.5-r10": 68.38311019567456,
+          "0.5-r100": 76.06133424876988,
+          "0.7-r1": 25.311820574436435,
+          "0.7-r5": 46.08078727543197,
+          "0.7-r10": 53.39283670900561,
+          "0.7-r100": 64.33230346721592
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 7.014533,
+          "0.5-r5": 3.44433,
+          "0.5-r10": 1.716444,
+          "0.5-r100": 0.251745,
+          "0.7-r1": 4.577183,
+          "0.7-r5": 4.668726,
+          "0.7-r10": 3.718961,
+          "0.7-r100": 0.492047
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.7164435290078899,
+        "primary_mean_delta": 4.19002937025594,
+        "r100_mean_delta": 0.3718960979517085,
+        "selection_score": 4.283003394743867,
+        "top1_changed_ratio": 0.2295457146126559,
+        "hard_positive_top100_exits": 106,
+        "hard_positive_top100_entries": 5586,
+        "hard_positive_top100_exit_ratio": 0.001689377639652562,
+        "y_fp_down_move_ratio": 0.6278953855687046,
+        "y_joint_05_down_move_ratio": 0.10085265758227747,
+        "wrong_video_boundary_bonus_mean": 0.009757025167346,
+        "mean_qbd_train_calib": 0.3990069627761841,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1418398916721344,
+          "boundary": 0.04196947440505028,
+          "negative_e_fp": 0.11389375478029251
+        },
+        "weighted_component_std_share": {
+          "base": 0.7749860920103935,
+          "q_joint": 0.10720730183157501,
+          "boundary": 0.03172192291753377,
+          "negative_e_fp": 0.08608468324049778
+        },
+        "pearson_base_vs_c3": 0.9801178998377353,
+        "spearman_mean_within_query": 0.9851996898651123,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.283003394743867,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "4c795690792950ee6f0ba8e6fa9e28328ca59555b7a217fea0a739283cd3ff73"
+    },
+    {
+      "config_id": "cap_F_wd1e4",
+      "config": {
+        "config_id": "cap_F_wd1e4",
+        "hidden_dims": [
+          256,
+          256,
+          128
+        ],
+        "dropout": 0.1,
+        "weight_decay": 0.0001
+      },
+      "parameter_count": 108547,
+      "best_epoch": 3,
+      "best_val_loss": 0.09008355760010965,
+      "probe_best": {
+        "config_id": "probe_B_gated_boundary",
+        "phase": "fixed_probe",
+        "family": "B_gated_boundary",
+        "base_scale": 0.75,
+        "a_joint": 1.625,
+        "b_bd": 0.75,
+        "d_fp": 0.5,
+        "t_joint": 1.0,
+        "t_bd": 1.0,
+        "t_fp": 1.0,
+        "model_id": "cap_F_wd1e4",
+        "metrics": {
+          "0.5-r1": 37.43,
+          "0.5-r5": 61.27,
+          "0.5-r10": 68.36,
+          "0.5-r100": 76.03,
+          "0.7-r1": 25.16,
+          "0.7-r5": 46.12,
+          "0.7-r10": 53.28,
+          "0.7-r100": 64.25
+        },
+        "raw_metrics": {
+          "0.5-r1": 37.42991188923218,
+          "0.5-r5": 61.26559102872182,
+          "0.5-r10": 68.36022428195446,
+          "0.5-r100": 76.02700537818973,
+          "0.7-r1": 25.16306213525575,
+          "0.7-r5": 46.11511614601213,
+          "0.7-r10": 53.27840714040508,
+          "0.7-r100": 64.25220276919556
+        },
+        "delta_vs_s_base": {
+          "0.5-r1": 6.797116,
+          "0.5-r5": 3.581645,
+          "0.5-r10": 1.693558,
+          "0.5-r100": 0.217416,
+          "0.7-r1": 4.428424,
+          "0.7-r5": 4.703055,
+          "0.7-r10": 3.604531,
+          "0.7-r100": 0.411946
+        },
+        "positive_delta_count": 8,
+        "min_primary_delta": 1.6935576152877871,
+        "primary_mean_delta": 4.134721745432352,
+        "r100_mean_delta": 0.3146813136514517,
+        "selection_score": 4.213392073845215,
+        "top1_changed_ratio": 0.2267994049662433,
+        "hard_positive_top100_exits": 104,
+        "hard_positive_top100_entries": 5589,
+        "hard_positive_top100_exit_ratio": 0.0016575025898477966,
+        "y_fp_down_move_ratio": 0.6270197819073342,
+        "y_joint_05_down_move_ratio": 0.10177703402661567,
+        "wrong_video_boundary_bonus_mean": 0.00967548880726099,
+        "mean_qbd_train_calib": 0.40322527289390564,
+        "weighted_component_std": {
+          "base": 1.0253400790820935,
+          "q_joint": 0.1403047740459442,
+          "boundary": 0.0411786288022995,
+          "negative_e_fp": 0.11377590149641037
+        },
+        "weighted_component_std_share": {
+          "base": 0.7764202315629569,
+          "q_joint": 0.10624325272807217,
+          "boundary": 0.031181771943166774,
+          "negative_e_fp": 0.08615474376580413
+        },
+        "pearson_base_vs_c3": 0.9804883336458325,
+        "spearman_mean_within_query": 0.9853781461715698,
+        "constraints": {
+          "primary_metrics_all_positive": true,
+          "positive_delta_count_min_6": true,
+          "r100_delta_floor": true,
+          "hard_positive_exit_ratio": true,
+          "top1_changed_ratio": true,
+          "pearson": true,
+          "spearman": true,
+          "base_component_dominant": true,
+          "boundary_component_not_dominant": true
+        },
+        "feasible": true
+      },
+      "probe_selection_score": 4.213392073845215,
+      "probe_family": "B_gated_boundary",
+      "checkpoint_sha256": "38ed3c17067b54b8994346668d133285e81f6be27645daed6d2d10a7379df4a0"
+    }
+  ]
+}

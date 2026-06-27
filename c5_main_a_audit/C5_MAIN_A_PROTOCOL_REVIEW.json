@@ -1,0 +1,41 @@
+{
+  "status": "C5_MAIN_A_PROTOCOL_REVIEW_PASS_WITH_CORRECTIONS",
+  "stage": "C5-main-inference-A",
+  "primary_baseline": "C4_final = C4-r2-cal-v2.1 v21_00444",
+  "scientific_target": "fixed-candidate retrieval-conditioned role-specific begin/end posterior injection",
+  "capacity": {
+    "trainable_model": false,
+    "reason_no_mlp": "Training and fine-tuning are prohibited; an untrained neural layer would reduce validity rather than raise the precision ceiling.",
+    "role_specific_full_temporal_distributions": true,
+    "dimensions": ["alpha", "beta", "tau", "lambda", "gamma"],
+    "nonzero_config_count": 432,
+    "zero_control_count": 1
+  },
+  "frozen_formula": {
+    "P_s_prior": "Normalize[P_b^(1+alpha) * (P_ctx+eps)^beta]",
+    "P_e_prior": "Normalize[P_e^(1+alpha) * (P_ctx+eps)^beta]",
+    "gate": "clip(2*sigmoid(R_video_z/tau), 0.25, 1.75)",
+    "new_P_b": "Normalize[P_b * P_s_prior^(lambda*gate)]",
+    "new_P_e": "Normalize[P_e * P_e_prior^(lambda*gate)]",
+    "Delta_bd": "log(new_P_b[i]/P_b[i]) + log(new_P_e[j]/P_e[j])",
+    "S_C5_main_A": "S_C4_final + gamma*z_trainfit(Delta_bd)"
+  },
+  "corrections": {
+    "grid_count": "432 nonzero plus one zero control = 433",
+    "retrieval_gate": "The suggested sigmoid-only gate could never reach g_max=1.75; multiplying by two centers the gate at one and makes both bounds reachable.",
+    "logit_gauge": "Frozen exports contain probabilities, not identifiable raw-logit constants. Within-video normalization is required before endpoint log-probability changes can be compared across videos."
+  },
+  "discarded_implementation_check": {
+    "attempt_count": 1,
+    "formula": "lambda*gate*(log(P_s_prior[i])+log(P_e_prior[j]))",
+    "reason": "Arbitrary per-video normalization constants leaked into cross-video scores.",
+    "used_for_final_selection": false,
+    "official_val_used": false
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "training_used": false,
+  "candidate_regeneration_used": false,
+  "C5_main_B_used": false,
+  "C6_used": false
+}

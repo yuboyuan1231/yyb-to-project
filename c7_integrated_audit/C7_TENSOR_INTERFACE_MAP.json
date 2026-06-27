@@ -1,0 +1,112 @@
+{
+  "stage": "C7 tensor interface map",
+  "scope": "source_read_only_no_training",
+  "official_val_used": false,
+  "interfaces": [
+    {
+      "name": "query.feat",
+      "shape": "(B,Lq<=30,768)",
+      "producer": "StartEndDataset.get_query_feat_by_desc_id",
+      "consumer": "VideoQueryEncoder.forward_repr_query",
+      "c7_use": "query encoder input; frozen in C7-B"
+    },
+    {
+      "name": "visual.feat",
+      "shape": "(B,Nv,Lv<=100,4352)",
+      "producer": "StartEndDataset.__getitem__",
+      "consumer": "VideoQueryEncoder.forward_repr_video",
+      "c7_use": "video encoder input; frozen in C7-B"
+    },
+    {
+      "name": "sub.feat",
+      "shape": "(B,Nv,Lv<=100,768)",
+      "producer": "StartEndDataset.__getitem__",
+      "consumer": "TwoModalEncoder",
+      "c7_use": "subtitle branch input; frozen in C7-B"
+    },
+    {
+      "name": "_query_feature",
+      "shape": "(B,Lq,768)",
+      "producer": "CONQUER.encoder(task='repr_query')",
+      "consumer": "repeat_interleave for shared videos",
+      "c7_use": "available in intermediates; can condition RLEM heads"
+    },
+    {
+      "name": "video_feature_dict",
+      "shape": "dict modality -> (B*Nv,Lv,768)",
+      "producer": "CONQUER.encoder(task='repr_video')",
+      "consumer": "QDF compute_final_score",
+      "c7_use": "diagnostic export only in C7-B"
+    },
+    {
+      "name": "moe_weights_dict",
+      "shape": "dict modality -> (B*Nv)",
+      "producer": "QueryWeightEncoder",
+      "consumer": "compute_final_score",
+      "c7_use": "modality agreement/conflict features"
+    },
+    {
+      "name": "QDF_feature",
+      "shape": "(B*Nv,Lv,768)",
+      "producer": "compute_final_score",
+      "consumer": "BiDirectionalAttention",
+      "c7_use": "frozen feature source"
+    },
+    {
+      "name": "QAL_feature",
+      "shape": "(B*Nv,Lv,3072)",
+      "producer": "BiDirectionalAttention",
+      "consumer": "contextual_QAL_feature_learning",
+      "c7_use": "primary C7 head input"
+    },
+    {
+      "name": "Contextual_QAL",
+      "shape": "(B*Nv,Lv,768)",
+      "producer": "FCPlusTransformer",
+      "consumer": "MomentLocalizationHead and G concat",
+      "c7_use": "proposal confidence and MIL input"
+    },
+    {
+      "name": "G",
+      "shape": "(B*Nv,Lv,3840)",
+      "producer": "cat(QAL_feature, Contextual_QAL)",
+      "consumer": "ML head and VS head",
+      "c7_use": "primary integrated head input"
+    },
+    {
+      "name": "begin_score_distribution",
+      "shape": "(B,Nv,Lv)",
+      "producer": "MomentLocalizationHead",
+      "consumer": "loss/inference",
+      "c7_use": "boundary evidence and proposal confidence"
+    },
+    {
+      "name": "end_score_distribution",
+      "shape": "(B,Nv,Lv)",
+      "producer": "MomentLocalizationHead",
+      "consumer": "loss/inference",
+      "c7_use": "boundary evidence and proposal confidence"
+    },
+    {
+      "name": "video_similarity_score",
+      "shape": "(B,Nv) or None",
+      "producer": "VideoScoringHead when exclusive",
+      "consumer": "video CE and inference",
+      "c7_use": "residual video score anchor; remain frozen in C7-B"
+    },
+    {
+      "name": "inference_vr_scores",
+      "shape": "(B,max_vcmr_video)",
+      "producer": "StartEndDataset eval first-stage ranklist",
+      "consumer": "compute_query2ctx_info when use_interal_vr_scores",
+      "c7_use": "external VR score anchor"
+    },
+    {
+      "name": "VCMR score tensor",
+      "shape": "(B,max_vcmr_video,Lv,Lv)",
+      "producer": "inference score composition",
+      "consumer": "top max_before_nms flatten/sort",
+      "c7_use": "C7 score enters before flatten/sort, not after NMS"
+    }
+  ]
+}

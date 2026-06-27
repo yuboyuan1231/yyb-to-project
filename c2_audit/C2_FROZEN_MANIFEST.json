@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "stage": "C2_EVIDENCE_HEADS_TRAINING",
+  "status": "C2_PASS",
+  "date": "2026-06-22",
+  "scope": "train_fit training and train_calib checkpoint selection/diagnostics only",
+  "official_val_used": false,
+  "next_stage_authorized": false,
+  "source": {
+    "train_evidence": {
+      "path": "results/rlem_c1/train_evidence.jsonl.gz",
+      "sha256": "d49aaf49c44eda6e74ce936f31ff1a3c01a9d093e9e4f5c146840cf9548a6f48",
+      "queries": 86784,
+      "rows": 17356800
+    },
+    "official_val_evidence_untouched": {
+      "path": "results/rlem_c1/val_evidence.jsonl.gz",
+      "sha256": "ce9184e6b9e87581328850e6479231832e471caabae8881db9d6bbe1047f9884"
+    }
+  },
+  "split": {
+    "method": "sha256_prefix_u64_modulo",
+    "salt": "conquer-rlem-c2-v1",
+    "calib_rule": "first SHA256 64-bit integer modulo 10 equals 0",
+    "query_level": true,
+    "overlap_queries": 0,
+    "union_queries": 86784,
+    "train_fit": {
+      "ids_path": "results/rlem_c2/splits/train_fit_desc_ids.txt",
+      "ids_sha256": "e333aa4935ff3648367dff454987a6b6764a24df52cf3412fcc75a8213ca9fd2",
+      "queries": 78045,
+      "rows": 15609000,
+      "label_counts": {
+        "m_bd_positive": 1268031,
+        "y_joint_05_positive": 564348,
+        "y_joint_07_positive": 257190,
+        "y_fp_positive": 1323568
+      }
+    },
+    "train_calib": {
+      "ids_path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+      "ids_sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a",
+      "queries": 8739,
+      "rows": 1747800,
+      "label_counts": {
+        "m_bd_positive": 141900,
+        "y_joint_05_positive": 62745,
+        "y_joint_07_positive": 28283,
+        "y_fp_positive": 148469
+      }
+    }
+  },
+  "features": {
+    "schema": "c2_no_r2",
+    "feature_count": 31,
+    "disabled_unavailable_features": [
+      "r2_raw",
+      "r2_prob",
+      "r2_tilde",
+      "rank_r2",
+      "r_abs_gap"
+    ],
+    "feature_stats_fit_scope": "train_fit_only",
+    "feature_stats_count": 15609000,
+    "feature_stats_finite": true,
+    "feature_stats_path": "results/rlem_c2/basic_heads/feature_stats.json",
+    "feature_stats_sha256": "79a1502651d41a807d17e529d50fb7a2a1318422a35457e51329f36371372159"
+  },
+  "optimized_cache": {
+    "path": "results/rlem_c2/cache",
+    "dtype": "float32",
+    "normalization_equivalence": {
+      "method": "compared cache rows with FeatureStats.transform_row",
+      "fit_rows_checked": 100,
+      "calib_rows_checked": 100,
+      "max_abs_difference": 0.0
+    },
+    "finite": true,
+    "artifacts": {
+      "train_fit_x.npy": "d41e9faf7496f8b35d98d8fa70f6321b36b6b5fb6134345153aa5baecbc4a1ac",
+      "train_fit_y.npy": "7933a8a0881362d0dafb5dff45d547ca85ba22498fa1e355984570f27cac0deb",
+      "train_calib_x.npy": "106a39b7122b985058c4d0d25dda3d417ed1eb6796b609c111e76bf3394d7128",
+      "train_calib_y.npy": "8345bd6cd86b9846c85b24d8548caf4e991dedeb04e0357fee0bedcd04653ce5"
+    }
+  },
+  "smoke": {
+    "streaming": {
+      "status": "PASS",
+      "train_rows": 200000,
+      "calib_rows": 50000,
+      "wall_seconds": 25.44,
+      "diagnostics_sha256": "ed4a86a42de458656e1f457e84e1b5729eb6e45887a57e97eccb80e40720813a"
+    },
+    "cached": {
+      "status": "PASS",
+      "train_rows": 200000,
+      "calib_rows": 50000,
+      "wall_seconds": 1.94,
+      "speedup": 13.11,
+      "diagnostics_sha256": "61eb01014bb6e44448b8f62320fad05ecea6d6ab80e63e15601bbd8d94090946"
+    }
+  },
+  "training": {
+    "output_dir": "results/rlem_c2/basic_heads",
+    "device": "cuda",
+    "epochs": 3,
+    "batch_size": 1024,
+    "learning_rate": 0.001,
+    "hidden_dim": 128,
+    "seed": 13,
+    "wall_seconds": 83.91,
+    "best_epoch": 3,
+    "selection_metric": "train_calib total loss",
+    "best_train_calib_loss": 0.08972051525036849,
+    "model_best": {
+      "path": "results/rlem_c2/basic_heads/model_best.pt",
+      "sha256": "e4a8944d836075139211202eac5caf0cb708de878447893b10dd8af34ac6bda9"
+    },
+    "history": {
+      "path": "results/rlem_c2/basic_heads/history.json",
+      "sha256": "798284923e9a3828156830cbe805cdac94e0f841e54a8bf794298ab5a55708c0"
+    },
+    "train_args": {
+      "path": "results/rlem_c2/basic_heads/train_args.json",
+      "sha256": "23573d0bc5c31368d2c8f806a19296a711bff6657a8d56759d9707d6eb83ecda",
+      "val_jsonl": null
+    },
+    "preoptimization_run": {
+      "path": "results/rlem_c2/basic_heads_aborted_preopt_20260622",
+      "accepted": false,
+      "reason": "streaming JSON/gzip input starved the GPU; interrupted before a complete epoch and before checkpoint acceptance"
+    }
+  },
+  "diagnostics": {
+    "status": "PASS",
+    "scope": "train_calib_only",
+    "rows": 1747800,
+    "checkpoint_epoch": 3,
+    "output_json": "results/rlem_c2/basic_heads/diagnostics_train_calib.json",
+    "output_json_sha256": "134282972931e5b1186cf65b2a1765d79fb8d8a8ee296f64131d64027750135b",
+    "output_md": "results/rlem_c2/basic_heads/diagnostics_train_calib.md",
+    "output_md_sha256": "001050d360dcfe15a91cdeccbed24f2d4552d1507105b5a26b41297aee9a7bd9",
+    "metrics": {
+      "q_joint_y_joint_pearson": 0.5353247114034826,
+      "q_joint_y_joint_spearman": 0.35588885202955917,
+      "q_joint_y_joint_05_auc": 0.912461628812496,
+      "q_bd_y_bd_pearson_m_bd": 0.6397783552985424,
+      "q_bd_y_bd_spearman_m_bd": 0.625726311234329,
+      "e_fp_y_fp_auc": 0.9879981755520232
+    },
+    "collapsed_heads": [],
+    "r2_features_enabled": []
+  },
+  "code": {
+    "split_train_fit_calib.py": "4ad8b68e67efa743ccd0094f18395c1502f0ec4f4c8ba4d50ad49ce48e17320e",
+    "feature_schema.py": "96e0c6408164944d3fdcd654c6da974c7b62b4f7c74d65e49c1626be857fa4fc",
+    "evidence_dataset.py": "921a144a0ea6afb1825f2ab9a4b6b1ecfacb2b52d151502a20ee1fd84a55e165",
+    "train_evidence_heads.py": "81d08feab9b85f32d60a65c04cba8c4e0e83aac11920e52737e37c7a819e12b7",
+    "diagnose_evidence_heads.py": "7596befb9b70928c53400ca7df712514e5db0377961063a6fca64ca15b633c63",
+    "build_c2_feature_cache.py": "76d1fc29c46882642ee5d4a0b9173150b815469b4066d713b8c2cbe771b7fe5d"
+  },
+  "gates": {
+    "deterministic_query_split": true,
+    "smoke_passed": true,
+    "full_training_completed": true,
+    "checkpoint_selected_on_train_calib_only": true,
+    "all_heads_noncollapsed": true,
+    "q_bd_masked_by_m_bd": true,
+    "r2_fields_excluded": true,
+    "feature_stats_finite": true,
+    "official_val_not_used": true,
+    "c1_artifacts_unchanged": true,
+    "eligible_for_c3_minimal_train_calib_only_design": true
+  }
+}

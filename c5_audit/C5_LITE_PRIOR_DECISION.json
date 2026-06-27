@@ -1,0 +1,86 @@
+{
+  "status": "C5_LITE_PRIOR_TRAIN_CALIB_NEGATIVE",
+  "decision": "NO_PROMOTION",
+  "failure_class": "B_FEATURE_BUILD_SUCCEEDED_BUT_SAFE_VCMR_DID_NOT_IMPROVE",
+  "primary_baseline": "C4_final = C4-r2-cal-v2.1 v21_00444",
+  "strict_safe_selection": {
+    "config_id": "c5p_00000",
+    "description": "zero-residual control",
+    "selection_score_delta_vs_c4_final": 0.0,
+    "six_primary_nonnegative": true,
+    "r100_both_nonnegative": true,
+    "localization_gate": false,
+    "promotion_candidate": false
+  },
+  "highest_selection_score_nonzero_config": {
+    "config_id": "c5p_00138",
+    "family": "bd_prior",
+    "lambda_scale": 0.125,
+    "effective_term": "0.125 * 0.075 * z(retbd_boundary_agree)",
+    "selection_score_delta_vs_c4_final": 0.001430369607506421,
+    "six_primary_nonnegative": false,
+    "r100_both_nonnegative": true,
+    "movement_safe": true,
+    "active_parameter_on_grid_boundary": true,
+    "passing_neighbor_count": 0,
+    "deltas_vs_c4_final": {
+      "0.5-r1": -0.05721478430026394,
+      "0.5-r5": 0.0,
+      "0.5-r10": -0.06865774116032242,
+      "0.5-r100": 0.034328870580168314,
+      "0.7-r1": 0.034328870580157655,
+      "0.7-r5": 0.0,
+      "0.7-r10": 0.02288591372010984,
+      "0.7-r100": 0.0686577411603082
+    }
+  },
+  "grid": {
+    "mode": "small",
+    "deduplicated_grid_size": 659,
+    "six_primary_nonnegative_count": 1,
+    "r100_both_nonnegative_count": 447,
+    "movement_safe_count": 659,
+    "localization_gate_pass_count": 0,
+    "promotion_candidate_count": 0
+  },
+  "interpretation": "The only configuration satisfying all six primary non-degradation constraints was the zero-residual control. The highest-scoring nonzero residual reduced 0.5 R@1 and 0.5 R@10, so retrieval-conditioned localization feedback is not verified under the frozen protocol.",
+  "recommend_official_val": false,
+  "freeze_review_generated": false,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "C4_retuned": false,
+  "C5_main_used": false,
+  "C6_used": false,
+  "model_conquer_modified": false,
+  "candidate_generation_modified": false,
+  "begin_end_logits_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "retrieval_constants": {
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "artifacts": {
+    "protocol_freeze": {
+      "path": "c5_audit/C5_LITE_PRIOR_PROTOCOL_FREEZE.json",
+      "sha256": "0ac35fd5dffcf5aa2cd84bd3eb3985bf0d1203094b543b32df599c22ec467367"
+    },
+    "train_calib_search_audit": {
+      "path": "results/rlem_c5_lite_prior/c5_lite_prior_train_calib_audit.json",
+      "sha256": "00bd9abd4b47b083ace9a78e767e62705f9597f23fc97ff04f852cd2840ac3a4"
+    },
+    "grid_results_json": {
+      "path": "results/rlem_c5_lite_prior/c5_lite_prior_grid_results.json",
+      "sha256": "c671dbc4b24ffe5e67188b4f50de449083e7664d43c18351c0d43ddeec0c895e"
+    },
+    "term_stats": {
+      "path": "c5_audit/C5_LITE_PRIOR_TERM_STATS_FREEZE.json",
+      "sha256": "fc0427c3b84fbb75cab1191359a2eb82cc86eb34ff47ea59e7fe33bd219522e3"
+    }
+  },
+  "stop_boundary": "STOP_AFTER_TRAIN_CALIB_NEGATIVE_AUDIT"
+}

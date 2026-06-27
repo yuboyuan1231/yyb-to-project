@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scored_jsonl": "results/rlem_c4_lite/train_calib_c31_scored.jsonl.gz",
+  "output_npz": "results/rlem_c4_lite/train_calib_c4_cache.npz",
+  "queries": 8739,
+  "rows": 1747800,
+  "rows_per_query_expected": 200,
+  "bad_query_counts": 0,
+  "duplicate_candidates": 0,
+  "nonfinite_values": 0,
+  "video_groups": 87230,
+  "official_val_used": false
+}

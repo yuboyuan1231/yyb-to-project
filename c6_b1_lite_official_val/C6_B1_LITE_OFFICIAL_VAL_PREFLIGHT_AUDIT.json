@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "python": "/home/a/miniconda3/envs/conquer-rlem/bin/python3",
+  "py_compile_returncode": 0,
+  "py_compile_stderr": "",
+  "partial_files": [],
+  "freeze_manifest": {
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_MANIFEST.json",
+    "exists": true,
+    "size": 1778,
+    "sha256": "c6221fdb4109928c7ea860df730f0989b39f1f5757fc8a5683b61d3ad6856bdf"
+  },
+  "freeze_review": {
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_REVIEW.md",
+    "exists": true,
+    "size": 4761,
+    "sha256": "e6483fe6f7125c3284f82f61b6a5c05f754888aa7e80710de6eb272aebba2828"
+  },
+  "freeze_hashes": {
+    "path": "c6_b1_lite_audit/C6_B1_LITE_R1_SAFE_FREEZE_HASHES.json",
+    "exists": true,
+    "size": 3598,
+    "sha256": "0c9af97d3077590e0f3a0c5fd8aab299a95db2953ba316cba3e873cf22e084a5"
+  },
+  "best_config": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/best_config.json",
+    "exists": true,
+    "size": 1133,
+    "sha256": "d4a2b3f6c4af90aedaf61b51d0b19f70e71572a732a206cb594ccdb04cd24c5d"
+  },
+  "selector_ckpt": {
+    "path": "results/rlem_c6_b1_lite_r1_safe/model_best.pt",
+    "exists": true,
+    "size": 1877675,
+    "sha256": "1dd442966921e8d17511af48aa411ce24f541a01103d12346995affc8fa37be5"
+  },
+  "boundary_ckpt": {
+    "path": "results/rlem_c6a_repair/boundary_oracle/model_best.pt",
+    "exists": true,
+    "size": 10728107,
+    "sha256": "77fbf5d90477b489cff43442ad3b4ab1aa9fe7d7d387e9f9117d453a028e115b"
+  },
+  "selector_code": {
+    "path": "rlem_c6_b1_lite/run_c6_b1_r1_safe_selector.py",
+    "exists": true,
+    "size": 35595,
+    "sha256": "b889e75414d8d84e2f48b78dc6de285d99708dc293fe3df5eb86cebfb3b2cccc"
+  },
+  "official_val_cache_source": {
+    "path": "results/rlem_c4_lite_official_val/val_c4_cache.npz",
+    "exists": true,
+    "size": 70214434,
+    "sha256": "b24f32831331f24b905eb547d66b9f4c67b3c48d17d9e9579be4e81ccd0d5796"
+  },
+  "c4_final_scores": {
+    "path": "results/rlem_c4_r2_cal_v21_official_val/val_v21_row_scores.npz",
+    "exists": true,
+    "size": 16489322,
+    "sha256": "3a6bdfe5b80ddfcaf054b1d5ee25af28a330f1a2ffbd52d508359489533de1fa"
+  },
+  "temporal_prior": {
+    "path": "results/rlem_c5_main_a3_video_slot/official_val_temporal_prior.npz",
+    "exists": true,
+    "size": 130091980,
+    "sha256": "7289a1641cf16a726d0c0cf58caa364fe9e420ee6bd8e96f79fdc12305f3c2a2"
+  },
+  "config_exact_match": true,
+  "official_val_used_before_this_run": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false
+}

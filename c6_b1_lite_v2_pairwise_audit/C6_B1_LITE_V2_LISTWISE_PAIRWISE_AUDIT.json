@@ -1,0 +1,158 @@
+{
+  "C6_C_used": false,
+  "artifacts": {
+    "best_config": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_pairwise/best_config_v2_listwise_pairwise.json",
+      "sha256": "3da8ef7ef3db6a799c3d41dd6b530f377229d7a25502125a168700b90d8c05b9",
+      "size": 963
+    },
+    "calib_scores": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_pairwise/train_calib_candidate_scores_v2_listwise_pairwise.npz",
+      "sha256": "e3f2703a93b5f9e891b532fa8d08b1877e58a7878e84222a462bae9754d57d43",
+      "size": 1190916
+    },
+    "grid_results": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_pairwise/grid_results_v2_listwise_pairwise.json",
+      "sha256": "3f7400fed581e469607c5a94ca30946ca817f5b6df7cb3a032627dc93f7e8c5f",
+      "size": 95059
+    },
+    "history": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_pairwise/history_v2_listwise_pairwise.json",
+      "sha256": "1b67fd8781a8cee8e8d638c380c70ba61f7d23bcc1fa52c43d2847a749dc8163",
+      "size": 530
+    },
+    "model_best": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_pairwise/model_best_v2_listwise_pairwise.pt",
+      "sha256": "8fc7bfbe3cf6bdba4bf1bf797dd88a7bd6172641fff6a1655f4835475869da18",
+      "size": 17870287
+    }
+  },
+  "baseline_pseudo_C4_final": {
+    "hard_positive_top100_query_entries": 0,
+    "hard_positive_top100_query_exits": 0,
+    "metrics": {
+      "0.5-r1": 39.375214555441126,
+      "0.5-r10": 69.48163405423962,
+      "0.5-r100": 76.22153564481061,
+      "0.5-r5": 62.28401418926651,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.24213296715872,
+      "0.7-r100": 65.3049548003204,
+      "0.7-r5": 48.644009612083764
+    },
+    "replacement_rate_top_slots": 0.0,
+    "replacements": 0,
+    "top1_changed_ratio": 0.0,
+    "video_multiset_drift": 0.0,
+    "video_slot_drift": 0.0
+  },
+  "best_config": {
+    "apply_slots": 1,
+    "config_id": "c6b1r1_0007",
+    "delta_vs_pseudo_C4_final": {
+      "0.5-r1": 0.0,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.0,
+      "0.5-r5": 0.0,
+      "0.7-r1": 0.0,
+      "0.7-r10": 0.0,
+      "0.7-r100": 0.0,
+      "0.7-r5": 0.0
+    },
+    "feasible": false,
+    "max_replacements": 1,
+    "metrics": {
+      "0.5-r1": 39.375214555441126,
+      "0.5-r10": 69.48163405423962,
+      "0.5-r100": 76.22153564481061,
+      "0.5-r5": 62.28401418926651,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.24213296715872,
+      "0.7-r100": 65.3049548003204,
+      "0.7-r5": 48.644009612083764
+    },
+    "movement": {
+      "hard_positive_top100_query_entries": 0,
+      "hard_positive_top100_query_exits": 0,
+      "replacement_rate_top_slots": 0.0,
+      "replacements": 0,
+      "top1_changed_ratio": 0.0,
+      "video_multiset_drift": 0.0,
+      "video_slot_drift": 0.0
+    },
+    "r1_positive": false,
+    "r5_safe": true,
+    "selection_score": 0.0,
+    "threshold0": 1.5,
+    "threshold_rest": 999.0
+  },
+  "feasible_count": 0,
+  "grid_size": 78,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "r1_positive_count": 0,
+  "r5_safe_count": 21,
+  "references": {
+    "listwise_learning_to_rank": "Listwise softmax/CE over the full alternative set.",
+    "proposal_confidence": "Boundary alternatives need proposal confidence rather than blind replacement."
+  },
+  "runtime": {
+    "calib_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_pool_top_slots.npz",
+      "sha256": "08029943dece218fa5c1cbf016fe3bb9b4330dd83a05d759e2dea2d85ecceb15",
+      "size": 12624246
+    },
+    "train_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_candidate_pool_top_slots.npz",
+      "sha256": "6167fc888fc53a1f9004588d225661f9b5487746bb00b1b594ffc06e2c226fab",
+      "size": 112176367
+    },
+    "training": {
+      "history": [
+        {
+          "elapsed_sec": 8.687530755996704,
+          "epoch": 1,
+          "loss": 5.139591266711553,
+          "target_acc": 0.45071555239458877
+        },
+        {
+          "elapsed_sec": 8.115504026412964,
+          "epoch": 2,
+          "loss": 5.004788299401601,
+          "target_acc": 0.48103351642688114
+        },
+        {
+          "elapsed_sec": 8.113550901412964,
+          "epoch": 3,
+          "loss": 5.0160976847012835,
+          "target_acc": 0.4684183957676093
+        },
+        {
+          "elapsed_sec": 8.160157203674316,
+          "epoch": 4,
+          "loss": 5.016325930754344,
+          "target_acc": 0.4725115951150656
+        }
+      ],
+      "model_artifact": {
+        "exists": true,
+        "path": "results/rlem_c6_b1_lite_v2_pairwise/model_best_v2_listwise_pairwise.pt",
+        "sha256": "8fc7bfbe3cf6bdba4bf1bf797dd88a7bd6172641fff6a1655f4835475869da18",
+        "size": 17870287
+      },
+      "reused": true,
+      "train_candidate_examples": 3121800,
+      "train_slot_groups": 390225
+    }
+  },
+  "stage": "C6-B1-lite-v2 listwise slot selector (pairwise)",
+  "status": "C6_B1_LITE_V2_LISTWISE_PAIRWISE_R1_SAFE_NEGATIVE",
+  "variant": "pairwise"
+}

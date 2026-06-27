@@ -1,0 +1,25 @@
+{
+  "status": "C6_B2_PROTOCOL_DESIGN_REVIEW_ONLY",
+  "training_started": false,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "C6_C_used": false,
+  "current_promoted_system": "C6-B1-lite c6b1r1_0057",
+  "primary_metric": "0.7 R@1",
+  "secondary_metric": "0.5 R@1",
+  "R5_R10_policy": "guardrails; limited decline acceptable",
+  "R100_policy": "reported only; not optimized unless catastrophic",
+  "recommended_next_goal_mode": "C6-B2 train_fit/train_calib multi-arm experiment; no official val",
+  "document": {
+    "path": "c6_b2_design_review/C6_B2_PROTOCOL_DESIGN_REVIEW.md",
+    "sha256": "c2149d2cd896fa2a222026c2a35cc265cb76c21825321e32accd0d6c6da22f1b",
+    "size": 14453
+  },
+  "source_inputs": [
+    "c6_b1_lite_final/C6_B1_LITE_FINAL_SUMMARY.md",
+    "c6_b1_lite_final/C6_B1_LITE_CEILING_ANALYSIS.md",
+    "c6_b1_lite_final/C6_B1_LITE_MECHANISM_ANALYSIS.md",
+    "/home/a/.codex/attachments/ffdd8462-0b87-4b9b-9a91-210ddef9ab97/pasted-text.txt"
+  ]
+}

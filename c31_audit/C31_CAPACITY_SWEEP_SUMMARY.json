@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "official_val_used": false,
+  "configs_json": "c31_audit/C31_CAPACITY_CONFIGS.json",
+  "config_count": 18,
+  "results": [
+    {
+      "config_id": "cap_A_wd0",
+      "status": "REUSED",
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_A_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.0909961954507065,
+        "parameter_count": 4739,
+        "runtime_seconds": 199.8123607635498,
+        "official_val_used": false
+      }
+    },
+    {
+      "config_id": "cap_A_wd1e5",
+      "status": "REUSED",
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_A_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.0909961954507065,
+        "parameter_count": 4739,
+        "runtime_seconds": 265.1910574436188,
+        "official_val_used": false
+      }
+    },
+    {
+      "config_id": "cap_A_wd1e4",
+      "status": "REUSED",
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_A_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.09099856189383373,
+        "parameter_count": 4739,
+        "runtime_seconds": 215.573810338974,
+        "official_val_used": false
+      }
+    },
+    {
+      "config_id": "cap_B_wd0",
+      "status": "REUSED",
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_B_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.08975538981664725,
+        "parameter_count": 21507,
+        "runtime_seconds": 173.10283970832825,
+        "official_val_used": false
+      }
+    },
+    {
+      "config_id": "cap_B_wd1e5",
+      "status": "REUSED",
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_B_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.08975538981664725,
+        "parameter_count": 21507,
+        "runtime_seconds": 189.93500566482544,
+        "official_val_used": false
+      }
+    },
+    {
+      "config_id": "cap_B_wd1e4",
+      "status": "PASS",
+      "runtime_seconds": 85.86919069290161,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_B_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.08972053773889609,
+        "parameter_count": 21507,
+        "runtime_seconds": 80.92359828948975,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5353247116390639,
+        "q_joint_y_joint_spearman": 0.3558888520141587,
+        "q_joint_y_joint_05_auc": 0.9124616287888506,
+        "q_bd_y_bd_pearson_m_bd": 0.6397783553050796,
+        "q_bd_y_bd_spearman_m_bd": 0.6257263132351285,
+        "e_fp_y_fp_auc": 0.9879981755520232
+      }
+    },
+    {
+      "config_id": "cap_C_wd0",
+      "status": "PASS",
+      "runtime_seconds": 78.91671180725098,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_C_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.0911307889264022,
+        "parameter_count": 9475,
+        "runtime_seconds": 74.15966463088989,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.533296675564538,
+        "q_joint_y_joint_spearman": 0.35833904235797737,
+        "q_joint_y_joint_05_auc": 0.9116082042394039,
+        "q_bd_y_bd_pearson_m_bd": 0.6248283933802177,
+        "q_bd_y_bd_spearman_m_bd": 0.6118522428577227,
+        "e_fp_y_fp_auc": 0.9876084627878399
+      }
+    },
+    {
+      "config_id": "cap_C_wd1e5",
+      "status": "PASS",
+      "runtime_seconds": 77.3979218006134,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_C_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.0911307889264022,
+        "parameter_count": 9475,
+        "runtime_seconds": 72.97146153450012,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.533296675564538,
+        "q_joint_y_joint_spearman": 0.35833904235797737,
+        "q_joint_y_joint_05_auc": 0.9116082042394039,
+        "q_bd_y_bd_pearson_m_bd": 0.6248283933802177,
+        "q_bd_y_bd_spearman_m_bd": 0.6118522428577227,
+        "e_fp_y_fp_auc": 0.9876084627878399
+      }
+    },
+    {
+      "config_id": "cap_C_wd1e4",
+      "status": "PASS",
+      "runtime_seconds": 85.42648339271545,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_C_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.09111382773087845,
+        "parameter_count": 9475,
+        "runtime_seconds": 73.17999839782715,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5334832125336348,
+        "q_joint_y_joint_spearman": 0.3583090877321276,
+        "q_joint_y_joint_05_auc": 0.9116453817482115,
+        "q_bd_y_bd_pearson_m_bd": 0.6250212398141729,
+        "q_bd_y_bd_spearman_m_bd": 0.6120965971162259,
+        "e_fp_y_fp_auc": 0.987608466316988
+      }
+    },
+    {
+      "config_id": "cap_D_wd0",
+      "status": "PASS",
+      "runtime_seconds": 94.98553776741028,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_D_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.09001838911860578,
+        "parameter_count": 42243,
+        "runtime_seconds": 80.29658436775208,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5352868710926125,
+        "q_joint_y_joint_spearman": 0.35569630501234945,
+        "q_joint_y_joint_05_auc": 0.9120233165973716,
+        "q_bd_y_bd_pearson_m_bd": 0.6369412922614712,
+        "q_bd_y_bd_spearman_m_bd": 0.6234340081191513,
+        "e_fp_y_fp_auc": 0.987896412432705
+      }
+    },
+    {
+      "config_id": "cap_D_wd1e5",
+      "status": "PASS",
+      "runtime_seconds": 96.09203767776489,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_D_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.09001838911860578,
+        "parameter_count": 42243,
+        "runtime_seconds": 80.87840437889099,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5352868710926125,
+        "q_joint_y_joint_spearman": 0.35569630501234945,
+        "q_joint_y_joint_05_auc": 0.9120233165973716,
+        "q_bd_y_bd_pearson_m_bd": 0.6369412922614712,
+        "q_bd_y_bd_spearman_m_bd": 0.6234340081191513,
+        "e_fp_y_fp_auc": 0.987896412432705
+      }
+    },
+    {
+      "config_id": "cap_D_wd1e4",
+      "status": "PASS",
+      "runtime_seconds": 95.9768533706665,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_D_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.09004159478386066,
+        "parameter_count": 42243,
+        "runtime_seconds": 80.70879054069519,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5348773186127314,
+        "q_joint_y_joint_spearman": 0.3554951561582467,
+        "q_joint_y_joint_05_auc": 0.9119686455161385,
+        "q_bd_y_bd_pearson_m_bd": 0.6351977293950282,
+        "q_bd_y_bd_spearman_m_bd": 0.6213465609887368,
+        "e_fp_y_fp_auc": 0.9879011051699502
+      }
+    },
+    {
+      "config_id": "cap_E_wd0",
+      "status": "PASS",
+      "runtime_seconds": 89.19962430000305,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_E_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.09003604793974185,
+        "parameter_count": 75779,
+        "runtime_seconds": 81.8697018623352,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5345716299912662,
+        "q_joint_y_joint_spearman": 0.3556047795601352,
+        "q_joint_y_joint_05_auc": 0.9116961248165062,
+        "q_bd_y_bd_pearson_m_bd": 0.6358565206170992,
+        "q_bd_y_bd_spearman_m_bd": 0.6225742276901367,
+        "e_fp_y_fp_auc": 0.9879718964458114
+      }
+    },
+    {
+      "config_id": "cap_E_wd1e5",
+      "status": "PASS",
+      "runtime_seconds": 98.74231433868408,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_E_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.09003604793974185,
+        "parameter_count": 75779,
+        "runtime_seconds": 82.66936182975769,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5345716299912662,
+        "q_joint_y_joint_spearman": 0.3556047795601352,
+        "q_joint_y_joint_05_auc": 0.9116961248165062,
+        "q_bd_y_bd_pearson_m_bd": 0.6358565206170992,
+        "q_bd_y_bd_spearman_m_bd": 0.6225742276901367,
+        "e_fp_y_fp_auc": 0.9879718964458114
+      }
+    },
+    {
+      "config_id": "cap_E_wd1e4",
+      "status": "PASS",
+      "runtime_seconds": 97.6608054637909,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_E_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.09023841389114408,
+        "parameter_count": 75779,
+        "runtime_seconds": 80.93820571899414,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5336790047152477,
+        "q_joint_y_joint_spearman": 0.35473046454931495,
+        "q_joint_y_joint_05_auc": 0.9108538671749244,
+        "q_bd_y_bd_pearson_m_bd": 0.6331408254185349,
+        "q_bd_y_bd_spearman_m_bd": 0.6199455778678085,
+        "e_fp_y_fp_auc": 0.9879869132045752
+      }
+    },
+    {
+      "config_id": "cap_F_wd0",
+      "status": "PASS",
+      "runtime_seconds": 97.45106196403503,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_F_wd0",
+        "best_epoch": 3,
+        "best_val_loss": 0.09029530301166626,
+        "parameter_count": 108547,
+        "runtime_seconds": 88.78327012062073,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5325524156135878,
+        "q_joint_y_joint_spearman": 0.35368417110820966,
+        "q_joint_y_joint_05_auc": 0.9107590820049689,
+        "q_bd_y_bd_pearson_m_bd": 0.6328861089720161,
+        "q_bd_y_bd_spearman_m_bd": 0.6198649667106981,
+        "e_fp_y_fp_auc": 0.9879452261369055
+      }
+    },
+    {
+      "config_id": "cap_F_wd1e5",
+      "status": "PASS",
+      "runtime_seconds": 96.25270175933838,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_F_wd1e5",
+        "best_epoch": 3,
+        "best_val_loss": 0.09029530301166626,
+        "parameter_count": 108547,
+        "runtime_seconds": 87.82848453521729,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5325524156135878,
+        "q_joint_y_joint_spearman": 0.35368417110820966,
+        "q_joint_y_joint_05_auc": 0.9107590820049689,
+        "q_bd_y_bd_pearson_m_bd": 0.6328861089720161,
+        "q_bd_y_bd_spearman_m_bd": 0.6198649667106981,
+        "e_fp_y_fp_auc": 0.9879452261369055
+      }
+    },
+    {
+      "config_id": "cap_F_wd1e4",
+      "status": "PASS",
+      "runtime_seconds": 92.78688049316406,
+      "summary": {
+        "status": "PASS",
+        "config_id": "cap_F_wd1e4",
+        "best_epoch": 3,
+        "best_val_loss": 0.09008355760010965,
+        "parameter_count": 108547,
+        "runtime_seconds": 88.31791496276855,
+        "official_val_used": false
+      },
+      "diagnostic_metrics": {
+        "q_joint_y_joint_pearson": 0.5339379648498852,
+        "q_joint_y_joint_spearman": 0.35414849972298784,
+        "q_joint_y_joint_05_auc": 0.910962351950183,
+        "q_bd_y_bd_pearson_m_bd": 0.6347539898895349,
+        "q_bd_y_bd_spearman_m_bd": 0.6221697030798823,
+        "e_fp_y_fp_auc": 0.9879977321617359
+      }
+    }
+  ]
+}

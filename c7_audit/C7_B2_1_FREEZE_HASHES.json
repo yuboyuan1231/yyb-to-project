@@ -1,0 +1,69 @@
+{
+  "status": "C7_B2_1_FREEZE_HASHES",
+  "official_val_used": false,
+  "metric_hash": "f407e93abee75f09ccc9be2c88f68ca0450f350be93d1f2561fbec1d3a618cf8",
+  "prediction_hash": "ddfc7cb80ce348a15022882d51d48daddcac0277908e856415ced379ccf60ad2",
+  "score_hash": "a9284a17b526bbadcaa0167510b32060b9a1305eb51446f7e28b460df960699e",
+  "artifacts": {
+    "fixed_pool": {
+      "path": "c7_audit/C7_B2_1_FIXED_POOL_INVARIANT.json",
+      "exists": true,
+      "size": 1096,
+      "sha256": "b1f090fadd127f58961424304abab966616ac858cb6d12359aa6bbbad4643301"
+    },
+    "zero_residual": {
+      "path": "c7_audit/C7_B2_1_ZERO_RESIDUAL_CONTROL.json",
+      "exists": true,
+      "size": 888,
+      "sha256": "0eae65398b4243c765aae4e4e38f3cbd6c343251c91642eee04f37ebc2933fb8"
+    },
+    "deterministic": {
+      "path": "c7_audit/C7_B2_1_DETERMINISTIC_RERUN.json",
+      "exists": true,
+      "size": 1892,
+      "sha256": "fc6826f86f0161320c0083b0e98cdd6a161e692aebca9b99ffc05189fa566fc7"
+    },
+    "leakage": {
+      "path": "c7_audit/C7_B2_1_LEAKAGE_AUDIT.json",
+      "exists": true,
+      "size": 1635,
+      "sha256": "5ac2411c21dbb9ae47022aeb5c897f9ec79ac9675f69664d686d21beb41e5734"
+    },
+    "neighbor": {
+      "path": "c7_audit/C7_B2_1_NEIGHBOR_SANITY.json",
+      "exists": true,
+      "size": 12518,
+      "sha256": "c73c6cc2de00bfc80771835c5312092072e7bec6dcdbf6a6f0216688680081b9"
+    },
+    "prereg": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_GATE_PREREG.json",
+      "exists": true,
+      "size": 893,
+      "sha256": "65956fca4f55719279ad45cd0cf8a3f91b4ae8629b73136bfe5066aa0a885c47"
+    },
+    "final": {
+      "path": "c7_audit/C7_B2_1_FINAL_FREEZE_PACKAGE.json",
+      "exists": true,
+      "size": 2212,
+      "sha256": "60644f05a7b0b72f4d1c61c03363681e069985c0940caeb0a70bb9761d48aa2f"
+    },
+    "ready": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_READY_MANIFEST.json",
+      "exists": true,
+      "size": 611,
+      "sha256": "f8b29c05e2518c6e5f4e7dc9e8f3f0a17171c77c3abcce8c9f167729990637dc"
+    },
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/freeze_c7_b2_1.py",
+      "exists": true,
+      "size": 21810,
+      "sha256": "8e258948368d7ae51e06562252f508a98981354479fe23c977cceca87a1f58c8"
+    },
+    "model": {
+      "path": "results/rlem_c7_b2/c7_b2_mil_video_residual_head.pt",
+      "exists": true,
+      "size": 1276979,
+      "sha256": "8db8ae4b65737f166e66a023b36c50312e2ee2bc78f50088a9b87c78e00e86de"
+    }
+  }
+}

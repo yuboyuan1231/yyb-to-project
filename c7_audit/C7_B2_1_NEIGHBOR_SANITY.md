@@ -1,0 +1,441 @@
+# C7-B2.1 neighbor sanity
+
+```json
+{
+  "status": "PASS",
+  "official_val_used": false,
+  "scope": "audit_only_no_reselection",
+  "selected_variant_fixed": "A4_video_residual_only",
+  "selected_video_residual_weight": 0.75,
+  "selection_changed": false,
+  "records": [
+    {
+      "name": "video_weight_0.0",
+      "metrics": {
+        "0.5-r1": 42.91108822519739,
+        "0.5-r5": 65.3049548003204,
+        "0.5-r10": 72.2622725712324,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 26.36457260556128,
+        "0.7-r5": 51.378876301636346,
+        "0.7-r10": 60.636228401418926,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 0,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 0.0
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.0,
+        "0.7-r5": 0.0,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": -7.94141206087653,
+        "0.5-r5": -7.209062821833157,
+        "0.5-r10": -4.428424304840377,
+        "0.5-r100": 0.0,
+        "0.7-r1": -4.668726398901473,
+        "0.7-r5": -7.174733951253003,
+        "0.7-r10": -5.790136171186639,
+        "0.7-r100": 0.0
+      }
+    },
+    {
+      "name": "video_weight_0.25",
+      "metrics": {
+        "0.5-r1": 45.542968303009495,
+        "0.5-r5": 67.85673418011214,
+        "0.5-r10": 73.99015905710036,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 27.955143609108593,
+        "0.7-r5": 53.770454285387345,
+        "0.7-r10": 62.77606133424877,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 230,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 223,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 151,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 139,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 209,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 187,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 0.25
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 2.631880077812106,
+        "0.5-r5": 2.551779379791739,
+        "0.5-r10": 1.7278864858679555,
+        "0.5-r100": 0.0,
+        "0.7-r1": 1.5905710035473142,
+        "0.7-r5": 2.3915779837509987,
+        "0.7-r10": 2.1398329328298473,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": -5.309531983064424,
+        "0.5-r5": -4.657283442041418,
+        "0.5-r10": -2.700537818972421,
+        "0.5-r100": 0.0,
+        "0.7-r1": -3.078155395354159,
+        "0.7-r5": -4.783155967502005,
+        "0.7-r10": -3.6503032383567913,
+        "0.7-r100": 0.0
+      }
+    },
+    {
+      "name": "video_weight_0.5",
+      "metrics": {
+        "0.5-r1": 48.1748483808216,
+        "0.5-r5": 70.41995651676393,
+        "0.5-r10": 75.61505893122784,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 29.580043483236068,
+        "0.7-r5": 56.162032269138344,
+        "0.7-r10": 64.85867948277836,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 460,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 447,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 293,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 281,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 418,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 369,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 0.5
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 5.263760155624212,
+        "0.5-r5": 5.11500171644353,
+        "0.5-r10": 3.3527863599954344,
+        "0.5-r100": 0.0,
+        "0.7-r1": 3.2154708776747896,
+        "0.7-r5": 4.7831559675019975,
+        "0.7-r10": 4.222451081359431,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": -2.6776519052523184,
+        "0.5-r5": -2.0940611053896276,
+        "0.5-r10": -1.0756379448449422,
+        "0.5-r100": 0.0,
+        "0.7-r1": -1.4532555212266836,
+        "0.7-r5": -2.391577983751006,
+        "0.7-r10": -1.567685089827208,
+        "0.7-r100": 0.0
+      }
+    },
+    {
+      "name": "video_weight_0.75",
+      "metrics": {
+        "0.5-r1": 50.85250028607392,
+        "0.5-r5": 72.51401762215356,
+        "0.5-r10": 76.69069687607278,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 31.03329900446275,
+        "0.7-r5": 58.55361025288935,
+        "0.7-r10": 66.42636457260556,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 694,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 630,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 387,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 408,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 627,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 506,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 0.75
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 7.94141206087653,
+        "0.5-r5": 7.209062821833157,
+        "0.5-r10": 4.428424304840377,
+        "0.5-r100": 0.0,
+        "0.7-r1": 4.668726398901473,
+        "0.7-r5": 7.174733951253003,
+        "0.7-r10": 5.790136171186639,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.0,
+        "0.7-r5": 0.0,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      }
+    },
+    {
+      "name": "video_weight_1.0",
+      "metrics": {
+        "0.5-r1": 53.495823320746084,
+        "0.5-r5": 74.16180341000114,
+        "0.5-r10": 77.27428767593547,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 32.41789678452912,
+        "0.7-r5": 60.338711523057555,
+        "0.7-r10": 67.74230461151161,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 925,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 774,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 438,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 529,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 783,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 621,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 1.0
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 10.584735095548695,
+        "0.5-r5": 8.856848609680739,
+        "0.5-r10": 5.012015104703067,
+        "0.5-r100": 0.0,
+        "0.7-r1": 6.053324178967841,
+        "0.7-r5": 8.959835221421208,
+        "0.7-r10": 7.106076210092688,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": 2.6433230346721643,
+        "0.5-r5": 1.6477857878475817,
+        "0.5-r10": 0.5835907998626908,
+        "0.5-r100": 0.0,
+        "0.7-r1": 1.3845977800663682,
+        "0.7-r5": 1.7851012701682052,
+        "0.7-r10": 1.3159400389060494,
+        "0.7-r100": 0.0
+      }
+    },
+    {
+      "name": "video_weight_1.25",
+      "metrics": {
+        "0.5-r1": 55.784414692756606,
+        "0.5-r5": 75.40908570774688,
+        "0.5-r10": 77.72056299347751,
+        "0.5-r100": 78.36136857764046,
+        "0.7-r1": 33.6308502116947,
+        "0.7-r5": 61.78052408742419,
+        "0.7-r10": 68.66918411717587,
+        "0.7-r100": 71.99908456345119
+      },
+      "movement": {
+        "hard_positive_top100_query_exits": 0,
+        "hard_positive_top100_query_entries": 0,
+        "hard_positive_exit_ratio": 0.0,
+        "invalid_span_count": 0,
+        "duplicate_span_count_after_nms": 0
+      },
+      "rank_gain_loss_vs_C7_B1_frozen": {
+        "0.5-r1": {
+          "gain_queries": 1125,
+          "loss_queries": 0
+        },
+        "0.5-r5": {
+          "gain_queries": 883,
+          "loss_queries": 0
+        },
+        "0.5-r10": {
+          "gain_queries": 477,
+          "loss_queries": 0
+        },
+        "0.7-r1": {
+          "gain_queries": 635,
+          "loss_queries": 0
+        },
+        "0.7-r5": {
+          "gain_queries": 909,
+          "loss_queries": 0
+        },
+        "0.7-r10": {
+          "gain_queries": 702,
+          "loss_queries": 0
+        }
+      },
+      "top100_lost_query_count": 0,
+      "top100_lost_query_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "config": {
+        "video_residual_weight": 1.25
+      },
+      "delta_vs_C7_B1_frozen": {
+        "0.5-r1": 12.873326467559217,
+        "0.5-r5": 10.10413090742648,
+        "0.5-r10": 5.458290422245113,
+        "0.5-r100": 0.0,
+        "0.7-r1": 7.266277606133421,
+        "0.7-r5": 10.401647785787844,
+        "0.7-r10": 8.032955715756948,
+        "0.7-r100": 0.0
+      },
+      "metric_abs_diff_vs_selected": {
+        "0.5-r1": 4.9319144066826865,
+        "0.5-r5": 2.895068085593323,
+        "0.5-r10": 1.0298661174047368,
+        "0.5-r100": 0.0,
+        "0.7-r1": 2.597551207231948,
+        "0.7-r5": 3.226913834534841,
+        "0.7-r10": 2.2428195445703096,
+        "0.7-r100": 0.0
+      }
+    }
+  ],
+  "stable_region_note": "Weights around the selected value are audited only; higher neighbors do not change the frozen selection."
+}
+```

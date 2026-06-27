@@ -1,0 +1,15 @@
+{
+  "status": "HANDOFF_HASHES",
+  "date": "2026-06-26",
+  "handoff": {
+    "path": "handoff/NEXT_WINDOW_HANDOFF_20260626.md",
+    "size": 14793,
+    "sha256": "5f0ac18b8c8cdda4bb4ab39e2f1dd0676a6a5bd7692021dee453e3b605909504"
+  },
+  "project_root": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3",
+  "c6_b2_final": {
+    "summary": "c6_b2_final/C6_B2_FINAL_SUMMARY.md",
+    "manifest": "c6_b2_final/C6_B2_FINAL_MANIFEST.json",
+    "hashes": "c6_b2_final/C6_B2_FINAL_HASHES.json"
+  }
+}

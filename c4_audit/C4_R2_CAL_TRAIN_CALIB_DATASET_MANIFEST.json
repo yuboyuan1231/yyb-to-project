@@ -1,0 +1,43 @@
+{
+  "aggregation_device": "cuda",
+  "baseline_features": [
+    "frozen_s_c31",
+    "frozen_c4_lite_c4_00394"
+  ],
+  "cache_npz": "results/rlem_c4_lite/train_calib_c4_cache.npz",
+  "candidate_rows": 1747800,
+  "effective_top_n": 100,
+  "feature_dim": 27,
+  "frozen_constants": {
+    "alpha_bd": 1.25,
+    "gamma_fp": 0.5,
+    "mean_qbd": 0.3990069627761841,
+    "mu_span_rows": 0.03713987395167351,
+    "mu_video_rows": 0.13249324262142181
+  },
+  "frozen_effective_top_n": 100,
+  "frozen_max_after_nms": 100,
+  "frozen_nms_thd": 0.7,
+  "iou05_positive_video_rows": 6781,
+  "iou07_positive_video_rows": 6050,
+  "max_after_nms": 100,
+  "modifies_conquer": false,
+  "negative_video_rows": 80187,
+  "nms_thd": 0.7,
+  "nonfinite_values": 0,
+  "official_val_allowed": false,
+  "official_val_used": false,
+  "output_npz": "results/rlem_c4_r2_cal/train_calib_video_dataset.npz",
+  "positive_video_rows": 7043,
+  "protocol_validated": true,
+  "queries": 8739,
+  "r2_features_enabled": false,
+  "r2_main_allowed": false,
+  "reads_official_val": false,
+  "split": "train",
+  "split_role": "train_calib",
+  "stage": "c4_r2_build_video_dataset",
+  "status": "PASS",
+  "targets_from_train_evidence_only": true,
+  "video_rows": 87230
+}

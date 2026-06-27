@@ -1,0 +1,275 @@
+{
+  "status": "C6_B2_FREEZE_REVIEW_PASS",
+  "arms": [
+    {
+      "arm": "listwise_set",
+      "best": {
+        "arm": "listwise_set",
+        "config_id": "listwise_set_0004",
+        "apply_slots": 5,
+        "threshold0": 2.0452734375000006,
+        "threshold_rest": 3.2962402343749986,
+        "max_replacements": 2,
+        "metrics": {
+          "0.5-r1": 38.3911202654766,
+          "0.5-r5": 62.29545714612656,
+          "0.5-r10": 69.44730518365945,
+          "0.5-r100": 76.17576381737041,
+          "0.7-r1": 25.540679711637488,
+          "0.7-r5": 48.3693786474425,
+          "0.7-r10": 55.85307243391692,
+          "0.7-r100": 64.89300835335851
+        },
+        "delta_vs_C6_B1": {
+          "0.5-r1": -1.1900675134454701,
+          "0.5-r5": -0.13731548232063062,
+          "0.5-r10": -0.16020139604074757,
+          "0.5-r100": -0.13731548232063062,
+          "0.7-r1": -1.1214097722851584,
+          "0.7-r5": -0.4806041881222072,
+          "0.7-r10": -0.5835907998626908,
+          "0.7-r100": -0.5721478430026252
+        },
+        "movement": {
+          "replacement_rate_top_slots": 0.02489987412747454,
+          "replacements": 1088,
+          "top1_changed_ratio": 0.030094976541938438,
+          "hard_positive_top100_query_exits": 5,
+          "hard_positive_top100_query_entries": 1,
+          "video_slot_drift": 0.0,
+          "video_multiset_drift": 0.0
+        },
+        "selection_score": -8.333264675592153,
+        "feasible": false,
+        "official_val_used": false
+      },
+      "grid_size": 8,
+      "feasible_count": 0,
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/best_config.json",
+        "exists": true,
+        "size": 1179,
+        "sha256": "0d33834d47c055984433780a54cbc3e21b86ce02f0dcadf115e3e54744d2e2fe"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set/grid_results.json",
+        "exists": true,
+        "size": 10072,
+        "sha256": "ee37f7c8d25b565458ead199ff94a89cc5049c7a42e6cf8fd744d543efb03935"
+      }
+    },
+    {
+      "arm": "listwise_set_retry1",
+      "best": {
+        "arm": "listwise_set_retry1",
+        "config_id": "listwise_set_retry1_0004",
+        "apply_slots": 5,
+        "threshold0": 1.1248632812500006,
+        "threshold_rest": 2.090863037109375,
+        "max_replacements": 2,
+        "metrics": {
+          "0.5-r1": 38.88316741045886,
+          "0.5-r5": 62.32978601670672,
+          "0.5-r10": 69.48163405423962,
+          "0.5-r100": 76.19864973109051,
+          "0.7-r1": 25.700881107678224,
+          "0.7-r5": 48.42659343174276,
+          "0.7-r10": 56.02471678681771,
+          "0.7-r100": 65.0646527062593
+        },
+        "delta_vs_C6_B1": {
+          "0.5-r1": -0.6980203684632116,
+          "0.5-r5": -0.10298661174046941,
+          "0.5-r10": -0.12587252546057925,
+          "0.5-r100": -0.11442956860052789,
+          "0.7-r1": -0.9612083762444215,
+          "0.7-r5": -0.42338940382195034,
+          "0.7-r10": -0.41194644696189897,
+          "0.7-r100": -0.4005034901018405
+        },
+        "movement": {
+          "replacement_rate_top_slots": 0.02480833047259412,
+          "replacements": 1084,
+          "top1_changed_ratio": 0.030094976541938438,
+          "hard_positive_top100_query_exits": 3,
+          "hard_positive_top100_query_entries": 1,
+          "video_slot_drift": 0.0,
+          "video_multiset_drift": 0.0
+        },
+        "selection_score": -6.431445245451426,
+        "feasible": false,
+        "official_val_used": false
+      },
+      "grid_size": 8,
+      "feasible_count": 0,
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/best_config.json",
+        "exists": true,
+        "size": 1195,
+        "sha256": "d38d28fcc394e565d3572b849c16c286438e64dc685b1b1a09243d8cfce048d3"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry1/grid_results.json",
+        "exists": true,
+        "size": 10186,
+        "sha256": "844d621f34c25805475bbec6818e177e64491ca4bd6c8da8b0cf43dd4e1f728c"
+      }
+    },
+    {
+      "arm": "listwise_set_retry2",
+      "best": {
+        "arm": "listwise_set_retry2",
+        "config_id": "listwise_set_retry2_0004",
+        "apply_slots": 5,
+        "threshold0": 0.37472656250000114,
+        "threshold_rest": 1.8421386718749986,
+        "max_replacements": 2,
+        "metrics": {
+          "0.5-r1": 39.54685890834192,
+          "0.5-r5": 62.272571232406456,
+          "0.5-r10": 69.48163405423962,
+          "0.5-r100": 76.24442155853072,
+          "0.7-r1": 26.33024373498112,
+          "0.7-r5": 48.48380821604302,
+          "0.7-r10": 56.10481748483808,
+          "0.7-r100": 65.16763931799977
+        },
+        "delta_vs_C6_B1": {
+          "0.5-r1": -0.0343288705801541,
+          "0.5-r5": -0.16020139604073336,
+          "0.5-r10": -0.12587252546057925,
+          "0.5-r100": -0.06865774116032242,
+          "0.7-r1": -0.3318457489415252,
+          "0.7-r5": -0.3661746195216864,
+          "0.7-r10": -0.3318457489415323,
+          "0.7-r100": -0.297516878361364
+        },
+        "movement": {
+          "replacement_rate_top_slots": 0.026501888087881908,
+          "replacements": 1158,
+          "top1_changed_ratio": 0.030094976541938438,
+          "hard_positive_top100_query_exits": 1,
+          "hard_positive_top100_query_entries": 3,
+          "video_slot_drift": 0.0,
+          "video_multiset_drift": 0.0
+        },
+        "selection_score": -2.501933859709337,
+        "feasible": false,
+        "official_val_used": false
+      },
+      "grid_size": 8,
+      "feasible_count": 0,
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/best_config.json",
+        "exists": true,
+        "size": 1196,
+        "sha256": "772a96929fcb230d8bfd645d8a4d77435a456d60c90937ca7bc8ed3ebc3417f1"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/listwise_set_retry2/grid_results.json",
+        "exists": true,
+        "size": 10157,
+        "sha256": "5a8b6f94e52cd4f697d26014c8caf6c112ab3764719ce3e840cb3f48e92c3abf"
+      }
+    },
+    {
+      "arm": "pairwise_main",
+      "best": {
+        "arm": "pairwise_main",
+        "config_id": "pairwise_main_0005",
+        "apply_slots": 5,
+        "threshold0": 4.337798070907593,
+        "threshold_rest": 6.729127645492554,
+        "max_replacements": 2,
+        "metrics": {
+          "0.5-r1": 39.82148987298318,
+          "0.5-r5": 62.42132967158714,
+          "0.5-r10": 69.61894953656025,
+          "0.5-r100": 76.29019338597094,
+          "0.7-r1": 27.051150017164435,
+          "0.7-r5": 48.89575466300492,
+          "0.7-r10": 56.49387801807987,
+          "0.7-r100": 65.5223709806614
+        },
+        "delta_vs_C6_B1": {
+          "0.5-r1": 0.24030209406110714,
+          "0.5-r5": -0.011442956860051368,
+          "0.5-r10": 0.011442956860051368,
+          "0.5-r100": -0.022885913720102735,
+          "0.7-r1": 0.38906053324178913,
+          "0.7-r5": 0.045771827440212576,
+          "0.7-r10": 0.05721478430025684,
+          "0.7-r100": 0.05721478430027105
+        },
+        "movement": {
+          "replacement_rate_top_slots": 0.04638974711065339,
+          "replacements": 2027,
+          "top1_changed_ratio": 0.05000572147843003,
+          "hard_positive_top100_query_exits": 1,
+          "hard_positive_top100_query_entries": 7,
+          "video_slot_drift": 0.0,
+          "video_multiset_drift": 0.0
+        },
+        "selection_score": 2.071175191669529,
+        "feasible": true,
+        "official_val_used": false
+      },
+      "grid_size": 8,
+      "feasible_count": 8,
+      "best_config": {
+        "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/best_config.json",
+        "exists": true,
+        "size": 1180,
+        "sha256": "63ca0d49e58f1a3ffd17c1e9ced4697097cd1a564f076d22ddfb4c37e6439d5d"
+      },
+      "grid_results": {
+        "path": "results/rlem_c6_b2/train_calib_scores/pairwise_main/grid_results.json",
+        "exists": true,
+        "size": 10035,
+        "sha256": "3bfa61395fa6ddc2e28299bb3697622161cffa5162c266ea3ffb93e182af7562"
+      }
+    }
+  ],
+  "best": {
+    "arm": "pairwise_main",
+    "config_id": "pairwise_main_0005",
+    "apply_slots": 5,
+    "threshold0": 4.337798070907593,
+    "threshold_rest": 6.729127645492554,
+    "max_replacements": 2,
+    "metrics": {
+      "0.5-r1": 39.82148987298318,
+      "0.5-r5": 62.42132967158714,
+      "0.5-r10": 69.61894953656025,
+      "0.5-r100": 76.29019338597094,
+      "0.7-r1": 27.051150017164435,
+      "0.7-r5": 48.89575466300492,
+      "0.7-r10": 56.49387801807987,
+      "0.7-r100": 65.5223709806614
+    },
+    "delta_vs_C6_B1": {
+      "0.5-r1": 0.24030209406110714,
+      "0.5-r5": -0.011442956860051368,
+      "0.5-r10": 0.011442956860051368,
+      "0.5-r100": -0.022885913720102735,
+      "0.7-r1": 0.38906053324178913,
+      "0.7-r5": 0.045771827440212576,
+      "0.7-r10": 0.05721478430025684,
+      "0.7-r100": 0.05721478430027105
+    },
+    "movement": {
+      "replacement_rate_top_slots": 0.04638974711065339,
+      "replacements": 2027,
+      "top1_changed_ratio": 0.05000572147843003,
+      "hard_positive_top100_query_exits": 1,
+      "hard_positive_top100_query_entries": 7,
+      "video_slot_drift": 0.0,
+      "video_multiset_drift": 0.0
+    },
+    "selection_score": 2.071175191669529,
+    "feasible": true,
+    "official_val_used": false
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false
+}

@@ -1,0 +1,148 @@
+{
+  "stage": "C7-B3",
+  "status": "C7_B3_OFFICIAL_NO_GAIN_KEEP_C7_B2_1",
+  "status_before_run": "C7_B3_OFFICIAL_READY",
+  "selected_candidate": "calibrated_A4",
+  "method_definition": "Shared-Norm-inspired Fixed-Pool Moment Score Calibration / Cross-Video Comparable Moment Reranking",
+  "mechanism": "calibrated_A4 residual rerank within C7-B2.1 A4 fixed-pool candidate set",
+  "selected_config": {
+    "T": 0.5,
+    "lambda": 1.0,
+    "clip": 3.0,
+    "normalization": "per_query_z"
+  },
+  "date": "2026-06-26",
+  "official_val_used": true,
+  "official_val_run": true,
+  "official_evaluator_call_count": 1,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "training_started": false,
+  "config_selection_changed": false,
+  "selected_candidate_changed": false,
+  "C7_B4_SN_Audit_run": false,
+  "MINUTE_style_scoring_added": false,
+  "enter_C7_C": false,
+  "enter_C8": false,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "C4_C6_C7B1_C7B21_artifacts_modified": false,
+  "C6_B1_official_metrics": {
+    "0.5-r1": 14.92,
+    "0.5-r5": 28.66,
+    "0.5-r10": 34.93,
+    "0.5-r100": 46.56,
+    "0.7-r1": 8.39,
+    "0.7-r5": 18.82,
+    "0.7-r10": 24.82,
+    "0.7-r100": 35.88
+  },
+  "C6_B2_official_metrics": {
+    "0.5-r1": 14.98,
+    "0.5-r5": 28.66,
+    "0.5-r10": 34.9,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.45,
+    "0.7-r5": 18.78,
+    "0.7-r10": 24.76,
+    "0.7-r100": 35.82
+  },
+  "C7_B1_official_archived_metrics": {
+    "0.5-r1": 15.24,
+    "0.5-r5": 28.82,
+    "0.5-r10": 34.89,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.62,
+    "0.7-r5": 19.43,
+    "0.7-r10": 25.32,
+    "0.7-r100": 35.81
+  },
+  "C7_B2_1_A4_official_metrics": {
+    "0.5-r1": 15.45,
+    "0.5-r5": 28.8,
+    "0.5-r10": 34.8,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.7,
+    "0.7-r5": 19.49,
+    "0.7-r10": 25.17,
+    "0.7-r100": 35.81
+  },
+  "C7_B3_official_metrics": {
+    "0.5-r1": 12.05,
+    "0.5-r5": 20.64,
+    "0.5-r10": 26.04,
+    "0.5-r100": 46.54,
+    "0.7-r1": 6.98,
+    "0.7-r5": 14.45,
+    "0.7-r10": 18.77,
+    "0.7-r100": 35.81
+  },
+  "delta_vs_C6_B1": {
+    "0.5-r1": -2.869999999999999,
+    "0.5-r5": -8.02,
+    "0.5-r10": -8.89,
+    "0.5-r100": -0.020000000000003126,
+    "0.7-r1": -1.4100000000000001,
+    "0.7-r5": -4.370000000000001,
+    "0.7-r10": -6.050000000000001,
+    "0.7-r100": -0.07000000000000028
+  },
+  "delta_vs_C6_B2": {
+    "0.5-r1": -2.9299999999999997,
+    "0.5-r5": -8.02,
+    "0.5-r10": -8.86,
+    "0.5-r100": 0.0,
+    "0.7-r1": -1.4699999999999989,
+    "0.7-r5": -4.330000000000002,
+    "0.7-r10": -5.990000000000002,
+    "0.7-r100": -0.00999999999999801
+  },
+  "delta_vs_C7_B1": {
+    "0.5-r1": -3.1899999999999995,
+    "0.5-r5": -8.18,
+    "0.5-r10": -8.850000000000001,
+    "0.5-r100": 0.0,
+    "0.7-r1": -1.6399999999999988,
+    "0.7-r5": -4.98,
+    "0.7-r10": -6.550000000000001,
+    "0.7-r100": 0.0
+  },
+  "delta_vs_C7_B2_1_A4": {
+    "0.5-r1": -3.3999999999999986,
+    "0.5-r5": -8.16,
+    "0.5-r10": -8.759999999999998,
+    "0.5-r100": 0.0,
+    "0.7-r1": -1.7199999999999989,
+    "0.7-r5": -5.039999999999999,
+    "0.7-r10": -6.400000000000002,
+    "0.7-r100": 0.0
+  },
+  "fixed_pool_invariant_on_official": true,
+  "hard_positive_top100_query_exits": 0,
+  "hard_positive_top100_query_entries": 0,
+  "hard_positive_exit_ratio": 0.0,
+  "invalid_span_count": 0,
+  "duplicate_span_count_after_nms": 0,
+  "ready_state": {
+    "ready_manifest": {
+      "path": "c7_audit/C7_B3_OFFICIAL_READY_MANIFEST.json",
+      "exists": true,
+      "size": 506,
+      "sha256": "428d589be850084a8497617016fd22f503ad0ed9ce0676f4534166cd66d34e1b"
+    },
+    "freeze_package": {
+      "path": "c7_audit/C7_B3_FINAL_FREEZE_PACKAGE.json",
+      "exists": true,
+      "size": 1566,
+      "sha256": "e35145edc87c2767366839e382614db5f750edeebd2b570c8acffeed4c3fc7a8"
+    },
+    "b21_official_manifest": {
+      "path": "c7_audit/C7_B2_1_OFFICIAL_MANIFEST.json",
+      "exists": true,
+      "size": 5085,
+      "sha256": "e60cc621f3b6149b89c5bd7777296469dd7b88d9159a8b4ae354ad29a6e1bbba"
+    }
+  },
+  "final_instruction": "Stop after exactly-one official-val one-shot and wait for human review.",
+  "promoted": false
+}

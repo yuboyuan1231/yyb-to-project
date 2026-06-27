@@ -1,0 +1,123 @@
+{
+  "status": "C4_STAGE_FINAL_FREEZE_PASS",
+  "date": "2026-06-24",
+  "C4_stage_status": "COMPLETE",
+  "C4_final_system": "C4-r2-cal-v2.1",
+  "C4_final_config": "v21_00444",
+  "C4_core_module": "C4-lite",
+  "C4_primary_baseline_for_final": "frozen C4-lite c4_00394",
+  "C4_secondary_baseline": "frozen C3.1",
+  "scientific_interpretation": {
+    "C4_lite_role": "core mechanism, base score, main gain source, and primary ablation baseline",
+    "C4_r2_cal_v21_role": "final frozen C4 stage output",
+    "official_val_result": "eight nonnegative deltas versus frozen C4-lite, with six positive and two tied",
+    "r100_result": "positive at both IoU 0.5 and IoU 0.7 versus frozen C4-lite"
+  },
+  "frozen_scorer": {
+    "formula": "S_C4_final = S_C4_lite + 0.075*z(rel_logit) + 0.050*z(iou07_logit) - 0.100*z(quality_logit)",
+    "a_rel": 0.075,
+    "b_iou05": 0.0,
+    "c_iou07": 0.05,
+    "d_quality": -0.1,
+    "z_stats_source": "train_calib row-expanded frozen statistics",
+    "official_val_mean_std_estimated": false,
+    "z_stats": {
+      "rel_logit": {"mean": -3.862743616104126, "std": 2.063218832015991},
+      "iou07_logit": {"mean": -4.213388919830322, "std": 2.1755518913269043},
+      "quality_logit": {"mean": -3.8732757568359375, "std": 1.7478158473968506}
+    }
+  },
+  "official_val_metrics": {
+    "frozen_C3.1": {
+      "0.5-r1": 14.27,
+      "0.5-r5": 28.12,
+      "0.5-r10": 34.42,
+      "0.5-r100": 46.31,
+      "0.7-r1": 8.09,
+      "0.7-r5": 18.03,
+      "0.7-r10": 23.58,
+      "0.7-r100": 35.28
+    },
+    "frozen_C4_lite_c4_00394": {
+      "0.5-r1": 14.81,
+      "0.5-r5": 28.56,
+      "0.5-r10": 34.73,
+      "0.5-r100": 46.44,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.63,
+      "0.7-r10": 24.61,
+      "0.7-r100": 35.69
+    },
+    "C4_final_v21_00444": {
+      "0.5-r1": 14.81,
+      "0.5-r5": 28.57,
+      "0.5-r10": 34.81,
+      "0.5-r100": 46.45,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.64,
+      "0.7-r10": 24.63,
+      "0.7-r100": 35.7
+    },
+    "delta_C4_final_vs_frozen_C4_lite": {
+      "0.5-r1": 0.0,
+      "0.5-r5": 0.01,
+      "0.5-r10": 0.08,
+      "0.5-r100": 0.01,
+      "0.7-r1": 0.0,
+      "0.7-r5": 0.01,
+      "0.7-r10": 0.02,
+      "0.7-r100": 0.01
+    },
+    "delta_C4_final_vs_frozen_C3.1": {
+      "0.5-r1": 0.54,
+      "0.5-r5": 0.45,
+      "0.5-r10": 0.39,
+      "0.5-r100": 0.14,
+      "0.7-r1": 0.26,
+      "0.7-r5": 0.61,
+      "0.7-r10": 1.05,
+      "0.7-r100": 0.42
+    }
+  },
+  "frozen_controls": {
+    "C4_main_used": false,
+    "R2_head_used": false,
+    "VS_head_used": false,
+    "model/conquer.py_modified": false,
+    "candidate_generation_modified": false,
+    "NMS_modified": false,
+    "evaluator_modified": false,
+    "post_val_adjustment": false,
+    "score_grid_on_val": false,
+    "temperature_search_on_val": false,
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "stop_controls": {
+    "further_C4_r2_grid": false,
+    "further_C4_r2_capacity_search": false,
+    "further_C4_r2_weak_fusion": false,
+    "enter_C4_main_now": false,
+    "enter_VS_R2_head_now": false,
+    "reason": "C4-r2-cal-v2.1 freeze review and official-val one-shot audit are complete"
+  },
+  "deferred_work": {
+    "C4_main_and_VS_R2_head_abandoned": false,
+    "planned_phase": "post-C5-lite C6 / backbone-integrated phase"
+  },
+  "next_stage": {
+    "name": "C5-lite",
+    "description": "retrieval evidence -> localization calibration",
+    "started": false,
+    "authorized_by_this_manifest": false
+  },
+  "frozen_evidence": {
+    "C4_lite_official_val_freeze_manifest": "c4_audit/C4_LITE_OFFICIAL_VAL_FREEZE_MANIFEST.json",
+    "C4_r2_cal_v21_freeze_manifest": "c4_audit/C4_R2_CAL_V21_FREEZE_MANIFEST.json",
+    "C4_r2_cal_v21_official_val_audit": "c4_audit/C4_R2_CAL_V21_OFFICIAL_VAL_ONE_SHOT_AUDIT.md",
+    "C4_r2_cal_v21_official_val_manifest": "results/rlem_c4_r2_cal_v21_official_val/VAL_V21_ONE_SHOT_MANIFEST.json"
+  },
+  "supersedes_provisional_wording": "C4-lite alone as the current C4 main result",
+  "stop_boundary": "STOP_AFTER_C4_STAGE_FINAL_FREEZE"
+}

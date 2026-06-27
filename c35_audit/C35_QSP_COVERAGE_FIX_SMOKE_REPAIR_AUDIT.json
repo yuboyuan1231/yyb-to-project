@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "stage": "C3.5 QSP subtitle coverage semantic repair",
+  "input_jsonl": "/tmp/yyb_nvme_c35/output/train_qsp_evidence.jsonl.gz",
+  "output_jsonl": "/tmp/yyb_nvme_c35/output/smoke_train_qsp_covfix_repair.jsonl.gz",
+  "rows": 1000,
+  "changed_rows": 272,
+  "zero_coverage_rows": 31,
+  "full_coverage_rows": 728,
+  "coverage_definition": "mean(raw subtitle row L2 norm > 1e-8) over inclusive candidate span",
+  "coverage_eps": 1e-08,
+  "old_coverage": {
+    "count": 1000,
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0
+  },
+  "new_coverage": {
+    "count": 1000,
+    "mean": 0.8957420191764832,
+    "std": 0.22701213680142496,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "cache_info": "CacheInfo(hits=950, misses=50, maxsize=4096, currsize=50)",
+  "candidate_or_other_feature_mutations": 0,
+  "official_val_used": false,
+  "output_sha256": "64e3a2205f82c6580106578159f6c5caecc2b22b68cc3ae4e60e45b5a75d1966"
+}

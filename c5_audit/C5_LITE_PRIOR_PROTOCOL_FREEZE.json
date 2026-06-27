@@ -1,0 +1,91 @@
+{
+  "status": "C5_LITE_PRIOR_PROTOCOL_FROZEN",
+  "date": "2026-06-24",
+  "stage": "C5-lite-prior train_fit/train_calib-only",
+  "scientific_path": "retrieval evidence -> per-video temporal localization prior -> span-level localization calibration",
+  "primary_baseline": "C4_final = C4-r2-cal-v2.1 v21_00444",
+  "secondary_baselines": ["frozen C4-lite c4_00394", "frozen C3.1"],
+  "temporal_prior_sources": {
+    "p_b": "softmax of frozen CONQUER ML begin logits",
+    "p_e": "softmax of frozen CONQUER ML end logits",
+    "p_ctx": "frozen QAL query-to-video attention",
+    "row_level_substitution_allowed": false,
+    "labels_used": false
+  },
+  "retrieval_conditioning": {
+    "definition": "P_retloc = Normalize[(a_ctx + a_ctx_ret*R_video)*P_ctx + (a_bd + a_bd_ret*(1-R_video))*P_bd]",
+    "reason_for_correction": "a common scalar multiplier followed by normalization cancels R_video and is not retrieval-conditioned",
+    "frozen_prior_weights": {
+      "a_ctx": 1.0,
+      "a_bd": 1.0,
+      "a_ctx_ret": 1.0,
+      "a_bd_ret": 1.0
+    }
+  },
+  "statistics_protocol": {
+    "term_stats_source": "train_fit_only",
+    "train_calib_used_for_selection_only": true,
+    "official_val_used": false,
+    "post_val_adjustment": false,
+    "data_dependent_residual_centering": false
+  },
+  "promotion_gate": {
+    "six_primary_nonnegative_vs_C4_final": true,
+    "both_R100_nonnegative_vs_C4_final": true,
+    "at_least_one_oracle_video_localization_metric_positive": true,
+    "best_IoU_span_rank_improved": true,
+    "positive_span_upward_more_than_downward": true,
+    "hard_negative_downward_more_than_upward": true,
+    "movement_safe": true,
+    "not_isolated_boundary_point": true,
+    "official_val_used_false": true
+  },
+  "retrieval_constants": {
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "hard_prohibitions": {
+    "official_val": true,
+    "C4_retuning": true,
+    "C5_main": true,
+    "C6": true,
+    "model_conquer_training_change": true,
+    "candidate_generation_change": true,
+    "begin_end_logits_change": true,
+    "NMS_change": true,
+    "evaluator_change": true
+  },
+  "implementation_review": {
+    "source_bundle": "/home/a/yybwork/yybcounter/fix/CONQUER_RLEM_C5_LITE_PRIOR_CODE_BUNDLE_20260624.zip",
+    "source_bundle_sha256": "e99a7bb37b6075bebb7ff0ee80d68d6c9be60bd172b3dbab55387227f3e15ea8",
+    "bundle_file_hashes_verified": true,
+    "bundle_SHA256SUMS_self_entry_valid": false,
+    "bundle_self_hash_issue": "SHA256SUMS.txt includes a stale self-hash; all non-self entries verified",
+    "real_temporal_exporter_added": true,
+    "vectorized_dense_feature_path_added": true,
+    "vectorized_vs_ragged_reference_max_abs_error": 5.960464477539063e-08,
+    "equivalent_grid_configs_deduplicated": true,
+    "multiprocess_grid_enabled": true
+  },
+  "code_sha256": {
+    "rlem/score_c4_r2_v21_split.py": "5225920863cdcfa18aaaec8c8ec6590b2aae3f38a62f495154c6f3c4ed51adb0",
+    "rlem/c5_prior_utils.py": "ba2857ecec7bb0fa07a40529a032f875648c3befd5536904a4f9ec30d2a7a710",
+    "rlem/check_c5_temporal_prior_inputs.py": "cf73e6f80d7ac327bae6a39967a7c32d67505a48625856f4410d4ab4ba607c86",
+    "rlem/export_c5_temporal_prior_from_jsonl.py": "2789ba707bf9542e50b1d6774a38f1e9388eac439e6ff46e1344af682b954c5f",
+    "rlem/export_c5_temporal_prior.py": "640e633736b03527d72403a810d18091430c21df4214d2dc420126317931f519",
+    "rlem/build_c5_lite_prior_features.py": "7f6957dc35604538ce184d46279b1a924e637c5d9f9578dc48ee5a14b4ebc86f",
+    "rlem/fit_c5_lite_prior_stats.py": "3c11e2a1ac69829c578cefce8c0ba4869abe755ef46175952efb7cc945228b19",
+    "rlem/grid_search_c5_lite_prior.py": "d8727de9a843b01cbc4901c7eb113b29366065118b0aa3a810cef2b97ce71821",
+    "rlem/freeze_c5_lite_prior.py": "296f2e3622e6984ae16fa0469d095079abe2aee619672acf528d699399ef69f2",
+    "rlem/rerank_c5_lite_prior_one_shot.py": "5e2a01617d1ebed814834ed284e7d243a8c6eaf0a93cdde0617a06124c8d92d4"
+  },
+  "frozen_upstream": {
+    "C4_stage_final_manifest": "c4_audit/C4_STAGE_FINAL_MANIFEST.json",
+    "C4_stage_final_manifest_sha256": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b",
+    "model_conquer_sha256": "8a0ac00683e1cd72a1a790191f7eae8efafa1a58d3a79b9a9b2a33579a2643dc",
+    "evaluator_sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+  },
+  "official_val_authorized": false,
+  "stop_boundary": "STOP_AFTER_TRAIN_CALIB_AND_OPTIONAL_FREEZE_REVIEW"
+}

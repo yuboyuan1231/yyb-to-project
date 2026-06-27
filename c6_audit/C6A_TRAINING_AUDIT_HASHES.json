@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "cache_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_CACHE_AUDIT.json",
+      "sha256": "6b65adfbbd59700101c8a3826d7a79695f2fb7e4ceb398c21b3dbe5c4ed7dd10",
+      "size": 1476
+    },
+    "negative_audit": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_NEGATIVE_AUDIT.md",
+      "sha256": "92ce17a5e097fc836d30490318d67a4ab866040ab85e4d0d0873bf25283fc07b",
+      "size": 661
+    },
+    "negative_hashes": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_NEGATIVE_HASHES.json",
+      "sha256": "079d25dcbd16474c0fc8fcbba46d816c4d043282f49f34ea5e2a31f70d7fcf14",
+      "size": 2655
+    },
+    "negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_NEGATIVE_MANIFEST.json",
+      "sha256": "f816a68b5746621fc6ba3c8166e45664acb29645ae69e95ff6c702f564e7dcc5",
+      "size": 3808
+    },
+    "overfit_smoke": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_OVERFIT_SMOKE.json",
+      "sha256": "2b9ad73903e4c346ccd06f32029068e66cc73a9860e130dbcc8fe74c96f72e45",
+      "size": 226
+    },
+    "training_audit_json": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_TRAINING_AUDIT.json",
+      "sha256": "46f02cfb59b3334c45fa3ff2697828ae0def7f82000b407b34c5eac73b114d2b",
+      "size": 13074
+    },
+    "training_audit_md": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_TRAINING_AUDIT.md",
+      "sha256": "69b796c99393607c0626a0a8159e193b28bd1bcbd26ae06ba21b511352a4517e",
+      "size": 3040
+    }
+  },
+  "official_val_used": false,
+  "status": "HASHES_MATERIALIZED"
+}

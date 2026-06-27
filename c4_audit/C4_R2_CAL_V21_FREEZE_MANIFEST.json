@@ -1,0 +1,65 @@
+{
+  "status": "C4_R2_CAL_V21_FREEZE_REVIEW_PASS",
+  "stage": "C4-r2-cal-v2.1 freeze review",
+  "scope": "train_calib_only",
+  "selected_config": "v21_00444",
+  "selected_config_role": "best_robust_strict_safe_config",
+  "selection_reason": "robust_non_isolated_boundary_preferred_over_higher_isolated_score",
+  "primary_baseline": "frozen_C4_lite_c4_00394",
+  "secondary_baseline": "frozen_C3.1",
+  "reference_only_baseline": "C4-r2-v1",
+  "formula": "S = S_C4_lite + 0.075*z(rel_logit) + 0.050*z(iou07_logit) - 0.100*z(quality_logit)",
+  "weights": {
+    "a_rel": 0.075,
+    "b_iou05": 0.0,
+    "c_iou07": 0.05,
+    "d_quality": -0.1
+  },
+  "z_stats_source": "train_calib_row_expanded",
+  "z_stats": {
+    "rel_logit": {"mean": -3.862743616104126, "std": 2.063218832015991},
+    "iou05_logit": {"mean": -3.92142653465271, "std": 2.1069819927215576},
+    "iou07_logit": {"mean": -4.213388919830322, "std": 2.1755518913269043},
+    "quality_logit": {"mean": -3.8732757568359375, "std": 1.7478158473968506}
+  },
+  "retrieval_constants": {
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "selected_config_diagnostics": {
+    "all_eight_strictly_positive_vs_frozen_c4_lite": true,
+    "selection_score_delta_vs_frozen_c4_lite": 0.06579700194530366,
+    "top1_changed_ratio": 0.00251745050921158,
+    "pearson_c4_lite_candidate": 0.9995508995882961,
+    "hard_positive_top100_exits": 11,
+    "hard_positive_top100_entries": 272,
+    "hard_positive_top100_exit_ratio": 0.00017530159843184753,
+    "passing_neighbor_count": 2,
+    "passing_neighbor_ids": ["v21_00468", "v21_00588"],
+    "active_parameter_on_grid_boundary": true,
+    "isolated_boundary_point": false,
+    "movement_safe": true
+  },
+  "rejected_higher_score_candidate": {
+    "config_id": "v21_00439",
+    "selection_score_delta_vs_frozen_c4_lite": 0.08010069802036905,
+    "passing_neighbor_count": 0,
+    "robust_neighbor_supported": false
+  },
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "model_retrained": false,
+  "capacity_search": false,
+  "modifies_conquer": false,
+  "future_stages_used": {
+    "C4-main": false,
+    "R2": false,
+    "VS": false,
+    "C5": false,
+    "C6": false
+  },
+  "stop_boundary": "STOP_AFTER_C4_R2_CAL_V21_FREEZE_REVIEW"
+}

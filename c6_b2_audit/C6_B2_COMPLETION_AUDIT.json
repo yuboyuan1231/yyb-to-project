@@ -1,0 +1,139 @@
+{
+  "status": "C6_B2_COMPLETION_AUDIT_PASS",
+  "official_val_used": false,
+  "checks": {
+    "protocol_file_read_and_copied": true,
+    "train_fit_train_calib_only": true,
+    "multiple_arms_trained": true,
+    "underperforming_arm_retried_at_most_twice": true,
+    "freeze_pass": true,
+    "official_val_not_used": true,
+    "no_partial_files": true,
+    "all_required_files_present": true,
+    "py_compile_passed": true,
+    "safety_gate_passed": true,
+    "robustness_not_isolated": true
+  },
+  "required_audit_files": {
+    "C6_B2_START_STATE.md": {
+      "path": "c6_b2_audit/C6_B2_START_STATE.md",
+      "exists": true,
+      "size": 592,
+      "sha256": "4a7c2c413a21df7fbd104efe9b2a88aefeeeae31b5af13fea4b5f77bb8dbe77c"
+    },
+    "C6_B2_START_STATE.json": {
+      "path": "c6_b2_audit/C6_B2_START_STATE.json",
+      "exists": true,
+      "size": 504,
+      "sha256": "ff9d03a6c930912ff169acd0b6733322eefda34ac7c981b4e1185c7ba32ea10f"
+    },
+    "C6_B2_PROTOCOL.md": {
+      "path": "c6_b2_audit/C6_B2_PROTOCOL.md",
+      "exists": true,
+      "size": 14453,
+      "sha256": "c2149d2cd896fa2a222026c2a35cc265cb76c21825321e32accd0d6c6da22f1b"
+    },
+    "C6_B2_DATA_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_DATA_AUDIT.md",
+      "exists": true,
+      "size": 2907,
+      "sha256": "2e9e670d00950b4709d563bf7c8c585bd3326cdfc75641ebe6641b0d40357c93"
+    },
+    "C6_B2_DATA_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_DATA_AUDIT.json",
+      "exists": true,
+      "size": 2887,
+      "sha256": "63e0ad972c14164ea7d1e5cf007f6889d2df57dcfa18028c5454ea051cc12887"
+    },
+    "C6_B2_ARM_COMPARISON.md": {
+      "path": "c6_b2_audit/C6_B2_ARM_COMPARISON.md",
+      "exists": true,
+      "size": 480,
+      "sha256": "e7ebf0a8a3424084ab4f3115092f7b2117bd067bc8f0b927ab0995dec630a1d1"
+    },
+    "C6_B2_ARM_COMPARISON.json": {
+      "path": "c6_b2_audit/C6_B2_ARM_COMPARISON.json",
+      "exists": true,
+      "size": 9553,
+      "sha256": "20f65d20d6baa869af2d56aa1855b0731aaae65b7e2f9fefad96bbef6f0faa58"
+    },
+    "C6_B2_TRAINING_AUDIT.md": {
+      "path": "c6_b2_audit/C6_B2_TRAINING_AUDIT.md",
+      "exists": true,
+      "size": 718,
+      "sha256": "4bef7fe6e900fa800fa1ae35faffd20e9dd06ca49cd2d00fc7592f860540418f"
+    },
+    "C6_B2_TRAINING_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_TRAINING_AUDIT.json",
+      "exists": true,
+      "size": 10162,
+      "sha256": "8e2c101357bd209f2f0e5805c12d170d2a0bf026abea395a17e5597af4549290"
+    },
+    "C6_B2_FINAL_DECISION.md": {
+      "path": "c6_b2_audit/C6_B2_FINAL_DECISION.md",
+      "exists": true,
+      "size": 1904,
+      "sha256": "00772890428e4a6357972f4605fa158ed0eb854a38d8ee3107892a689c89c10f"
+    },
+    "C6_B2_FINAL_DECISION.json": {
+      "path": "c6_b2_audit/C6_B2_FINAL_DECISION.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "C6_B2_HASHES.json": {
+      "path": "c6_b2_audit/C6_B2_HASHES.json",
+      "exists": true,
+      "size": 8656,
+      "sha256": "c5a27022a08174f7f92565600681cad7a2e949e2da677f24555e8d7568e7da5e"
+    },
+    "C6_B2_FREEZE_REVIEW.md": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_REVIEW.md",
+      "exists": true,
+      "size": 1903,
+      "sha256": "15035556c101d3f12dca903f6be6537ea48fffa8f1cd9aa47a141e28563b8dfd"
+    },
+    "C6_B2_FREEZE_MANIFEST.json": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_MANIFEST.json",
+      "exists": true,
+      "size": 1880,
+      "sha256": "7739b79ad83ef0ed78c29ec371ed9e1ec581c5bd731189129a821f0f2fa548f1"
+    },
+    "C6_B2_FREEZE_HASHES.json": {
+      "path": "c6_b2_audit/C6_B2_FREEZE_HASHES.json",
+      "exists": true,
+      "size": 2228,
+      "sha256": "477890c886f3576ac91685f1d5b4b5cc6a0b515252e1bc22449b8b4322847d39"
+    },
+    "C6_B2_FINAL_SUMMARY.md": {
+      "path": "c6_b2_audit/C6_B2_FINAL_SUMMARY.md",
+      "exists": true,
+      "size": 3004,
+      "sha256": "68e0eaa7a9efcf9c8a87ad1f04eb622a4a1d90a1b97ec65bbfd9469961e7f8f3"
+    },
+    "C6_B2_SAFETY_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_SAFETY_AUDIT.json",
+      "exists": true,
+      "size": 1476,
+      "sha256": "dba6abec11c53efec9bb6c1e4bb6aeb668a5fb02f7a978b0c558180ccc2f9adf"
+    },
+    "C6_B2_CODE_REVIEW.json": {
+      "path": "c6_b2_audit/C6_B2_CODE_REVIEW.json",
+      "exists": true,
+      "size": 1062,
+      "sha256": "d02f4914ee9deeacfc1bd0dfa140062397c5df7a4ef193774d42e23f97463d3b"
+    },
+    "C6_B2_P0_POOL_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_P0_POOL_AUDIT.json",
+      "exists": true,
+      "size": 1225,
+      "sha256": "5b3c89763d067bef7c2c5502daff39cb8c451bec7d9ea0f342fff6cfac9ad1f1"
+    },
+    "C6_B2_ROBUSTNESS_AUDIT.json": {
+      "path": "c6_b2_audit/C6_B2_ROBUSTNESS_AUDIT.json",
+      "exists": true,
+      "size": 1348,
+      "sha256": "ebd9959181710901b3d0db6a46b4e3261676c8dcf58bf0ad96a95dbee79d287f"
+    }
+  }
+}

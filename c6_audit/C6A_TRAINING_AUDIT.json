@@ -1,0 +1,361 @@
+{
+  "C6_B_used": false,
+  "C6_C_used": false,
+  "NMS_modified": false,
+  "backbone_finetuned": false,
+  "candidate_generation_modified": false,
+  "configs_run": [
+    "c6a_default",
+    "c6a_large",
+    "c6a_regularized"
+  ],
+  "evaluator_modified": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "runs": [
+    {
+      "best_deltas_vs_c4_final": {
+        "0.5-r1": 0.011442956860051368,
+        "0.5-r10": -0.034328870580168314,
+        "0.5-r100": 0.022885913720102735,
+        "0.5-r5": 0.0,
+        "0.7-r1": -0.034328870580157655,
+        "0.7-r10": -0.04577182744020547,
+        "0.7-r100": 0.0343288705801541,
+        "0.7-r5": -0.022885913720102735
+      },
+      "best_epoch": 1,
+      "best_localization": {
+        "affected_same_video_query_ratio": 0.31762033224478203,
+        "best_iou_span_rank_base_mean": 5.7225614084907,
+        "best_iou_span_rank_delta_mean": 0.003123668891097544,
+        "best_iou_span_rank_new_mean": 5.725685077381797,
+        "gt_video_queries": 7043,
+        "hard_negative_count": 13383,
+        "hard_negative_downward_ratio": 0.022790106851976386,
+        "hard_negative_upward_ratio": 0.018082642157961595,
+        "oracle_video_r1_05_base": 76.89904870083771,
+        "oracle_video_r1_05_delta": -0.05679397983813317,
+        "oracle_video_r1_05_new": 76.84225472099958,
+        "oracle_video_r1_07_base": 49.481754933977,
+        "oracle_video_r1_07_delta": -0.04259548487860343,
+        "oracle_video_r1_07_new": 49.4391594490984,
+        "positive_span_count": 62749,
+        "positive_span_downward_ratio": 0.021928636312929288,
+        "positive_span_upward_ratio": 0.024143811056749908,
+        "selected_span_miou_base": 0.6572716441456385,
+        "selected_span_miou_delta": -0.0003810017257950271,
+        "selected_span_miou_new": 0.6568906424198435
+      },
+      "best_metrics": {
+        "0.5-r1": 39.38665751230118,
+        "0.5-r10": 69.44730518365945,
+        "0.5-r100": 76.24442155853072,
+        "0.5-r5": 62.28401418926651,
+        "0.7-r1": 26.341686691841172,
+        "0.7-r10": 56.18491818285845,
+        "0.7-r100": 65.2820688866003,
+        "0.7-r5": 48.644009612083764
+      },
+      "best_movement": {
+        "hard_positive_top100_entries": 55,
+        "hard_positive_top100_exit_ratio": 0.0004780952684504932,
+        "hard_positive_top100_exits": 30,
+        "mean_within_query_spearman": 0.999864080536102,
+        "pearson_base_candidate": 0.9999802603917503,
+        "queries": 8739,
+        "top1_changed_ratio": 0.005607048861425793
+      },
+      "best_selection_score": -0.09178270251464862,
+      "config": "c6a_default",
+      "epoch_count": 8,
+      "train_audit": {
+        "artifacts": {
+          "config": {
+            "exists": true,
+            "path": "rlem_c6/configs/c6a_adapter_default.yaml",
+            "sha256": "1c0636c3e21d22f33f4c17b9f1c80a95d2122a7262554f4fc2bd76d8f3b10f17",
+            "size": 385
+          },
+          "history": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_default/history.json",
+            "sha256": "164c7ff39325dd83f03645b4d73c22a9592025f95719c8236a5be7caa1b3cb5a",
+            "size": 21378
+          },
+          "model_best": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_default/model_best.pt",
+            "sha256": "6bd1f0745b13d29f8206fcef0d470ba0e7adb4ba74744f35509584bfed028033",
+            "size": 10778795
+          },
+          "scores": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_default/train_calib_scores_best.npz",
+            "sha256": "31f6719f4b4c27dd10df31d2b78fd9848001ec7eaf1ec7cb1a3d179bff0db0af",
+            "size": 5966191
+          }
+        },
+        "best_epoch": 1,
+        "config": {
+          "alpha_bd": 0.05,
+          "alpha_q": 0.02,
+          "alpha_rank": 0.05,
+          "amp": true,
+          "batch_groups": 128,
+          "config_id": "c6a_default",
+          "dropout": 0.1,
+          "epochs": 8,
+          "ffn_dim": 512,
+          "gradient_clip": 1.0,
+          "heads": 8,
+          "hidden_dim": 256,
+          "lambda_bd": 0.25,
+          "lambda_fp": 0.25,
+          "lambda_iou": 1.0,
+          "lambda_sparse": 0.001,
+          "lambda_stab": 0.05,
+          "lr": 0.0001,
+          "scale_b": 0.5,
+          "scale_e": 0.5,
+          "span_head_hidden": 384,
+          "span_head_layers": 3,
+          "temporal_layers": 4,
+          "weight_decay": 0.0001
+        },
+        "official_val_used": false,
+        "status": "PASS"
+      }
+    },
+    {
+      "best_deltas_vs_c4_final": {
+        "0.5-r1": 0.0,
+        "0.5-r10": -0.04577182744021968,
+        "0.5-r100": 0.011442956860051368,
+        "0.5-r5": 0.011442956860051368,
+        "0.7-r1": 0.0,
+        "0.7-r10": -0.09154365488041805,
+        "0.7-r100": 0.0,
+        "0.7-r5": -0.05721478430026394
+      },
+      "best_epoch": 1,
+      "best_localization": {
+        "affected_same_video_query_ratio": 0.2572767286667613,
+        "best_iou_span_rank_base_mean": 5.7225614084907,
+        "best_iou_span_rank_delta_mean": 0.004259548487860287,
+        "best_iou_span_rank_new_mean": 5.72682095697856,
+        "gt_video_queries": 7043,
+        "hard_negative_count": 13383,
+        "hard_negative_downward_ratio": 0.014794889038332213,
+        "hard_negative_upward_ratio": 0.014645445714712695,
+        "oracle_video_r1_05_base": 76.89904870083771,
+        "oracle_video_r1_05_delta": -0.02839698991907369,
+        "oracle_video_r1_05_new": 76.87065171091864,
+        "oracle_video_r1_07_base": 49.481754933977,
+        "oracle_video_r1_07_delta": 0.0,
+        "oracle_video_r1_07_new": 49.481754933977,
+        "positive_span_count": 62749,
+        "positive_span_downward_ratio": 0.01681301694050901,
+        "positive_span_upward_ratio": 0.017418604280546302,
+        "selected_span_miou_base": 0.6572716441456385,
+        "selected_span_miou_delta": -0.0004164886126781786,
+        "selected_span_miou_new": 0.6568551555329604
+      },
+      "best_metrics": {
+        "0.5-r1": 39.375214555441126,
+        "0.5-r10": 69.4358622267994,
+        "0.5-r100": 76.23297860167067,
+        "0.5-r5": 62.29545714612656,
+        "0.7-r1": 26.37601556242133,
+        "0.7-r10": 56.13914635541824,
+        "0.7-r100": 65.24774001602015,
+        "0.7-r5": 48.6096807415036
+      },
+      "best_movement": {
+        "hard_positive_top100_entries": 34,
+        "hard_positive_top100_exit_ratio": 0.0003027936700186457,
+        "hard_positive_top100_exits": 19,
+        "mean_within_query_spearman": 0.9999164848671509,
+        "pearson_base_candidate": 0.9999910926622376,
+        "queries": 8739,
+        "top1_changed_ratio": 0.005149330587023687
+      },
+      "best_selection_score": -0.11458096543554076,
+      "config": "c6a_large",
+      "epoch_count": 8,
+      "train_audit": {
+        "artifacts": {
+          "config": {
+            "exists": true,
+            "path": "rlem_c6/configs/c6a_adapter_large.yaml",
+            "sha256": "7c78b80af02d21fe794f784e0c9b5b602f59c0e53c21ded55f19f196cbbeae2e",
+            "size": 383
+          },
+          "history": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_large/history.json",
+            "sha256": "53ae8314d5e3ad972b03effb26c7ee272dbf1ba90c9f30bcde301ae8efeb4fcc",
+            "size": 20918
+          },
+          "model_best": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_large/model_best.pt",
+            "sha256": "70997b36cb716890040ce1b0cdb8b727dbb776e7a68344a77565e6b35a1d7d9d",
+            "size": 23383211
+          },
+          "scores": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_large/train_calib_scores_best.npz",
+            "sha256": "8ca595973d2116042a3f41799b93f8f9a063eba2885e9aa5678d3278f04e9d3a",
+            "size": 5967246
+          }
+        },
+        "best_epoch": 1,
+        "config": {
+          "alpha_bd": 0.05,
+          "alpha_q": 0.02,
+          "alpha_rank": 0.05,
+          "amp": true,
+          "batch_groups": 96,
+          "config_id": "c6a_large",
+          "dropout": 0.1,
+          "epochs": 8,
+          "ffn_dim": 768,
+          "gradient_clip": 1.0,
+          "heads": 8,
+          "hidden_dim": 384,
+          "lambda_bd": 0.25,
+          "lambda_fp": 0.25,
+          "lambda_iou": 1.0,
+          "lambda_sparse": 0.001,
+          "lambda_stab": 0.05,
+          "lr": 8e-05,
+          "scale_b": 0.5,
+          "scale_e": 0.5,
+          "span_head_hidden": 512,
+          "span_head_layers": 3,
+          "temporal_layers": 4,
+          "weight_decay": 0.0001
+        },
+        "official_val_used": false,
+        "status": "PASS"
+      }
+    },
+    {
+      "best_deltas_vs_c4_final": {
+        "0.5-r1": -0.011442956860051368,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.04577182744021968,
+        "0.5-r5": 0.045771827440212576,
+        "0.7-r1": -0.011442956860051368,
+        "0.7-r10": -0.04577182744020547,
+        "0.7-r100": 0.011442956860051368,
+        "0.7-r5": -0.045771827440212576
+      },
+      "best_epoch": 1,
+      "best_localization": {
+        "affected_same_video_query_ratio": 0.2694874343319608,
+        "best_iou_span_rank_base_mean": 5.7225614084907,
+        "best_iou_span_rank_delta_mean": 0.004117563538264944,
+        "best_iou_span_rank_new_mean": 5.726678972028965,
+        "gt_video_queries": 7043,
+        "hard_negative_count": 13383,
+        "hard_negative_downward_ratio": 0.016887095569005455,
+        "hard_negative_upward_ratio": 0.0177090338489128,
+        "oracle_video_r1_05_base": 76.89904870083771,
+        "oracle_video_r1_05_delta": -0.01419849495952974,
+        "oracle_video_r1_05_new": 76.88485020587818,
+        "oracle_video_r1_07_base": 49.481754933977,
+        "oracle_video_r1_07_delta": 0.0,
+        "oracle_video_r1_07_new": 49.481754933977,
+        "positive_span_count": 62749,
+        "positive_span_downward_ratio": 0.015745270840969577,
+        "positive_span_upward_ratio": 0.015888699421504726,
+        "selected_span_miou_base": 0.6572716441456385,
+        "selected_span_miou_delta": -0.00010202773656931008,
+        "selected_span_miou_new": 0.6571696164090692
+      },
+      "best_metrics": {
+        "0.5-r1": 39.363771598581074,
+        "0.5-r10": 69.48163405423962,
+        "0.5-r100": 76.26730747225083,
+        "0.5-r5": 62.32978601670672,
+        "0.7-r1": 26.36457260556128,
+        "0.7-r10": 56.18491818285845,
+        "0.7-r100": 65.2591829728802,
+        "0.7-r5": 48.621123698363654
+      },
+      "best_movement": {
+        "hard_positive_top100_entries": 32,
+        "hard_positive_top100_exit_ratio": 0.0004302857416054439,
+        "hard_positive_top100_exits": 27,
+        "mean_within_query_spearman": 0.9998969126305055,
+        "pearson_base_candidate": 0.9999862057277454,
+        "queries": 8739,
+        "top1_changed_ratio": 0.0037761757638173706
+      },
+      "best_selection_score": -0.06315140560108524,
+      "config": "c6a_regularized",
+      "epoch_count": 8,
+      "train_audit": {
+        "artifacts": {
+          "config": {
+            "exists": true,
+            "path": "rlem_c6/configs/c6a_adapter_regularized.yaml",
+            "sha256": "6c13ee3d6354f2c2de4c7b57041189b689843015ca6ea29d475b4fe17490e8b7",
+            "size": 389
+          },
+          "history": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_regularized/history.json",
+            "sha256": "e33b20ec86f0e40091074996e02e44d9abcdd9b5a609fbac53b33e8eb98e55af",
+            "size": 21251
+          },
+          "model_best": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_regularized/model_best.pt",
+            "sha256": "7267ce2d36a502105820580913be59884e8863715b5a3ad3abc5a6329f227c5a",
+            "size": 8659435
+          },
+          "scores": {
+            "exists": true,
+            "path": "results/rlem_c6a/train_logs/c6a_regularized/train_calib_scores_best.npz",
+            "sha256": "a1b73cc832c4d912f18352bf74f39d812c9da6deeaeec323d67570a574f49297",
+            "size": 5967125
+          }
+        },
+        "best_epoch": 1,
+        "config": {
+          "alpha_bd": 0.05,
+          "alpha_q": 0.02,
+          "alpha_rank": 0.05,
+          "amp": true,
+          "batch_groups": 128,
+          "config_id": "c6a_regularized",
+          "dropout": 0.15,
+          "epochs": 8,
+          "ffn_dim": 512,
+          "gradient_clip": 1.0,
+          "heads": 8,
+          "hidden_dim": 256,
+          "lambda_bd": 0.25,
+          "lambda_fp": 0.25,
+          "lambda_iou": 1.0,
+          "lambda_sparse": 0.001,
+          "lambda_stab": 0.05,
+          "lr": 0.0001,
+          "scale_b": 0.5,
+          "scale_e": 0.5,
+          "span_head_hidden": 384,
+          "span_head_layers": 3,
+          "temporal_layers": 3,
+          "weight_decay": 0.0003
+        },
+        "official_val_used": false,
+        "status": "PASS"
+      }
+    }
+  ],
+  "stage": "C6-A",
+  "status": "C6A_TRAINING_COMPLETE_NO_FREEZE_GATE_PASS"
+}

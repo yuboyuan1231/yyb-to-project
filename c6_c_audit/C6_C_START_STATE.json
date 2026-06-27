@@ -1,0 +1,31 @@
+{
+  "stage": "C6-C paper-grounded train_fit_train_calib_only",
+  "date": "2026-06-26",
+  "current_promoted_system": "C6-B2 pairwise_main_0005",
+  "stable_safety_anchor_system": "C6-B1-lite c6b1r1_0057",
+  "current_promoted_secondary_anchor": "C6-B2 pairwise_main_0005",
+  "C6_B2_role_in_C6_C": "span_utility_evidence_only_not_primary_video_anchor",
+  "C4_role_in_C6_C": "base_video_score_and_raw_candidate_source",
+  "baseline_correction_from_user_attachment": {
+    "attachment_claimed_stable_promoted_system": "C6-B1-lite c6b1r1_0057",
+    "correct_current_promoted_system_from_final_handoff": "C6-B2 pairwise_main_0005",
+    "decision": "Use C6-B1-lite as primary safety anchor to avoid compounding B2 top-k tradeoff with video-slot drift; report and guard against C6-B2 separately."
+  },
+  "official_val_used_for_c6c": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "C6_B1_lite_modified": false,
+  "C6_B2_modified": false,
+  "C4_final_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "full_backbone_finetuning": false,
+  "paper_grounding": {
+    "CONQUER": "two-stage VCMR and contextual query-aware ranking retained as base.",
+    "MA_VR": "moment predictions condition video relevance via moment-aware evidence/gating.",
+    "PREM_PRVR": "partial relevance motivates bag-of-moments MIL pooling at video level.",
+    "BSN_BMN": "boundary/proposal confidence is used as feature evidence, not a new backbone.",
+    "GenSpan": "design note only; no generator or C6-D training in this stage."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "stage": "C4-r2-cal-v2.1 train split scoring for C5-lite",
+  "split_role": "train_fit",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "score_grid_on_val": false,
+  "config_id": "v21_00444",
+  "queries": 78045,
+  "candidate_rows": 15609000,
+  "video_groups": 779142,
+  "feature_dim": 27,
+  "weights": {
+    "a_rel": 0.075,
+    "b_iou05": 0.0,
+    "c_iou07": 0.05,
+    "d_quality": -0.1
+  },
+  "z_stats": {
+    "rel_logit": {
+      "mean": -3.862743616104126,
+      "std": 2.063218832015991
+    },
+    "iou05_logit": {
+      "mean": -3.92142653465271,
+      "std": 2.1069819927215576
+    },
+    "iou07_logit": {
+      "mean": -4.213388919830322,
+      "std": 2.1755518913269043
+    },
+    "quality_logit": {
+      "mean": -3.8732757568359375,
+      "std": 1.7478158473968506
+    }
+  },
+  "artifacts": {
+    "cache_npz": {
+      "path": "/tmp/c4_r2_work/train_fit_c4_cache.npz",
+      "sha256": "426f95fe6ac59d57d5ad848b039df6b29a3ec08652ea2d647728524ea9adaae3"
+    },
+    "video_dataset_npz": {
+      "path": "results/rlem_c4_r2_cal/train_fit_video_dataset.npz",
+      "sha256": "97a42fd9b219ba7ddbe836881e354235d0587ec9f50253df97a70aaa1bdc31a8"
+    },
+    "model_ckpt": {
+      "path": "results/rlem_c4_r2_cal_v2/v2_cb/model_best.pt",
+      "sha256": "e7a37e0ca761e82513feb50ff4877f25b0fb514d4b403f1bd8c173948c912d64"
+    },
+    "freeze_manifest": {
+      "path": "c4_audit/C4_R2_CAL_V21_FREEZE_MANIFEST.json",
+      "sha256": "a4feaa3a86ba49e585c3e6b989ed10e56d598052d3f316f098d9d86464c97a9e"
+    },
+    "output_logits_npz": {
+      "path": "results/rlem_c5_lite_prior_prep/train_fit_v21_logits.npz",
+      "sha256": "b6305c90549ae437094145413a35b5a9f42e75625ed197af1d97040f07193dbc"
+    },
+    "output_scores_npz": {
+      "path": "results/rlem_c5_lite_prior_prep/train_fit_v21_scores.npz",
+      "sha256": "5ace7d5796ec571ec2f619964056d5a347ba044c5a8513ff86bb0e124eeafaad"
+    }
+  },
+  "used": {
+    "C4-final": true,
+    "C5-lite": false,
+    "C5-main": false,
+    "C6": false
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "config_id": "loss_jb0p5_bd0p5_fp0p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 0.5,
+    "lambda_fp": 0.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb0p5_bd0p5_fp1",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 0.5,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb0p5_bd0p5_fp1p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 0.5,
+    "lambda_fp": 1.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb0p5_bd1_fp0p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 0.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb0p5_bd1_fp1",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb0p5_bd1_fp1p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 0.5,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd0p5_fp0p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 0.5,
+    "lambda_fp": 0.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd0p5_fp1",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 0.5,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd0p5_fp1p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 0.5,
+    "lambda_fp": 1.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd1_fp0p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 1.0,
+    "lambda_fp": 0.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd1_fp1",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.0,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  },
+  {
+    "config_id": "loss_jb1_bd1_fp1p5",
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lambda_joint_reg": 1.0,
+    "lambda_joint_bin": 1.0,
+    "lambda_bd": 1.0,
+    "lambda_fp": 1.5,
+    "fp_loss_type": "bce",
+    "focal_gamma": 2.0
+  }
+]

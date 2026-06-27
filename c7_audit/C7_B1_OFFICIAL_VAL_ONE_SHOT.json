@@ -1,0 +1,134 @@
+{
+  "stage": "C7-B1",
+  "status": "C7_B1_R1_TRADEOFF_NO_PROMOTION",
+  "status_before_run": "C7_B1_OFFICIAL_READY",
+  "date": "2026-06-26",
+  "fixed_config": {
+    "stage": "C7-B1",
+    "mode": "S1_span_level_bounded_residual",
+    "mu": 0.1,
+    "eta": 0.1,
+    "model": "c7_models/c7_b1_proposal_confidence_head.pt"
+  },
+  "official_val_used": true,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "training_started": false,
+  "config_selection_changed": false,
+  "mu_eta_search": false,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "C4_modified": false,
+  "C6_B1_modified": false,
+  "C6_B2_modified": false,
+  "enter_C7_B2": false,
+  "enter_C7_C": false,
+  "enter_C8": false,
+  "C6_B1_official_metrics": {
+    "0.5-r1": 14.92,
+    "0.5-r5": 28.66,
+    "0.5-r10": 34.93,
+    "0.5-r100": 46.56,
+    "0.7-r1": 8.39,
+    "0.7-r5": 18.82,
+    "0.7-r10": 24.82,
+    "0.7-r100": 35.88
+  },
+  "C6_B2_official_metrics": {
+    "0.5-r1": 14.98,
+    "0.5-r5": 28.66,
+    "0.5-r10": 34.9,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.45,
+    "0.7-r5": 18.78,
+    "0.7-r10": 24.76,
+    "0.7-r100": 35.82
+  },
+  "C7_B1_official_metrics": {
+    "0.5-r1": 15.24,
+    "0.5-r5": 28.82,
+    "0.5-r10": 34.89,
+    "0.5-r100": 46.54,
+    "0.7-r1": 8.62,
+    "0.7-r5": 19.43,
+    "0.7-r10": 25.32,
+    "0.7-r100": 35.81
+  },
+  "delta_vs_C6_B1": {
+    "0.5-r1": 0.3200000000000003,
+    "0.5-r5": 0.16000000000000014,
+    "0.5-r10": -0.03999999999999915,
+    "0.5-r100": -0.020000000000003126,
+    "0.7-r1": 0.22999999999999865,
+    "0.7-r5": 0.6099999999999994,
+    "0.7-r10": 0.5,
+    "0.7-r100": -0.07000000000000028
+  },
+  "delta_vs_C6_B2": {
+    "0.5-r1": 0.2599999999999998,
+    "0.5-r5": 0.16000000000000014,
+    "0.5-r10": -0.00999999999999801,
+    "0.5-r100": 0.0,
+    "0.7-r1": 0.16999999999999993,
+    "0.7-r5": 0.6499999999999986,
+    "0.7-r10": 0.5599999999999987,
+    "0.7-r100": -0.00999999999999801
+  },
+  "invalid_span_count": 0,
+  "duplicate_span_count_after_nms": 0,
+  "structural_diagnostics": {
+    "invalid_span_count": 0,
+    "duplicate_span_count_after_nms": 0,
+    "top1_changed_ratio_vs_C6_B2": 0.07425424506654428,
+    "queries": 10895,
+    "normalization_source": "results/rlem_c7/train_calib_proposal_scores.npz",
+    "proposal_confidence_mean_train_calib": 0.04281247779726982,
+    "proposal_confidence_std_train_calib": 0.105640709400177,
+    "span_quality_mean_train_calib": -3.5550243854522705,
+    "span_quality_std_train_calib": 1.449446678161621
+  },
+  "decision_rule_eval": {
+    "r1_vs_C6_B2_positive": true,
+    "r5_r10_vs_C6_B1_nonnegative": false,
+    "r5_r10_vs_C6_B1_negative": true,
+    "rule": "Promote only if 0.7-r1 and 0.5-r1 beat C6-B2 and all R@5/R@10 deltas vs C6-B1 are non-negative; otherwise positive R@1 with negative R@5/R@10 is marked tradeoff."
+  },
+  "c6c_official_inference_features": {
+    "purpose": "frozen C6-C evidence input for C7-B1 features only; no tuning or selection",
+    "feature_info": {
+      "reused": false,
+      "features": {
+        "path": "results/rlem_c7_official_val/aux/official_val_c6c_video_features.npz",
+        "exists": true,
+        "size": 19684096,
+        "sha256": "c2464a3271fec57e14c916d574df2292922eefb24997e7c42e73ccea33b55fe9"
+      },
+      "examples": 107513,
+      "feature_dim": 57
+    },
+    "score_info": {
+      "reused": false,
+      "scores": {
+        "path": "results/rlem_c7_official_val/aux/official_val_c6c_video_scores.npz",
+        "exists": true,
+        "size": 1494979,
+        "sha256": "c68faa6fcd9a86bb297b396b85d0667e5d567797fee2823c754ccd7d455bb986"
+      },
+      "gate_mean": 0.08805157244205475
+    }
+  },
+  "ready_state_artifacts": {
+    "ready_manifest": {
+      "path": "c7_audit/C7_B1_OFFICIAL_READY_MANIFEST.json",
+      "exists": true,
+      "size": 655,
+      "sha256": "d95c3ed1ec8cb4302dc36e9a56ed251af6671be184131f208bece4b1947ecfa5"
+    },
+    "freeze_package": {
+      "path": "c7_audit/C7_B1_FINAL_FREEZE_PACKAGE.json",
+      "exists": true,
+      "size": 3660,
+      "sha256": "92b2a3b9d72f35ea9b0082e792ce0293d0839e01febb147518fceb02eae14be9"
+    }
+  }
+}

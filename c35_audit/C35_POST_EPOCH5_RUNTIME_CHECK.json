@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "project_root": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3",
+  "dataset_root": "/home/a/yybwork/data/yyb/tvr_feature_release",
+  "dataset_paths_ok": true,
+  "frozen_artifacts_ok": true,
+  "python": "/home/a/miniconda3/envs/conquer-rlem/bin/python3",
+  "python_version": "3.9.19",
+  "dependencies": {
+    "torch": {
+      "installed": true,
+      "distribution": "torch",
+      "expected": "2.0.1+cu117",
+      "actual": "2.0.1+cu117",
+      "matches": true
+    },
+    "numpy": {
+      "installed": true,
+      "distribution": "numpy",
+      "expected": "1.26.4",
+      "actual": "1.26.4",
+      "matches": true
+    },
+    "scipy": {
+      "installed": true,
+      "distribution": "scipy",
+      "expected": "1.10.1",
+      "actual": "1.10.1",
+      "matches": true
+    },
+    "sklearn": {
+      "installed": true,
+      "distribution": "scikit-learn",
+      "expected": "1.6.1",
+      "actual": "1.6.1",
+      "matches": true
+    },
+    "tqdm": {
+      "installed": true,
+      "distribution": "tqdm",
+      "expected": "4.65.2",
+      "actual": "4.65.2",
+      "matches": true
+    },
+    "easydict": {
+      "installed": true,
+      "distribution": "easydict",
+      "expected": "1.13",
+      "actual": "1.13",
+      "matches": true
+    },
+    "lmdb": {
+      "installed": true,
+      "distribution": "lmdb",
+      "expected": "1.5.1",
+      "actual": "1.5.1",
+      "matches": true
+    },
+    "msgpack": {
+      "installed": true,
+      "distribution": "msgpack",
+      "expected": "1.1.2",
+      "actual": "1.1.2",
+      "matches": true
+    },
+    "msgpack_numpy": {
+      "installed": true,
+      "distribution": "msgpack-numpy",
+      "expected": "0.4.8",
+      "actual": "0.4.8",
+      "matches": true
+    },
+    "tensorboard": {
+      "installed": true,
+      "distribution": "tensorboard",
+      "expected": "2.20.0",
+      "actual": "2.20.0",
+      "matches": true
+    }
+  },
+  "torch_runtime": {
+    "cuda_available": true,
+    "cuda_runtime": "11.7",
+    "cuda_runtime_expected": "11.7",
+    "cuda_runtime_matches": true,
+    "cudnn": 8500,
+    "cudnn_expected_major_minor": "8.5",
+    "cudnn_matches": true
+  },
+  "runtime_dependencies_ok": true,
+  "path_checks": {
+    "desc_bert_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+      "exists": true
+    },
+    "sub_bert_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+      "exists": true
+    },
+    "vid_feat_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5",
+      "exists": true
+    },
+    "train_data_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_train_select100_release.jsonl",
+      "exists": true
+    },
+    "eval_data_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_val_release.jsonl",
+      "exists": true
+    },
+    "test_data_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_test_public_release.jsonl",
+      "exists": true
+    },
+    "train_first_VR_ranklist_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/train_select100_top2000",
+      "exists": true
+    },
+    "eval_first_VR_ranklist_path_hero": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_val_top100_hero",
+      "exists": true
+    },
+    "test_public_first_VR_ranklist_path_hero": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_test_public_top100_hero",
+      "exists": true
+    },
+    "video_duration_idx_path": {
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_video2dur_idx.json",
+      "exists": true
+    }
+  },
+  "artifact_checks": {
+    "results/rlem_c31_capacity/best_config.json": {
+      "exists": true,
+      "expected_sha256": "ed9ac0f5a30596d1c6fbbf87cd5dbf017edd5ad9ed0a869c2ae899a1841b6eb8",
+      "actual_sha256": "ed9ac0f5a30596d1c6fbbf87cd5dbf017edd5ad9ed0a869c2ae899a1841b6eb8",
+      "matches": true
+    },
+    "c31_audit/C31_FROZEN_MANIFEST.json": {
+      "exists": true,
+      "expected_sha256": "530f4466b3bc80d75fd246127f01de0274c8eecb3a941a494d5fc749b98d1408",
+      "actual_sha256": "530f4466b3bc80d75fd246127f01de0274c8eecb3a941a494d5fc749b98d1408",
+      "matches": true
+    },
+    "results/rlem_c31_official_val/VAL_C31_ONE_SHOT_MANIFEST.json": {
+      "exists": true,
+      "expected_sha256": "a3a46899ee2411cd0da63e0d015330c80375375a9bf54114cc55b6413ba87599",
+      "actual_sha256": "a3a46899ee2411cd0da63e0d015330c80375375a9bf54114cc55b6413ba87599",
+      "matches": true
+    },
+    "results/rlem_c31_capacity/models/cap_F_wd0/model_best.pt": {
+      "exists": true,
+      "expected_sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42",
+      "actual_sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42",
+      "matches": true
+    }
+  }
+}

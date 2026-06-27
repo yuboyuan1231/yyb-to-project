@@ -1,0 +1,54 @@
+{
+  "status": "C31_FROZEN",
+  "scope": "train_fit_train_calib_only",
+  "official_val_used": false,
+  "official_val_one_shot_executed": false,
+  "post_val_adjustment": false,
+  "qsp_used": false,
+  "r2_used": false,
+  "immutable_inputs": {
+    "train_metadata": {
+      "path": "results/rlem_c31_capacity/train_calib_metadata.npz",
+      "sha256": "c26dbac3ea61b1251a0120cc84ef194aaa179384f537311168dc1526dec47198"
+    },
+    "c2_cache_manifest": {
+      "path": "results/rlem_c2/cache/cache_manifest.json",
+      "sha256": "9dbb67c00883745749ea4677b231a7b7a9bc2bcaf9007b3c0a0f9d0de0d88918"
+    },
+    "c2_model": {
+      "path": "results/rlem_c2/basic_heads/model_best.pt",
+      "sha256": "e4a8944d836075139211202eac5caf0cb708de878447893b10dd8af34ac6bda9"
+    },
+    "c3_strong_best": {
+      "path": "results/rlem_c3_strong/best_config.json",
+      "sha256": "5008fb07200bcf0efc0d9ee4514a5a7d8fffa81531c7f7a5693d299071708360"
+    }
+  },
+  "selected_checkpoint_sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42",
+  "protocol": {
+    "C31_PROTOCOL_FREEZE.json": "d5d9d571a0f7911497505d1eea1fc6cdf875fa5ba76c11f8984cff734bb15251",
+    "C31_PROTOCOL_AMENDMENT_EXACT_LOGIT_DEDUP.json": "2c50181dde63235c059db3b01b36205db9359009b002284d53f5bedcca70ff1d"
+  },
+  "outputs": {
+    "grid_results.json": "def42d7384eb6ac77aa244ccd77430dc8b139fff26ab7c0a6da8a20b8b61bdbf",
+    "grid_results.csv": "b5e87e4567b403e259777663720d95bbbb58842f957da4d0f745939b88a83c58",
+    "best_config.json": "ed9ac0f5a30596d1c6fbbf87cd5dbf017edd5ad9ed0a869c2ae899a1841b6eb8",
+    "best_train_calib_submission.json": "6580ead4f4a0e37936471a9b896613be417de53f72553e889fa7d16bef3a4f16",
+    "best_train_calib_metrics.json": "b7cebfd02cb54869d66b054ea21854bd45d67b38d1209714d293ba1160ea874e",
+    "c31_diagnostics.json": "b8c95deb4ca4e3d3adcc2711717b54f282cc46b09267089b1435392194813e23",
+    "c31_diagnostics.md": "f1cc135153e85892f82596e22bb0a04ded8e49ef6c7bcc1d064a2d8ac1847ec1"
+  },
+  "audit_outputs": {
+    "C31_CAPACITY_CALIBRATION_AUDIT_20260622.md": "dc0eea936db5a2b997f81f73ba8a4e2da9c22911d9587000b74f103a9ebd6c37",
+    "C31_EXECUTION_COMMANDS.md": "47f8999effe504248042040d816fa424923721ededf296cce94c1cb7e308ceaa"
+  },
+  "frozen_artifact_verification": {
+    "c2_checkpoint_matches_C2_FROZEN_MANIFEST": true,
+    "c3_strong_best_matches_pre_execution_hash": true,
+    "train_fit_ids_match_pre_execution_hash": true,
+    "train_calib_ids_match_pre_execution_hash": true,
+    "official_val_manifest_matches_pre_execution_hash": true,
+    "official_val_evidence_read": false
+  },
+  "next_stage_authorized": false
+}

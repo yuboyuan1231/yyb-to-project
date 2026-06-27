@@ -1,0 +1,15 @@
+# C7-B4 archive decision
+
+```json
+{
+  "status": "C7_B4_ARCHIVED_NO_PROMOTION",
+  "official_val_used": false,
+  "C7_B4_official_like_stress_split_successfully_constructed": true,
+  "C7_B4_anchor_safe_residual_candidates_all_failed_hard_constraints": true,
+  "C7_B4_best_anchor_safe_residual_negative_on_stress_split": true,
+  "C7_B4_SN_Audit_partial_raw_logit_evidence_but_incomplete_strict_alignment": true,
+  "C7_B4_does_not_enter_official": true,
+  "C7_B2_1_A4_remains_current_promoted_system": true,
+  "archived_C7_B4_status": "C7_B4_SN_AUDIT_ONLY"
+}
+```

@@ -1,0 +1,152 @@
+{
+  "all_eight_positive_count": 268,
+  "baseline_primary": "frozen_C4_lite_c4_00394",
+  "baseline_secondary": "frozen_C3.1",
+  "best_config": {
+    "a_rel": 0.075,
+    "active_parameter_on_grid_boundary": false,
+    "all_eight_strictly_positive": true,
+    "all_six_primary_nonnegative": true,
+    "b_iou05": 0.075,
+    "c_iou07": 0.025,
+    "config_id": "v2_acb_00508",
+    "d_quality": 0.0,
+    "deltas_vs_frozen_c31": {
+      "0.5-r1": 1.6134569172674205,
+      "0.5-r10": 0.6179196704428449,
+      "0.5-r100": 0.13731548232063062,
+      "0.5-r5": 0.6064767135827864,
+      "0.7-r1": 0.8696647213639999,
+      "0.7-r10": 2.219933630850214,
+      "0.7-r100": 0.7437921959034242,
+      "0.7-r5": 2.197047717130104
+    },
+    "deltas_vs_frozen_c4_lite": {
+      "0.5-r1": 0.03432887058016121,
+      "0.5-r10": 0.022885913720102735,
+      "0.5-r100": 0.0343288705801541,
+      "0.5-r5": 0.022885913720102735,
+      "0.7-r1": 0.022885913720106288,
+      "0.7-r10": 0.08010069802036668,
+      "0.7-r100": 0.04577182744021968,
+      "0.7-r5": 0.0343288705801541
+    },
+    "grid_index": [
+      2,
+      2,
+      2,
+      1,
+      2
+    ],
+    "group": "v2_acb",
+    "hard_constraints_pass": true,
+    "isolated_boundary_point": false,
+    "metrics": {
+      "0.5-r1": 39.363771598581074,
+      "0.5-r10": 69.4358622267994,
+      "0.5-r100": 76.22153564481061,
+      "0.5-r5": 62.29545714612656,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.15058931227829,
+      "0.7-r100": 65.2591829728802,
+      "0.7-r5": 48.66689552580387
+    },
+    "movement_vs_frozen_c4_lite": {
+      "hard_positive_top100_entries": 182,
+      "hard_positive_top100_exit_ratio": 0.00015936508948349775,
+      "hard_positive_top100_exits": 10,
+      "pearson_c4_lite_v2": 0.9999247266655108,
+      "queries": 8739,
+      "relative_to": "frozen_C4_lite_c4_00394",
+      "top1_changed_ratio": 0.002403020940611054
+    },
+    "official_val_used": false,
+    "passing_neighbor_count": 10,
+    "passing_neighbor_ids": [
+      "v2_acb_00317",
+      "v2_acb_00460",
+      "v2_acb_00496",
+      "v2_acb_00504",
+      "v2_acb_00507",
+      "v2_acb_00509",
+      "v2_acb_00512",
+      "v2_acb_00520",
+      "v2_acb_00556",
+      "v2_acb_00699"
+    ],
+    "pearson_c4_lite_v2": 0.9999247266655218,
+    "r100_both_nonnegative": true,
+    "robust_neighbor_supported": true,
+    "selection_score_delta_vs_frozen_c4_lite": 0.046248617309379014,
+    "tau": 0.075,
+    "top1_changed_ratio": 0.002403020940611054,
+    "z_stats_train_calib": {
+      "iou05_logit": {
+        "row_expanded_mean": -4.057419776916504,
+        "row_expanded_std": 2.109370470046997
+      },
+      "iou07_logit": {
+        "row_expanded_mean": -4.22743558883667,
+        "row_expanded_std": 2.1545042991638184
+      },
+      "quality_logit": {
+        "row_expanded_mean": -4.119297504425049,
+        "row_expanded_std": 1.8869495391845703
+      },
+      "rel_logit": {
+        "row_expanded_mean": -3.9050562381744385,
+        "row_expanded_std": 2.09877872467041
+      }
+    },
+    "zero_residual_control": false
+  },
+  "deduplicated_grid_size": 765,
+  "effective_top_n": 100,
+  "fast_bundled_parity": {
+    "best": 0.0,
+    "c31": 0.0,
+    "c4_lite": 0.0
+  },
+  "frozen_effective_top_n": 100,
+  "frozen_max_after_nms": 100,
+  "frozen_nms_thd": 0.7,
+  "future_stages_used": {
+    "c4_main": false,
+    "c5": false,
+    "c6": false,
+    "official_val": false,
+    "r2_head": false,
+    "vs_head": false
+  },
+  "group": "v2_acb",
+  "hard_constraint_pass_count": 499,
+  "logits_sha256": "0c06c2387cb67b46289d9828c23f0be948b3b209a3ace4af5a6266d62424cd94",
+  "max_after_nms": 100,
+  "modifies_conquer": false,
+  "movement_vs_frozen_c4_lite": {
+    "hard_positive_top100_entries": 182,
+    "hard_positive_top100_exit_ratio": 0.00015936508948349775,
+    "hard_positive_top100_exits": 10,
+    "pearson_c4_lite_v2": 0.9999247266655108,
+    "queries": 8739,
+    "relative_to": "frozen_C4_lite_c4_00394",
+    "top1_changed_ratio": 0.002403020940611054
+  },
+  "nms_thd": 0.7,
+  "official_val_allowed": false,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "protocol_validated": true,
+  "r2_features_enabled": false,
+  "r2_main_allowed": false,
+  "raw_base_log_selection": false,
+  "raw_grid_size": 768,
+  "reads_official_val": false,
+  "recommend_freeze_review": true,
+  "robustness_pass": true,
+  "scope": "train_calib_only",
+  "split": "train",
+  "stage": "c4_r2_grid_search",
+  "status": "PASS",
+  "workers": 8
+}

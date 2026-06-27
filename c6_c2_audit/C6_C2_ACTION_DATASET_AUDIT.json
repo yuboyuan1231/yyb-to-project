@@ -1,0 +1,121 @@
+{
+  "official_val_used": false,
+  "splits": {
+    "train_fit": {
+      "queries": 78045,
+      "samples": 468270,
+      "feature_dim": 31,
+      "number_of_actions": 6,
+      "action_names": [
+        "A0_noop_B2",
+        "A1_MAVR_soft_rerank",
+        "A2_PREM_PRVR_MIL_promote",
+        "A3_topK_preserving_promote",
+        "A4_raw200_video_insertion",
+        "A5_BMN_proposal_confidence_boost"
+      ],
+      "positive_action_rate": 0.015407777391374111,
+      "bad_action_rate": 0.09225446730852127,
+      "no_op_rate": 0.7338245029576953,
+      "actions_with_R1_gain_but_R5_loss": 0,
+      "actions_with_video_correction": 1857,
+      "actions_with_video_regression": 31699,
+      "changed_nonnoop_actions": 124642,
+      "action_distribution": {
+        "A0_noop_B2": 78045,
+        "A1_MAVR_soft_rerank": 78045,
+        "A2_PREM_PRVR_MIL_promote": 78045,
+        "A3_topK_preserving_promote": 78045,
+        "A4_raw200_video_insertion": 78045,
+        "A5_BMN_proposal_confidence_boost": 78045
+      },
+      "feature_leakage_guard": {
+        "gt_iou_as_feature": false,
+        "hit_label_as_feature": false,
+        "train_calib_label_as_feature": false,
+        "official_val_prediction_as_feature": false,
+        "oracle_decision_as_feature": false
+      }
+    },
+    "train_calib": {
+      "queries": 8739,
+      "samples": 52434,
+      "feature_dim": 31,
+      "number_of_actions": 6,
+      "action_names": [
+        "A0_noop_B2",
+        "A1_MAVR_soft_rerank",
+        "A2_PREM_PRVR_MIL_promote",
+        "A3_topK_preserving_promote",
+        "A4_raw200_video_insertion",
+        "A5_BMN_proposal_confidence_boost"
+      ],
+      "positive_action_rate": 0.015161917544901371,
+      "bad_action_rate": 0.09144829958677292,
+      "no_op_rate": 0.7344661860624786,
+      "actions_with_R1_gain_but_R5_loss": 0,
+      "actions_with_video_correction": 180,
+      "actions_with_video_regression": 3492,
+      "changed_nonnoop_actions": 13923,
+      "action_distribution": {
+        "A0_noop_B2": 8739,
+        "A1_MAVR_soft_rerank": 8739,
+        "A2_PREM_PRVR_MIL_promote": 8739,
+        "A3_topK_preserving_promote": 8739,
+        "A4_raw200_video_insertion": 8739,
+        "A5_BMN_proposal_confidence_boost": 8739
+      },
+      "feature_leakage_guard": {
+        "gt_iou_as_feature": false,
+        "hit_label_as_feature": false,
+        "train_calib_label_as_feature": false,
+        "official_val_prediction_as_feature": false,
+        "oracle_decision_as_feature": false
+      }
+    }
+  },
+  "build_info": {
+    "c6c_video_scores": {
+      "train_fit": {
+        "split": "train_fit",
+        "reused": true,
+        "scores": {
+          "path": "results/rlem_c6_c/train_fit_video_scores.npz",
+          "exists": true,
+          "size": 11416115,
+          "sha256": "b7bc12916ff5ad1b1741af85d34549669dd3956f2fc8e466ede991e5a5deeede"
+        }
+      },
+      "train_calib": {
+        "split": "train_calib",
+        "reused": true,
+        "scores": {
+          "path": "results/rlem_c6_c/train_calib_video_scores.npz",
+          "exists": true,
+          "size": 1284593,
+          "sha256": "7a648c5686289f6f76d73e08584aa35aa8bcdc5bc5b4952b2136ce1ed20e854a"
+        }
+      }
+    },
+    "train_fit": {
+      "split": "train_fit",
+      "reused": true,
+      "dataset": {
+        "path": "results/rlem_c6_c2/train_fit_action_dataset.npz",
+        "exists": true,
+        "size": 11466227,
+        "sha256": "d717ae120cd73c5fbd66b167c1fb71da17501e232577421b7edb48e4e166c257"
+      }
+    },
+    "train_calib": {
+      "split": "train_calib",
+      "reused": true,
+      "dataset": {
+        "path": "results/rlem_c6_c2/train_calib_action_dataset.npz",
+        "exists": true,
+        "size": 1294270,
+        "sha256": "8b01b6f386de57c4079c64862153890f0cefb9493eab731586faa6860903ae11"
+      }
+    }
+  }
+}

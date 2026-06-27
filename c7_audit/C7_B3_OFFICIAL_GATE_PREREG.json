@@ -1,0 +1,29 @@
+{
+  "status": "C7_B3_OFFICIAL_GATE_PREREG",
+  "official_val_used": false,
+  "primary_comparison": "current promoted system = C7-B2.1 A4 official",
+  "promotion_gate": [
+    "0.5-r1 vs C7-B2.1 A4 official > 0",
+    "0.7-r1 vs C7-B2.1 A4 official > 0",
+    "0.7-r5 vs C7-B2.1 A4 official >= 0",
+    "0.7-r10 vs C7-B2.1 A4 official >= 0",
+    "0.5-r5 vs C7-B2.1 A4 official >= -0.05",
+    "0.5-r10 vs C7-B2.1 A4 official >= -0.05",
+    "R@100 unchanged or delta >= -0.05",
+    "fixed_pool_invariant = true",
+    "hard_positive_exit_ratio = 0",
+    "invalid_span_count = 0",
+    "duplicate_span_count_after_nms = 0",
+    "evaluator_modified = false",
+    "nms_modified = false",
+    "post_val_adjustment = false",
+    "second_official_val = false"
+  ],
+  "allowed_statuses": [
+    "C7_B3_OFFICIAL_PROMOTED",
+    "C7_B3_OFFICIAL_CORE_POSITIVE_REVIEW",
+    "C7_B3_OFFICIAL_NO_GAIN_KEEP_C7_B2_1",
+    "C7_B3_OFFICIAL_NEGATIVE",
+    "C7_B3_INFRA_FAIL"
+  ]
+}

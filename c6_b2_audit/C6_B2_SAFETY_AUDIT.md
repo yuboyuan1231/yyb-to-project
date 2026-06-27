@@ -1,0 +1,37 @@
+# C6-B2 selected policy safety audit
+
+```json
+{
+  "status": "C6_B2_SELECTED_POLICY_SAFETY_AUDIT",
+  "selected_config_id": "pairwise_main_0005",
+  "official_val_used": false,
+  "queries": 8739,
+  "slots": 5,
+  "alts": 8,
+  "selected_replacements": 2027,
+  "replacement_rate_top_slots": 0.04638974711065339,
+  "invalid_span_count_pre_nms": 0,
+  "invalid_span_count_after_nms": 0,
+  "pre_nms_duplicate_candidate_count_all_top100": 1908,
+  "replacement_duplicate_count_within_query": 418,
+  "replacement_duplicate_vs_original_top_slots": 1915,
+  "duplicate_span_count_after_nms": 0,
+  "final_candidates_after_nms": 408811,
+  "harmful_replacement_count_iou05_binary": 22,
+  "harmful_replacement_count_iou07_binary": 56,
+  "harmful_replacement_rate_iou05_binary": 0.010853478046373951,
+  "harmful_replacement_rate_iou07_binary": 0.027627035027133696,
+  "non_improving_iou_replacement_count": 175,
+  "non_improving_iou_replacement_rate": 0.0863344844597928,
+  "hard_positive_exit_ratio": 0.00011442956860052638,
+  "gate_checks": {
+    "invalid_span_count_after_nms_eq_0": true,
+    "duplicate_span_count_after_nms_eq_0": true,
+    "hard_positive_exit_ratio_le_0_0075": true,
+    "replacement_rate_le_0_07": true,
+    "video_slot_drift_eq_0": true,
+    "video_multiset_drift_eq_0": true
+  },
+  "note": "Duplicate diagnostics are split into pre-NMS and after-NMS. The freeze gate uses after-NMS duplicate count because evaluator/NMS consumes the final top100 list. Pre-NMS duplicate pressure is reported for follow-up analysis."
+}
+```

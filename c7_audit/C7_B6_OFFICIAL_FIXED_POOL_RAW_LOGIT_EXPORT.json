@@ -1,0 +1,45 @@
+{
+  "status": "C7_B6_OFFICIAL_FIXED_POOL_RAW_LOGIT_EXPORT_PASS",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "second_official_val": false,
+  "scope": "train_calib fixed-pool only",
+  "method": "frozen CONQUER begin/end logits indexed directly by fixed-pool candidate video/start/end",
+  "filter_info": {
+    "source_train_queries": 10895,
+    "filtered_train_calib_queries": 304,
+    "missing_desc_ids": 0
+  },
+  "existing_evidence_fill_info": {
+    "source": "results/rlem_c1/val_evidence.jsonl.gz",
+    "available": true,
+    "strict_filled": 1089131,
+    "bad_identity_candidate_row_ids": 369
+  },
+  "missing_query_count_for_forward": 304,
+  "total_candidates": 1089500,
+  "matched_candidates": 1089500,
+  "missing_candidates": 0,
+  "missing_video_slot": 0,
+  "out_of_bounds": 0,
+  "strict_key_fields": [
+    "desc_id",
+    "video_idx",
+    "start_idx",
+    "end_idx",
+    "candidate_row_id",
+    "group_id"
+  ],
+  "position_based_join": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "CONQUER_frozen": true,
+  "output_npz": {
+    "path": "results/rlem_c7_b6_official_val/aux/official_val_fixed_pool_raw_logits.npz",
+    "sha256": "a2af9837027c79d1f63e7481dcf5c28fbfc8951983972c0ed18b70481ca3603c"
+  },
+  "runner": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/export_c7_b5_1_fixed_pool_raw_logits.py",
+    "sha256": "8eb8efd0cf205610668b8f6421bcdbe9af4c9ebcab0bd6af257f763879b23d82"
+  }
+}

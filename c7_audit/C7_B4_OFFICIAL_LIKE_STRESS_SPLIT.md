@@ -1,0 +1,33 @@
+# C7-B4 official-like stress split
+
+```json
+{
+  "status": "C7_B4_OFFICIAL_LIKE_STRESS_SPLIT_READY",
+  "official_val_used": false,
+  "construction": "deterministic train_calib subset balancing anchor-hit positives and negatives, sorted by sha256(desc_id)",
+  "target_positive_pool_rate": "0.45-0.55",
+  "target_anchor_hit_rate_r100": "0.45-0.55",
+  "query_count": 3732,
+  "positive_pool_rate_05_or_07": 0.5,
+  "anchor_hit_rate_r100_05_or_07": 0.5,
+  "top_residual_candidate_anchor_rank": {
+    "p10": 4.0,
+    "p50": 11.0,
+    "p90": 36.0,
+    "rank1_rate": 0.008842443729903537,
+    "rank_gt10_rate": 0.509914255091104
+  },
+  "split_hash": "0116d68d2592ae6e54e4ac1f1db3aabc7fa6fb63193b612596e494f451654741",
+  "desc_id_hash": "4aca99a9dcfd4b6bbb8a8e374bb583df3a689ea783bdf67b00348ddb7bb809d7",
+  "baseline_C7_B2_1_A4_metrics": {
+    "0.5-r1": 8.038585209003216,
+    "0.5-r5": 38.960342979635584,
+    "0.5-r10": 46.70418006430868,
+    "0.5-r100": 49.59807073954984,
+    "0.7-r1": 4.662379421221865,
+    "0.7-r5": 26.339764201500536,
+    "0.7-r10": 34.833869239013936,
+    "0.7-r100": 41.88102893890675
+  }
+}
+```

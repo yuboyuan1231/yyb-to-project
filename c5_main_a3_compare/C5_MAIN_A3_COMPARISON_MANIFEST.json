@@ -1,0 +1,60 @@
+{
+  "status": "C5_MAIN_A3_COMPARISON_COMPLETE",
+  "classification": "A_A3_PROMOTE",
+  "primary_baseline": "C4_final = C4-r2-cal-v2.1 v21_00444",
+  "promoted_variant": "A3b-wide video-slot/quota-preserved fixed-candidate span replacement",
+  "selected_config": {
+    "config_id": "c5ma_0214",
+    "alpha": 0.25,
+    "beta": 0.05,
+    "tau": 1.5,
+    "lambda": 0.05,
+    "gamma": 0.05
+  },
+  "A3a": {
+    "status": "NO_PROMOTION",
+    "top100_membership_drift": 0.0,
+    "hard_positive_exits": 0,
+    "localization_positive": true,
+    "six_primary_nonnegative": false,
+    "recommend_official_val": false
+  },
+  "A3b_wide": {
+    "status": "C5_MAIN_A3_FREEZE_REVIEW_PASS",
+    "eight_deltas_positive": true,
+    "both_r100_positive": true,
+    "hard_positive_exits": 15,
+    "hard_positive_exit_ratio": 0.0002390476342252466,
+    "video_multiset_drift": 0.0,
+    "video_slot_sequence_drift": 0.0,
+    "quota_violation_count": 0,
+    "duplicate_span_count": 0,
+    "localization_positive_count": 4,
+    "passing_neighbor_count": 10,
+    "promotion_candidate_count": 332
+  },
+  "A3b_strict_diagnostic": {
+    "status": "diagnostic_only_not_frozen",
+    "top100_membership_drift": 0.0,
+    "hard_positive_exits": 0,
+    "structure_safer_than_wide": true
+  },
+  "recommend_request_official_val_authorization": true,
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "training_used": false,
+  "C4_final_modified": false,
+  "model_conquer_modified": false,
+  "candidate_generation_modified": false,
+  "candidate_regeneration_used": false,
+  "NMS_modified": false,
+  "effective_top_n_modified": false,
+  "max_after_nms_modified": false,
+  "evaluator_modified": false,
+  "C5_main_B_used": false,
+  "C6_used": false,
+  "C4_main_used": false,
+  "VS_R2_head_used": false,
+  "stop_boundary": "STOP_AFTER_A3B_FREEZE_REVIEW_PENDING_OFFICIAL_VAL_AUTHORIZATION"
+}

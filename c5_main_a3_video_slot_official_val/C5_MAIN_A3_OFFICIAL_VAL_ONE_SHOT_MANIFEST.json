@@ -1,0 +1,206 @@
+{
+  "status": "OFFICIAL_C5_NEGATIVE",
+  "date": "2026-06-25",
+  "stage": "C5-main-inference-A3b-wide official-val one-shot",
+  "official_val_one_shot": true,
+  "learned_config_count": 1,
+  "selected_config": "c5ma_0214",
+  "variant": "A3b-wide video-slot/quota-preserved fixed-candidate span replacement",
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false,
+  "official_val_used_for_selection": false,
+  "official_val_authorized_before_run": true,
+  "successful_metric_result_count": 1,
+  "failed_infrastructure_attempt_count": 1,
+  "resume_from_scores_after_infra_crash": true,
+  "training_used": false,
+  "model_conquer_modified": false,
+  "candidate_generation_modified": false,
+  "NMS_modified": false,
+  "effective_top_n_modified": false,
+  "max_after_nms_modified": false,
+  "evaluator_modified": false,
+  "C5_main_B_used": false,
+  "candidate_regeneration_used": false,
+  "C6_used": false,
+  "C4_main_used": false,
+  "VS_R2_head_used": false,
+  "retrieval_constants": {
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "frozen_config": {
+    "config_id": "c5ma_0214",
+    "family": "role_endpoint_injection",
+    "alpha": 0.25,
+    "beta": 0.05,
+    "tau": 1.5,
+    "lambda": 0.05,
+    "gamma": 0.05
+  },
+  "frozen_stats_source": {
+    "path": "c5_main_a2_video_neutral_audit/C5_MAIN_A2A_STATS_FREEZE.json",
+    "sha256": "8d0e0a0cf2dbfd7190fd7916c64f1954ceac12f30436c84b10a7fefe4b15a1bc",
+    "setting_id": "a0p25_b0p05_t1p50_l0p050"
+  },
+  "metrics": {
+    "c0": {
+      "0.5-r1": 13.68,
+      "0.5-r5": 27.21,
+      "0.5-r10": 33.75,
+      "0.5-r100": 46.23,
+      "0.7-r1": 7.76,
+      "0.7-r5": 17.22,
+      "0.7-r10": 22.49,
+      "0.7-r100": 35.17
+    },
+    "frozen_c31": {
+      "0.5-r1": 14.27,
+      "0.5-r5": 28.12,
+      "0.5-r10": 34.42,
+      "0.5-r100": 46.31,
+      "0.7-r1": 8.09,
+      "0.7-r5": 18.03,
+      "0.7-r10": 23.58,
+      "0.7-r100": 35.28
+    },
+    "frozen_c4_lite": {
+      "0.5-r1": 14.81,
+      "0.5-r5": 28.56,
+      "0.5-r10": 34.73,
+      "0.5-r100": 46.44,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.63,
+      "0.7-r10": 24.61,
+      "0.7-r100": 35.69
+    },
+    "c4_final_v21_00444": {
+      "0.5-r1": 14.81,
+      "0.5-r5": 28.57,
+      "0.5-r10": 34.81,
+      "0.5-r100": 46.45,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.64,
+      "0.7-r10": 24.63,
+      "0.7-r100": 35.7
+    },
+    "c5_main_a3b_wide_c5ma_0214": {
+      "0.5-r1": 14.79,
+      "0.5-r5": 28.66,
+      "0.5-r10": 34.81,
+      "0.5-r100": 46.47,
+      "0.7-r1": 8.35,
+      "0.7-r5": 18.74,
+      "0.7-r10": 24.64,
+      "0.7-r100": 35.73
+    },
+    "delta_vs_c4_final": {
+      "0.5-r1": -0.02000000000000135,
+      "0.5-r5": 0.08999999999999986,
+      "0.5-r10": 0.0,
+      "0.5-r100": 0.01999999999999602,
+      "0.7-r1": 0.0,
+      "0.7-r5": 0.09999999999999787,
+      "0.7-r10": 0.010000000000001563,
+      "0.7-r100": 0.02999999999999403
+    },
+    "delta_vs_c4_lite": {
+      "0.5-r1": -0.02000000000000135,
+      "0.5-r5": 0.10000000000000142,
+      "0.5-r10": 0.0800000000000054,
+      "0.5-r100": 0.030000000000001137,
+      "0.7-r1": 0.0,
+      "0.7-r5": 0.10999999999999943,
+      "0.7-r10": 0.030000000000001137,
+      "0.7-r100": 0.03999999999999915
+    },
+    "delta_vs_c31": {
+      "0.5-r1": 0.5199999999999996,
+      "0.5-r5": 0.5399999999999991,
+      "0.5-r10": 0.39000000000000057,
+      "0.5-r100": 0.1599999999999966,
+      "0.7-r1": 0.2599999999999998,
+      "0.7-r5": 0.7099999999999973,
+      "0.7-r10": 1.0600000000000023,
+      "0.7-r100": 0.44999999999999574
+    }
+  },
+  "front_rank_deltas_vs_c4_final": {
+    "0.5-r1": -0.02000000000000135,
+    "0.5-r5": 0.08999999999999986,
+    "0.5-r10": 0.0,
+    "0.7-r1": 0.0,
+    "0.7-r5": 0.09999999999999787,
+    "0.7-r10": 0.010000000000001563
+  },
+  "r100_safety_deltas_vs_c4_final": {
+    "0.5-r100": 0.01999999999999602,
+    "0.7-r100": 0.02999999999999403
+  },
+  "movement_relative_to_c4_final": {
+    "queries": 10895,
+    "top1_changed_ratio": 0.008352455254703992,
+    "hard_positive_top100_exits": 20,
+    "hard_positive_top100_entries": 13,
+    "hard_positive_top100_exit_ratio": 0.00035634743875278396,
+    "pearson_base_localization_score": 0.9983578201351995,
+    "pearson_c4_final_candidate_rank_score": 0.7315326350271727,
+    "mean_within_query_spearman": 0.999948155289472
+  },
+  "movement_rank_score_relative_to_c4_final": {
+    "queries": 10895,
+    "top1_changed_ratio": 0.008352455254703992,
+    "hard_positive_top100_exits": 20,
+    "hard_positive_top100_entries": 13,
+    "hard_positive_top100_exit_ratio": 0.00035634743875278396,
+    "pearson_base_candidate": 0.7315326350271727,
+    "mean_within_query_spearman": 0.999948155289472
+  },
+  "structure": {
+    "top100_membership_drift_query_ratio": 0.050481872418540616,
+    "top100_membership_symmetric_difference_rows": 1110,
+    "video_multiset_drift_query_ratio": 0.0,
+    "video_slot_sequence_drift_query_ratio": 0.0,
+    "quota_violation_count": 0,
+    "duplicate_span_count": 0,
+    "constraint_satisfied": true
+  },
+  "localization_diagnostics_if_computable": {
+    "gt_video_queries": 6863,
+    "affected_same_video_query_ratio": 0.5842925834183301,
+    "oracle_video_r1_05_base": 43.61066588955267,
+    "oracle_video_r1_05_new": 43.63980766428676,
+    "oracle_video_r1_05_delta": 0.029141774734085857,
+    "oracle_video_r1_07_base": 23.342561561999126,
+    "oracle_video_r1_07_new": 23.2259944630628,
+    "oracle_video_r1_07_delta": -0.11656709893632566,
+    "selected_span_miou_base": 0.42211295860749226,
+    "selected_span_miou_new": 0.4217822877832344,
+    "selected_span_miou_delta": -0.00033067082425786154,
+    "best_iou_span_rank_base_mean": 15.230365729272913,
+    "best_iou_span_rank_new_mean": 15.205012385254262,
+    "best_iou_span_rank_delta_mean": -0.025353344018650737,
+    "positive_span_upward_ratio": 0.052044543429844096,
+    "positive_span_downward_ratio": 0.05936748329621381,
+    "hard_negative_downward_ratio": 0.07220117330725984,
+    "hard_negative_upward_ratio": 0.0636458078709362,
+    "positive_span_count": 56125,
+    "hard_negative_count": 32728
+  },
+  "role_prior_sanity": {
+    "not_recomputed": true,
+    "reason": "resume_from_valid_score_artifact_after_infra_crash_before_evaluator"
+  },
+  "endpoint_index_audit": {
+    "clip_length": 1.5,
+    "start_grid_max_abs_error": 0.0,
+    "end_grid_max_abs_error": 0.0,
+    "start_index_clipped_count": 0,
+    "end_index_clipped_count": 0
+  },
+  "outcome_classification": "OFFICIAL_C5_NEGATIVE",
+  "next_step_recommendation": "C5 A3b-wide did not generalize sufficiently to official val. Close fixed-candidate C5-main and do not run more official val.",
+  "no_second_official_val": true
+}

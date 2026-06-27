@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "stage": "C5-lite-prior feature export",
+  "split_role": "train_calib",
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "baseline": "C4-r2-cal-v2.1 C4_final",
+  "cache_npz": {
+    "path": "results/rlem_c4_lite/train_calib_c4_cache.npz",
+    "sha256": "bcbd0caf12d194b31a4460fd78276832a0b2408434c7e190af6b8c511edff1cf"
+  },
+  "c4_final_scores_npz": {
+    "path": "results/rlem_c5_lite_prior_prep/train_calib_v21_scores.npz",
+    "score_key": "s_v21",
+    "sha256": "5db1c666bde14e931fbba56b2d84b46b1af119b405f0c9ff0a2695b007824832"
+  },
+  "temporal_prior_npz": {
+    "path": "results/rlem_c5_lite_prior_prep/train_calib_temporal_prior.npz",
+    "sha256": "39aa03f9635ac848b1d5873b9221088528ec325f7b34bf4f949211ef47bc5194"
+  },
+  "output_features_npz": {
+    "path": "results/rlem_c5_lite_prior/train_calib_c5_prior_features.npz",
+    "sha256": "370ed08ae878de87c088ac616f528a95af590f39e7d6c3d16900ed5fe731de86"
+  },
+  "queries": 8739,
+  "candidate_rows": 1747800,
+  "raw_feature_names": [
+    "ctx_mass",
+    "ctx_mean",
+    "ctx_max",
+    "ctx_peak_inside",
+    "ctx_boundary_agree",
+    "ctx_center_proximity",
+    "bd_mass",
+    "bd_mean",
+    "bd_max",
+    "bd_peak_inside",
+    "bd_boundary_agree",
+    "bd_center_proximity",
+    "retctx_mass",
+    "retbd_mass",
+    "retloc_mass",
+    "retloc_mean",
+    "retloc_max",
+    "retloc_peak_inside",
+    "r_video_z",
+    "r_video_sig",
+    "margin_z",
+    "rank_inv"
+  ],
+  "term_names": [
+    "retctx_mass",
+    "retbd_mass",
+    "retctx_peak_inside",
+    "retbd_peak_inside",
+    "retctx_boundary_agree",
+    "retbd_boundary_agree",
+    "retctx_center_proximity",
+    "retbd_center_proximity",
+    "low_conf_efp_neg",
+    "low_conf_unc_neg",
+    "margin_z_x_retbd_mass",
+    "rank_inv_x_retbd_mass"
+  ],
+  "temporal_diagnostics": {
+    "group_count": 87230,
+    "dense": true,
+    "min_temporal_len": 2,
+    "max_temporal_len": 100,
+    "mean_temporal_len": 50.970079101226645,
+    "bad_group_or_nonfinite_count": 0,
+    "negative_value_count": 0,
+    "zero_sum_distribution_count": 0,
+    "normalization_required_count": 0,
+    "sum_ranges": {
+      "p_ctx": {
+        "min": 0.9999998244456947,
+        "max": 1.0000001485168468
+      },
+      "p_b": {
+        "min": 0.9999997767927766,
+        "max": 1.000000182932066
+      },
+      "p_e": {
+        "min": 0.9999998004337272,
+        "max": 1.0000001830884493
+      }
+    }
+  },
+  "clip_length": 1.5,
+  "retloc_prior_weights": {
+    "a_ctx": 1.0,
+    "a_bd": 1.0,
+    "a_ctx_ret": 1.0,
+    "a_bd_ret": 1.0
+  },
+  "aggregation_runtime": {
+    "device": "cuda",
+    "row_chunk_size": 262144,
+    "vectorized_dense_path": true
+  },
+  "nonfinite_by_array": {
+    "start_time": 0,
+    "end_time": 0,
+    "s_c4_final": 0,
+    "ctx_mass": 0,
+    "ctx_mean": 0,
+    "ctx_max": 0,
+    "ctx_peak_inside": 0,
+    "ctx_boundary_agree": 0,
+    "ctx_center_proximity": 0,
+    "bd_mass": 0,
+    "bd_mean": 0,
+    "bd_max": 0,
+    "bd_peak_inside": 0,
+    "bd_boundary_agree": 0,
+    "bd_center_proximity": 0,
+    "retctx_mass": 0,
+    "retbd_mass": 0,
+    "retloc_mass": 0,
+    "retloc_mean": 0,
+    "retloc_max": 0,
+    "retloc_peak_inside": 0,
+    "r_video_z": 0,
+    "r_video_sig": 0,
+    "margin_z": 0,
+    "rank_inv": 0,
+    "term_retctx_mass": 0,
+    "term_retbd_mass": 0,
+    "term_retctx_peak_inside": 0,
+    "term_retbd_peak_inside": 0,
+    "term_retctx_boundary_agree": 0,
+    "term_retbd_boundary_agree": 0,
+    "term_retctx_center_proximity": 0,
+    "term_retbd_center_proximity": 0,
+    "term_low_conf_efp_neg": 0,
+    "term_low_conf_unc_neg": 0,
+    "term_margin_z_x_retbd_mass": 0,
+    "term_rank_inv_x_retbd_mass": 0
+  },
+  "retrieval_constants": {
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100
+  },
+  "used": {
+    "C5-lite-prior": true,
+    "C5-main": false,
+    "C6": false,
+    "CONQUER_modified": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "action_dataset_audit": {
+    "path": "c6_c2_audit/C6_C2_ACTION_DATASET_AUDIT.json",
+    "exists": true,
+    "size": 3826,
+    "sha256": "08a0a37428b201c34d07cc0cbfea0466aa4329438d88e258659b41723d43501e"
+  },
+  "model_audit": {
+    "path": "c6_c2_audit/C6_C2_INTERVENTION_MODEL_AUDIT.json",
+    "exists": true,
+    "size": 2806,
+    "sha256": "79a819bf7717190a41df43526612400a99b227b392d29bdf1b9e79170817e213"
+  },
+  "policy_search": {
+    "path": "c6_c2_audit/C6_C2_POLICY_SEARCH.json",
+    "exists": true,
+    "size": 149806,
+    "sha256": "f7f36485da87d2cfafeffcfdc19e00e5e50e659a4ba150dfbfa42e363057f5bf"
+  },
+  "final_decision": {
+    "path": "c6_c2_audit/C6_C2_FINAL_DECISION.json",
+    "exists": true,
+    "size": 3330,
+    "sha256": "e048feb91b2854f56a0d38cef8d7a6f02d84cb674324e295011389675cb0f414"
+  },
+  "model": {
+    "path": "results/rlem_c6_c2/c6c2_intervention_gate.pt",
+    "exists": true,
+    "size": 3271499,
+    "sha256": "4543f492c556bca076fac353e2ae6cb7588b2b2facd984fc560a99a68d7ed5e1"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "C6_C_used": false,
+  "artifacts": {
+    "best_config": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_distill/best_config_v2_listwise_distill.json",
+      "sha256": "7a5c8fbf7f3c9f9e0d99c344c2eea51716c5d7929ddbde6b8a45ec98e7718b0e",
+      "size": 1143
+    },
+    "calib_scores": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_distill/train_calib_candidate_scores_v2_listwise_distill.npz",
+      "sha256": "844dd2db9a87de5f4da3e4c1bef4c595beb62a23d717557ec4da5f7a0ea75d04",
+      "size": 1111246
+    },
+    "grid_results": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_distill/grid_results_v2_listwise_distill.json",
+      "sha256": "7afa95f643bbfce069eba01604ee2a159858a660818a1e22622ac619dd787d59",
+      "size": 86085
+    },
+    "history": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_distill/history_v2_listwise_distill.json",
+      "sha256": "b60900c88711b719de04a9fb19b47009052f5e331c9699459712e1955b059dc5",
+      "size": 525
+    },
+    "model_best": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_v2_distill/model_best_v2_listwise_distill.pt",
+      "sha256": "70afd09f9a8784df37d2c285ba121afd255fd15570ad27e2683689a65624dd16",
+      "size": 17870287
+    }
+  },
+  "baseline_pseudo_C4_final": {
+    "hard_positive_top100_query_entries": 0,
+    "hard_positive_top100_query_exits": 0,
+    "metrics": {
+      "0.5-r1": 39.375214555441126,
+      "0.5-r10": 69.48163405423962,
+      "0.5-r100": 76.22153564481061,
+      "0.5-r5": 62.28401418926651,
+      "0.7-r1": 26.37601556242133,
+      "0.7-r10": 56.24213296715872,
+      "0.7-r100": 65.3049548003204,
+      "0.7-r5": 48.644009612083764
+    },
+    "replacement_rate_top_slots": 0.0,
+    "replacements": 0,
+    "top1_changed_ratio": 0.0,
+    "video_multiset_drift": 0.0,
+    "video_slot_drift": 0.0
+  },
+  "best_config": {
+    "apply_slots": 3,
+    "config_id": "c6b1r1_0008",
+    "delta_vs_pseudo_C4_final": {
+      "0.5-r1": 0.06865774116031531,
+      "0.5-r10": 0.022885913720102735,
+      "0.5-r100": 0.011442956860051368,
+      "0.5-r5": 0.022885913720102735,
+      "0.7-r1": 0.08010069802036668,
+      "0.7-r10": 0.08010069802036668,
+      "0.7-r100": 0.06865774116032242,
+      "0.7-r5": 0.08010069802036668
+    },
+    "feasible": true,
+    "max_replacements": 1,
+    "metrics": {
+      "0.5-r1": 39.44387229660144,
+      "0.5-r10": 69.50451996795972,
+      "0.5-r100": 76.23297860167067,
+      "0.5-r5": 62.30690010298661,
+      "0.7-r1": 26.456116260441696,
+      "0.7-r10": 56.322233665179084,
+      "0.7-r100": 65.37361254148072,
+      "0.7-r5": 48.72411031010413
+    },
+    "movement": {
+      "hard_positive_top100_query_entries": 1,
+      "hard_positive_top100_query_exits": 0,
+      "replacement_rate_top_slots": 0.0008391501697371935,
+      "replacements": 22,
+      "top1_changed_ratio": 0.00251745050921158,
+      "video_multiset_drift": 0.0,
+      "video_slot_drift": 0.0
+    },
+    "r1_positive": true,
+    "r5_safe": true,
+    "selection_score": 0.0975512072319466,
+    "threshold0": -0.25,
+    "threshold_rest": 0.2
+  },
+  "feasible_count": 22,
+  "grid_size": 78,
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "r1_positive_count": 22,
+  "r5_safe_count": 78,
+  "references": {
+    "listwise_learning_to_rank": "Listwise softmax/CE over the full alternative set.",
+    "proposal_confidence": "Boundary alternatives need proposal confidence rather than blind replacement."
+  },
+  "runtime": {
+    "calib_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_calib_candidate_pool_top_slots.npz",
+      "sha256": "08029943dece218fa5c1cbf016fe3bb9b4330dd83a05d759e2dea2d85ecceb15",
+      "size": 12624246
+    },
+    "train_pool": {
+      "exists": true,
+      "path": "results/rlem_c6_b1_lite_r1_safe/train_fit_candidate_pool_top_slots.npz",
+      "sha256": "6167fc888fc53a1f9004588d225661f9b5487746bb00b1b594ffc06e2c226fab",
+      "size": 112176367
+    },
+    "training": {
+      "history": [
+        {
+          "elapsed_sec": 8.635009288787842,
+          "epoch": 1,
+          "loss": 5.480507085720698,
+          "target_acc": 0.6190641423066457
+        },
+        {
+          "elapsed_sec": 8.56248927116394,
+          "epoch": 2,
+          "loss": 5.377694696187973,
+          "target_acc": 0.6299171236654123
+        },
+        {
+          "elapsed_sec": 8.651353120803833,
+          "epoch": 3,
+          "loss": 5.399703035751979,
+          "target_acc": 0.598601852854093
+        },
+        {
+          "elapsed_sec": 8.492732286453247,
+          "epoch": 4,
+          "loss": 5.95341561237971,
+          "target_acc": 0.37318007585903007
+        }
+      ],
+      "model_artifact": {
+        "exists": true,
+        "path": "results/rlem_c6_b1_lite_v2_distill/model_best_v2_listwise_distill.pt",
+        "sha256": "70afd09f9a8784df37d2c285ba121afd255fd15570ad27e2683689a65624dd16",
+        "size": 17870287
+      },
+      "reused": true,
+      "train_candidate_examples": 3121800,
+      "train_slot_groups": 390225
+    }
+  },
+  "stage": "C6-B1-lite-v2 listwise slot selector (distill)",
+  "status": "C6_B1_LITE_V2_LISTWISE_DISTILL_R1_SAFE_POSITIVE",
+  "variant": "distill"
+}

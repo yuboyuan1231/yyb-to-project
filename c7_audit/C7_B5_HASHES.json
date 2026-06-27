@@ -1,0 +1,17 @@
+{
+  "status": "C7_B5_HASHES",
+  "official_val_used": false,
+  "artifacts": {
+    "c7_audit/C7_B4_ARCHIVE_DECISION.json": "a117329a3e70ad7b978cf55ea33c55de1ed2ec2927af6ab31642085163d735c2",
+    "c7_audit/C7_B5_RAW_LOGIT_SOURCE_INVENTORY.json": "21110b9890b265902d0982906d829f47cad19bb665cedb61fe325fcf7089ef1a",
+    "c7_audit/C7_B5_STRICT_ALIGNMENT_AUDIT.json": "d4e3b5f4d107dd482a6175d81c583ff5c0b3c34868b4d0f19af811e73aa3706c",
+    "c7_audit/C7_B5_SN_SCORE_CONSTRUCTION.json": "942778db2c833dad76cac507d372eeda429c5df10b7ca10f7e166e1152ddf8a6",
+    "c7_audit/C7_B5_SN_TRAIN_ONLY_AUDIT.json": "4442f224090d2c64917f97d3c24403015a88ebad1b43cf53bb5646f4a6e1c68d",
+    "c7_audit/C7_B5_MOMENT_PREDICTION_BIAS_DIAGNOSTIC.json": "31dfd42541d25ae34bbc9802e94bed8902551638350113fe2df980b84ccfb213",
+    "c7_audit/C7_B5_DOMINANCE_SAFETY_AUDIT.json": "96d8493716ac136fc8afdd060ba38ebb1668899d3d779b9d172fcd999c890ab6",
+    "c7_audit/C7_B5_FINAL_DECISION.json": "4861677fe6cc24cfdb523157bdb3aca1561b9b8d75abb52947c046994b0e135b",
+    "c7_audit/C7_B5_MANIFEST.json": "f169fe866c5e3d2311e1f6d8fb4bdb1427e3949e959f652b8666d8ec11072a70"
+  },
+  "runner_sha256": "f6f4ecea36ac93fb8a7446998151c1b921952fa2e26e2d0a073e77d1f8a4ae94",
+  "evidence_sha256": "ef0bdd42eb0d77fd621bf82a71b3ab61df1c1ddcaf5b0e86c95215a52a4e5d1b"
+}

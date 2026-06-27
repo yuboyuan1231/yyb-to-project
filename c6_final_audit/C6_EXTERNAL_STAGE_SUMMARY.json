@@ -1,0 +1,40 @@
+{
+  "stage": "C6 external stage summary",
+  "closed": true,
+  "promoted_result_remains": "C6-B2 pairwise_main_0005",
+  "stage_table": [
+    {
+      "stage": "C6-B1-lite",
+      "role": "stable safety anchor",
+      "decision": "retain"
+    },
+    {
+      "stage": "C6-B2",
+      "role": "R1-oriented extension / span utility",
+      "decision": "current promoted"
+    },
+    {
+      "stage": "C6-C1",
+      "role": "external video rerank",
+      "decision": "negative_topk_collapse"
+    },
+    {
+      "stage": "C6-C1.1",
+      "role": "topK-preserving repair",
+      "decision": "safe_b2_equivalent_no_promotion"
+    },
+    {
+      "stage": "C6-C2",
+      "role": "query-level intervention utility gate",
+      "decision": "R1_TRADEOFF_no_promotion"
+    }
+  ],
+  "forbidden_next_actions": [
+    "official val",
+    "second official val",
+    "post-val adjustment",
+    "C6-C3",
+    "C6-C2.1 threshold search",
+    "C8 / GenSpan-lite training"
+  ]
+}

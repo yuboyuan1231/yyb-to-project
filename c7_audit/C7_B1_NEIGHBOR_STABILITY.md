@@ -1,0 +1,49 @@
+# C7-B1 neighbor stability audit
+
+```json
+{
+  "scope": "audit_only_no_reselection",
+  "selected_config_fixed": {
+    "mode": "S1_span_level_bounded_residual",
+    "mu": 0.1,
+    "eta": 0.1
+  },
+  "neighbor_grid": {
+    "mu": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "eta": [
+      0.02,
+      0.05,
+      0.1
+    ]
+  },
+  "neighbor_count": 9,
+  "positive_region_count": 9,
+  "freeze_gate_pass_count": 5,
+  "selected_in_grid": true,
+  "selected_in_stable_positive_region": true,
+  "better_neighbors_exist_but_selection_not_changed": true,
+  "better_neighbor_configs": [
+    {
+      "mode": "S1_span_level_bounded_residual",
+      "mu": 0.2,
+      "eta": 0.02
+    },
+    {
+      "mode": "S1_span_level_bounded_residual",
+      "mu": 0.2,
+      "eta": 0.05
+    },
+    {
+      "mode": "S1_span_level_bounded_residual",
+      "mu": 0.2,
+      "eta": 0.1
+    }
+  ],
+  "selection_changed": false,
+  "passes": true
+}
+```

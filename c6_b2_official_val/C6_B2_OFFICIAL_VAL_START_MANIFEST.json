@@ -1,0 +1,29 @@
+{
+  "stage": "C6-B2 official-val one-shot",
+  "official_val_one_shot": true,
+  "authorized_config_only": {
+    "arm": "pairwise_main",
+    "config_id": "pairwise_main_0005",
+    "apply_slots": 5,
+    "threshold0": 4.337798070907593,
+    "threshold_rest": 6.729127645492554,
+    "max_replacements": 2,
+    "effective_top_n": 100,
+    "NMS": 0.7,
+    "max_after_nms": 100
+  },
+  "primary_baseline": "C6-B1-lite c6b1r1_0057",
+  "secondary_baseline": "C4_final v21_00444",
+  "training_used": false,
+  "selector_retrained": false,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false,
+  "learned_config_count_on_val": 0,
+  "C6_C_used": false,
+  "C4_final_modified": false,
+  "C6_B1_lite_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "no_second_official_val": true
+}

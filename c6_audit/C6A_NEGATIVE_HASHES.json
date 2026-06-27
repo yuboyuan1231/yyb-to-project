@@ -1,0 +1,72 @@
+{
+  "artifacts": {
+    "c6a_default_history": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_default/history.json",
+      "sha256": "164c7ff39325dd83f03645b4d73c22a9592025f95719c8236a5be7caa1b3cb5a",
+      "size": 21378
+    },
+    "c6a_default_model_best": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_default/model_best.pt",
+      "sha256": "6bd1f0745b13d29f8206fcef0d470ba0e7adb4ba74744f35509584bfed028033",
+      "size": 10778795
+    },
+    "c6a_default_scores": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_default/train_calib_scores_best.npz",
+      "sha256": "31f6719f4b4c27dd10df31d2b78fd9848001ec7eaf1ec7cb1a3d179bff0db0af",
+      "size": 5966191
+    },
+    "c6a_large_history": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_large/history.json",
+      "sha256": "53ae8314d5e3ad972b03effb26c7ee272dbf1ba90c9f30bcde301ae8efeb4fcc",
+      "size": 20918
+    },
+    "c6a_large_model_best": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_large/model_best.pt",
+      "sha256": "70997b36cb716890040ce1b0cdb8b727dbb776e7a68344a77565e6b35a1d7d9d",
+      "size": 23383211
+    },
+    "c6a_large_scores": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_large/train_calib_scores_best.npz",
+      "sha256": "8ca595973d2116042a3f41799b93f8f9a063eba2885e9aa5678d3278f04e9d3a",
+      "size": 5967246
+    },
+    "c6a_regularized_history": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_regularized/history.json",
+      "sha256": "e33b20ec86f0e40091074996e02e44d9abcdd9b5a609fbac53b33e8eb98e55af",
+      "size": 21251
+    },
+    "c6a_regularized_model_best": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_regularized/model_best.pt",
+      "sha256": "7267ce2d36a502105820580913be59884e8863715b5a3ad3abc5a6329f227c5a",
+      "size": 8659435
+    },
+    "c6a_regularized_scores": {
+      "exists": true,
+      "path": "results/rlem_c6a/train_logs/c6a_regularized/train_calib_scores_best.npz",
+      "sha256": "a1b73cc832c4d912f18352bf74f39d812c9da6deeaeec323d67570a574f49297",
+      "size": 5967125
+    },
+    "manifest": {
+      "exists": true,
+      "path": "c6_audit/C6A_NEGATIVE_MANIFEST.json",
+      "sha256": "f816a68b5746621fc6ba3c8166e45664acb29645ae69e95ff6c702f564e7dcc5",
+      "size": 3808
+    },
+    "review": {
+      "exists": true,
+      "path": "c6_audit/C6A_NEGATIVE_AUDIT.md",
+      "sha256": "92ce17a5e097fc836d30490318d67a4ab866040ab85e4d0d0873bf25283fc07b",
+      "size": 661
+    }
+  },
+  "official_val_used": false,
+  "status": "HASHES_MATERIALIZED"
+}

@@ -1,0 +1,81 @@
+{
+  "status": "FROZEN",
+  "date": "2026-06-24",
+  "decision": "C4_LITE_OFFICIAL_VAL_ACCEPTED",
+  "stop_after_c4_lite": true,
+  "config_id": "c4_00394",
+  "family": "B_video_span",
+  "official_val_one_shot": true,
+  "learned_config_count": 1,
+  "successful_official_val_metric_result_count": 1,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false,
+  "exact_config": {
+    "alpha_bd": 1.25,
+    "gamma_fp": 0.5,
+    "video_gain": 1.0,
+    "span_gain": 0.5,
+    "base_scale": 0.75,
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100,
+    "mean_qbd_train_calib": 0.3990069627761841,
+    "mean_g_video_row_expanded_train_calib": 0.13249324262142181,
+    "mean_g_span_train_calib": 0.03713987395167351
+  },
+  "metrics": {
+    "0.5-r1": 14.81,
+    "0.5-r5": 28.56,
+    "0.5-r10": 34.73,
+    "0.5-r100": 46.44,
+    "0.7-r1": 8.35,
+    "0.7-r5": 18.63,
+    "0.7-r10": 24.61,
+    "0.7-r100": 35.69
+  },
+  "artifacts": {
+    "c4_audit/C4_LITE_OFFICIAL_VAL_ONE_SHOT_AUDIT.md": {
+      "sha256": "fd1cf89ef996b5259d5d0867376fd7cba911b867cab42e047cb74442fbc341e6",
+      "size_bytes": 4574
+    },
+    "c4_audit/EVALUATOR_RUNTIME_AMENDMENT.json": {
+      "sha256": "310b8a0ce37fdd9a40146a42ab9a71476d7a236d897db686b46803f9bfcaca34",
+      "size_bytes": 1011
+    },
+    "results/rlem_c4_lite/official_val/c4_lite_submission.json": {
+      "sha256": "ccd71e6c104667e58c18f29bacd0b8ee7eebc05d808a2f89a8c2151ce4f764b7",
+      "size_bytes": 19773592
+    },
+    "results/rlem_c4_lite/official_val/c4_lite_metrics.json": {
+      "sha256": "435ee34e1a433e2e5bb086dccfa38cb03c28260d0abb829deee3b131a27904cb",
+      "size_bytes": 978
+    },
+    "results/rlem_c4_lite/official_val/c4_lite_movement.json": {
+      "sha256": "5d34d492e7ead665095edf2e905704a18f1081041314092eff8234437e65256f",
+      "size_bytes": 448
+    },
+    "results/rlem_c4_lite_official_val/VAL_C4_LITE_ONE_SHOT_MANIFEST.json": {
+      "sha256": "4af0f27ce1bbca62379f5a1cbba62f102e88ae177cb143f188de4abb07079798"
+    },
+    "results/rlem_c4_lite/search/best_config.json": {
+      "sha256": "9364d5a6bfce032bace814e9953ea4b45ca433f594f848a344735d0fcda5f5d4"
+    },
+    "results/rlem_c31_capacity/models/cap_F_wd0/model_best.pt": {
+      "sha256": "eb3559ff35853a7702b34a06cea1da66de594315b1bc40c89aabcd713ea55c42"
+    }
+  },
+  "used": {
+    "c4_r2_cal": false,
+    "c4_main": false,
+    "r2": false,
+    "vs_head": false,
+    "c5": false,
+    "c6": false
+  },
+  "authorization_after_freeze": {
+    "rerun_c4_lite_official_val": false,
+    "modify_c4_00394": false,
+    "modify_frozen_official_val_artifacts": false
+  }
+}

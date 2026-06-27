@@ -1,0 +1,48 @@
+{
+  "status": "C7_B2_1_HASHES",
+  "official_val_used": false,
+  "artifacts": {
+    "runner": {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/rlem_c7/run_c7_b2_1_safety_repair.py",
+      "exists": true,
+      "size": 23753,
+      "sha256": "e61b897ddf76a65dc169a61acc8cdb0c6fbe1902bc52de45ae27536643649688"
+    },
+    "manifest": {
+      "path": "c7_audit/C7_B2_1_MANIFEST.json",
+      "exists": true,
+      "size": 3897,
+      "sha256": "90dd3c6aaed020eeb0fb07ba359dbf9d69471f80817d7e4e69795032afb894ea"
+    },
+    "final": {
+      "path": "c7_audit/C7_B2_1_FINAL_DECISION.json",
+      "exists": true,
+      "size": 3897,
+      "sha256": "90dd3c6aaed020eeb0fb07ba359dbf9d69471f80817d7e4e69795032afb894ea"
+    },
+    "decomposition": {
+      "path": "c7_audit/C7_B2_1_DECOMPOSITION_AUDIT.json",
+      "exists": true,
+      "size": 19001,
+      "sha256": "dfbc5028cb65a30a61ce986f6b34e8369cd295f65b327c81a5ea38e123141f77"
+    },
+    "top_zone": {
+      "path": "c7_audit/C7_B2_1_TOP_ZONE_PROTECTED_TAIL.json",
+      "exists": true,
+      "size": 40372,
+      "sha256": "356370f8fe13842bb58ebfbbc084458624ea6f58aa5d2a8dc89a338a354c70db"
+    },
+    "union": {
+      "path": "c7_audit/C7_B2_1_ANCHOR_UNION_RERANK.json",
+      "exists": true,
+      "size": 124004,
+      "sha256": "2741eb3ea61c7bd7ac98abb5a118585a4080b06a55f79755cbe634ab44c3d371"
+    },
+    "eviction": {
+      "path": "c7_audit/C7_B2_1_EVICTION_AWARE_UTILITY.json",
+      "exists": true,
+      "size": 114114,
+      "sha256": "9be691e5b30a2afdf806ca49704e51cd7e30bbe8b120601f5b5506779cb7b50d"
+    }
+  }
+}

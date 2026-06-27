@@ -1,0 +1,43 @@
+{
+  "artifacts": {
+    "c4_final_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c4_audit/C4_STAGE_FINAL_MANIFEST.json",
+      "sha256": "0448c91c28a5ec933ce54439662b0b414b5815b7d069609000b703cb23b5645b",
+      "size": 4048
+    },
+    "c5_official_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c5_main_a3_video_slot_official_val/C5_MAIN_A3_OFFICIAL_VAL_ONE_SHOT_MANIFEST.json",
+      "sha256": "5fcefd31769287021ea9c67d69721b77a7e8879b6d7c8da2f96a6238f0eea981",
+      "size": 6709
+    },
+    "c6a_negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_audit/C6A_NEGATIVE_MANIFEST.json",
+      "sha256": "f816a68b5746621fc6ba3c8166e45664acb29645ae69e95ff6c702f564e7dcc5",
+      "size": 3808
+    },
+    "c6ar2_negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/C6A_R2_NEGATIVE_MANIFEST.json",
+      "sha256": "16345634d80543b2e7b396794444474c472eb96abbc4eaf4cb49562bdf09bfa0",
+      "size": 3081
+    },
+    "c6ar_negative_manifest": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair_audit/C6A_R_NEGATIVE_MANIFEST.json",
+      "sha256": "d0c014ff7f1c8da9f6063f64d6f535d4654fcdf937822d99aa9b6a33ff300ffc",
+      "size": 2339
+    },
+    "summary": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c6_repair2_audit/CURRENT_STAGE_SUMMARY.md",
+      "sha256": "7b1b5fb068e8857293c2df76d094ec0d277b64e5c972a1025d2c5f5dda079290",
+      "size": 9729
+    }
+  },
+  "official_val_used": false,
+  "post_val_adjustment": false,
+  "status": "HASHES_MATERIALIZED"
+}

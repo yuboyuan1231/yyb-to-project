@@ -1,0 +1,26 @@
+{
+  "status": "C6_B2_CODE_REVIEW_PASS",
+  "py_compile_passed": true,
+  "reviewed_entrypoint": "rlem_c6_b2/run_c6_b2_goal.py",
+  "official_val_used": false,
+  "official_val_artifacts_generated": false,
+  "model_capacity": {
+    "pairwise_main": "MLP hidden=512 layers=4 GELU LayerNorm dropout=0.10 AMP; pair feature dim=153",
+    "listwise_set": "Transformer encoder hidden=512 layers=4 heads=8 dropout=0.10 AMP"
+  },
+  "efficiency": {
+    "gpu_used": true,
+    "two_gpu_schedule": "pairwise on GPU0, listwise/retries on GPU1 where available",
+    "pairwise_cache": "memmap numpy cache to avoid RAM blowup",
+    "search_grid": "bounded R1-focused core policies after audit; no official-val search"
+  },
+  "retry_audit": "Listwise underperformed; audited target weighting, retried sqrt-capped weighting and unweighted CE; retry limit exhausted.",
+  "artifacts": {
+    "script": {
+      "path": "rlem_c6_b2/run_c6_b2_goal.py",
+      "exists": true,
+      "size": 39405,
+      "sha256": "8fccb8e7951d519866ecd5c14c615375b66fd0de064c9cf9275f99df8a934975"
+    }
+  }
+}

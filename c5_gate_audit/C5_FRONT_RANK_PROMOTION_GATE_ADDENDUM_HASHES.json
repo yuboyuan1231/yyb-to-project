@@ -1,0 +1,26 @@
+{
+  "status": "HASHES_MATERIALIZED_BEFORE_OFFICIAL_VAL",
+  "official_val_used": false,
+  "artifacts": {
+    "addendum_md": {
+      "path": "c5_gate_audit/C5_FRONT_RANK_PROMOTION_GATE_ADDENDUM.md",
+      "sha256": "5eb750f1ac47de54618ffc2cdf2d445bee652f3f6d2aba181b4f3cabd7c0b167"
+    },
+    "addendum_json": {
+      "path": "c5_gate_audit/C5_FRONT_RANK_PROMOTION_GATE_ADDENDUM.json",
+      "sha256": "d7cdd194320684ef982a9f9ef67a565d20957223ddbaf7e4bd79fb7d08a8b394"
+    },
+    "freeze_review": {
+      "path": "c5_main_a3_video_slot_audit/C5_MAIN_A3_FREEZE_REVIEW.md",
+      "sha256": "f4cc17e1e828a49617183c56476de51fa4b7e48016c6d73db1f8e730d79b6ebb"
+    },
+    "freeze_manifest": {
+      "path": "c5_main_a3_video_slot_audit/C5_MAIN_A3_FREEZE_MANIFEST.json",
+      "sha256": "4254776aa1c4734454462eceaee6be6f2e4d01a3f008187c69f43dfae3fd3117"
+    },
+    "a2a_train_fit_stats": {
+      "path": "c5_main_a2_video_neutral_audit/C5_MAIN_A2A_STATS_FREEZE.json",
+      "sha256": "8d0e0a0cf2dbfd7190fd7916c64f1954ceac12f30436c84b10a7fefe4b15a1bc"
+    }
+  }
+}

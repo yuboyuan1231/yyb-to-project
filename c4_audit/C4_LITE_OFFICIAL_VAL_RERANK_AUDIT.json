@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "scope": "val",
+  "official_val_used": true,
+  "config": {
+    "config_id": "c4_00394",
+    "family": "B_video_span",
+    "alpha_bd": 1.25,
+    "gamma_fp": 0.5,
+    "video_gain": 1.0,
+    "span_gain": 0.5,
+    "base_scale": 0.75,
+    "effective_top_n": 100,
+    "nms_thd": 0.7,
+    "max_after_nms": 100,
+    "t_joint": 1.5,
+    "t_bd": 1.0,
+    "t_fp": 1.0,
+    "mean_qbd_train_calib": 0.3990069627761841,
+    "mean_g_video_row_expanded_train_calib": 0.13249324262142181,
+    "mean_g_span_train_calib": 0.03713987395167351
+  },
+  "queries": 10895,
+  "rows_per_query_distribution": {
+    "200": 10895
+  },
+  "movement_relative_to_c31": {
+    "reference": "frozen_c31",
+    "queries": 10895,
+    "top1_changed_ratio": 0.08581918311151905,
+    "hard_positive_top100_exits": 161,
+    "hard_positive_top100_entries": 1475,
+    "pearson_c31_c4": 0.9908818898039154,
+    "mean_within_query_spearman": 0.9905127902635381
+  },
+  "official_val_one_shot": true,
+  "learned_config_count": 1,
+  "score_grid_on_val": false,
+  "temperature_search_on_val": false,
+  "post_val_adjustment": false,
+  "used": {
+    "c4_r2_cal": false,
+    "c4_main": false,
+    "r2": false,
+    "vs_head": false,
+    "c5": false,
+    "c6": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "C6-B2 goal-mode multi-arm train_fit/train_calib",
+  "current_promoted_system": "C6-B1-lite c6b1r1_0057",
+  "previous_promoted_system": "C4_final v21_00444",
+  "official_val_used": false,
+  "official_val_authorized": false,
+  "post_val_adjustment": false,
+  "C6_C_used": false,
+  "C4_final_modified": false,
+  "NMS_modified": false,
+  "evaluator_modified": false,
+  "primary_metric": "0.7 R@1",
+  "secondary_metric": "0.5 R@1",
+  "guardrails": "R@5/R@10 non-collapse; R@100 reported only"
+}
