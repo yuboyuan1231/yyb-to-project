@@ -1,0 +1,409 @@
+{
+  "conflict_counts": {
+    "high_retriever_low_bmn": 218134,
+    "low_retriever_high_bmn": 48622,
+    "none": 22512725
+  },
+  "wrong_video_high_bmn_cases_sample": [
+    {
+      "bmn_norm": 0.953297218804512,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.06854595345248346,
+      "t2_norm": 0.6339765528863938,
+      "video_id": "friends_s10e13_seg02_clip_00"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.061217538276849816,
+      "t2_norm": 0.6871458734555994,
+      "video_id": "friends_s06e22_seg02_clip_17"
+    },
+    {
+      "bmn_norm": 0.935458114390024,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.03151905537640772,
+      "t2_norm": 0.6887292804478446,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.061217538276849816,
+      "t2_norm": 0.6871458734555994,
+      "video_id": "friends_s06e22_seg02_clip_17"
+    },
+    {
+      "bmn_norm": 0.9059460993177956,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.03151905537640772,
+      "t2_norm": 0.6887292804478446,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 0.939199217753374,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.001973467246967111,
+      "t2_norm": 0.5323925914158877,
+      "video_id": "friends_s01e16-17_seg02_clip_40"
+    },
+    {
+      "bmn_norm": 0.9906625964744955,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.0001116244105664796,
+      "t2_norm": 0.7080860593704453,
+      "video_id": "friends_s07e04_seg02_clip_10"
+    },
+    {
+      "bmn_norm": 0.9041348466864186,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.041925161355906716,
+      "t2_norm": 0.8730258358501743,
+      "video_id": "friends_s10e03_seg02_clip_15"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.02582784953332527,
+      "t2_norm": 0.7757925080581235,
+      "video_id": "friends_s09e11_seg02_clip_05"
+    },
+    {
+      "bmn_norm": 0.9239358637562323,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 210,
+      "retriever_norm": 0.001973467246967111,
+      "t2_norm": 0.5323925914158877,
+      "video_id": "friends_s01e16-17_seg02_clip_40"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.041925161355906716,
+      "t2_norm": 0.8730258358501743,
+      "video_id": "friends_s10e03_seg02_clip_15"
+    },
+    {
+      "bmn_norm": 0.9943857285453064,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.02582784953332527,
+      "t2_norm": 0.7757925080581235,
+      "video_id": "friends_s09e11_seg02_clip_05"
+    },
+    {
+      "bmn_norm": 0.9968997074267582,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.017922664400036616,
+      "t2_norm": 0.7586482810168441,
+      "video_id": "friends_s01e12_seg02_clip_12"
+    },
+    {
+      "bmn_norm": 0.9033874674770982,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 211,
+      "retriever_norm": 0.006107997295486655,
+      "t2_norm": 0.6873843536084855,
+      "video_id": "friends_s04e16_seg01_clip_00"
+    },
+    {
+      "bmn_norm": 0.900141598137071,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.010943437271549073,
+      "t2_norm": 0.8684072416171252,
+      "video_id": "friends_s10e03_seg02_clip_15"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.010864743646981074,
+      "t2_norm": 0.7822012521773913,
+      "video_id": "friends_s09e11_seg02_clip_05"
+    },
+    {
+      "bmn_norm": 0.9036900756988123,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.03431943210702041,
+      "t2_norm": 0.7274008845312494,
+      "video_id": "friends_s07e13_seg02_clip_14"
+    },
+    {
+      "bmn_norm": 0.9638328420081489,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.019343949828589578,
+      "t2_norm": 0.803635084007191,
+      "video_id": "friends_s03e02_seg02_clip_11"
+    },
+    {
+      "bmn_norm": 0.9129932853998413,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.010943437271549073,
+      "t2_norm": 0.8684072416171252,
+      "video_id": "friends_s10e03_seg02_clip_15"
+    },
+    {
+      "bmn_norm": 0.9084977999618886,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.010864743646981074,
+      "t2_norm": 0.7822012521773913,
+      "video_id": "friends_s09e11_seg02_clip_05"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.003751125131698056,
+      "t2_norm": 0.7388098388454325,
+      "video_id": "friends_s09e12_seg02_clip_10"
+    },
+    {
+      "bmn_norm": 0.9122150733388935,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.4733618251583695,
+      "t2_norm": 0.8134111371101639,
+      "video_id": "friends_s07e15_seg02_clip_06"
+    },
+    {
+      "bmn_norm": 0.9246187750018955,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.2486115493243038,
+      "t2_norm": 0.5290326464610746,
+      "video_id": "friends_s09e14_seg02_clip_02"
+    },
+    {
+      "bmn_norm": 0.9594343395278156,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.22278443472352993,
+      "t2_norm": 0.5608632222679585,
+      "video_id": "friends_s10e17-18_seg02_clip_09"
+    },
+    {
+      "bmn_norm": 0.9040640654537737,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.21501874273188196,
+      "t2_norm": 0.8882305096888677,
+      "video_id": "friends_s09e17_seg02_clip_20"
+    },
+    {
+      "bmn_norm": 0.9805750908554137,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.14293385673270972,
+      "t2_norm": 0.8839315724577024,
+      "video_id": "friends_s10e08_seg02_clip_19"
+    },
+    {
+      "bmn_norm": 0.99717790926875,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.06374004177108049,
+      "t2_norm": 0.8487551533836677,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 0.9373524780993571,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.044940492931404855,
+      "t2_norm": 0.8530117308830991,
+      "video_id": "friends_s09e03_seg02_clip_16"
+    },
+    {
+      "bmn_norm": 0.9464667706391553,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.024001760007769865,
+      "t2_norm": 0.35471164533485827,
+      "video_id": "friends_s03e24_seg02_clip_10"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.022666936742463062,
+      "t2_norm": 0.8361918094696101,
+      "video_id": "friends_s07e20_seg02_clip_01"
+    },
+    {
+      "bmn_norm": 0.9774122477275414,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 212,
+      "retriever_norm": 0.0007182319706541733,
+      "t2_norm": 0.844667367295669,
+      "video_id": "friends_s07e04_seg02_clip_16"
+    },
+    {
+      "bmn_norm": 0.9639119465539034,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.06374004177108049,
+      "t2_norm": 0.8487551533836677,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.044940492931404855,
+      "t2_norm": 0.8530117308830991,
+      "video_id": "friends_s09e03_seg02_clip_16"
+    },
+    {
+      "bmn_norm": 0.9861751667021063,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.022666936742463062,
+      "t2_norm": 0.8361918094696101,
+      "video_id": "friends_s07e20_seg02_clip_01"
+    },
+    {
+      "bmn_norm": 0.9439974068167746,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.004039422109305027,
+      "t2_norm": 0.6108143244037177,
+      "video_id": "friends_s01e14_seg02_clip_10"
+    },
+    {
+      "bmn_norm": 0.9231682036098132,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.04500697355823001,
+      "t2_norm": 0.7590039328288352,
+      "video_id": "friends_s01e21_seg02_clip_18"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.029687187546526245,
+      "t2_norm": 0.598909450113181,
+      "video_id": "friends_s02e20_seg02_clip_11"
+    },
+    {
+      "bmn_norm": 0.937538487026026,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.02503796566646753,
+      "t2_norm": 0.44849833882356815,
+      "video_id": "castle_s03e20_seg02_clip_12"
+    },
+    {
+      "bmn_norm": 0.9242036645401973,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.020465485472103685,
+      "t2_norm": 0.8772561260166599,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 0.9472391556623291,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 213,
+      "retriever_norm": 0.004039422109305027,
+      "t2_norm": 0.6108143244037177,
+      "video_id": "friends_s01e14_seg02_clip_10"
+    },
+    {
+      "bmn_norm": 0.9073045246856984,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.04500697355823001,
+      "t2_norm": 0.7590039328288352,
+      "video_id": "friends_s01e21_seg02_clip_18"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.029687187546526245,
+      "t2_norm": 0.598909450113181,
+      "video_id": "friends_s02e20_seg02_clip_11"
+    },
+    {
+      "bmn_norm": 0.9221969967603472,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.02503796566646753,
+      "t2_norm": 0.44849833882356815,
+      "video_id": "castle_s03e20_seg02_clip_12"
+    },
+    {
+      "bmn_norm": 0.9017501804146626,
+      "gt_video_id": "friends_s01e22_seg02_clip_02",
+      "query_id": 214,
+      "retriever_norm": 0.020465485472103685,
+      "t2_norm": 0.8772561260166599,
+      "video_id": "friends_s06e24-25_seg02_clip_35"
+    },
+    {
+      "bmn_norm": 0.9113477856028412,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.04056586353398223,
+      "t2_norm": 0.7684176328873972,
+      "video_id": "s08e05_seg02_clip_00"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.014261008156905184,
+      "t2_norm": 0.84469462080776,
+      "video_id": "s01e07_seg01_clip_01"
+    },
+    {
+      "bmn_norm": 0.911060943105364,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.07930679034195645,
+      "t2_norm": 0.7530659351291716,
+      "video_id": "s07e04_seg02_clip_00"
+    },
+    {
+      "bmn_norm": 0.9022021956866929,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.06628548258598882,
+      "t2_norm": 0.7145404755328387,
+      "video_id": "s01e02_seg01_clip_00"
+    },
+    {
+      "bmn_norm": 0.9749774594031841,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.04056586353398223,
+      "t2_norm": 0.7684176328873972,
+      "video_id": "s08e05_seg02_clip_00"
+    },
+    {
+      "bmn_norm": 1.0,
+      "gt_video_id": "s05e09_seg01_clip_01",
+      "query_id": 285,
+      "retriever_norm": 0.014261008156905184,
+      "t2_norm": 0.84469462080776,
+      "video_id": "s01e07_seg01_clip_01"
+    }
+  ]
+}

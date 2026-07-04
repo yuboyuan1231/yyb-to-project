@@ -1,0 +1,43 @@
+{
+  "input_columns": [
+    "query_id",
+    "video_id",
+    "span_start",
+    "span_end",
+    "span_duration",
+    "retriever_score",
+    "retriever_rank",
+    "bmn_pred_iou",
+    "bmn_p_iou_05",
+    "bmn_p_iou_07",
+    "bmn_rank_score",
+    "bmn_final_score",
+    "start_prob",
+    "end_prob",
+    "actionness_score",
+    "duration_score",
+    "t2_score",
+    "old_c12_score",
+    "span_map_rank",
+    "seed",
+    "split",
+    "schema_hash",
+    "config_hash",
+    "gt_video_id",
+    "gt_start",
+    "gt_end",
+    "query_type",
+    "duration_bucket"
+  ],
+  "metrics": [
+    "VCMR R@1/5/10/100 @ IoU 0.5/0.7",
+    "VR recall @ 1/5/10/100",
+    "GT-video-only SVMR-like top50/top100 @ IoU 0.5/0.7",
+    "wrong-video high-score rate",
+    "correct-video wrong-span rate",
+    "duplicate/invalid/timestamp counts",
+    "query-type/duration/video-rank breakdowns"
+  ],
+  "nms_threshold": 0.7,
+  "official_val_used": false
+}

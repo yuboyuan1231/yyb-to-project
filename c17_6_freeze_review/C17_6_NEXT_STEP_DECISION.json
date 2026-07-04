@@ -1,0 +1,39 @@
+{
+  "best_config": "G_all_a0.55_b0.25_g0.2",
+  "c17_0_status": "C17_PROTOCOL_READY",
+  "c17_1_evaluator_status": "C17_TRAIN_ONLY_EVALUATOR_READY",
+  "c17_2_bmn_score_status": "C17_FULL_BMN_SCORE_PARTIAL",
+  "c17_3_hybrid_status": "C17_HYBRID_PROMISING",
+  "c17_4_native_integration_status": "C17_NATIVE_VCMR_PROMISING",
+  "c17_5_robustness_status": "C17_ROBUSTNESS_PASS",
+  "candidate_pool_hash": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+  "command_lines": [
+    "run_c17_bmn_t2_native_vcmr_integration.py --stage all --mode medium --seed 2026"
+  ],
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "evaluator_modified": false,
+  "final_decision": "C17_CONTINUE_HYBRID_TRAIN_ONLY",
+  "missing_artifacts": [
+    "C7-B6 train-only replay is only included if compatible local rows are present later"
+  ],
+  "mode": "medium",
+  "official_nms_modified": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "schema_hash": "bc7541d2f30ae646d0dadd606ecce9d6941ac42a80bb5a7158ed3ed90d5da95c",
+  "score_manifest_hash": "c58c43112db465d320c32629e4c1c1b857ab0ff315bf41db7b075366f0cc0155",
+  "seed": 2026,
+  "seed_list": [
+    2026,
+    2027
+  ],
+  "selected_weights": {
+    "alpha": 0.55,
+    "beta": 0.25,
+    "family": "G_retriever_BMN_T2",
+    "gamma": 0.2,
+    "name": "G_all_a0.55_b0.25_g0.2"
+  },
+  "stage": "C17-6",
+  "status": "C17_CONTINUE_HYBRID_TRAIN_ONLY"
+}
