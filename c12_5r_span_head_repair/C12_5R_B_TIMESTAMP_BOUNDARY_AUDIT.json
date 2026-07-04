@@ -1,0 +1,46 @@
+{
+  "audit_note": "Timestamp mapping is floor(start)/ceil(end)-1 with inclusive end index. Short moments often become one/few clips, but no invalid-label bug was found.",
+  "clip_length": 1.5,
+  "duplicate_span_count_in_r1_audit_pool": 0,
+  "duration_buckets": {
+    "long": {
+      "discretized_clip_count_median": 17.0,
+      "gt_duration_mean": 29.210688000000005,
+      "query_count": 375,
+      "single_clip_rate": 0.0
+    },
+    "medium": {
+      "discretized_clip_count_median": 6.0,
+      "gt_duration_mean": 8.098127516778522,
+      "query_count": 1490,
+      "single_clip_rate": 0.0
+    },
+    "short": {
+      "discretized_clip_count_median": 3.0,
+      "gt_duration_mean": 2.998210101010101,
+      "query_count": 2475,
+      "single_clip_rate": 2.0606060606060606
+    }
+  },
+  "end_boundary": "inclusive clip index; timestamp output uses exclusive end time",
+  "end_mapping": "ceil(end / duration * T) - 1",
+  "generated_span_duration_distribution": {
+    "mean": 21.76918407556007,
+    "p10": 4.392439024390244,
+    "p50": 19.075333333333337,
+    "p90": 44.2725
+  },
+  "gt_duration_distribution": {
+    "mean": 7.014006451612904,
+    "p10": 1.8599999999999999,
+    "p50": 4.395,
+    "p90": 13.553
+  },
+  "invalid_span_count": 0,
+  "official_val_used": false,
+  "short_moment_single_clip_rate": 2.0606060606060606,
+  "span_start_less_equal_end_enforced": true,
+  "stage": "C12-5R-B",
+  "start_mapping": "floor(start / duration * T)",
+  "status": "C12_BOUNDARY_LABEL_AUDIT_PASS"
+}
