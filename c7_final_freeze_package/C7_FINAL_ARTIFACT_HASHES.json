@@ -1,0 +1,65 @@
+{
+  "primary_raw_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c7_final_freeze_package/C7_FINAL_PRIMARY_C7C6B_R1_PRIORITY_RAW.json",
+    "exists": true,
+    "size": 20820832,
+    "sha256": "5ab073ec5d766bbbc0fdc51a29c7c39e84da595804aab8477083884352455e75"
+  },
+  "primary_nms_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c7_final_freeze_package/C7_FINAL_PRIMARY_C7C6B_R1_PRIORITY_NMS.json",
+    "exists": true,
+    "size": 10588826,
+    "sha256": "35b58ce1779b2c3cd96403208e89224e05fb4581e6eaf54e412ff6dbebc66932"
+  },
+  "fallback_raw_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c7_final_freeze_package/C7_FINAL_FALLBACK_C7C3B_R1_PRIORITY_RAW.json",
+    "exists": true,
+    "size": 20820629,
+    "sha256": "b192534d48930e8dc88667667bdad1e2968a3cb29179218d8b6be45959691a7a"
+  },
+  "fallback_nms_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c7_final_freeze_package/C7_FINAL_FALLBACK_C7C3B_R1_PRIORITY_NMS.json",
+    "exists": true,
+    "size": 10588829,
+    "sha256": "89e7e16ca12803df64f40f7387bebbdf7cf8de3f6d1e3aab6c43de95708c624e"
+  },
+  "primary_checkpoint": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_c6_region_lite_audit/C7_C6_B_REGION_LITE_FINAL_MODEL.pt",
+    "exists": true,
+    "size": 211922165,
+    "sha256": "26de62547ab6190dc08c9bdbe34366c16e6a9662a4c2d9597a1ac223433c9f51"
+  },
+  "fallback_checkpoint": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c7_c3_adapter_stable/C7C3-B_qal_output_adapter/C7C3-B_qal_output_adapter_integrated_rlem_bridge.pt",
+    "exists": true,
+    "size": 201232519,
+    "sha256": "2735fa547e932065b973981202b6e13e34afab4825b06d89db0d1a2e0bc6b41d"
+  },
+  "config_paths": [
+    {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_final_freeze_package/C7_FINAL_PRIMARY_CONFIG.json",
+      "exists": true,
+      "size": 869,
+      "sha256": "cd89171395568f6488bdd9f754f9297dfa5c50fb7b28d0dea20338eadd5fbbba"
+    },
+    {
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_final_freeze_package/C7_FINAL_FALLBACK_CONFIG.json",
+      "exists": true,
+      "size": 579,
+      "sha256": "64f6f92f62540855871dab9abf37cd8f5860ba8d7142b78566ec0f8b4625da18"
+    }
+  ],
+  "train_fit_split_manifest": {
+    "path": "results/rlem_c2/splits/train_fit_desc_ids.txt",
+    "exists": true,
+    "size": 458321,
+    "sha256": "e333aa4935ff3648367dff454987a6b6764a24df52cf3412fcc75a8213ca9fd2"
+  },
+  "train_calib_split_manifest": {
+    "path": "results/rlem_c2/splits/train_calib_desc_ids.txt",
+    "exists": true,
+    "size": 51327,
+    "sha256": "293f4540f23d28f70384b41d225bf395d6a55267e4e666b7448ec0c3fecc569a"
+  },
+  "repro_note": "Primary checkpoint was deterministically trained from C7C3-B source checkpoint with seed 20260628 and train_fit=2048."
+}
