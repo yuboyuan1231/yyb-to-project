@@ -1,0 +1,211 @@
+{
+  "anchor_type": "c19_hybrid_anchor",
+  "breakdowns": {
+    "duration": {
+      "('A', 'medium')": 37,
+      "('A', 'short')": 8,
+      "('B', 'medium')": 27,
+      "('B', 'short')": 45,
+      "('C', 'long')": 94,
+      "('C', 'medium')": 379,
+      "('C', 'short')": 546,
+      "('D', 'long')": 137,
+      "('D', 'medium')": 489,
+      "('D', 'short')": 734,
+      "('E', 'long')": 39,
+      "('E', 'medium')": 197,
+      "('E', 'short')": 309,
+      "('F', 'long')": 39,
+      "('F', 'medium')": 113,
+      "('F', 'short')": 223,
+      "('G', 'long')": 49,
+      "('G', 'medium')": 166,
+      "('G', 'short')": 369
+    },
+    "query_type": {
+      "('A', 't')": 2,
+      "('A', 'v')": 29,
+      "('A', 'vt')": 14,
+      "('B', 't')": 6,
+      "('B', 'v')": 40,
+      "('B', 'vt')": 26,
+      "('C', 't')": 88,
+      "('C', 'v')": 694,
+      "('C', 'vt')": 237,
+      "('D', 't')": 123,
+      "('D', 'v')": 982,
+      "('D', 'vt')": 255,
+      "('E', 't')": 52,
+      "('E', 'v')": 428,
+      "('E', 'vt')": 65,
+      "('F', 't')": 35,
+      "('F', 'v')": 277,
+      "('F', 'vt')": 63,
+      "('G', 't')": 20,
+      "('G', 'v')": 530,
+      "('G', 'vt')": 34
+    },
+    "video_rank": {
+      "25%": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 2.0,
+        "E": 6.0,
+        "F": 12.0,
+        "G": 999999.0
+      },
+      "50%": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 3.0,
+        "E": 7.0,
+        "F": 15.0,
+        "G": 999999.0
+      },
+      "75%": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 4.0,
+        "E": 9.0,
+        "F": 23.0,
+        "G": 999999.0
+      },
+      "count": {
+        "A": 45.0,
+        "B": 72.0,
+        "C": 1019.0,
+        "D": 1360.0,
+        "E": 545.0,
+        "F": 375.0,
+        "G": 584.0
+      },
+      "max": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 5.0,
+        "E": 10.0,
+        "F": 80.0,
+        "G": 999999.0
+      },
+      "mean": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 3.0294117647058822,
+        "E": 7.491743119266055,
+        "F": 19.776,
+        "G": 999999.0
+      },
+      "min": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0,
+        "D": 2.0,
+        "E": 6.0,
+        "F": 11.0,
+        "G": 999999.0
+      },
+      "std": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0606423177163946,
+        "E": 1.3437032098807864,
+        "F": 11.44682941880919,
+        "G": 0.0
+      }
+    }
+  },
+  "current_anchor_R1_IoU0.7": 1.125,
+  "failure_type_counts": {
+    "A": 45,
+    "B": 72,
+    "C": 1019,
+    "D": 1360,
+    "E": 545,
+    "F": 375,
+    "G": 584
+  },
+  "failure_type_metrics": {
+    "A": {
+      "bmn_same_video_repair_upper_bound_count": 42,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 1.125,
+      "percentage": 1.125,
+      "query_count": 45,
+      "wrong_video_rate": 0.0
+    },
+    "B": {
+      "bmn_same_video_repair_upper_bound_count": 1,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 1.8,
+      "query_count": 72,
+      "wrong_video_rate": 0.0
+    },
+    "C": {
+      "bmn_same_video_repair_upper_bound_count": 3,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 25.475,
+      "query_count": 1019,
+      "wrong_video_rate": 0.0
+    },
+    "D": {
+      "bmn_same_video_repair_upper_bound_count": 0,
+      "cross_video_repair_upper_bound_count": 8,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 34.0,
+      "query_count": 1360,
+      "wrong_video_rate": 100.0
+    },
+    "E": {
+      "bmn_same_video_repair_upper_bound_count": 0,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 13.625,
+      "query_count": 545,
+      "wrong_video_rate": 100.0
+    },
+    "F": {
+      "bmn_same_video_repair_upper_bound_count": 0,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 9.375,
+      "query_count": 375,
+      "wrong_video_rate": 100.0
+    },
+    "G": {
+      "bmn_same_video_repair_upper_bound_count": 0,
+      "cross_video_repair_upper_bound_count": 0,
+      "current_R1_IoU0.7_contribution": 0.0,
+      "percentage": 14.6,
+      "query_count": 584,
+      "wrong_video_rate": 100.0
+    }
+  },
+  "failure_type_percentages": {
+    "A": 1.125,
+    "B": 1.8,
+    "C": 25.475,
+    "D": 34.0,
+    "E": 13.625,
+    "F": 9.375,
+    "G": 14.6
+  },
+  "mode": "medium",
+  "not_exact_c7_b6": true,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "safe_cross_video_upper_bound": 0.2,
+  "same_video_repair_upper_bound": 0.1,
+  "seed": 2026,
+  "stage": "C20-2",
+  "status": "C20_R1_FAILURE_CROSS_VIDEO_REQUIRED",
+  "total_recoverable_upper_bound": 1.425,
+  "unrecoverable_ratio": 14.6
+}
