@@ -1,0 +1,25 @@
+{
+  "best_checkpoint_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+  "c15_accepted": true,
+  "c16_1_status": "C16_FULLSCALE_DATA_READY",
+  "c16_2_status": "C16_BMN_FULLSCALE_PROMISING",
+  "c16_3_status": "C16_ROBUSTNESS_PARTIAL",
+  "c16_4_status": "C16_NATIVE_INTEGRATION_LOCALIZER_ONLY",
+  "candidate_pool_hash": "ccd364258d055362a17e9ad3d37540e667753ac8e830c2d2b41883096e442ed5",
+  "commands": [
+    "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c16_fullscale_bmn_native_localizer.py --stage all --mode medium --seed 2026",
+    "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c16_fullscale_bmn_native_localizer.py --stage c16_3 --mode medium --seed 2026",
+    "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c16_fullscale_bmn_native_localizer.py --stage c16_4 --mode medium --seed 2026",
+    "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c16_fullscale_bmn_native_localizer.py --stage c16_5 --mode medium --seed 2026"
+  ],
+  "evaluator_modified": false,
+  "mode": "medium",
+  "nms_modified": false,
+  "official_val_used": false,
+  "official_was_run": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "random_seed_base": 2026,
+  "schema_hash": "fcedf9a713a56ec334c819fc129d3d1bbb7a269f79ce90f9371c6a990ef5a75f",
+  "stage": "C16-5",
+  "status": "C16_CONTINUE_BMN_T2_HYBRID_TRAIN_ONLY"
+}

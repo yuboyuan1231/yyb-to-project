@@ -1,0 +1,19 @@
+{
+  "feature_builder": "keyed by desc_id/video_id; no position-based external join",
+  "finite_query_sample": true,
+  "finite_subtitle_sample": true,
+  "finite_visual_sample": true,
+  "query_shape": [
+    86784,
+    768
+  ],
+  "schema_hash": "fcedf9a713a56ec334c819fc129d3d1bbb7a269f79ce90f9371c6a990ef5a75f",
+  "subtitle_mean_shape": [
+    17435,
+    768
+  ],
+  "visual_mean_shape": [
+    17435,
+    4352
+  ]
+}

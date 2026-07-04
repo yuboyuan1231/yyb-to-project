@@ -1,0 +1,73 @@
+{
+  "medium_note": "medium uses at least 1000 per split when available",
+  "mode": "medium",
+  "pseudo_official_holdout_selection_forbidden": true,
+  "split_audits": {
+    "calib_holdout": {
+      "duration_bucket_distribution": {
+        "long": 98,
+        "medium": 344,
+        "short": 558
+      },
+      "moment_duration_median": 4.5,
+      "moment_duration_p90": 14.812000000000001,
+      "query_count": 1000,
+      "query_type_distribution": {
+        "t": 68,
+        "v": 759,
+        "vt": 173
+      },
+      "video_count": 202
+    },
+    "calib_select": {
+      "duration_bucket_distribution": {
+        "long": 81,
+        "medium": 360,
+        "short": 559
+      },
+      "moment_duration_median": 4.609999999999996,
+      "moment_duration_p90": 13.358000000000002,
+      "query_count": 1000,
+      "query_type_distribution": {
+        "t": 95,
+        "v": 731,
+        "vt": 174
+      },
+      "video_count": 201
+    },
+    "pseudo_official_holdout": {
+      "duration_bucket_distribution": {
+        "long": 76,
+        "medium": 353,
+        "short": 571
+      },
+      "moment_duration_median": 4.415000000000002,
+      "moment_duration_p90": 12.527000000000003,
+      "query_count": 1000,
+      "query_type_distribution": {
+        "t": 84,
+        "v": 761,
+        "vt": 155
+      },
+      "video_count": 202
+    },
+    "train_fit": {
+      "duration_bucket_distribution": {
+        "long": 155,
+        "medium": 342,
+        "short": 503
+      },
+      "moment_duration_median": 4.949999999999999,
+      "moment_duration_p90": 22.701999999999998,
+      "query_count": 1000,
+      "query_type_distribution": {
+        "t": 93,
+        "v": 740,
+        "vt": 167
+      },
+      "video_count": 202
+    }
+  },
+  "stage": "C16-1",
+  "target_per_split": 1000
+}

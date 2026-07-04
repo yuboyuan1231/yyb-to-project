@@ -1,0 +1,17 @@
+{
+  "disk": [
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "/dev/sda1       1.8T  1.2T  613G  65% /home",
+    "/dev/sda1       1.8T  1.2T  613G  65% /home",
+    "/dev/nvme0n1p2  468G  104G  341G  24% /"
+  ],
+  "eval_queries_per_calib_split": 1000,
+  "expected_runtime": "medium is minutes to tens of minutes on RTX 3090; full may be substantially longer",
+  "gpu": [
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24094 MiB",
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24113 MiB"
+  ],
+  "mode": "medium",
+  "stage": "C16-1",
+  "train_queries": 1000
+}

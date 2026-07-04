@@ -1,0 +1,18 @@
+{
+  "D_max": 64,
+  "hidden": 128,
+  "mode": "medium",
+  "official_val_used": false,
+  "outputs": [
+    "predicted_iou",
+    "p_iou_05",
+    "p_iou_07",
+    "final_span_score"
+  ],
+  "query_conditioning": "query concat into temporal encoder and span head",
+  "query_feature": "existing query embedding",
+  "schema_hash": "fcedf9a713a56ec334c819fc129d3d1bbb7a269f79ce90f9371c6a990ef5a75f",
+  "span_map": "dense start-duration map M(d,s)",
+  "stage": "C16-2",
+  "temporal_feature": "existing subtitle clip sequence + visual energy"
+}
