@@ -1,0 +1,132 @@
+{
+  "C12_5_teacher_distilled_baseline": {
+    "calib_holdout": {
+      "auc_iou05": 0.511865,
+      "auc_iou07": 0.53702,
+      "best_iou_span_mean_rank": 302.0963133640553,
+      "best_iou_span_median_rank": 228.0,
+      "best_iou_span_top100_rate": 30.99078341013825,
+      "best_iou_span_top10_rate": 5.783410138248848,
+      "best_iou_span_top50_rate": 18.82488479262673,
+      "pearson": 0.021155956267523104,
+      "sample_count": 300000,
+      "spearman": 0.07283213290138169
+    },
+    "calib_select": {
+      "auc_iou05": 0.51635,
+      "auc_iou07": 0.53051,
+      "best_iou_span_mean_rank": 308.0773308747263,
+      "best_iou_span_median_rank": 227.0,
+      "best_iou_span_top100_rate": 30.4022127463409,
+      "best_iou_span_top10_rate": 5.220698398063847,
+      "best_iou_span_top50_rate": 18.18600898928201,
+      "pearson": 0.03863896393231677,
+      "sample_count": 300000,
+      "spearman": 0.052626643010555856
+    }
+  },
+  "T1_pairwise_best_vs_topneg": {
+    "calib_holdout": {
+      "auc_iou05": 0.513165,
+      "auc_iou07": 0.50964,
+      "best_iou_span_mean_rank": 299.2269585253456,
+      "best_iou_span_median_rank": 169.0,
+      "best_iou_span_top100_rate": 38.08755760368663,
+      "best_iou_span_top10_rate": 7.626728110599078,
+      "best_iou_span_top50_rate": 25.11520737327189,
+      "pearson": -0.06218621796290517,
+      "sample_count": 300000,
+      "spearman": -0.17987609819009154
+    },
+    "calib_select": {
+      "auc_iou05": 0.5591325,
+      "auc_iou07": 0.560295,
+      "best_iou_span_mean_rank": 298.7575198801429,
+      "best_iou_span_median_rank": 166.0,
+      "best_iou_span_top100_rate": 38.59628903999078,
+      "best_iou_span_top10_rate": 7.410395297914025,
+      "best_iou_span_top50_rate": 25.008643540394146,
+      "pearson": -0.05358623185803368,
+      "sample_count": 300000,
+      "spearman": -0.17046810199245455
+    }
+  },
+  "T2_listwise_soft_iou": {
+    "calib_holdout": {
+      "auc_iou05": 0.534175,
+      "auc_iou07": 0.547285,
+      "best_iou_span_mean_rank": 194.03755760368662,
+      "best_iou_span_median_rank": 119.0,
+      "best_iou_span_top100_rate": 45.87557603686636,
+      "best_iou_span_top10_rate": 9.67741935483871,
+      "best_iou_span_top50_rate": 29.493087557603687,
+      "pearson": -0.06382325187093174,
+      "sample_count": 300000,
+      "spearman": -0.199218575616094
+    },
+    "calib_select": {
+      "auc_iou05": 0.606845,
+      "auc_iou07": 0.621095,
+      "best_iou_span_mean_rank": 191.46859513656793,
+      "best_iou_span_median_rank": 114.0,
+      "best_iou_span_top100_rate": 46.5944450847067,
+      "best_iou_span_top10_rate": 10.280050708770313,
+      "best_iou_span_top50_rate": 30.851676846836465,
+      "pearson": -0.042016128877615765,
+      "sample_count": 300000,
+      "spearman": -0.18574054260746647
+    }
+  },
+  "T3_topk_promotion": {
+    "calib_holdout": {
+      "auc_iou05": 0.487195,
+      "auc_iou07": 0.475555,
+      "best_iou_span_mean_rank": 330.09608294930877,
+      "best_iou_span_median_rank": 229.5,
+      "best_iou_span_top100_rate": 24.88479262672811,
+      "best_iou_span_top10_rate": 3.3870967741935485,
+      "best_iou_span_top50_rate": 13.59447004608295,
+      "pearson": -0.0911614643168503,
+      "sample_count": 300000,
+      "spearman": -0.20625821740479802
+    },
+    "calib_select": {
+      "auc_iou05": 0.539495,
+      "auc_iou07": 0.53537,
+      "best_iou_span_mean_rank": 327.6578310475971,
+      "best_iou_span_median_rank": 226.0,
+      "best_iou_span_top100_rate": 26.103491990319235,
+      "best_iou_span_top10_rate": 3.4458914371326497,
+      "best_iou_span_top50_rate": 14.728592831623834,
+      "pearson": -0.07648796963370863,
+      "sample_count": 300000,
+      "spearman": -0.18705098270119216
+    }
+  },
+  "T4_duration_balanced_promotion": {
+    "calib_holdout": {
+      "auc_iou05": 0.521405,
+      "auc_iou07": 0.52753,
+      "best_iou_span_mean_rank": 194.42995391705068,
+      "best_iou_span_median_rank": 126.0,
+      "best_iou_span_top100_rate": 44.63133640552996,
+      "best_iou_span_top10_rate": 9.262672811059907,
+      "best_iou_span_top50_rate": 29.23963133640553,
+      "pearson": -0.09269958285863704,
+      "sample_count": 300000,
+      "spearman": -0.21767694417748
+    },
+    "calib_select": {
+      "auc_iou05": 0.59086,
+      "auc_iou07": 0.59926,
+      "best_iou_span_mean_rank": 191.94133917252506,
+      "best_iou_span_median_rank": 117.0,
+      "best_iou_span_top100_rate": 45.8338135300219,
+      "best_iou_span_top10_rate": 9.24282586147286,
+      "best_iou_span_top50_rate": 29.94122392531981,
+      "pearson": -0.06758362337780437,
+      "sample_count": 300000,
+      "spearman": -0.2093448730458514
+    }
+  }
+}

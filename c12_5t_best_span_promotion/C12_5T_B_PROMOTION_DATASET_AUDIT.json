@@ -1,0 +1,27 @@
+{
+  "best_iou_generated_iou07_rate": 95.54166666666667,
+  "best_iou_span_mean_rank": 357.43325,
+  "best_iou_span_median_rank": 286.0,
+  "best_iou_span_top100_rate": 24.016666666666666,
+  "best_iou_span_top10_rate": 3.2416666666666667,
+  "best_iou_span_top50_rate": 13.816666666666666,
+  "diagnosis": "ranking/promotion loss is valid",
+  "duration_distribution": {
+    "long": 1857,
+    "medium": 4308,
+    "short": 5835
+  },
+  "high_score_low_iou_hard_negatives_mean": 86.00808333333333,
+  "high_score_low_iou_hard_negatives_total": 1032097,
+  "nonfinite_feature_rows_dropped": 0,
+  "official_val_used": false,
+  "query_count": 12000,
+  "query_type_distribution": {
+    "t": 1109,
+    "v": 8891,
+    "vt": 2000
+  },
+  "span_rows_sampled": 1163057,
+  "stage": "C12-5T-B",
+  "status": "C12_5T_PROMOTION_DATASET_BUILT"
+}

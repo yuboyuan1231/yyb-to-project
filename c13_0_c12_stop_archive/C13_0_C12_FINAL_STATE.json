@@ -1,0 +1,52 @@
+{
+  "allow_enter_c12_6": false,
+  "c12_span_ranker_line_stopped": true,
+  "create_c12_official_candidate": false,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "evaluator_modified": false,
+  "evaluator_sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+  "evidence": {
+    "c12_4r_conquer_warm_replay": {
+      "GT_video_in_top100_rate": 100.0,
+      "best_repaired_retriever_variant": "zero_delta_replay",
+      "learned_delta_repair_effective": false,
+      "status": "C12_RETRIEVER_CONQUER_WARM_READY_CONTINUE_TO_C12_5"
+    },
+    "c12_calibration_unreliable": {
+      "t2_pq_spearman": -0.199218575616094,
+      "u2_pq_spearman": -0.14811460730177597,
+      "v1_pq_spearman": -0.18961203992882372
+    },
+    "c12_hidden_ranker_regression": {
+      "best_variant": "V1_hidden_boundary",
+      "hidden_export_available": true,
+      "iou07_top100": 37.764976958525345,
+      "iou07_top50": 26.95852534562212,
+      "shared_feature_count": 55,
+      "status": "C12_HIDDEN_RANKER_NO_GAIN_NEED_STRONGER_FEATURES"
+    },
+    "c12_independent_native_retriever": {
+      "GT_video_in_top100_rate": 6.751152073732719,
+      "best_variant": "teacher_distilled_fusion",
+      "reference_CONQUER_top100": 100.0,
+      "status": "C12_RETRIEVER_COMPLEMENTARY_BUT_WEAK"
+    },
+    "c12_m1000_span_generation": {
+      "holdout_iou07_top100": "Selection used calib_select only. Holdout is report-only. Selected teacher_distilled; holdout IoU@0.7_top100=43.0876, B6 train-reference IoU@0.7_top100=66.0156, query_type_collapse=False.",
+      "oracle_headroom_from_t2_generated_m1000_iou07": 85.04608294930875,
+      "selected_variant": "teacher_distilled",
+      "status": "C12_LOCALIZER_WEAK_REVISE_SPAN_HEAD"
+    },
+    "c12_top100_span_ranking_partial_repair": {
+      "best_t_variant": "T2_listwise_soft_iou",
+      "iou07_top100": 55.0,
+      "iou07_top50": 38.87096774193548
+    }
+  },
+  "nms_modified": false,
+  "nms_sha256": "f490e62ebd98c1bb6d0054d147a7df5a5ead508cea5b26be82d1cd8ac88619cd",
+  "official_val_used": false,
+  "root_official_authorization_markers_present": [],
+  "stage": "C13-0",
+  "status": "C12_SPAN_RANKER_LINE_STOP_NEED_STRONGER_FEATURE_OR_BASELINE"
+}

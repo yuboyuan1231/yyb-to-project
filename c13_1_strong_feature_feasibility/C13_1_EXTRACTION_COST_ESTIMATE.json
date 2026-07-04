@@ -1,0 +1,54 @@
+{
+  "dataset_scope": {
+    "calib_holdout_queries": 4340,
+    "calib_select_queries": 8677,
+    "pseudo_official_holdout_used_for_selection": false,
+    "train_fit_queries": 69428,
+    "train_release_queries": 87175,
+    "train_video_hours_estimate": 369.0386611111721,
+    "train_videos": 17435
+  },
+  "extraction_time_estimate": {
+    "full_train_visual_or_motion": "multi-day GPU job; should wait for pilot signal",
+    "motion_model_pilot_gpu": "4-12 GPU hours; higher if decoding is slow",
+    "text_subtitle_pilot_gpu": "minutes to <1 hour",
+    "visual_clip_siglip_pilot_gpu": "1-4 GPU hours depending frame rate"
+  },
+  "feature_dim": {
+    "clip_siglip_visual_768_to_1152": "768-1152",
+    "deberta_roberta_text_768": 768,
+    "event_multiscale_tokens": "N x 768/1024",
+    "sentence_transformer_text_768": 768,
+    "videomae_internvideo_motion_768_to_1408": "768-1408"
+  },
+  "gpu_cpu_cost": {
+    "multiscale_event": "GPU for raw extraction, CPU ok for pooling/indexing",
+    "text": "1 GPU optional; CPU possible but slower",
+    "visual": "GPU recommended; CPU not practical for video/frame models"
+  },
+  "official_val_used": false,
+  "pilot_scope": {
+    "purpose": "feasibility and signal audit only; no full extraction",
+    "sample_queries": 96,
+    "sample_videos": 64
+  },
+  "risk_level": {
+    "multiscale_event": "medium",
+    "text_subtitle": "low_to_medium",
+    "visual": "medium_to_high"
+  },
+  "span_ranking_sample_feasibility": "yes: reuse C12 M1000 generated pools and C12-5V failure IDs for pilot-only scoring",
+  "stage": "C13-1",
+  "storage_estimate": {
+    "event_tokens_fp16_full_train": "smaller than dense frame tokens if pooled to 8-32 events/video",
+    "subtitle_sentence_embeddings_fp16_order": "depends on subtitle sentence segmentation; expected low single-digit GiB for TVR train",
+    "text_query_sentence_embeddings_fp16_all_train": "127.7 MiB",
+    "visual_clip_tokens_fp16_full_train": "tens of GiB if dense frame/clip tokens are kept; small pilot <2 GiB"
+  },
+  "timestamp_alignment_feasibility": {
+    "existing_tv_feature_stride": "current TVR features use 1.5s style clip alignment",
+    "new_feature_alignment": "feasible if extraction records frame timestamp, clip center, and video duration normalization",
+    "risk": "medium: subtitle sentence boundaries and video frame sampling must be canonicalized"
+  },
+  "vr_recall_sample_feasibility": "yes: use train_fit/calib_select/calib_holdout only, with C7-B6/CONQUER as teacher or hard-negative source"
+}
