@@ -1,0 +1,11 @@
+{
+  "frozen_before_pseudo_onelook": true,
+  "selected_config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+  "selected_formula": {
+    "alpha": 0.65,
+    "beta": 0.25,
+    "family": "G_retriever_BMN_T2",
+    "gamma": 0.1,
+    "name": "grid_a0.65_b0.25_g0.1"
+  }
+}
