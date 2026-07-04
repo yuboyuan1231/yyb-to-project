@@ -1,0 +1,52 @@
+{
+  "event_config": {
+    "adjacent_similarity_thresholds_available": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "fixed_windows": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "raw_video_dependency": false,
+    "time_contiguous_quantile_segments": 4,
+    "used_adjacent_threshold": 0.75
+  },
+  "feature_columns": [
+    "event_mass_inside_span",
+    "event_mean_inside_span",
+    "event_max_inside_span",
+    "event_peak_in_span",
+    "event_inside_outside_contrast",
+    "event_left_right_context_contrast",
+    "event_boundary_start_alignment",
+    "event_boundary_end_alignment",
+    "event_overlap_ratio",
+    "best_event_overlap",
+    "query_event_similarity",
+    "subtitle_event_similarity",
+    "visual_event_similarity",
+    "multiscale_span_score_2",
+    "multiscale_span_score_4",
+    "multiscale_span_score_8",
+    "multiscale_span_score_16",
+    "multiscale_boundary_contrast_2",
+    "multiscale_boundary_contrast_4",
+    "multiscale_boundary_contrast_8",
+    "multiscale_boundary_contrast_16"
+  ],
+  "meta_columns": [
+    "base_score",
+    "c12_t2_score",
+    "rank_norm",
+    "span_duration_norm",
+    "center_norm",
+    "retriever_score_z"
+  ],
+  "official_val_used": false,
+  "schema_hash": "bd211e2f37de5e12067827c444b69c64e4365e17486d71f041255af857ac912f",
+  "stage": "C14-3"
+}
