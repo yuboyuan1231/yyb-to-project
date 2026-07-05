@@ -1,0 +1,68 @@
+{
+  "A_first_stage_baseline": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 71.6
+  },
+  "B_repaired_candidate_pool_oracle": {
+    "GT_video_mean_rank": 1.0,
+    "GT_video_median_rank": 1.0,
+    "VR_R@1": 100.0,
+    "VR_R@10": 100.0,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 100.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 0.0
+  },
+  "C_repaired_c22_native_retriever_available": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "score_collapse_ratio_std_lt_1e_6": 0.0,
+    "score_entropy_mean": 1.6143879691194742,
+    "score_std_mean": 1.0019012480974196,
+    "wrong_video_top1_rate": 71.6
+  },
+  "D_random_sanity": {
+    "GT_video_mean_rank": 63.826,
+    "GT_video_median_rank": 63.5,
+    "VR_R@1": 0.6,
+    "VR_R@10": 7.9,
+    "VR_R@100": 78.4,
+    "VR_R@128": 100.0,
+    "VR_R@5": 4.3,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "score_collapse_ratio_std_lt_1e_6": 0.0,
+    "score_entropy_mean": 4.464493056774139,
+    "score_std_mean": 0.9999999815225601,
+    "wrong_video_top1_rate": 99.4
+  },
+  "E_oracle_sanity": {
+    "GT_video_mean_rank": 1.0,
+    "GT_video_median_rank": 1.0,
+    "VR_R@1": 100.0,
+    "VR_R@10": 100.0,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 100.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 0.0
+  }
+}
