@@ -1,0 +1,16 @@
+{
+  "with_bmn_localizer": "diagnostic only; no full C19 table rewrite in committed artifacts",
+  "with_event_tokens": {
+    "GT_video_mean_rank": 5789.952,
+    "GT_video_median_rank": 4679.0,
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.2,
+    "VR_R@100": 1.7,
+    "VR_R@5": 0.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 100.0
+  },
+  "without_bmn_localizer": "retriever-only VR reported",
+  "without_event_tokens": "not separately trained in medium runner"
+}
