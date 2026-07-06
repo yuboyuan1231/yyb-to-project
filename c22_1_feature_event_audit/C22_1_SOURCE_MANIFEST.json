@@ -1,0 +1,12 @@
+{
+  "new_feature_downloads": false,
+  "pooled_cache_paths": {
+    "query_all": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+    "subtitle_mean_max": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+    "visual_mean": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz"
+  },
+  "query_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+  "raw_video_available": false,
+  "subtitle_roberta_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+  "visual_resnet_slowfast_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5"
+}

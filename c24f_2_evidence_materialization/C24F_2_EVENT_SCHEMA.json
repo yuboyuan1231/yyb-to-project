@@ -1,0 +1,56 @@
+{
+  "allowed_inference_features": [
+    "event_relevance_score",
+    "query_event_score",
+    "event_visual_relevance",
+    "event_subtitle_relevance",
+    "event_rank",
+    "event_margin",
+    "event_score_z",
+    "event_topk_mean_score",
+    "event_topk_max_score",
+    "event_available"
+  ],
+  "candidate_level_direct_columns": [
+    "event_available",
+    "best_event_id",
+    "best_event_method",
+    "best_event_start",
+    "best_event_end",
+    "best_event_duration",
+    "event_relevance_score",
+    "query_event_score",
+    "event_visual_relevance",
+    "event_subtitle_relevance",
+    "event_multimodal_relevance",
+    "event_rank",
+    "event_margin",
+    "event_topk_mean_score",
+    "event_topk_max_score",
+    "event_score_z",
+    "event_score_softmax",
+    "event_missing_mask"
+  ],
+  "diagnostic_only_label_columns": [
+    "event_overlap_proxy",
+    "best_event_gt_overlap",
+    "event_iou_with_gt",
+    "event_contains_gt"
+  ],
+  "event_level_columns": [
+    "video_id",
+    "event_id",
+    "event_method",
+    "start_clip",
+    "end_clip",
+    "start_time",
+    "end_time",
+    "event_duration",
+    "num_clips",
+    "event_feature_hash",
+    "has_visual_event_feature",
+    "has_subtitle_event_feature",
+    "event_missing_mask"
+  ],
+  "schema_hash": "b86cf36795324971"
+}

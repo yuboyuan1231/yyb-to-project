@@ -1,0 +1,7 @@
+{
+  "event_sample_only": true,
+  "gt_overlap_event_top1_recall_05": 56.0,
+  "gt_overlap_event_top3_recall_05": 56.0,
+  "mean_best_event_iou": 0.5117396081399955,
+  "sample_query_count": 25
+}

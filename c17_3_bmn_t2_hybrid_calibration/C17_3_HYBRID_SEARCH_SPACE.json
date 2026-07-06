@@ -1,0 +1,101 @@
+{
+  "formulas": [
+    {
+      "alpha": 0.6,
+      "delta": 0.4,
+      "family": "A_retriever_old_c12",
+      "name": "A_retriever_old_c12"
+    },
+    {
+      "family": "B_T2_only",
+      "gamma": 1.0,
+      "name": "B_T2_only"
+    },
+    {
+      "beta": 1.0,
+      "family": "C_BMN_map_only",
+      "name": "C_BMN_map_only"
+    },
+    {
+      "alpha": 0.45,
+      "beta": 0.55,
+      "family": "D_retriever_BMN",
+      "name": "D_retriever_BMN"
+    },
+    {
+      "alpha": 0.45,
+      "family": "E_retriever_T2",
+      "gamma": 0.55,
+      "name": "E_retriever_T2"
+    },
+    {
+      "beta": 0.55,
+      "family": "F_BMN_T2",
+      "gamma": 0.45,
+      "name": "F_BMN_T2"
+    },
+    {
+      "alpha": 0.25,
+      "beta": 0.25,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.5,
+      "name": "G_all_a0.25_b0.25_g0.5"
+    },
+    {
+      "alpha": 0.25,
+      "beta": 0.4,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.35,
+      "name": "G_all_a0.25_b0.4_g0.35"
+    },
+    {
+      "alpha": 0.25,
+      "beta": 0.55,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.2,
+      "name": "G_all_a0.25_b0.55_g0.2"
+    },
+    {
+      "alpha": 0.4,
+      "beta": 0.25,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.35,
+      "name": "G_all_a0.4_b0.25_g0.35"
+    },
+    {
+      "alpha": 0.4,
+      "beta": 0.4,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.2,
+      "name": "G_all_a0.4_b0.4_g0.2"
+    },
+    {
+      "alpha": 0.55,
+      "beta": 0.25,
+      "family": "G_retriever_BMN_T2",
+      "gamma": 0.2,
+      "name": "G_all_a0.55_b0.25_g0.2"
+    },
+    {
+      "alpha": 0.35,
+      "beta": 0.35,
+      "family": "H_qtype_gated",
+      "gamma": 0.3,
+      "name": "H_qtype_gated"
+    },
+    {
+      "alpha": 0.35,
+      "beta": 0.4,
+      "family": "I_duration_aware",
+      "gamma": 0.25,
+      "name": "I_duration_aware"
+    },
+    {
+      "alpha": 0.35,
+      "beta": 0.4,
+      "family": "J_safety_gated",
+      "gamma": 0.25,
+      "name": "J_safety_gated"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "bottleneck": "proposal_quality_ranking",
+  "official_val_used": false,
+  "stage": "C12-5R-C",
+  "variants": {
+    "c12_5_start_end_baseline_reeval": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.00460829493088,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.11520737327189,
+      "median_rank_of_best_iou_span": 224.0,
+      "ranked_top100_IoU@0.5": 63.38709677419355,
+      "ranked_top100_IoU@0.7": 42.995391705069125,
+      "ranked_top200_IoU@0.7": 57.07373271889401,
+      "ranked_top500_IoU@0.7": 74.53917050691244
+    },
+    "c12_5_teacher_distilled_baseline_reeval": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.05069124423963,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.06912442396313,
+      "median_rank_of_best_iou_span": 217.0,
+      "ranked_top100_IoU@0.5": 64.65437788018433,
+      "ranked_top100_IoU@0.7": 44.56221198156682,
+      "ranked_top200_IoU@0.7": 57.903225806451616,
+      "ranked_top500_IoU@0.7": 75.0
+    },
+    "r1_duration_conditioned_dense": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.02764976958525,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.06912442396313,
+      "median_rank_of_best_iou_span": 227.0,
+      "ranked_top100_IoU@0.5": 63.31797235023041,
+      "ranked_top100_IoU@0.7": 43.45622119815668,
+      "ranked_top200_IoU@0.7": 56.68202764976959,
+      "ranked_top500_IoU@0.7": 74.49308755760369
+    },
+    "r2_boundary_offset_refine": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.00460829493088,
+      "generated_pool_oracle_IoU@0.7_M1000": 84.97695852534562,
+      "median_rank_of_best_iou_span": 237.0,
+      "ranked_top100_IoU@0.5": 62.534562211981566,
+      "ranked_top100_IoU@0.7": 42.6036866359447,
+      "ranked_top200_IoU@0.7": 55.806451612903224,
+      "ranked_top500_IoU@0.7": 74.21658986175115
+    },
+    "r3_iou_calibrated_pq_ranker": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.02764976958525,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.06912442396313,
+      "median_rank_of_best_iou_span": 482.0,
+      "ranked_top100_IoU@0.5": 34.354838709677416,
+      "ranked_top100_IoU@0.7": 17.972350230414747,
+      "ranked_top200_IoU@0.7": 28.387096774193548,
+      "ranked_top500_IoU@0.7": 61.566820276497694
+    },
+    "r4_teacher_distilled_boundary_prior": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.05069124423963,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.06912442396313,
+      "median_rank_of_best_iou_span": 549.0,
+      "ranked_top100_IoU@0.5": 23.433179723502302,
+      "ranked_top100_IoU@0.7": 11.935483870967742,
+      "ranked_top200_IoU@0.7": 22.07373271889401,
+      "ranked_top500_IoU@0.7": 54.47004608294931
+    },
+    "r5_two_stage_generate_then_rank": {
+      "generated_pool_oracle_IoU@0.5_M1000": 97.02764976958525,
+      "generated_pool_oracle_IoU@0.7_M1000": 85.04608294930875,
+      "median_rank_of_best_iou_span": 478.5,
+      "ranked_top100_IoU@0.5": 34.44700460829493,
+      "ranked_top100_IoU@0.7": 18.04147465437788,
+      "ranked_top200_IoU@0.7": 28.68663594470046,
+      "ranked_top500_IoU@0.7": 61.935483870967744
+    }
+  }
+}

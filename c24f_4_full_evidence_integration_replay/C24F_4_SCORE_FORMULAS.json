@@ -1,0 +1,15 @@
+{
+  "A_C23_selected_baseline": "first-stage preserving formula",
+  "B_C19_C20_C21_hybrid": "first-stage preserving formula",
+  "C_C24_selected_B_C19_C21_hybrid": "first-stage preserving formula",
+  "D_BMN_raw": "first-stage preserving formula",
+  "E_BMN_calibrated": "first-stage preserving formula",
+  "F_Event_raw": "first-stage preserving formula",
+  "G_Event_calibrated": "first-stage preserving formula",
+  "H_T2_calibrated": "first-stage preserving formula",
+  "I_BMN_event_consistency": "first-stage preserving formula",
+  "J_BMN_T2_consistency": "first-stage preserving formula",
+  "K_event_T2": "first-stage preserving formula",
+  "L_all_evidence_wrong_risk_penalty": "first-stage preserving formula",
+  "M_all_evidence_no_regression_guard": "first-stage preserving formula"
+}

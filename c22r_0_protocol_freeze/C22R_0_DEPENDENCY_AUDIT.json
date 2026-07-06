@@ -1,0 +1,100 @@
+{
+  "c12_split_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "readable": true,
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31",
+    "size_bytes": 1045
+  },
+  "c22_1_feature_event": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_1_feature_event_audit/C22_1_FEATURE_EVENT_DECISION.json",
+    "readable": true,
+    "sha256": "3a4a33885bb7f253b578cc399363570d229b42f3b24b4b75c965cae8d48fcdee",
+    "size_bytes": 9159
+  },
+  "c22_2_retriever_decision_actual": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_2_partial_relevance_retriever/C22_2_PARTIAL_RETRIEVER_DECISION.json",
+    "readable": true,
+    "sha256": "8dcc18013e4f1588f275d7fca44a2c1822c8df4903fab413fe14ac2eba005b15",
+    "size_bytes": 5860
+  },
+  "c22_2_retriever_decision_instruction_alias": {
+    "exists": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_2_partial_relevance_retriever/C22_2_RETRIEVER_DECISION.json",
+    "readable": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "c22_2_retriever_results": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_2_partial_relevance_retriever/C22_2_RETRIEVER_RESULTS.json",
+    "readable": true,
+    "sha256": "8dcc18013e4f1588f275d7fca44a2c1822c8df4903fab413fe14ac2eba005b15",
+    "size_bytes": 5860
+  },
+  "c22_3_event_encoder": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_3_event_aware_encoder/C22_3_EVENT_ENCODER_DECISION.json",
+    "readable": true,
+    "sha256": "68cd6e96ed1a4dddf6b42e85cefefc1806bb2c6b8d9514b669dbcc2dbceafa82",
+    "size_bytes": 1476
+  },
+  "c22_4_joint": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_4_joint_retriever_localizer_bmn/C22_4_JOINT_DECISION.json",
+    "readable": true,
+    "sha256": "bb2b4e2bd1b73cdf935f85c6190e0280b81ae3d47565d96b14f3de4bae885ab3",
+    "size_bytes": 4240
+  },
+  "c22_5_robustness": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_5_robustness_ablation_onelook/C22_5_ROBUSTNESS_DECISION.json",
+    "readable": true,
+    "sha256": "46f069f5880f4bb9fe141fe0ffec0ef55e01cea655052e1243c1a9ac1f80354a",
+    "size_bytes": 5622
+  },
+  "c22_6_final": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_6_final_decision/C22_6_FINAL_DECISION.json",
+    "readable": true,
+    "sha256": "c038fdfabe16dc7f15cf1e97d14bf229d4e71356f17013aa24c1a334a945ddae",
+    "size_bytes": 4335
+  },
+  "c22_6_next": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_6_final_decision/C22_6_NEXT_STEP_DECISION.json",
+    "readable": true,
+    "sha256": "b3530f5794514a007c9ac3a5c59f29b2b19780a3db2fdc282d8cdd7cefefc9e7",
+    "size_bytes": 259
+  },
+  "c22_local_checkpoint_diagnostic_only": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c22_partial_event_retriever_medium_seed2026.pt",
+    "readable": true,
+    "sha256": "e24ce038ecf72bd7bfa3aae2fbf04e31f588cf3aa53f11e13b4e909a7be0ffb5",
+    "size_bytes": 20559829
+  },
+  "first_stage_calib_holdout_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_holdout_top128.pkl",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 2068177
+  },
+  "first_stage_calib_select_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_select_top128.pkl",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 2067971
+  },
+  "first_stage_train_fit_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 170397963
+  }
+}

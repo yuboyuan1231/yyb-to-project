@@ -1,0 +1,5 @@
+# C24-0 Protocol Freeze
+
+Status: `C24_PROTOCOL_READY`.
+
+Base C23 final: `C23_NEED_STRONGER_BMN_EVENT_INTEGRATION`.

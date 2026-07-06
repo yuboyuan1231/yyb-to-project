@@ -1,0 +1,9 @@
+{
+  "best_iou_span_mean_rank": 363.172,
+  "best_iou_span_median_rank": 291.0,
+  "best_iou_span_top100_rate": 23.775,
+  "missing_hidden_queries": 0,
+  "official_val_used": false,
+  "query_count": 12000,
+  "span_rows_sampled": 876316
+}

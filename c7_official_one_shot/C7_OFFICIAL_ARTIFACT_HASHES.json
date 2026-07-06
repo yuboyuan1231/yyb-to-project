@@ -1,0 +1,26 @@
+{
+  "raw_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_official_one_shot/C7_OFFICIAL_PREDICTION_RAW.json",
+    "sha256": "df1e40a2591ea82d094d9fcc412b6b8fc982ee27d322430a7311768174620b0f"
+  },
+  "nms_prediction": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_official_one_shot/C7_OFFICIAL_PREDICTION_NMS.json",
+    "sha256": "98725b0a204d833db42d8aaf8ca28fdf38eb818b0f08654be49bc3f0e41b11be"
+  },
+  "metrics": {
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_official_one_shot/C7_OFFICIAL_METRICS.json",
+    "sha256": "ae3edfbba6cecaaf92ca2bdac2dc59db961b12769d12b665a6189d1f70f5358c"
+  },
+  "primary_checkpoint": {
+    "path": "c7_c6_region_lite_audit/C7_C6_B_REGION_LITE_FINAL_MODEL.pt",
+    "sha256": "26de62547ab6190dc08c9bdbe34366c16e6a9662a4c2d9597a1ac223433c9f51"
+  },
+  "evaluator": {
+    "path": "standalone_eval/eval.py",
+    "sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a"
+  },
+  "nms": {
+    "path": "utils/inference_utils.py",
+    "sha256": "f490e62ebd98c1bb6d0054d147a7df5a5ead508cea5b26be82d1cd8ac88619cd"
+  }
+}

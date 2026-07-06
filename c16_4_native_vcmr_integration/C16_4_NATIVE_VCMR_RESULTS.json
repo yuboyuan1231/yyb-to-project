@@ -1,0 +1,65 @@
+{
+  "best_variant": "B7_full_query_aware_rankloss_map_seed2026",
+  "metrics": {
+    "C12_5T_T2_localizer_baseline": {
+      "IoU@0.5_top100": 81.8,
+      "IoU@0.5_top50": 68.4,
+      "IoU@0.5_top500": 95.8,
+      "IoU@0.7_top100": 56.4,
+      "IoU@0.7_top50": 39.3,
+      "IoU@0.7_top500": 82.5,
+      "best_IoU_span_median_rank": 98.5,
+      "best_IoU_span_top100_promotion_rate": 50.4,
+      "best_IoU_span_top500_promotion_rate": 100.0,
+      "best_IoU_span_top50_promotion_rate": 31.0,
+      "duplicate_span_count": 0,
+      "false_positive_high_score_rate": 86.2,
+      "invalid_span_count": 0,
+      "median_best_iou_top100": 0.7351665491110473,
+      "median_best_iou_top50": 0.6252650084515579,
+      "median_best_iou_top500": 0.86531721203903,
+      "query_count": 1000,
+      "top1_mean_iou": 0.09379279016483276
+    },
+    "C15_2_B3_sample_baseline": {
+      "IoU@0.5_top100": 89.0,
+      "IoU@0.5_top50": 69.33333333333333,
+      "IoU@0.7_top100": 72.0,
+      "IoU@0.7_top50": 51.666666666666664,
+      "best_IoU_span_top100_promotion_rate": 87.0,
+      "best_IoU_span_top50_promotion_rate": 57.0,
+      "median_best_iou_top100": 0.7768619745897949,
+      "query_count": 300,
+      "top1_mean_iou": 0.10130550012683644
+    },
+    "C16_BMN_map_only": {
+      "IoU@0.5_top100": 93.2,
+      "IoU@0.5_top50": 74.8,
+      "IoU@0.5_top500": 97.6,
+      "IoU@0.7_top100": 76.0,
+      "IoU@0.7_top50": 53.5,
+      "IoU@0.7_top500": 84.6,
+      "best_IoU_span_median_rank": 42.0,
+      "best_IoU_span_top100_promotion_rate": 84.3,
+      "best_IoU_span_top500_promotion_rate": 100.0,
+      "best_IoU_span_top50_promotion_rate": 57.2,
+      "duplicate_span_count": 0,
+      "false_positive_high_score_rate": 83.8,
+      "invalid_span_count": 0,
+      "median_best_iou_top100": 0.7940317704142585,
+      "median_best_iou_top50": 0.7261827611186363,
+      "median_best_iou_top500": 0.8035924309849212,
+      "query_count": 1000,
+      "top1_mean_iou": 0.10576664426949413
+    },
+    "C16_BMN_plus_retriever_replay_proxy": {
+      "joint_IoU@0.7_top100": null,
+      "note": "full train-only VCMR evaluator was not run; C16-4 remains a localizer-only integration proxy"
+    },
+    "T2_still_dominates": false
+  },
+  "mode": "medium",
+  "official_val_used": false,
+  "stage": "C16-4",
+  "status": "C16_NATIVE_INTEGRATION_LOCALIZER_ONLY"
+}

@@ -1,0 +1,7 @@
+{
+  "no_post_onelook_adjustment": true,
+  "pseudo_official_not_used_for_selection": true,
+  "pseudo_one_look_executed": false,
+  "reason": "C22R is a sanity repair and does not seek official readiness.",
+  "selected_model_frozen_before_onelook": true
+}

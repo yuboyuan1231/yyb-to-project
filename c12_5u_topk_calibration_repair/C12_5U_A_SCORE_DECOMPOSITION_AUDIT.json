@@ -1,0 +1,682 @@
+{
+  "answer": "T2 is an effective topK selector. Spearman is negative globally and top500, but top100 is only weakly positive near zero, so calibration remains unusable even though topK promotion works.",
+  "best_iou_rank_mean": 194.03755760368662,
+  "best_iou_rank_median": 119.0,
+  "best_iou_top100_rate": 45.87557603686636,
+  "best_iou_top10_rate": 9.67741935483871,
+  "best_iou_top50_rate": 29.493087557603687,
+  "duration_spearman": {
+    "long": -0.3229349567006851,
+    "medium": -0.198415537441486,
+    "short": -0.21534637388511318
+  },
+  "global_spearman": -0.1930954945834624,
+  "high_score_low_iou_case_count": 200,
+  "high_score_low_iou_cases": [
+    {
+      "desc_id": 365,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.778528094291687
+    },
+    {
+      "desc_id": 365,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.7477537393569946
+    },
+    {
+      "desc_id": 366,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8826979398727417
+    },
+    {
+      "desc_id": 366,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8359765410423279
+    },
+    {
+      "desc_id": 367,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8577654957771301
+    },
+    {
+      "desc_id": 367,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8199204802513123
+    },
+    {
+      "desc_id": 368,
+      "duration_bucket": "long",
+      "iou": 0.189400315284729,
+      "query_type": "vt",
+      "rank": 1,
+      "score": 0.9107354283332825
+    },
+    {
+      "desc_id": 368,
+      "duration_bucket": "long",
+      "iou": 0.12626688182353973,
+      "query_type": "vt",
+      "rank": 2,
+      "score": 0.8780661225318909
+    },
+    {
+      "desc_id": 369,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 1,
+      "score": 0.9363940358161926
+    },
+    {
+      "desc_id": 369,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 2,
+      "score": 0.9236080050468445
+    },
+    {
+      "desc_id": 690,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8895361423492432
+    },
+    {
+      "desc_id": 690,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8820505142211914
+    },
+    {
+      "desc_id": 691,
+      "duration_bucket": "medium",
+      "iou": 0.10558640211820602,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.9610416889190674
+    },
+    {
+      "desc_id": 691,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.9477769732475281
+    },
+    {
+      "desc_id": 692,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.9291867613792419
+    },
+    {
+      "desc_id": 692,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.9249501824378967
+    },
+    {
+      "desc_id": 693,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "vt",
+      "rank": 1,
+      "score": 0.9225115776062012
+    },
+    {
+      "desc_id": 693,
+      "duration_bucket": "short",
+      "iou": 0.035326357930898666,
+      "query_type": "vt",
+      "rank": 2,
+      "score": 0.9082730412483215
+    },
+    {
+      "desc_id": 694,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "vt",
+      "rank": 1,
+      "score": 0.9395152926445007
+    },
+    {
+      "desc_id": 694,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "vt",
+      "rank": 2,
+      "score": 0.9109946489334106
+    },
+    {
+      "desc_id": 1135,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8793089985847473
+    },
+    {
+      "desc_id": 1135,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8488405346870422
+    },
+    {
+      "desc_id": 1136,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8614513874053955
+    },
+    {
+      "desc_id": 1136,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8380550146102905
+    },
+    {
+      "desc_id": 1137,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8762600421905518
+    },
+    {
+      "desc_id": 1137,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8756181001663208
+    },
+    {
+      "desc_id": 1138,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8579121232032776
+    },
+    {
+      "desc_id": 1138,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 3,
+      "score": 0.8538424968719482
+    },
+    {
+      "desc_id": 1139,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 1,
+      "score": 0.9011585116386414
+    },
+    {
+      "desc_id": 1139,
+      "duration_bucket": "medium",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 2,
+      "score": 0.8740919232368469
+    },
+    {
+      "desc_id": 1175,
+      "duration_bucket": "long",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8207220435142517
+    },
+    {
+      "desc_id": 1175,
+      "duration_bucket": "long",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8160704970359802
+    },
+    {
+      "desc_id": 1176,
+      "duration_bucket": "long",
+      "iou": 0.07500000298023224,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8680723905563354
+    },
+    {
+      "desc_id": 1176,
+      "duration_bucket": "long",
+      "iou": 0.07500000298023224,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.8383448719978333
+    },
+    {
+      "desc_id": 1177,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.8135066628456116
+    },
+    {
+      "desc_id": 1177,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.7884612083435059
+    },
+    {
+      "desc_id": 1178,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 1,
+      "score": 0.7943077683448792
+    },
+    {
+      "desc_id": 1178,
+      "duration_bucket": "short",
+      "iou": 0.0,
+      "query_type": "v",
+      "rank": 2,
+      "score": 0.7852984070777893
+    },
+    {
+      "desc_id": 1179,
+      "duration_bucket": "long",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 1,
+      "score": 0.8665082454681396
+    },
+    {
+      "desc_id": 1179,
+      "duration_bucket": "long",
+      "iou": 0.0,
+      "query_type": "t",
+      "rank": 2,
+      "score": 0.8636255264282227
+    }
+  ],
+  "low_score_high_iou_case_count": 200,
+  "low_score_high_iou_cases": [
+    {
+      "desc_id": 368,
+      "duration_bucket": "long",
+      "iou": 0.8838681578636169,
+      "query_type": "vt",
+      "rank": 782,
+      "score": 0.09146424382925034
+    },
+    {
+      "desc_id": 368,
+      "duration_bucket": "long",
+      "iou": 0.7688592672348022,
+      "query_type": "vt",
+      "rank": 814,
+      "score": 0.08579211682081223
+    },
+    {
+      "desc_id": 690,
+      "duration_bucket": "medium",
+      "iou": 0.7284013032913208,
+      "query_type": "v",
+      "rank": 796,
+      "score": 0.03651713579893112
+    },
+    {
+      "desc_id": 1175,
+      "duration_bucket": "long",
+      "iou": 0.7289036512374878,
+      "query_type": "v",
+      "rank": 711,
+      "score": 0.06551109999418259
+    },
+    {
+      "desc_id": 1175,
+      "duration_bucket": "long",
+      "iou": 0.8282179832458496,
+      "query_type": "v",
+      "rank": 729,
+      "score": 0.0616690069437027
+    },
+    {
+      "desc_id": 1176,
+      "duration_bucket": "long",
+      "iou": 0.8500000238418579,
+      "query_type": "v",
+      "rank": 616,
+      "score": 0.0736127719283104
+    },
+    {
+      "desc_id": 1176,
+      "duration_bucket": "long",
+      "iou": 0.7749999761581421,
+      "query_type": "v",
+      "rank": 619,
+      "score": 0.07333987951278687
+    },
+    {
+      "desc_id": 1179,
+      "duration_bucket": "long",
+      "iou": 0.9084989428520203,
+      "query_type": "t",
+      "rank": 640,
+      "score": 0.14177583158016205
+    },
+    {
+      "desc_id": 1183,
+      "duration_bucket": "long",
+      "iou": 0.758057713508606,
+      "query_type": "vt",
+      "rank": 764,
+      "score": 0.10543736070394516
+    },
+    {
+      "desc_id": 1183,
+      "duration_bucket": "long",
+      "iou": 0.7417382597923279,
+      "query_type": "vt",
+      "rank": 768,
+      "score": 0.10392297804355621
+    },
+    {
+      "desc_id": 2750,
+      "duration_bucket": "long",
+      "iou": 0.7300001382827759,
+      "query_type": "v",
+      "rank": 646,
+      "score": 0.08025480806827545
+    },
+    {
+      "desc_id": 2750,
+      "duration_bucket": "long",
+      "iou": 0.7631819248199463,
+      "query_type": "v",
+      "rank": 647,
+      "score": 0.08011205494403839
+    },
+    {
+      "desc_id": 2753,
+      "duration_bucket": "medium",
+      "iou": 0.703993022441864,
+      "query_type": "t",
+      "rank": 694,
+      "score": 0.131813645362854
+    },
+    {
+      "desc_id": 2753,
+      "duration_bucket": "medium",
+      "iou": 0.7640206813812256,
+      "query_type": "t",
+      "rank": 713,
+      "score": 0.12507516145706177
+    },
+    {
+      "desc_id": 2803,
+      "duration_bucket": "medium",
+      "iou": 0.7891710996627808,
+      "query_type": "t",
+      "rank": 698,
+      "score": 0.15364733338356018
+    },
+    {
+      "desc_id": 2828,
+      "duration_bucket": "medium",
+      "iou": 0.7424796223640442,
+      "query_type": "v",
+      "rank": 617,
+      "score": 0.12615758180618286
+    },
+    {
+      "desc_id": 2828,
+      "duration_bucket": "medium",
+      "iou": 0.8662261962890625,
+      "query_type": "v",
+      "rank": 686,
+      "score": 0.10635897517204285
+    },
+    {
+      "desc_id": 2829,
+      "duration_bucket": "long",
+      "iou": 0.7101706266403198,
+      "query_type": "v",
+      "rank": 620,
+      "score": 0.05430418998003006
+    },
+    {
+      "desc_id": 2829,
+      "duration_bucket": "long",
+      "iou": 0.9181771874427795,
+      "query_type": "v",
+      "rank": 621,
+      "score": 0.054223719984292984
+    },
+    {
+      "desc_id": 2969,
+      "duration_bucket": "medium",
+      "iou": 0.7575718760490417,
+      "query_type": "vt",
+      "rank": 739,
+      "score": 0.07297278195619583
+    },
+    {
+      "desc_id": 2969,
+      "duration_bucket": "medium",
+      "iou": 0.7811395525932312,
+      "query_type": "vt",
+      "rank": 785,
+      "score": 0.05406682938337326
+    },
+    {
+      "desc_id": 2970,
+      "duration_bucket": "short",
+      "iou": 0.7129226922988892,
+      "query_type": "v",
+      "rank": 816,
+      "score": 0.02822141908109188
+    },
+    {
+      "desc_id": 3436,
+      "duration_bucket": "long",
+      "iou": 0.7084820866584778,
+      "query_type": "v",
+      "rank": 663,
+      "score": 0.18505419790744781
+    },
+    {
+      "desc_id": 3436,
+      "duration_bucket": "long",
+      "iou": 0.833508312702179,
+      "query_type": "v",
+      "rank": 707,
+      "score": 0.15499161183834076
+    },
+    {
+      "desc_id": 3438,
+      "duration_bucket": "long",
+      "iou": 0.7728390097618103,
+      "query_type": "v",
+      "rank": 649,
+      "score": 0.23380790650844574
+    },
+    {
+      "desc_id": 3438,
+      "duration_bucket": "long",
+      "iou": 0.70775306224823,
+      "query_type": "v",
+      "rank": 676,
+      "score": 0.2105422168970108
+    },
+    {
+      "desc_id": 3605,
+      "duration_bucket": "long",
+      "iou": 0.767515242099762,
+      "query_type": "v",
+      "rank": 701,
+      "score": 0.05050557479262352
+    },
+    {
+      "desc_id": 3605,
+      "duration_bucket": "long",
+      "iou": 0.8826425075531006,
+      "query_type": "v",
+      "rank": 706,
+      "score": 0.05016828700900078
+    },
+    {
+      "desc_id": 3607,
+      "duration_bucket": "long",
+      "iou": 0.8580867648124695,
+      "query_type": "v",
+      "rank": 651,
+      "score": 0.07601550966501236
+    },
+    {
+      "desc_id": 3607,
+      "duration_bucket": "long",
+      "iou": 0.7400057315826416,
+      "query_type": "v",
+      "rank": 665,
+      "score": 0.072688989341259
+    },
+    {
+      "desc_id": 4110,
+      "duration_bucket": "long",
+      "iou": 0.8640474081039429,
+      "query_type": "v",
+      "rank": 682,
+      "score": 0.08892563730478287
+    },
+    {
+      "desc_id": 4110,
+      "duration_bucket": "long",
+      "iou": 0.7926188111305237,
+      "query_type": "v",
+      "rank": 727,
+      "score": 0.07907145470380783
+    },
+    {
+      "desc_id": 4303,
+      "duration_bucket": "long",
+      "iou": 0.7915741205215454,
+      "query_type": "v",
+      "rank": 582,
+      "score": 0.046067532151937485
+    },
+    {
+      "desc_id": 4303,
+      "duration_bucket": "long",
+      "iou": 0.7018364667892456,
+      "query_type": "v",
+      "rank": 596,
+      "score": 0.04352293908596039
+    },
+    {
+      "desc_id": 4304,
+      "duration_bucket": "medium",
+      "iou": 0.7602460384368896,
+      "query_type": "vt",
+      "rank": 556,
+      "score": 0.10334473848342896
+    },
+    {
+      "desc_id": 4304,
+      "duration_bucket": "medium",
+      "iou": 0.7313597798347473,
+      "query_type": "vt",
+      "rank": 559,
+      "score": 0.101424440741539
+    },
+    {
+      "desc_id": 4515,
+      "duration_bucket": "medium",
+      "iou": 0.7007775902748108,
+      "query_type": "v",
+      "rank": 799,
+      "score": 0.052187833935022354
+    },
+    {
+      "desc_id": 4515,
+      "duration_bucket": "medium",
+      "iou": 0.7883748412132263,
+      "query_type": "v",
+      "rank": 807,
+      "score": 0.04855445399880409
+    },
+    {
+      "desc_id": 4518,
+      "duration_bucket": "medium",
+      "iou": 0.767880380153656,
+      "query_type": "v",
+      "rank": 790,
+      "score": 0.06994009017944336
+    },
+    {
+      "desc_id": 4815,
+      "duration_bucket": "long",
+      "iou": 0.7088037729263306,
+      "query_type": "v",
+      "rank": 753,
+      "score": 0.1022820696234703
+    }
+  ],
+  "official_val_used": false,
+  "query_type_spearman": {
+    "t": -0.1487189531946739,
+    "v": -0.217565957559689,
+    "vt": -0.1738461015800601
+  },
+  "stage": "C12-5U-A",
+  "status": "C12_5U_SCORE_DECOMPOSITION_COMPLETE_FULL",
+  "top100_iou_distribution": {
+    "mean": 0.06626607570196676,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 0.0
+  },
+  "top100_spearman": 0.033238826444936434,
+  "top500_spearman": -0.1090988223901011,
+  "top50_iou_distribution": {
+    "mean": 0.0705011702276451,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 0.0
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "curves": [
+    {
+      "epoch": 1,
+      "loss": 1.3386766600621243,
+      "quality_auc07": 0.70325,
+      "quality_spearman": 0.14680838045925335,
+      "select_spearman": 0.1487751266332841
+    },
+    {
+      "epoch": 2,
+      "loss": 1.2895516144273182,
+      "quality_auc07": 0.770565,
+      "quality_spearman": 0.2330859700618873,
+      "select_spearman": 0.18214828451657628
+    },
+    {
+      "epoch": 3,
+      "loss": 1.2732420456161102,
+      "quality_auc07": 0.79175,
+      "quality_spearman": 0.25517817730654574,
+      "select_spearman": 0.2052552379840427
+    },
+    {
+      "epoch": 4,
+      "loss": 1.264146509680897,
+      "quality_auc07": 0.78104,
+      "quality_spearman": 0.24372778544022464,
+      "select_spearman": 0.19202944817318232
+    }
+  ],
+  "feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_5u_two_head_ranker.pt",
+  "sha256": "18b889cc3cbff1d954ee00521382b2e98a613521b4cfb476969069fe8119de90",
+  "variant": "U1_two_head"
+}

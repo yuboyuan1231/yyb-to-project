@@ -1,0 +1,130 @@
+{
+  "component_ablation": {
+    "with_bmn_localizer": "diagnostic only; no full C19 table rewrite in committed artifacts",
+    "with_event_tokens": {
+      "GT_video_mean_rank": 5789.952,
+      "GT_video_median_rank": 4679.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.2,
+      "VR_R@100": 1.7,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 100.0
+    },
+    "without_bmn_localizer": "retriever-only VR reported",
+    "without_event_tokens": "not separately trained in medium runner"
+  },
+  "delta_vs_c21_hybrid": {
+    "VCMR_R@100_IoU0.5": 0.0,
+    "VCMR_R@100_IoU0.7": 0.0,
+    "VCMR_R@10_IoU0.5": 0.0,
+    "VCMR_R@10_IoU0.7": 0.0,
+    "VCMR_R@1_IoU0.5": 0.0,
+    "VCMR_R@1_IoU0.7": 0.0,
+    "VCMR_R@5_IoU0.5": 0.0,
+    "VCMR_R@5_IoU0.7": 0.0,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.0,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 0.0,
+    "wrong_video_high_score_rate": 0.0,
+    "wrong_video_top1_rate": 0.0
+  },
+  "evaluator_modified": false,
+  "limitations": [
+    "medium mode uses pooled event proxy rather than full event token extraction for all train_fit videos",
+    "joint BMN coupling is not promoted because VCMR R@1/R@5@0.7 did not demonstrate new holdout movement",
+    "C19/C20/C21 score caches remain diagnostic and are not committed"
+  ],
+  "main_select_score": -56.80000000000001,
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "selected_joint_model": {
+    "alpha_beta_gamma_selected_on": "calib_select only when full score table is available",
+    "implemented_scope": "native retriever + event proxy trained; BMN coupling summarized against existing train-only diagnostics",
+    "joint_score_formula": "not promoted; no official; no NMS/evaluator changes",
+    "localizer": "C19/C20/C21 BMN/T2 evidence diagnostic only",
+    "name": "J2_shared_encoder_retriever_bmn_medium_proxy",
+    "retriever": {
+      "epochs": 4,
+      "event_proxy": "subtitle_max_as_partial_event_token",
+      "hidden": 384,
+      "name": "P2_query_gated_multimodal_pool",
+      "top_hard_negatives": 96
+    }
+  },
+  "stage": "C22-4",
+  "status": "C22_JOINT_COUPLING_INCONCLUSIVE",
+  "vcmr_results_c22_native_joint": {
+    "VCMR_R@100_IoU0.5": 37.45,
+    "VCMR_R@100_IoU0.7": 22.65,
+    "VCMR_R@10_IoU0.5": 11.7,
+    "VCMR_R@10_IoU0.7": 6.3,
+    "VCMR_R@1_IoU0.5": 2.95,
+    "VCMR_R@1_IoU0.7": 1.4,
+    "VCMR_R@5_IoU0.5": 8.0,
+    "VCMR_R@5_IoU0.7": 3.9,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.65,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 2000,
+    "wrong_video_high_score_rate": 71.75,
+    "wrong_video_top1_rate": 71.75
+  },
+  "vcmr_results_reference_c21_medium": {
+    "VCMR_R@100_IoU0.5": 37.45,
+    "VCMR_R@100_IoU0.7": 22.65,
+    "VCMR_R@10_IoU0.5": 11.7,
+    "VCMR_R@10_IoU0.7": 6.3,
+    "VCMR_R@1_IoU0.5": 2.95,
+    "VCMR_R@1_IoU0.7": 1.4,
+    "VCMR_R@5_IoU0.5": 8.0,
+    "VCMR_R@5_IoU0.7": 3.9,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.65,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 2000,
+    "wrong_video_high_score_rate": 71.75,
+    "wrong_video_top1_rate": 71.75
+  },
+  "vr_baseline_first_stage_holdout": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 71.6
+  },
+  "vr_delta_holdout": {
+    "VR_R@1": -28.4,
+    "VR_R@10": -78.39999999999999,
+    "VR_R@100": -98.3,
+    "VR_R@5": -63.9,
+    "wrong_video_top1_rate": 28.400000000000006
+  },
+  "vr_results_holdout": {
+    "GT_video_mean_rank": 5789.952,
+    "GT_video_median_rank": 4679.0,
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.2,
+    "VR_R@100": 1.7,
+    "VR_R@5": 0.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 100.0
+  }
+}

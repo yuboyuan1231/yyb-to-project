@@ -1,0 +1,10 @@
+{
+  "duplicate_candidate_overwrite": false,
+  "join_keys": [
+    "query_id",
+    "video_id"
+  ],
+  "missing_score_count": 0,
+  "nan_inf_score_count": 0,
+  "position_based_join_used": false
+}

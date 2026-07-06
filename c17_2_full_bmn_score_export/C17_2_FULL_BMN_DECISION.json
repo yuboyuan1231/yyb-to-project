@@ -1,0 +1,140 @@
+{
+  "calib_select_vs_calib_holdout_distribution_shift": {
+    "bmn_mean_delta": 0.007833568952261116,
+    "t2_mean_delta": -0.004708688900188607
+  },
+  "duplicate_candidate_count": 0,
+  "invalid_span_count": 0,
+  "medium_topk_policy": "medium exports retriever top100 videos",
+  "missing_bmn_score_count": 6890828,
+  "missing_t2_score_count": 7202656,
+  "mode": "medium",
+  "nan_inf_count": 0,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "row_count": 22779481,
+  "score_distribution_by_duration_bucket": {
+    "bmn_final_score": {
+      "long": 0.366730574978517,
+      "medium": 0.2879667464833165,
+      "short": 0.24911782577003844
+    },
+    "t2_score": {
+      "long": 0.7414911334771036,
+      "medium": 0.7396743267368687,
+      "short": 0.7303350508599075
+    }
+  },
+  "score_distribution_by_query_type": {
+    "bmn_final_score": {
+      "t": 0.32507084815389087,
+      "v": 0.2564871940827913,
+      "vt": 0.3202177292144099
+    },
+    "t2_score": {
+      "t": 0.8033077034603877,
+      "v": 0.726034107787421,
+      "vt": 0.7424530469040425
+    }
+  },
+  "score_distribution_by_split": {
+    "('bmn_final_score', '25%')": {
+      "calib_holdout": 0.1815381944179535,
+      "calib_select": 0.17937494814395905
+    },
+    "('bmn_final_score', '50%')": {
+      "calib_holdout": 0.240921750664711,
+      "calib_select": 0.23632048070430756
+    },
+    "('bmn_final_score', '75%')": {
+      "calib_holdout": 0.3368934094905853,
+      "calib_select": 0.32687243074178696
+    },
+    "('bmn_final_score', 'count')": {
+      "calib_holdout": 7947181.0,
+      "calib_select": 7941472.0
+    },
+    "('bmn_final_score', 'max')": {
+      "calib_holdout": 1.1813819408416748,
+      "calib_select": 1.1689280271530151
+    },
+    "('bmn_final_score', 'mean')": {
+      "calib_holdout": 0.2775899681603363,
+      "calib_select": 0.2697563992080752
+    },
+    "('bmn_final_score', 'min')": {
+      "calib_holdout": 0.06173597648739815,
+      "calib_select": 0.06449200212955475
+    },
+    "('bmn_final_score', 'std')": {
+      "calib_holdout": 0.1338035580344057,
+      "calib_select": 0.1256862552094639
+    },
+    "('retriever_score', '25%')": {
+      "calib_holdout": 3459.7529296875,
+      "calib_select": 3421.490966796875
+    },
+    "('retriever_score', '50%')": {
+      "calib_holdout": 5850.69384765625,
+      "calib_select": 5739.818359375
+    },
+    "('retriever_score', '75%')": {
+      "calib_holdout": 10916.69921875,
+      "calib_select": 10614.068359375
+    },
+    "('retriever_score', 'count')": {
+      "calib_holdout": 11390153.0,
+      "calib_select": 11389328.0
+    },
+    "('retriever_score', 'max')": {
+      "calib_holdout": 625861.125,
+      "calib_select": 1114909.75
+    },
+    "('retriever_score', 'mean')": {
+      "calib_holdout": 10662.373757621343,
+      "calib_select": 10071.74067579724
+    },
+    "('retriever_score', 'min')": {
+      "calib_holdout": 920.3330688476562,
+      "calib_select": 828.714599609375
+    },
+    "('retriever_score', 'std')": {
+      "calib_holdout": 16980.705771134388,
+      "calib_select": 16308.462048719633
+    },
+    "('t2_score', '25%')": {
+      "calib_holdout": 0.6821711659431458,
+      "calib_select": 0.6857364475727081
+    },
+    "('t2_score', '50%')": {
+      "calib_holdout": 0.7338265776634216,
+      "calib_select": 0.7384894490242004
+    },
+    "('t2_score', '75%')": {
+      "calib_holdout": 0.7885658144950867,
+      "calib_select": 0.794219434261322
+    },
+    "('t2_score', 'count')": {
+      "calib_holdout": 7806982.0,
+      "calib_select": 7769843.0
+    },
+    "('t2_score', 'max')": {
+      "calib_holdout": 0.9967945218086243,
+      "calib_select": 0.9984076619148254
+    },
+    "('t2_score', 'mean')": {
+      "calib_holdout": 0.7322398441741618,
+      "calib_select": 0.7369485330743504
+    },
+    "('t2_score', 'min')": {
+      "calib_holdout": 0.002245354698970914,
+      "calib_select": 0.0041112350299954414
+    },
+    "('t2_score', 'std')": {
+      "calib_holdout": 0.09094666610983981,
+      "calib_select": 0.09195009145403951
+    }
+  },
+  "stage": "C17-2",
+  "status": "C17_FULL_BMN_SCORE_PARTIAL"
+}

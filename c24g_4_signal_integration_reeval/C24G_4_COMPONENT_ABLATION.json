@@ -1,0 +1,14 @@
+{
+  "A_C23_baseline": {
+    "status": "reported_from_prior"
+  },
+  "B_C19_C21_hybrid": {
+    "status": "reported_from_partial_table"
+  },
+  "D_event_only": {
+    "status": "diagnostic_only"
+  },
+  "K_all_evidence_no_regression_guard": {
+    "status": "not_selected_because_bmn_t2_train_fit_missing"
+  }
+}

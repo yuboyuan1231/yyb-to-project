@@ -1,0 +1,14 @@
+{
+  "features": [
+    "z_retriever",
+    "z_bmn",
+    "z_t2",
+    "z_hybrid",
+    "event_proxy",
+    "bmn_t2_conflict",
+    "duration/query one-hot"
+  ],
+  "label_features_forbidden": true,
+  "proxy_training_used": "calib_select deterministic probe selection",
+  "train_fit_available": false
+}

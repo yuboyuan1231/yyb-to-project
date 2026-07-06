@@ -1,0 +1,362 @@
+{
+  "evaluator_modified": false,
+  "event_sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_1_feature_event_audit/C22_1_EVENT_SAMPLE.parquet",
+  "event_sample_rows": 80,
+  "event_segmentation": {
+    "implemented_for_sample": [
+      "E0_fixed_windows"
+    ],
+    "selected_for_c22_medium_training": "pooled partial-event proxy: subtitle max/event token from existing feature cache plus visual mean",
+    "variants": {
+      "E0_fixed_windows": "uniform 8 windows over release clip grid",
+      "E1_cosine_change": "planned from cosine change points on existing release features",
+      "E2_subtitle_boundary": "planned from subtitle feature changes and zero/low-motion gaps",
+      "E3_multimodal_change": "planned from subtitle and visual change-point agreement",
+      "E4_hybrid": "selected future variant when full train_fit event extraction is run"
+    }
+  },
+  "feature_sources": {
+    "new_feature_downloads": false,
+    "pooled_cache_paths": {
+      "query_all": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+      "subtitle_mean_max": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+      "visual_mean": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz"
+    },
+    "query_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+    "raw_video_available": false,
+    "subtitle_roberta_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+    "visual_resnet_slowfast_feature": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5"
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "not_full_trainfit_protocol": true,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "schema_audit": {
+    "feature_release": "TVR release ResNet+SlowFast visual and RoBERTa subtitle/query",
+    "missing_feature_sample": [],
+    "query_embedding_dim": 768,
+    "raw_clip_feature_sample": [
+      {
+        "aligned_clip_count": 38,
+        "duration": 56.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          38,
+          768
+        ],
+        "video_id": "friends_s01e22_seg02_clip_02",
+        "visual_dim": 4352,
+        "visual_shape": [
+          38,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 50,
+        "duration": 78.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          50,
+          768
+        ],
+        "video_id": "s05e09_seg01_clip_01",
+        "visual_dim": 4352,
+        "visual_shape": [
+          50,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 42,
+        "duration": 62.04,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          42,
+          768
+        ],
+        "video_id": "s06e02_seg02_clip_03",
+        "visual_dim": 4352,
+        "visual_shape": [
+          42,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 45,
+        "duration": 67.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          45,
+          768
+        ],
+        "video_id": "friends_s05e20_seg02_clip_20",
+        "visual_dim": 4352,
+        "visual_shape": [
+          45,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 44,
+        "duration": 65.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          44,
+          768
+        ],
+        "video_id": "s06e02_seg02_clip_07",
+        "visual_dim": 4352,
+        "visual_shape": [
+          44,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 44,
+        "duration": 66.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          44,
+          768
+        ],
+        "video_id": "met_s03e03_seg02_clip_11",
+        "visual_dim": 4352,
+        "visual_shape": [
+          44,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.43,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "s09e18_seg02_clip_13",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_11",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.62,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_19",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 43,
+        "duration": 64.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          43,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_18",
+        "visual_dim": 4352,
+        "visual_shape": [
+          43,
+          4352
+        ]
+      }
+    ],
+    "subtitle_embedding_dim": 768,
+    "visual_embedding_dim": 4352
+  },
+  "seed": 2026,
+  "split_counts": {
+    "calib_holdout": 4340,
+    "calib_select": 8677,
+    "pseudo_official_holdout": 4339,
+    "train_fit": 69428
+  },
+  "stage": "C22-1",
+  "status": "C22_FEATURE_EVENT_PARTIAL",
+  "timestamp_alignment_audit": {
+    "alignment_rule": "clip index i maps linearly to video duration because release feature timestamps are clip-grid aligned; no raw TVR video is available.",
+    "all_sample_visual_subtitle_clip_counts_match": true,
+    "sample": [
+      {
+        "aligned_clip_count": 38,
+        "duration": 56.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          38,
+          768
+        ],
+        "video_id": "friends_s01e22_seg02_clip_02",
+        "visual_dim": 4352,
+        "visual_shape": [
+          38,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 50,
+        "duration": 78.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          50,
+          768
+        ],
+        "video_id": "s05e09_seg01_clip_01",
+        "visual_dim": 4352,
+        "visual_shape": [
+          50,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 42,
+        "duration": 62.04,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          42,
+          768
+        ],
+        "video_id": "s06e02_seg02_clip_03",
+        "visual_dim": 4352,
+        "visual_shape": [
+          42,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 45,
+        "duration": 67.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          45,
+          768
+        ],
+        "video_id": "friends_s05e20_seg02_clip_20",
+        "visual_dim": 4352,
+        "visual_shape": [
+          45,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 44,
+        "duration": 65.02,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          44,
+          768
+        ],
+        "video_id": "s06e02_seg02_clip_07",
+        "visual_dim": 4352,
+        "visual_shape": [
+          44,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 44,
+        "duration": 66.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          44,
+          768
+        ],
+        "video_id": "met_s03e03_seg02_clip_11",
+        "visual_dim": 4352,
+        "visual_shape": [
+          44,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.43,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "s09e18_seg02_clip_13",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_11",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 40,
+        "duration": 59.62,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          40,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_19",
+        "visual_dim": 4352,
+        "visual_shape": [
+          40,
+          4352
+        ]
+      },
+      {
+        "aligned_clip_count": 43,
+        "duration": 64.03,
+        "subtitle_dim": 768,
+        "subtitle_shape": [
+          43,
+          768
+        ],
+        "video_id": "friends_s01e10_seg02_clip_18",
+        "visual_dim": 4352,
+        "visual_shape": [
+          43,
+          4352
+        ]
+      }
+    ],
+    "sample_video_count": 10,
+    "status": "C22_TIMESTAMP_ALIGNMENT_PARTIAL_AUDITED"
+  }
+}

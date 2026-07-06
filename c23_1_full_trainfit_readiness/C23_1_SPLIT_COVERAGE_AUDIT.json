@@ -1,0 +1,51 @@
+{
+  "coverage": {
+    "calib_holdout": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 71.6
+    },
+    "calib_select": {
+      "GT_video_mean_rank": 7.859,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.7,
+      "VR_R@10": 79.3,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 64.1,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 71.3
+    },
+    "train_fit": {
+      "GT_video_mean_rank": 7.193625050411938,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 32.924756582358704,
+      "VR_R@10": 81.37927061128075,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 67.92504465057326,
+      "missing_rank_count": 0,
+      "query_count": 69428,
+      "wrong_video_top1_rate": 67.0752434176413
+    }
+  },
+  "first_stage_cache_lengths": {
+    "calib_holdout_medium_top128": 1000,
+    "calib_select_medium_top128": 1000,
+    "train_calib_holdout_top128": 82445
+  },
+  "split_counts": {
+    "calib_holdout": 4340,
+    "calib_select": 8677,
+    "pseudo_official_holdout": 4339,
+    "train_fit": 69428
+  }
+}

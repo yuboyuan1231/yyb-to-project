@@ -1,0 +1,119 @@
+{
+  "c22r_0_protocol_status": "C22R_PROTOCOL_READY",
+  "c22r_1_collapse_audit_status": "C22R_COLLAPSE_ROOT_CAUSE_FOUND",
+  "c22r_2_alignment_repair_status": "C22R_ALIGNMENT_REPAIRED",
+  "c22r_3_retriever_sanity_status": "C22R_RETRIEVER_SANITY_RESTORED",
+  "c22r_4_safe_joint_status": "C22R_SAFE_JOINT_WEAK",
+  "c22r_5_robustness_status": "C22R_ROBUSTNESS_PARTIAL",
+  "c22r_is_promoted_system": false,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "delta_vs_c19_c21_hybrid": {
+    "VCMR_R@100_IoU0.5": 0.0,
+    "VCMR_R@100_IoU0.7": 0.0,
+    "VCMR_R@10_IoU0.5": 0.0,
+    "VCMR_R@10_IoU0.7": 0.0,
+    "VCMR_R@1_IoU0.5": 0.0,
+    "VCMR_R@1_IoU0.7": 0.0,
+    "VCMR_R@5_IoU0.5": 0.0,
+    "VCMR_R@5_IoU0.7": 0.0,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.0,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 0.0,
+    "wrong_video_high_score_rate": 0.0,
+    "wrong_video_top1_rate": 0.0
+  },
+  "delta_vs_c22_original_native_retriever": {
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.39999999999999,
+    "VR_R@100": 98.3,
+    "VR_R@5": 63.9,
+    "wrong_video_top1_rate": -28.400000000000006
+  },
+  "delta_vs_first_stage_baseline": {
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.0,
+    "VR_R@100": 0.0,
+    "VR_R@5": 0.0,
+    "wrong_video_top1_rate": 0.0
+  },
+  "evaluator_modified": false,
+  "final_decision": "C22R_READY_FOR_C23_FULL_TRAINFIT_NATIVE_COUPLING",
+  "final_vcmr_metrics": {
+    "VCMR_R@100_IoU0.5": 37.45,
+    "VCMR_R@100_IoU0.7": 22.65,
+    "VCMR_R@10_IoU0.5": 11.7,
+    "VCMR_R@10_IoU0.7": 6.3,
+    "VCMR_R@1_IoU0.5": 2.95,
+    "VCMR_R@1_IoU0.7": 1.4,
+    "VCMR_R@5_IoU0.5": 8.0,
+    "VCMR_R@5_IoU0.7": 3.9,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.65,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 2000,
+    "wrong_video_high_score_rate": 71.75,
+    "wrong_video_top1_rate": 71.75
+  },
+  "final_vr_metrics": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "score_collapse_ratio_std_lt_1e_6": 0.0,
+    "score_entropy_mean": 1.6143879691194742,
+    "score_std_mean": 1.0019012480974196,
+    "wrong_video_top1_rate": 71.6
+  },
+  "full_trainfit_readiness": "C22R_READY_FOR_FULL_TRAINFIT_NATIVE_COUPLING",
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "raw_feature_audit_needed": false,
+  "repaired_candidate_feature_schema": {
+    "candidate_pool": "first_stage_top128",
+    "schema_hash": "0f167bf06bba34f9c7a3c7fa2cfa1fbabfb7a2be0c30cca25016f00975557ba9"
+  },
+  "root_cause": {
+    "alignment_blocker_found": false,
+    "candidate_space_misuse": true,
+    "found": true,
+    "root_cause_evidence": {
+      "c22_full_VR_R100": 1.7,
+      "c22_restricted_VR_R100": 77.9,
+      "first_stage_VR_R100": 100.0,
+      "random_top128_VR_R100": 78.0
+    },
+    "standalone_native_feature_capacity_weak": true,
+    "summary": "C22 collapsed because the native retriever was allowed to replace the very strong first-stage retriever over the full train video library. The release-feature global/pooled native scorer is weak, while first-stage top128 already gives 100% GT-video coverage on the medium holdout. Alignment checks did not find a blocking key/join/schema mismatch; the main failure is candidate-space misuse plus an unconstrained residual/replacement policy."
+  },
+  "seed": 2026,
+  "selected_integration": {
+    "c22r_not_promoted": true,
+    "name": "I0_keep_c21_hybrid_reference",
+    "reason": "retriever sanity restored by first-stage preservation, but no new safe BMN integration gain was proven in medium"
+  },
+  "selected_retriever": {
+    "formula": {
+      "base": 1.0,
+      "c22": 0.0,
+      "rank_prior": 0.01
+    },
+    "name": "R0_baseline_only",
+    "no_regression_guard": true
+  },
+  "stage": "C22R-6",
+  "status": "C22R_READY_FOR_C23_FULL_TRAINFIT_NATIVE_COUPLING",
+  "wrong_video_risk": 71.6
+}

@@ -1,0 +1,9 @@
+{
+  "seed2026": {
+    "integration": "C24F_FULL_EVIDENCE_INTEGRATION_FRONT_RANK_WEAK",
+    "materialization": "C24F_EVIDENCE_MATERIALIZED_PARTIAL",
+    "signal": "C24F_EVIDENCE_SIGNAL_NOISY_OR_HARMFUL"
+  },
+  "seed2027": "not rerun; deterministic materialization",
+  "seed2028": "not rerun; deterministic materialization"
+}
