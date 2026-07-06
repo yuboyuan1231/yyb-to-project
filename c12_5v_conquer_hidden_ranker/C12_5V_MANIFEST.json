@@ -1,0 +1,29 @@
+{
+  "allow_enter_c12_6": false,
+  "artifact_hashes": {
+    "c12_5v_conquer_hidden_ranker/C12_5V_A_FORWARD_HOOK_AUDIT.json": "b5f627bb9598e7fb6a35281ab2434f6fc3f4e79e065aa75455c50e97abad73cd",
+    "c12_5v_conquer_hidden_ranker/C12_5V_A_HIDDEN_FEATURE_AVAILABILITY.md": "7fea1f344a22b14898817bb047b36401e948d50000e686325785e4f6e3c9cae3",
+    "c12_5v_conquer_hidden_ranker/C12_5V_A_HIDDEN_FEATURE_SCHEMA.json": "f848ae098f9db64f0669da9ad6ddb00b916a646f491192683e54db00c1c5d054",
+    "c12_5v_conquer_hidden_ranker/C12_5V_A_MISSING_NONFINITE_AUDIT.json": "499a502825cac84684c0b2288217a032885a9cb0eab026f774941d4e6e3d1da5",
+    "c12_5v_conquer_hidden_ranker/C12_5V_B_FEATURE_BUILDER_HASH.json": "51ff0eaef0ccd7f609765756e4d469b78417e335217f6ed86b9e08b2b857c169",
+    "c12_5v_conquer_hidden_ranker/C12_5V_B_SHARED_FEATURE_BUILDER.md": "ffd30b3479aa5f79ef63d9e58f028d852c951fae7c46a1615c691fddbc636efe",
+    "c12_5v_conquer_hidden_ranker/C12_5V_B_TRAIN_INFERENCE_SCHEMA_AUDIT.json": "81fabf1e374afd960752aa91ed977add957ac4fa83eb82915f7e73833c61bd02",
+    "c12_5v_conquer_hidden_ranker/C12_5V_C_HIDDEN_RANKER_TRAINING_RESULTS.json": "078b4c7e0f8004c874cd13e7b79bddf6767711c494bd9981658caa5c5b54813a",
+    "c12_5v_conquer_hidden_ranker/C12_5V_C_TRAINING_DATASET_AUDIT.json": "9c8771e2897866f8637e59f5cd939edfa05f95bc0ab2b7702868b1527c0a796a",
+    "c12_5v_conquer_hidden_ranker/C12_5V_DECISION.json": "45b62b3e083ee2f05616c5872f09141847c4b2000474aa675851c21d68df9285",
+    "c12_5v_conquer_hidden_ranker/C12_5V_DECISION.md": "f8dcd3c580155103ca0d842cb69ab59183dd11dc13d74463c3cd5370d2d11476",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_CALIBRATION_METRICS.json": "d73a32d60590b76e6ff6662f50d46697c8d9a1f57a137b0e178f0ada7351e209",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_DURATION_BREAKDOWN.json": "9b0edee6c287b89907a57db8cf8bd74938f3f8d88219a5f546d5824725c39de5",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_FAILURE_CASES.json": "e5c4b0da9ca2145bb2097b3f09310817d420fa97470b0ecc0f331486dacc5b5f",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_QUERY_TYPE_BREAKDOWN.json": "e128170ded5e8ee50fcdf3626d41f20a4fab810282d93f5a802b0619150dfb6b",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_RESULTS.json": "f94fcfa578d999e0ed472d0c4c3db83553e393d2b6f16738be1d6ceb8ed7e644",
+    "c12_5v_conquer_hidden_ranker/C12_5V_D_RESULTS.md": "e41becb98e425c7baeba6a2b3af3035195c52b6ac46c06ea7c80b6f80c4a0028",
+    "c12_5v_conquer_hidden_ranker/C12_5V_MANIFEST.json": "3092ac55e539177a9ab092e5c92809cd56b2f03dcc8c71de67c757b5aad5cd84"
+  },
+  "best_variant": "V1_hidden_boundary",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "stage": "C12-5V",
+  "status": "C12_HIDDEN_RANKER_NO_GAIN_NEED_STRONGER_FEATURES"
+}

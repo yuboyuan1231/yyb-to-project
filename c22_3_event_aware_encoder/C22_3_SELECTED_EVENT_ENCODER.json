@@ -1,0 +1,6 @@
+{
+  "event_token": "subtitle max/event proxy from existing release features",
+  "full_transformer_not_run": true,
+  "implemented": "E3_query_aware_event_pooling_proxy",
+  "not_eventformer_reproduction": true
+}

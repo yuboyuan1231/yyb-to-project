@@ -1,0 +1,12 @@
+[
+  "P0_baseline_first_stage_only",
+  "P1_bmn_recalibration",
+  "P2_bmn_false_positive_penalty",
+  "P3_event_relevance_reweight",
+  "P4_bmn_event_consistency",
+  "P5_bmn_t2_consistency",
+  "P6_all_evidence_logistic_proxy",
+  "P7_rank_bucket_specific_calibration",
+  "P8_query_duration_specific_calibration",
+  "P9_no_regression_guarded_evidence"
+]

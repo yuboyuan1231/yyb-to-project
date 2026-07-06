@@ -1,0 +1,128 @@
+{
+  "c22_0_protocol_status": "C22_PROTOCOL_READY",
+  "c22_1_feature_event_status": "C22_FEATURE_EVENT_PARTIAL",
+  "c22_2_partial_retriever_status": "C22_PARTIAL_RETRIEVER_WEAK",
+  "c22_3_event_encoder_status": "C22_EVENT_ENCODER_INCONCLUSIVE",
+  "c22_4_joint_coupling_status": "C22_JOINT_COUPLING_INCONCLUSIVE",
+  "c22_5_robustness_status": "C22_ROBUSTNESS_PARTIAL",
+  "c22_is_promoted_system": false,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "delta_vs_c19_c20_c21_hybrid": {
+    "VCMR_R@100_IoU0.5": 0.0,
+    "VCMR_R@100_IoU0.7": 0.0,
+    "VCMR_R@10_IoU0.5": 0.0,
+    "VCMR_R@10_IoU0.7": 0.0,
+    "VCMR_R@1_IoU0.5": 0.0,
+    "VCMR_R@1_IoU0.7": 0.0,
+    "VCMR_R@5_IoU0.5": 0.0,
+    "VCMR_R@5_IoU0.7": 0.0,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.0,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 0.0,
+    "wrong_video_high_score_rate": 0.0,
+    "wrong_video_top1_rate": 0.0
+  },
+  "evaluator_modified": false,
+  "final_decision": "C22_NEED_FULL_TRAINFIT_NATIVE_COUPLING",
+  "final_vcmr_metrics": {
+    "VCMR_R@100_IoU0.5": 37.45,
+    "VCMR_R@100_IoU0.7": 22.65,
+    "VCMR_R@10_IoU0.5": 11.7,
+    "VCMR_R@10_IoU0.7": 6.3,
+    "VCMR_R@1_IoU0.5": 2.95,
+    "VCMR_R@1_IoU0.7": 1.4,
+    "VCMR_R@5_IoU0.5": 8.0,
+    "VCMR_R@5_IoU0.7": 3.9,
+    "already_correct_anchor_harm_rate": 0.0,
+    "harmful_promotion_rate": 0.0,
+    "promotion_attempt_rate": 0.65,
+    "promotion_precision": 0.0,
+    "promotion_recall": 0.0,
+    "query_count": 2000,
+    "wrong_video_high_score_rate": 71.75,
+    "wrong_video_top1_rate": 71.75
+  },
+  "final_vr_metrics": {
+    "GT_video_mean_rank": 5789.952,
+    "GT_video_median_rank": 4679.0,
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.2,
+    "VR_R@100": 1.7,
+    "VR_R@5": 0.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 100.0
+  },
+  "hard_negative_subset_performance": {
+    "D": {
+      "GT_video_mean_rank": 5595.699404761905,
+      "GT_video_median_rank": 4359.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.2976190476190476,
+      "VR_R@100": 2.0833333333333335,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 336,
+      "wrong_video_top1_rate": 100.0
+    },
+    "E": {
+      "GT_video_mean_rank": 5360.220588235294,
+      "GT_video_median_rank": 3775.5,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.7352941176470589,
+      "VR_R@100": 3.676470588235294,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 136,
+      "wrong_video_top1_rate": 100.0
+    },
+    "F": {
+      "GT_video_mean_rank": 6104.135416666667,
+      "GT_video_median_rank": 4814.5,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.0,
+      "VR_R@100": 1.0416666666666667,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 96,
+      "wrong_video_top1_rate": 100.0
+    }
+  },
+  "limitations": [
+    "medium mode event representation is a pooled partial-event proxy",
+    "full shared BMN span-map joint optimizer was not run",
+    "C22 did not earn official review readiness"
+  ],
+  "mode": "medium",
+  "next_step": "C22_NEED_FULL_TRAINFIT_NATIVE_COUPLING",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "selected_event_segmentation": "pooled partial-event proxy: subtitle max/event token from existing feature cache plus visual mean",
+  "selected_losses": [
+    "video_retrieval_cross_entropy",
+    "front_rank_hard_negative_margin"
+  ],
+  "selected_model_config": {
+    "alpha_beta_gamma_selected_on": "calib_select only when full score table is available",
+    "implemented_scope": "native retriever + event proxy trained; BMN coupling summarized against existing train-only diagnostics",
+    "joint_score_formula": "not promoted; no official; no NMS/evaluator changes",
+    "localizer": "C19/C20/C21 BMN/T2 evidence diagnostic only",
+    "name": "J2_shared_encoder_retriever_bmn_medium_proxy",
+    "retriever": {
+      "epochs": 4,
+      "event_proxy": "subtitle_max_as_partial_event_token",
+      "hidden": 384,
+      "name": "P2_query_gated_multimodal_pool",
+      "top_hard_negatives": 96
+    }
+  },
+  "stage": "C22-6",
+  "status": "C22_NEED_FULL_TRAINFIT_NATIVE_COUPLING",
+  "wrong_video_risk": 100.0
+}

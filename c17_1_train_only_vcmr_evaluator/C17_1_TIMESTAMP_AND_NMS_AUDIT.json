@@ -1,0 +1,6 @@
+{
+  "nms_policy": "per query/video temporal suppression in train-only replay",
+  "nms_threshold": 0.7,
+  "official_nms_modified": false,
+  "timestamp_mapping": "C12 idx_to_ts/ts_to_idx reused"
+}

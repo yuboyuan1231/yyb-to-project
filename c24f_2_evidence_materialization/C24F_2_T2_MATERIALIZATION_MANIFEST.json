@@ -1,0 +1,5 @@
+{
+  "coverage_select_holdout": 0.972165,
+  "source": "C19/C21 T2 evidence for calib_select/calib_holdout",
+  "train_fit_missing_masked": true
+}

@@ -1,0 +1,5 @@
+{
+  "c22r_not_promoted": true,
+  "name": "I0_keep_c21_hybrid_reference",
+  "reason": "retriever sanity restored by first-stage preservation, but no new safe BMN integration gain was proven in medium"
+}

@@ -1,0 +1,29 @@
+{
+  "allow_enter_c12_6": false,
+  "artifact_hashes": {
+    "c12_5u_topk_calibration_repair/C12_5U_A_SCORE_DECOMPOSITION_AUDIT.json": "d7eb736aa6bc2205647cf10109b9f20c89481877322d0e7674d59a7d387d2cd1",
+    "c12_5u_topk_calibration_repair/C12_5U_A_SCORE_DECOMPOSITION_AUDIT.md": "a3efa17a13e4f3307236ac5d574c7272a56ae1100dc8bf7d0f23b7eb42b8a7b3",
+    "c12_5u_topk_calibration_repair/C12_5U_B_TWO_HEAD_RANKER_RESULTS.json": "4bb0444ecb8819580c8670fd1349e1596db6bef89c34a4c7a4169acc4f32dd6c",
+    "c12_5u_topk_calibration_repair/C12_5U_B_TWO_HEAD_RANKER_RESULTS.md": "fb69293e47d7e06ffb628064329926a68f68da1fc172f9c67ba62c7f61663a06",
+    "c12_5u_topk_calibration_repair/C12_5U_C_CALIBRATION_REPAIR_RESULTS.json": "492911ca58758860a20c00b10f063d37902e855108e51c7909bbb18c28676efb",
+    "c12_5u_topk_calibration_repair/C12_5U_C_CALIBRATION_REPAIR_RESULTS.md": "b54754d0bb629defa7f623c1d0f7924dfd871c29a2f6c4c9e116d4f1575f59dd",
+    "c12_5u_topk_calibration_repair/C12_5U_DECISION.json": "6258df726ceb7761775778ce769f8d8b08089fca87edbbd1fcb16d19e89be8bc",
+    "c12_5u_topk_calibration_repair/C12_5U_DECISION.md": "7aa92851cf776ce8e7b89f59db653fe68b87607843703490b4784c6d26ac5a6f",
+    "c12_5u_topk_calibration_repair/C12_5U_D_CANDIDATE_VIDEO_SCORE_SEMANTICS.md": "8d202637414ed42014fd9002666c224a66b2bbc3e8742c24820082bd77415dfa",
+    "c12_5u_topk_calibration_repair/C12_5U_D_FEATURE_SCHEMA_HASH.json": "69c27abb89b4f27e6c944b692c8a665ed021e5dace4ce889ee885b0a92833564",
+    "c12_5u_topk_calibration_repair/C12_5U_E_CALIBRATION_METRICS.json": "248f4aacd7ebf414b0aceae9b02a80f9d6029268693762470cbd1f314992a982",
+    "c12_5u_topk_calibration_repair/C12_5U_E_DURATION_BREAKDOWN.json": "c41292c2a741e2f744de38737600e8f171707866ba4242ec87ee776ceb405958",
+    "c12_5u_topk_calibration_repair/C12_5U_E_FAILURE_CASES.json": "6e91d8579d6e6979e87ab6083d7a440e1b86d8b3d9e9ca2ee550279f0fee87c9",
+    "c12_5u_topk_calibration_repair/C12_5U_E_QUERY_TYPE_BREAKDOWN.json": "c095babf1d8ca64ba237865bce328c69c00081044d57a9db116d1cf09f1c4e70",
+    "c12_5u_topk_calibration_repair/C12_5U_E_RESULTS.json": "0312bcf7aa4e4d5777aef32eab3e76902dfa928dca2878d6439999938eb49fa9",
+    "c12_5u_topk_calibration_repair/C12_5U_E_RESULTS.md": "4293f3fa949be9ebaa1857397f9af7732948283773578b279fdb6a7c874b0d3a",
+    "c12_5u_topk_calibration_repair/C12_5U_MANIFEST.json": "6107387711c0ad56c91c4c2c35296769ca69fe4d230757a8d2e26152c230510f",
+    "c12_5u_topk_calibration_repair/C12_5U_PROMOTION_DATASET_AUDIT.json": "57b3293a8f29e54046884e9a0307cd436b5684c2a11b036200298c3dc078a320"
+  },
+  "best_variant": "U2_two_head_quality",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "stage": "C12-5U",
+  "status": "C12_SPAN_SCORE_STILL_UNRELIABLE_NEED_CONQUER_HIDDEN"
+}

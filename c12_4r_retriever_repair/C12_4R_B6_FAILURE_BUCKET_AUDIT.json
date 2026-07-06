@@ -1,0 +1,342 @@
+{
+  "CONQUER_first_stage_replay": {
+    "B6_or_firststage_top1_correct_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1263
+    },
+    "B6_or_firststage_top1_wrong_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 10.821579460513487,
+      "GT_video_median_rank": 6.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 70.65323366915827,
+      "VR_R@100": 100.0,
+      "VR_R@5": 49.91875203119922,
+      "missing_rank_count": 0,
+      "query_count": 3077
+    },
+    "high_rank_hard_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 23.21747042766151,
+      "GT_video_median_rank": 17.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 17.8343949044586,
+      "VR_R@100": 100.0,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1099
+    },
+    "positive_in_top10": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 3.172534186790806,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 36.74716322374164,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 81.43729997090486,
+      "missing_rank_count": 0,
+      "query_count": 3437
+    },
+    "positive_in_top100": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 7.9633640552995395,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 29.101382488479263,
+      "VR_R@10": 79.19354838709677,
+      "VR_R@100": 100.0,
+      "VR_R@5": 64.49308755760369,
+      "missing_rank_count": 0,
+      "query_count": 4340
+    },
+    "positive_in_top5": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 2.143265451947124,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 45.12325830653805,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 2799
+    }
+  },
+  "delta_regularized_alpha002": {
+    "B6_or_firststage_top1_correct_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1263
+    },
+    "B6_or_firststage_top1_wrong_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 10.823204419889503,
+      "GT_video_median_rank": 6.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 70.62073448163795,
+      "VR_R@100": 100.0,
+      "VR_R@5": 49.91875203119922,
+      "missing_rank_count": 0,
+      "query_count": 3077
+    },
+    "high_rank_hard_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 23.22202001819836,
+      "GT_video_median_rank": 17.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 17.743403093721565,
+      "VR_R@100": 100.0,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1099
+    },
+    "positive_in_top10": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 3.17282513820192,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 36.74716322374164,
+      "VR_R@10": 99.97090485888856,
+      "VR_R@100": 100.0,
+      "VR_R@5": 81.43729997090486,
+      "missing_rank_count": 0,
+      "query_count": 3437
+    },
+    "positive_in_top100": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 7.964516129032258,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 29.101382488479263,
+      "VR_R@10": 79.17050691244239,
+      "VR_R@100": 100.0,
+      "VR_R@5": 64.49308755760369,
+      "missing_rank_count": 0,
+      "query_count": 4340
+    },
+    "positive_in_top5": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 2.143265451947124,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 45.12325830653805,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 2799
+    }
+  },
+  "listwise_teacher_topK_alpha005": {
+    "B6_or_firststage_top1_correct_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1263
+    },
+    "B6_or_firststage_top1_wrong_proxy": {
+      "GT_video_in_top100_rate": 99.96750081247968,
+      "GT_video_mean_rank": 10.826779330516738,
+      "GT_video_median_rank": 6.0,
+      "VR_R@1": 0.09749756256093597,
+      "VR_R@10": 70.58823529411765,
+      "VR_R@100": 99.96750081247968,
+      "VR_R@5": 49.88625284367891,
+      "missing_rank_count": 0,
+      "query_count": 3077
+    },
+    "high_rank_hard_proxy": {
+      "GT_video_in_top100_rate": 99.90900818926296,
+      "GT_video_mean_rank": 23.230209281164694,
+      "GT_video_median_rank": 17.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 17.65241128298453,
+      "VR_R@100": 99.90900818926296,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1099
+    },
+    "positive_in_top10": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 3.172534186790806,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 36.83444864707594,
+      "VR_R@10": 99.94180971777713,
+      "VR_R@100": 100.0,
+      "VR_R@5": 81.40820482979342,
+      "missing_rank_count": 0,
+      "query_count": 3437
+    },
+    "positive_in_top100": {
+      "GT_video_in_top100_rate": 99.97695852534562,
+      "GT_video_mean_rank": 7.96705069124424,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 29.170506912442395,
+      "VR_R@10": 79.14746543778801,
+      "VR_R@100": 99.97695852534562,
+      "VR_R@5": 64.47004608294931,
+      "missing_rank_count": 0,
+      "query_count": 4340
+    },
+    "positive_in_top5": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 2.144337263308324,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 45.230439442658096,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 99.89281886387995,
+      "missing_rank_count": 0,
+      "query_count": 2799
+    }
+  },
+  "qtype_balanced_alpha002": {
+    "B6_or_firststage_top1_correct_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1263
+    },
+    "B6_or_firststage_top1_wrong_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 10.823204419889503,
+      "GT_video_median_rank": 6.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 70.62073448163795,
+      "VR_R@100": 100.0,
+      "VR_R@5": 49.91875203119922,
+      "missing_rank_count": 0,
+      "query_count": 3077
+    },
+    "high_rank_hard_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 23.22202001819836,
+      "GT_video_median_rank": 17.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 17.743403093721565,
+      "VR_R@100": 100.0,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1099
+    },
+    "positive_in_top10": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 3.17282513820192,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 36.74716322374164,
+      "VR_R@10": 99.97090485888856,
+      "VR_R@100": 100.0,
+      "VR_R@5": 81.43729997090486,
+      "missing_rank_count": 0,
+      "query_count": 3437
+    },
+    "positive_in_top100": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 7.964516129032258,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 29.101382488479263,
+      "VR_R@10": 79.17050691244239,
+      "VR_R@100": 100.0,
+      "VR_R@5": 64.49308755760369,
+      "missing_rank_count": 0,
+      "query_count": 4340
+    },
+    "positive_in_top5": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 2.143265451947124,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 45.12325830653805,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 2799
+    }
+  },
+  "stronger_teacher_topK_alpha001": {
+    "B6_or_firststage_top1_correct_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1263
+    },
+    "B6_or_firststage_top1_wrong_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 10.822554436139097,
+      "GT_video_median_rank": 6.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 70.62073448163795,
+      "VR_R@100": 100.0,
+      "VR_R@5": 49.91875203119922,
+      "missing_rank_count": 0,
+      "query_count": 3077
+    },
+    "high_rank_hard_proxy": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 23.22020018198362,
+      "GT_video_median_rank": 17.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 17.743403093721565,
+      "VR_R@100": 100.0,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1099
+    },
+    "positive_in_top10": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 3.17282513820192,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 36.74716322374164,
+      "VR_R@10": 99.97090485888856,
+      "VR_R@100": 100.0,
+      "VR_R@5": 81.43729997090486,
+      "missing_rank_count": 0,
+      "query_count": 3437
+    },
+    "positive_in_top100": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 7.9640552995391705,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 29.101382488479263,
+      "VR_R@10": 79.17050691244239,
+      "VR_R@100": 100.0,
+      "VR_R@5": 64.49308755760369,
+      "missing_rank_count": 0,
+      "query_count": 4340
+    },
+    "positive_in_top5": {
+      "GT_video_in_top100_rate": 100.0,
+      "GT_video_mean_rank": 2.143265451947124,
+      "GT_video_median_rank": 2.0,
+      "VR_R@1": 45.12325830653805,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 2799
+    }
+  }
+}

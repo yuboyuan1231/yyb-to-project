@@ -1,0 +1,13 @@
+{
+  "implemented_for_sample": [
+    "E0_fixed_windows"
+  ],
+  "selected_for_c22_medium_training": "pooled partial-event proxy: subtitle max/event token from existing feature cache plus visual mean",
+  "variants": {
+    "E0_fixed_windows": "uniform 8 windows over release clip grid",
+    "E1_cosine_change": "planned from cosine change points on existing release features",
+    "E2_subtitle_boundary": "planned from subtitle feature changes and zero/low-motion gaps",
+    "E3_multimodal_change": "planned from subtitle and visual change-point agreement",
+    "E4_hybrid": "selected future variant when full train_fit event extraction is run"
+  }
+}

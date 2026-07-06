@@ -1,0 +1,24 @@
+{
+  "config_hash": "ea4c5e22875c30fc",
+  "local_only": true,
+  "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_FULL_EVIDENCE_TABLE_medium.local.parquet",
+  "query_count": 3000,
+  "row_count": 328000,
+  "schema_hash": "671492592547f079",
+  "sha256": "61d9f21805cc19d8d8822fb3f2341a33e223fd09a6a4b344b1f8dad57d692400",
+  "size_bytes": 49052686,
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  }
+}

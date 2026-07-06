@@ -1,0 +1,8 @@
+{
+  "c12_t2_replay_sanity": "C12-5T T2 formula replayed under C17 evaluator",
+  "c17_hybrid_replay_sanity": "C17 best hybrid replayed under C17 evaluator",
+  "nms_sanity": "train-only per-video temporal NMS; official NMS not modified",
+  "oracle_score_sanity": "available in C17-4 native replay",
+  "random_score_sanity": "available in C17-4 native replay",
+  "timestamp_mapping_sanity": "C12 idx_to_ts/ts_to_idx reused"
+}

@@ -1,0 +1,6 @@
+{
+  "full_candidate_rows_estimate_train_select_holdout": 10552960,
+  "large_full_table_commit_forbidden": true,
+  "mode_sample_rows_written": 4000,
+  "train_calib_holdout_top128_pickle_size_bytes": 170397963
+}

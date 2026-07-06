@@ -1,0 +1,8 @@
+{
+  "canonical_query_key": "query_id/desc_id integer string for query LMDB",
+  "canonical_video_key": "video_id string from corpus.train_videos[first_stage_pos]",
+  "no_position_based_join": true,
+  "query_key": "query_id",
+  "subtitle_key": "video_id",
+  "visual_key": "video_id"
+}

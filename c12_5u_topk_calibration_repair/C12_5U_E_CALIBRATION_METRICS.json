@@ -1,0 +1,142 @@
+{
+  "C12_5S_S2_span_context_contrast": {
+    "calib_holdout": {
+      "auc_iou05": 0.543615,
+      "auc_iou07": 0.535025,
+      "pearson": -0.008633908570077954,
+      "sample_count": 300000,
+      "spearman": -0.14603410660218127,
+      "top100_spearman": 0.07597186105344814,
+      "top500_spearman": -0.04888109782535602
+    },
+    "calib_select": {
+      "auc_iou05": 0.613155,
+      "auc_iou07": 0.6051,
+      "pearson": 0.008220203104701302,
+      "sample_count": 300000,
+      "spearman": -0.1550869824163352,
+      "top100_spearman": 0.0723829878406327,
+      "top500_spearman": -0.04351452157462306
+    }
+  },
+  "C12_5T_T2_listwise_soft_iou": {
+    "calib_holdout": {
+      "auc_iou05": 0.53336,
+      "auc_iou07": 0.549555,
+      "pearson": -0.0638751667960499,
+      "sample_count": 300000,
+      "spearman": -0.1930954945834624,
+      "top100_spearman": 0.033238826444936434,
+      "top500_spearman": -0.1090988223901011
+    },
+    "calib_select": {
+      "auc_iou05": 0.61085,
+      "auc_iou07": 0.6206,
+      "pearson": -0.041708279311529046,
+      "sample_count": 300000,
+      "spearman": -0.1829543724559235,
+      "top100_spearman": 0.02370370756418071,
+      "top500_spearman": -0.11382030404008957
+    }
+  },
+  "C12_5_teacher_distilled_baseline": {
+    "calib_holdout": {
+      "auc_iou05": 0.511345,
+      "auc_iou07": 0.53605,
+      "pearson": 0.02115595641355888,
+      "sample_count": 300000,
+      "spearman": 0.07288033890707067,
+      "top100_spearman": -0.08017211161589126,
+      "top500_spearman": -0.033860157739452675
+    },
+    "calib_select": {
+      "auc_iou05": 0.51635,
+      "auc_iou07": 0.53051,
+      "pearson": 0.03863896402733726,
+      "sample_count": 300000,
+      "spearman": 0.05267004663477367,
+      "top100_spearman": -0.05841315626211126,
+      "top500_spearman": -0.009881967802944912
+    }
+  },
+  "U1_two_head_select": {
+    "calib_holdout": {
+      "auc_iou05": 0.5595725,
+      "auc_iou07": 0.58348,
+      "pearson": -0.01543874436209654,
+      "sample_count": 300000,
+      "spearman": -0.14811460730177597,
+      "top100_spearman": 0.13085859671444822,
+      "top500_spearman": -0.06616935398103611
+    },
+    "calib_select": {
+      "auc_iou05": 0.623425,
+      "auc_iou07": 0.63065,
+      "pearson": 0.0013334153997639321,
+      "sample_count": 300000,
+      "spearman": -0.15235202722278393,
+      "top100_spearman": 0.1251460795104901,
+      "top500_spearman": -0.06685999126552912
+    }
+  },
+  "U2_two_head_quality": {
+    "calib_holdout": {
+      "auc_iou05": 0.5595725,
+      "auc_iou07": 0.58348,
+      "pearson": -0.01543874436209654,
+      "sample_count": 300000,
+      "spearman": -0.14811460730177597,
+      "top100_spearman": 0.06724012249382978,
+      "top500_spearman": -0.08166926644093989
+    },
+    "calib_select": {
+      "auc_iou05": 0.623425,
+      "auc_iou07": 0.63065,
+      "pearson": 0.0013334153997639321,
+      "sample_count": 300000,
+      "spearman": -0.15235202722278393,
+      "top100_spearman": 0.04854852062396921,
+      "top500_spearman": -0.07367701080767464
+    }
+  },
+  "U3_select_then_quality_top100": {
+    "calib_holdout": {
+      "auc_iou05": 0.5595725,
+      "auc_iou07": 0.58348,
+      "pearson": -0.01543874436209654,
+      "sample_count": 300000,
+      "spearman": -0.14811460730177597,
+      "top100_spearman": 0.12950124770096824,
+      "top500_spearman": -0.06573438586586461
+    },
+    "calib_select": {
+      "auc_iou05": 0.623425,
+      "auc_iou07": 0.63065,
+      "pearson": 0.0013334153997639321,
+      "sample_count": 300000,
+      "spearman": -0.15235202722278393,
+      "top100_spearman": 0.12502552216703586,
+      "top500_spearman": -0.06675468080016396
+    }
+  },
+  "U4_duration_bucket_quality": {
+    "calib_holdout": {
+      "auc_iou05": 0.4687025,
+      "auc_iou07": 0.4931075,
+      "pearson": -0.06941171966779987,
+      "sample_count": 300000,
+      "spearman": -0.21281543808093217,
+      "top100_spearman": 0.03232574213784362,
+      "top500_spearman": -0.11555167815190746
+    },
+    "calib_select": {
+      "auc_iou05": 0.5608625,
+      "auc_iou07": 0.568805,
+      "pearson": -0.037505605591502754,
+      "sample_count": 300000,
+      "spearman": -0.2010642017762487,
+      "top100_spearman": 0.018203691995352045,
+      "top500_spearman": -0.0996344825619666
+    }
+  }
+}

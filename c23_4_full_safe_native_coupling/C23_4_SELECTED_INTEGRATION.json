@@ -1,0 +1,17 @@
+{
+  "formula": {
+    "alpha": 0.55,
+    "beta": 0.25,
+    "family": "I_duration_aware",
+    "gamma": 0.2,
+    "name": "R_duration_aware_front"
+  },
+  "holdout_report_only": true,
+  "no_regression_guard": true,
+  "objective_best_formula": "C19_selected_a065_b025_g010",
+  "official_ready": false,
+  "select_objective": -6.529999999999999,
+  "selected_formula": "R_duration_aware_front",
+  "selection_split": "calib_select",
+  "selection_strategy": "front_rank_exploration_fallback_when_objective_selects_baseline"
+}

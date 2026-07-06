@@ -1,0 +1,5 @@
+{
+  "bmn_only_vs_t2_only_R100_IoU0.7": 1.6,
+  "hybrid_vs_no_bmn_R100_IoU0.7": 0.4499999999999993,
+  "retriever_bmn_vs_retriever_t2_R100_IoU0.7": 1.6999999999999993
+}

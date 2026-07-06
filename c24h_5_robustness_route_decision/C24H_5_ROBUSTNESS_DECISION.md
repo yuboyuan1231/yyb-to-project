@@ -1,0 +1,4 @@
+# C24H-5 Robustness Decision
+
+Status: `C24H_ROBUSTNESS_PARTIAL`.
+Route: `C24H_CONTINUE_BMN_T2_REBUILD`.

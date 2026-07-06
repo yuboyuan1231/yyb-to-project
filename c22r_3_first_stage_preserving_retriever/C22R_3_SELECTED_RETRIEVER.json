@@ -1,0 +1,9 @@
+{
+  "formula": {
+    "base": 1.0,
+    "c22": 0.0,
+    "rank_prior": 0.01
+  },
+  "name": "R0_baseline_only",
+  "no_regression_guard": true
+}

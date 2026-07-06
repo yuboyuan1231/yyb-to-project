@@ -1,0 +1,33 @@
+{
+  "best_seed_deltas_vs_t2": {
+    "B3_full_query_aware_map": [
+      16.4,
+      16.300000000000004
+    ],
+    "B4_full_duration_conditioned_map": [
+      15.300000000000004,
+      15.600000000000001
+    ],
+    "B5_full_short_specialized_map": [
+      17.199999999999996,
+      16.699999999999996
+    ],
+    "B6_full_query_aware_actionness_map": [
+      15.800000000000004,
+      16.9
+    ],
+    "B7_full_query_aware_rankloss_map": [
+      19.6,
+      20.000000000000007
+    ]
+  },
+  "best_variant": "B7_full_query_aware_rankloss_map_seed2026",
+  "seed_count": 2,
+  "variant_mean_top100": {
+    "B3_full_query_aware_map": 72.75,
+    "B4_full_duration_conditioned_map": 71.85,
+    "B5_full_short_specialized_map": 73.35,
+    "B6_full_query_aware_actionness_map": 72.75,
+    "B7_full_query_aware_rankloss_map": 76.2
+  }
+}

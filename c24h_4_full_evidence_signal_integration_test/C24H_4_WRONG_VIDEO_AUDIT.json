@@ -1,0 +1,23 @@
+{
+  "bmn_z": {
+    "available": true,
+    "iou07_false_positive_rate": 1.0,
+    "rows": 66,
+    "threshold_p90": 1.3978463661433296,
+    "wrong_video_rate": 1.0
+  },
+  "event_z": {
+    "available": true,
+    "iou07_false_positive_rate": 0.9997560975609756,
+    "rows": 32800,
+    "threshold_p90": 1.3278704751286843,
+    "wrong_video_rate": 0.9903353658536586
+  },
+  "t2_z": {
+    "available": true,
+    "iou07_false_positive_rate": 1.0,
+    "rows": 66,
+    "threshold_p90": 1.1605303305570067,
+    "wrong_video_rate": 1.0
+  }
+}

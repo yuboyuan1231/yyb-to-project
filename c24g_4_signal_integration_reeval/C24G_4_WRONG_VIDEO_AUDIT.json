@@ -1,0 +1,23 @@
+{
+  "bmn": {
+    "available": true,
+    "iou07_false_positive_rate": 0.99975,
+    "rows": 20000,
+    "threshold_p90": 1.3049026643084032,
+    "wrong_video_rate": 0.9916
+  },
+  "t2": {
+    "available": true,
+    "iou07_false_positive_rate": 0.99985,
+    "rows": 20000,
+    "threshold_p90": 1.0856783939429937,
+    "wrong_video_rate": 0.9961
+  },
+  "wrong_video_top1_high_score": {
+    "available": true,
+    "iou07_false_positive_rate": 0.99955,
+    "rows": 20000,
+    "threshold_p90": 0.5055953025817871,
+    "wrong_video_rate": 0.9893
+  }
+}

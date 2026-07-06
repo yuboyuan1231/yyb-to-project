@@ -1,0 +1,59 @@
+{
+  "duplicate_candidate_count": 0,
+  "event_direct_columns_present": true,
+  "gt_video_coverage": {
+    "GT_video_top1": 30.666666666666668,
+    "GT_video_top10": 79.8,
+    "GT_video_top100": 100.0,
+    "GT_video_top128": 100.0,
+    "GT_video_top5": 64.9
+  },
+  "invalid_span_count": 0,
+  "invalid_video_id_count": 0,
+  "join_key_consistency": true,
+  "missing_evidence_count_by_family": {
+    "bmn_score_available": 128001,
+    "event_score_available": 0,
+    "t2_score_available": 133567
+  },
+  "missing_evidence_count_by_split": {
+    "calib_holdout": {
+      "bmn_score_available": 0,
+      "event_score_available": 0,
+      "t2_score_available": 2571
+    },
+    "calib_select": {
+      "bmn_score_available": 1,
+      "event_score_available": 0,
+      "t2_score_available": 2996
+    },
+    "train_fit": {
+      "bmn_score_available": 128000,
+      "event_score_available": 0,
+      "t2_score_available": 128000
+    }
+  },
+  "nan_inf_count": 389569,
+  "position_based_join_detected": false,
+  "query_count": 3000,
+  "row_count": 328000,
+  "silent_zero_fill_detected": false,
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  },
+  "top128_candidate_coverage": {
+    "max_candidate_rank": 128,
+    "mean_rows_per_query": 109.33333333333333
+  }
+}

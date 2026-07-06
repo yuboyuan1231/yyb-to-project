@@ -1,0 +1,28 @@
+{
+  "checkpoints": {
+    "2026": {
+      "mode_in_checkpoint": "medium",
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+      "seed": 2026,
+      "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e"
+    },
+    "2027": {
+      "mode_in_checkpoint": "medium",
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2027.pt",
+      "seed": 2027,
+      "sha256": "ca2848976ab0815b341bb465205ec44c76352479432944c2d2cb6f75fae0b35e"
+    }
+  },
+  "committed_sample": "c17_2_full_bmn_score_export/C17_2_SCORE_SAMPLE.parquet",
+  "large_full_parquet_committed": false,
+  "local_score_table": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+  "local_score_table_sha256": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+  "mode": "medium",
+  "row_count": 22779481,
+  "schema_hash": "bc7541d2f30ae646d0dadd606ecce9d6941ac42a80bb5a7158ed3ed90d5da95c",
+  "seeds": [
+    2026,
+    2027
+  ],
+  "stage": "C17-2"
+}

@@ -1,0 +1,169 @@
+{
+  "bmn_materialization_manifest": {
+    "full_not_completed_reason": "No existing source provides train_fit BMN/T2 evidence for first-stage top128 candidates.",
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24g_full_bmn_t2_evidence_closure.py --stage c24g_2 --mode medium --seed 2026 --force",
+    "missing_reason": "train_fit BMN source absent",
+    "path": "/tmp/c24g_score_cache/CONQUER-RLEM-c2c3/C24G_BMN_T2_PARTIAL_MATERIALIZATION_medium.local.parquet",
+    "query_count": 3000,
+    "row_count": 328000,
+    "sha256": "848bfad3e2c6d443a70cb56f999c5246dd913fe22a09c1bc619de2b16570f5c1",
+    "size_bytes": 68898472,
+    "source": "C24F canonical medium table plus explicit BMN/T2 missing masks",
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "train_fit_coverage": 0.0
+  },
+  "evidence_coverage_audit": {
+    "bmn_missing_count": 128001,
+    "duplicate_candidate_count": 0,
+    "event_direct_columns_present": true,
+    "event_missing_count": 0,
+    "evidence_by_split": {
+      "calib_holdout": {
+        "bmn_available_rows": 100000,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 100000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 100000,
+        "t2_available_rows": 97429,
+        "t2_coverage": 0.97429
+      },
+      "calib_select": {
+        "bmn_available_rows": 99999,
+        "bmn_coverage": 0.99999,
+        "event_available_rows": 100000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 100000,
+        "t2_available_rows": 97004,
+        "t2_coverage": 0.97004
+      },
+      "train_fit": {
+        "bmn_available_rows": 0,
+        "bmn_coverage": 0.0,
+        "event_available_rows": 128000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 128000,
+        "t2_available_rows": 0,
+        "t2_coverage": 0.0
+      }
+    },
+    "invalid_span_count": 0,
+    "query_count": 3000,
+    "row_count": 328000,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "t2_missing_count": 133567
+  },
+  "evidence_distribution_audit": {
+    "bmn_final_score": {
+      "count": 199999,
+      "mean": 0.4613111576654197,
+      "missing": 128001,
+      "p50": 0.4179234504699707,
+      "p90": 0.745964801311493
+    },
+    "bmn_z": {
+      "count": 328000,
+      "mean": 2.718692479813798e-18,
+      "missing": 0,
+      "p50": 0.0,
+      "p90": 0.9946044323615109
+    },
+    "event_relevance_score": {
+      "count": 328000,
+      "mean": 0.4802372279019072,
+      "missing": 0,
+      "p50": 0.47742269933223724,
+      "p90": 0.5075007796287536
+    },
+    "event_z": {
+      "count": 328000,
+      "mean": 1.8738398366844107e-18,
+      "missing": 0,
+      "p50": -0.15005165655211483,
+      "p90": 1.3278704751286843
+    },
+    "t2_score": {
+      "count": 194433,
+      "mean": 0.8036310111092309,
+      "missing": 133567,
+      "p50": 0.8120716214179993,
+      "p90": 0.9110289454460144
+    },
+    "t2_z": {
+      "count": 328000,
+      "mean": -4.4463078205719685e-18,
+      "missing": 0,
+      "p50": 0.0,
+      "p90": 0.8959943847625207
+    }
+  },
+  "full_not_completed_reason": "No existing source provides train_fit BMN/T2 evidence for first-stage top128 candidates.",
+  "materialization_progress": {
+    "completed_chunks": 1,
+    "last_status": "C24G_BMN_T2_MATERIALIZED_PARTIAL",
+    "resume_supported": true,
+    "total_chunks": 1
+  },
+  "materialization_sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24g_2_bmn_t2_trainfit_materialization/C24G_2_MATERIALIZATION_SAMPLE.parquet",
+  "mode": "medium",
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "stage": "C24G-2",
+  "status": "C24G_BMN_T2_MATERIALIZED_PARTIAL",
+  "t2_materialization_manifest": {
+    "full_not_completed_reason": "No existing source provides train_fit BMN/T2 evidence for first-stage top128 candidates.",
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24g_full_bmn_t2_evidence_closure.py --stage c24g_2 --mode medium --seed 2026 --force",
+    "missing_reason": "train_fit T2 source absent",
+    "path": "/tmp/c24g_score_cache/CONQUER-RLEM-c2c3/C24G_BMN_T2_PARTIAL_MATERIALIZATION_medium.local.parquet",
+    "query_count": 3000,
+    "row_count": 328000,
+    "sha256": "848bfad3e2c6d443a70cb56f999c5246dd913fe22a09c1bc619de2b16570f5c1",
+    "size_bytes": 68898472,
+    "source": "C24F canonical medium table plus explicit BMN/T2 missing masks",
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "train_fit_coverage": 0.0
+  }
+}
