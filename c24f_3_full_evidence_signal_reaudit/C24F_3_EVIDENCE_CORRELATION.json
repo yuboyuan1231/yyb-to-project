@@ -1,0 +1,101 @@
+{
+  "bmn_z": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": 0.010357533005367854,
+      "pearson": 0.0029895951558086037,
+      "spearman": 0.0060209201613681
+    }
+  },
+  "event_margin": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.0011131418975395542,
+      "pearson": 0.0048358005184182045,
+      "spearman": 0.004495222557295609
+    }
+  },
+  "event_relevance_score": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.006024798327085037,
+      "pearson": 0.002421133507324571,
+      "spearman": 0.003730027872052546
+    }
+  },
+  "event_score_softmax": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.005817217084817759,
+      "pearson": -0.0012710627120686205,
+      "spearman": 0.0012767355601259404
+    }
+  },
+  "event_subtitle_relevance": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.004716529195957401,
+      "pearson": 0.002153197213717924,
+      "spearman": 0.0033005095400671642
+    }
+  },
+  "event_topk_max_score": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.006024798327085037,
+      "pearson": 0.002421133507324571,
+      "spearman": 0.003730027872052546
+    }
+  },
+  "event_topk_mean_score": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.0055951463605131225,
+      "pearson": 0.0014258541554151708,
+      "spearman": 0.003730542540243958
+    }
+  },
+  "event_visual_relevance": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.008506163544909417,
+      "pearson": 0.002333402687551392,
+      "spearman": 0.004361988176393743
+    }
+  },
+  "event_z": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.008402370634277673,
+      "pearson": -2.5168165590921926e-05,
+      "spearman": 0.0010596228262761082
+    }
+  },
+  "first_stage_z": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": 0.058476251360531716,
+      "pearson": 0.1625844368406429,
+      "spearman": 0.07906427504726021
+    }
+  },
+  "t2_z": {
+    "candidate_iou": {
+      "available": true,
+      "count": 200000,
+      "kendall_sample": -0.029131936811907542,
+      "pearson": -0.01936439304297875,
+      "spearman": -0.026082002693750776
+    }
+  }
+}

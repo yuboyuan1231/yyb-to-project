@@ -1,0 +1,6 @@
+{
+  "holdout_report_only": true,
+  "name": "M_all_evidence_no_regression_guard",
+  "select_objective": 0.25927808845958294,
+  "selection_split": "calib_select"
+}
