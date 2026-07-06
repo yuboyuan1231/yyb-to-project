@@ -1,0 +1,15 @@
+{
+  "completed_chunks": 48,
+  "completed_rows": 768,
+  "completed_splits": [
+    "calib_holdout",
+    "calib_select",
+    "train_fit"
+  ],
+  "dry_run": false,
+  "estimated_medium_row_space_rows": 328000,
+  "estimated_medium_row_space_runtime_sec": 9293.237308661142,
+  "estimated_remaining_note": "full requires all train_fit/calib_select/calib_holdout first-stage top128; current run is bounded by max_queries",
+  "measured_rows_per_sec": 35.294482332255676,
+  "resume_supported": true
+}

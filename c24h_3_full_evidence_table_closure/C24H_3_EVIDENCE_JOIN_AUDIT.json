@@ -1,0 +1,5 @@
+{
+  "duplicate_rebuilt_rows_after_dedup": 0,
+  "position_based_join": false,
+  "source": "C24F canonical table left-joined with C24H rebuilt BMN/T2 by split/query_id/video_id"
+}
