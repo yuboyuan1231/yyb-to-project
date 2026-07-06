@@ -1,0 +1,22 @@
+{
+  "annotation_available": true,
+  "first_stage_top128_available": true,
+  "frame_available": false,
+  "raw_frame_strong_feature_route_currently_feasible": false,
+  "raw_video_available": false,
+  "release_feature_available": true,
+  "requires_manual_download_or_agreement": true,
+  "sample_counts": {
+    "annotation": 22,
+    "frame": 0,
+    "raw_video": 0,
+    "release_feature": 2,
+    "strong_feature": 0,
+    "subtitle": 0,
+    "top128": 27
+  },
+  "stage": "C25P-1",
+  "status": "C25P_ONLY_RELEASE_FEATURES_AVAILABLE",
+  "strong_feature_available": false,
+  "subtitle_available": false
+}

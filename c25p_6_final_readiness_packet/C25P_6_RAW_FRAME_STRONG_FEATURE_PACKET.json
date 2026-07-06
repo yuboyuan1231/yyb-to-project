@@ -1,0 +1,73 @@
+{
+  "c24h_artifacts_touched": false,
+  "clip_feasibility": {
+    "available": false,
+    "expected_speed": "fast frame-level",
+    "expected_storage": "frames * dim * dtype",
+    "feature_dim": "512 or 768",
+    "model": "CLIP ViT-B/32 or ViT-L/14"
+  },
+  "data_acquisition_needs": "Manual TVQA/TVR-compliant raw/frame acquisition required",
+  "dinov2_feasibility": {
+    "available": false,
+    "expected_speed": "medium frame-level",
+    "expected_storage": "frames * dim * dtype",
+    "feature_dim": "768 or 1024",
+    "model": "DINOv2 ViT-B/14 or ViT-L/14"
+  },
+  "evaluator_nms_modified": false,
+  "final_decision": "C25P_ONLY_RELEASE_FEATURES_AVAILABLE",
+  "first_stage_top128_availability": true,
+  "frame_availability": false,
+  "genspan_style_motion_prior_feasibility": "feasibility audit only; generated video/motion prior not implemented",
+  "internvideo_feasibility": {
+    "available": false,
+    "expected_speed": "heavy video-language",
+    "expected_storage": "clips * dim * dtype",
+    "feature_dim": "768-1024 typical",
+    "model": "InternVideo/InternVideo2"
+  },
+  "local_only_cache_paths": [
+    "/tmp/c25p_feature_cache/CONQUER-RLEM-c2c3"
+  ],
+  "official_pool_was_read": false,
+  "official_was_run": false,
+  "pilot_status": "C25P_FEATURE_PILOT_SKIPPED_NO_FRAMES",
+  "pseudo_used_for_selection": false,
+  "raw_video_availability": false,
+  "recommended_c25_plan": "Plan C",
+  "runtime_estimate": {
+    "clip": 0.0036,
+    "dinov2": 0.006,
+    "internvideo": 0.008333333333333333,
+    "videomae": 0.004
+  },
+  "stage": "C25P-6",
+  "storage_estimate": {
+    "clip_vit_b32": {
+      "float16_gb": 0.000858306884765625,
+      "float32_gb": 0.00171661376953125
+    },
+    "dinov2_vit_b14": {
+      "float16_gb": 0.0012874603271484375,
+      "float32_gb": 0.002574920654296875
+    },
+    "internvideo": {
+      "float16_gb": 0.00171661376953125,
+      "float32_gb": 0.0034332275390625
+    },
+    "videomae": {
+      "float16_gb": 0.0012874603271484375,
+      "float32_gb": 0.002574920654296875
+    }
+  },
+  "subtitle_availability": false,
+  "tvr_split_annotation_availability": true,
+  "videomae_feasibility": {
+    "available": false,
+    "expected_speed": "slower clip-level",
+    "expected_storage": "clips * dim * dtype",
+    "feature_dim": "768 typical",
+    "model": "VideoMAE/VideoMAEv2"
+  }
+}
