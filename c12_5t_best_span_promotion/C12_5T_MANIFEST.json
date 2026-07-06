@@ -1,0 +1,38 @@
+{
+  "allow_enter_c12_6": false,
+  "artifact_hashes": {
+    "c12_5t_best_span_promotion/C12_5T_0_MARKER_QUARANTINE.json": "2be0f4fef46261b42e3b2459262c2b295e627ec85ccaacc9906254bd0a740c55",
+    "c12_5t_best_span_promotion/C12_5T_0_MARKER_QUARANTINE.md": "4cc06d7a011deb8e94fa9fff495027f4cb74a59d800441866caae96079cc0fcc",
+    "c12_5t_best_span_promotion/C12_5T_A_FEATURE_SCHEMA.json": "10a305b41ae81500f7bd6eb75be10c5fd1c6bfdcc91062ccd74d9cf1b0c215c8",
+    "c12_5t_best_span_promotion/C12_5T_A_FEATURE_SEMANTICS_FIX.md": "55d5c2f0b9876e9bcc23063d27b39d9b055569e12b4dd6b4c3be7d7d5cab85c5",
+    "c12_5t_best_span_promotion/C12_5T_A_RETRIEVER_SCORE_AUDIT.json": "a47880c1765e51a904e5f69b189aede31f8ac1c58449ebe4a39a935d5aeed0c8",
+    "c12_5t_best_span_promotion/C12_5T_B_GENERATED_POOL_AUDIT.json": "a35c7a502a8524590effb6d44b7b7e314c77f4e2e08c5bb58188e75cb5143306",
+    "c12_5t_best_span_promotion/C12_5T_B_GENERATED_POOL_LOCK.md": "96db63e9f2b00756d2860b29a90e0e54399d4cff7b92e223302a64917b0b807d",
+    "c12_5t_best_span_promotion/C12_5T_B_PROMOTION_DATASET_AUDIT.json": "42293b04a6ca15b9b1230fe13311a90c314838d6426dfc510392c2ea2ddb5d7b",
+    "c12_5t_best_span_promotion/C12_5T_B_PROMOTION_DATASET_AUDIT.md": "8687c69aba5689d2a41ed833e9aeb80eab9ab8fbd1f731ead68215f8931df685",
+    "c12_5t_best_span_promotion/C12_5T_C_TRAINING_RESULTS.json": "281b3a3c5f8f26c5f7e0413265af84a25a4a8bdd09d16e5be61045e3438f8d3b",
+    "c12_5t_best_span_promotion/C12_5T_DECISION.json": "de74127b9749913d2fcfe460bab6ecacf22773abb48ebda8f2c13fb7df55d80e",
+    "c12_5t_best_span_promotion/C12_5T_DECISION.md": "7d93c7616c3c3d14f49f6cc3a6ecb74cf5cd142990ea3a9678ccd654d9db6a02",
+    "c12_5t_best_span_promotion/C12_5T_D_CALIBRATION_RESULTS.json": "2089282d1ca533b3c5d18a74e6945b37a83d8f657585e6d16e171328e27e90f6",
+    "c12_5t_best_span_promotion/C12_5T_E_DURATION_BREAKDOWN.json": "d39e5f4a6788b4cdaff0f55d721bd2ce67e0c0d6e7bd12bac868adb18f2fb153",
+    "c12_5t_best_span_promotion/C12_5T_E_FAILURE_CASES.json": "d7952afb9033c277631048a7f7c95cd38d5d3b169bc1544b9dc11d178033d545",
+    "c12_5t_best_span_promotion/C12_5T_E_QUERY_TYPE_BREAKDOWN.json": "41da678de45bad0d91c115f69eb4bde16355a21f5eb9535e72d0257bf4f0ccc5",
+    "c12_5t_best_span_promotion/C12_5T_E_RESULTS.json": "d87f06479fd406a0089c92ab8a629c7f5259a53d414189e56930b1a5c7926edc",
+    "c12_5t_best_span_promotion/C12_5T_E_RESULTS.md": "9d977e016f35eab313b624e43daed3c0f0b17b5137a6e87e8ae361c81e16d85d",
+    "c12_5t_best_span_promotion/C12_5T_MANIFEST.json": "ef738605f1d52cfa6d0187e955ad5c776e615cc126f6d09af2ff8143ea56eee4"
+  },
+  "best_ranker_variant": "T2_listwise_soft_iou",
+  "evaluator_modified": false,
+  "feature_semantics_status": "C12_5T_FEATURE_SEMANTICS_PASS",
+  "marker_quarantine_status": "C12_STALE_OFFICIAL_MARKERS_QUARANTINED",
+  "nms_modified": false,
+  "official_val_used": false,
+  "stage": "C12-5T",
+  "status": "C12_BEST_SPAN_PROMOTION_STILL_WEAK_NEED_STRONGER_BOUNDARY_MODEL",
+  "trained_ranker_variants": [
+    "T1_pairwise_best_vs_topneg",
+    "T2_listwise_soft_iou",
+    "T3_topk_promotion",
+    "T4_duration_balanced_promotion"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "c22_source_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_1_feature_event_audit/C22_1_SOURCE_MANIFEST.json",
+    "readable": true,
+    "sha256": "2c58ea152ff343f1cf23caebd162b5adc301e1fca0248bbae0b5fcfe58b0fca9",
+    "size_bytes": 852
+  },
+  "c23_event_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c23_3_full_evidence_materialization/C23_3_EVENT_RELEVANCE_MANIFEST.json",
+    "readable": true,
+    "sha256": "2124b0732cea249e53d25da522a776fd7c17313d344b081f78a2488759c7b868",
+    "size_bytes": 95
+  },
+  "direct_event_score_columns_available": false,
+  "event_proxy_columns": [
+    "old_norm",
+    "duration_score"
+  ],
+  "raw_video_used": false
+}

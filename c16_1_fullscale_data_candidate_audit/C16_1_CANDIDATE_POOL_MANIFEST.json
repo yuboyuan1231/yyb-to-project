@@ -1,0 +1,28 @@
+{
+  "c12_feature_builder_reference": "run_c12_5_native_span_generation.py",
+  "candidate_count_upper_bound_by_split": {
+    "calib_holdout": 4128000,
+    "calib_select": 4128000,
+    "pseudo_official_holdout": 4128000,
+    "train_fit": 4128000
+  },
+  "candidate_pool_hash": "ccd364258d055362a17e9ad3d37540e667753ac8e830c2d2b41883096e442ed5",
+  "candidate_source": "C16 dense BMN start-duration map over existing clip features",
+  "feature_builder_path": "run_c16_fullscale_bmn_native_localizer.py",
+  "generation_config": {
+    "D_max": 64,
+    "max_t": 96,
+    "nms_threshold": 0.7,
+    "topK": [
+      50,
+      100,
+      500
+    ]
+  },
+  "localizer_seed": "C15 B3 architecture seed",
+  "mode": "medium",
+  "not_c7_b6_fixed_prediction_pool": true,
+  "official_val_used": false,
+  "rebuilt_pool": true,
+  "stage": "C16-1"
+}

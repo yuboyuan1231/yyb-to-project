@@ -1,0 +1,178 @@
+{
+  "checkpoints": {
+    "B3_full_query_aware_map_seed2026": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.008610574972062
+        },
+        {
+          "epoch": 2,
+          "loss": 0.8794789371036348
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B3_full_query_aware_map_seed2026.pt",
+      "runtime_seconds": 9.732962608337402,
+      "seed": 2026,
+      "sha256": "4f23d7580a50976174fb25da2bd0c476415354cf7b09f5377bab1e00a75c6629",
+      "variant": "B3_full_query_aware_map"
+    },
+    "B3_full_query_aware_map_seed2027": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.0347273576827276
+        },
+        {
+          "epoch": 2,
+          "loss": 0.8770144446974709
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B3_full_query_aware_map_seed2027.pt",
+      "runtime_seconds": 8.909302473068237,
+      "seed": 2027,
+      "sha256": "a38ef3124b5b3467aff4f2564b123fdaf2dd6f7207561f64c8890c72042d228b",
+      "variant": "B3_full_query_aware_map"
+    },
+    "B4_full_duration_conditioned_map_seed2026": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.215433337149166
+        },
+        {
+          "epoch": 2,
+          "loss": 1.0740530611503691
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B4_full_duration_conditioned_map_seed2026.pt",
+      "runtime_seconds": 9.201678276062012,
+      "seed": 2026,
+      "sha256": "8ae7ba9c1a60547189c53398030e99bd9af86d82150d924f5b1cdfd95ada8ac3",
+      "variant": "B4_full_duration_conditioned_map"
+    },
+    "B4_full_duration_conditioned_map_seed2027": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.2449741335142226
+        },
+        {
+          "epoch": 2,
+          "loss": 1.073204749396869
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B4_full_duration_conditioned_map_seed2027.pt",
+      "runtime_seconds": 9.226324796676636,
+      "seed": 2027,
+      "sha256": "8d7a4665638a0b20ca609ac2a4cceaf182a2f383735220f15391c0fd2ae4c7fb",
+      "variant": "B4_full_duration_conditioned_map"
+    },
+    "B5_full_short_specialized_map_seed2026": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.3064620019424529
+        },
+        {
+          "epoch": 2,
+          "loss": 1.1163917176780247
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B5_full_short_specialized_map_seed2026.pt",
+      "runtime_seconds": 9.179965734481812,
+      "seed": 2026,
+      "sha256": "464d507544b396f44425291985c1e156b14cc8aba4d75c3ad6f30cfd2e39582d",
+      "variant": "B5_full_short_specialized_map"
+    },
+    "B5_full_short_specialized_map_seed2027": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.3518095243544805
+        },
+        {
+          "epoch": 2,
+          "loss": 1.11559292390233
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B5_full_short_specialized_map_seed2027.pt",
+      "runtime_seconds": 9.123636722564697,
+      "seed": 2027,
+      "sha256": "024569cad1bb52f114f7f3c6028fc0136b18c81d4aa8d6dad41a43ebbadf452f",
+      "variant": "B5_full_short_specialized_map"
+    },
+    "B6_full_query_aware_actionness_map_seed2026": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.1059480827479136
+        },
+        {
+          "epoch": 2,
+          "loss": 0.973343197788511
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B6_full_query_aware_actionness_map_seed2026.pt",
+      "runtime_seconds": 9.309877157211304,
+      "seed": 2026,
+      "sha256": "48c89c16870509bdbfbd8d20b7aab7040a263f6d1179438ef1d24d8838c38574",
+      "variant": "B6_full_query_aware_actionness_map"
+    },
+    "B6_full_query_aware_actionness_map_seed2027": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.1328939504566646
+        },
+        {
+          "epoch": 2,
+          "loss": 0.9695983550378254
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B6_full_query_aware_actionness_map_seed2027.pt",
+      "runtime_seconds": 9.499695539474487,
+      "seed": 2027,
+      "sha256": "3d4ba64b9b1a0e6a58d336fd857cee4155cd89e70e645e12b678173d53f2fdb2",
+      "variant": "B6_full_query_aware_actionness_map"
+    },
+    "B7_full_query_aware_rankloss_map_seed2026": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.099627524614334
+        },
+        {
+          "epoch": 2,
+          "loss": 0.9521450336490359
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+      "runtime_seconds": 9.444662094116211,
+      "seed": 2026,
+      "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e",
+      "variant": "B7_full_query_aware_rankloss_map"
+    },
+    "B7_full_query_aware_rankloss_map_seed2027": {
+      "curves": [
+        {
+          "epoch": 1,
+          "loss": 1.1309989477906908
+        },
+        {
+          "epoch": 2,
+          "loss": 0.9491624115478425
+        }
+      ],
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2027.pt",
+      "runtime_seconds": 9.172533988952637,
+      "seed": 2027,
+      "sha256": "ca2848976ab0815b341bb465205ec44c76352479432944c2d2cb6f75fae0b35e",
+      "variant": "B7_full_query_aware_rankloss_map"
+    }
+  },
+  "mode": "medium",
+  "note": "checkpoints are local small train-only artifacts; large predictions are not saved",
+  "official_val_used": false,
+  "stage": "C16-2"
+}

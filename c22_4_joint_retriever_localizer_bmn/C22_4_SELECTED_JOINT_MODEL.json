@@ -1,0 +1,14 @@
+{
+  "alpha_beta_gamma_selected_on": "calib_select only when full score table is available",
+  "implemented_scope": "native retriever + event proxy trained; BMN coupling summarized against existing train-only diagnostics",
+  "joint_score_formula": "not promoted; no official; no NMS/evaluator changes",
+  "localizer": "C19/C20/C21 BMN/T2 evidence diagnostic only",
+  "name": "J2_shared_encoder_retriever_bmn_medium_proxy",
+  "retriever": {
+    "epochs": 4,
+    "event_proxy": "subtitle_max_as_partial_event_token",
+    "hidden": 384,
+    "name": "P2_query_gated_multimodal_pool",
+    "top_hard_negatives": 96
+  }
+}

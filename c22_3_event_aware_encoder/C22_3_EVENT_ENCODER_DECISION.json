@@ -1,0 +1,43 @@
+{
+  "architecture": {
+    "event_token": "subtitle max/event proxy from existing release features",
+    "full_transformer_not_run": true,
+    "implemented": "E3_query_aware_event_pooling_proxy",
+    "not_eventformer_reproduction": true
+  },
+  "evaluator_modified": false,
+  "event_relevance_audit": {
+    "event_sample_only": true,
+    "gt_overlap_event_top1_recall_05": 56.0,
+    "gt_overlap_event_top3_recall_05": 56.0,
+    "mean_best_event_iou": 0.5117396081399955,
+    "sample_query_count": 25
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "retriever_holdout_metrics": {
+    "GT_video_mean_rank": 5789.952,
+    "GT_video_median_rank": 4679.0,
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.2,
+    "VR_R@100": 1.7,
+    "VR_R@5": 0.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 100.0
+  },
+  "seed": 2026,
+  "stage": "C22-3",
+  "status": "C22_EVENT_ENCODER_INCONCLUSIVE",
+  "variants": {
+    "E0_clip_only_baseline": "represented by first-stage/native global baseline",
+    "E1_event_only_retriever": "diagnostic only",
+    "E2_clip_plus_event_concat": "implemented in C22-2 as gated subtitle/visual/event score",
+    "E3_query_aware_event_pooling": "implemented as query-gated event proxy",
+    "E4_hierarchical_event_encoder": "deferred to full train-fit",
+    "E5_event_guided_clip_reweight": "deferred"
+  }
+}

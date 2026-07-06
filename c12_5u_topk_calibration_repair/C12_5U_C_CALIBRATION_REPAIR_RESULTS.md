@@ -1,0 +1,25 @@
+# C12-5U-C Calibration Repair Results
+
+## U1_two_head_select
+- Spearman: -0.14811460730177597
+- top100 Spearman: 0.13085859671444822
+- AUC@0.7: 0.58348
+- IoU@0.7 top100/top50: 42.6036866359447 / 28.80184331797235
+
+## U2_two_head_quality
+- Spearman: -0.14811460730177597
+- top100 Spearman: 0.06724012249382978
+- AUC@0.7: 0.58348
+- IoU@0.7 top100/top50: 53.31797235023041 / 38.963133640552996
+
+## U3_select_then_quality_top100
+- Spearman: -0.14811460730177597
+- top100 Spearman: 0.12950124770096824
+- AUC@0.7: 0.58348
+- IoU@0.7 top100/top50: 42.6036866359447 / 34.12442396313364
+
+## U4_duration_bucket_quality
+- Spearman: -0.21281543808093217
+- top100 Spearman: 0.03232574213784362
+- AUC@0.7: 0.4931075
+- IoU@0.7 top100/top50: 53.31797235023041 / 38.963133640552996

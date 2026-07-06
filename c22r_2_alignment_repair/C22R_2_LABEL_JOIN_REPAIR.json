@@ -1,0 +1,9 @@
+{
+  "gt_video_source": "corpus.by_id[query_id].vid_name",
+  "join_key": [
+    "query_id",
+    "video_id"
+  ],
+  "position_based_join": false,
+  "silent_zero_fill": false
+}

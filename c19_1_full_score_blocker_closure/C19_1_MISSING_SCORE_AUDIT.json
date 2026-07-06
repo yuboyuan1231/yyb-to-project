@@ -1,0 +1,57 @@
+{
+  "irrecoverable_missing_scores": {
+    "bmn_score": 6890828,
+    "t2_score": 7202656
+  },
+  "missing_mask_available": true,
+  "missing_source_counts": {
+    "bmn_score": 6890828,
+    "final_score": 0,
+    "retriever_score": 0,
+    "t2_score": 7202656
+  },
+  "necessary_columns": {
+    "bmn_final_score": {
+      "exists": true,
+      "missing_count": 6890828
+    },
+    "bmn_score": {
+      "exists": true,
+      "missing_count": 6890828
+    },
+    "final_score": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "query_id": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "retriever_score": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "span_end": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "span_start": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "split": {
+      "exists": true,
+      "missing_count": 0
+    },
+    "t2_score": {
+      "exists": true,
+      "missing_count": 7202656
+    },
+    "video_id": {
+      "exists": true,
+      "missing_count": 0
+    }
+  },
+  "normalization_fill_policy": "per-query minimum before minmax for normalized score only; source missing counts retained",
+  "silent_zero_fill_used": false
+}

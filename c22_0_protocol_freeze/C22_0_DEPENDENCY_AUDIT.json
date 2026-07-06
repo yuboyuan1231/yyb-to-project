@@ -1,0 +1,65 @@
+{
+  "c12_split_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "readable": true,
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31",
+    "size_bytes": 1045
+  },
+  "c19_score_cache_medium": {
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 1447443108
+  },
+  "c21_final": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c21_6_final_decision/C21_6_FINAL_DECISION.json",
+    "readable": true,
+    "sha256": "0a4fc3fbb988e4a739e010b70c73943ae4dbce0d20433b11bab2ac5381254284",
+    "size_bytes": 3260
+  },
+  "c21_pair_cache_medium": {
+    "exists": true,
+    "path": "/tmp/c21_score_cache/CONQUER-RLEM-c2c3/C21_FRONT_RANK_PAIR_DATASET_train_medium.local.parquet",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 5063604
+  },
+  "query_lmdb": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "subtitle_lmdb": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "train_jsonl": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_train_select100_release.jsonl",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 16627688
+  },
+  "video_meta": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_video2dur_idx.json",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 990120
+  },
+  "visual_lmdb_resnet_slowfast": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": null
+  }
+}

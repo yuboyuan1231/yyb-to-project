@@ -1,0 +1,16 @@
+{
+  "candidate": "C7C3-B checkpoint-refined RLEM candidate",
+  "use": "fallback only before official if primary rejected in readiness review; never switch after official",
+  "composition": "fixed R1-priority anchor-preserving composition",
+  "r1_priority_config": {
+    "video_rank_limit": 5,
+    "integrated_topn": 5,
+    "anchor_rank_limit": 5,
+    "anchor_margin_threshold_name": "p65",
+    "anchor_margin_threshold": 0.3032871469855309,
+    "same_top1_video_only": true,
+    "require_in_anchor": false,
+    "topK_gate_mode": "top5_allowed",
+    "max_video_promotion": 3
+  }
+}

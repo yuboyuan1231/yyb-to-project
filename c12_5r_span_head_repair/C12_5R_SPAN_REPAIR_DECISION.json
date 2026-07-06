@@ -1,0 +1,19 @@
+{
+  "aligned_delta_iou05_top100": -33.333333333333336,
+  "aligned_delta_iou07_top100": -27.083333333333336,
+  "allow_enter_c12_6": false,
+  "best_iou05_top100": 63.31797235023041,
+  "best_iou07_top100": 43.45622119815668,
+  "best_iou07_top500": 74.49308755760369,
+  "best_repair_variant": "r1_duration_conditioned_dense",
+  "evaluator_modified": false,
+  "gap_recovered_vs_b6_reference": 0.014364252687070632,
+  "generation_vs_ranking_bottleneck": "proposal_quality_ranking",
+  "nms_modified": false,
+  "official_val_used": false,
+  "reason": "Selected on calib_select only. Holdout IoU@0.7 top100=43.4562; short=31.3535; gap_recovered=0.0144; bottleneck=proposal_quality_ranking.",
+  "same_query_comparison_available": true,
+  "short_iou07_top100": 31.353535353535353,
+  "stage": "C12-5R-F",
+  "status": "C12_LOCALIZER_PQ_RANKING_BOTTLENECK"
+}

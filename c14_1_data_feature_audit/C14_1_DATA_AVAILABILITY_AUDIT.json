@@ -1,0 +1,58 @@
+{
+  "clip_length_timestamp_mapping": "Existing C12 localizer maps timestamps to clip indices with duration-normalized ts_to_idx/idx_to_ts over subtitle clip count capped by MAX_T.",
+  "feature_row_count": {
+    "query": 86784,
+    "subtitle_video": 17435,
+    "visual_video": 17435
+  },
+  "lmdb_sample_dims": {
+    "first_stage_rank_lmdb": {
+      "error": "AttributeError(\"'memoryview' object has no attribute 'decode'\")",
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/train_select100_top2000"
+    },
+    "query_lmdb": {
+      "error": "AttributeError(\"'memoryview' object has no attribute 'decode'\")",
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query"
+    },
+    "subtitle_lmdb": {
+      "error": "AttributeError(\"'memoryview' object has no attribute 'decode'\")",
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5"
+    },
+    "visual_lmdb": {
+      "error": "AttributeError(\"'memoryview' object has no attribute 'decode'\")",
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5"
+    }
+  },
+  "nan_inf_sample_audit": {
+    "query_feature_finite": true,
+    "subtitle_max_finite": true,
+    "subtitle_mean_finite": true,
+    "visual_mean_finite": true
+  },
+  "official_val_used": false,
+  "query_count": 86784,
+  "query_feature_dim": 768,
+  "raw_video_exists": false,
+  "raw_video_files_sample": [],
+  "raw_video_status": "C14_RAW_VIDEO_NOT_AVAILABLE",
+  "split_counts": {
+    "calib_holdout": 4340,
+    "calib_select": 8677,
+    "pseudo_official_holdout": 4339,
+    "train_fit": 69428
+  },
+  "stage": "C14-1",
+  "status": "C14_EVENT_FEATURE_FEASIBLE_FROM_EXISTING_FEATURES",
+  "strong_visual_status": "C14_STRONG_VISUAL_EXTRACTION_BLOCKED_BY_RAW_VIDEO_ABSENCE",
+  "subtitle_feature_dim": 768,
+  "subtitle_timestamp_exists": true,
+  "supports_clip_siglip_dinov2_videomae_internvideo_pilot": false,
+  "supports_event_feature_pilot_from_existing_features": true,
+  "supports_text_subtitle_pilot_from_existing_features": true,
+  "video_count": 17435,
+  "visual_feature_dim": 4352
+}

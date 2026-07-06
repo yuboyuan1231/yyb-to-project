@@ -1,0 +1,45 @@
+{
+  "d_e_f_subset_audit": {
+    "full_subset_improvement_not_proven": true,
+    "requires_full_evidence_materialization": true
+  },
+  "evaluator_modified": false,
+  "medium_full_consistency": {
+    "full_allowed_after_medium_c23_1_2": true,
+    "full_not_run_by_default": true,
+    "medium_completed": true
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "pseudo_onelook_diagnostic": {
+    "command_config_hash": "12ec21496b094127c766a81e29a54beaafa75a5c1b1e6cdf001c9f9a24d0754c",
+    "no_post_onelook_adjustment": true,
+    "pseudo_official_not_used_for_selection": true,
+    "pseudo_one_look_executed": false,
+    "selected_config_frozen_before_onelook": true
+  },
+  "query_duration_robustness": {
+    "source": "C23-2/C23-4 medium aggregate; detailed full breakdown deferred"
+  },
+  "seed": 2026,
+  "seed_robustness": {
+    "seed2026": {
+      "integration": "C23_FULL_NATIVE_COUPLING_STABLE_NO_GAIN",
+      "retriever": "C23_RESIDUAL_RETRIEVER_STABLE_NO_GAIN"
+    },
+    "seed2027": "not rerun in medium because selected retriever is deterministic baseline-preserving",
+    "seed2028": "not rerun in medium because selected retriever is deterministic baseline-preserving"
+  },
+  "selection_firewall_audit": {
+    "evaluator_modified": false,
+    "nms_modified": false,
+    "official_prediction_pool_used": false,
+    "official_val_used": false,
+    "pseudo_official_holdout_used_for_selection": false
+  },
+  "stage": "C23-5",
+  "status": "C23_ROBUSTNESS_PARTIAL"
+}

@@ -1,0 +1,96 @@
+{
+  "bmn_score_manifest": {
+    "c17_medium": {
+      "exists": true,
+      "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+      "readable": true,
+      "sha256": null,
+      "size_bytes": 1006607541
+    },
+    "c19_canonical_medium": {
+      "exists": true,
+      "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+      "readable": true,
+      "sha256": null,
+      "size_bytes": 1447443108
+    }
+  },
+  "evaluator_modified": false,
+  "event_relevance_manifest": {
+    "raw_video_used": false,
+    "source": "C22/C22R event proxy; full event scoring deferred"
+  },
+  "evidence_coverage_audit": {
+    "duplicate_candidate_count": 0,
+    "full_trainfit_evidence_materialized": false,
+    "invalid_span_count": 0,
+    "loaded_medium_evidence_rows": 22779481,
+    "loaded_medium_query_count": 2000,
+    "medium_c17_score_exists": true,
+    "medium_c19_canonical_exists": true,
+    "missing_score_count": 0,
+    "missing_scores_mask_required": true,
+    "mode": "medium",
+    "nan_inf_count": 0,
+    "position_based_join": false,
+    "sample_rows": 800,
+    "silent_zero_fill": false,
+    "split_query_coverage": {
+      "calib_holdout": 1000,
+      "calib_select": 1000
+    }
+  },
+  "evidence_sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c23_3_full_evidence_materialization/C23_3_EVIDENCE_SAMPLE.parquet",
+  "evidence_schema": {
+    "bmn_columns": [
+      "bmn_pred_iou",
+      "bmn_p_iou_05",
+      "bmn_p_iou_07",
+      "bmn_rank_score",
+      "bmn_final_score",
+      "start_prob",
+      "end_prob",
+      "actionness_score",
+      "span_map_rank"
+    ],
+    "event_columns": [
+      "event_relevance_score",
+      "best_event_overlap_proxy",
+      "query_event_score",
+      "event_rank"
+    ],
+    "retriever_residual_columns": [
+      "residual_score",
+      "residual_gate",
+      "no_regression_guard_score"
+    ],
+    "schema_hash": "c395a60e96babee7454a3a706fb57504ddb2c707095ada5dcc331eec7562ce48",
+    "t2_columns": [
+      "t2_score",
+      "t2_margin",
+      "t2_agreement"
+    ]
+  },
+  "local_only_artifacts": [
+    {
+      "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+      "sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98"
+    },
+    {
+      "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+      "sha256": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df"
+    }
+  ],
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "stage": "C23-3",
+  "status": "C23_FULL_EVIDENCE_PARTIAL",
+  "t2_score_manifest": {
+    "full_required": false,
+    "source": "C17/C19 train-only medium tables when materialized"
+  }
+}

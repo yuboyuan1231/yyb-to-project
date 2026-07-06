@@ -1,0 +1,56 @@
+# C12-5T-E Best-Span Promotion Results
+
+## C12_5_teacher_distilled_baseline
+- IoU@0.7 top50: 30.3687
+- IoU@0.5 top100: 62.9954
+- IoU@0.7 top100: 43.0876
+- IoU@0.7 top500: 74.5161
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 30.99078341013825/18.82488479262673/5.783410138248848
+- short IoU@0.7 top100: 30.747474747474747
+- PQ Spearman: 0.07283213290138169
+- AUC@0.7: 0.53702
+
+## T1_pairwise_best_vs_topneg
+- IoU@0.7 top50: 32.7189
+- IoU@0.5 top100: 73.2488
+- IoU@0.7 top100: 46.9816
+- IoU@0.7 top500: 73.6866
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 38.08755760368663/25.11520737327189/7.626728110599078
+- short IoU@0.7 top100: 38.666666666666664
+- PQ Spearman: -0.17987609819009154
+- AUC@0.7: 0.50964
+
+## T2_listwise_soft_iou
+- IoU@0.7 top50: 38.8710
+- IoU@0.5 top100: 81.2212
+- IoU@0.7 top100: 55.0000
+- IoU@0.7 top500: 82.4654
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 45.87557603686636/29.493087557603687/9.67741935483871
+- short IoU@0.7 top100: 45.09090909090909
+- PQ Spearman: -0.199218575616094
+- AUC@0.7: 0.547285
+
+## T3_topk_promotion
+- IoU@0.7 top50: 18.6406
+- IoU@0.5 top100: 57.5806
+- IoU@0.7 top100: 33.0415
+- IoU@0.7 top500: 74.0783
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 24.88479262672811/13.59447004608295/3.3870967741935485
+- short IoU@0.7 top100: 24.606060606060606
+- PQ Spearman: -0.20625821740479802
+- AUC@0.7: 0.475555
+
+## T4_duration_balanced_promotion
+- IoU@0.7 top50: 35.2304
+- IoU@0.5 top100: 78.6406
+- IoU@0.7 top100: 50.7143
+- IoU@0.7 top500: 82.5115
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 44.63133640552996/29.23963133640553/9.262672811059907
+- short IoU@0.7 top100: 47.39393939393939
+- PQ Spearman: -0.21767694417748
+- AUC@0.7: 0.52753

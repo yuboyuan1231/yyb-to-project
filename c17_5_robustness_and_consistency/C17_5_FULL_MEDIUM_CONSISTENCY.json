@@ -1,0 +1,28 @@
+{
+  "full": null,
+  "medium": {
+    "GT_VIDEO_TOP100_IoU0.5": 47.4,
+    "GT_VIDEO_TOP100_IoU0.7": 27.9,
+    "GT_VIDEO_TOP50_IoU0.5": 47.4,
+    "GT_VIDEO_TOP50_IoU0.7": 27.9,
+    "VCMR_R@100_IoU0.5": 37.7,
+    "VCMR_R@100_IoU0.7": 22.2,
+    "VCMR_R@10_IoU0.5": 12.5,
+    "VCMR_R@10_IoU0.7": 6.25,
+    "VCMR_R@1_IoU0.5": 2.85,
+    "VCMR_R@1_IoU0.7": 1.4,
+    "VCMR_R@5_IoU0.5": 8.2,
+    "VCMR_R@5_IoU0.7": 3.95,
+    "VR_R@1": 28.15,
+    "VR_R@10": 73.5,
+    "VR_R@100": 88.6,
+    "VR_R@5": 60.8,
+    "correct_video_wrong_span_rate": 25.3,
+    "duplicate_span_count": 0,
+    "invalid_span_count": 0,
+    "query_count": 2000,
+    "top1_mean_iou": 0.034231185747821954,
+    "wrong_video_high_score_rate": 71.85
+  },
+  "status": "not_run"
+}

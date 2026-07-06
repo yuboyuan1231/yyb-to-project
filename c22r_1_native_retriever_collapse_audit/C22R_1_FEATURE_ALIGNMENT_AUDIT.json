@@ -1,0 +1,13 @@
+{
+  "c22_encoder_dim_match": true,
+  "event_pooling_reorders_video": false,
+  "feature_key_subtitle_equals_video_id": true,
+  "feature_key_visual_equals_video_id": true,
+  "query_id_consistency": true,
+  "query_missing_count": 0,
+  "score_collapse_ratio_std_lt_1e_6": 0.0,
+  "score_entropy_mean_within_first_stage_top128": 4.597512283325195,
+  "score_std_mean_within_first_stage_top128": 0.6978494218736887,
+  "video_id_key_source": "corpus.train_videos[pos] from first-stage pickle",
+  "warm_start_checkpoint_loaded": true
+}

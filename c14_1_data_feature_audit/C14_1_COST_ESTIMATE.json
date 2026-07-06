@@ -1,0 +1,24 @@
+{
+  "disk": [
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "/dev/sda1       1.8T  1.2T  613G  65% /home",
+    "/dev/sda1       1.8T  1.2T  613G  65% /home",
+    "/dev/nvme0n1p2  468G  104G  341G  24% /"
+  ],
+  "gpu": [
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24094 MiB, 590.48.01",
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24113 MiB, 590.48.01"
+  ],
+  "gpu_cpu_cost_estimate": {
+    "event_existing_features_sample": "single GPU minutes plus CPU feature building",
+    "raw_video_visual_models": "blocked_by_raw_video_absence",
+    "text_subtitle_sample": "single GPU minutes; CPU fallback possible"
+  },
+  "official_val_used": false,
+  "stage": "C14-1",
+  "storage_estimate": {
+    "c14_event_parquet_sample": "tens to hundreds of MiB depending C14_POOL_EVAL_LIMIT",
+    "c14_text_parquet_sample": "tens to hundreds of MiB depending C14_POOL_EVAL_LIMIT",
+    "full_raw_visual_extraction": "blocked unless raw video is located; would likely require tens to hundreds of GiB"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "evaluator_available_for_train_only_full_vcmr": false,
+  "fallback_metric": "same-query topK moment coverage with retriever_top100 joint proxy",
+  "gt_video_top100_proxy_note": "first-stage replay is used only as train-only retriever coupling audit",
+  "mode": "medium",
+  "official_val_used": false,
+  "stage": "C16-4",
+  "wrong_video_high_score_rate": null
+}
