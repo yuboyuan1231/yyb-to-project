@@ -1,0 +1,99 @@
+{
+  "c17": {
+    "load_seconds": 9.691548824310303,
+    "official_used": false,
+    "queries_by_split": {
+      "calib_holdout": 900,
+      "calib_select": 900
+    },
+    "rows": 10238083,
+    "seed": 2026,
+    "source_path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet"
+  },
+  "c26": {
+    "arrays_manifest_hash": "d2323d766b4a8dd0",
+    "canonical_manifest_hash": "5466f4395845a5cd",
+    "checkpoint": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_PREM_RETRIEVER_medium_seed2026.local.pt",
+    "formula": {
+      "alpha": 1.0,
+      "beta": 0.1,
+      "delta": 0.0,
+      "eta": 0.0,
+      "focus": "subtitle",
+      "gamma": 0.08,
+      "name": "F_subtitle_focus_only"
+    },
+    "queries_by_split": {
+      "calib_holdout": 900,
+      "calib_select": 900
+    },
+    "rows": 230400
+  },
+  "join": {
+    "duplicate_c17_span_keys": 0,
+    "merged_rows": 10238083,
+    "missing_c26_score_rows": 0,
+    "missing_rate": 0.0
+  },
+  "local_joined_path": "/tmp/c26r_score_cache/CONQUER-RLEM-c2c3/C26R_C17_C26_JOINED_MULTI_SPAN_medium_seed2026.local.parquet",
+  "local_joined_size_bytes": 1014360104,
+  "norm": {
+    "bmn_final_score": {
+      "fill_policy": "per-query minimum before minmax; audited, not silent zero",
+      "missing_count": 2972674
+    },
+    "c26_final_F_score": {
+      "fill_policy": "C26 repeated video score renormalized inside C17 query/seed row-space",
+      "missing_count": 0
+    },
+    "c26_retriever_score": {
+      "fill_policy": "C26 repeated video score renormalized inside C17 query/seed row-space",
+      "missing_count": 0
+    },
+    "c26_subtitle_relevance": {
+      "fill_policy": "C26 repeated video score renormalized inside C17 query/seed row-space",
+      "missing_count": 0
+    },
+    "c26_visual_relevance": {
+      "fill_policy": "C26 repeated video score renormalized inside C17 query/seed row-space",
+      "missing_count": 0
+    },
+    "old_c12_score": {
+      "fill_policy": "per-query minimum before minmax; audited, not silent zero",
+      "missing_count": 3225060
+    },
+    "retriever_score": {
+      "fill_policy": "per-query minimum before minmax; audited, not silent zero",
+      "missing_count": 0
+    },
+    "t2_score": {
+      "fill_policy": "per-query minimum before minmax; audited, not silent zero",
+      "missing_count": 3225060
+    }
+  },
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "proposal_audit": {
+    "gt_video_span_oracle_coverage": {
+      "gt_video_rows": 102714,
+      "iou05_span_rows": 5179,
+      "iou07_span_rows": 1847
+    },
+    "query_count": 1800,
+    "query_video_pair_count": 180000,
+    "rows": 10238083,
+    "span_count_per_query_video": {
+      "max": 64,
+      "median": 57.0,
+      "min": 3,
+      "p95": 61.0
+    },
+    "span_rows_per_query": {
+      "max": 6116,
+      "median": 5690.0,
+      "min": 5400,
+      "p95": 5855.0
+    }
+  },
+  "pseudo_official_holdout_used_for_selection": false
+}
