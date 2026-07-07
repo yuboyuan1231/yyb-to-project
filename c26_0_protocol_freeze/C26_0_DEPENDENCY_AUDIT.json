@@ -1,0 +1,57 @@
+{
+  "c25p": {
+    "final": "C25P_ONLY_RELEASE_FEATURES_AVAILABLE",
+    "inventory": "C25P_ONLY_RELEASE_FEATURES_AVAILABLE"
+  },
+  "feature_records": {
+    "first_stage_rank_lmdb": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/train_select100_top2000",
+      "readable": true,
+      "size_bytes": null
+    },
+    "resnet_slowfast_visual": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5",
+      "readable": true,
+      "size_bytes": null
+    },
+    "roberta_query": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+      "readable": true,
+      "size_bytes": null
+    },
+    "roberta_subtitle": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+      "readable": true,
+      "size_bytes": null
+    },
+    "split_dir": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/splits",
+      "readable": true,
+      "size_bytes": null
+    },
+    "train_jsonl": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_train_select100_release.jsonl",
+      "readable": true,
+      "sha256": "af6457ac5051c34824563f47a4cb89e3e31c36f8a357375cef3e901e19815f98",
+      "size_bytes": 16627688
+    },
+    "video_meta": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_video2dur_idx.json",
+      "readable": true,
+      "sha256": "b2ce724dbd0e6be11226ec1e97ad358ce79e1df94856569cff4e65125f063ae5",
+      "size_bytes": 990120
+    }
+  },
+  "split_counts": {
+    "calib_holdout": 4340,
+    "calib_select": 8677,
+    "train_fit": 69428
+  }
+}

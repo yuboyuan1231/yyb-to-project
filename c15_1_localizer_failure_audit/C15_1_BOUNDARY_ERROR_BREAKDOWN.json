@@ -1,0 +1,141 @@
+{
+  "b6_top1_correct": {
+    "False": {
+      "best_iou07_rate": 61.00917431192661,
+      "boundary_close_score_low_rate": 16.05504587155963,
+      "duration_ratio_median": 1.0,
+      "end_peak_error_median": 13.0,
+      "high_score_false_positive_rate": 88.9908256880734,
+      "query_count": 218,
+      "start_peak_error_median": 9.0,
+      "top1_iou07_rate": 1.3761467889908257
+    },
+    "True": {
+      "best_iou07_rate": 65.85365853658537,
+      "boundary_close_score_low_rate": 18.29268292682927,
+      "duration_ratio_median": 1.0,
+      "end_peak_error_median": 11.5,
+      "high_score_false_positive_rate": 84.14634146341463,
+      "query_count": 82,
+      "start_peak_error_median": 8.5,
+      "top1_iou07_rate": 0.0
+    }
+  },
+  "duration_bucket": {
+    "long": {
+      "best_iou07_rate": 100.0,
+      "boundary_close_score_low_rate": 48.38709677419355,
+      "duration_ratio_median": 0.1875,
+      "end_peak_error_median": 19.0,
+      "high_score_false_positive_rate": 90.3225806451613,
+      "query_count": 31,
+      "start_peak_error_median": 6.0,
+      "top1_iou07_rate": 0.0
+    },
+    "medium": {
+      "best_iou07_rate": 78.43137254901961,
+      "boundary_close_score_low_rate": 14.705882352941176,
+      "duration_ratio_median": 0.6,
+      "end_peak_error_median": 12.5,
+      "high_score_false_positive_rate": 87.25490196078431,
+      "query_count": 102,
+      "start_peak_error_median": 9.5,
+      "top1_iou07_rate": 1.9607843137254901
+    },
+    "short": {
+      "best_iou07_rate": 45.50898203592814,
+      "boundary_close_score_low_rate": 11.976047904191617,
+      "duration_ratio_median": 1.5,
+      "end_peak_error_median": 9.0,
+      "high_score_false_positive_rate": 87.42514970059881,
+      "query_count": 167,
+      "start_peak_error_median": 10.0,
+      "top1_iou07_rate": 0.5988023952095808
+    }
+  },
+  "overall": {
+    "[0,0.3)": {
+      "best_iou07_rate": 58.555133079847906,
+      "boundary_close_score_low_rate": 15.96958174904943,
+      "duration_ratio_median": 1.0,
+      "end_peak_error_median": 13.0,
+      "high_score_false_positive_rate": 100.0,
+      "query_count": 263,
+      "start_peak_error_median": 10.0,
+      "top1_iou07_rate": 0.0
+    },
+    "[0.3,0.5)": {
+      "best_iou07_rate": 82.6086956521739,
+      "boundary_close_score_low_rate": 21.73913043478261,
+      "duration_ratio_median": 2.0,
+      "end_peak_error_median": 6.0,
+      "high_score_false_positive_rate": 0.0,
+      "query_count": 23,
+      "start_peak_error_median": 6.0,
+      "top1_iou07_rate": 0.0
+    },
+    "[0.5,0.7)": {
+      "best_iou07_rate": 100.0,
+      "boundary_close_score_low_rate": 27.272727272727273,
+      "duration_ratio_median": 1.3333333333333333,
+      "end_peak_error_median": 2.0,
+      "high_score_false_positive_rate": 0.0,
+      "query_count": 11,
+      "start_peak_error_median": 2.0,
+      "top1_iou07_rate": 0.0
+    },
+    "[0.7,1.0]": {
+      "best_iou07_rate": 100.0,
+      "boundary_close_score_low_rate": 0.0,
+      "duration_ratio_median": 1.0,
+      "end_peak_error_median": 2.0,
+      "high_score_false_positive_rate": 0.0,
+      "query_count": 3,
+      "start_peak_error_median": 3.0,
+      "top1_iou07_rate": 100.0
+    }
+  },
+  "query_type": {
+    "t": {
+      "best_iou07_rate": 61.53846153846154,
+      "boundary_close_score_low_rate": 26.923076923076923,
+      "duration_ratio_median": 1.3541666666666665,
+      "end_peak_error_median": 18.0,
+      "high_score_false_positive_rate": 88.46153846153847,
+      "query_count": 26,
+      "start_peak_error_median": 12.0,
+      "top1_iou07_rate": 0.0
+    },
+    "v": {
+      "best_iou07_rate": 60.66945606694561,
+      "boundary_close_score_low_rate": 15.899581589958158,
+      "duration_ratio_median": 1.0,
+      "end_peak_error_median": 13.0,
+      "high_score_false_positive_rate": 91.2133891213389,
+      "query_count": 239,
+      "start_peak_error_median": 9.0,
+      "top1_iou07_rate": 0.8368200836820083
+    },
+    "vt": {
+      "best_iou07_rate": 74.28571428571429,
+      "boundary_close_score_low_rate": 14.285714285714286,
+      "duration_ratio_median": 0.8333333333333334,
+      "end_peak_error_median": 8.0,
+      "high_score_false_positive_rate": 62.857142857142854,
+      "query_count": 35,
+      "start_peak_error_median": 5.0,
+      "top1_iou07_rate": 2.857142857142857
+    }
+  },
+  "raw_start_end_peak_audit": {
+    "best_generated_iou07_rate": 100.0,
+    "best_generated_median_rank": 204.0,
+    "end_correct_start_wrong_rate": 8.0,
+    "end_peak_close_2clips_rate": 18.333333333333332,
+    "end_peak_error_median": 12.0,
+    "query_count": 300,
+    "start_correct_end_wrong_rate": 13.666666666666666,
+    "start_peak_close_2clips_rate": 24.0,
+    "start_peak_error_median": 9.0
+  }
+}

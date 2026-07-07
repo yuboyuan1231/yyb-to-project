@@ -1,0 +1,10 @@
+{
+  "device": "cuda",
+  "git_branch_vv": "c10-postofficial-repair-diagnostics 31a7023 Archive CONQUER-RLEM promoted C7-B6 system\n  c12-clean-native-vcmr               6888730 [origin/c12-clean-native-vcmr] Add C13 handoff evidence packet\n* c14-strong-feature-pilot            6888730 Add C13 handoff evidence packet\n  main                                31a7023 [origin/main] Archive CONQUER-RLEM promoted C7-B6 system",
+  "official_val_used": false,
+  "pool_eval_limit": 300,
+  "python": "Python 3.9.19",
+  "sample_limit": 300,
+  "seed": 1414,
+  "stage": "C14-0"
+}

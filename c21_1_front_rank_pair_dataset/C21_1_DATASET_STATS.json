@@ -1,0 +1,26 @@
+{
+  "duplicate_rows": 0,
+  "invalid_spans": 0,
+  "missing_scores": {
+    "bmn_score": 0,
+    "c19_hybrid_score": 0,
+    "retriever_score": 0,
+    "t2_score": 0
+  },
+  "negative_pair_count_07": 35772,
+  "oracle": {
+    "current_anchor_R1_IoU0.7": 1.4,
+    "top100_oracle_R1_IoU0.7": null,
+    "top10_oracle_R1_IoU0.7": 5.3,
+    "top5_oracle_R1_IoU0.7": 5.3
+  },
+  "pair_count": 36000,
+  "positive_pair_count_05": 570,
+  "positive_pair_count_07": 228,
+  "positive_pair_ratio_07": 0.006333333333333333,
+  "query_count": 2000,
+  "split_coverage": {
+    "calib_holdout": 1000,
+    "calib_select": 1000
+  }
+}

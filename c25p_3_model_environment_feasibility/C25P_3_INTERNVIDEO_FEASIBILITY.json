@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "expected_speed": "heavy video-language",
+  "expected_storage": "clips * dim * dtype",
+  "feature_dim": "768-1024 typical",
+  "model": "InternVideo/InternVideo2"
+}

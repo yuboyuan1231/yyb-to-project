@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "expected_speed": "slower clip-level",
+  "expected_storage": "clips * dim * dtype",
+  "feature_dim": "768 typical",
+  "model": "VideoMAE/VideoMAEv2"
+}

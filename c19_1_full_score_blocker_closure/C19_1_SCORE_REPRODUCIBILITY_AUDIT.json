@@ -1,0 +1,7 @@
+{
+  "command": "run_c19_official_readiness_blocker_closure.py --stage c19_1 --mode medium --seed 2026",
+  "mode": "medium",
+  "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+  "seed": 2026,
+  "sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98"
+}

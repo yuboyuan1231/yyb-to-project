@@ -1,0 +1,6 @@
+{
+  "name": null,
+  "reason": "BMN/T2 train_fit evidence is partial; selection is blocked by C24G constraints.",
+  "selected": false,
+  "selection_split": "calib_select"
+}

@@ -1,0 +1,7 @@
+{
+  "dtype": "float32",
+  "feature_dim": 768,
+  "has_subtitle_feature_rate": 1.0,
+  "num_subtitle_units_median": 42.0,
+  "num_subtitle_units_min": 2
+}

@@ -1,0 +1,3 @@
+# C20-6 Next Step Decision
+
+decision: `C20_NEED_RETRIEVER_LOCALIZER_CALIBRATION`

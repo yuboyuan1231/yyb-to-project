@@ -1,0 +1,23 @@
+{
+  "anchor_type": "c19_hybrid_proxy",
+  "generation_command": "run_c20_top1_safe_bmn_correction.py --stage c20_1 --mode medium --seed 2026",
+  "groups_seen": 4000,
+  "groups_written": 4000,
+  "mode": "medium",
+  "not_exact_c7_b6": true,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "path": "/tmp/c20_score_cache/CONQUER-RLEM-c2c3/C20_TOP1_EVIDENCE_train_medium.local.parquet",
+  "row_count": 4000,
+  "sha256": "e78e42afbfe533d7f12a42de236098d31c843c8f7c009e65b48e6f0ae2e0618a",
+  "source_formula": {
+    "alpha": 0.65,
+    "beta": 0.25,
+    "family": "G_retriever_BMN_T2",
+    "gamma": 0.1,
+    "name": "grid_a0.65_b0.25_g0.1"
+  },
+  "source_path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+  "source_sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98",
+  "split_name": "train"
+}

@@ -1,0 +1,5 @@
+{
+  "promoted_system_retained": "C7-B6 R1SelectiveTop1",
+  "reason": "No compatible train-only C7-B6 prediction rows were found for the C18 candidate/evaluator schema; official prediction pool is forbidden and was not read.",
+  "status": "C18_C7_B6_REPLAY_UNAVAILABLE"
+}

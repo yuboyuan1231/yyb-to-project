@@ -1,0 +1,404 @@
+{
+  "c24f_0_protocol_status": "C24F_PROTOCOL_READY",
+  "c24f_1_canonical_table_status": "C24F_CANONICAL_TABLE_READY",
+  "c24f_2_evidence_materialization_status": "C24F_EVIDENCE_MATERIALIZED_PARTIAL",
+  "c24f_3_signal_status": "C24F_EVIDENCE_SIGNAL_NOISY_OR_HARMFUL",
+  "c24f_4_integration_status": "C24F_FULL_EVIDENCE_INTEGRATION_FRONT_RANK_WEAK",
+  "c24f_5_route_status": "C24F_ROBUSTNESS_PARTIAL",
+  "c24f_is_promoted_system": false,
+  "c25_raw_frame_strong_feature_audit_recommended": false,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "delta_vs_c19_c21": {
+    "GT_VIDEO_TOP100_IoU0.5": 0.0,
+    "GT_VIDEO_TOP100_IoU0.7": 0.0,
+    "GT_VIDEO_TOP50_IoU0.5": 0.0,
+    "GT_VIDEO_TOP50_IoU0.7": 0.0,
+    "VCMR_R@100_IoU0.5": 0.0,
+    "VCMR_R@100_IoU0.7": 0.0,
+    "VCMR_R@10_IoU0.5": 0.05091649694500955,
+    "VCMR_R@10_IoU0.7": 0.0,
+    "VCMR_R@1_IoU0.5": 0.0,
+    "VCMR_R@1_IoU0.7": 0.0,
+    "VCMR_R@5_IoU0.5": 0.05091649694500999,
+    "VCMR_R@5_IoU0.7": 0.0,
+    "VR_R@1": -0.3564154786150695,
+    "VR_R@10": 0.763747454175153,
+    "VR_R@100": 0.0,
+    "VR_R@5": 0.763747454175153,
+    "correct_video_wrong_span_rate": -0.3564154786150713,
+    "duplicate_span_count": 0.0,
+    "invalid_span_count": 0.0,
+    "query_count": 0.0,
+    "top1_mean_iou": -0.0003853218664098407,
+    "wrong_video_high_score_rate": 0.3564154786150766
+  },
+  "delta_vs_c23": {
+    "GT_VIDEO_TOP100_IoU0.5": -40.1693482688391,
+    "GT_VIDEO_TOP100_IoU0.7": -23.817006109979634,
+    "GT_VIDEO_TOP50_IoU0.5": -40.1693482688391,
+    "GT_VIDEO_TOP50_IoU0.7": -23.817006109979634,
+    "VCMR_R@100_IoU0.5": -31.5693482688391,
+    "VCMR_R@100_IoU0.7": -19.217006109979636,
+    "VCMR_R@10_IoU0.5": -8.477596741344197,
+    "VCMR_R@10_IoU0.7": -4.571588594704685,
+    "VCMR_R@1_IoU0.5": -0.9660896130346233,
+    "VCMR_R@1_IoU0.7": -0.5362525458248473,
+    "VCMR_R@5_IoU0.5": -4.533095723014257,
+    "VCMR_R@5_IoU0.7": -2.2734215885947044,
+    "VR_R@1": -11.352138492871688,
+    "VR_R@10": -29.104887983706718,
+    "VR_R@100": -39.883503054989816,
+    "VR_R@5": -22.713951120162932,
+    "correct_video_wrong_span_rate": -10.386048879837068,
+    "duplicate_span_count": 0.0,
+    "invalid_span_count": 0.0,
+    "query_count": -36.0,
+    "top1_mean_iou": -0.013028431688283632,
+    "wrong_video_high_score_rate": 11.352138492871703
+  },
+  "delta_vs_c24": {
+    "GT_VIDEO_TOP100_IoU0.5": -43.3193482688391,
+    "GT_VIDEO_TOP100_IoU0.7": -27.417006109979635,
+    "GT_VIDEO_TOP50_IoU0.5": -43.3193482688391,
+    "GT_VIDEO_TOP50_IoU0.7": -27.417006109979635,
+    "VCMR_R@100_IoU0.5": -33.0693482688391,
+    "VCMR_R@100_IoU0.7": -20.817006109979634,
+    "VCMR_R@10_IoU0.5": -7.677596741344195,
+    "VCMR_R@10_IoU0.7": -4.721588594704684,
+    "VCMR_R@1_IoU0.5": -1.1160896130346232,
+    "VCMR_R@1_IoU0.7": -0.6362525458248471,
+    "VCMR_R@5_IoU0.5": -4.283095723014257,
+    "VCMR_R@5_IoU0.7": -2.423421588594705,
+    "VR_R@1": -11.70213849287169,
+    "VR_R@10": -34.10488798370672,
+    "VR_R@100": -34.133503054989816,
+    "VR_R@5": -26.763951120162936,
+    "correct_video_wrong_span_rate": -10.586048879837067,
+    "duplicate_span_count": 0.0,
+    "invalid_span_count": 0.0,
+    "query_count": -36.0,
+    "top1_mean_iou": -0.01520669957514579,
+    "wrong_video_high_score_rate": 11.702138492871697
+  },
+  "evaluator_modified": false,
+  "event_direct_columns_present": true,
+  "event_evidence_improved_over_c24_proxy": false,
+  "event_materialization_scope": "medium subset first-stage top128 train_fit/calib_select/calib_holdout",
+  "event_methods_materialized": [
+    "E0_fixed_window_events",
+    "E1_visual_cosine_change_point_events",
+    "E2_subtitle_boundary_events",
+    "E3_multimodal_change_point_events",
+    "E4_hybrid_fixed_change_events"
+  ],
+  "event_not_fully_materialized": true,
+  "evidence_signal_conclusion": {
+    "bmn_front_rank_independent_signal": -0.005596928887185215,
+    "event_auc_minus_c24_proxy_auc": -0.0466064257077109,
+    "event_direct_columns_present": true,
+    "event_evidence_improved_over_c24_proxy": false,
+    "event_front_rank_independent_signal": -0.010107558733226885,
+    "existing_feature_path_still_has_value": false,
+    "high_score_false_positive_risk": 0.9957,
+    "t2_safety_signal": -0.004609877854798494
+  },
+  "existing_feature_path_still_has_value": false,
+  "final_decision": "C24F_NEED_MORE_FULL_EVIDENCE_REPAIR",
+  "final_vcmr_metrics": {
+    "GT_VIDEO_TOP100_IoU0.5": 4.480651731160896,
+    "GT_VIDEO_TOP100_IoU0.7": 1.8329938900203666,
+    "GT_VIDEO_TOP50_IoU0.5": 4.480651731160896,
+    "GT_VIDEO_TOP50_IoU0.7": 1.8329938900203666,
+    "VCMR_R@100_IoU0.5": 4.480651731160896,
+    "VCMR_R@100_IoU0.7": 1.8329938900203666,
+    "VCMR_R@10_IoU0.5": 4.022403258655804,
+    "VCMR_R@10_IoU0.7": 1.5784114052953158,
+    "VCMR_R@1_IoU0.5": 1.8839103869653768,
+    "VCMR_R@1_IoU0.7": 0.7637474541751528,
+    "VCMR_R@5_IoU0.5": 3.716904276985743,
+    "VCMR_R@5_IoU0.7": 1.4765784114052953,
+    "VR_R@1": 16.54786150712831,
+    "VR_R@10": 41.39511201629328,
+    "VR_R@100": 50.91649694501018,
+    "VR_R@5": 35.336048879837065,
+    "correct_video_wrong_span_rate": 14.663951120162933,
+    "duplicate_span_count": 0,
+    "invalid_span_count": 0,
+    "query_count": 1964,
+    "top1_mean_iou": 0.02099212898887967,
+    "wrong_video_high_score_rate": 83.4521384928717
+  },
+  "final_vr_metrics": {
+    "VR_R@1": 16.54786150712831,
+    "VR_R@10": 41.39511201629328,
+    "VR_R@100": 50.91649694501018,
+    "VR_R@5": 35.336048879837065
+  },
+  "full_evidence_coverage": {
+    "duplicate_candidate_count": 0,
+    "event_direct_columns_present": true,
+    "gt_video_coverage": {
+      "GT_video_top1": 30.666666666666668,
+      "GT_video_top10": 79.8,
+      "GT_video_top100": 100.0,
+      "GT_video_top128": 100.0,
+      "GT_video_top5": 64.9
+    },
+    "invalid_span_count": 0,
+    "invalid_video_id_count": 0,
+    "join_key_consistency": true,
+    "missing_evidence_count_by_family": {
+      "bmn_score_available": 128001,
+      "event_score_available": 0,
+      "t2_score_available": 133567
+    },
+    "missing_evidence_count_by_split": {
+      "calib_holdout": {
+        "bmn_score_available": 0,
+        "event_score_available": 0,
+        "t2_score_available": 2571
+      },
+      "calib_select": {
+        "bmn_score_available": 1,
+        "event_score_available": 0,
+        "t2_score_available": 2996
+      },
+      "train_fit": {
+        "bmn_score_available": 128000,
+        "event_score_available": 0,
+        "t2_score_available": 128000
+      }
+    },
+    "nan_inf_count": 389569,
+    "position_based_join_detected": false,
+    "query_count": 3000,
+    "row_count": 328000,
+    "silent_zero_fill_detected": false,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "top128_candidate_coverage": {
+      "max_candidate_rank": 128,
+      "mean_rows_per_query": 109.33333333333333
+    }
+  },
+  "high_score_false_positive": {
+    "bmn_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.9996,
+      "rows": 20000,
+      "threshold_p90": 1.327252006530762,
+      "wrong_video_rate": 0.9917
+    },
+    "event_relevance_score": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99955,
+      "rows": 20000,
+      "threshold_p90": 0.5055953025817871,
+      "wrong_video_rate": 0.9893
+    },
+    "event_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.9996,
+      "rows": 20000,
+      "threshold_p90": 1.311837234973863,
+      "wrong_video_rate": 0.9904
+    },
+    "t2_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99985,
+      "rows": 20000,
+      "threshold_p90": 1.0208140850067142,
+      "wrong_video_rate": 0.9957
+    }
+  },
+  "local_only_artifacts": [
+    {
+      "config_hash": "ee39453c45c708dc",
+      "event_manifest": {
+        "candidate_rows_with_event": 328000,
+        "config_hash": "9b805ca722aa0028",
+        "event_cache_reused": false,
+        "event_direct_columns_present": true,
+        "event_feature_matrix_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_FEATURES_medium.local.npz",
+        "event_feature_matrix_sha256": "e22346d54469112e0a4217c0a8831d6e52de2d94516be66a5d71597b757aaeb4",
+        "event_feature_matrix_size_bytes": 3224288940,
+        "event_rows": 313367,
+        "event_subtitle_feature_dim": 768,
+        "event_table_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_TABLE_medium.local.parquet",
+        "event_table_sha256": "a71161bf006369630387600c143362b1d114cf62c83aa0de32e5df1eef0b5f53",
+        "event_table_size_bytes": 12325963,
+        "event_visual_feature_dim": 4352,
+        "event_worker_count": 16,
+        "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_2 --mode medium --seed 2026 --force",
+        "method_coverage": {
+          "E0_fixed_window_events": 139268,
+          "E1_visual_cosine_change_point_events": 34824,
+          "E2_subtitle_boundary_events": 34820,
+          "E3_multimodal_change_point_events": 34812,
+          "E4_hybrid_fixed_change_events": 69643
+        },
+        "method_note": "EventFormer-inspired existing-feature event evidence; not EventFormer reproduction.",
+        "methods": [
+          "E0_fixed_window_events",
+          "E1_visual_cosine_change_point_events",
+          "E2_subtitle_boundary_events",
+          "E3_multimodal_change_point_events",
+          "E4_hybrid_fixed_change_events"
+        ],
+        "minimum_required_methods_present": true,
+        "missing_event_count": 0,
+        "missing_video_features": 0,
+        "missing_video_sample": [],
+        "normalization_method": "L2 normalize query, event subtitle pooled, event visual pooled, and projected query vectors",
+        "projection_method": "deterministic Gaussian query-to-visual projection seeded by 20260424 + visual_dim; subtitle uses native RoBERTa cosine",
+        "query_count": 3000,
+        "raw_video_used": false,
+        "runtime_sec": 104.60171604156494,
+        "schema_hash": "e5aef22d624248ff",
+        "similarity_function": "cosine",
+        "split_coverage": {
+          "calib_holdout": {
+            "queries": 1000,
+            "rows": 100000
+          },
+          "calib_select": {
+            "queries": 1000,
+            "rows": 100000
+          },
+          "train_fit": {
+            "queries": 1000,
+            "rows": 128000
+          }
+        },
+        "ssd_feature_cache_used": true,
+        "subtitle_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+        "topK": 5,
+        "unique_candidate_videos": 17414,
+        "video_count": 17414,
+        "visual_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+      },
+      "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_1 --mode medium --seed 2026 --force",
+      "local_only": true,
+      "path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_CANONICAL_FULL_EVIDENCE_TABLE_medium.local.parquet",
+      "query_count": 3000,
+      "row_count": 328000,
+      "schema_hash": "08bb2ca03038fc34",
+      "sha256": "f1ffa252b4f61a0dd97b622a7f2e1a6c9bf0d6a1000b92724184b9a3f4dbac9d",
+      "size_bytes": 67595646,
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 1000,
+          "rows": 100000
+        },
+        "calib_select": {
+          "queries": 1000,
+          "rows": 100000
+        },
+        "train_fit": {
+          "queries": 1000,
+          "rows": 128000
+        }
+      }
+    },
+    {
+      "candidate_rows_with_event": 328000,
+      "config_hash": "9b805ca722aa0028",
+      "event_cache_reused": false,
+      "event_direct_columns_present": true,
+      "event_feature_matrix_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_FEATURES_medium.local.npz",
+      "event_feature_matrix_sha256": "e22346d54469112e0a4217c0a8831d6e52de2d94516be66a5d71597b757aaeb4",
+      "event_feature_matrix_size_bytes": 3224288940,
+      "event_rows": 313367,
+      "event_subtitle_feature_dim": 768,
+      "event_table_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_TABLE_medium.local.parquet",
+      "event_table_sha256": "a71161bf006369630387600c143362b1d114cf62c83aa0de32e5df1eef0b5f53",
+      "event_table_size_bytes": 12325963,
+      "event_visual_feature_dim": 4352,
+      "event_worker_count": 16,
+      "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_2 --mode medium --seed 2026 --force",
+      "method_coverage": {
+        "E0_fixed_window_events": 139268,
+        "E1_visual_cosine_change_point_events": 34824,
+        "E2_subtitle_boundary_events": 34820,
+        "E3_multimodal_change_point_events": 34812,
+        "E4_hybrid_fixed_change_events": 69643
+      },
+      "method_note": "EventFormer-inspired existing-feature event evidence; not EventFormer reproduction.",
+      "methods": [
+        "E0_fixed_window_events",
+        "E1_visual_cosine_change_point_events",
+        "E2_subtitle_boundary_events",
+        "E3_multimodal_change_point_events",
+        "E4_hybrid_fixed_change_events"
+      ],
+      "minimum_required_methods_present": true,
+      "missing_event_count": 0,
+      "missing_video_features": 0,
+      "missing_video_sample": [],
+      "normalization_method": "L2 normalize query, event subtitle pooled, event visual pooled, and projected query vectors",
+      "projection_method": "deterministic Gaussian query-to-visual projection seeded by 20260424 + visual_dim; subtitle uses native RoBERTa cosine",
+      "query_count": 3000,
+      "raw_video_used": false,
+      "runtime_sec": 104.60171604156494,
+      "schema_hash": "e5aef22d624248ff",
+      "similarity_function": "cosine",
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 1000,
+          "rows": 100000
+        },
+        "calib_select": {
+          "queries": 1000,
+          "rows": 100000
+        },
+        "train_fit": {
+          "queries": 1000,
+          "rows": 128000
+        }
+      },
+      "ssd_feature_cache_used": true,
+      "subtitle_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+      "topK": 5,
+      "unique_candidate_videos": 17414,
+      "video_count": 17414,
+      "visual_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+    }
+  ],
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "selected_evidence_probe": {
+    "bmn_front_rank_independent_signal": -0.005596928887185215,
+    "event_auc_minus_c24_proxy_auc": -0.0466064257077109,
+    "event_direct_columns_present": true,
+    "event_evidence_improved_over_c24_proxy": false,
+    "event_front_rank_independent_signal": -0.010107558733226885,
+    "existing_feature_path_still_has_value": false,
+    "high_score_false_positive_risk": 0.9957,
+    "t2_safety_signal": -0.004609877854798494
+  },
+  "selected_integration_formula": {
+    "holdout_report_only": true,
+    "name": "M_all_evidence_no_regression_guard",
+    "select_objective": 0.25927808845958294,
+    "selection_split": "calib_select"
+  },
+  "stage": "C24F-6",
+  "status": "C24F_NEED_MORE_FULL_EVIDENCE_REPAIR",
+  "wrong_video_risk": 83.4521384928717
+}

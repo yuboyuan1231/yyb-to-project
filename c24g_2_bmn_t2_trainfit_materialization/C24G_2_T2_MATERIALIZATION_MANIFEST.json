@@ -1,0 +1,26 @@
+{
+  "full_not_completed_reason": "No existing source provides train_fit BMN/T2 evidence for first-stage top128 candidates.",
+  "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24g_full_bmn_t2_evidence_closure.py --stage c24g_2 --mode medium --seed 2026 --force",
+  "missing_reason": "train_fit T2 source absent",
+  "path": "/tmp/c24g_score_cache/CONQUER-RLEM-c2c3/C24G_BMN_T2_PARTIAL_MATERIALIZATION_medium.local.parquet",
+  "query_count": 3000,
+  "row_count": 328000,
+  "sha256": "848bfad3e2c6d443a70cb56f999c5246dd913fe22a09c1bc619de2b16570f5c1",
+  "size_bytes": 68898472,
+  "source": "C24F canonical medium table plus explicit BMN/T2 missing masks",
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  },
+  "train_fit_coverage": 0.0
+}

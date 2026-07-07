@@ -1,0 +1,8 @@
+{
+  "E0_clip_only_baseline": "represented by first-stage/native global baseline",
+  "E1_event_only_retriever": "diagnostic only",
+  "E2_clip_plus_event_concat": "implemented in C22-2 as gated subtitle/visual/event score",
+  "E3_query_aware_event_pooling": "implemented as query-gated event proxy",
+  "E4_hierarchical_event_encoder": "deferred to full train-fit",
+  "E5_event_guided_clip_reweight": "deferred"
+}

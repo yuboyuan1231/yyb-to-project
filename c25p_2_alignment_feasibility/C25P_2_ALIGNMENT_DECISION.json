@@ -1,0 +1,28 @@
+{
+  "frame_available": false,
+  "frame_timestamp_error_estimate_sec": null,
+  "mappable_candidate_row_ratio": 0.0,
+  "mappable_query_ratio": 0.0,
+  "mappable_video_ratio": 0.0,
+  "raw_video_available": false,
+  "recommended_canonical_frame_manifest_schema": [
+    "video_id",
+    "raw_video_path",
+    "frame_dir",
+    "fps",
+    "frame_count",
+    "duration_sec",
+    "timestamp_unit",
+    "frame_index_start",
+    "frame_index_end",
+    "subtitle_path",
+    "split_coverage",
+    "feature_ready",
+    "missing_reason"
+  ],
+  "stage": "C25P-2",
+  "status": "C25P_ALIGNMENT_BLOCKED_NO_FRAMES",
+  "subtitle_alignment_coverage": 0.0,
+  "subtitle_available": false,
+  "top128_candidate_coverage": 0.0
+}

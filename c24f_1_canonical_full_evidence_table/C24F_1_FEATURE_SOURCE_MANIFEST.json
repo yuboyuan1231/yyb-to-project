@@ -1,0 +1,33 @@
+{
+  "query_lmdb": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query",
+    "readable": true,
+    "size_bytes": null
+  },
+  "raw_video_used": false,
+  "subtitle_lmdb": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5",
+    "readable": true,
+    "size_bytes": null
+  },
+  "subtitle_lmdb_event_read_path": {
+    "exists": true,
+    "path": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+    "readable": true,
+    "size_bytes": null
+  },
+  "visual_lmdb_event_read_path": {
+    "exists": true,
+    "path": "/tmp/c24f_feature_lmdb_cache/visual_lmdb",
+    "readable": true,
+    "size_bytes": null
+  },
+  "visual_lmdb_resnet_slowfast": {
+    "exists": true,
+    "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5",
+    "readable": true,
+    "size_bytes": null
+  }
+}

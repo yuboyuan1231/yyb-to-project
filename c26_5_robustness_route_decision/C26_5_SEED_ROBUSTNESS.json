@@ -1,0 +1,8 @@
+{
+  "seed2026": {
+    "localizer": "C26_FOCUS_FUSE_STABLE_NO_GAIN",
+    "retriever": "C26_PREM_RETRIEVER_STABLE_NO_GAIN"
+  },
+  "seed2027": "not_run_medium_budget",
+  "seed2028": "not_run_medium_budget"
+}

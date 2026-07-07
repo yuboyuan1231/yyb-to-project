@@ -1,0 +1,58 @@
+{
+  "delta_regularized_alpha002": {
+    "grad_nonzero_groups_last_epoch": {
+      "pool_gate": 816,
+      "q_sub": 816,
+      "q_vis": 816,
+      "qtype_gate": 136,
+      "res_gate": 816,
+      "s_max": 816,
+      "s_mean": 816,
+      "scale": 25,
+      "v_proj": 1088
+    },
+    "nan_inf_observed": false
+  },
+  "listwise_teacher_topK_alpha005": {
+    "grad_nonzero_groups_last_epoch": {
+      "pool_gate": 816,
+      "q_sub": 816,
+      "q_vis": 816,
+      "qtype_gate": 136,
+      "res_gate": 816,
+      "s_max": 816,
+      "s_mean": 816,
+      "scale": 99,
+      "v_proj": 1088
+    },
+    "nan_inf_observed": false
+  },
+  "qtype_balanced_alpha002": {
+    "grad_nonzero_groups_last_epoch": {
+      "pool_gate": 816,
+      "q_sub": 816,
+      "q_vis": 816,
+      "qtype_gate": 136,
+      "res_gate": 816,
+      "s_max": 816,
+      "s_mean": 816,
+      "scale": 34,
+      "v_proj": 1088
+    },
+    "nan_inf_observed": false
+  },
+  "stronger_teacher_topK_alpha001": {
+    "grad_nonzero_groups_last_epoch": {
+      "pool_gate": 816,
+      "q_sub": 816,
+      "q_vis": 816,
+      "qtype_gate": 136,
+      "res_gate": 816,
+      "s_max": 816,
+      "s_mean": 816,
+      "scale": 20,
+      "v_proj": 1088
+    },
+    "nan_inf_observed": false
+  }
+}

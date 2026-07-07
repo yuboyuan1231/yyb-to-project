@@ -1,0 +1,20 @@
+{
+  "duplicate_key_count": 0,
+  "nan_inf_numeric_count": 0,
+  "silent_zero_fill": false,
+  "time_grid": "clip_index * 1.5 seconds",
+  "top128_candidate_coverage": {
+    "calib_holdout": {
+      "queries": 900,
+      "rows": 115200
+    },
+    "calib_select": {
+      "queries": 900,
+      "rows": 115200
+    },
+    "train_fit": {
+      "queries": 1800,
+      "rows": 230400
+    }
+  }
+}

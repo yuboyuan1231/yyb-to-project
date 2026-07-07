@@ -1,0 +1,14 @@
+{
+  "device": "cuda:0",
+  "git_branch_vv": "c10-postofficial-repair-diagnostics 31a7023 Archive CONQUER-RLEM promoted C7-B6 system\n  c12-clean-native-vcmr               6888730 [origin/c12-clean-native-vcmr] Add C13 handoff evidence packet\n  c14-strong-feature-pilot            c619bba [origin/c14-strong-feature-pilot] Run C14 strong feature event pilot\n  c15-boundary-localizer-redesign     90dcfbc [origin/c15-boundary-localizer-redesign] Run C15 boundary localizer redesign\n  c16-fullscale-bmn-native-localizer  f0642ef [origin/c16-fullscale-bmn-native-localizer] Run C16 fullscale BMN native localizer\n* c17-bmn-t2-native-vcmr-integration  f0642ef Run C16 fullscale BMN native localizer\n  main                                31a7023 [origin/main] Archive CONQUER-RLEM promoted C7-B6 system",
+  "git_log": "f0642ef (HEAD -> c17-bmn-t2-native-vcmr-integration, origin/c16-fullscale-bmn-native-localizer, c16-fullscale-bmn-native-localizer) Run C16 fullscale BMN native localizer\n90dcfbc (origin/c15-boundary-localizer-redesign, c15-boundary-localizer-redesign) Run C15 boundary localizer redesign\nc619bba (origin/c14-strong-feature-pilot, c14-strong-feature-pilot) Run C14 strong feature event pilot\n6888730 (origin/c12-clean-native-vcmr, c12-clean-native-vcmr) Add C13 handoff evidence packet\n9849ed8 Archive C12 span pivot and C13 decision",
+  "gpu": [
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24094 MiB",
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24113 MiB"
+  ],
+  "mode": "medium",
+  "python": "Python 3.9.19",
+  "seed": 2026,
+  "stage": "C17-0",
+  "torch_cuda_available": true
+}

@@ -1,0 +1,5 @@
+{
+  "best_gamma": 0.2,
+  "drop_when_bmn_removed_R100_IoU0.7": 0.4499999999999993,
+  "drop_when_t2_removed_R100_IoU0.7": 19.2
+}

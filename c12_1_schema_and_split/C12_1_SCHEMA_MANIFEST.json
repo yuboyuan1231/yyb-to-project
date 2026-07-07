@@ -1,0 +1,123 @@
+{
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "forbidden_patterns": [
+    "train fallback group_id/100 while inference uses video_slot/100",
+    "silent zero-fill for missing required fields",
+    "duplicate candidate overwrite",
+    "position-based join",
+    "schema semantics mismatch across train/holdout/inference"
+  ],
+  "join_key_policy": [
+    "query_id",
+    "candidate_row_id",
+    "video_id",
+    "start",
+    "end"
+  ],
+  "known_schema_risk_from_c9": {
+    "c12_policy": "group_id and video_slot are distinct fields and cannot substitute for each other",
+    "feature10_official_runner": "video_slot/100",
+    "feature10_train": "group_id/100 when video_slot absent"
+  },
+  "official_val_used": false,
+  "required_fields": {
+    "boundary_features": {
+      "required_for_candidates": true,
+      "source": "C12 localizer logits/probs/margins",
+      "type": "array"
+    },
+    "candidate_row_id": {
+      "required_for_candidates": true,
+      "source": "monotonic per-query candidate identity",
+      "type": "int"
+    },
+    "clip_index": {
+      "required_for_span_features": true,
+      "source": "floor/ceil time with clip_length=1.5",
+      "type": "int_pair"
+    },
+    "duration": {
+      "required": true,
+      "source": "video metadata",
+      "type": "float"
+    },
+    "end": {
+      "required_for_candidates": true,
+      "source": "seconds",
+      "type": "float"
+    },
+    "group_id": {
+      "required_for_grouped_split": true,
+      "source": "stable video/query group id; never a fallback for video_slot",
+      "type": "int_or_string"
+    },
+    "proposal_score": {
+      "required_for_candidates": true,
+      "source": "C12 proposal quality head",
+      "type": "float"
+    },
+    "query_id": {
+      "required": true,
+      "source": "desc_id",
+      "type": "int"
+    },
+    "query_text": {
+      "required": true,
+      "source": "desc",
+      "type": "string"
+    },
+    "query_text_group": {
+      "required": true,
+      "source": "sha256(normalized desc)[:16]",
+      "type": "string"
+    },
+    "query_type": {
+      "required": true,
+      "source": "type",
+      "type": "enum[v,t,vt,unknown]"
+    },
+    "rank_features": {
+      "required_for_candidates": true,
+      "source": "derived ranks within C12 candidate set",
+      "type": "array"
+    },
+    "raw_moment_score": {
+      "required_for_candidates": true,
+      "source": "C12 localizer score",
+      "type": "float"
+    },
+    "raw_video_score": {
+      "required_for_candidates": true,
+      "source": "C12 retriever output",
+      "type": "float"
+    },
+    "start": {
+      "required_for_candidates": true,
+      "source": "seconds",
+      "type": "float"
+    },
+    "subtitle_features": {
+      "required_if_available": true,
+      "source": "subtitle encoder/cache",
+      "type": "array"
+    },
+    "video_id": {
+      "required": true,
+      "source": "vid_name / video2idx mapping",
+      "type": "string_or_int"
+    },
+    "video_slot": {
+      "required_for_candidates": true,
+      "source": "rank position within generated C12 topK video list",
+      "type": "int"
+    },
+    "visual_features": {
+      "required_if_available": true,
+      "source": "visual encoder/cache",
+      "type": "array"
+    }
+  },
+  "schema_audit_pass": true,
+  "schema_version": "c12_native_vcmr_schema_v1",
+  "stage": "C12-1"
+}

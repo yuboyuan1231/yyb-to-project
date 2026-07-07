@@ -1,0 +1,123 @@
+{
+  "c16_bmn_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c16_2_fullscale_bmn_training/C16_2_BMN_CHECKPOINT_MANIFEST.json",
+    "readable": true,
+    "sha256": "1dc136d806a2ca95e23ba8fd11a2a22d9d3a8e25bce973b1519f9edcf769ab21",
+    "size_bytes": 5854
+  },
+  "c17_medium_score_cache": {
+    "candidate_count": 22779481,
+    "config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+    "exists": true,
+    "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+    "query_count": 2000,
+    "readable": true,
+    "row_count": 22779481,
+    "schema_hash": "8d5926bc53cf31fef3ff1fac1d2e51d62168cfea7cdb858ff6dc82e4b503733b",
+    "score_columns": [
+      "retriever_score",
+      "bmn_final_score",
+      "t2_score",
+      "old_c12_score"
+    ],
+    "sha256": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+    "size_bytes": 1006607541,
+    "split_coverage": {
+      "calib_holdout": 1000,
+      "calib_select": 1000
+    },
+    "video_count": 13992
+  },
+  "c17_requested_score_cache": {
+    "candidate_count": 22779481,
+    "config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+    "exists": true,
+    "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+    "query_count": 2000,
+    "readable": true,
+    "row_count": 22779481,
+    "schema_hash": "8d5926bc53cf31fef3ff1fac1d2e51d62168cfea7cdb858ff6dc82e4b503733b",
+    "score_columns": [
+      "retriever_score",
+      "bmn_final_score",
+      "t2_score",
+      "old_c12_score"
+    ],
+    "sha256": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+    "size_bytes": 1006607541,
+    "split_coverage": {
+      "calib_holdout": 1000,
+      "calib_select": 1000
+    },
+    "video_count": 13992
+  },
+  "c17_score_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c17_2_full_bmn_score_export/C17_2_FULL_BMN_SCORE_MANIFEST.json",
+    "readable": true,
+    "sha256": "2ea66af4ed4b5dce116a287b8c0897fccaebfc4353b008eac0fa6bbed36c632c",
+    "size_bytes": 1028
+  },
+  "c18_pseudo_medium_score_cache": {
+    "candidate_count": 11387520,
+    "config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+    "exists": true,
+    "path": "/tmp/c18_score_cache/CONQUER-RLEM-c2c3/C18_PSEUDO_SCORE_TABLE_medium.local.parquet",
+    "query_count": 1000,
+    "readable": true,
+    "row_count": 11387520,
+    "schema_hash": "8d5926bc53cf31fef3ff1fac1d2e51d62168cfea7cdb858ff6dc82e4b503733b",
+    "score_columns": [
+      "retriever_score",
+      "bmn_final_score",
+      "t2_score",
+      "old_c12_score"
+    ],
+    "sha256": "6d6e9c3914e233fed27ef9a8e2a8cbc0174c98874f1a3c13a21fda89851c9c81",
+    "size_bytes": 502552885,
+    "split_coverage": {
+      "pseudo_official_holdout": 1000
+    },
+    "video_count": 9907
+  },
+  "c18_score_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_1_full_score_readiness/C18_1_SCORE_CACHE_MANIFEST.json",
+    "readable": true,
+    "sha256": "a6f9250522023d0faa36fbb03ab0637cb6b697af2b7596e090ddfeb2744c3c31",
+    "size_bytes": 4939
+  },
+  "c18_selected_config": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_3_front_rank_hybrid_calibration/C18_3_SELECTED_CONFIG.json",
+    "readable": true,
+    "sha256": "b4e18631c2d6a42152f91bcfa0b58cc0bd285859beef7260100adc2a09d4d985",
+    "size_bytes": 293
+  },
+  "c19_canonical_requested_score_cache": {
+    "candidate_count": 22779481,
+    "config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "query_count": 2000,
+    "readable": true,
+    "row_count": 22779481,
+    "schema_hash": "34e567b94d3812c0a6667d959490d6abf5ea8da90ae164927674fcfee8b6ae82",
+    "score_columns": [
+      "retriever_score",
+      "bmn_final_score",
+      "bmn_score",
+      "t2_score",
+      "final_score",
+      "old_c12_score"
+    ],
+    "sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98",
+    "size_bytes": 1447443108,
+    "split_coverage": {
+      "calib_holdout": 1000,
+      "calib_select": 1000
+    },
+    "video_count": 13992
+  }
+}

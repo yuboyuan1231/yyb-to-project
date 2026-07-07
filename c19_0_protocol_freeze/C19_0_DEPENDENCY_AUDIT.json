@@ -1,0 +1,72 @@
+{
+  "c12_5t": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_5t_best_span_promotion/C12_5T_DECISION.json",
+    "readable": true,
+    "sha256": "de74127b9749913d2fcfe460bab6ecacf22773abb48ebda8f2c13fb7df55d80e",
+    "size_bytes": 1346
+  },
+  "c12_schema": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+    "readable": true,
+    "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c",
+    "size_bytes": 3336
+  },
+  "c12_split": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "readable": true,
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31",
+    "size_bytes": 1045
+  },
+  "c18_1": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_1_full_score_readiness/C18_1_FULL_SCORE_DECISION.json",
+    "readable": true,
+    "sha256": "ddda1f105ed5c04fb46761ffc611674d1cdffad0aabb4b1f954ee4bc14dc626f",
+    "size_bytes": 5998
+  },
+  "c18_2": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_2_baseline_comparable_replay/C18_2_BASELINE_REPLAY_DECISION.json",
+    "readable": true,
+    "sha256": "1cc65104ba1d8bc18fa03b8c9b82b71490ad5e7783ab02505c2713a2e24625fa",
+    "size_bytes": 1323915
+  },
+  "c18_3": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_3_front_rank_hybrid_calibration/C18_3_CALIBRATION_DECISION.json",
+    "readable": true,
+    "sha256": "d688b056d3115fcf789a8f99324b044a11327bdb9ab0d6dd802fd8e60da49e9f",
+    "size_bytes": 628992
+  },
+  "c18_4": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_4_pseudo_official_onelook/C18_4_ONELOOK_DECISION.json",
+    "readable": true,
+    "sha256": "0c66fa1da4e10952a938e8c71009400bc8a1fb0a33bd55ee5672d5b12b70ca5a",
+    "size_bytes": 107979
+  },
+  "c18_5": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_5_full_consistency_robustness/C18_5_ROBUSTNESS_DECISION.json",
+    "readable": true,
+    "sha256": "aaed36c1719b8c1516ed25d98488847031ee8a2cf1e1c7c7f46faaec69009b22",
+    "size_bytes": 1877
+  },
+  "c18_6": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_6_freeze_review/C18_6_NEXT_STEP_DECISION.json",
+    "readable": true,
+    "sha256": "9b120bbc6c02c7b0f8579b24cfa47d979124c8ee4e568e41e6fddcf360501e2c",
+    "size_bytes": 1710
+  },
+  "c18_score_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c18_1_full_score_readiness/C18_1_SCORE_CACHE_MANIFEST.json",
+    "readable": true,
+    "sha256": "a6f9250522023d0faa36fbb03ab0637cb6b697af2b7596e090ddfeb2744c3c31",
+    "size_bytes": 4939
+  }
+}

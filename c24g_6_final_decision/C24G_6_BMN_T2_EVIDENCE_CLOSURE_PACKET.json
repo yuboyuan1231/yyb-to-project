@@ -1,0 +1,8 @@
+{
+  "bmn_train_fit_coverage": 0.0,
+  "decision": "C24G_NEED_MORE_BMN_T2_MATERIALIZATION",
+  "event_direct_columns_present": true,
+  "official_still_forbidden": true,
+  "ready_for_official": false,
+  "t2_train_fit_coverage": 0.0
+}

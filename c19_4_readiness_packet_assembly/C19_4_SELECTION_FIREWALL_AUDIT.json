@@ -1,0 +1,7 @@
+{
+  "formula": "S_final = 0.65 S_retriever + 0.25 S_BMN + 0.10 S_T2",
+  "no_post_pseudo_adjustment": true,
+  "pseudo_official_holdout_not_used_for_selection": true,
+  "selected_config": "grid_a0.65_b0.25_g0.1",
+  "selected_config_source": "C18 calib_select"
+}

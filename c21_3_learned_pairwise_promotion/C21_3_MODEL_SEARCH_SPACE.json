@@ -1,0 +1,28 @@
+{
+  "models": [
+    {
+      "C": 1.0,
+      "class_weight": null,
+      "name": "M0_logistic_regression_l2",
+      "topk": 10
+    },
+    {
+      "C": 0.5,
+      "class_weight": "balanced",
+      "name": "M1_calibrated_logistic_with_class_weight",
+      "topk": 5
+    },
+    {
+      "C": 0.25,
+      "class_weight": "balanced",
+      "name": "M1_calibrated_logistic_with_class_weight",
+      "topk": 10
+    }
+  ],
+  "skipped": {
+    "M2_small_mlp_pairwise": "skipped: logistic model is sufficient for audited baseline and avoids extra training complexity",
+    "M3_gradient_boosted_tree_if_available": "skipped: not needed for first C21 calibration pass",
+    "M4_ranknet_pairwise_mlp": "skipped: no train_fit split in medium cache",
+    "M5_monotonic_score_ensemble_if_simple": "covered by rule baseline"
+  }
+}

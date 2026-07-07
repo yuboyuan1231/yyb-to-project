@@ -1,0 +1,57 @@
+{
+  "dependencies": {
+    "c12_feature_builder_script": {
+      "exists": true,
+      "path": "run_c12_5t_best_span_promotion.py",
+      "sha256": "56bb22509e5e4f86d0cb1350035675a70f27badd8b91b97ba24486b451c80e9f"
+    },
+    "c12_localizer_script": {
+      "exists": true,
+      "path": "run_c12_5_native_span_generation.py",
+      "sha256": "22f960de41343f8b0ce80314ebb6b934ffb35d56da56b73b10df4dcfb80fb14e"
+    },
+    "c12_schema_manifest": {
+      "exists": true,
+      "path": "c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+      "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c"
+    },
+    "c12_split_manifest": {
+      "exists": true,
+      "path": "c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+      "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31"
+    },
+    "c12_t2_checkpoint": {
+      "exists": true,
+      "path": "c12_models/c12_5t_T2_listwise_soft_iou.pt",
+      "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80"
+    },
+    "c12_teacher_localizer": {
+      "exists": true,
+      "path": "c12_models/c12_5_teacher_distilled.pt",
+      "sha256": "f2048ae8331c9ded61def0880713b977070860cb6dbbddd0ee486ddfbdbf779f"
+    },
+    "c15_bmn_decision": {
+      "exists": true,
+      "path": "c15_2_bmn_span_confidence_mvp/C15_2_BMN_DECISION.json",
+      "sha256": "6ff900192fdf35308139df3052a893ba3edf9166a7e4ed4baab8d461c6b63cda"
+    },
+    "c15_failure_audit": {
+      "exists": true,
+      "path": "c15_1_localizer_failure_audit/C15_1_LOCALIZER_FAILURE_AUDIT.json",
+      "sha256": "c48c0edfbce1a4779f5128181159e8c87844e897e6563845ae547365f5fb267d"
+    },
+    "c15_protocol": {
+      "exists": true,
+      "path": "c15_0_boundary_redesign_protocol/C15_0_PROTOCOL.json",
+      "sha256": "25a3bd35331acc8ecdc11c0b60613dcda8c058c8a9f089dcf85684f5b406bb48"
+    }
+  },
+  "official_val_used": false,
+  "split_files": [
+    "c12_1_schema_and_split/splits/train_fit_desc_ids.txt",
+    "c12_1_schema_and_split/splits/calib_select_desc_ids.txt",
+    "c12_1_schema_and_split/splits/calib_holdout_desc_ids.txt",
+    "c12_1_schema_and_split/splits/pseudo_official_holdout_desc_ids.txt"
+  ],
+  "stage": "C16-0"
+}

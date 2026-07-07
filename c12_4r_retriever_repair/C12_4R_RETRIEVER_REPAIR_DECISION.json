@@ -1,0 +1,56 @@
+{
+  "allow_enter_c12_5": true,
+  "best_learned_delta_metrics": {
+    "GT_video_in_top100_rate": 100.0,
+    "GT_video_mean_rank": 7.964516129032258,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 29.101382488479263,
+    "VR_R@10": 79.17050691244239,
+    "VR_R@100": 100.0,
+    "VR_R@5": 64.49308755760369,
+    "missing_rank_count": 0,
+    "query_count": 4340,
+    "teacher_top1_agreement_rate": 99.97695852534562
+  },
+  "best_learned_delta_variant": "delta_regularized_alpha002",
+  "best_metrics": {
+    "GT_video_in_top100_rate": 100.0,
+    "GT_video_mean_rank": 7.9633640552995395,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 29.101382488479263,
+    "VR_R@10": 79.19354838709677,
+    "VR_R@100": 100.0,
+    "VR_R@5": 64.49308755760369,
+    "missing_rank_count": 0,
+    "query_count": 4340
+  },
+  "best_repaired_retriever_variant": "zero_delta_replay",
+  "c12_5_entry_condition": "Use CONQUER-warm/replay native corpus video retriever as video candidate generator; do not use C7-B6 fixed prediction pool.",
+  "conquer_first_stage_replay_pass": true,
+  "conquer_warm_retriever_implemented": true,
+  "evaluator_modified": false,
+  "feature_repair_status": "C12_FEATURE_REPAIR_NOT_READY",
+  "learned_delta_repair_effective": false,
+  "need_stronger_features": true,
+  "nms_modified": false,
+  "notes": [
+    "Replay preserves CONQUER first-stage train-only reference exactly/near-exactly.",
+    "Small learned deltas did not produce robust improvement over zero-delta replay.",
+    "C12-5 may proceed only with CONQUER-warm/replay video retrieval, while stronger feature work remains necessary for an independent retriever."
+  ],
+  "official_val_used": false,
+  "stage": "C12-4R-E",
+  "status": "C12_RETRIEVER_CONQUER_WARM_READY_CONTINUE_TO_C12_5",
+  "teacher_distillation_repair_effective": true,
+  "zero_delta_replay_metrics": {
+    "GT_video_in_top100_rate": 100.0,
+    "GT_video_mean_rank": 7.9633640552995395,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 29.101382488479263,
+    "VR_R@10": 79.19354838709677,
+    "VR_R@100": 100.0,
+    "VR_R@5": 64.49308755760369,
+    "missing_rank_count": 0,
+    "query_count": 4340
+  }
+}

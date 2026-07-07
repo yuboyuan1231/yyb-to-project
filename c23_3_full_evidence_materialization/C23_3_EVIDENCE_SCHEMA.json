@@ -1,0 +1,30 @@
+{
+  "bmn_columns": [
+    "bmn_pred_iou",
+    "bmn_p_iou_05",
+    "bmn_p_iou_07",
+    "bmn_rank_score",
+    "bmn_final_score",
+    "start_prob",
+    "end_prob",
+    "actionness_score",
+    "span_map_rank"
+  ],
+  "event_columns": [
+    "event_relevance_score",
+    "best_event_overlap_proxy",
+    "query_event_score",
+    "event_rank"
+  ],
+  "retriever_residual_columns": [
+    "residual_score",
+    "residual_gate",
+    "no_regression_guard_score"
+  ],
+  "schema_hash": "c395a60e96babee7454a3a706fb57504ddb2c707095ada5dcc331eec7562ce48",
+  "t2_columns": [
+    "t2_score",
+    "t2_margin",
+    "t2_agreement"
+  ]
+}

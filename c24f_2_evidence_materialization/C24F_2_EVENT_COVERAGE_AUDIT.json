@@ -1,0 +1,36 @@
+{
+  "candidate_rows_with_event": 328000,
+  "event_direct_columns_present": true,
+  "event_methods_materialized": [
+    "E0_fixed_window_events",
+    "E1_visual_cosine_change_point_events",
+    "E2_subtitle_boundary_events",
+    "E3_multimodal_change_point_events",
+    "E4_hybrid_fixed_change_events"
+  ],
+  "method_coverage": {
+    "E0_fixed_window_events": 139268,
+    "E1_visual_cosine_change_point_events": 34824,
+    "E2_subtitle_boundary_events": 34820,
+    "E3_multimodal_change_point_events": 34812,
+    "E4_hybrid_fixed_change_events": 69643
+  },
+  "minimum_required_methods_present": true,
+  "missing_event_count": 0,
+  "query_count": 3000,
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  },
+  "video_count": 17414
+}

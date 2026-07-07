@@ -1,0 +1,45 @@
+{
+  "curves": [
+    {
+      "ce": 4.548638504221692,
+      "epoch": 1,
+      "loss": 4.612631865910122,
+      "margin": 0.25597343516926613
+    },
+    {
+      "ce": 4.4467615558255105,
+      "epoch": 2,
+      "loss": 4.565271305488551,
+      "margin": 0.47403901528378234
+    },
+    {
+      "ce": 4.213747287565662,
+      "epoch": 3,
+      "loss": 4.380945348739624,
+      "margin": 0.6687922549137871
+    },
+    {
+      "ce": 4.011127125612601,
+      "epoch": 4,
+      "loss": 4.193633976619914,
+      "margin": 0.73002740106275
+    }
+  ],
+  "runtime_seconds": 242.38337683677673,
+  "warm_start": {
+    "copied_prefixes": [
+      "q_sub",
+      "q_vis",
+      "s_evt",
+      "s_mean",
+      "scale",
+      "v_proj"
+    ],
+    "copied_tensor_count": 33,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_4_teacher_distilled_fusion.pt",
+    "sha256": "07583104d660674cf6f0f61ea8675d91bd57ed9fac0c1722bb023daf6eda9853",
+    "source_best_epoch": 5,
+    "source_variant": "teacher_distilled_fusion",
+    "used": true
+  }
+}

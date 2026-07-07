@@ -1,0 +1,25 @@
+{
+  "config_hash": "da20fa5bd7f130eb",
+  "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24g_full_bmn_t2_evidence_closure.py --stage c24g_3 --mode medium --seed 2026 --force",
+  "local_only": true,
+  "path": "/tmp/c24g_score_cache/CONQUER-RLEM-c2c3/C24G_FULL_BMN_T2_EVENT_EVIDENCE_TABLE_medium.local.parquet",
+  "query_count": 3000,
+  "row_count": 328000,
+  "schema_hash": "680bf06ed4b1f510",
+  "sha256": "aa96585c47c0231acce89551552dba561a625ad5d23fc9a4d85c040929038ee5",
+  "size_bytes": 68922269,
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  }
+}
