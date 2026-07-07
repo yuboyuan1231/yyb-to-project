@@ -1,0 +1,34 @@
+{
+  "correct_video_wrong_span_rows": 1810,
+  "gt_top5_not_top1_rows": 8000,
+  "wrong_video_high_score": {
+    "bmn_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.9996,
+      "rows": 20000,
+      "threshold_p90": 1.327252006530762,
+      "wrong_video_rate": 0.9917
+    },
+    "event_relevance_score": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99955,
+      "rows": 20000,
+      "threshold_p90": 0.5055953025817871,
+      "wrong_video_rate": 0.9893
+    },
+    "event_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.9996,
+      "rows": 20000,
+      "threshold_p90": 1.311837234973863,
+      "wrong_video_rate": 0.9904
+    },
+    "t2_z": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99985,
+      "rows": 20000,
+      "threshold_p90": 1.0208140850067142,
+      "wrong_video_rate": 0.9957
+    }
+  }
+}

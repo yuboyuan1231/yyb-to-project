@@ -1,0 +1,18 @@
+{
+  "feature_schema": {
+    "clip_timestamp_mapping": "C12 duration-normalized ts_to_idx/idx_to_ts",
+    "duplicate_overwrite": false,
+    "duration_bucket": "used for reporting and short-specialized weighting",
+    "no_position_based_join": true,
+    "no_silent_zero_fill": true,
+    "official_val_used": false,
+    "optional_c12_logits": "available through C12 teacher localizer for C15-1 audit; BMN MVP learns its own heads",
+    "query_feature": "existing query embedding",
+    "query_type": "embedding in temporal encoder",
+    "span_map": "start-duration dense map with D_MAX=64",
+    "subtitle_sequence": "existing C12 subtitle LMDB features, capped by C12 MAX_T",
+    "visual_sequence": "existing C12 visual_energy per clip, not raw video"
+  },
+  "schema_hash": "6ba36e96ccfd46311d744a4f3f4108e331d3a3c4b17960d8bf71c0c65d9d5db4",
+  "stage": "C15-2"
+}

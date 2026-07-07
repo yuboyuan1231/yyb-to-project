@@ -1,0 +1,15 @@
+{
+  "candidate_source": "first_stage_top128_pickle",
+  "duplicate_candidate_count": 0,
+  "gt_video_coverage": {
+    "top1": 28.4,
+    "top10": 78.6,
+    "top100": 100.0,
+    "top128": 100.0,
+    "top5": 63.9
+  },
+  "invalid_video_id_count": 0,
+  "query_count": 1000,
+  "row_count_top128": 128000,
+  "video_count": 17435
+}

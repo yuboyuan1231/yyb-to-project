@@ -1,0 +1,332 @@
+{
+  "bmn_score": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.0033615236867631727,
+      "pearson": -0.022227835737757256,
+      "spearman": -0.010474928244227707
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.018020856386832873,
+      "pearson": 0.0283199825986943,
+      "spearman": 0.028972496888989518
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.02638944534378727,
+      "pearson": 0.02879093223513484,
+      "spearman": 0.03338011850579251
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.03715654329517411,
+      "pearson": 0.0180200128222455,
+      "spearman": 0.020651507164855643
+    }
+  },
+  "c19_hybrid_score": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.017661482094016006,
+      "pearson": -0.03174018554532224,
+      "spearman": -0.022447334288425737
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.00863705447510734,
+      "pearson": 0.002644402862916192,
+      "spearman": -0.006530377821120536
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.00849095454610136,
+      "pearson": 0.005918543789314953,
+      "spearman": 0.006798694732734418
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.014030886961752526,
+      "pearson": 0.008941191131140207,
+      "spearman": 0.007872449343458146
+    }
+  },
+  "retriever_score": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.07888863941210046,
+      "pearson": 0.07536952797502851,
+      "spearman": 0.09514274588376091
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.033409062829483575,
+      "pearson": 0.022520959331707665,
+      "spearman": 0.03249697202922541
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.00230751841805241,
+      "pearson": 0.009278912260259118,
+      "spearman": 0.005543019479541419
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.021163540226912334,
+      "pearson": 0.0010828314382671617,
+      "spearman": -0.005313340758423218
+    }
+  },
+  "softmax_bmn_top10": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.02043692740444316,
+      "pearson": -0.008558096980795285,
+      "spearman": 0.01826441579865166
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.025045124700718284,
+      "pearson": 0.021809943752019265,
+      "spearman": 0.03149946794671212
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.03361999147734096,
+      "pearson": 0.023368069488487617,
+      "spearman": 0.031191077643048133
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.03136238595553973,
+      "pearson": 0.011101881339705027,
+      "spearman": 0.013627022600029586
+    }
+  },
+  "softmax_retriever_top10": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.06717886377630299,
+      "pearson": 0.019910395015437243,
+      "spearman": -0.06472249716136393
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.03060519348176812,
+      "pearson": 0.0029729599127842443,
+      "spearman": -0.0425653956907853
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.020628039862341827,
+      "pearson": -0.0013101043638924304,
+      "spearman": -0.026282887038037633
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.007523326689911456,
+      "pearson": 0.0003336011070639238,
+      "spearman": -0.00810970275107748
+    }
+  },
+  "softmax_t2_top10": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.021578191927787024,
+      "pearson": -0.007045038982476128,
+      "spearman": -0.0077804418209432985
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.031783881783906724,
+      "pearson": -0.02178715529979106,
+      "spearman": -0.021126264533758366
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.03588224066779302,
+      "pearson": -0.0224760910736633,
+      "spearman": -0.02124425438268321
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.019598183708703264,
+      "pearson": -0.00164991071796066,
+      "spearman": -0.00016881133132243
+    }
+  },
+  "t2_score": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.0720463901361161,
+      "pearson": -0.07185742835560374,
+      "spearman": -0.07372885719856308
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.05229231582340725,
+      "pearson": -0.06044254223820577,
+      "spearman": -0.07016215860832713
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.0435703307162767,
+      "pearson": -0.04546548233842659,
+      "spearman": -0.04199235547417749
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.01549510343552311,
+      "pearson": -0.017442303583701305,
+      "spearman": -0.01637432880956691
+    }
+  },
+  "z_bmn": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.0024461665155084866,
+      "pearson": -0.019750208192105715,
+      "spearman": -0.006788794342070874
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.009811034675088745,
+      "pearson": 0.0174341820378879,
+      "spearman": 0.01930053422077803
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.028389420709324112,
+      "pearson": 0.0219970403041052,
+      "spearman": 0.026221767152558126
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": 0.029792998200547167,
+      "pearson": 0.008808034619562387,
+      "spearman": 0.010391025919286477
+    }
+  },
+  "z_hybrid": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.005602297417828833,
+      "pearson": -0.0067440568023778525,
+      "spearman": 0.003805102689542392
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.017162444580658305,
+      "pearson": 0.00678697133175602,
+      "spearman": 0.008205962512465841
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.010199015220431467,
+      "pearson": 0.0036808871373353483,
+      "spearman": 0.008945112817365838
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.00666683483180521,
+      "pearson": 0.004807510945965509,
+      "spearman": 0.005842241015214448
+    }
+  },
+  "z_retriever": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.07356598801875609,
+      "pearson": 0.018689264719833974,
+      "spearman": -0.06949918219992177
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.033571470780464865,
+      "pearson": -0.0010635291108834985,
+      "spearman": -0.04637047998953274
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.02428797699200499,
+      "pearson": -0.005121387686044123,
+      "spearman": -0.027325302608548416
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.00787472350751612,
+      "pearson": -0.002283129121335005,
+      "spearman": -0.008001001038125049
+    }
+  },
+  "z_t2": {
+    "candidate_correct_video": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.021286422351928038,
+      "pearson": -0.0020585248670296277,
+      "spearman": -0.005520015520334554
+    },
+    "candidate_iou": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.031108135895898975,
+      "pearson": -0.01978096102229188,
+      "spearman": -0.019305378556109257
+    },
+    "candidate_iou_ge_05": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.0278482658597983,
+      "pearson": -0.02230678713250899,
+      "spearman": -0.020579062904170595
+    },
+    "candidate_iou_ge_07": {
+      "available": true,
+      "count": 36000,
+      "kendall_sample": -0.017269460056065212,
+      "pearson": -0.004610332285933161,
+      "spearman": -0.0016276964574751579
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "component_ablation": {
+    "A_first_stage_baseline_old_localizer": "available as C19/C21 train-only reference",
+    "B_c19_c20_c21_hybrid": {
+      "VCMR_R@100_IoU0.5": 37.45,
+      "VCMR_R@100_IoU0.7": 22.65,
+      "VCMR_R@10_IoU0.5": 11.7,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 2.95,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 3.9,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.65,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 2000,
+      "wrong_video_high_score_rate": 71.75,
+      "wrong_video_top1_rate": 71.75
+    },
+    "C_c22_original_native_joint": {
+      "VCMR_R@100_IoU0.5": 37.45,
+      "VCMR_R@100_IoU0.7": 22.65,
+      "VCMR_R@10_IoU0.5": 11.7,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 2.95,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 3.9,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.65,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 2000,
+      "wrong_video_high_score_rate": 71.75,
+      "wrong_video_top1_rate": 71.75
+    },
+    "D_c22r_retriever_only": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "score_collapse_ratio_std_lt_1e_6": 0.0,
+      "score_entropy_mean": 1.6143879691194742,
+      "score_std_mean": 1.0019012480974196,
+      "wrong_video_top1_rate": 71.6
+    },
+    "E_c22r_retriever_plus_bmn": "deferred until full trainfit score table materialization",
+    "F_c22r_retriever_bmn_t2_safety": "deferred",
+    "G_c22r_event_residual_bmn": "unsafe residual not selected",
+    "H_oracle_diagnostic": "candidate coverage oracle from C22R-2"
+  },
+  "evaluator_modified": false,
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "score_formulas": {
+    "I0_keep_c21_hybrid_reference": {
+      "alpha_base": 1.0,
+      "beta_residual": 0.0,
+      "gamma_bmn": "C21 reference",
+      "selected": true
+    },
+    "I1_c22r_retriever_only": {
+      "alpha_base": 1.0,
+      "beta_residual": 0.0,
+      "diagnostic_only": true,
+      "gamma_bmn": 0.0
+    },
+    "I2_c22r_retriever_plus_bmn": {
+      "alpha_base": 1.0,
+      "beta_residual": 0.0,
+      "deferred": true,
+      "gamma_bmn": "requires full score table integration"
+    }
+  },
+  "seed": 2026,
+  "selected_integration": {
+    "c22r_not_promoted": true,
+    "name": "I0_keep_c21_hybrid_reference",
+    "reason": "retriever sanity restored by first-stage preservation, but no new safe BMN integration gain was proven in medium"
+  },
+  "stage": "C22R-4",
+  "status": "C22R_SAFE_JOINT_WEAK",
+  "vcmr_results": {
+    "delta_vs_c19_c21_hybrid": {
+      "VCMR_R@100_IoU0.5": 0.0,
+      "VCMR_R@100_IoU0.7": 0.0,
+      "VCMR_R@10_IoU0.5": 0.0,
+      "VCMR_R@10_IoU0.7": 0.0,
+      "VCMR_R@1_IoU0.5": 0.0,
+      "VCMR_R@1_IoU0.7": 0.0,
+      "VCMR_R@5_IoU0.5": 0.0,
+      "VCMR_R@5_IoU0.7": 0.0,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.0,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 0.0,
+      "wrong_video_high_score_rate": 0.0,
+      "wrong_video_top1_rate": 0.0
+    },
+    "delta_vs_c22_original_native_joint": {
+      "VCMR_R@100_IoU0.5": 0.0,
+      "VCMR_R@100_IoU0.7": 0.0,
+      "VCMR_R@10_IoU0.5": 0.0,
+      "VCMR_R@10_IoU0.7": 0.0,
+      "VCMR_R@1_IoU0.5": 0.0,
+      "VCMR_R@1_IoU0.7": 0.0,
+      "VCMR_R@5_IoU0.5": 0.0,
+      "VCMR_R@5_IoU0.7": 0.0,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.0,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 0.0,
+      "wrong_video_high_score_rate": 0.0,
+      "wrong_video_top1_rate": 0.0
+    },
+    "final_vcmr_metrics": {
+      "VCMR_R@100_IoU0.5": 37.45,
+      "VCMR_R@100_IoU0.7": 22.65,
+      "VCMR_R@10_IoU0.5": 11.7,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 2.95,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 3.9,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.65,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 2000,
+      "wrong_video_high_score_rate": 71.75,
+      "wrong_video_top1_rate": 71.75
+    },
+    "selected_integration": "I0_keep_c21_hybrid_reference"
+  },
+  "wrong_video_audit": {
+    "controlled_by_not_selecting_unsafe_native_replacement": true,
+    "wrong_video_top1_or_high_score_rate": 71.75
+  }
+}

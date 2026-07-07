@@ -1,0 +1,8 @@
+{
+  "seed2026": {
+    "integration": "C23_FULL_NATIVE_COUPLING_STABLE_NO_GAIN",
+    "retriever": "C23_RESIDUAL_RETRIEVER_STABLE_NO_GAIN"
+  },
+  "seed2027": "not rerun in medium because selected retriever is deterministic baseline-preserving",
+  "seed2028": "not rerun in medium because selected retriever is deterministic baseline-preserving"
+}

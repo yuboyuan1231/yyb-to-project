@@ -1,0 +1,65 @@
+{
+  "d_e_f_subset_audit": {
+    "full_subset_scoring_deferred": true,
+    "source": "C20/C21 D/E/F labels available; selected baseline-preserving retriever does not collapse candidate coverage"
+  },
+  "evaluator_modified": false,
+  "full_trainfit_readiness_status": "C22R_READY_FOR_FULL_TRAINFIT_NATIVE_COUPLING",
+  "medium_full_gap_audit": {
+    "estimated_gpu_memory_gb": "low for residual scoring; BMN full score table dominated by storage/I/O",
+    "estimated_runtime": "minutes for residual replay, longer for full BMN score materialization",
+    "full_calib_holdout_count": 4340,
+    "full_score_cache_required": true,
+    "medium_query_count": 1000,
+    "train_fit_count": 69428
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "pseudo_onelook_diagnostic": {
+    "no_post_onelook_adjustment": true,
+    "pseudo_official_not_used_for_selection": true,
+    "pseudo_one_look_executed": false,
+    "reason": "C22R is a sanity repair and does not seek official readiness.",
+    "selected_model_frozen_before_onelook": true
+  },
+  "query_duration_robustness": {
+    "source": "C22R-3 first-stage-preserving formula; detailed query/duration breakdown deferred to full C23",
+    "wrong_video_risk": 71.6
+  },
+  "seed": 2026,
+  "seed_robustness": {
+    "2026": {
+      "final_vr_metrics": {
+        "GT_video_mean_rank": 7.748,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 28.4,
+        "VR_R@10": 78.6,
+        "VR_R@100": 100.0,
+        "VR_R@128": 100.0,
+        "VR_R@5": 63.9,
+        "missing_rank_count": 0,
+        "query_count": 1000,
+        "score_collapse_ratio_std_lt_1e_6": 0.0,
+        "score_entropy_mean": 1.6143879691194742,
+        "score_std_mean": 1.0019012480974196,
+        "wrong_video_top1_rate": 71.6
+      },
+      "selected_retriever": {
+        "formula": {
+          "base": 1.0,
+          "c22": 0.0,
+          "rank_prior": 0.01
+        },
+        "name": "R0_baseline_only",
+        "no_regression_guard": true
+      }
+    },
+    "2027": "deterministic baseline-preserving selected retriever; rerun feasible but not required for medium no-training formula",
+    "2028": "deterministic baseline-preserving selected retriever; rerun feasible but not required for medium no-training formula"
+  },
+  "stage": "C22R-5",
+  "status": "C22R_ROBUSTNESS_PARTIAL"
+}

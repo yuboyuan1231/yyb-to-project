@@ -1,0 +1,8 @@
+{
+  "note": "Release features are not treated as CLIP/DINO/VideoMAE/InternVideo strong features.",
+  "release_features_available": true,
+  "sample_paths": [
+    "/tmp/yyb_nvme_c35/tvr_feature_release/video_feature/resnet_slowfast_1.5",
+    "/tmp/tvr_feature_release_c5/video_feature/resnet_slowfast_1.5"
+  ]
+}

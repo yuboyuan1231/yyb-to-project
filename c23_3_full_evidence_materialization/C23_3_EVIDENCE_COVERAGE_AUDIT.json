@@ -1,0 +1,20 @@
+{
+  "duplicate_candidate_count": 0,
+  "full_trainfit_evidence_materialized": false,
+  "invalid_span_count": 0,
+  "loaded_medium_evidence_rows": 22779481,
+  "loaded_medium_query_count": 2000,
+  "medium_c17_score_exists": true,
+  "medium_c19_canonical_exists": true,
+  "missing_score_count": 0,
+  "missing_scores_mask_required": true,
+  "mode": "medium",
+  "nan_inf_count": 0,
+  "position_based_join": false,
+  "sample_rows": 800,
+  "silent_zero_fill": false,
+  "split_query_coverage": {
+    "calib_holdout": 1000,
+    "calib_select": 1000
+  }
+}

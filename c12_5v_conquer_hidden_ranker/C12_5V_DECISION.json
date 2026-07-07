@@ -1,0 +1,17 @@
+{
+  "allow_enter_c12_6": false,
+  "auc_iou07": 0.4937875,
+  "best_iou07_top100": 37.764976958525345,
+  "best_iou07_top50": 26.95852534562212,
+  "best_iou_span_top100_rate": 30.29953917050691,
+  "best_iou_span_top50_rate": 20.87557603686636,
+  "best_variant": "V1_hidden_boundary",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "pq_spearman": -0.18961203992882372,
+  "reason": "Selected on calib_select. Holdout top100=37.7650, top50=26.9585, Spearman=-0.18961203992882372, AUC@0.7=0.4937875.",
+  "short_iou07_top100": 27.272727272727273,
+  "stage": "C12-5V-E",
+  "status": "C12_HIDDEN_RANKER_NO_GAIN_NEED_STRONGER_FEATURES"
+}

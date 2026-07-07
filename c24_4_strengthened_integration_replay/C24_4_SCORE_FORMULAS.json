@@ -1,0 +1,12 @@
+{
+  "A": "C23 selected duration-aware formula",
+  "B": "C19/C21 hybrid baseline",
+  "C": "BMN raw",
+  "D": "BMN calibrated sqrt",
+  "E": "event proxy calibrated",
+  "F": "T2 calibrated",
+  "G": "BMN + event proxy consistency",
+  "H": "BMN + T2 consistency",
+  "I": "all evidence + wrong-risk penalty",
+  "J": "all evidence + no-regression guard"
+}

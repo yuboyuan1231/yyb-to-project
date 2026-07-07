@@ -1,0 +1,27 @@
+{
+  "c12_official_policy": "branch-local explicit authorization marker required for any future official path; this script has no official path",
+  "official_already_run_markers_preserved": [
+    "c7_c6b_opt_official_one_shot/OFFICIAL_VAL_ALREADY_RUN",
+    "c7_official_one_shot/OFFICIAL_VAL_ALREADY_RUN",
+    "c9_official_one_shot/OFFICIAL_VAL_ALREADY_RUN"
+  ],
+  "official_val_used": false,
+  "quarantined_markers": {
+    "C9_OFFICIAL_VAL_AUTHORIZED": {
+      "exists": true,
+      "path": "c12_5t_best_span_promotion/quarantine_official_markers/C9_OFFICIAL_VAL_AUTHORIZED.stale_20260703",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "OFFICIAL_VAL_AUTHORIZED": {
+      "exists": true,
+      "path": "c12_5t_best_span_promotion/quarantine_official_markers/OFFICIAL_VAL_AUTHORIZED.stale_20260703",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "root_markers_present_after_quarantine": {
+    "C9_OFFICIAL_VAL_AUTHORIZED": false,
+    "OFFICIAL_VAL_AUTHORIZED": false
+  },
+  "stage": "C12-5T-0",
+  "status": "C12_STALE_OFFICIAL_MARKERS_QUARANTINED"
+}

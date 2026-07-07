@@ -1,0 +1,12 @@
+{
+  "checkpoint_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c16_2_fullscale_bmn_training/C16_2_BMN_CHECKPOINT_MANIFEST.json",
+    "readable": true,
+    "sha256": "1dc136d806a2ca95e23ba8fd11a2a22d9d3a8e25bce973b1519f9edcf769ab21",
+    "size_bytes": 5854
+  },
+  "coverage_select_holdout": 0.999995,
+  "source": "C19 BMN best span per query-video for calib_select/calib_holdout",
+  "train_fit_missing_masked": true
+}

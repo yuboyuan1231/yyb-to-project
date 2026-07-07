@@ -1,0 +1,12 @@
+{
+  "generated_pool_iou07_coverage_reference": 85.06912442396313,
+  "gt_video_in_top100_rate": 100.0,
+  "not_copied_from_b6_fixed_pool": true,
+  "not_using_official_predictions": true,
+  "official_val_used": false,
+  "pool_lock_pass": true,
+  "ranked_top100_iou07_reference": 44.56221198156682,
+  "span_generated_pool": "C12 native generated M=1000",
+  "stage": "C12-5T-B",
+  "video_retriever": "CONQUER-warm / zero_delta_replay"
+}

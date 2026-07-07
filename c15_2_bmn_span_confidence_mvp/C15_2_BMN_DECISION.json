@@ -1,0 +1,133 @@
+{
+  "best_holdout_metrics": {
+    "b6_top1_breakdown": {
+      "False": {
+        "IoU@0.5_top100": 88.9908256880734,
+        "IoU@0.5_top50": 66.5137614678899,
+        "IoU@0.7_top100": 72.01834862385321,
+        "IoU@0.7_top50": 48.62385321100918,
+        "best_IoU_span_top100_promotion_rate": 87.61467889908256,
+        "best_IoU_span_top50_promotion_rate": 53.669724770642205,
+        "median_best_iou_top100": 0.769756355774086,
+        "query_count": 218,
+        "top1_mean_iou": 0.09106318793247932
+      },
+      "True": {
+        "IoU@0.5_top100": 89.02439024390245,
+        "IoU@0.5_top50": 76.82926829268293,
+        "IoU@0.7_top100": 71.95121951219512,
+        "IoU@0.7_top50": 59.75609756097561,
+        "best_IoU_span_top100_promotion_rate": 85.36585365853658,
+        "best_IoU_span_top50_promotion_rate": 65.85365853658537,
+        "median_best_iou_top100": 0.7901826818074758,
+        "query_count": 82,
+        "top1_mean_iou": 0.12853506181427365
+      }
+    },
+    "duration_breakdown": {
+      "long": {
+        "IoU@0.5_top100": 100.0,
+        "IoU@0.5_top50": 96.7741935483871,
+        "IoU@0.7_top100": 100.0,
+        "IoU@0.7_top50": 83.87096774193549,
+        "best_IoU_span_top100_promotion_rate": 96.7741935483871,
+        "best_IoU_span_top50_promotion_rate": 67.74193548387096,
+        "median_best_iou_top100": 0.8591741255717034,
+        "query_count": 31,
+        "top1_mean_iou": 0.18557456967111735
+      },
+      "medium": {
+        "IoU@0.5_top100": 97.05882352941177,
+        "IoU@0.5_top50": 82.3529411764706,
+        "IoU@0.7_top100": 87.25490196078431,
+        "IoU@0.7_top50": 66.66666666666667,
+        "best_IoU_span_top100_promotion_rate": 94.11764705882354,
+        "best_IoU_span_top50_promotion_rate": 65.68627450980392,
+        "median_best_iou_top100": 0.8019836474832593,
+        "query_count": 102,
+        "top1_mean_iou": 0.1177925870053269
+      },
+      "short": {
+        "IoU@0.5_top100": 82.03592814371258,
+        "IoU@0.5_top50": 56.287425149700596,
+        "IoU@0.7_top100": 57.48502994011976,
+        "IoU@0.7_top50": 36.52694610778443,
+        "best_IoU_span_top100_promotion_rate": 80.83832335329342,
+        "best_IoU_span_top50_promotion_rate": 49.70059880239521,
+        "median_best_iou_top100": 0.7232142857142839,
+        "query_count": 167,
+        "top1_mean_iou": 0.0755927814592991
+      }
+    },
+    "pq_iou_calibration": {
+      "auc_iou07": 0.605885,
+      "pearson": 0.11277207727021987,
+      "sample_count": 35661,
+      "spearman": 0.08492601376181254
+    },
+    "query_type_breakdown": {
+      "t": {
+        "IoU@0.5_top100": 88.46153846153847,
+        "IoU@0.5_top50": 69.23076923076923,
+        "IoU@0.7_top100": 80.76923076923077,
+        "IoU@0.7_top50": 57.69230769230769,
+        "best_IoU_span_top100_promotion_rate": 80.76923076923077,
+        "best_IoU_span_top50_promotion_rate": 50.0,
+        "median_best_iou_top100": 0.8177457109030852,
+        "query_count": 26,
+        "top1_mean_iou": 0.1072998376614195
+      },
+      "v": {
+        "IoU@0.5_top100": 88.28451882845188,
+        "IoU@0.5_top50": 67.78242677824268,
+        "IoU@0.7_top100": 70.2928870292887,
+        "IoU@0.7_top50": 49.7907949790795,
+        "best_IoU_span_top100_promotion_rate": 86.61087866108787,
+        "best_IoU_span_top50_promotion_rate": 56.90376569037657,
+        "median_best_iou_top100": 0.7679882525697486,
+        "query_count": 239,
+        "top1_mean_iou": 0.0940542435668042
+      },
+      "vt": {
+        "IoU@0.5_top100": 94.28571428571429,
+        "IoU@0.5_top50": 80.0,
+        "IoU@0.7_top100": 77.14285714285714,
+        "IoU@0.7_top50": 60.0,
+        "best_IoU_span_top100_promotion_rate": 94.28571428571429,
+        "best_IoU_span_top50_promotion_rate": 62.857142857142854,
+        "median_best_iou_top100": 0.8028019007045715,
+        "query_count": 35,
+        "top1_mean_iou": 0.146368287039652
+      }
+    },
+    "split": "calib_holdout",
+    "summary": {
+      "IoU@0.5_top100": 89.0,
+      "IoU@0.5_top50": 69.33333333333333,
+      "IoU@0.7_top100": 72.0,
+      "IoU@0.7_top50": 51.666666666666664,
+      "best_IoU_span_top100_promotion_rate": 87.0,
+      "best_IoU_span_top50_promotion_rate": 57.0,
+      "median_best_iou_top100": 0.7768619745897949,
+      "query_count": 300,
+      "top1_mean_iou": 0.10130550012683644
+    },
+    "variant": "B3_query_aware_map"
+  },
+  "best_variant": "B3_query_aware_map",
+  "next_step_if_not_promising": [
+    "BSN-style local-to-global fallback",
+    "BMN map + T2 hybrid",
+    "boundary offset refinement",
+    "stop score chasing"
+  ],
+  "official_val_used": false,
+  "same_sample_reference_note": "BMN uses the same first-300 train/calib split sampling convention as C14 and is compared to C14 same-sample train-only metrics.",
+  "stage": "C15-2",
+  "status": "C15_BMN_MVP_PROMISING",
+  "vs_c12_5t_t2_delta": {
+    "IoU@0.7_top100": 19.333333333333336,
+    "IoU@0.7_top50": 10.0,
+    "short_IoU@0.7_top100": 22.75449101796407
+  }
+}

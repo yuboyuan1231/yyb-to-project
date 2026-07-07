@@ -1,0 +1,209 @@
+{
+  "run_c12_5_native_span_generation.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_5_native_span_generation.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_5r_span_head_repair.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_5r_span_head_repair.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_5s_rich_span_ranker.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_5s_rich_span_ranker.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_5t_best_span_promotion.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_5t_best_span_promotion.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_5u_topk_calibration_repair.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_5u_topk_calibration_repair.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_clean_native_vcmr_setup.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_clean_native_vcmr_setup.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c12_feature_audit_and_scaffold.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c12_feature_audit_and_scaffold.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c13_feature_baseline_pivot.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c13_feature_baseline_pivot.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c14_strong_feature_event_pilot.py": {
+    "mentions_bmn": false,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c14_strong_feature_event_pilot.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c15_boundary_localizer_redesign.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c15_boundary_localizer_redesign.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c16_fullscale_bmn_native_localizer.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c16_fullscale_bmn_native_localizer.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c17_bmn_t2_native_vcmr_integration.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c17_bmn_t2_native_vcmr_integration.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": false
+  },
+  "run_c18_full_hybrid_freeze_candidate.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c18_full_hybrid_freeze_candidate.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": false
+  },
+  "run_c19_official_readiness_blocker_closure.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c19_official_readiness_blocker_closure.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c20_top1_safe_bmn_correction.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c20_top1_safe_bmn_correction.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": false
+  },
+  "run_c21_front_rank_retriever_localizer_calibration.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c21_front_rank_retriever_localizer_calibration.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c22_native_partial_event_retriever_localizer.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c22_native_partial_event_retriever_localizer.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c22r_native_coupling_sanity_repair.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c22r_native_coupling_sanity_repair.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": false,
+    "supports_train_fit_in_text": true
+  },
+  "run_c23_full_trainfit_firststage_preserving_native_coupling.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c23_full_trainfit_firststage_preserving_native_coupling.py",
+    "supports_chunking_in_text": false,
+    "supports_resume_in_text": true,
+    "supports_train_fit_in_text": true
+  },
+  "run_c24_full_bmn_event_evidence_strengthening_audit.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c24_full_bmn_event_evidence_strengthening_audit.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": true,
+    "supports_train_fit_in_text": true
+  },
+  "run_c24f_full_evidence_materialization_repair.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c24f_full_evidence_materialization_repair.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": true,
+    "supports_train_fit_in_text": true
+  },
+  "run_c24g_full_bmn_t2_evidence_closure.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": false,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c24g_full_bmn_t2_evidence_closure.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": true,
+    "supports_train_fit_in_text": true
+  },
+  "run_c24h_full_bmn_t2_trainfit_rebuild.py": {
+    "mentions_bmn": true,
+    "mentions_span_map": true,
+    "mentions_t2": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/run_c24h_full_bmn_t2_trainfit_rebuild.py",
+    "supports_chunking_in_text": true,
+    "supports_resume_in_text": true,
+    "supports_train_fit_in_text": true
+  }
+}

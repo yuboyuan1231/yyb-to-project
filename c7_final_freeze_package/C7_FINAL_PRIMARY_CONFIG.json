@@ -1,0 +1,26 @@
+{
+  "candidate": "C7C6-B Region-lite",
+  "base_system": "C7C3-B checkpoint-refined RLEM candidate",
+  "region_branch": "C7C6-B Region-lite",
+  "composition": "fixed R1-priority anchor-preserving composition",
+  "official_role": "primary freeze-review candidate",
+  "r1_priority_config": {
+    "video_rank_limit": 5,
+    "integrated_topn": 5,
+    "anchor_rank_limit": 5,
+    "anchor_margin_threshold_name": "p65",
+    "anchor_margin_threshold": 0.3032871469855309,
+    "same_top1_video_only": true,
+    "require_in_anchor": false,
+    "topK_gate_mode": "top5_allowed",
+    "max_video_promotion": 3
+  },
+  "region_lite": {
+    "variant": "C7C6-B",
+    "region_usage": "Region feature only -> C_prop",
+    "boundary_modulation": "disabled",
+    "start_end_logits_modification": "disabled",
+    "nms_modification": "disabled",
+    "evaluator_modification": "disabled"
+  }
+}

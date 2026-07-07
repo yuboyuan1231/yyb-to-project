@@ -1,0 +1,37 @@
+{
+  "candidate_level": [
+    "query_id",
+    "video_id",
+    "candidate_rank",
+    "start_sec",
+    "end_sec",
+    "aligned_frame_indices",
+    "aligned_clip_indices",
+    "feature_available",
+    "missing_reason"
+  ],
+  "clip_level": [
+    "video_id",
+    "clip_index",
+    "start_sec",
+    "end_sec",
+    "model_name",
+    "feature_dim",
+    "feature_path",
+    "feature_hash",
+    "aggregation_method",
+    "source_frame_indices"
+  ],
+  "frame_level": [
+    "video_id",
+    "frame_index",
+    "timestamp_sec",
+    "model_name",
+    "feature_dim",
+    "feature_path",
+    "feature_hash",
+    "extraction_fps",
+    "preprocess_config",
+    "source_frame_path"
+  ]
+}

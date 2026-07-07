@@ -1,0 +1,72 @@
+{
+  "mappable_video_ratio": 0.0,
+  "missing_video_frame_examples": [
+    "fea67b5928704f2d",
+    "ALIGNMENT",
+    "opt",
+    "CORPUS",
+    "medium",
+    "2c3ca1e2489a29c3",
+    "823f35ec9cec9edc",
+    "5eee6d9144d0afc2",
+    "226e35a7d0043bf1",
+    "release",
+    "predictions",
+    "0ee1d6104bf6b2a4",
+    "official",
+    "select",
+    "MANIFEST",
+    "45793ab4c2b5c886",
+    "config",
+    "42241cf96733f357",
+    "a8cefb4d11ed9759",
+    "boundary",
+    "1d941c04612f80a1",
+    "select100",
+    "f55af7904deffb6a",
+    "holdout",
+    "selected",
+    "video2dur"
+  ],
+  "sampled_annotation_ids": [
+    [
+      "predictions",
+      6
+    ],
+    [
+      "config",
+      3
+    ],
+    [
+      "release",
+      3
+    ],
+    [
+      "opt",
+      2
+    ],
+    [
+      "ALIGNMENT",
+      2
+    ],
+    [
+      "video2dur",
+      2
+    ],
+    [
+      "select100",
+      2
+    ],
+    [
+      "CORPUS",
+      1
+    ],
+    [
+      "selected",
+      1
+    ]
+  ],
+  "sampled_frame_video_ids": [],
+  "sampled_raw_video_ids": [],
+  "sampled_subtitle_ids": []
+}

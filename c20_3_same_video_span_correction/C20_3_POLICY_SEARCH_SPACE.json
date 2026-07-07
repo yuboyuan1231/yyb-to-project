@@ -1,0 +1,166 @@
+{
+  "policies": [
+    {
+      "name": "S0_anchor_original"
+    },
+    {
+      "name": "S1_always_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.0,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.02,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.05,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.1,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.15,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.2,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "margin_threshold": 0.3,
+      "name": "S2_margin_gated_bmn_same_video"
+    },
+    {
+      "bmn_threshold": 0.45,
+      "margin_threshold": 0.02,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.55,
+      "margin_threshold": 0.02,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.65,
+      "margin_threshold": 0.02,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.75,
+      "margin_threshold": 0.02,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.45,
+      "margin_threshold": 0.05,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.55,
+      "margin_threshold": 0.05,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.65,
+      "margin_threshold": 0.05,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.75,
+      "margin_threshold": 0.05,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.45,
+      "margin_threshold": 0.1,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.55,
+      "margin_threshold": 0.1,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.65,
+      "margin_threshold": 0.1,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.75,
+      "margin_threshold": 0.1,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.45,
+      "margin_threshold": 0.15,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.55,
+      "margin_threshold": 0.15,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.65,
+      "margin_threshold": 0.15,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "bmn_threshold": 0.75,
+      "margin_threshold": 0.15,
+      "name": "S4_score_disagreement_gated",
+      "t2_slack": 0.1
+    },
+    {
+      "name": "S5_duration_aware_same_video",
+      "thresholds": {
+        "long": 0.15,
+        "medium": 0.1,
+        "short": 0.05
+      }
+    },
+    {
+      "name": "S5_duration_aware_same_video",
+      "thresholds": {
+        "long": 0.1,
+        "medium": 0.05,
+        "short": 0.02
+      }
+    },
+    {
+      "name": "S6_query_type_aware_same_video",
+      "thresholds": {
+        "t": 0.1,
+        "v": 0.05,
+        "vt": 0.05
+      }
+    },
+    {
+      "name": "S6_query_type_aware_same_video",
+      "thresholds": {
+        "t": 0.05,
+        "v": 0.02,
+        "vt": 0.02
+      }
+    }
+  ]
+}

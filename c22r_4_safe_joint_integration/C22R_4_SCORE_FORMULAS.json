@@ -1,0 +1,20 @@
+{
+  "I0_keep_c21_hybrid_reference": {
+    "alpha_base": 1.0,
+    "beta_residual": 0.0,
+    "gamma_bmn": "C21 reference",
+    "selected": true
+  },
+  "I1_c22r_retriever_only": {
+    "alpha_base": 1.0,
+    "beta_residual": 0.0,
+    "diagnostic_only": true,
+    "gamma_bmn": 0.0
+  },
+  "I2_c22r_retriever_plus_bmn": {
+    "alpha_base": 1.0,
+    "beta_residual": 0.0,
+    "deferred": true,
+    "gamma_bmn": "requires full score table integration"
+  }
+}

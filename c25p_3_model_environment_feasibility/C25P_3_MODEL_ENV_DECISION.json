@@ -1,0 +1,40 @@
+{
+  "compatibility_risks": [
+    "C24H GPU process conflict",
+    "Package/checkpoint availability may require user-authorized install/download"
+  ],
+  "fallback_model_if_raw_frames_missing": "existing release SlowFast/ResNet/RoBERTa feature enhancement only",
+  "model_availability": {
+    "clip": {
+      "available": false,
+      "expected_speed": "fast frame-level",
+      "expected_storage": "frames * dim * dtype",
+      "feature_dim": "512 or 768",
+      "model": "CLIP ViT-B/32 or ViT-L/14"
+    },
+    "dinov2": {
+      "available": false,
+      "expected_speed": "medium frame-level",
+      "expected_storage": "frames * dim * dtype",
+      "feature_dim": "768 or 1024",
+      "model": "DINOv2 ViT-B/14 or ViT-L/14"
+    },
+    "internvideo": {
+      "available": false,
+      "expected_speed": "heavy video-language",
+      "expected_storage": "clips * dim * dtype",
+      "feature_dim": "768-1024 typical",
+      "model": "InternVideo/InternVideo2"
+    },
+    "videomae": {
+      "available": false,
+      "expected_speed": "slower clip-level",
+      "expected_storage": "clips * dim * dtype",
+      "feature_dim": "768 typical",
+      "model": "VideoMAE/VideoMAEv2"
+    }
+  },
+  "recommended_first_pilot_model": "DINOv2 frame-level if package/checkpoint is available",
+  "stage": "C25P-3",
+  "status": "C25P_MODEL_ENV_BLOCKED_NO_FRAMES"
+}

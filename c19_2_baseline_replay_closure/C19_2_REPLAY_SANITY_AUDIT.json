@@ -1,0 +1,34 @@
+{
+  "duplicate_candidate_count": 0,
+  "invalid_span_count": 0,
+  "nms_consistency": "per-video temporal NMS threshold 0.7; official NMS not modified",
+  "oracle_score_sanity": "covered by C17 native replay; C19 did not use it for selection",
+  "random_score_sanity": "covered by C17 native replay; C19 did not use it for selection",
+  "row_coverage": {
+    "candidate_count": 22779481,
+    "config_hash": "d8bffaed29b7d41f35bf8c47bbcd64e87d21c7448122fb82c3217949e311988f",
+    "query_count": 2000,
+    "row_count": 22779481,
+    "schema_hash": "34e567b94d3812c0a6667d959490d6abf5ea8da90ae164927674fcfee8b6ae82",
+    "score_columns": [
+      "retriever_score",
+      "bmn_final_score",
+      "bmn_score",
+      "t2_score",
+      "final_score",
+      "old_c12_score"
+    ],
+    "split_coverage": {
+      "calib_holdout": 1000,
+      "calib_select": 1000
+    },
+    "video_count": 13992
+  },
+  "same_evaluator": "C18 fast evaluator over C17/C18 train-only schema",
+  "same_metric_schema": true,
+  "same_split": [
+    "calib_holdout",
+    "calib_select"
+  ],
+  "timestamp_mapping": "span_start/span_end and gt_start/gt_end from C17 score table"
+}

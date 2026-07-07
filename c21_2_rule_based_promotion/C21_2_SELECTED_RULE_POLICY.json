@@ -1,0 +1,7 @@
+{
+  "policy_hash": "0d3adb557c777f58237e90f618a3903aab11eb2715135cab6a43e6ca3f10a810",
+  "selected_rule_policy": {
+    "name": "R0_no_promotion",
+    "topk": 0
+  }
+}

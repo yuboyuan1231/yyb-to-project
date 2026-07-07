@@ -1,0 +1,22 @@
+{
+  "R0_baseline_only": {
+    "base": 1.0,
+    "c22": 0.0,
+    "rank_prior": 0.01
+  },
+  "R1_linear_residual_lambda_0_02": {
+    "base": 1.0,
+    "c22": 0.02,
+    "rank_prior": 0.01
+  },
+  "R2_gated_residual_lambda_0_05": {
+    "base": 1.0,
+    "c22": 0.05,
+    "rank_prior": 0.01
+  },
+  "R3_rank_preserving_residual_lambda_0_10": {
+    "base": 1.0,
+    "c22": 0.1,
+    "rank_prior": 0.02
+  }
+}
