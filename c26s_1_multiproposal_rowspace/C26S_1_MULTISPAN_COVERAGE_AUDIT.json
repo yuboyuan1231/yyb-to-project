@@ -1,0 +1,10 @@
+{
+  "has_train_fit": false,
+  "query_count": 1800,
+  "span_row_count": 10238083,
+  "split_query_coverage": {
+    "calib_holdout": 900,
+    "calib_select": 900
+  },
+  "video_candidate_count": 180000
+}

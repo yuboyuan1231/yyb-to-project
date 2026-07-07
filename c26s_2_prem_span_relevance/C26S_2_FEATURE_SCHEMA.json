@@ -1,0 +1,17 @@
+{
+  "features": [
+    "c26_visual_relevance",
+    "c26_subtitle_relevance",
+    "visual_span_relevance_mean",
+    "visual_span_relevance_max",
+    "visual_span_relevance_topk",
+    "subtitle_span_relevance_mean",
+    "subtitle_span_relevance_max",
+    "subtitle_span_relevance_topk",
+    "modality_gate_visual",
+    "modality_gate_subtitle",
+    "modality_gate_joint",
+    "prem_span_relevance"
+  ],
+  "gt_excluded": true
+}

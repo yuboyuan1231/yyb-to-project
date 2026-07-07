@@ -1,0 +1,25 @@
+{
+  "query_video_pairs": 180000,
+  "rows": 10238083,
+  "span_count_per_query_video": {
+    "max": 64,
+    "median": 57.0,
+    "min": 3,
+    "p95": 61.0
+  },
+  "span_rows_per_query": {
+    "max": 6116,
+    "median": 5690.0,
+    "min": 5400,
+    "p95": 5855.0
+  },
+  "topm": {
+    "top16_per_video_rows": 2879868,
+    "top1_per_video_rows": 180000,
+    "top2_per_video_rows": 360000,
+    "top32_per_video_rows": 5759197,
+    "top4_per_video_rows": 719990,
+    "top64_per_video_rows": 10238083,
+    "top8_per_video_rows": 1439950
+  }
+}
