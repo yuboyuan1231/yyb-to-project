@@ -1,0 +1,28 @@
+{
+  "diagnostic_high_score_false_positive": {
+    "bmn_score": {
+      "iou07_false_positive_rate": 0.9891666666666666,
+      "rows": 3600,
+      "threshold_p90": 0.5423670589923859,
+      "wrong_video_rate": 0.7741666666666667
+    },
+    "c19_hybrid_score": {
+      "iou07_false_positive_rate": 0.9922222222222222,
+      "rows": 3600,
+      "threshold_p90": 0.8204426229000092,
+      "wrong_video_rate": 0.7622222222222222
+    },
+    "t2_score": {
+      "iou07_false_positive_rate": 0.9950013885031935,
+      "rows": 3601,
+      "threshold_p90": 0.7643241286277771,
+      "wrong_video_rate": 0.7853374062760344
+    }
+  },
+  "integration_wrong_video_audit": {
+    "baseline_wrong_video_high_score_rate": 71.75,
+    "increase": 0.0,
+    "selected_wrong_video_high_score_rate": 71.75
+  },
+  "r100_only_risk": true
+}

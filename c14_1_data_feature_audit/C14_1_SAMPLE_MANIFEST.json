@@ -1,0 +1,3024 @@
+{
+  "coverage_counts": {
+    "b6_top1_correct": 40,
+    "b6_top1_wrong": 40,
+    "background_sample": 53,
+    "c12_5t_topk_selector_good_oracle_case": 80,
+    "c12_5v_hidden_ranker_regression": 60,
+    "c12_span_ranker_failure": 60,
+    "duration_long": 30,
+    "duration_medium": 30,
+    "duration_short": 30,
+    "qtype_t": 30,
+    "qtype_v": 30,
+    "qtype_vt": 30
+  },
+  "positive_not_in_b6_top100_blocked": true,
+  "positive_not_in_b6_top100_proxy": "native C12 retriever missed-top100 aggregate from C12-4 if natural B6 replay miss is absent",
+  "rows": [
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 0,
+      "duration": 8.099999999999998,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 1,
+      "duration": 2.25,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 2,
+      "duration": 3.599999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 3,
+      "duration": 4.5,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 4,
+      "duration": 3.1499999999999986,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 5,
+      "duration": 3.5500000000000007,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 6,
+      "duration": 1.4799999999999969,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 7,
+      "duration": 6.489999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 8,
+      "duration": 4.72,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 9,
+      "duration": 4.730000000000004,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 10,
+      "duration": 2.4,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 11,
+      "duration": 2.099999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 12,
+      "duration": 2.3999999999999986,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 13,
+      "duration": 4.8,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 14,
+      "duration": 5.100000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 15,
+      "duration": 2.14,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 16,
+      "duration": 1.5200000000000031,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 17,
+      "duration": 0.9099999999999966,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 18,
+      "duration": 4.8799999999999955,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 19,
+      "duration": 1.8299999999999983,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 20,
+      "duration": 1.8199999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 21,
+      "duration": 4.550000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 22,
+      "duration": 1.3699999999999974,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 23,
+      "duration": 2.74,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 24,
+      "duration": 25.049999999999997,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 25,
+      "duration": 15.590000000000002,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 26,
+      "duration": 5.349999999999998,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 27,
+      "duration": 22.72,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 28,
+      "duration": 2.6799999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 29,
+      "duration": 2.6799999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 30,
+      "duration": 7.809999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 31,
+      "duration": 5.530000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 32,
+      "duration": 7.1399999999999935,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 33,
+      "duration": 10.410000000000002,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 34,
+      "duration": 3.25,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 35,
+      "duration": 4.55,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 36,
+      "duration": 8.180000000000003,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 37,
+      "duration": 4.540000000000006,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 38,
+      "duration": 5.0,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 39,
+      "duration": 10.459999999999999,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 40,
+      "duration": 3.349999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 41,
+      "duration": 4.020000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 42,
+      "duration": 6.710000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 43,
+      "duration": 4.020000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 45,
+      "duration": 6.59,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 49,
+      "duration": 4.700000000000003,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 51,
+      "duration": 5.340000000000003,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s03e06_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 52,
+      "duration": 15.579999999999998,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s03e06_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 53,
+      "duration": 12.91,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "grey_s03e06_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 54,
+      "duration": 12.899999999999991,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "grey_s03e06_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 55,
+      "duration": 7.710000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 58,
+      "duration": 3.6800000000000006,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 59,
+      "duration": 7.700000000000003,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 63,
+      "duration": 8.680000000000003,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 64,
+      "duration": 8.409999999999997,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 66,
+      "duration": 7.649999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 67,
+      "duration": 6.299999999999997,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 68,
+      "duration": 4.949999999999999,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 69,
+      "duration": 2.700000000000001,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 70,
+      "duration": 8.620000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 71,
+      "duration": 11.810000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 72,
+      "duration": 20.430000000000007,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 73,
+      "duration": 4.539999999999999,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 74,
+      "duration": 2.719999999999999,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s06e04_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 75,
+      "duration": 41.99,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 77,
+      "duration": 26.800000000000004,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 78,
+      "duration": 8.04,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 79,
+      "duration": 4.02,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 83,
+      "duration": 30.49,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_18"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 84,
+      "duration": 40.51,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_18"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 85,
+      "duration": 72.82,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_04"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 86,
+      "duration": 15.930000000000007,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_04"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 93,
+      "duration": 7.57,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 94,
+      "duration": 7.579999999999998,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_05"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 95,
+      "duration": 10.799999999999997,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 98,
+      "duration": 14.4,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 99,
+      "duration": 40.959999999999994,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_02"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 103,
+      "duration": 26.4,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 104,
+      "duration": 21.849999999999994,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 105,
+      "duration": 5.98,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 106,
+      "duration": 7.82,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 108,
+      "duration": 27.15,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 109,
+      "duration": 24.839999999999996,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 114,
+      "duration": 62.309999999999995,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_01"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 118,
+      "duration": 29.71,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_11"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 119,
+      "duration": 22.049999999999997,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_11"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 125,
+      "duration": 19.230000000000004,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_13"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 128,
+      "duration": 4.580000000000002,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_13"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 129,
+      "duration": 2.289999999999999,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_13"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 134,
+      "duration": 4.099999999999994,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_12"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 138,
+      "duration": 5.280000000000001,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_15"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 139,
+      "duration": 11.520000000000003,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_15"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 143,
+      "duration": 2.6899999999999995,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 144,
+      "duration": 17.020000000000003,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 145,
+      "duration": 89.457,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 146,
+      "duration": 89.457,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 147,
+      "duration": 89.457,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 148,
+      "duration": 4.03,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 149,
+      "duration": 20.130000000000003,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 153,
+      "duration": 25.080000000000002,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 154,
+      "duration": 24.65,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "castle_s01e01_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 158,
+      "duration": 13.51,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "grey_s02e12_seg02_clip_20"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 164,
+      "duration": 19.849999999999998,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "house_s08e21_seg02_clip_18"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 183,
+      "duration": 11.83,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e12_seg02_clip_22"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 184,
+      "duration": 30.5,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e12_seg02_clip_22"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 185,
+      "duration": 21.610000000000014,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "house_s01e01_seg02_clip_25"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 223,
+      "duration": 39.61,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "house_s01e01_seg02_clip_22"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 224,
+      "duration": 36.529999999999994,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "house_s01e01_seg02_clip_22"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 304,
+      "duration": 4.800000000000004,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "s05e19_seg02_clip_04"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 308,
+      "duration": 11.96,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "house_s05e08_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 309,
+      "duration": 24.39,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "house_s05e08_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 328,
+      "duration": 22.7,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_11"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 329,
+      "duration": 26.270000000000003,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_11"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 333,
+      "duration": 19.93,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_10"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 334,
+      "duration": 34.449999999999996,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_10"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 338,
+      "duration": 30.04,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 339,
+      "duration": 21.949999999999996,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 348,
+      "duration": 23.21,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_15"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 365,
+      "duration": 8.91,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 366,
+      "duration": 1.6499999999999986,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 367,
+      "duration": 5.6100000000000065,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 368,
+      "duration": 23.77,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 369,
+      "duration": 11.229999999999997,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 690,
+      "duration": 9.740000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s09e18_seg02_clip_13"
+    },
+    {
+      "b6_rank": 33,
+      "b6_top1_correct": false,
+      "desc_id": 691,
+      "duration": 5.02,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s09e18_seg02_clip_13"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 692,
+      "duration": 4.730000000000004,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s09e18_seg02_clip_13"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 693,
+      "duration": 2.9499999999999993,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s09e18_seg02_clip_13"
+    },
+    {
+      "b6_rank": 7,
+      "b6_top1_correct": false,
+      "desc_id": 694,
+      "duration": 8.850000000000001,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s09e18_seg02_clip_13"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 1135,
+      "duration": 0.8899999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1136,
+      "duration": 2.360000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_11"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 1137,
+      "duration": 2.0700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1138,
+      "duration": 5.9,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_11"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 1139,
+      "duration": 11.219999999999999,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1175,
+      "duration": 16.99,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_19"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1176,
+      "duration": 59.62,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_19"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1177,
+      "duration": 0.9000000000000021,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_19"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1178,
+      "duration": 3.540000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_19"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1179,
+      "duration": 23.020000000000003,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_19"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 1180,
+      "duration": 1.5999999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_18"
+    },
+    {
+      "b6_rank": 10,
+      "b6_top1_correct": false,
+      "desc_id": 1181,
+      "duration": 1.2800000000000011,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_18"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1182,
+      "duration": 7.359999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_18"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 1183,
+      "duration": 22.089999999999996,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_18"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1184,
+      "duration": 10.560000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_18"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 1245,
+      "duration": 6.3,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e15_seg02_clip_01"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 1246,
+      "duration": 5.399999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e15_seg02_clip_01"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1247,
+      "duration": 1.7999999999999972,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e15_seg02_clip_01"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 1248,
+      "duration": 3.3,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s04e15_seg02_clip_01"
+    },
+    {
+      "b6_rank": 10,
+      "b6_top1_correct": false,
+      "desc_id": 1249,
+      "duration": 3.8999999999999986,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e15_seg02_clip_01"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 2750,
+      "duration": 44.86,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e15_seg02_clip_03"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2751,
+      "duration": 3.969999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e15_seg02_clip_03"
+    },
+    {
+      "b6_rank": 8,
+      "b6_top1_correct": false,
+      "desc_id": 2752,
+      "duration": 0.9200000000000017,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e15_seg02_clip_03"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2753,
+      "duration": 12.510000000000002,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s04e15_seg02_clip_03"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 2754,
+      "duration": 5.799999999999997,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e15_seg02_clip_03"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2780,
+      "duration": 2.6,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_08"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2781,
+      "duration": 1.629999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_08"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 2782,
+      "duration": 4.549999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_08"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2783,
+      "duration": 2.5999999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_08"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 2784,
+      "duration": 4.549999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_08"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 2800,
+      "duration": 2.3599999999999994,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 13,
+      "b6_top1_correct": false,
+      "desc_id": 2801,
+      "duration": 12.979999999999997,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 2802,
+      "duration": 2.3700000000000045,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 10,
+      "b6_top1_correct": false,
+      "desc_id": 2803,
+      "duration": 5.609999999999999,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2804,
+      "duration": 7.3799999999999955,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 27,
+      "b6_top1_correct": false,
+      "desc_id": 2815,
+      "duration": 2.480000000000004,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_01"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 2816,
+      "duration": 1.240000000000002,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_01"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 2817,
+      "duration": 2.79,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_01"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 2818,
+      "duration": 2.48,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_01"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2819,
+      "duration": 3.7300000000000004,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_01"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2825,
+      "duration": 5.609999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_03"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2826,
+      "duration": 3.8300000000000054,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_03"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 2827,
+      "duration": 2.6600000000000037,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_03"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 2828,
+      "duration": 7.670000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_03"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2829,
+      "duration": 29.81,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e03_seg02_clip_03"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 2840,
+      "duration": 2.43,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_14"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 2841,
+      "duration": 4.050000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_14"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 2842,
+      "duration": 4.460000000000008,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_14"
+    },
+    {
+      "b6_rank": 7,
+      "b6_top1_correct": false,
+      "desc_id": 2843,
+      "duration": 7.700000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_14"
+    },
+    {
+      "b6_rank": 33,
+      "b6_top1_correct": false,
+      "desc_id": 2844,
+      "duration": 4.859999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_14"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 2910,
+      "duration": 3.5199999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 2911,
+      "duration": 6.400000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2921,
+      "duration": 5.52,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s05e05_seg02_clip_14"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2937,
+      "duration": 2.519999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2967,
+      "duration": 2.3700000000000045,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2969,
+      "duration": 9.739999999999998,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2970,
+      "duration": 2.0700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_13"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2973,
+      "duration": 3.240000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_13"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2990,
+      "duration": 5.670000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s03e13_seg02_clip_12"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 2994,
+      "duration": 4.73,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "met_s03e13_seg02_clip_12"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 3020,
+      "duration": 3.9000000000000004,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_08"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 3023,
+      "duration": 2.4000000000000004,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_08"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 3024,
+      "duration": 6.910000000000004,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_08"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4060,
+      "duration": 3.36,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_15"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4063,
+      "duration": 3.97,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_15"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4518,
+      "duration": 12.99,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_14"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4519,
+      "duration": 9.450000000000003,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_14"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4819,
+      "duration": 5.759999999999998,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s06e15_seg02_clip_13"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4823,
+      "duration": 0.9199999999999982,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s06e15_seg02_clip_10"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4881,
+      "duration": 3.049999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_05"
+    },
+    {
+      "b6_rank": 32,
+      "b6_top1_correct": false,
+      "desc_id": 2923,
+      "duration": 2.5999999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s05e05_seg02_clip_14"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 2924,
+      "duration": 8.459999999999994,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s05e05_seg02_clip_14"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 2935,
+      "duration": 5.039999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_11"
+    },
+    {
+      "b6_rank": 46,
+      "b6_top1_correct": false,
+      "desc_id": 2965,
+      "duration": 5.899999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": 13,
+      "b6_top1_correct": false,
+      "desc_id": 2966,
+      "duration": 5.019999999999996,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": 9,
+      "b6_top1_correct": false,
+      "desc_id": 2968,
+      "duration": 2.0700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e01_seg02_clip_14"
+    },
+    {
+      "b6_rank": 19,
+      "b6_top1_correct": false,
+      "desc_id": 2971,
+      "duration": 1.7699999999999996,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_13"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 2972,
+      "duration": 2.0700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e20_seg02_clip_13"
+    },
+    {
+      "b6_rank": 7,
+      "b6_top1_correct": false,
+      "desc_id": 3416,
+      "duration": 2.3999999999999986,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_07"
+    },
+    {
+      "b6_rank": 17,
+      "b6_top1_correct": false,
+      "desc_id": 3437,
+      "duration": 9.149999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s06e24_seg01_clip_00"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 3605,
+      "duration": 27.77,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e08_seg02_clip_02"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 3607,
+      "duration": 27.759999999999998,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e08_seg02_clip_02"
+    },
+    {
+      "b6_rank": 54,
+      "b6_top1_correct": false,
+      "desc_id": 3609,
+      "duration": 3.3599999999999994,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e08_seg02_clip_02"
+    },
+    {
+      "b6_rank": 19,
+      "b6_top1_correct": false,
+      "desc_id": 4061,
+      "duration": 1.2199999999999989,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_15"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 4062,
+      "duration": 2.75,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_15"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 4111,
+      "duration": 4.879999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_08"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 4114,
+      "duration": 3.3599999999999994,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_08"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 4303,
+      "duration": 21.380000000000003,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e22_seg02_clip_08"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 4304,
+      "duration": 14.829999999999998,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "friends_s04e22_seg02_clip_08"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 4517,
+      "duration": 7.970000000000006,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_14"
+    },
+    {
+      "b6_rank": 16,
+      "b6_top1_correct": false,
+      "desc_id": 4536,
+      "duration": 1.9600000000000009,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e13_seg02_clip_10"
+    },
+    {
+      "b6_rank": 9,
+      "b6_top1_correct": false,
+      "desc_id": 4821,
+      "duration": 9.759999999999998,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s06e15_seg02_clip_10"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 4883,
+      "duration": 21.36,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_05"
+    },
+    {
+      "b6_rank": 9,
+      "b6_top1_correct": false,
+      "desc_id": 4887,
+      "duration": 3.48,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_06"
+    },
+    {
+      "b6_rank": 18,
+      "b6_top1_correct": false,
+      "desc_id": 4889,
+      "duration": 5.800000000000001,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_06"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 4891,
+      "duration": 27.86,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_03"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 4934,
+      "duration": 16.930000000000003,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_17"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 4946,
+      "duration": 1.2199999999999989,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_13"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 4950,
+      "duration": 4.199999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_12"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 4952,
+      "duration": 3.009999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_12"
+    },
+    {
+      "b6_rank": 8,
+      "b6_top1_correct": false,
+      "desc_id": 5046,
+      "duration": 20.16,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s06e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 5049,
+      "duration": 3.4099999999999966,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "s06e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 5155,
+      "duration": 2.1900000000000013,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e01_seg01_clip_01"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 5160,
+      "duration": 13.030000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e01_seg01_clip_00"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 5161,
+      "duration": 26.05,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e01_seg01_clip_00"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 5162,
+      "duration": 4.340000000000002,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e01_seg01_clip_00"
+    },
+    {
+      "b6_rank": 7,
+      "b6_top1_correct": false,
+      "desc_id": 5163,
+      "duration": 3.7200000000000006,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s03e01_seg01_clip_00"
+    },
+    {
+      "b6_rank": 9,
+      "b6_top1_correct": false,
+      "desc_id": 5675,
+      "duration": 2.130000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e06_seg01_clip_00"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 5676,
+      "duration": 3.9700000000000024,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e06_seg01_clip_00"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 5679,
+      "duration": 39.370000000000005,
+      "duration_bucket": "long",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "s04e06_seg01_clip_00"
+    },
+    {
+      "b6_rank": 12,
+      "b6_top1_correct": false,
+      "desc_id": 6070,
+      "duration": 3.13,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s01e10_seg02_clip_12"
+    },
+    {
+      "b6_rank": 10,
+      "b6_top1_correct": false,
+      "desc_id": 6461,
+      "duration": 8.46,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 6462,
+      "duration": 43.46999999999999,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 6463,
+      "duration": 5.23,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": 18,
+      "b6_top1_correct": false,
+      "desc_id": 6464,
+      "duration": 4.830000000000002,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_17"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 6471,
+      "duration": 8.54,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_11"
+    },
+    {
+      "b6_rank": 10,
+      "b6_top1_correct": false,
+      "desc_id": 6472,
+      "duration": 6.719999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_11"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 6485,
+      "duration": 2.700000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_12"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 7729,
+      "duration": 3.6799999999999997,
+      "duration_bucket": "short",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "s02e21_seg02_clip_13"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 7825,
+      "duration": 26.78,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e21_seg02_clip_10"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 7828,
+      "duration": 7.559999999999999,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "s02e21_seg02_clip_10"
+    },
+    {
+      "b6_rank": 4,
+      "b6_top1_correct": false,
+      "desc_id": 8290,
+      "duration": 2.31,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_20"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 8292,
+      "duration": 1.6500000000000057,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_20"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 8294,
+      "duration": 30.370000000000005,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_20"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 8669,
+      "duration": 5.669999999999999,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "calib_holdout",
+      "video": "met_s03e13_seg02_clip_09"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 8906,
+      "duration": 7.240000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 8907,
+      "duration": 9.129999999999999,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 8909,
+      "duration": 4.100000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s08e04_seg02_clip_11"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 9046,
+      "duration": 9.240000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s05e07_seg01_clip_01"
+    },
+    {
+      "b6_rank": 14,
+      "b6_top1_correct": false,
+      "desc_id": 9136,
+      "duration": 2.4400000000000013,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e16_seg02_clip_05"
+    },
+    {
+      "b6_rank": 5,
+      "b6_top1_correct": false,
+      "desc_id": 9146,
+      "duration": 1.8000000000000007,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e16_seg02_clip_09"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 9149,
+      "duration": 2.700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s01e16_seg02_clip_09"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 202,
+      "duration": 6.1100000000000065,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "friends_s03e08_seg02_clip_08"
+    },
+    {
+      "b6_rank": 11,
+      "b6_top1_correct": false,
+      "desc_id": 6476,
+      "duration": 2.0799999999999983,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_10"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 251,
+      "duration": 3.610000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "friends_s03e08_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 1413,
+      "duration": 6.270000000000003,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "friends_s05e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 100,
+      "duration": 1.8199999999999967,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 271,
+      "duration": 3.539999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s05e09_seg02_clip_14"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 2475,
+      "duration": 2.4000000000000004,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "s10e09_seg02_clip_04"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 178,
+      "duration": 7.57,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s06e12_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 349,
+      "duration": 14.560000000000002,
+      "duration_bucket": "medium",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_15"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 10896,
+      "duration": 3.14,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e03_seg02_clip_15"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 155,
+      "duration": 3.759999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s02e12_seg02_clip_20"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 76,
+      "duration": 4.920000000000009,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "castle_s02e22_seg02_clip_06"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 10880,
+      "duration": 2.36,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s04e03_seg02_clip_12"
+    },
+    {
+      "b6_rank": 6,
+      "b6_top1_correct": false,
+      "desc_id": 4885,
+      "duration": 2.0299999999999994,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s03e25_seg02_clip_06"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 221,
+      "duration": 10.560000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "house_s01e01_seg02_clip_22"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 11227,
+      "duration": 3.0500000000000043,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e18_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 342,
+      "duration": 3.120000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_16"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 955,
+      "duration": 9.45,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "friends_s09e03_seg02_clip_04"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 6475,
+      "duration": 2.97,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "met_s02e01_seg02_clip_10"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 687,
+      "duration": 8.450000000000003,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "s08e21_seg02_clip_14"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 181,
+      "duration": 5.91,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s02e12_seg02_clip_22"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 4302,
+      "duration": 3.700000000000003,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "friends_s04e22_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 315,
+      "duration": 8.06,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "s06e02_seg02_clip_03"
+    },
+    {
+      "b6_rank": 3,
+      "b6_top1_correct": false,
+      "desc_id": 4931,
+      "duration": 6.310000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_17"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 203,
+      "duration": 12.509999999999998,
+      "duration_bucket": "medium",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "friends_s03e08_seg02_clip_08"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 192,
+      "duration": 50.620000000000005,
+      "duration_bucket": "long",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "house_s01e01_seg02_clip_24"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 1294,
+      "duration": 4.579999999999998,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_select",
+      "video": "s10e05_seg01_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 311,
+      "duration": 3.1799999999999997,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_19"
+    },
+    {
+      "b6_rank": 1,
+      "b6_top1_correct": true,
+      "desc_id": 10241,
+      "duration": 3.719999999999999,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s09e06_seg02_clip_11"
+    },
+    {
+      "b6_rank": 41,
+      "b6_top1_correct": false,
+      "desc_id": 11054,
+      "duration": 2.4399999999999995,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e23_seg02_clip_02"
+    },
+    {
+      "b6_rank": 31,
+      "b6_top1_correct": false,
+      "desc_id": 4930,
+      "duration": 8.83,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e02_seg02_clip_17"
+    },
+    {
+      "b6_rank": 9,
+      "b6_top1_correct": false,
+      "desc_id": 10951,
+      "duration": 5.5,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s07e04_seg02_clip_08"
+    },
+    {
+      "b6_rank": 2,
+      "b6_top1_correct": false,
+      "desc_id": 10921,
+      "duration": 5.990000000000002,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s07e04_seg02_clip_03"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 121,
+      "duration": 1.8599999999999994,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s09e14_seg02_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 262,
+      "duration": 5.210000000000001,
+      "duration_bucket": "medium",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "friends_s03e08_seg02_clip_04"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 354,
+      "duration": 23.339999999999996,
+      "duration_bucket": "long",
+      "query_type": "t",
+      "split": "train_fit",
+      "video": "grey_s02e07_seg02_clip_14"
+    },
+    {
+      "b6_rank": 25,
+      "b6_top1_correct": false,
+      "desc_id": 5047,
+      "duration": 4.030000000000001,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s06e20_seg01_clip_00"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 228,
+      "duration": 2.6999999999999993,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "train_fit",
+      "video": "s04e02_seg01_clip_01"
+    },
+    {
+      "b6_rank": 8,
+      "b6_top1_correct": false,
+      "desc_id": 11229,
+      "duration": 3.6600000000000037,
+      "duration_bucket": "short",
+      "query_type": "v",
+      "split": "calib_holdout",
+      "video": "s02e18_seg02_clip_07"
+    },
+    {
+      "b6_rank": null,
+      "b6_top1_correct": null,
+      "desc_id": 364,
+      "duration": 4.339999999999996,
+      "duration_bucket": "short",
+      "query_type": "vt",
+      "split": "train_fit",
+      "video": "s06e04_seg02_clip_03"
+    }
+  ],
+  "sample_count": 300,
+  "sample_limit": 300,
+  "stage": "C14-1",
+  "status_note": "positive_not_in_b6_top100 is naturally absent if CONQUER/B6 replay top100 coverage is 100%"
+}

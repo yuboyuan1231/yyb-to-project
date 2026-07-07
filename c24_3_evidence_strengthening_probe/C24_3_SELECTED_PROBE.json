@@ -1,0 +1,6 @@
+{
+  "holdout_report_only": true,
+  "name": "P9_no_regression_guarded_evidence",
+  "selection_split": "calib_select",
+  "train_fit_evidence_available": false
+}

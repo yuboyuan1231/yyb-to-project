@@ -1,0 +1,10 @@
+{
+  "anchor": "c19_hybrid_proxy",
+  "cross_video_policy": {
+    "name": "X0_no_cross_video"
+  },
+  "cross_video_policy_source": "C20_CROSS_VIDEO_REPLACEMENT_WEAK",
+  "same_video_policy": {
+    "name": "S1_always_bmn_same_video"
+  }
+}

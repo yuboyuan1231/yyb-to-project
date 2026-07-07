@@ -1,0 +1,14 @@
+{
+  "corpus_video_count": 17435,
+  "duplicate_video_handling": "unique train video index",
+  "official_val_used": false,
+  "position_based_join": false,
+  "query_id_alignment": true,
+  "score_ordering": "CONQUER/HERO first-stage ranklist order",
+  "stage": "C12-4R-A",
+  "status": "C12_4R_CONQUER_FIRST_STAGE_REPLAY_PASS",
+  "topK_extraction": "top100 from corpus-level first-stage ranking",
+  "unique_video_count": 17435,
+  "video_id_alignment": true,
+  "video_slot_group_id_consistency": "video_slot is rank position in replay ranking; group_id remains video/show grouping and is not substituted"
+}

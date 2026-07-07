@@ -1,0 +1,61 @@
+{
+  "dependencies": {
+    "c12_schema_manifest": {
+      "exists": true,
+      "path": "c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+      "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c"
+    },
+    "c12_split_manifest": {
+      "exists": true,
+      "path": "c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+      "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31"
+    },
+    "c12_t2_checkpoint": {
+      "exists": true,
+      "path": "c12_models/c12_5t_T2_listwise_soft_iou.pt",
+      "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80"
+    },
+    "c16_best_model": {
+      "exists": true,
+      "path": "c16_2_fullscale_bmn_training/C16_2_BMN_BEST_MODEL_DECISION.json",
+      "sha256": "3e1f8e5dca097ad487f69e2f619d6be76105a69d5bb3caa029b5694c4bd48f17"
+    },
+    "c16_checkpoint_manifest": {
+      "exists": true,
+      "path": "c16_2_fullscale_bmn_training/C16_2_BMN_CHECKPOINT_MANIFEST.json",
+      "sha256": "1dc136d806a2ca95e23ba8fd11a2a22d9d3a8e25bce973b1519f9edcf769ab21"
+    },
+    "c16_integration": {
+      "exists": true,
+      "path": "c16_4_native_vcmr_integration/C16_4_INTEGRATION_DECISION.json",
+      "sha256": "9d325c8ddac16cfa0a7a40269bdf3986458f795bb785def8872247da0591d6d2"
+    },
+    "c16_next_step_json": {
+      "exists": true,
+      "path": "c16_5_freeze_review/C16_5_NEXT_STEP_DECISION.json",
+      "sha256": "92c3248149cfd15e868d8452d1ced9919beaea8afd0a213e7c1ab314ccf26112"
+    },
+    "c16_next_step_md": {
+      "exists": true,
+      "path": "c16_5_freeze_review/C16_5_NEXT_STEP_DECISION.md",
+      "sha256": "69358091797fbf27ff32995a242dd974e090a7accd67f66e7050ae966ef30187"
+    },
+    "c16_robustness": {
+      "exists": true,
+      "path": "c16_3_ablation_robustness/C16_3_ROBUSTNESS_DECISION.json",
+      "sha256": "71027a5fd290bb227b604e4532ad767cc7018e2c29e85413f1565a9bb1e8b530"
+    },
+    "c16_seed2026_checkpoint": {
+      "exists": true,
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+      "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e"
+    },
+    "c16_seed2027_checkpoint": {
+      "exists": true,
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2027.pt",
+      "sha256": "ca2848976ab0815b341bb465205ec44c76352479432944c2d2cb6f75fae0b35e"
+    }
+  },
+  "official_val_used": false,
+  "stage": "C17-0"
+}

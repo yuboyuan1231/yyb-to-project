@@ -1,0 +1,212 @@
+{
+  "official_val_used": false,
+  "repair_results": {
+    "delta_regularized_alpha002": {
+      "calib_holdout_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.964516129032258,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.101382488479263,
+        "VR_R@10": 79.17050691244239,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.49308755760369,
+        "missing_rank_count": 0,
+        "query_count": 4340,
+        "teacher_top1_agreement_rate": 99.97695852534562
+      },
+      "calib_select_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.8457992393684455,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.66463063270716,
+        "VR_R@10": 79.00195920248935,
+        "VR_R@100": 100.0,
+        "VR_R@5": 65.16076985133111,
+        "missing_rank_count": 0,
+        "query_count": 8677,
+        "teacher_top1_agreement_rate": 99.97695055894894
+      },
+      "config": {
+        "alpha": 0.02,
+        "batch_size": 512,
+        "delta_weight": 2.0,
+        "epochs": 2,
+        "kl_weight": 1.0,
+        "lr": 8e-05,
+        "margin": 0.1,
+        "margin_weight": 0.2,
+        "name": "delta_regularized_alpha002",
+        "temp": 2.0,
+        "weight_decay": 0.0001
+      },
+      "model_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_4r_delta_regularized_alpha002.pt",
+      "model_sha256": "7708a5248f0a270f1700c1c270e87929c60016a18f21627f25df512987e3eee4",
+      "runtime_seconds": 187.93263173103333
+    },
+    "listwise_teacher_topK_alpha005": {
+      "calib_holdout_metrics": {
+        "GT_video_in_top100_rate": 99.97695852534562,
+        "GT_video_mean_rank": 7.96705069124424,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.170506912442395,
+        "VR_R@10": 79.14746543778801,
+        "VR_R@100": 99.97695852534562,
+        "VR_R@5": 64.47004608294931,
+        "missing_rank_count": 0,
+        "query_count": 4340,
+        "teacher_top1_agreement_rate": 99.74654377880184
+      },
+      "calib_select_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.844070531289616,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.65310591218163,
+        "VR_R@10": 79.03653336406592,
+        "VR_R@100": 100.0,
+        "VR_R@5": 65.16076985133111,
+        "missing_rank_count": 0,
+        "query_count": 8677,
+        "teacher_top1_agreement_rate": 99.8732280742192
+      },
+      "config": {
+        "alpha": 0.05,
+        "batch_size": 512,
+        "delta_weight": 0.5,
+        "epochs": 2,
+        "kl_weight": 2.0,
+        "lr": 0.0001,
+        "margin": 0.1,
+        "margin_weight": 0.1,
+        "name": "listwise_teacher_topK_alpha005",
+        "temp": 2.0,
+        "weight_decay": 0.0001
+      },
+      "model_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_4r_listwise_teacher_topK_alpha005.pt",
+      "model_sha256": "464428347ef442ae126135d84483e38ed850046e381a209548035045e958371d",
+      "runtime_seconds": 187.96197962760925
+    },
+    "qtype_balanced_alpha002": {
+      "calib_holdout_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.964516129032258,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.101382488479263,
+        "VR_R@10": 79.17050691244239,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.49308755760369,
+        "missing_rank_count": 0,
+        "query_count": 4340,
+        "teacher_top1_agreement_rate": 99.97695852534562
+      },
+      "calib_select_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.84568399216319,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.66463063270716,
+        "VR_R@10": 79.00195920248935,
+        "VR_R@100": 100.0,
+        "VR_R@5": 65.16076985133111,
+        "missing_rank_count": 0,
+        "query_count": 8677,
+        "teacher_top1_agreement_rate": 99.97695055894894
+      },
+      "config": {
+        "alpha": 0.02,
+        "batch_size": 512,
+        "delta_weight": 1.0,
+        "epochs": 2,
+        "kl_weight": 1.5,
+        "lr": 0.0001,
+        "margin": 0.15,
+        "margin_weight": 0.3,
+        "name": "qtype_balanced_alpha002",
+        "temp": 2.0,
+        "weight_decay": 0.0001
+      },
+      "model_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_4r_qtype_balanced_alpha002.pt",
+      "model_sha256": "c343c42c2ffd76e05a5849aa4bacea5898d9e1bee88c597a0e2efd92a26aef4a",
+      "runtime_seconds": 187.99163246154785
+    },
+    "stronger_teacher_topK_alpha001": {
+      "calib_holdout_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.9640552995391705,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.101382488479263,
+        "VR_R@10": 79.17050691244239,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.49308755760369,
+        "missing_rank_count": 0,
+        "query_count": 4340,
+        "teacher_top1_agreement_rate": 100.0
+      },
+      "calib_select_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.844762014521148,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.66463063270716,
+        "VR_R@10": 79.00195920248935,
+        "VR_R@100": 100.0,
+        "VR_R@5": 65.16076985133111,
+        "missing_rank_count": 0,
+        "query_count": 8677,
+        "teacher_top1_agreement_rate": 99.97695055894894
+      },
+      "config": {
+        "alpha": 0.01,
+        "batch_size": 512,
+        "delta_weight": 1.0,
+        "epochs": 2,
+        "kl_weight": 1.0,
+        "lr": 0.0001,
+        "margin": 0.1,
+        "margin_weight": 0.2,
+        "name": "stronger_teacher_topK_alpha001",
+        "temp": 1.5,
+        "weight_decay": 0.0001
+      },
+      "model_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_4r_stronger_teacher_topK_alpha001.pt",
+      "model_sha256": "30265ec423f5a8939c0898fc5068e8ed838209cb93670326b8233aceb38ba419",
+      "runtime_seconds": 190.2938482761383
+    },
+    "zero_delta_replay": {
+      "calib_holdout_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.9633640552995395,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.101382488479263,
+        "VR_R@10": 79.19354838709677,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.49308755760369,
+        "missing_rank_count": 0,
+        "query_count": 4340
+      },
+      "calib_select_metrics": {
+        "GT_video_in_top100_rate": 100.0,
+        "GT_video_mean_rank": 7.844531520110637,
+        "GT_video_median_rank": 3.0,
+        "VR_R@1": 29.66463063270716,
+        "VR_R@10": 79.00195920248935,
+        "VR_R@100": 100.0,
+        "VR_R@5": 65.14924513080558,
+        "missing_rank_count": 0,
+        "query_count": 8677
+      },
+      "config": {
+        "alpha": 0.0,
+        "training": "none"
+      }
+    }
+  },
+  "stage": "C12-4R-C",
+  "why_original_distillation_failed": {
+    "gt_video_always_positive": true,
+    "hard_negatives_hard_enough": "improved in C12-4R via teacher topK + group negatives",
+    "kl_weight_issue": "C12-4 KL was not enough to preserve teacher ordering over corpus",
+    "student_only_saw_sampled_negatives": true,
+    "subtitle_branch_near_invalid": true,
+    "teacher_score_coverage_full_corpus": "No; C12-4 student saw sampled negatives and sparse teacher topK.",
+    "teacher_topK_entered_training_batch": "partially in C12-4; explicitly top128 in C12-4R",
+    "v_query_visual_bridge_weak": true
+  }
+}

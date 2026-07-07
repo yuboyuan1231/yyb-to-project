@@ -1,0 +1,6 @@
+{
+  "checkpoint_local_only": true,
+  "checkpoint_path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_PREM_RETRIEVER_medium_seed2026.local.pt",
+  "name": "R7_no_regression_guarded_partial",
+  "residual_clip": 0.2
+}

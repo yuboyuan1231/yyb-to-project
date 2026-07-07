@@ -1,0 +1,15 @@
+{
+  "evidence_files": [
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_0_protocol_freeze/C22_0_PROTOCOL.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_1_feature_event_audit/C22_1_FEATURE_EVENT_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_2_partial_relevance_retriever/C22_2_PARTIAL_RETRIEVER_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_3_event_aware_encoder/C22_3_EVENT_ENCODER_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_4_joint_retriever_localizer_bmn/C22_4_JOINT_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_5_robustness_ablation_onelook/C22_5_ROBUSTNESS_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22_6_final_decision/C22_6_FINAL_DECISION.json"
+  ],
+  "manual_authorization_required": true,
+  "official_still_forbidden": true,
+  "packet_decision": "C22_NEED_FULL_TRAINFIT_NATIVE_COUPLING",
+  "ready_for_official_review": false
+}

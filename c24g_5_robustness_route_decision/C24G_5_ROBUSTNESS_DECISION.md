@@ -1,0 +1,5 @@
+# C24G-5 Robustness Decision
+
+Status: `C24G_ROBUSTNESS_PARTIAL`.
+
+Route: `C24G_NEED_MORE_BMN_T2_MATERIALIZATION`.

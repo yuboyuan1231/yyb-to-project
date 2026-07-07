@@ -1,0 +1,65 @@
+{
+  "completed_chunks": 5155,
+  "completed_rows": 10552960,
+  "completed_splits": [
+    "calib_holdout",
+    "calib_select",
+    "train_fit"
+  ],
+  "dry_run": false,
+  "estimated_medium_row_space_rows": 328000,
+  "estimated_medium_row_space_runtime_sec": 210080.40643548965,
+  "estimated_remaining_note": "full requires all train_fit/calib_select/calib_holdout first-stage top128; completion is judged against expected row-space, not subset coverage",
+  "expected_by_split": {
+    "calib_holdout": {
+      "expected_candidate_rows": 555520,
+      "full_selected_query_count_before_slice": 4340,
+      "loaded_query_count": 4340,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "mode": "full",
+      "query_slice_end": 4340,
+      "query_slice_start": 0,
+      "requested_query_count": 4340,
+      "source_note": "combined_train_calib_holdout_cache_fallback",
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+      "split": "calib_holdout"
+    },
+    "calib_select": {
+      "expected_candidate_rows": 1110656,
+      "full_selected_query_count_before_slice": 8677,
+      "loaded_query_count": 8677,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "mode": "full",
+      "query_slice_end": 8677,
+      "query_slice_start": 0,
+      "requested_query_count": 8677,
+      "source_note": "combined_train_calib_holdout_cache_fallback",
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+      "split": "calib_select"
+    },
+    "train_fit": {
+      "expected_candidate_rows": 8886784,
+      "full_selected_query_count_before_slice": 69428,
+      "loaded_query_count": 69428,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "mode": "full",
+      "query_slice_end": 69428,
+      "query_slice_start": 0,
+      "requested_query_count": 69428,
+      "source_note": "split_specific_cache",
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+      "split": "train_fit"
+    }
+  },
+  "measured_rows_per_sec": 1.5613069565377125,
+  "resume_supported": true,
+  "resume_used": true,
+  "row_space_coverage_by_split": {
+    "calib_holdout": 1.0,
+    "calib_select": 1.0,
+    "train_fit": 1.0
+  }
+}

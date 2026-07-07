@@ -1,0 +1,36 @@
+{
+  "extraction_time_estimate": "requires separate sample job; no full extraction in C12-4R",
+  "feature_candidates": {
+    "Feature-A_stronger_subtitle_query_text": {
+      "decision": "promising_need_sample_extraction",
+      "estimated_dim": "768-1024",
+      "timestamp_alignment": "preserved for subtitle clip features if extracted per 1.5s clip",
+      "why": "Current subtitle-only remains near-zero; stronger same-encoder text/subtitle embeddings are needed."
+    },
+    "Feature-B_stronger_visual_clip": {
+      "decision": "highest_priority_for_v_query",
+      "estimated_dim": "512-1408 depending on CLIP/VideoMAE/InternVideo",
+      "timestamp_alignment": "must preserve TVR 1.5s clip index or provide deterministic resampling map",
+      "why": "Visual bridge improves v query relative to subtitle but remains far below reference; current visual mean is insufficient."
+    },
+    "Feature-C_multiscale_event": {
+      "decision": "design_only",
+      "why": "Do after retriever recall improves; event features will not solve corpus-level video recall alone."
+    }
+  },
+  "official_val_used": false,
+  "query_type_coverage": [
+    "v",
+    "t",
+    "vt"
+  ],
+  "sample_query_count": 0,
+  "sample_video_count": 0,
+  "stage": "C12-4R-D",
+  "status": "C12_FEATURE_REPAIR_NOT_READY",
+  "storage_estimate": {
+    "current_visual_mean_cache": "291MB",
+    "full_clip_visual_stronger_feature_1024d_float16_estimate": "about 3.4GB for 17k videos x ~100 clips",
+    "text_subtitle_1024d_float16_estimate": "about 3.4GB for subtitle clips plus query embeddings"
+  }
+}

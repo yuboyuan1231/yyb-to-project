@@ -1,0 +1,6 @@
+{
+  "duplicate_rebuilt_rows_after_dedup": 0,
+  "fallback_source": "C24H rebuilt BMN/T2 full row-space direct event materialization",
+  "position_based_join": false,
+  "source": "C24F canonical table left-joined with C24H rebuilt BMN/T2 by split/query_id/video_id"
+}

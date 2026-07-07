@@ -1,0 +1,3 @@
+# C19-5 Next Step Decision
+
+decision: `C19_CONTINUE_TRAIN_ONLY_BLOCKER_CLOSURE`

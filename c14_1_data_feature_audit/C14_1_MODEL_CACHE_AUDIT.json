@@ -1,0 +1,27 @@
+{
+  "/home/a/.cache/huggingface": {
+    "exists": true,
+    "sample_files": [
+      ".check_for_update_done"
+    ]
+  },
+  "/home/a/.cache/open_clip": {
+    "exists": false,
+    "sample_files": []
+  },
+  "/home/a/.cache/sentence-transformers": {
+    "exists": false,
+    "sample_files": []
+  },
+  "/home/a/.cache/sentence_transformers": {
+    "exists": false,
+    "sample_files": []
+  },
+  "/home/a/.cache/torch": {
+    "exists": true,
+    "sample_files": [
+      "hub/checkpoints/resnet101-63fe2227.pth",
+      "hub/checkpoints/tmpsc7l1wa1"
+    ]
+  }
+}

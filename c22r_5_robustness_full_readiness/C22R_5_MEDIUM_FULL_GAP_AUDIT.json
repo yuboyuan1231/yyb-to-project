@@ -1,0 +1,8 @@
+{
+  "estimated_gpu_memory_gb": "low for residual scoring; BMN full score table dominated by storage/I/O",
+  "estimated_runtime": "minutes for residual replay, longer for full BMN score materialization",
+  "full_calib_holdout_count": 4340,
+  "full_score_cache_required": true,
+  "medium_query_count": 1000,
+  "train_fit_count": 69428
+}

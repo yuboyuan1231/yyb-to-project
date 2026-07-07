@@ -1,0 +1,12 @@
+[
+  "gt_video_id",
+  "gt_start",
+  "gt_end",
+  "candidate_iou",
+  "iou_ge_05",
+  "iou_ge_07",
+  "correct_video",
+  "correct_video_and_iou07",
+  "event_overlap_proxy",
+  "best_bmn_span_iou_label"
+]

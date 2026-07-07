@@ -1,0 +1,260 @@
+{
+  "status": "C7_FINAL_FREEZE_PACKAGE_COMPLETE",
+  "official_val_used": false,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_locked": true,
+  "primary_candidate": {
+    "candidate": "C7C6-B Region-lite",
+    "base_system": "C7C3-B checkpoint-refined RLEM candidate",
+    "region_branch": "C7C6-B Region-lite",
+    "composition": "fixed R1-priority anchor-preserving composition",
+    "official_role": "primary freeze-review candidate",
+    "r1_priority_config": {
+      "video_rank_limit": 5,
+      "integrated_topn": 5,
+      "anchor_rank_limit": 5,
+      "anchor_margin_threshold_name": "p65",
+      "anchor_margin_threshold": 0.3032871469855309,
+      "same_top1_video_only": true,
+      "require_in_anchor": false,
+      "topK_gate_mode": "top5_allowed",
+      "max_video_promotion": 3
+    },
+    "region_lite": {
+      "variant": "C7C6-B",
+      "region_usage": "Region feature only -> C_prop",
+      "boundary_modulation": "disabled",
+      "start_end_logits_modification": "disabled",
+      "nms_modification": "disabled",
+      "evaluator_modification": "disabled"
+    }
+  },
+  "fallback_candidate": {
+    "candidate": "C7C3-B checkpoint-refined RLEM candidate",
+    "use": "fallback only before official if primary rejected in readiness review; never switch after official",
+    "composition": "fixed R1-priority anchor-preserving composition",
+    "r1_priority_config": {
+      "video_rank_limit": 5,
+      "integrated_topn": 5,
+      "anchor_rank_limit": 5,
+      "anchor_margin_threshold_name": "p65",
+      "anchor_margin_threshold": 0.3032871469855309,
+      "same_top1_video_only": true,
+      "require_in_anchor": false,
+      "topK_gate_mode": "top5_allowed",
+      "max_video_promotion": 3
+    }
+  },
+  "candidate_comparison": [
+    {
+      "system": "CONQUER anchor",
+      "metrics": {
+        "0.5-r1": 30.27,
+        "0.5-r5": 58.01,
+        "0.5-r10": 68.85,
+        "0.5-r100": 89.45,
+        "0.7-r1": 21.09,
+        "0.7-r5": 42.29,
+        "0.7-r10": 50.49,
+        "0.7-r100": 71.78
+      },
+      "delta_vs_CONQUER_anchor": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.0,
+        "0.7-r5": 0.0,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7_C22_R1_priority": {
+        "0.5-r1": -4.11,
+        "0.5-r5": -0.1,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": -2.74,
+        "0.7-r5": -0.09,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7C3B_checkpoint_refined": {
+        "0.5-r1": -4.2,
+        "0.5-r5": -0.19,
+        "0.5-r10": -0.19,
+        "0.5-r100": -0.1,
+        "0.7-r1": -3.23,
+        "0.7-r5": -0.19,
+        "0.7-r10": -0.19,
+        "0.7-r100": 0.0
+      },
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "hard_positive_top100_exits": null,
+      "top1_changed_rate": 0.0,
+      "wrong_video_promoted_rate": 0.0,
+      "candidate_identity_note": "first-stage CONQUER anchor"
+    },
+    {
+      "system": "C7-C2.2 R1-priority",
+      "metrics": {
+        "0.5-r1": 34.38,
+        "0.5-r5": 58.11,
+        "0.5-r10": 68.85,
+        "0.5-r100": 89.45,
+        "0.7-r1": 23.83,
+        "0.7-r5": 42.38,
+        "0.7-r10": 50.49,
+        "0.7-r100": 71.78
+      },
+      "delta_vs_CONQUER_anchor": {
+        "0.5-r1": 4.11,
+        "0.5-r5": 0.1,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 2.74,
+        "0.7-r5": 0.09,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7_C22_R1_priority": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.0,
+        "0.7-r5": 0.0,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7C3B_checkpoint_refined": {
+        "0.5-r1": -0.09,
+        "0.5-r5": -0.09,
+        "0.5-r10": -0.19,
+        "0.5-r100": -0.1,
+        "0.7-r1": -0.49,
+        "0.7-r5": -0.1,
+        "0.7-r10": -0.19,
+        "0.7-r100": 0.0
+      },
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "hard_positive_top100_exits": {
+        "0.5_r100_exit_queries": 0,
+        "0.7_r100_exit_queries": 1
+      },
+      "top1_changed_rate": 0.234375,
+      "wrong_video_promoted_rate": null,
+      "candidate_identity_note": "R1-priority composition over train-only first-stage top100"
+    },
+    {
+      "system": "C7C3-B checkpoint-refined",
+      "metrics": {
+        "0.5-r1": 34.47,
+        "0.5-r5": 58.2,
+        "0.5-r10": 69.04,
+        "0.5-r100": 89.55,
+        "0.7-r1": 24.32,
+        "0.7-r5": 42.48,
+        "0.7-r10": 50.68,
+        "0.7-r100": 71.78
+      },
+      "delta_vs_CONQUER_anchor": {
+        "0.5-r1": 4.2,
+        "0.5-r5": 0.19,
+        "0.5-r10": 0.19,
+        "0.5-r100": 0.1,
+        "0.7-r1": 3.23,
+        "0.7-r5": 0.19,
+        "0.7-r10": 0.19,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7_C22_R1_priority": {
+        "0.5-r1": 0.09,
+        "0.5-r5": 0.09,
+        "0.5-r10": 0.19,
+        "0.5-r100": 0.1,
+        "0.7-r1": 0.49,
+        "0.7-r5": 0.1,
+        "0.7-r10": 0.19,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7C3B_checkpoint_refined": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.0,
+        "0.7-r5": 0.0,
+        "0.7-r10": 0.0,
+        "0.7-r100": 0.0
+      },
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "hard_positive_top100_exits": {
+        "0.5_r100_exit_queries": 9,
+        "0.7_r100_exit_queries": 43
+      },
+      "top1_changed_rate": 0.244140625,
+      "wrong_video_promoted_rate": 0.608,
+      "candidate_identity_note": "fallback checkpoint-refined RLEM candidate"
+    },
+    {
+      "system": "C7C6-B Region-lite",
+      "metrics": {
+        "0.5-r1": 34.38,
+        "0.5-r5": 58.2,
+        "0.5-r10": 69.04,
+        "0.5-r100": 89.55,
+        "0.7-r1": 24.41,
+        "0.7-r5": 42.58,
+        "0.7-r10": 50.78,
+        "0.7-r100": 71.78
+      },
+      "delta_vs_CONQUER_anchor": {
+        "0.5-r1": 4.11,
+        "0.5-r5": 0.19,
+        "0.5-r10": 0.19,
+        "0.5-r100": 0.1,
+        "0.7-r1": 3.32,
+        "0.7-r5": 0.29,
+        "0.7-r10": 0.29,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7_C22_R1_priority": {
+        "0.5-r1": 0.0,
+        "0.5-r5": 0.09,
+        "0.5-r10": 0.19,
+        "0.5-r100": 0.1,
+        "0.7-r1": 0.58,
+        "0.7-r5": 0.2,
+        "0.7-r10": 0.29,
+        "0.7-r100": 0.0
+      },
+      "delta_vs_C7C3B_checkpoint_refined": {
+        "0.5-r1": -0.09,
+        "0.5-r5": 0.0,
+        "0.5-r10": 0.0,
+        "0.5-r100": 0.0,
+        "0.7-r1": 0.09,
+        "0.7-r5": 0.1,
+        "0.7-r10": 0.1,
+        "0.7-r100": 0.0
+      },
+      "invalid_span_count": 0,
+      "duplicate_span_count_after_nms": 0,
+      "hard_positive_top100_exits": {
+        "0.5_r100_exit_queries": 9,
+        "0.7_r100_exit_queries": 43
+      },
+      "top1_changed_rate": 0.24609375,
+      "wrong_video_promoted_rate": 0.5992063492063492,
+      "candidate_identity_note": "primary Region-lite feature-only-to-C_prop candidate"
+    }
+  ],
+  "artifact_hashes_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_final_freeze_package/C7_FINAL_ARTIFACT_HASHES.json",
+  "code_hashes_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c7_final_freeze_package/C7_FINAL_CODE_HASHES.json",
+  "prefreeze_status": "C7_C6_REGION_LITE_POSITIVE_FREEZE_REVIEW",
+  "larger_review_note": "Larger confirmation keeps 0.7-r1/R5/R10 positive but has a tiny 0.5-r1 fluctuation (-0.09); keep as freeze-review candidate, not automatic official authorization."
+}

@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "expected_speed": "fast frame-level",
+  "expected_storage": "frames * dim * dtype",
+  "feature_dim": "512 or 768",
+  "model": "CLIP ViT-B/32 or ViT-L/14"
+}

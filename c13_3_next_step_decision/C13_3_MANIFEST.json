@@ -1,0 +1,29 @@
+{
+  "artifact_hashes": {
+    "c13_0_c12_stop_archive/C13_0_C12_FINAL_STATE.json": "8d8af3d380f4467fa84370f3e80931313e5bbefd3537abb283fbcbe3b68fd44c",
+    "c13_0_c12_stop_archive/C13_0_C12_FINAL_STATE.md": "c95d2f94f927579d2fd5f4fa7416db62f091026a1139d23e90f17fc25aaeb02a",
+    "c13_0_c12_stop_archive/C13_0_NO_C12_6_DECISION.md": "6cda268d3048ddfb1a2e6ade92c1a80260306b07dc6069bba5e9640ebb13a3f5",
+    "c13_0_c12_stop_archive/C13_0_PROMOTED_SYSTEM_STATUS.md": "c44a8b7ce286941869102fef970f6362bcb211598ba2073738a218d4968790ea",
+    "c13_1_strong_feature_feasibility/C13_1_EXTRACTION_COST_ESTIMATE.json": "53de72b905193fe4f237092c2cc89a998ec8ee4693290b5ad852f93a796b95f8",
+    "c13_1_strong_feature_feasibility/C13_1_FEATURE_CANDIDATES.md": "88ba8ae6dba73d672677838b1973588328b84fe1b668b4db0b133bb62d5b1558",
+    "c13_1_strong_feature_feasibility/C13_1_FEATURE_DECISION.json": "723482d3650b8acee91e64824481d3f9381c8168d47bc5b79a38698fd9755b1a",
+    "c13_1_strong_feature_feasibility/C13_1_MULTISCALE_EVENT_FEATURE_PLAN.md": "7396f7722385c51e28d6924c5f320bb6ad38cd43a896916b2f147054a64b93fa",
+    "c13_1_strong_feature_feasibility/C13_1_SAMPLE_COVERAGE_AUDIT.json": "ead733e60da0134b9032cec557ccb49eca8f25c904b868c27484117328b23f02",
+    "c13_1_strong_feature_feasibility/C13_1_TEXT_SUBTITLE_FEATURE_PLAN.md": "c8e914f1a1a2cf6b41741c8aa33cff84c591875e40c37b880ff5ec840b824b7b",
+    "c13_1_strong_feature_feasibility/C13_1_VISUAL_FEATURE_PLAN.md": "633bba9607d2c089b8392f6bf6d77e81795c4b728b55d5616bb16377e0355c96",
+    "c13_2_baseline_architecture_feasibility/C13_2_BASELINE_DECISION.json": "3cfd8d65eb7cebcc5f26649b1b33819eafaf84eb0582f41f52c0f1c6498efd6b",
+    "c13_2_baseline_architecture_feasibility/C13_2_BOUNDARY_ARCHITECTURE_OPTIONS.md": "e9ff956831d08e5f37f82a3a157fc2e9068636693dd037e3658ed40fc908d641",
+    "c13_2_baseline_architecture_feasibility/C13_2_EVENTFORMER_FEASIBILITY.md": "a211e4df8e3e6c9782b8b31700552e812d783cf6b80e975d9143c781a8e201b2",
+    "c13_2_baseline_architecture_feasibility/C13_2_MAVR_FEASIBILITY.md": "6f1f79ffbe9833b47fe56fe62735bbe6b365e2e3ff3ab22b07fd1f6f72ab1443",
+    "c13_2_baseline_architecture_feasibility/C13_2_MINUTE_FEASIBILITY.md": "2098710be3e14ad6893f287b45f2f36222605006926552b2ff5bdfb46f8a2cb3",
+    "c13_2_baseline_architecture_feasibility/C13_2_PREM_FEASIBILITY.md": "1aed3f8652d4e002c1198651e94e0bc1db98d26a6a779a3ecf888222921a7452",
+    "c13_3_next_step_decision/C13_3_MANIFEST.json": "ef6e2e18f84b0b56f6dd875d214c535456d2efc6104cbb2d740df54fc5cb6e9a",
+    "c13_3_next_step_decision/C13_3_NEXT_STEP_DECISION.json": "fc3a042449baf22867417aa6b91292e830d1713da0bfa5e951e2a33007bc9c21",
+    "c13_3_next_step_decision/C13_3_NEXT_STEP_DECISION.md": "4229b2f49cbb38d70c9802110045e0693041e28ef1a3622fd428317e135b42c3"
+  },
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "stage": "C13",
+  "status": "C13_STRONG_FEATURE_EXTRACTION_THEN_NATIVE_RETRAIN"
+}

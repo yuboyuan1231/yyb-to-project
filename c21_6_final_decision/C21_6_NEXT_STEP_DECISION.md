@@ -1,0 +1,3 @@
+# C21-6 Next Step Decision
+
+decision: `C21_NEED_EVENTFORMER_PREM_STYLE_COUPLING`

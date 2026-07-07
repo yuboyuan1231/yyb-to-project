@@ -1,0 +1,24 @@
+{
+  "config": {
+    "d_max": 64,
+    "eval_batch": 24,
+    "hidden": 128,
+    "nms_threshold": 0.7,
+    "sample_limit": 300,
+    "train_batch": 16,
+    "train_epochs": 4
+  },
+  "device": "cuda:0",
+  "evaluator_sha256": "7ba192993f461e92235614f5033dc5700155ca2cf61d2d0b8f98cbc211786f3a",
+  "git_branch_vv": "c10-postofficial-repair-diagnostics 31a7023 Archive CONQUER-RLEM promoted C7-B6 system\n  c12-clean-native-vcmr               6888730 [origin/c12-clean-native-vcmr] Add C13 handoff evidence packet\n  c14-strong-feature-pilot            c619bba [origin/c14-strong-feature-pilot] Run C14 strong feature event pilot\n* c15-boundary-localizer-redesign     c619bba Run C14 strong feature event pilot\n  main                                31a7023 [origin/main] Archive CONQUER-RLEM promoted C7-B6 system",
+  "gpu": [
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24094 MiB",
+    "NVIDIA GeForce RTX 3090, 24576 MiB, 24113 MiB"
+  ],
+  "inference_utils_sha256": "f490e62ebd98c1bb6d0054d147a7df5a5ead508cea5b26be82d1cd8ac88619cd",
+  "official_val_used": false,
+  "python": "Python 3.9.19",
+  "seed": 1515,
+  "stage": "C15-0",
+  "torch_cuda_available": true
+}

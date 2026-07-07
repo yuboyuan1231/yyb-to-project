@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "run_c25p_raw_frame_strong_feature_preflight.py",
+    "--stage",
+    "all",
+    "--mode",
+    "medium",
+    "--dry_run",
+    "--no_gpu",
+    "--max_videos",
+    "2",
+    "--max_queries",
+    "2",
+    "--max_frames_per_video",
+    "16"
+  ],
+  "dry_run": true,
+  "mode": "medium",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "python": "3.9.19 | packaged by conda-forge | (main, Mar 20 2024, 12:50:21) \n[GCC 12.3.0]",
+  "script": "run_c25p_raw_frame_strong_feature_preflight.py",
+  "seed": 2026,
+  "time": "2026-07-06 20:26:25"
+}

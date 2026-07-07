@@ -1,0 +1,72 @@
+{
+  "c12_schema": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+    "readable": true,
+    "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c",
+    "size_bytes": 3336
+  },
+  "c12_split": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "readable": true,
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31",
+    "size_bytes": 1045
+  },
+  "c19_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_1_full_score_blocker_closure/C19_1_SCORE_CACHE_MANIFEST.json",
+    "readable": true,
+    "sha256": "b0febbec8635dcdb9d38caee6149823298ec1ccf17c8fad65283e9b938d0fcc5",
+    "size_bytes": 9540
+  },
+  "c20_1": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_1_anchor_availability_audit/C20_1_ANCHOR_DECISION.json",
+    "readable": true,
+    "sha256": "be74c0c72c40de2968f28660ea82e985c571a29cab2192d114f1808b24290a71",
+    "size_bytes": 159600
+  },
+  "c20_2": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_2_r1_failure_decomposition/C20_2_FAILURE_DECOMP_DECISION.json",
+    "readable": true,
+    "sha256": "6f03fedf25674473cfa0ebeaa0e088a532270e01b42621b634757b07caafcb49",
+    "size_bytes": 4961
+  },
+  "c20_3": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_3_same_video_span_correction/C20_3_SAME_VIDEO_DECISION.json",
+    "readable": true,
+    "sha256": "2e80a70a81d7545e8df77e310089b0e09f7f89fdfd914b66066fb3ba343d5ce3",
+    "size_bytes": 440454
+  },
+  "c20_4": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_4_selective_cross_video_replacement/C20_4_CROSS_VIDEO_DECISION.json",
+    "readable": true,
+    "sha256": "e32e6479df5ad81d40ef5c48980541ddbb9067c3906e1bcda7ee831e314c57a8",
+    "size_bytes": 879480
+  },
+  "c20_5": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_5_top1_safe_policy_assembly/C20_5_POLICY_DECISION.json",
+    "readable": true,
+    "sha256": "b9d22cc325ef14ebae18c63dc97076c349970ffcfe5438253f7a5f07d0c6d1db",
+    "size_bytes": 674350
+  },
+  "c20_6": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_6_final_decision/C20_6_NEXT_STEP_DECISION.json",
+    "readable": true,
+    "sha256": "a85c566abf79cb733367a0322afab880a9648b588f60ccd17909d6a500f48a2a",
+    "size_bytes": 1969
+  },
+  "c20_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c20_1_anchor_availability_audit/C20_1_ANCHOR_SOURCE_MANIFEST.json",
+    "readable": true,
+    "sha256": "9c6c20016616458c22aab8a0033d52fffc4a8bb02b38d6d7975dbde3cc803c1c",
+    "size_bytes": 890
+  }
+}

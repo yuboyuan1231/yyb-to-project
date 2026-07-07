@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "expected_speed": "medium frame-level",
+  "expected_storage": "frames * dim * dtype",
+  "feature_dim": "768 or 1024",
+  "model": "DINOv2 ViT-B/14 or ViT-L/14"
+}

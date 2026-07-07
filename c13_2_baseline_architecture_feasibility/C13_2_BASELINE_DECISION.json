@@ -1,0 +1,22 @@
+{
+  "boundary_architecture_redesign_needed": true,
+  "eventformer_borrow": true,
+  "mavr_borrow": true,
+  "minute_borrow": true,
+  "official_val_used": false,
+  "prem_module_borrow": true,
+  "prem_reproducible_now": false,
+  "reason": "PREM public repo is not runnable from available code; MA-VR/EventFormer/MINUTE ideas are useful, but the next controllable step is native strong-feature pilot before retraining or redesigning the localizer.",
+  "sources": {
+    "eventformer_reference": "no verified runnable local/public repo found in this audit; borrow event-level modeling idea only",
+    "local_mavr_bridge": "c9_2_mavr_bridge/C9_2_SMOKE_RESULTS.md",
+    "mavr_reference": "https://doi.org/10.1109/access.2025.3542720",
+    "minute_paper": "https://arxiv.org/abs/2301.13606",
+    "prem_paper": "https://arxiv.org/abs/2402.13576",
+    "prem_readme_observation": "README says: The code is coming soon...",
+    "prem_repo": "https://github.com/hdy007007/PREM",
+    "prem_repo_head_checked": "0cc6bd8fceae88cb89e79f71d2b22a1fb72640da"
+  },
+  "stage": "C13-2",
+  "status": "C13_NATIVE_WITH_STRONG_FEATURE_FIRST"
+}

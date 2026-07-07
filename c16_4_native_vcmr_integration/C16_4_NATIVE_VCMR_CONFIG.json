@@ -1,0 +1,11 @@
+{
+  "fusion_candidates": [
+    "map-only",
+    "T2-only",
+    "retriever+map proxy",
+    "map+T2 safety proxy"
+  ],
+  "mode": "medium",
+  "official_val_used": false,
+  "selection_split": "calib_select"
+}

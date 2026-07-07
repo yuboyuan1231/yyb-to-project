@@ -1,0 +1,8 @@
+{
+  "formula_count": 22,
+  "holdout_candidate_count": 9,
+  "search_method": "select-only sweep; holdout report for baseline, selected, top objective candidates, and front-rank exploration fallback candidates",
+  "selection_objective": "front-rank VCMR with VR no-regression penalties",
+  "selection_strategy": "front_rank_exploration_fallback_when_objective_selects_baseline",
+  "trained_large_gate": false
+}

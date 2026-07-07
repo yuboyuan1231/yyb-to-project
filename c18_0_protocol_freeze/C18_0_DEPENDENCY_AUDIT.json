@@ -1,0 +1,57 @@
+{
+  "c12_schema_manifest": {
+    "exists": true,
+    "path": "c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+    "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c"
+  },
+  "c12_split_manifest": {
+    "exists": true,
+    "path": "c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31"
+  },
+  "c12_t2_checkpoint": {
+    "exists": true,
+    "path": "c12_models/c12_5t_T2_listwise_soft_iou.pt",
+    "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80"
+  },
+  "c16_checkpoint_manifest": {
+    "exists": true,
+    "path": "c16_2_fullscale_bmn_training/C16_2_BMN_CHECKPOINT_MANIFEST.json",
+    "sha256": "1dc136d806a2ca95e23ba8fd11a2a22d9d3a8e25bce973b1519f9edcf769ab21"
+  },
+  "c17_evaluator": {
+    "exists": true,
+    "path": "c17_1_train_only_vcmr_evaluator/C17_1_EVALUATOR_DECISION.json",
+    "sha256": "59b9892e727d5a2c7acd331e187adb021f45780c96198d1752efb8a443d7e072"
+  },
+  "c17_hybrid": {
+    "exists": true,
+    "path": "c17_3_bmn_t2_hybrid_calibration/C17_3_HYBRID_DECISION.json",
+    "sha256": "6aca7374cba9f53ff185621795b8176bc7c9933978591387fc131913b6b62020"
+  },
+  "c17_integration": {
+    "exists": true,
+    "path": "c17_4_native_vcmr_full_integration/C17_4_INTEGRATION_DECISION.json",
+    "sha256": "1b4074ea417ce0e10e78177eb0e4815c60a2c04735d248133881ef87292bc496"
+  },
+  "c17_next": {
+    "exists": true,
+    "path": "c17_6_freeze_review/C17_6_NEXT_STEP_DECISION.json",
+    "sha256": "5cca99cd79bd4d23057e643e7d6eaa8a8485a08f4885bef96d1707ca04f8fc04"
+  },
+  "c17_robustness": {
+    "exists": true,
+    "path": "c17_5_robustness_and_consistency/C17_5_ROBUSTNESS_DECISION.json",
+    "sha256": "a4756d5a1a7b44301afda05dc582592e0602900a9891918865dc2b1183d389a2"
+  },
+  "c17_score": {
+    "exists": true,
+    "path": "c17_2_full_bmn_score_export/C17_2_FULL_BMN_DECISION.json",
+    "sha256": "5ce22cb5a39e3e7f79af25b8fe50894fa18a03798e1405fec8b1495962e231c8"
+  },
+  "c17_score_manifest": {
+    "exists": true,
+    "path": "c17_2_full_bmn_score_export/C17_2_FULL_BMN_SCORE_MANIFEST.json",
+    "sha256": "2ea66af4ed4b5dce116a287b8c0897fccaebfc4353b008eac0fa6bbed36c632c"
+  }
+}

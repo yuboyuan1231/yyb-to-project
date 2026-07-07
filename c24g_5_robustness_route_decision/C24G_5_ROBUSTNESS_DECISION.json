@@ -1,0 +1,79 @@
+{
+  "c25_route_audit": {
+    "bmn_t2_train_fit_missing_resolved": false,
+    "event_direct_columns_present": true,
+    "full_bmn_t2_event_evidence_materialized": false,
+    "full_evidence_front_rank_still_weak": false,
+    "recommend_c25": false
+  },
+  "d_e_f_subset_audit": "partial evidence only",
+  "mode": "medium",
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "pseudo_onelook_diagnostic": {
+    "pseudo_official_not_used_for_selection": true,
+    "pseudo_one_look_executed": false
+  },
+  "query_duration_robustness": "partial evidence only",
+  "route_recommendation": "C24G_NEED_MORE_BMN_T2_MATERIALIZATION",
+  "score_distribution_audit": {
+    "bmn_final_score": {
+      "count": 199999,
+      "mean": 0.4613111576654197,
+      "missing": 128001,
+      "p50": 0.4179234504699707,
+      "p90": 0.745964801311493
+    },
+    "bmn_z": {
+      "count": 328000,
+      "mean": 2.718692479813798e-18,
+      "missing": 0,
+      "p50": 0.0,
+      "p90": 0.9946044323615109
+    },
+    "event_relevance_score": {
+      "count": 328000,
+      "mean": 0.4802372279019072,
+      "missing": 0,
+      "p50": 0.47742269933223724,
+      "p90": 0.5075007796287536
+    },
+    "event_z": {
+      "count": 328000,
+      "mean": 1.8738398366844107e-18,
+      "missing": 0,
+      "p50": -0.15005165655211483,
+      "p90": 1.3278704751286843
+    },
+    "t2_score": {
+      "count": 194433,
+      "mean": 0.8036310111092309,
+      "missing": 133567,
+      "p50": 0.8120716214179993,
+      "p90": 0.9110289454460144
+    },
+    "t2_z": {
+      "count": 328000,
+      "mean": -4.4463078205719685e-18,
+      "missing": 0,
+      "p50": 0.0,
+      "p90": 0.8959943847625207
+    }
+  },
+  "seed": 2026,
+  "seed_robustness": {
+    "seed2026": {
+      "materialization": "C24G_BMN_T2_MATERIALIZED_PARTIAL",
+      "reeval": "C24G_FULL_EVIDENCE_INCONCLUSIVE"
+    },
+    "seed2027": "not run; blocked by BMN/T2 materialization",
+    "seed2028": "not run; blocked by BMN/T2 materialization"
+  },
+  "selection_firewall_audit": {
+    "official_val_used": false,
+    "pseudo_official_holdout_used_for_selection": false
+  },
+  "stage": "C24G-5",
+  "status": "C24G_ROBUSTNESS_PARTIAL"
+}

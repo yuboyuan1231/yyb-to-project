@@ -1,0 +1,11 @@
+{
+  "c18_c19_promoted_system": false,
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "official_validation_may_be_run_by_this_script": false,
+  "post_val_adjustment_used": false,
+  "promoted_system_remains": "C7-B6 R1SelectiveTop1",
+  "second_official_used": false
+}

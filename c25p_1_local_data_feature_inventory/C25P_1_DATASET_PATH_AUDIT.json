@@ -1,0 +1,61 @@
+{
+  "/data": {
+    "exists": false,
+    "path": "/data"
+  },
+  "/home/a/data": {
+    "exists": false,
+    "path": "/home/a/data"
+  },
+  "/home/a/datasets": {
+    "exists": false,
+    "path": "/home/a/datasets"
+  },
+  "/home/a/external_baselines": {
+    "exists": false,
+    "path": "/home/a/external_baselines"
+  },
+  "/home/a/newyyb": {
+    "exists": false,
+    "path": "/home/a/newyyb"
+  },
+  "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3": {
+    "exists": true,
+    "is_dir": true,
+    "is_file": false,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3",
+    "size_bytes": null
+  },
+  "/mnt/data": {
+    "exists": false,
+    "path": "/mnt/data"
+  },
+  "/tmp": {
+    "exists": true,
+    "is_dir": true,
+    "is_file": false,
+    "path": "/tmp",
+    "size_bytes": null
+  },
+  "/tmp/c24f_score_cache": {
+    "exists": true,
+    "is_dir": true,
+    "is_file": false,
+    "path": "/tmp/c24f_score_cache",
+    "size_bytes": null
+  },
+  "/tmp/c24g_score_cache": {
+    "exists": true,
+    "is_dir": true,
+    "is_file": false,
+    "path": "/tmp/c24g_score_cache",
+    "size_bytes": null
+  },
+  "/tmp/c24h_score_cache": {
+    "exists": true,
+    "is_dir": true,
+    "is_file": false,
+    "path": "/tmp/c24h_score_cache",
+    "size_bytes": null
+  }
+}

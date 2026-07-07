@@ -1,0 +1,8 @@
+{
+  "missing_scores_masked": true,
+  "raw_score_retained": true,
+  "silent_fill": false,
+  "within_query_minmax": true,
+  "within_query_softmax_top128": true,
+  "within_query_z_score": true
+}

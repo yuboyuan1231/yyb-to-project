@@ -1,0 +1,330 @@
+{
+  "alignment_mismatch_examples": [],
+  "candidate_pool_audit": {
+    "candidate_source": "first_stage_top128_pickle",
+    "duplicate_candidate_count": 0,
+    "gt_video_coverage": {
+      "top1": 28.4,
+      "top10": 78.6,
+      "top100": 100.0,
+      "top128": 100.0,
+      "top5": 63.9
+    },
+    "invalid_video_id_count": 0,
+    "query_count": 1000,
+    "row_count_top128": 128000,
+    "video_count": 17435
+  },
+  "collapse_root_cause": {
+    "alignment_blocker_found": false,
+    "candidate_space_misuse": true,
+    "found": true,
+    "root_cause_evidence": {
+      "c22_full_VR_R100": 1.7,
+      "c22_restricted_VR_R100": 77.9,
+      "first_stage_VR_R100": 100.0,
+      "random_top128_VR_R100": 78.0
+    },
+    "standalone_native_feature_capacity_weak": true,
+    "summary": "C22 collapsed because the native retriever was allowed to replace the very strong first-stage retriever over the full train video library. The release-feature global/pooled native scorer is weak, while first-stage top128 already gives 100% GT-video coverage on the medium holdout. Alignment checks did not find a blocking key/join/schema mismatch; the main failure is candidate-space misuse plus an unconstrained residual/replacement policy."
+  },
+  "evaluator_modified": false,
+  "feature_alignment_audit": {
+    "c22_encoder_dim_match": true,
+    "event_pooling_reorders_video": false,
+    "feature_key_subtitle_equals_video_id": true,
+    "feature_key_visual_equals_video_id": true,
+    "query_id_consistency": true,
+    "query_missing_count": 0,
+    "score_collapse_ratio_std_lt_1e_6": 0.0,
+    "score_entropy_mean_within_first_stage_top128": 4.597512283325195,
+    "score_std_mean_within_first_stage_top128": 0.6978494218736887,
+    "video_id_key_source": "corpus.train_videos[pos] from first-stage pickle",
+    "warm_start_checkpoint_loaded": true
+  },
+  "improved_failed_examples": [
+    {
+      "c22_restricted_rank": 63,
+      "delta_rank": 62,
+      "first_stage_rank": 1,
+      "gt_video_id": "met_s03e03_seg02_clip_11",
+      "query_id": 365,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 114,
+      "delta_rank": 108,
+      "first_stage_rank": 6,
+      "gt_video_id": "met_s03e03_seg02_clip_11",
+      "query_id": 366,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 109,
+      "delta_rank": 107,
+      "first_stage_rank": 2,
+      "gt_video_id": "met_s03e03_seg02_clip_11",
+      "query_id": 367,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 75,
+      "delta_rank": 73,
+      "first_stage_rank": 2,
+      "gt_video_id": "met_s03e03_seg02_clip_11",
+      "query_id": 368,
+      "query_type": "vt"
+    },
+    {
+      "c22_restricted_rank": 124,
+      "delta_rank": 118,
+      "first_stage_rank": 6,
+      "gt_video_id": "met_s03e03_seg02_clip_11",
+      "query_id": 369,
+      "query_type": "t"
+    },
+    {
+      "c22_restricted_rank": 22,
+      "delta_rank": 10,
+      "first_stage_rank": 12,
+      "gt_video_id": "s09e18_seg02_clip_13",
+      "query_id": 690,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 128,
+      "delta_rank": 95,
+      "first_stage_rank": 33,
+      "gt_video_id": "s09e18_seg02_clip_13",
+      "query_id": 691,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 53,
+      "delta_rank": 47,
+      "first_stage_rank": 6,
+      "gt_video_id": "s09e18_seg02_clip_13",
+      "query_id": 692,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 117,
+      "delta_rank": 114,
+      "first_stage_rank": 3,
+      "gt_video_id": "s09e18_seg02_clip_13",
+      "query_id": 693,
+      "query_type": "vt"
+    },
+    {
+      "c22_restricted_rank": 59,
+      "delta_rank": 52,
+      "first_stage_rank": 7,
+      "gt_video_id": "s09e18_seg02_clip_13",
+      "query_id": 694,
+      "query_type": "vt"
+    },
+    {
+      "c22_restricted_rank": 71,
+      "delta_rank": 65,
+      "first_stage_rank": 6,
+      "gt_video_id": "friends_s01e10_seg02_clip_11",
+      "query_id": 1135,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 110,
+      "delta_rank": 109,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_11",
+      "query_id": 1136,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 96,
+      "delta_rank": 90,
+      "first_stage_rank": 6,
+      "gt_video_id": "friends_s01e10_seg02_clip_11",
+      "query_id": 1137,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 15,
+      "delta_rank": 14,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_11",
+      "query_id": 1138,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 1,
+      "delta_rank": -4,
+      "first_stage_rank": 5,
+      "gt_video_id": "friends_s01e10_seg02_clip_11",
+      "query_id": 1139,
+      "query_type": "t"
+    },
+    {
+      "c22_restricted_rank": 39,
+      "delta_rank": 38,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_19",
+      "query_id": 1175,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 5,
+      "delta_rank": 4,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_19",
+      "query_id": 1176,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 60,
+      "delta_rank": 59,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_19",
+      "query_id": 1177,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 35,
+      "delta_rank": 34,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_19",
+      "query_id": 1178,
+      "query_type": "v"
+    },
+    {
+      "c22_restricted_rank": 83,
+      "delta_rank": 82,
+      "first_stage_rank": 1,
+      "gt_video_id": "friends_s01e10_seg02_clip_19",
+      "query_id": 1179,
+      "query_type": "t"
+    }
+  ],
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "query_video_label_audit": {
+    "gt_video_join_key": "desc_id -> corpus.by_id[desc_id].vid_name",
+    "query_id_consistent": true,
+    "split_correct": true,
+    "train_calib_holdout_leakage_found": false,
+    "video_id_consistent": true
+  },
+  "retriever_metric_replay": {
+    "A_first_stage_baseline_replay": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 71.6
+    },
+    "B_zero_delta_replay_if_available": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 71.6
+    },
+    "C_c19_c20_c21_hybrid_candidate_video_ranks": {
+      "c21_vcmr_final": {
+        "VCMR_R@100_IoU0.5": 37.45,
+        "VCMR_R@100_IoU0.7": 22.65,
+        "VCMR_R@10_IoU0.5": 11.7,
+        "VCMR_R@10_IoU0.7": 6.3,
+        "VCMR_R@1_IoU0.5": 2.95,
+        "VCMR_R@1_IoU0.7": 1.4,
+        "VCMR_R@5_IoU0.5": 8.0,
+        "VCMR_R@5_IoU0.7": 3.9,
+        "already_correct_anchor_harm_rate": 0.0,
+        "harmful_promotion_rate": 0.0,
+        "promotion_attempt_rate": 0.65,
+        "promotion_precision": 0.0,
+        "promotion_recall": 0.0,
+        "query_count": 2000,
+        "wrong_video_high_score_rate": 71.75,
+        "wrong_video_top1_rate": 71.75
+      },
+      "source": "C22/C21 final diagnostics"
+    },
+    "D_c22_native_retriever_full_library": {
+      "GT_video_mean_rank": 5789.952,
+      "GT_video_median_rank": 4679.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.2,
+      "VR_R@100": 1.7,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 100.0
+    },
+    "E_c22_native_restricted_to_first_stage_top128": {
+      "GT_video_mean_rank": 67.518,
+      "GT_video_median_rank": 69.0,
+      "VR_R@1": 0.2,
+      "VR_R@10": 5.1,
+      "VR_R@100": 77.9,
+      "VR_R@128": 100.0,
+      "VR_R@5": 1.4,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "score_collapse_ratio_std_lt_1e_6": 0.0,
+      "score_entropy_mean": 4.366710307598114,
+      "score_std_mean": 0.9999999821782112,
+      "wrong_video_top1_rate": 99.8
+    },
+    "F_random_score_sanity_within_top128": {
+      "GT_video_mean_rank": 65.052,
+      "GT_video_median_rank": 65.0,
+      "VR_R@1": 0.7,
+      "VR_R@10": 7.6,
+      "VR_R@100": 78.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 3.5,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 99.3
+    },
+    "G_oracle_gt_video_score_sanity_within_top128": {
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 0.0
+    }
+  },
+  "runtime_seconds": 5.1719536781311035,
+  "score_join_audit": {
+    "duplicate_candidate_overwrite": false,
+    "join_keys": [
+      "query_id",
+      "video_id"
+    ],
+    "missing_score_count": 0,
+    "nan_inf_score_count": 0,
+    "position_based_join_used": false
+  },
+  "seed": 2026,
+  "stage": "C22R-1",
+  "status": "C22R_COLLAPSE_ROOT_CAUSE_FOUND"
+}

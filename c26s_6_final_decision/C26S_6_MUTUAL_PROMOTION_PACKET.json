@@ -1,0 +1,49 @@
+{
+  "decision": "C26S_CONTINUE_MUTUAL_PROMOTION_REPAIR",
+  "local_only_artifacts": {
+    "cache_root": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3",
+    "canonical": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_CANONICAL_MULTISPAN_medium_seed2026.local.parquet",
+    "canonical_multispan": {
+      "path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_CANONICAL_MULTISPAN_medium_seed2026.local.parquet",
+      "sha256": "186cb789b8e317e2f21bbcbdae1d1de04b9bdd64c07d4e4b8a3ec13756051a30",
+      "size_bytes": 1076314470
+    },
+    "feedback": {
+      "path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_FEEDBACK_medium_seed2026.local.parquet",
+      "sha256": "3b6eb164aec42b6408ac64c3f497de5981b495eb0c32cc11b42fb08a6fb32a70",
+      "size_bytes": 1800488863
+    },
+    "span_relevance": {
+      "path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_SPAN_RELEVANCE_medium_seed2026.local.parquet",
+      "sha256": "255a5d137dbcc464c9ef9160ff64bb7e4ef773057fe938a31e3ee2c7b7514508",
+      "size_bytes": 1536592037
+    }
+  },
+  "metrics": {
+    "GT_VIDEO_TOP100_IoU0.5": 41.0,
+    "GT_VIDEO_TOP100_IoU0.7": 23.444444444444443,
+    "GT_VIDEO_TOP50_IoU0.5": 41.0,
+    "GT_VIDEO_TOP50_IoU0.7": 23.444444444444443,
+    "VCMR_R@100_IoU0.5": 34.0,
+    "VCMR_R@100_IoU0.7": 19.555555555555557,
+    "VCMR_R@10_IoU0.5": 12.0,
+    "VCMR_R@10_IoU0.7": 5.666666666666667,
+    "VCMR_R@1_IoU0.5": 2.6666666666666665,
+    "VCMR_R@1_IoU0.7": 1.1111111111111112,
+    "VCMR_R@5_IoU0.5": 7.777777777777778,
+    "VCMR_R@5_IoU0.7": 3.5555555555555554,
+    "VR_R@1": 26.77777777777778,
+    "VR_R@10": 68.77777777777777,
+    "VR_R@100": 94.44444444444444,
+    "VR_R@5": 57.77777777777778,
+    "correct_video_wrong_span_rate": 24.11111111111111,
+    "duplicate_span_count": 0,
+    "invalid_span_count": 0,
+    "query_count": 900,
+    "top1_mean_iou": 0.03193273952215163,
+    "wrong_video_high_score_rate": 73.22222222222223
+  },
+  "selected_feedback_variant": "F5_BMN_T2_event_agreement",
+  "selected_integration": "C_C26R_multi_span_selected_R3b1",
+  "selected_span_ranker": "S4_false_positive_guard"
+}
