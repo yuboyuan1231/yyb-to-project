@@ -59,6 +59,7 @@
   },
   "evaluator_modified": false,
   "final_decision": "C26_READY_FOR_C25_STRONG_FEATURE_WHEN_FRAMES_AVAILABLE",
+  "final_decision_note_after_r100_sanity": "C26 remains not promoted. The R@100 gap is not an official/evaluator/pseudo issue; it is dominated by the shared borrowed BMN single-span proposal bottleneck. A future repair should materialize multiple native span proposals before rejudging the PREM localizer.",
   "final_vcmr_metrics": {
     "VCMR_R@100_IoU0.5": 8.555555555555555,
     "VCMR_R@100_IoU0.7": 3.2222222222222223,
@@ -217,6 +218,15 @@
   },
   "stage": "C26-6",
   "status": "C26_READY_FOR_C25_STRONG_FEATURE_WHEN_FRAMES_AVAILABLE",
+  "vcmr_r100_sanity_check": {
+    "audit_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26_7_vcmr_r100_sanity_check/C26_7_VCMR_R100_SANITY_AUDIT.json",
+    "c24h_same_subset_vcmr_r100_iou05": 8.555555555555555,
+    "c26_final_vcmr_r100_iou05": 8.555555555555555,
+    "conclusion": "C24H on the same C26 medium subset is also low at VCMR R@100, while VR R@100 is near-saturated. The gap is a shared one-span/localizer proposal limitation, not a C26-only scoring regression.",
+    "single_span_proposal_per_query_video": true,
+    "span_unit_conclusion": "seconds_consistent",
+    "status": "C26_R100_SANITY_PASS_SHARED_SINGLE_SPAN_LIMITATION"
+  },
   "wrong_video_risk": {
     "baseline": 72.66666666666667,
     "high_score_false_positive": 72.55555555555556,
