@@ -1,0 +1,185 @@
+{
+  "mode": "medium",
+  "no_regression_audit": {
+    "VR_R100_preserved": true,
+    "wrong_video_not_worse": true
+  },
+  "official_used": false,
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26_3_multimodal_collaborative_retriever/C26_3_RETRIEVER_SCORE_SAMPLE.parquet",
+  "selected_retriever": {
+    "checkpoint_local_only": true,
+    "checkpoint_path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_PREM_RETRIEVER_medium_seed2026.local.pt",
+    "name": "R7_no_regression_guarded_partial",
+    "residual_clip": 0.2
+  },
+  "stage": "C26-3",
+  "status": "C26_PREM_RETRIEVER_STABLE_NO_GAIN",
+  "training_results": {
+    "batch_size": 1024,
+    "checkpoint_local_only": true,
+    "checkpoint_path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_PREM_RETRIEVER_medium_seed2026.local.pt",
+    "device": "cuda:0",
+    "epochs": 3,
+    "gate_attention_diagnostic": {
+      "gate_mean": [
+        0.873714804649353,
+        0.035452697426080704,
+        0.09083248674869537
+      ],
+      "gate_std": [
+        0.05712501332163811,
+        0.02896149456501007,
+        0.0305912084877491
+      ],
+      "residual_abs_mean": 0.12189827114343643,
+      "residual_max_abs": 0.16043256223201752
+    },
+    "history": [
+      {
+        "L_hard_negative": 0.008638662723925985,
+        "L_no_regression": 0.00012000123396305416,
+        "L_partial_relevance": 1.3238937286288173,
+        "L_residual_norm": 0.007070804750360822,
+        "L_strong_weak_contrastive": 0.047965529195714146,
+        "L_video_rank": 1.089389538247948,
+        "epoch": 1,
+        "loss": 1.5588976006005084,
+        "rows": 115219
+      },
+      {
+        "L_hard_negative": 0.0012116815604408557,
+        "L_no_regression": 0.000484753469702747,
+        "L_partial_relevance": 1.2008041164865284,
+        "L_residual_norm": 0.010596842364044895,
+        "L_strong_weak_contrastive": 0.01158247948608755,
+        "L_video_rank": 1.0780559671636036,
+        "epoch": 2,
+        "loss": 1.501625737360787,
+        "rows": 115219
+      },
+      {
+        "L_hard_negative": 8.404488850141068e-05,
+        "L_no_regression": 0.0009604671290389807,
+        "L_partial_relevance": 1.0718061966488577,
+        "L_residual_norm": 0.013487329627610439,
+        "L_strong_weak_contrastive": 0.005876370224978475,
+        "L_video_rank": 1.0705955336606026,
+        "epoch": 3,
+        "loss": 1.4491437972887826,
+        "rows": 115219
+      }
+    ],
+    "lr": 0.0001,
+    "multi_gpu_data_parallel": true,
+    "positive_rows_used": 1800,
+    "runtime_sec": 10.823740720748901,
+    "train_rows_before_front_hard_filter": 230400,
+    "train_rows_used": 115219
+  },
+  "vr_results": {
+    "calib_holdout": {
+      "delta": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 0.0,
+        "VR_R@10": -0.11111111111111427,
+        "VR_R@100": 0.0,
+        "VR_R@5": 0.0,
+        "high_score_false_positive_rate": 0.0,
+        "wrong_video_top1_rate": 0.0
+      },
+      "first_stage": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 27.333333333333332,
+        "VR_R@10": 78.0,
+        "VR_R@100": 100.0,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.66666666666667,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.66666666666667
+      },
+      "prem_residual": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 27.333333333333332,
+        "VR_R@10": 77.88888888888889,
+        "VR_R@100": 100.0,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.66666666666667,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.66666666666667
+      }
+    },
+    "calib_select": {
+      "delta": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 0.0,
+        "VR_R@10": 0.11111111111111427,
+        "VR_R@100": 0.0,
+        "VR_R@5": 0.0,
+        "high_score_false_positive_rate": 0.0,
+        "wrong_video_top1_rate": 0.0
+      },
+      "first_stage": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 28.333333333333332,
+        "VR_R@10": 79.55555555555556,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.11111111111111,
+        "high_score_false_positive_rate": 71.66666666666667,
+        "query_count": 900,
+        "wrong_video_top1_rate": 71.66666666666667
+      },
+      "prem_residual": {
+        "VCMR_R@100_IoU0.5": 0.0,
+        "VCMR_R@100_IoU0.7": 0.0,
+        "VCMR_R@10_IoU0.5": 0.0,
+        "VCMR_R@10_IoU0.7": 0.0,
+        "VCMR_R@1_IoU0.5": 0.0,
+        "VCMR_R@1_IoU0.7": 0.0,
+        "VCMR_R@5_IoU0.5": 0.0,
+        "VCMR_R@5_IoU0.7": 0.0,
+        "VR_R@1": 28.333333333333332,
+        "VR_R@10": 79.66666666666667,
+        "VR_R@100": 100.0,
+        "VR_R@5": 64.11111111111111,
+        "high_score_false_positive_rate": 71.66666666666667,
+        "query_count": 900,
+        "wrong_video_top1_rate": 71.66666666666667
+      }
+    }
+  }
+}

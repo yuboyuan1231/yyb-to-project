@@ -1,0 +1,9 @@
+{
+  "arrays_path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_TRAINING_ARRAYS_medium.local.npz",
+  "features": [
+    "q_visual-v_clip cosine",
+    "q_subtitle-s_unit cosine",
+    "S_PREM gated residual"
+  ],
+  "local_only": true
+}

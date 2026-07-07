@@ -1,0 +1,77 @@
+{
+  "config_hash": "5a014eed5dfe3446",
+  "feature_paths": {
+    "query_all": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+      "readable": true,
+      "size_bytes": 267295238
+    },
+    "subtitle_mean_max": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+      "readable": true,
+      "size_bytes": 107738120
+    },
+    "visual_mean": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz",
+      "readable": true,
+      "size_bytes": 304125722
+    }
+  },
+  "first_stage_sources": {
+    "calib_holdout": {
+      "candidate_row_count": 115200,
+      "loaded_query_count": 900,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "requested_query_count": 900,
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_holdout_top128.pkl",
+      "split": "calib_holdout",
+      "top": 128
+    },
+    "calib_select": {
+      "candidate_row_count": 115200,
+      "loaded_query_count": 900,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "requested_query_count": 900,
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_select_top128.pkl",
+      "split": "calib_select",
+      "top": 128
+    },
+    "train_fit": {
+      "candidate_row_count": 230400,
+      "loaded_query_count": 1800,
+      "missing_query_count": 0,
+      "missing_query_sample": [],
+      "requested_query_count": 1800,
+      "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+      "split": "train_fit",
+      "top": 128
+    }
+  },
+  "local_only": true,
+  "mode": "medium",
+  "path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_CANONICAL_medium.local.parquet",
+  "query_count": 3600,
+  "row_count": 460800,
+  "schema_hash": "b03c9fabfd2c6910",
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 900,
+      "rows": 115200
+    },
+    "calib_select": {
+      "queries": 900,
+      "rows": 115200
+    },
+    "train_fit": {
+      "queries": 1800,
+      "rows": 230400
+    }
+  },
+  "top": 128,
+  "video_count": 17435
+}

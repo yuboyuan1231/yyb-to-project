@@ -1,0 +1,50 @@
+{
+  "arrays_manifest": {
+    "feature_dims": {
+      "query": 768,
+      "subtitle": 768,
+      "visual": 4352
+    },
+    "local_only": true,
+    "path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_TRAINING_ARRAYS_medium.local.npz",
+    "positive_rows": 3600,
+    "query_count": 3600,
+    "row_count": 460800,
+    "splits": {
+      "calib_holdout": 115200,
+      "calib_select": 115200,
+      "train_fit": 230400
+    }
+  },
+  "background_coverage": 0.0022222222222222222,
+  "duration_breakdown": {
+    "long": 271,
+    "medium": 623,
+    "short": 906
+  },
+  "hard_negative_coverage": 1.0,
+  "label_columns_not_in_inference_features": [
+    "is_gt_video_diagnostic",
+    "gt_start",
+    "gt_end",
+    "gt_video_id"
+  ],
+  "modality_coverage": {
+    "subtitle": 1.0,
+    "visual": 1.0
+  },
+  "mode": "medium",
+  "official_used": false,
+  "positive_query_count": 1800,
+  "query_type_breakdown": {
+    "t": 164,
+    "v": 1337,
+    "vt": 299
+  },
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26_2_relevant_content_mining/C26_2_MINING_SAMPLE.parquet",
+  "stage": "C26-2",
+  "status": "C26_RELEVANT_CONTENT_MINING_READY",
+  "strong_positive_coverage": 1.0,
+  "train_query_count": 1800,
+  "weak_positive_coverage": 1.0
+}

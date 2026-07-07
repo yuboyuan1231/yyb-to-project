@@ -1,0 +1,7 @@
+{
+  "dtype": "float32",
+  "feature_dim": 4352,
+  "has_visual_feature_rate": 1.0,
+  "num_visual_clips_median": 42.0,
+  "num_visual_clips_min": 2
+}
