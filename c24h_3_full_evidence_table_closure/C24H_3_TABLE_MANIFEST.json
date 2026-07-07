@@ -1,24 +1,24 @@
 {
-  "config_hash": "ea4c5e22875c30fc",
+  "config_hash": "4f61db219ea79ff2",
   "local_only": true,
-  "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_FULL_EVIDENCE_TABLE_medium.local.parquet",
-  "query_count": 3000,
-  "row_count": 328000,
-  "schema_hash": "671492592547f079",
-  "sha256": "61d9f21805cc19d8d8822fb3f2341a33e223fd09a6a4b344b1f8dad57d692400",
-  "size_bytes": 49052686,
+  "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_FULL_EVIDENCE_TABLE_full.local.parquet",
+  "query_count": 82445,
+  "row_count": 10552960,
+  "schema_hash": "97eec24fd1c6f80f",
+  "sha256": "bff18e08dc2314fef91284d6e7a21c7d42711f241dd2b3caa517b1e577ba431f",
+  "size_bytes": 2103754164,
   "split_coverage": {
     "calib_holdout": {
-      "queries": 1000,
-      "rows": 100000
+      "queries": 4340,
+      "rows": 555520
     },
     "calib_select": {
-      "queries": 1000,
-      "rows": 100000
+      "queries": 8677,
+      "rows": 1110656
     },
     "train_fit": {
-      "queries": 1000,
-      "rows": 128000
+      "queries": 69428,
+      "rows": 8886784
     }
   }
 }

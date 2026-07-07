@@ -53,23 +53,10 @@
     "missing_bmn_mask",
     "missing_t2_mask",
     "missing_event_mask",
-    "retriever_score",
-    "retriever_rank",
-    "seed",
     "query_type",
     "duration_bucket",
-    "gt_video_rank",
-    "duration_score",
-    "old_c12_score",
-    "span_map_rank",
-    "retriever_norm",
-    "bmn_norm",
-    "t2_norm",
-    "old_norm",
-    "bmn_score",
-    "final_score",
-    "source_has_bmn",
-    "source_has_t2",
+    "retriever_score",
+    "retriever_rank",
     "event_missing_mask",
     "bmn_pred_iou",
     "bmn_p_iou_05",
@@ -115,5 +102,5 @@
     "best_bmn_span_iou_label"
   ],
   "feature_excludes_diagnostic_only": true,
-  "schema_hash": "671492592547f079"
+  "schema_hash": "97eec24fd1c6f80f"
 }

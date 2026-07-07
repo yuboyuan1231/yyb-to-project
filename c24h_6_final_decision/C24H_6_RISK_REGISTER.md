@@ -1,5 +1,5 @@
 # C24H-6 Risk Register
 
-- Medium run is partial and cannot prove full train_fit closure.
+- Full train_fit/calib_select/calib_holdout BMN/T2 rebuild is complete, but C24H is not promoted.
 - No official validation was run.
-- Continue chunked BMN/T2 rebuild before C25 routing.
+- Existing-feature evidence remains front-rank weak; C25 raw-frame strong-feature audit is the next route.
