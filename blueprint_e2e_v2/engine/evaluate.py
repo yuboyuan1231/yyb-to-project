@@ -172,6 +172,34 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
     visual_bank = torch.from_numpy(banks["visual_np"]["visual_mean"].astype(np.float32))
     subtitle_bank = torch.from_numpy(banks["subtitle_np"]["subtitle_mean"].astype(np.float32))
     max_queries = int(cfg.get("max_queries", 0) or 0) or None
+    target_len = int(cfg.get("target_len", 64))
+    visual_seq_bank, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(
+        video_ids,
+        target_len=target_len,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
+    subtitle_seq_bank, subtitle_seq_manifest = banks["subtitle_bank"].build_or_load_sequence_bank(
+        video_ids,
+        target_len=target_len,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
+    visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(
+        video_ids,
+        target_len=target_len,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
+    subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(
+        video_ids,
+        target_len=target_len,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
+    banks["video_bank"].clear_sequence_cache()
+    banks["subtitle_bank"].clear_sequence_cache()
+    eval_topk = int(cfg.get("eval_candidate_k", cfg.get("candidate_topk_eval", cfg.get("dynamic_topk", 200))))
     candidates, cand_audit = refresh_candidates(
         model,
         banks["split_manager"],
@@ -182,37 +210,23 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         subtitle_bank,
         split,
         max_queries=max_queries,
-        dynamic_topk=int(cfg.get("dynamic_topk", 200)),
+        dynamic_topk=eval_topk,
         chunk_size=int(cfg.get("chunk_size", 256)),
         device=device,
         insert_gt_for_training=False,
+        visual_seq_bank=visual_seq_bank,
+        subtitle_seq_bank=subtitle_seq_bank,
+        visual_seq_mask=visual_seq_mask,
+        subtitle_seq_mask=subtitle_seq_mask,
+        late_candidate_mining=bool(cfg.get("late_candidate_mining", cfg.get("late_interaction_enabled", False))),
+        broad_topk=int(cfg.get("broad_topk_eval", cfg.get("dynamic_topk", eval_topk))),
+        candidate_encode_chunk=int(cfg.get("candidate_encode_chunk", 32)),
+        late_soft_topk=int(cfg.get("late_soft_topk", 8)),
+        late_temperature=float(cfg.get("late_temperature", 0.07)),
+        token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),
+        pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
+        late_score_weight=float(cfg.get("late_score_weight", 0.0)),
     )
-    visual_seq_bank, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(
-        video_ids,
-        target_len=64,
-        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
-        force=False,
-    )
-    subtitle_seq_bank, subtitle_seq_manifest = banks["subtitle_bank"].build_or_load_sequence_bank(
-        video_ids,
-        target_len=64,
-        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
-        force=False,
-    )
-    visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(
-        video_ids,
-        target_len=64,
-        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
-        force=False,
-    )
-    subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(
-        video_ids,
-        target_len=64,
-        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
-        force=False,
-    )
-    banks["video_bank"].clear_sequence_cache()
-    banks["subtitle_bank"].clear_sequence_cache()
     dataset = MultiSpanProposalDataset(
         split,
         banks["split_manager"],
@@ -221,7 +235,7 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         banks["subtitle_bank"],
         candidates,
         max_queries=max_queries,
-        max_candidates=int(cfg.get("eval_candidate_k", cfg.get("candidate_topk_eval", cfg.get("dynamic_topk", 200)))),
+        max_candidates=eval_topk,
         max_spans_per_video=int(cfg.get("max_spans_per_video", 64)),
         insert_gt_for_training=False,
         visual_seq_bank=visual_seq_bank,

@@ -22,13 +22,16 @@ class RetrievalGuidedLocalizer(nn.Module):
         active: dict[str, torch.Tensor],
         retr: dict[str, torch.Tensor],
         spans_clip: torch.Tensor,
+        visual_mask: torch.Tensor | None = None,
+        subtitle_mask: torch.Tensor | None = None,
+        clip_mask: torch.Tensor | None = None,
     ) -> dict[str, torch.Tensor]:
-        vspan = span_pool(enc["visual"], spans_clip)
-        sspan = span_pool(enc["subtitle"], spans_clip)
-        jspan = span_pool(enc["joint"], spans_clip)
-        prem = span_pool(partial["P_gate"].unsqueeze(-1), spans_clip).squeeze(-1)
-        reg = span_pool(region["P_reg"].unsqueeze(-1), spans_clip).squeeze(-1)
-        amd = span_pool(active["P_amd"].unsqueeze(-1), spans_clip).squeeze(-1)
+        vspan = span_pool(enc["visual"], spans_clip, visual_mask)
+        sspan = span_pool(enc["subtitle"], spans_clip, subtitle_mask)
+        jspan = span_pool(enc["joint"], spans_clip, clip_mask)
+        prem = span_pool(partial["P_gate"].unsqueeze(-1), spans_clip, clip_mask).squeeze(-1)
+        reg = span_pool(region["P_reg"].unsqueeze(-1), spans_clip, clip_mask).squeeze(-1)
+        amd = span_pool(active["P_amd"].unsqueeze(-1), spans_clip, clip_mask).squeeze(-1)
         b, c, m, _ = vspan.shape
         scores = retr["retriever_score"]
         ranks = torch.argsort(torch.argsort(-scores, dim=1), dim=1).float() / max(1, c - 1)

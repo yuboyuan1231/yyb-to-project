@@ -118,26 +118,51 @@ class C28CFullModel(nn.Module):
             token_score = self.retriever.scale.clamp(1.0, 30.0) * token_score
         combined = self.pooled_score_weight * retr["retriever_score"] + self.late_score_weight * late_score + self.token_maxsim_weight * token_score
         out = dict(retr)
+        out["pooled_visual_sim"] = retr["visual_sim"]
+        out["pooled_subtitle_sim"] = retr["subtitle_sim"]
+        out["pooled_joint_sim"] = retr["joint_sim"]
+        out["pooled_wrong_video_risk"] = retr["wrong_video_risk"]
         out["retriever_score_pooled"] = retr["retriever_score"]
         out["retriever_score_late"] = late_score
         out["retriever_score_token"] = token_score
         out["retriever_score"] = combined
+        out["visual_sim"] = sv
+        out["subtitle_sim"] = ss
+        out["joint_sim"] = sj
         out["late_visual_sim"] = sv
         out["late_subtitle_sim"] = ss
         out["late_joint_sim"] = sj
+        risk_feats = torch.stack([sv, ss, sj, sv - ss, combined.detach() / 30.0], dim=-1)
+        out["wrong_video_risk"] = torch.sigmoid(self.retriever.risk(risk_feats).squeeze(-1))
         return out
 
     def forward(self, batch: dict[str, torch.Tensor]) -> dict[str, torch.Tensor | dict[str, torch.Tensor]]:
         q = self.query_encoder(batch["query_tokens"], batch.get("query_mask"), batch["query_type"])
-        enc = self._apply_clip_masks(self.video_encoder(batch["visual"], batch["subtitle"]), batch)
+        enc = self.video_encoder(
+            batch["visual"],
+            batch["subtitle"],
+            visual_mask=batch.get("visual_clip_mask"),
+            subtitle_mask=batch.get("subtitle_clip_mask"),
+            clip_mask=batch.get("clip_mask"),
+        )
         retr = self.retriever.score_candidates(q, enc)
         if self.late_interaction_enabled:
             retr = self._apply_late_interaction(q, enc, batch, retr)
         partial = self.partial(q, enc, batch.get("visual_clip_mask"), batch.get("subtitle_clip_mask"))
         region = self.region(enc, partial)
-        active = self.active(q, candidate_count=batch["visual"].shape[1], t=batch["visual"].shape[2])
+        active = self.active(q, enc=enc, clip_mask=batch.get("clip_mask"))
         spans = self.proposals(batch["spans_clip"])
-        local = self.localizer(enc, partial, region, active, retr, spans)
+        local = self.localizer(
+            enc,
+            partial,
+            region,
+            active,
+            retr,
+            spans,
+            visual_mask=batch.get("visual_clip_mask"),
+            subtitle_mask=batch.get("subtitle_clip_mask"),
+            clip_mask=batch.get("clip_mask"),
+        )
         feedback = self.feedback(local["span_score"], local["prem_span"], local["region_span"], local["amd_span"], local["false_positive_risk"], batch.get("span_mask"))
         score = self.scorer(retr, local, feedback)
         return {"query": q, "enc": enc, "retr": retr, "partial": partial, "region": region, "active": active, "local": local, "feedback": feedback, "score": score}

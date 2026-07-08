@@ -23,12 +23,15 @@ eval_candidate_k: 200
 hard_negative_k: 64
 loss_negative_sample_k: 128
 candidate_encode_chunk: 32
+preload_sequence_bank: true
+target_len: 64
 
 # Two-stage dynamic retrieval: current student broad retrieval, then clip late interaction.
 broad_topk_train: 1000
 broad_topk_eval: 1000
 late_topk: 200
 late_interaction_enabled: true
+late_candidate_mining: true
 late_soft_topk: 8
 late_temperature: 0.07
 token_maxsim_weight: 0.25
@@ -39,6 +42,12 @@ late_score_weight: 0.65
 teacher_topk: 200
 teacher_anchor_topk: 80
 teacher_score_temperature: 2.0
+use_teacher_score_field: false
+teacher_score_higher_is_better: true
+teacher_curriculum_phase0_topk: 120
+teacher_curriculum_phase1_topk: 80
+teacher_curriculum_phase2_topk: 40
+teacher_curriculum_phase3_topk: 0
 random_negative_k: 64
 student_negative_k: 128
 use_candidate_curriculum: true
@@ -53,6 +62,13 @@ lambda_teacher_set: 0.4
 # Selection firewall.
 selection_split: calib_select
 final_report_split: calib_holdout
+full_select_every: 1
+full_select_weight_vcmr_r1_iou07: 4.0
+full_select_weight_vcmr_r5_iou07: 3.0
+full_select_weight_vcmr_r10_iou07: 2.0
+full_select_weight_vr_r100: 1.0
+full_select_weight_wrong_video_top1: 0.5
+full_gate_vcmr_r1_iou07: 3.0
 select_weight_vr10: 3.0
 select_weight_vr50: 2.0
 select_weight_vr100: 1.5

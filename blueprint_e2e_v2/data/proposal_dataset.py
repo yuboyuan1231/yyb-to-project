@@ -61,7 +61,14 @@ class MultiSpanProposalDataset(Dataset):
         if seq.shape[0] == target_len:
             return seq.astype(np.float32)
         if seq.shape[0] > target_len:
-            return seq[:target_len].astype(np.float32)
+            out = np.zeros((target_len, seq.shape[1]), dtype=np.float32)
+            edges = np.linspace(0, seq.shape[0], int(target_len) + 1)
+            for i in range(int(target_len)):
+                st = int(np.floor(edges[i]))
+                ed = int(np.ceil(edges[i + 1]))
+                ed = max(ed, st + 1)
+                out[i] = seq[st: min(ed, seq.shape[0])].mean(axis=0)
+            return out
         out = np.zeros((target_len, seq.shape[1]), dtype=np.float32)
         out[: seq.shape[0]] = seq.astype(np.float32)
         return out
@@ -69,7 +76,8 @@ class MultiSpanProposalDataset(Dataset):
     @staticmethod
     def _fit_mask(seq_len: int, target_len: int = 64) -> np.ndarray:
         out = np.zeros((target_len,), dtype=np.bool_)
-        out[: min(int(seq_len), int(target_len))] = True
+        valid = int(target_len) if int(seq_len) > int(target_len) else min(int(seq_len), int(target_len))
+        out[:valid] = True
         return out
 
     def __len__(self) -> int:
@@ -95,9 +103,7 @@ class MultiSpanProposalDataset(Dataset):
             duration = float(self.video_duration_bank.get(str(vid), gt_duration))
             spans_clip = self.grid.grid_spans(duration, max_spans=self.max_spans_per_video)
             if self.insert_gt_for_training and is_correct_video:
-                gt_clip = np.array([[int(np.floor(gt[0] / self.grid.clip_len)), max(int(np.ceil(gt[1] / self.grid.clip_len)), int(np.floor(gt[0] / self.grid.clip_len)) + 1)]], dtype=np.int32)
-                gt_clip[:, 0] = np.clip(gt_clip[:, 0], 0, self.grid.max_clips - 1)
-                gt_clip[:, 1] = np.clip(gt_clip[:, 1], gt_clip[:, 0] + 1, self.grid.max_clips)
+                gt_clip = self.grid.seconds_to_clip_span(gt[0], gt[1], duration)
                 if not ((spans_clip == gt_clip[0]).all(axis=1).any()):
                     spans_clip = np.concatenate([spans_clip, gt_clip], axis=0)
             spans_sec = self.grid.clips_to_seconds(spans_clip.copy(), duration)
@@ -184,5 +190,5 @@ class MultiSpanProposalDataset(Dataset):
             "candidate_proposals_use_candidate_video_duration": True,
             "preloaded_sequence_bank_used": self.visual_seq_bank is not None and self.subtitle_seq_bank is not None,
             "clip_mask_used": True,
-            "temporal_padding_policy": "pad/truncate release feature sequences to 64 clips for tensor batching; missing features still raise KeyError",
+            "temporal_padding_policy": "pad short release sequences and mean-bin-resample long sequences to 64 duration-aware clips; missing features still raise KeyError",
         }

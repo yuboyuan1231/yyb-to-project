@@ -8,8 +8,10 @@ from pathlib import Path
 from typing import Any
 
 from blueprint_e2e_v2.data.feature_registry import TMP_ROOT
-from blueprint_e2e_v2.engine.c28e_late_interaction import run_c28e_retriever_replay, train_c28e_retriever
+from blueprint_e2e_v2.engine.c28e_late_interaction import run_c28e_retriever_replay
+from blueprint_e2e_v2.engine.evaluate import run_evaluation
 from blueprint_e2e_v2.engine.official_safe_eval_wrapper import official_safety_manifest
+from blueprint_e2e_v2.engine.train import run_full_training
 from blueprint_e2e_v2.utils.io import load_json, write_json, write_text
 
 
@@ -92,14 +94,18 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "candidate proposals use each candidate video's own duration",
             "late_interaction_enabled is a real clip-level scoring path, not a zero-weight config label",
             "two-stage dynamic retrieval uses pooled student broad topK then clip-level rerank topK",
-            "teacher score schema is audited and real scores are used when present",
+            "teacher score schema is audited and rank-derived teacher logits are the default unless score use is explicitly enabled",
             "checkpoint selection uses calib_select, not train VR@100",
             "calib_holdout is final-report only and guarded by --allow_holdout_final",
             "resume appends prior training logs instead of silently overwriting them",
             "stage names use C28E consistently",
             "clip masks are carried through sequence banks, late interaction, and full-model batches",
-            "late interaction retriever score is available inside C28CFullModel before localizer/feedback/VCMR scoring",
+            "late interaction retriever score replaces the localizer's retrieval sims before feedback/VCMR scoring",
             "raw candidate scoring uses candidate chunks so proposal count is preserved without a monolithic GPU tensor",
+            "C28E stage 3 is full E2E training with compute_full_loss, not retriever-only replay training",
+            "full training/evaluation candidate mining uses pooled broad recall then clip-level late rerank",
+            "long videos are represented by duration-aware 64-bin resampling instead of first-96s truncation",
+            "active moment prior is conditioned on each candidate video, not query-only",
             "candidate curriculum follows teacher-heavy to student-dynamic phases",
             "broad pooled recall is audited separately from late rerank recall",
         ],
@@ -116,12 +122,15 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- Holdout is not used for checkpoint/config selection.\n"
         "- `late_interaction_enabled` maps to real clip-level visual/subtitle/joint scoring.\n"
         "- Clip masks exclude padded release-feature positions from pooled, partial-relevance, late, and token scores.\n"
-        "- Late retriever score enters the full model before localizer, feedback, and joint VCMR scoring.\n"
-        "- Training loss scores raw candidate clips through the trainable video encoder.\n"
+        "- Late retriever score is the retrieval evidence consumed by the localizer, feedback, and joint VCMR scoring.\n"
+        "- C28E-3 runs `run_full_training` and `compute_full_loss`, not retriever-only distillation.\n"
+        "- Full train/eval candidate mining reranks broad pooled candidates with clip late interaction.\n"
+        "- Long videos use duration-aware 64-bin resampling and GT span insertion uses the same grid.\n"
+        "- ActiveMoment is candidate-video-conditioned.\n"
         "- Candidate scoring is chunked by candidate, preserving proposal count while controlling memory.\n"
         "- Candidate curriculum is explicit and audited per epoch.\n"
         "- `calib_select` is the only selection split.\n"
-        "- Full mutual experiments remain gated until retriever gate passes; full-model code path is present for review.\n",
+        "- Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.\n",
     )
     return rec
 
@@ -166,23 +175,36 @@ def stage2(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
 def stage3(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     out = REPORT / "c28e_3_training"
     if args.dry_run:
-        rec = {"stage": "C28E-3", "status": "C28E_TRAINING_DRY_RUN_READY", "selection_split": cfg.get("selection_split"), **official_safety_manifest()}
-        write_json(out / "C28E_3_TRAINING_DECISION.json", rec)
+        rec = {
+            "stage": "C28E-3",
+            "status": "C28E_FULL_E2E_TRAINING_DRY_RUN_READY",
+            "selection_split": cfg.get("selection_split"),
+            "full_training": run_full_training(cfg, dry_run=True, force=args.force, resume=args.resume, device_arg=args.device),
+            **official_safety_manifest(),
+        }
+        write_json(out / "C28E_3_FULL_E2E_TRAINING_DECISION.json", rec)
         return rec
-    return train_c28e_retriever(cfg, out, device_arg=args.device, force=args.force, resume=args.resume)
+    full = run_full_training(cfg, dry_run=False, force=args.force, resume=args.resume, device_arg=args.device)
+    rec = {"stage": "C28E-3", "status": "C28E_FULL_E2E_TRAINING_COMPLETE", "full_training": full, **official_safety_manifest()}
+    write_json(out / "C28E_3_FULL_E2E_TRAINING_DECISION.json", rec)
+    return rec
 
 
 def stage4(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     out = REPORT / "c28e_4_selection_gate"
-    train_rec = load_json(REPORT / "c28e_3_training/C28E_RETRIEVER_TRAINING_DECISION.json", {})
-    ckpt = (train_rec.get("best_checkpoint_manifest") or {}).get("path")
+    train_rec = load_json(REPORT / "c28e_3_training/C28E_3_FULL_E2E_TRAINING_DECISION.json", {})
+    full_rec = train_rec.get("full_training", {})
+    ckpt = (full_rec.get("best_checkpoint_manifest") or full_rec.get("checkpoint_manifest") or {}).get("path")
     if not ckpt:
         rec = {"stage": "C28E-4", "status": "C28E_SELECTION_GATE_BLOCKED_NO_BEST_CHECKPOINT", **official_safety_manifest()}
         write_json(out / "C28E_4_SELECTION_GATE_DECISION.json", rec)
         return rec
-    select = run_c28e_retriever_replay(cfg, out, str(cfg.get("selection_split", "calib_select")), checkpoint=ckpt, device_arg=args.device, force=False)
-    status = "C28E_RETRIEVER_SELECTION_READY_FOR_FINAL_HOLDOUT" if float(select["student"].get("VR@100", 0.0)) >= float(cfg.get("retriever_gate_absolute_vr100", 80.0)) else "C28E_RETRIEVER_NOT_READY_CONTINUE_REPAIR"
-    rec = {"stage": "C28E-4", "status": status, "selection": select, "best_checkpoint": ckpt, **official_safety_manifest()}
+    eval_cfg = dict(cfg)
+    eval_cfg["checkpoint_path"] = ckpt
+    select = run_evaluation(eval_cfg, str(cfg.get("selection_split", "calib_select")), device_arg=args.device, force=False)
+    summary = select.get("summary", {}).get("summary", {})
+    status = "C28E_FULL_SELECTION_READY_FOR_FINAL_HOLDOUT" if float(summary.get("VCMR_R@1_IoU0.7", 0.0)) >= float(cfg.get("full_gate_vcmr_r1_iou07", 3.0)) else "C28E_FULL_NOT_READY_CONTINUE_REPAIR"
+    rec = {"stage": "C28E-4", "status": status, "selection": select, "selection_summary": summary, "best_checkpoint": ckpt, **official_safety_manifest()}
     write_json(out / "C28E_4_SELECTION_GATE_DECISION.json", rec)
     return rec
 
@@ -193,17 +215,18 @@ def stage5(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         rec = {"stage": "C28E-5", "status": "C28E_FINAL_HOLDOUT_BLOCKED_REQUIRES_ALLOW_HOLDOUT_FINAL", **official_safety_manifest()}
         write_json(out / "C28E_5_FINAL_HOLDOUT_DECISION.json", rec)
         return rec
-    train_rec = load_json(REPORT / "c28e_3_training/C28E_RETRIEVER_TRAINING_DECISION.json", {})
-    ckpt = (train_rec.get("best_checkpoint_manifest") or {}).get("path")
+    train_rec = load_json(REPORT / "c28e_3_training/C28E_3_FULL_E2E_TRAINING_DECISION.json", {})
+    full_rec = train_rec.get("full_training", {})
+    ckpt = (full_rec.get("best_checkpoint_manifest") or full_rec.get("checkpoint_manifest") or {}).get("path")
     if not ckpt:
         rec = {"stage": "C28E-5", "status": "C28E_FINAL_HOLDOUT_BLOCKED_NO_BEST_CHECKPOINT", **official_safety_manifest()}
         write_json(out / "C28E_5_FINAL_HOLDOUT_DECISION.json", rec)
         return rec
-    hold = run_c28e_retriever_replay(cfg, out, str(cfg.get("final_report_split", "calib_holdout")), checkpoint=ckpt, device_arg=args.device, force=False)
-    teacher_vr100 = float(hold["teacher"].get("VR@100", 0.0))
-    target = float(cfg.get("retriever_gate_absolute_vr100", 80.0)) if teacher_vr100 >= 85.0 else teacher_vr100 * float(cfg.get("retriever_gate_teacher_relative", 0.85))
-    status = "C28E_RETRIEVER_REPAIRED_READY_FOR_FULL_MODEL" if float(hold["student"].get("VR@100", 0.0)) >= target else "C28E_RETRIEVER_NOT_READY_CONTINUE_REPAIR"
-    rec = {"stage": "C28E-5", "status": status, "gate_target_vr100": target, "holdout": hold, "best_checkpoint": ckpt, **official_safety_manifest()}
+    eval_cfg = dict(cfg)
+    eval_cfg["checkpoint_path"] = ckpt
+    hold = run_evaluation(eval_cfg, str(cfg.get("final_report_split", "calib_holdout")), device_arg=args.device, force=False)
+    status = "C28E_FULL_FINAL_HOLDOUT_REPORTED"
+    rec = {"stage": "C28E-5", "status": status, "holdout": hold, "best_checkpoint": ckpt, **official_safety_manifest()}
     write_json(out / "C28E_5_FINAL_HOLDOUT_DECISION.json", rec)
     return rec
 

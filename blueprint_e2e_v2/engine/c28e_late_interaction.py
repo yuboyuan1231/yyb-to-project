@@ -74,18 +74,28 @@ def _safe_soft_topk(values: torch.Tensor, k: int, temperature: float, mask: torc
     return (weights * vals).sum(dim=-1)
 
 
-def _teacher_logits(candidates: list[int], teacher_items: list[TeacherRankItem], gt_idx: int, temperature: float) -> torch.Tensor:
+def _teacher_logits(
+    candidates: list[int],
+    teacher_items: list[TeacherRankItem],
+    gt_idx: int,
+    temperature: float,
+    use_scores: bool = False,
+    score_higher_is_better: bool = True,
+) -> torch.Tensor:
     score_by_idx = {int(x.video_index): x.score for x in teacher_items if x.score is not None}
     rank_by_idx = {int(x.video_index): int(x.rank) for x in teacher_items}
     logits = torch.full((len(candidates),), -8.0, dtype=torch.float32)
-    if score_by_idx:
+    if use_scores and score_by_idx:
         vals = [float(v) for v in score_by_idx.values()]
         lo = min(vals)
         hi = max(vals)
         denom = max(hi - lo, 1e-6)
         for i, idx in enumerate(candidates):
             if int(idx) in score_by_idx:
-                logits[i] = (float(score_by_idx[int(idx)]) - lo) / denom / max(float(temperature), 1e-6)
+                norm = (float(score_by_idx[int(idx)]) - lo) / denom
+                if not score_higher_is_better:
+                    norm = 1.0 - norm
+                logits[i] = norm / max(float(temperature), 1e-6)
     else:
         for i, idx in enumerate(candidates):
             rank = rank_by_idx.get(int(idx))
@@ -175,16 +185,16 @@ def encode_clip_bank(
     for st in range(0, visual_seq_bank.shape[0], int(chunk_size)):
         visual = torch.from_numpy(visual_seq_bank[st: st + int(chunk_size)].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
         subtitle = torch.from_numpy(subtitle_seq_bank[st: st + int(chunk_size)].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
-        enc = core.video_encoder(visual, subtitle)
+        vmask = torch.from_numpy(visual_seq_mask[st: st + int(chunk_size)].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1) if visual_seq_mask is not None else None
+        smask = torch.from_numpy(subtitle_seq_mask[st: st + int(chunk_size)].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1) if subtitle_seq_mask is not None else None
+        jmask = torch.logical_and(vmask, smask) if vmask is not None and smask is not None else vmask if vmask is not None else smask
+        enc = core.video_encoder(visual, subtitle, visual_mask=vmask, subtitle_mask=smask, clip_mask=jmask)
         if visual_seq_mask is not None:
-            vmask = torch.from_numpy(visual_seq_mask[st: st + int(chunk_size)].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1).unsqueeze(-1)
-            enc["visual"] = enc["visual"] * vmask
+            enc["visual"] = enc["visual"] * vmask.unsqueeze(-1)
         if subtitle_seq_mask is not None:
-            smask = torch.from_numpy(subtitle_seq_mask[st: st + int(chunk_size)].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1).unsqueeze(-1)
-            enc["subtitle"] = enc["subtitle"] * smask
+            enc["subtitle"] = enc["subtitle"] * smask.unsqueeze(-1)
         if visual_seq_mask is not None and subtitle_seq_mask is not None:
-            jmask = torch.from_numpy(np.logical_and(visual_seq_mask[st: st + int(chunk_size)], subtitle_seq_mask[st: st + int(chunk_size)]).astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1).unsqueeze(-1)
-            enc["joint"] = enc["joint"] * jmask
+            enc["joint"] = enc["joint"] * jmask.unsqueeze(-1)
         for key in parts:
             parts[key].append(enc[key].squeeze(1).detach().cpu().to(dtype=dtype))
     out = {key: torch.cat(vals, dim=0) for key, vals in parts.items()}
@@ -285,16 +295,7 @@ def late_scores_for_raw_candidates(
         visual_mask = torch.from_numpy(visual_seq_mask[flat].astype(np.bool_, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, visual_seq_bank.shape[1]) if visual_seq_mask is not None else None
         subtitle_mask = torch.from_numpy(subtitle_seq_mask[flat].astype(np.bool_, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, subtitle_seq_bank.shape[1]) if subtitle_seq_mask is not None else None
         joint_mask = torch.logical_and(visual_mask, subtitle_mask) if visual_mask is not None and subtitle_mask is not None else visual_mask if visual_mask is not None else subtitle_mask
-        enc = core.video_encoder(visual, subtitle)
-        if visual_mask is not None:
-            enc["visual"] = enc["visual"] * visual_mask.unsqueeze(-1)
-            enc["visual_pool"] = F.normalize((enc["visual"] * visual_mask.to(enc["visual"].dtype).unsqueeze(-1)).sum(dim=2) / visual_mask.to(enc["visual"].dtype).sum(dim=2, keepdim=True).clamp_min(1.0), dim=-1)
-        if subtitle_mask is not None:
-            enc["subtitle"] = enc["subtitle"] * subtitle_mask.unsqueeze(-1)
-            enc["subtitle_pool"] = F.normalize((enc["subtitle"] * subtitle_mask.to(enc["subtitle"].dtype).unsqueeze(-1)).sum(dim=2) / subtitle_mask.to(enc["subtitle"].dtype).sum(dim=2, keepdim=True).clamp_min(1.0), dim=-1)
-        if joint_mask is not None:
-            enc["joint"] = enc["joint"] * joint_mask.unsqueeze(-1)
-            enc["joint_pool"] = F.normalize((enc["joint"] * joint_mask.to(enc["joint"].dtype).unsqueeze(-1)).sum(dim=2) / joint_mask.to(enc["joint"].dtype).sum(dim=2, keepdim=True).clamp_min(1.0), dim=-1)
+        enc = core.video_encoder(visual, subtitle, visual_mask=visual_mask, subtitle_mask=subtitle_mask, clip_mask=joint_mask)
         pooled_score = core.retriever.score_candidates(q, enc)["retriever_score"]
         sv_t = torch.einsum("bd,bctd->bct", q["q_visual"], enc["visual"])
         ss_t = torch.einsum("bd,bctd->bct", q["q_subtitle"], enc["subtitle"])
@@ -408,10 +409,11 @@ def build_banks_for_c28e(cfg: dict[str, Any], model: torch.nn.Module, device: to
     visual_mean = torch.from_numpy(banks["visual_np"]["visual_mean"].astype(np.float32))
     subtitle_mean = torch.from_numpy(banks["subtitle_np"]["subtitle_mean"].astype(np.float32))
     pooled = encode_pooled_bank(model, visual_mean, subtitle_mean, int(cfg.get("chunk_size", 256)), device)
-    visual_seq, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(video_ids, target_len=64, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
-    subtitle_seq, subtitle_seq_manifest = banks["subtitle_bank"].build_or_load_sequence_bank(video_ids, target_len=64, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
-    visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(video_ids, target_len=64, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
-    subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(video_ids, target_len=64, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
+    target_len = int(cfg.get("target_len", 64))
+    visual_seq, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(video_ids, target_len=target_len, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
+    subtitle_seq, subtitle_seq_manifest = banks["subtitle_bank"].build_or_load_sequence_bank(video_ids, target_len=target_len, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
+    visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(video_ids, target_len=target_len, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
+    subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(video_ids, target_len=target_len, max_videos=int(cfg.get("max_videos", 0) or 0) or None, force=force)
     clip = encode_clip_bank(model, visual_seq, subtitle_seq, int(cfg.get("chunk_size", 256)), device, visual_seq_mask=visual_seq_mask, subtitle_seq_mask=subtitle_seq_mask)
     banks["video_bank"].clear_sequence_cache()
     banks["subtitle_bank"].clear_sequence_cache()
@@ -431,7 +433,7 @@ def build_banks_for_c28e(cfg: dict[str, Any], model: torch.nn.Module, device: to
         "subtitle_sequence_mask_manifest": subtitle_mask_manifest,
         "clip_bank_manifest": {
             "video_count": len(video_ids),
-            "target_len": 64,
+            "target_len": target_len,
             "hidden_dim": int(pooled["joint_pool"].shape[-1]),
             "dtype": "float16_cpu_cache",
             "late_interaction_enabled": True,
@@ -507,6 +509,7 @@ def train_c28e_retriever(
     force: bool = False,
     resume: bool = False,
 ) -> dict[str, Any]:
+    """Reference-only retriever diagnostic; C28E runner stage 3 uses full E2E training."""
     seed = int(cfg.get("seed", 2026))
     seed_all(seed)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -594,7 +597,16 @@ def train_c28e_retriever(
                     source_acc[key] += int(source_counts.get(key, 0))
                 cand_lists.append(cands[:train_k])
                 targets.append(cand_lists[-1].index(gt_idx))
-                teacher_logits.append(_teacher_logits(cand_lists[-1], teacher, gt_idx, float(cfg.get("teacher_score_temperature", 2.0))))
+                teacher_logits.append(
+                    _teacher_logits(
+                        cand_lists[-1],
+                        teacher,
+                        gt_idx,
+                        float(cfg.get("teacher_score_temperature", 2.0)),
+                        use_scores=bool(cfg.get("use_teacher_score_field", False)),
+                        score_higher_is_better=bool(cfg.get("teacher_score_higher_is_better", True)),
+                    )
+                )
                 teacher_set = {int(x.video_index) for x in teacher[: int(cfg.get("teacher_topk", 200))]}
                 teacher_set_labels.append(torch.tensor([1.0 if int(x) in teacher_set else 0.0 for x in cand_lists[-1]], dtype=torch.float32))
             cand_idx = torch.tensor(np.asarray(cand_lists, dtype=np.int64), dtype=torch.long, device=device)

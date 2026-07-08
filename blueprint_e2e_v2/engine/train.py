@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from pathlib import Path
+import math
+import shutil
 from typing import Any
 
 import numpy as np
@@ -45,6 +46,28 @@ def build_model(cfg: dict[str, Any], device: torch.device) -> torch.nn.Module:
     return model
 
 
+def full_selection_score(summary: dict[str, Any], cfg: dict[str, Any]) -> float:
+    return (
+        float(cfg.get("full_select_weight_vcmr_r1_iou07", 4.0)) * float(summary.get("VCMR_R@1_IoU0.7", 0.0))
+        + float(cfg.get("full_select_weight_vcmr_r5_iou07", 3.0)) * float(summary.get("VCMR_R@5_IoU0.7", 0.0))
+        + float(cfg.get("full_select_weight_vcmr_r10_iou07", 2.0)) * float(summary.get("VCMR_R@10_IoU0.7", 0.0))
+        + float(cfg.get("full_select_weight_vr_r100", 1.0)) * float(summary.get("VR_R@100", 0.0))
+        - float(cfg.get("full_select_weight_wrong_video_top1", 0.5)) * float(summary.get("wrong_video_top1_rate", 0.0))
+    )
+
+
+def full_candidate_teacher_warm_topk(epoch: int, cfg: dict[str, Any], candidate_topk: int) -> int:
+    if not bool(cfg.get("use_candidate_curriculum", True)):
+        return min(int(cfg.get("teacher_warm_topk", cfg.get("teacher_anchor_topk", 64))), int(candidate_topk))
+    if epoch <= 2:
+        return min(int(cfg.get("teacher_curriculum_phase0_topk", 120)), int(candidate_topk))
+    if epoch <= 5:
+        return min(int(cfg.get("teacher_curriculum_phase1_topk", 80)), int(candidate_topk))
+    if epoch <= 8:
+        return min(int(cfg.get("teacher_curriculum_phase2_topk", 40)), int(candidate_topk))
+    return min(int(cfg.get("teacher_curriculum_phase3_topk", 0)), int(candidate_topk))
+
+
 def prepare_banks(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
     paths = FeaturePaths()
     sm = SplitManager(paths)
@@ -87,28 +110,29 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     visual_seq_mask = None
     subtitle_seq_mask = None
     seq_manifests: dict[str, Any] = {}
+    target_len = int(work_cfg.get("target_len", 64))
     if bool(work_cfg.get("preload_sequence_bank", True)):
         visual_seq_bank, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(
             video_ids,
-            target_len=64,
+            target_len=target_len,
             max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
             force=force,
         )
         subtitle_seq_bank, subtitle_seq_manifest = banks["subtitle_bank"].build_or_load_sequence_bank(
             video_ids,
-            target_len=64,
+            target_len=target_len,
             max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
             force=force,
         )
         visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(
             video_ids,
-            target_len=64,
+            target_len=target_len,
             max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
             force=force,
         )
         subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(
             video_ids,
-            target_len=64,
+            target_len=target_len,
             max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
             force=force,
         )
@@ -124,6 +148,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     optimizer = torch.optim.AdamW(model.parameters(), lr=float(cfg.get("lr", 1.5e-4)), weight_decay=float(cfg.get("weight_decay", 0.01)))
     ckpt_dir = TMP_ROOT / "checkpoints"
     ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.pt"
+    best_ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.best.pt"
     start_epoch = 0
     if resume and ckpt_path.exists() and not dry_run:
         ckpt = load_checkpoint(ckpt_path, model, optimizer)
@@ -145,8 +170,10 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     train_log: list[dict[str, Any]] = []
     best_select: dict[str, Any] | None = None
     best_manifest: dict[str, Any] | None = None
+    best_score = -math.inf
     for epoch in range(start_epoch, int(cfg.get("epochs", 1))):
         print(f"C28C training epoch {epoch}: refreshing dynamic candidates", flush=True)
+        teacher_warm = full_candidate_teacher_warm_topk(epoch, cfg, max_candidates)
         candidates, cand_audit = refresh_candidates(
             model,
             banks["split_manager"],
@@ -157,11 +184,23 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             subtitle_bank,
             "train_fit",
             max_queries=max_queries,
-            dynamic_topk=int(cfg.get("dynamic_topk", 200)),
+            dynamic_topk=max_candidates,
             chunk_size=int(cfg.get("chunk_size", 256)),
             device=device,
             insert_gt_for_training=True,
-            teacher_warm_topk=int(cfg.get("teacher_warm_topk", 64)),
+            teacher_warm_topk=teacher_warm,
+            visual_seq_bank=visual_seq_bank,
+            subtitle_seq_bank=subtitle_seq_bank,
+            visual_seq_mask=visual_seq_mask,
+            subtitle_seq_mask=subtitle_seq_mask,
+            late_candidate_mining=bool(cfg.get("late_candidate_mining", cfg.get("late_interaction_enabled", False))),
+            broad_topk=int(cfg.get("broad_topk_train", cfg.get("dynamic_topk", max_candidates))),
+            candidate_encode_chunk=int(cfg.get("candidate_encode_chunk", 32)),
+            late_soft_topk=int(cfg.get("late_soft_topk", 8)),
+            late_temperature=float(cfg.get("late_temperature", 0.07)),
+            token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),
+            pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
+            late_score_weight=float(cfg.get("late_score_weight", 0.0)),
         )
         dataset = MultiSpanProposalDataset(
             "train_fit",
@@ -211,14 +250,55 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 print(f"C28C training epoch {epoch} step {step + 1}: loss={metrics.get('L_total'):.4f}", flush=True)
         avg = {k: v / max(1, steps) for k, v in loss_acc.items()}
         print(f"C28C training epoch {epoch} complete: avg_loss={avg.get('L_total'):.4f}", flush=True)
-        train_log.append({"epoch": epoch, "loss": avg, "candidate_audit": cand_audit})
-        best_manifest = save_checkpoint(ckpt_path, model, optimizer, epoch, {"train_loss": avg})
+        latest_manifest = save_checkpoint(ckpt_path, model, optimizer, epoch, {"train_loss": avg})
+        epoch_rec: dict[str, Any] = {
+            "epoch": epoch,
+            "loss": avg,
+            "candidate_audit": cand_audit,
+            "candidate_curriculum": {
+                "teacher_warm_topk": teacher_warm,
+                "student_dynamic_late_mining": bool(cand_audit.get("late_candidate_mining_used", False)),
+                "candidate_topk_train": max_candidates,
+                "phase": 0 if epoch <= 2 else 1 if epoch <= 5 else 2 if epoch <= 8 else 3,
+            },
+            "checkpoint_manifest": latest_manifest,
+        }
+        select_every = int(cfg.get("full_select_every", 1))
+        if select_every > 0 and ((epoch + 1) % select_every == 0 or epoch + 1 == int(cfg.get("epochs", 1))):
+            from blueprint_e2e_v2.engine.evaluate import run_evaluation
+
+            eval_cfg = dict(cfg)
+            eval_cfg["checkpoint_path"] = str(ckpt_path)
+            select_rec = run_evaluation(eval_cfg, split=str(cfg.get("selection_split", "calib_select")), device_arg=device_arg, force=False)
+            select_summary = select_rec.get("summary", {}).get("summary", {})
+            select_score = full_selection_score(select_summary, cfg)
+            epoch_rec["select_score"] = select_score
+            epoch_rec["select_summary"] = select_summary
+            if select_score > best_score:
+                best_score = select_score
+                shutil.copy2(ckpt_path, best_ckpt_path)
+                best_manifest = {
+                    "path": str(best_ckpt_path),
+                    "source_checkpoint": str(ckpt_path),
+                    "epoch": epoch,
+                    "select_score": best_score,
+                    "select_summary": select_summary,
+                }
+                best_select = {
+                    "split": str(cfg.get("selection_split", "calib_select")),
+                    "epoch": epoch,
+                    "score": best_score,
+                    "summary": select_summary,
+                    "candidate_audit": select_rec.get("candidate_audit", {}),
+                }
+        train_log.append(epoch_rec)
     return {
         "status": "C28C_FULL_MODEL_TRAINED",
         "device": str(device),
         "data_parallel": bool(hasattr(model, "module")),
         "training_log": train_log,
-        "checkpoint_manifest": best_manifest,
+        "checkpoint_manifest": latest_manifest if "latest_manifest" in locals() else None,
+        "best_checkpoint_manifest": best_manifest,
         "visual_bank_manifest": banks["visual_manifest"],
         "subtitle_bank_manifest": banks["subtitle_manifest"],
         **seq_manifests,
