@@ -17,6 +17,7 @@ from blueprint_e2e_v2.data.subtitle_bank import SubtitleBank
 from blueprint_e2e_v2.data.video_bank import VideoBank
 from blueprint_e2e_v2.engine.checkpoint import load_checkpoint, save_checkpoint
 from blueprint_e2e_v2.engine.refresh_hard_negatives import refresh_candidates
+from blueprint_e2e_v2.engine.score_audit import ScoreScaleAccumulator, loss_coupling_audit
 from blueprint_e2e_v2.losses.full_loss import compute_full_loss
 from blueprint_e2e_v2.models.full_model import C28CFullModel
 from blueprint_e2e_v2.utils.io import load_json, write_json
@@ -42,7 +43,8 @@ def build_model(cfg: dict[str, Any], device: torch.device) -> torch.nn.Module:
         pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
         late_score_weight=float(cfg.get("late_score_weight", 0.0)),
     ).to(device)
-    if device.type == "cuda" and torch.cuda.device_count() > 1 and bool(cfg.get("use_data_parallel", False)):
+    explicit_cuda_index = device.type == "cuda" and device.index is not None
+    if device.type == "cuda" and torch.cuda.device_count() > 1 and bool(cfg.get("use_data_parallel", False)) and not explicit_cuda_index:
         model = torch.nn.DataParallel(model)
     return model
 
@@ -227,11 +229,13 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         model.train()
         optimizer.zero_grad(set_to_none=True)
         loss_acc: dict[str, float] = {}
+        score_acc = ScoreScaleAccumulator(cfg)
         steps = 0
         grad_accum = int(cfg.get("grad_accum_steps", 1))
         for step, batch in enumerate(loader):
             tensor_batch = {k: v.to(device, non_blocking=True) if torch.is_tensor(v) else v for k, v in batch.items()}
             out = model(tensor_batch)
+            score_acc.update(out)
             loss, metrics = compute_full_loss(out, tensor_batch, cfg)
             (loss / grad_accum).backward()
             if (step + 1) % grad_accum == 0:
@@ -254,11 +258,14 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             if (step + 1) % 100 == 0:
                 print(f"C28C training epoch {epoch} step {step + 1}: loss={metrics.get('L_total'):.4f}", flush=True)
         avg = {k: v / max(1, steps) for k, v in loss_acc.items()}
+        score_scale = score_acc.summary()
         print(f"C28C training epoch {epoch} complete: avg_loss={avg.get('L_total'):.4f}", flush=True)
         latest_manifest = save_checkpoint(ckpt_path, model, optimizer, epoch, {"train_loss": avg})
         epoch_rec: dict[str, Any] = {
             "epoch": epoch,
             "loss": avg,
+            "score_scale_audit_train": score_scale,
+            "loss_coupling_audit": loss_coupling_audit(avg, score_scale),
             "candidate_audit": cand_audit,
             "candidate_curriculum": {
                 "teacher_warm_topk": teacher_warm,
@@ -279,6 +286,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             select_score = full_selection_score(select_summary, cfg)
             epoch_rec["select_score"] = select_score
             epoch_rec["select_summary"] = select_summary
+            epoch_rec["select_score_scale_audit"] = select_rec.get("score_scale_audit", {})
             if select_score > best_score:
                 best_score = select_score
                 shutil.copy2(ckpt_path, best_ckpt_path)
@@ -295,6 +303,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                     "score": best_score,
                     "summary": select_summary,
                     "candidate_audit": select_rec.get("candidate_audit", {}),
+                    "score_scale_audit": select_rec.get("score_scale_audit", {}),
                 }
         train_log.append(epoch_rec)
         write_json(log_path, {

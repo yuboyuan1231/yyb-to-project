@@ -14,6 +14,7 @@ from blueprint_e2e_v2.data.proposal_dataset import MultiSpanProposalDataset
 from blueprint_e2e_v2.data.temporal_grid import iou_1d
 from blueprint_e2e_v2.engine.checkpoint import load_checkpoint
 from blueprint_e2e_v2.engine.refresh_hard_negatives import refresh_candidates
+from blueprint_e2e_v2.engine.score_audit import ScoreScaleAccumulator
 from blueprint_e2e_v2.engine.train import build_model, device_from_arg, prepare_banks
 
 
@@ -66,6 +67,7 @@ def evaluate_model(
     batch_size: int,
     seed: int,
     score_col: str = "vcmr_score",
+    cfg: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     model.eval()
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=c28c_collate, num_workers=0)
@@ -74,11 +76,18 @@ def evaluate_model(
     score_table_rows = 0
     duplicate_count = 0
     invalid_count = 0
+    score_acc = ScoreScaleAccumulator(cfg or {})
     for step, batch in enumerate(loader):
         tensor_batch = {k: v.to(device, non_blocking=True) if torch.is_tensor(v) else v for k, v in batch.items()}
         out = model(tensor_batch)
+        score_acc.update(out)
         scores = out["score"]["vcmr_score"].detach().float().cpu().numpy()
         video_scores = out["score"]["video_final"].detach().float().cpu().numpy()
+        retr = out["retr"]
+        pooled_scores = retr.get("retriever_score_pooled", retr["retriever_score"]).detach().float().cpu().numpy()
+        late_scores = retr.get("retriever_score_late", retr["retriever_score"]).detach().float().cpu().numpy()
+        token_scores = retr.get("retriever_score_token", torch.zeros_like(retr["retriever_score"])).detach().float().cpu().numpy()
+        combined_scores = retr["retriever_score"].detach().float().cpu().numpy()
         spans = batch["spans_sec"].numpy()
         span_mask = batch["span_mask"].numpy()
         for bi, qid in enumerate(batch["query_ids"]):
@@ -144,6 +153,10 @@ def evaluate_model(
                         "span_end": float(spans[bi, ci, mi, 1]),
                         "vcmr_score": float(sc),
                         "video_score": float(video_scores[bi, ci]),
+                        "retriever_score_pooled": float(pooled_scores[bi, ci]),
+                        "retriever_score_late": float(late_scores[bi, ci]),
+                        "retriever_score_token": float(token_scores[bi, ci]),
+                        "retriever_score_combined": float(combined_scores[bi, ci]),
                         "gt_video_id": gt_video,
                         "gt_start": gt_ts[0],
                         "gt_end": gt_ts[1],
@@ -152,7 +165,7 @@ def evaluate_model(
                     })
         if (step + 1) % 100 == 0 or (step + 1) == len(loader):
             print(f"C28C eval {dataset.split}: scored {min((step + 1) * batch_size, len(dataset))}/{len(dataset)} queries", flush=True)
-    return {"score_table_rows": score_table_rows, "summary": _aggregate_records(records, duplicate_count, invalid_count), "score_table_sample": sample_rows}
+    return {"score_table_rows": score_table_rows, "summary": _aggregate_records(records, duplicate_count, invalid_count), "score_table_sample": sample_rows, "score_scale_audit": score_acc.summary()}
 
 
 def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg: str | None = None, force: bool = False) -> dict[str, Any]:
@@ -244,7 +257,7 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         subtitle_seq_mask=subtitle_seq_mask,
         target_len=target_len,
     )
-    res = evaluate_model(model, dataset, device, batch_size=int(cfg.get("batch_size", 8)), seed=int(cfg.get("seed", 2026)))
+    res = evaluate_model(model, dataset, device, batch_size=int(cfg.get("batch_size", 8)), seed=int(cfg.get("seed", 2026)), cfg=cfg)
     res["checkpoint_loaded"] = ckpt_loaded
     res["checkpoint_path"] = str(ckpt_path)
     res["candidate_audit"] = cand_audit

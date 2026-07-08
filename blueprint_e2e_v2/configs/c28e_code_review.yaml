@@ -78,6 +78,11 @@ full_select_weight_vcmr_r10_iou07: 2.0
 full_select_weight_vr_r100: 1.0
 full_select_weight_wrong_video_top1: 0.5
 full_gate_vcmr_r1_iou07: 3.0
+full_gate_vcmr_r5_iou07: 8.0
+full_gate_vcmr_r10_iou07: 12.0
+full_gate_vr_r100: 80.0
+full_gate_wrong_video_top1_max: 95.0
+full_gate_high_score_false_positive_max: 95.0
 select_weight_vr10: 3.0
 select_weight_vr50: 2.0
 select_weight_vr100: 1.5

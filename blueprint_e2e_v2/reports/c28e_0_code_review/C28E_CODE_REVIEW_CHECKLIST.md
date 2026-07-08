@@ -20,3 +20,6 @@
 - Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.
 - Ablation helpers must report pending evidence rather than positive contribution when toggled runs are missing.
 - Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.
+- C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.
+- Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.
+- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.

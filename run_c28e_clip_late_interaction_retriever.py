@@ -11,7 +11,7 @@ from blueprint_e2e_v2.data.feature_registry import TMP_ROOT
 from blueprint_e2e_v2.engine.c28e_late_interaction import run_c28e_retriever_replay
 from blueprint_e2e_v2.engine.evaluate import run_evaluation
 from blueprint_e2e_v2.engine.official_safe_eval_wrapper import official_safety_manifest
-from blueprint_e2e_v2.engine.train import run_full_training
+from blueprint_e2e_v2.engine.train import full_selection_score, run_full_training
 from blueprint_e2e_v2.utils.io import load_json, write_json, write_text
 
 
@@ -81,6 +81,27 @@ def git_info() -> dict[str, Any]:
     }
 
 
+def selection_gate_decision(summary: dict[str, Any], cfg: dict[str, Any]) -> dict[str, Any]:
+    checks = [
+        ("VCMR_R@1_IoU0.7", ">=", float(cfg.get("full_gate_vcmr_r1_iou07", 3.0))),
+        ("VCMR_R@5_IoU0.7", ">=", float(cfg.get("full_gate_vcmr_r5_iou07", 8.0))),
+        ("VCMR_R@10_IoU0.7", ">=", float(cfg.get("full_gate_vcmr_r10_iou07", 12.0))),
+        ("VR_R@100", ">=", float(cfg.get("full_gate_vr_r100", 80.0))),
+        ("wrong_video_top1_rate", "<=", float(cfg.get("full_gate_wrong_video_top1_max", 95.0))),
+        ("high_score_false_positive_rate", "<=", float(cfg.get("full_gate_high_score_false_positive_max", cfg.get("full_gate_wrong_video_top1_max", 95.0)))),
+    ]
+    details = []
+    for metric, op, threshold in checks:
+        value = float(summary.get(metric, summary.get("wrong_video_top1_rate", 100.0) if metric == "high_score_false_positive_rate" else 0.0))
+        passed = value >= threshold if op == ">=" else value <= threshold
+        details.append({"metric": metric, "op": op, "threshold": threshold, "value": value, "passed": bool(passed)})
+    return {
+        "passed": all(bool(x["passed"]) for x in details),
+        "checks": details,
+        "selection_score": full_selection_score(summary, cfg),
+    }
+
+
 def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     out = REPORT / "c28e_0_code_review"
     rec = {
@@ -103,6 +124,9 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "full retriever loss includes duplicate-safe cross-query in-batch negatives in addition to candidate-set negatives",
             "ablation helper refuses to claim mutual-help evidence until toggled ablation results exist",
             "legacy pooled miner and retriever trainer are labeled diagnostic-only and are not C28E-3 owners",
+            "selection gate requires R@1/R@5/R@10 IoU0.7, VR@100, wrong-video, and high-score false-positive checks",
+            "train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling",
+            "explicit cuda:N device disables DataParallel so single-card runs do not touch other GPUs",
             "stage names use C28E consistently",
             "clip masks are carried through sequence banks, late interaction, and full-model batches",
             "late interaction retriever score replaces the localizer's retrieval sims before feedback/VCMR scoring",
@@ -141,7 +165,10 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- `calib_select` is the only selection split.\n"
         "- Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.\n"
         "- Ablation helpers must report pending evidence rather than positive contribution when toggled runs are missing.\n"
-        "- Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.\n",
+        "- Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.\n"
+        "- C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.\n"
+        "- Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.\n"
+        "- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.\n",
     )
     return rec
 
@@ -214,8 +241,9 @@ def stage4(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     eval_cfg["checkpoint_path"] = ckpt
     select = run_evaluation(eval_cfg, str(cfg.get("selection_split", "calib_select")), device_arg=args.device, force=False)
     summary = select.get("summary", {}).get("summary", {})
-    status = "C28E_FULL_SELECTION_READY_FOR_FINAL_HOLDOUT" if float(summary.get("VCMR_R@1_IoU0.7", 0.0)) >= float(cfg.get("full_gate_vcmr_r1_iou07", 3.0)) else "C28E_FULL_NOT_READY_CONTINUE_REPAIR"
-    rec = {"stage": "C28E-4", "status": status, "selection": select, "selection_summary": summary, "best_checkpoint": ckpt, **official_safety_manifest()}
+    gate = selection_gate_decision(summary, cfg)
+    status = "C28E_FULL_SELECTION_READY_FOR_FINAL_HOLDOUT" if bool(gate["passed"]) else "C28E_FULL_NOT_READY_CONTINUE_REPAIR"
+    rec = {"stage": "C28E-4", "status": status, "selection_gate": gate, "selection": select, "selection_summary": summary, "best_checkpoint": ckpt, **official_safety_manifest()}
     write_json(out / "C28E_4_SELECTION_GATE_DECISION.json", rec)
     return rec
 
@@ -224,6 +252,11 @@ def stage5(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     out = REPORT / "c28e_5_final_holdout"
     if not args.allow_holdout_final:
         rec = {"stage": "C28E-5", "status": "C28E_FINAL_HOLDOUT_BLOCKED_REQUIRES_ALLOW_HOLDOUT_FINAL", **official_safety_manifest()}
+        write_json(out / "C28E_5_FINAL_HOLDOUT_DECISION.json", rec)
+        return rec
+    gate_rec = load_json(REPORT / "c28e_4_selection_gate/C28E_4_SELECTION_GATE_DECISION.json", {})
+    if gate_rec.get("status") != "C28E_FULL_SELECTION_READY_FOR_FINAL_HOLDOUT":
+        rec = {"stage": "C28E-5", "status": "C28E_FINAL_HOLDOUT_BLOCKED_SELECTION_GATE_NOT_READY", "selection_gate_status": gate_rec.get("status"), **official_safety_manifest()}
         write_json(out / "C28E_5_FINAL_HOLDOUT_DECISION.json", rec)
         return rec
     train_rec = load_json(REPORT / "c28e_3_training/C28E_3_FULL_E2E_TRAINING_DECISION.json", {})
