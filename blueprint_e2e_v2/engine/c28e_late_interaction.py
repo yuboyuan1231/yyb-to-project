@@ -509,7 +509,12 @@ def train_c28e_retriever(
     force: bool = False,
     resume: bool = False,
 ) -> dict[str, Any]:
-    """Reference-only retriever diagnostic; C28E runner stage 3 uses full E2E training."""
+    """Reference-only retriever diagnostic.
+
+    This keeps the old teacher/retriever replay probe available for debugging.
+    C28E runner stage 3 does not call this path; it calls ``run_full_training``
+    and optimizes ``compute_full_loss`` over the full VCMR graph.
+    """
     seed = int(cfg.get("seed", 2026))
     seed_all(seed)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -685,7 +690,9 @@ def train_c28e_retriever(
             **official_safety_manifest(),
         })
     rec = {
-        "status": "C28E_RETRIEVER_TRAINED_SELECTION_ONLY",
+        "status": "C28E_RETRIEVER_DIAGNOSTIC_TRAINED_SELECTION_ONLY",
+        "main_c28e_training_path": False,
+        "full_e2e_training_owner": "blueprint_e2e_v2.engine.train.run_full_training",
         "training_log": logs,
         "best_select_score": best_score,
         "best_checkpoint_manifest": best_manifest,

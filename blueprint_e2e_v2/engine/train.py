@@ -19,6 +19,7 @@ from blueprint_e2e_v2.engine.checkpoint import load_checkpoint, save_checkpoint
 from blueprint_e2e_v2.engine.refresh_hard_negatives import refresh_candidates
 from blueprint_e2e_v2.losses.full_loss import compute_full_loss
 from blueprint_e2e_v2.models.full_model import C28CFullModel
+from blueprint_e2e_v2.utils.io import load_json, write_json
 from blueprint_e2e_v2.utils.seed import seed_all
 
 
@@ -149,6 +150,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     ckpt_dir = TMP_ROOT / "checkpoints"
     ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.pt"
     best_ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.best.pt"
+    log_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.training_log.json"
     start_epoch = 0
     if resume and ckpt_path.exists() and not dry_run:
         ckpt = load_checkpoint(ckpt_path, model, optimizer)
@@ -167,10 +169,12 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         }
     max_queries = int(cfg.get("max_queries", 0) or 0) or None
     max_candidates = int(cfg.get("candidate_topk_train", cfg.get("dynamic_topk", 200)))
-    train_log: list[dict[str, Any]] = []
-    best_select: dict[str, Any] | None = None
-    best_manifest: dict[str, Any] | None = None
-    best_score = -math.inf
+    existing_log = load_json(log_path, {}) if resume else {}
+    train_log: list[dict[str, Any]] = list(existing_log.get("training_log", []))
+    best_select: dict[str, Any] | None = existing_log.get("best_select")
+    best_manifest: dict[str, Any] | None = existing_log.get("best_checkpoint_manifest")
+    best_score = float(existing_log.get("best_select_score", -math.inf))
+    latest_manifest: dict[str, Any] | None = existing_log.get("checkpoint_manifest")
     for epoch in range(start_epoch, int(cfg.get("epochs", 1))):
         print(f"C28C training epoch {epoch}: refreshing dynamic candidates", flush=True)
         teacher_warm = full_candidate_teacher_warm_topk(epoch, cfg, max_candidates)
@@ -217,6 +221,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             subtitle_seq_bank=subtitle_seq_bank,
             visual_seq_mask=visual_seq_mask,
             subtitle_seq_mask=subtitle_seq_mask,
+            target_len=target_len,
         )
         loader = DataLoader(dataset, batch_size=int(cfg.get("batch_size", 8)), shuffle=True, collate_fn=c28c_collate, num_workers=0, pin_memory=device.type == "cuda")
         model.train()
@@ -292,13 +297,22 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                     "candidate_audit": select_rec.get("candidate_audit", {}),
                 }
         train_log.append(epoch_rec)
+        write_json(log_path, {
+            "status": "running",
+            "training_log": train_log,
+            "checkpoint_manifest": latest_manifest,
+            "best_select_score": best_score,
+            "best_select": best_select,
+            "best_checkpoint_manifest": best_manifest,
+        })
     return {
         "status": "C28C_FULL_MODEL_TRAINED",
         "device": str(device),
         "data_parallel": bool(hasattr(model, "module")),
         "training_log": train_log,
-        "checkpoint_manifest": latest_manifest if "latest_manifest" in locals() else None,
+        "checkpoint_manifest": latest_manifest,
         "best_checkpoint_manifest": best_manifest,
+        "training_log_path": str(log_path),
         "visual_bank_manifest": banks["visual_manifest"],
         "subtitle_bank_manifest": banks["subtitle_manifest"],
         **seq_manifests,

@@ -28,16 +28,13 @@ class VideoBank:
         self.video_ids = list(meta["train"].keys())
         self.video_to_idx = {v: i for i, v in enumerate(self.video_ids)}
         self.idx_to_video = {i: v for v, i in self.video_to_idx.items()}
-        self.durations = self._durations_from_train()
+        self.durations = self._durations_from_meta(meta)
 
-    def _durations_from_train(self) -> dict[str, float]:
+    @staticmethod
+    def _durations_from_meta(meta: dict[str, Any]) -> dict[str, float]:
         out: dict[str, float] = {}
-        with self.paths.train_jsonl.open("r", encoding="utf-8") as f:
-            for line in f:
-                if not line.strip():
-                    continue
-                row = json.loads(line)
-                out.setdefault(str(row["vid_name"]), float(row["duration"]))
+        for vid, vals in meta.get("train", {}).items():
+            out[str(vid)] = float(vals[0])
         return out
 
     def close(self) -> None:

@@ -6,7 +6,7 @@ query_dim: 768
 subtitle_dim: 768
 visual_dim: 4352
 
-# C28E is a code-review-first retriever repair. Do not run official validation.
+# C28E is a code-review-first full E2E mechanism repair. Do not run official validation.
 epochs: 8
 batch_size: 32
 grad_accum_steps: 1
@@ -52,12 +52,21 @@ random_negative_k: 64
 student_negative_k: 128
 use_candidate_curriculum: true
 
-# Distillation / ranking losses.
-lambda_gt_rank: 1.0
-lambda_pooled_rank: 0.4
-lambda_teacher_kl: 1.2
-lambda_teacher_pair: 0.5
-lambda_teacher_set: 0.4
+# Full E2E loss weights. Teacher-specific distillation losses live only in the
+# reference retriever diagnostic helper, not in the C28E full runner.
+front_rank_weight: 10.0
+lambda_inbatch: 0.3
+lambda_span: 2.0
+lambda_vcmr: 4.0
+lambda_pr: 0.5
+lambda_reg: 0.4
+lambda_amd_div: 0.2
+lambda_amd_rel: 0.5
+lambda_rg: 0.5
+lambda_fb: 0.8
+lambda_hn: 1.2
+lambda_cons: 0.5
+lambda_ng: 0.8
 
 # Selection firewall.
 selection_split: calib_select

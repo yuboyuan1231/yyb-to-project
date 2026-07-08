@@ -242,6 +242,7 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         subtitle_seq_bank=subtitle_seq_bank,
         visual_seq_mask=visual_seq_mask,
         subtitle_seq_mask=subtitle_seq_mask,
+        target_len=target_len,
     )
     res = evaluate_model(model, dataset, device, batch_size=int(cfg.get("batch_size", 8)), seed=int(cfg.get("seed", 2026)))
     res["checkpoint_loaded"] = ckpt_loaded

@@ -38,6 +38,7 @@ class MultiSpanProposalDataset(Dataset):
         subtitle_seq_bank: np.ndarray | None = None,
         visual_seq_mask: np.ndarray | None = None,
         subtitle_seq_mask: np.ndarray | None = None,
+        target_len: int = 64,
     ) -> None:
         self.split = split
         self.sm = split_manager
@@ -53,7 +54,7 @@ class MultiSpanProposalDataset(Dataset):
         self.subtitle_seq_bank = subtitle_seq_bank
         self.visual_seq_mask = visual_seq_mask
         self.subtitle_seq_mask = subtitle_seq_mask
-        self.grid = TemporalGrid()
+        self.grid = TemporalGrid(max_clips=int(target_len))
         self.video_duration_bank = dict(getattr(video_bank, "durations", {}))
 
     @staticmethod
@@ -182,6 +183,7 @@ class MultiSpanProposalDataset(Dataset):
             "query_count": len(self.records),
             "max_candidates": self.max_candidates,
             "max_spans_per_video": self.max_spans_per_video,
+            "target_len": self.grid.max_clips,
             "one_span_materialization": False,
             "gt_oracle_used_as_inference_feature": False,
             "gt_video_inserted_for_training_loss": self.insert_gt_for_training,

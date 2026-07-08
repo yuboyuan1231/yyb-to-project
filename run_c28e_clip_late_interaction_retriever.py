@@ -92,12 +92,17 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "clean PR base should be c28c-cleanroom-e2e-blueprint-v2, not main",
             "candidate_topk_train/eval/eval_candidate_k are separated from hard_negative_k",
             "candidate proposals use each candidate video's own duration",
+            "candidate duration bank is sourced from video metadata, not only query rows",
             "late_interaction_enabled is a real clip-level scoring path, not a zero-weight config label",
             "two-stage dynamic retrieval uses pooled student broad topK then clip-level rerank topK",
             "teacher score schema is audited and rank-derived teacher logits are the default unless score use is explicitly enabled",
             "checkpoint selection uses calib_select, not train VR@100",
             "calib_holdout is final-report only and guarded by --allow_holdout_final",
-            "resume appends prior training logs instead of silently overwriting them",
+            "full E2E resume appends prior training logs and restores best selection metadata",
+            "full config exposes only full E2E loss weights; retriever-only distillation weights are not advertised as active",
+            "full retriever loss includes duplicate-safe cross-query in-batch negatives in addition to candidate-set negatives",
+            "ablation helper refuses to claim mutual-help evidence until toggled ablation results exist",
+            "legacy pooled miner and retriever trainer are labeled diagnostic-only and are not C28E-3 owners",
             "stage names use C28E consistently",
             "clip masks are carried through sequence banks, late interaction, and full-model batches",
             "late interaction retriever score replaces the localizer's retrieval sims before feedback/VCMR scoring",
@@ -124,13 +129,19 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- Clip masks exclude padded release-feature positions from pooled, partial-relevance, late, and token scores.\n"
         "- Late retriever score is the retrieval evidence consumed by the localizer, feedback, and joint VCMR scoring.\n"
         "- C28E-3 runs `run_full_training` and `compute_full_loss`, not retriever-only distillation.\n"
+        "- Full retriever optimization includes duplicate-safe in-batch video negatives as well as candidate-set negatives.\n"
         "- Full train/eval candidate mining reranks broad pooled candidates with clip late interaction.\n"
+        "- Training loss scores raw candidate clips through the trainable video encoder.\n"
+        "- Two-stage retrieval reports broad pooled recall separately from late rerank recall.\n"
+        "- Teacher rankings are supervision/diagnostic only, never final static hard gates.\n"
         "- Long videos use duration-aware 64-bin resampling and GT span insertion uses the same grid.\n"
         "- ActiveMoment is candidate-video-conditioned.\n"
         "- Candidate scoring is chunked by candidate, preserving proposal count while controlling memory.\n"
         "- Candidate curriculum is explicit and audited per epoch.\n"
         "- `calib_select` is the only selection split.\n"
-        "- Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.\n",
+        "- Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.\n"
+        "- Ablation helpers must report pending evidence rather than positive contribution when toggled runs are missing.\n"
+        "- Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.\n",
     )
     return rec
 

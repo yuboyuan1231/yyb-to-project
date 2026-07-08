@@ -17,7 +17,11 @@ class CandidateSet:
 
 
 class DynamicCandidateMiner:
-    """Chunked current-retriever topK miner over the train video bank."""
+    """Legacy pooled miner retained for diagnostics.
+
+    C28E full train/eval uses ``engine.refresh_hard_negatives.refresh_candidates``,
+    which performs broad pooled recall followed by clip late-interaction rerank.
+    """
 
     def __init__(self, video_ids: list[str], video_to_idx: dict[str, int], dynamic_topk: int = 200, chunk_size: int = 256) -> None:
         self.video_ids = video_ids

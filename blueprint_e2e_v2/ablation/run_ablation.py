@@ -11,9 +11,8 @@ def run_post_performance_ablation(full_eval: dict[str, Any]) -> dict[str, Any]:
     # ablation contract and full-model anchor; retrained/toggled ablations can
     # be launched after the first complete C28C run.
     results = {
-        "A12_full_c28c": full_eval.get("summary", {}),
+        "A12_full_c28c": {"summary": full_eval.get("summary", {})},
         "ablation_mode": "post_full_model_contract_ready",
         "full_model_remains_final_route": True,
     }
-    return {"status": "C28C_ABLATION_INCONCLUSIVE", "results": results, "contribution": contribution_summary({})}
-
+    return {"status": "C28C_ABLATION_PENDING_TOGGLED_RUNS", "results": results, "contribution": contribution_summary(results)}
