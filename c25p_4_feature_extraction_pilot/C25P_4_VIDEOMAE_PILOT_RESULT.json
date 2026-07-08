@@ -1,0 +1,14 @@
+{
+  "alignment_check": "not_run",
+  "authorized_gpu_pilot": false,
+  "dry_run": true,
+  "expected_full_extraction_cost": "see C25P-5 estimates",
+  "feature_shape": null,
+  "gpu_memory": null,
+  "model": "VIDEOMAE",
+  "output_cache": "/tmp/c25p_feature_cache/CONQUER-RLEM-c2c3",
+  "runtime_sec": 0.0,
+  "sample_hash": null,
+  "status": "C25P_FEATURE_PILOT_SKIPPED_NO_FRAMES",
+  "success": false
+}

@@ -1,0 +1,1534 @@
+{
+  "conclusion": "C24H on the same C26 medium subset is also low at VCMR R@100, while VR R@100 is near-saturated. The gap is a shared one-span/localizer proposal limitation, not a C26-only scoring regression.",
+  "decision_note": "C26 remains not promoted. The R@100 gap is not an official/evaluator/pseudo issue; it is dominated by the shared borrowed BMN single-span proposal bottleneck. A future repair should materialize multiple native span proposals before rejudging the PREM localizer.",
+  "delta_c26_final_vs_c24h_selected_B": {
+    "VCMR_R@100_IoU0.5": 0.0,
+    "VCMR_R@100_IoU0.7": 0.0,
+    "VCMR_R@10_IoU0.5": -0.1111111111111116,
+    "VCMR_R@10_IoU0.7": 0.0,
+    "VCMR_R@1_IoU0.5": -0.3333333333333335,
+    "VCMR_R@1_IoU0.7": -0.22222222222222232,
+    "VCMR_R@5_IoU0.5": -0.1111111111111116,
+    "VCMR_R@5_IoU0.7": 0.11111111111111116,
+    "VR_R@1": 0.11111111111111072,
+    "VR_R@10": 1.0,
+    "VR_R@100": 0.11111111111111427,
+    "VR_R@5": 0.44444444444444287,
+    "high_score_false_positive_rate": -0.11111111111111427,
+    "wrong_video_top1_rate": -0.11111111111111427
+  },
+  "evaluator_modified": false,
+  "formula_metrics": {
+    "A_C23_baseline_R0_baseline_only": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.1111111111111112,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 78.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "B_C19_C20_C21_hybrid_proxy": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.111111111111111,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 77.11111111111111,
+      "VR_R@100": 99.77777777777777,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "C_C24_selected_B_C19_C21_hybrid": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.111111111111111,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 76.88888888888889,
+      "VR_R@100": 99.66666666666667,
+      "VR_R@5": 62.666666666666664,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "D_C24F_event_only": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.6666666666666665,
+      "VCMR_R@1_IoU0.5": 2.7777777777777777,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.11111111111111,
+      "VR_R@10": 75.66666666666667,
+      "VR_R@100": 99.55555555555556,
+      "VR_R@5": 62.22222222222222,
+      "high_score_false_positive_rate": 72.88888888888889,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.88888888888889
+    },
+    "E_C24G_partial_evidence_proxy": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 7.0,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.22222222222222,
+      "VR_R@10": 77.77777777777777,
+      "VR_R@100": 99.66666666666667,
+      "VR_R@5": 63.666666666666664,
+      "high_score_false_positive_rate": 72.77777777777777,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.77777777777777
+    },
+    "F_C24H_BMN_only": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 26.88888888888889,
+      "VR_R@10": 76.77777777777777,
+      "VR_R@100": 99.66666666666667,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 73.11111111111111,
+      "query_count": 900,
+      "wrong_video_top1_rate": 73.11111111111111
+    },
+    "G_C24H_T2_only": {
+      "VCMR_R@100_IoU0.5": 8.444444444444445,
+      "VCMR_R@100_IoU0.7": 3.111111111111111,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.0,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.77777777777778,
+      "VR_R@10": 77.22222222222223,
+      "VR_R@100": 99.33333333333333,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 72.22222222222223,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.22222222222223
+    },
+    "H_C24H_event_only": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.6666666666666665,
+      "VCMR_R@1_IoU0.5": 2.7777777777777777,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.11111111111111,
+      "VR_R@10": 75.66666666666667,
+      "VR_R@100": 99.55555555555556,
+      "VR_R@5": 62.22222222222222,
+      "high_score_false_positive_rate": 72.88888888888889,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.88888888888889
+    },
+    "I_BMN_event_consistency": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.2222222222222223,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 76.55555555555556,
+      "VR_R@100": 99.66666666666667,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "J_BMN_T2_consistency": {
+      "VCMR_R@100_IoU0.5": 8.444444444444445,
+      "VCMR_R@100_IoU0.7": 3.111111111111111,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.111111111111111,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 77.55555555555556,
+      "VR_R@100": 99.77777777777777,
+      "VR_R@5": 62.333333333333336,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    },
+    "K_all_evidence_wrong_risk_penalty": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.1111111111111112,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.555555555555557,
+      "VR_R@10": 76.66666666666667,
+      "VR_R@100": 99.66666666666667,
+      "VR_R@5": 62.666666666666664,
+      "high_score_false_positive_rate": 72.44444444444444,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.44444444444444
+    },
+    "L_all_evidence_no_regression_guard": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.777777777777778,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 76.66666666666667,
+      "VR_R@100": 100.0,
+      "VR_R@5": 63.0,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    }
+  },
+  "join_audit": {
+    "c24h_subset_rows_before_join": 115200,
+    "c26_holdout_queries": 900,
+    "c26_holdout_rows": 115200,
+    "canonical_manifest": {
+      "config_hash": "5a014eed5dfe3446",
+      "feature_paths": {
+        "query_all": {
+          "exists": true,
+          "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+          "readable": true,
+          "size_bytes": 267295238
+        },
+        "subtitle_mean_max": {
+          "exists": true,
+          "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+          "readable": true,
+          "size_bytes": 107738120
+        },
+        "visual_mean": {
+          "exists": true,
+          "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz",
+          "readable": true,
+          "size_bytes": 304125722
+        }
+      },
+      "first_stage_sources": {
+        "calib_holdout": {
+          "candidate_row_count": 115200,
+          "loaded_query_count": 900,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "requested_query_count": 900,
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_holdout_top128.pkl",
+          "split": "calib_holdout",
+          "top": 128
+        },
+        "calib_select": {
+          "candidate_row_count": 115200,
+          "loaded_query_count": 900,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "requested_query_count": 900,
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_select_top128.pkl",
+          "split": "calib_select",
+          "top": 128
+        },
+        "train_fit": {
+          "candidate_row_count": 230400,
+          "loaded_query_count": 1800,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "requested_query_count": 1800,
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit",
+          "top": 128
+        }
+      },
+      "local_only": true,
+      "mode": "medium",
+      "path": "/tmp/c26_score_cache/CONQUER-RLEM-c2c3/C26_CANONICAL_medium.local.parquet",
+      "query_count": 3600,
+      "row_count": 460800,
+      "schema_hash": "b03c9fabfd2c6910",
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 900,
+          "rows": 115200
+        },
+        "calib_select": {
+          "queries": 900,
+          "rows": 115200
+        },
+        "train_fit": {
+          "queries": 1800,
+          "rows": 230400
+        }
+      },
+      "top": 128,
+      "video_count": 17435
+    },
+    "duplicate_c24h_subset_keys": 0,
+    "duplicate_c26_keys": 0,
+    "merged_rows": 115200,
+    "missing_c24h_span_rows": 0,
+    "row_space_hash": "25632252462682e2"
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "proposal_audit": {
+    "has_c26_native_span_columns": false,
+    "query_count": 900,
+    "query_video_pair_count": 115200,
+    "row_count": 115200,
+    "span_columns_used_for_vcmr": [
+      "best_bmn_span_start",
+      "best_bmn_span_end"
+    ],
+    "top100_proposal_interpretation": "one row is one query-video candidate with one borrowed C24H BMN span; C26 does not emit multiple spans per video.",
+    "unique_span_proposals_per_query_video": {
+      "all_one": true,
+      "max": 1,
+      "median": 1.0,
+      "min": 1
+    }
+  },
+  "pseudo_official_holdout_used_for_selection": false,
+  "requested_cross_checks": {
+    "1_c24h_baseline_replay_same_subset": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.111111111111111,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 77.11111111111111,
+      "VR_R@100": 99.77777777777777,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "2_c26_retriever_plus_c24h_span": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.1111111111111112,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 77.88888888888889,
+      "VR_R@100": 100.0,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "3_c24h_retriever_plus_c26_focus_fuse_span": {
+      "available_c26_span_columns": [],
+      "reason": "C26 focus-fuse does not materialize c26_span_start/c26_span_end; C24H retriever + C26 focus-fuse span cannot be evaluated as an independent span/localizer cross.",
+      "status": "C26_NATIVE_SPAN_ABSENT"
+    },
+    "4_span_start_end_unit": {
+      "current_seconds_metrics": {
+        "VCMR_R@100_IoU0.5": 8.555555555555555,
+        "VCMR_R@100_IoU0.7": 3.2222222222222223,
+        "VCMR_R@10_IoU0.5": 7.555555555555555,
+        "VCMR_R@10_IoU0.7": 2.7777777777777777,
+        "VCMR_R@1_IoU0.5": 2.7777777777777777,
+        "VCMR_R@1_IoU0.7": 1.0,
+        "VCMR_R@5_IoU0.5": 6.777777777777778,
+        "VCMR_R@5_IoU0.7": 2.4444444444444446,
+        "VR_R@1": 27.444444444444443,
+        "VR_R@10": 78.11111111111111,
+        "VR_R@100": 99.88888888888889,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.55555555555556,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.55555555555556
+      },
+      "if_span_values_were_clip_index_times_1p5": {
+        "VCMR_R@100_IoU0.5": 7.888888888888889,
+        "VCMR_R@100_IoU0.7": 3.2222222222222223,
+        "VCMR_R@10_IoU0.5": 6.888888888888889,
+        "VCMR_R@10_IoU0.7": 2.7777777777777777,
+        "VCMR_R@1_IoU0.5": 2.3333333333333335,
+        "VCMR_R@1_IoU0.7": 0.5555555555555556,
+        "VCMR_R@5_IoU0.5": 6.444444444444445,
+        "VCMR_R@5_IoU0.7": 2.5555555555555554,
+        "VR_R@1": 27.444444444444443,
+        "VR_R@10": 78.11111111111111,
+        "VR_R@100": 99.88888888888889,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.55555555555556,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.55555555555556
+      },
+      "if_span_values_were_seconds_div_1p5": {
+        "VCMR_R@100_IoU0.5": 7.777777777777778,
+        "VCMR_R@100_IoU0.7": 4.0,
+        "VCMR_R@10_IoU0.5": 6.555555555555555,
+        "VCMR_R@10_IoU0.7": 3.5555555555555554,
+        "VCMR_R@1_IoU0.5": 3.0,
+        "VCMR_R@1_IoU0.7": 1.4444444444444444,
+        "VCMR_R@5_IoU0.5": 5.666666666666667,
+        "VCMR_R@5_IoU0.7": 3.111111111111111,
+        "VR_R@1": 27.444444444444443,
+        "VR_R@10": 78.11111111111111,
+        "VR_R@100": 99.88888888888889,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.55555555555556,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.55555555555556
+      },
+      "negative_or_zero_duration_count": 0,
+      "span_duration_summary": {
+        "max": 70.14190476190477,
+        "median": 5.976615384615385,
+        "min": 2.02,
+        "p95": 6.098536585365854
+      },
+      "span_end_gt_video_duration_plus_1s_count": 534,
+      "start_on_1p5s_grid_rate": 0.9238628472222222,
+      "unit_conclusion": "seconds_consistent"
+    },
+    "5_single_span_proposal_check": {
+      "has_c26_native_span_columns": false,
+      "query_count": 900,
+      "query_video_pair_count": 115200,
+      "row_count": 115200,
+      "span_columns_used_for_vcmr": [
+        "best_bmn_span_start",
+        "best_bmn_span_end"
+      ],
+      "top100_proposal_interpretation": "one row is one query-video candidate with one borrowed C24H BMN span; C26 does not emit multiple spans per video.",
+      "unique_span_proposals_per_query_video": {
+        "all_one": true,
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      }
+    }
+  },
+  "same_subset_metrics": {
+    "c24h_best_available_formula_on_same_subset": {
+      "metrics": {
+        "VCMR_R@100_IoU0.5": 8.555555555555555,
+        "VCMR_R@100_IoU0.7": 3.2222222222222223,
+        "VCMR_R@10_IoU0.5": 7.555555555555555,
+        "VCMR_R@10_IoU0.7": 2.7777777777777777,
+        "VCMR_R@1_IoU0.5": 2.888888888888889,
+        "VCMR_R@1_IoU0.7": 1.1111111111111112,
+        "VCMR_R@5_IoU0.5": 6.888888888888889,
+        "VCMR_R@5_IoU0.7": 2.4444444444444446,
+        "VR_R@1": 27.333333333333332,
+        "VR_R@10": 78.0,
+        "VR_R@100": 100.0,
+        "VR_R@5": 62.888888888888886,
+        "high_score_false_positive_rate": 72.66666666666667,
+        "query_count": 900,
+        "wrong_video_top1_rate": 72.66666666666667
+      },
+      "name": "A_C23_baseline_R0_baseline_only"
+    },
+    "c24h_first_stage_with_c24h_bmn_span": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.1111111111111112,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 78.0,
+      "VR_R@100": 100.0,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "c24h_selected_B": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.666666666666667,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 3.111111111111111,
+      "VCMR_R@1_IoU0.7": 1.2222222222222223,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.3333333333333335,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 77.11111111111111,
+      "VR_R@100": 99.77777777777777,
+      "VR_R@5": 62.44444444444444,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    },
+    "c26_final_F": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.7777777777777777,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 78.11111111111111,
+      "VR_R@100": 99.88888888888889,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    },
+    "c26_retriever_plus_c24h_span": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.888888888888889,
+      "VCMR_R@1_IoU0.7": 1.1111111111111112,
+      "VCMR_R@5_IoU0.5": 6.888888888888889,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.333333333333332,
+      "VR_R@10": 77.88888888888889,
+      "VR_R@100": 100.0,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.66666666666667,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.66666666666667
+    }
+  },
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26_7_vcmr_r100_sanity_check/C26_7_R100_FAILURE_SAMPLE.parquet",
+  "span_unit_audit": {
+    "current_seconds_metrics": {
+      "VCMR_R@100_IoU0.5": 8.555555555555555,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 7.555555555555555,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.7777777777777777,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 6.777777777777778,
+      "VCMR_R@5_IoU0.7": 2.4444444444444446,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 78.11111111111111,
+      "VR_R@100": 99.88888888888889,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    },
+    "if_span_values_were_clip_index_times_1p5": {
+      "VCMR_R@100_IoU0.5": 7.888888888888889,
+      "VCMR_R@100_IoU0.7": 3.2222222222222223,
+      "VCMR_R@10_IoU0.5": 6.888888888888889,
+      "VCMR_R@10_IoU0.7": 2.7777777777777777,
+      "VCMR_R@1_IoU0.5": 2.3333333333333335,
+      "VCMR_R@1_IoU0.7": 0.5555555555555556,
+      "VCMR_R@5_IoU0.5": 6.444444444444445,
+      "VCMR_R@5_IoU0.7": 2.5555555555555554,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 78.11111111111111,
+      "VR_R@100": 99.88888888888889,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    },
+    "if_span_values_were_seconds_div_1p5": {
+      "VCMR_R@100_IoU0.5": 7.777777777777778,
+      "VCMR_R@100_IoU0.7": 4.0,
+      "VCMR_R@10_IoU0.5": 6.555555555555555,
+      "VCMR_R@10_IoU0.7": 3.5555555555555554,
+      "VCMR_R@1_IoU0.5": 3.0,
+      "VCMR_R@1_IoU0.7": 1.4444444444444444,
+      "VCMR_R@5_IoU0.5": 5.666666666666667,
+      "VCMR_R@5_IoU0.7": 3.111111111111111,
+      "VR_R@1": 27.444444444444443,
+      "VR_R@10": 78.11111111111111,
+      "VR_R@100": 99.88888888888889,
+      "VR_R@5": 62.888888888888886,
+      "high_score_false_positive_rate": 72.55555555555556,
+      "query_count": 900,
+      "wrong_video_top1_rate": 72.55555555555556
+    },
+    "negative_or_zero_duration_count": 0,
+    "span_duration_summary": {
+      "max": 70.14190476190477,
+      "median": 5.976615384615385,
+      "min": 2.02,
+      "p95": 6.098536585365854
+    },
+    "span_end_gt_video_duration_plus_1s_count": 534,
+    "start_on_1p5s_grid_rate": 0.9238628472222222,
+    "unit_conclusion": "seconds_consistent"
+  },
+  "split": "calib_holdout",
+  "stage": "C26-7",
+  "status": "C26_R100_SANITY_PASS_SHARED_SINGLE_SPAN_LIMITATION",
+  "top100_failure_breakdown_c24h_selected_B": {
+    "correct_video_in_top100_but_span_iou_lt_05": 821,
+    "correct_video_missing_from_top100": 2,
+    "failure_examples": [
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 20.14,
+        "gt_start": 11.23,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 365,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 25.75,
+        "gt_start": 24.1,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 366,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.27,
+        "gt_start": 35.66,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 367,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.25253376364707947,
+        "gt_end": 23.77,
+        "gt_start": 0.0,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 368,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 35.33,
+        "gt_start": 24.1,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 369,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.08457814902067184,
+        "gt_end": 14.46,
+        "gt_start": 4.72,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 690,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 23.61,
+        "gt_start": 18.59,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 691,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 54.3,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 692,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 20.07,
+        "gt_start": 17.12,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 693,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.02,
+        "gt_start": 32.17,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 694,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.15077076852321625,
+        "gt_end": 4.43,
+        "gt_start": 3.54,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1135,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 30.1,
+        "gt_start": 27.74,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1136,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 40.73,
+        "gt_start": 38.66,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1137,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 47.81,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1139,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.3274724781513214,
+        "gt_end": 17.29,
+        "gt_start": 0.3,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1175,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.10000000149011612,
+        "gt_end": 59.62,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1176,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 17.89,
+        "gt_start": 16.99,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1177,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 18.89,
+        "gt_start": 15.35,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1178,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 36.01,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1179,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.08274175226688385,
+        "gt_end": 12.49,
+        "gt_start": 10.89,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1180,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 51.22,
+        "gt_start": 49.94,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1181,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 61.47,
+        "gt_start": 54.11,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1182,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 49.3,
+        "gt_start": 27.21,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1183,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 64.03,
+        "gt_start": 53.47,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1184,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 26.11,
+        "gt_start": 20.71,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1246,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.12,
+        "gt_start": 48.32,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1247,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.4777778089046478,
+        "gt_end": 6.3,
+        "gt_start": 3.0,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1248,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 21.91,
+        "gt_start": 18.01,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1249,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.13272729516029358,
+        "gt_end": 44.86,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2750,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.96,
+        "gt_start": 46.99,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2751,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 52.79,
+        "gt_start": 51.87,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2752,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.18664179742336273,
+        "gt_end": 15.56,
+        "gt_start": 3.05,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2753,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 42.11,
+        "gt_start": 36.31,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2754,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.439797043800354,
+        "gt_end": 4.88,
+        "gt_start": 2.28,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2780,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 31.22,
+        "gt_start": 29.59,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2781,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.07,
+        "gt_start": 45.52,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2782,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 12.03,
+        "gt_start": 9.43,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2783,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.4,
+        "gt_start": 45.85,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2784,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 24.79,
+        "gt_start": 22.43,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2800,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 37.48,
+        "gt_start": 24.5,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2801,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 56.66,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2802,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 24.2,
+        "gt_start": 18.59,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2803,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 57.55,
+        "gt_start": 50.17,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2804,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.56,
+        "gt_start": 39.08,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2815,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 62.03,
+        "gt_start": 60.79,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2816,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.47227147221565247,
+        "gt_end": 2.79,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2817,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.419796884059906,
+        "gt_end": 3.1,
+        "gt_start": 0.62,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2818,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 12.1,
+        "gt_start": 8.37,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2819,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 13.28,
+        "gt_start": 7.67,
+        "gt_video_id": "friends_s04e03_seg02_clip_03",
+        "query_id": 2825,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 39.84,
+        "gt_start": 36.01,
+        "gt_video_id": "friends_s04e03_seg02_clip_03",
+        "query_id": 2826,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      }
+    ],
+    "query_count": 900,
+    "top100_vcmr05_hit_queries": 77,
+    "top100_vr_hit_queries": 898,
+    "vr100_minus_vcmr100_gap_queries": 821
+  },
+  "top100_failure_breakdown_c26_final_F": {
+    "correct_video_in_top100_but_span_iou_lt_05": 822,
+    "correct_video_missing_from_top100": 1,
+    "failure_examples": [
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 20.14,
+        "gt_start": 11.23,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 365,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 25.75,
+        "gt_start": 24.1,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 366,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.27,
+        "gt_start": 35.66,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 367,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.25253376364707947,
+        "gt_end": 23.77,
+        "gt_start": 0.0,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 368,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 35.33,
+        "gt_start": 24.1,
+        "gt_video_id": "met_s03e03_seg02_clip_11",
+        "query_id": 369,
+        "span_end": 6.002727272727273,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.08457814902067184,
+        "gt_end": 14.46,
+        "gt_start": 4.72,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 690,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 23.61,
+        "gt_start": 18.59,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 691,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 54.3,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 692,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 20.07,
+        "gt_start": 17.12,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 693,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.02,
+        "gt_start": 32.17,
+        "gt_video_id": "s09e18_seg02_clip_13",
+        "query_id": 694,
+        "span_end": 5.943,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.15077076852321625,
+        "gt_end": 4.43,
+        "gt_start": 3.54,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1135,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 30.1,
+        "gt_start": 27.74,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1136,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 40.73,
+        "gt_start": 38.66,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1137,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 47.81,
+        "gt_video_id": "friends_s01e10_seg02_clip_11",
+        "query_id": 1139,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.3274724781513214,
+        "gt_end": 17.29,
+        "gt_start": 0.3,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1175,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.10000000149011612,
+        "gt_end": 59.62,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1176,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 17.89,
+        "gt_start": 16.99,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1177,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 18.89,
+        "gt_start": 15.35,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1178,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 36.01,
+        "gt_video_id": "friends_s01e10_seg02_clip_19",
+        "query_id": 1179,
+        "span_end": 5.962,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.08274175226688385,
+        "gt_end": 12.49,
+        "gt_start": 10.89,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1180,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 51.22,
+        "gt_start": 49.94,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1181,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 61.47,
+        "gt_start": 54.11,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1182,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 49.3,
+        "gt_start": 27.21,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1183,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 64.03,
+        "gt_start": 53.47,
+        "gt_video_id": "friends_s01e10_seg02_clip_18",
+        "query_id": 1184,
+        "span_end": 17.868837209302328,
+        "span_start": 11.912558139534884
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 26.11,
+        "gt_start": 20.71,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1246,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.12,
+        "gt_start": 48.32,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1247,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.4777778089046478,
+        "gt_end": 6.3,
+        "gt_start": 3.0,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1248,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 21.91,
+        "gt_start": 18.01,
+        "gt_video_id": "s04e15_seg02_clip_01",
+        "query_id": 1249,
+        "span_end": 6.01,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.13272729516029358,
+        "gt_end": 44.86,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2750,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.96,
+        "gt_start": 46.99,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2751,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 52.79,
+        "gt_start": 51.87,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2752,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.18664179742336273,
+        "gt_end": 15.56,
+        "gt_start": 3.05,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2753,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 42.11,
+        "gt_start": 36.31,
+        "gt_video_id": "friends_s04e15_seg02_clip_03",
+        "query_id": 2754,
+        "span_end": 5.954146341463415,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.439797043800354,
+        "gt_end": 4.88,
+        "gt_start": 2.28,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2780,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 31.22,
+        "gt_start": 29.59,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2781,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.07,
+        "gt_start": 45.52,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2782,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 12.03,
+        "gt_start": 9.43,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2783,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 50.4,
+        "gt_start": 45.85,
+        "gt_video_id": "friends_s04e03_seg02_clip_08",
+        "query_id": 2784,
+        "span_end": 5.911818181818182,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 24.79,
+        "gt_start": 22.43,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2800,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 37.48,
+        "gt_start": 24.5,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2801,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 59.03,
+        "gt_start": 56.66,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2802,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 24.2,
+        "gt_start": 18.59,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2803,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 57.55,
+        "gt_start": 50.17,
+        "gt_video_id": "friends_s04e03_seg02_clip_04",
+        "query_id": 2804,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 41.56,
+        "gt_start": 39.08,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2815,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 62.03,
+        "gt_start": 60.79,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2816,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.47227147221565247,
+        "gt_end": 2.79,
+        "gt_start": 0.0,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2817,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.419796884059906,
+        "gt_end": 3.1,
+        "gt_start": 0.62,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2818,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 12.1,
+        "gt_start": 8.37,
+        "gt_video_id": "friends_s04e03_seg02_clip_01",
+        "query_id": 2819,
+        "span_end": 5.907619047619048,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 13.28,
+        "gt_start": 7.67,
+        "gt_video_id": "friends_s04e03_seg02_clip_03",
+        "query_id": 2825,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      },
+      {
+        "best_candidate_iou_in_top100": 0.0,
+        "gt_end": 39.84,
+        "gt_start": 36.01,
+        "gt_video_id": "friends_s04e03_seg02_clip_03",
+        "query_id": 2826,
+        "span_end": 5.9030000000000005,
+        "span_start": 0.0
+      }
+    ],
+    "query_count": 900,
+    "top100_vcmr05_hit_queries": 77,
+    "top100_vr_hit_queries": 899,
+    "vr100_minus_vcmr100_gap_queries": 822
+  }
+}

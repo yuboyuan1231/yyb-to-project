@@ -1,0 +1,16 @@
+{
+  "VR@1": 29.101382488479263,
+  "VR@10": 79.19354838709677,
+  "VR@100": 100.0,
+  "VR@200": 100.0,
+  "VR@5": 64.49308755760369,
+  "VR@50": 98.0184331797235,
+  "gt_rank_mean": 7.9633640552995395,
+  "gt_rank_median": 3.0,
+  "gt_rank_p95": 33.0,
+  "kind": "R1_first_stage_teacher",
+  "missing_gt_count": 0,
+  "query_count": 4340,
+  "split": "calib_holdout",
+  "wrong_video_top1_rate": 70.89861751152074
+}

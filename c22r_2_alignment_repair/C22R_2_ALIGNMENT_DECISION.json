@@ -1,0 +1,114 @@
+{
+  "alignment_sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_2_alignment_repair/C22R_2_ALIGNMENT_SAMPLE.parquet",
+  "alignment_sample_rows": 3000,
+  "candidate_pool_repair": {
+    "candidate_pool": "first_stage_top128",
+    "duplicate_candidate_overwrite": false,
+    "gt_coverage_top128": 100.0,
+    "invalid_video_id_count": 0,
+    "row_count": 128000
+  },
+  "evaluator_modified": false,
+  "feature_key_canonicalization": {
+    "canonical_query_key": "query_id/desc_id integer string for query LMDB",
+    "canonical_video_key": "video_id string from corpus.train_videos[first_stage_pos]",
+    "no_position_based_join": true,
+    "query_key": "query_id",
+    "subtitle_key": "video_id",
+    "visual_key": "video_id"
+  },
+  "label_join_repair": {
+    "gt_video_source": "corpus.by_id[query_id].vid_name",
+    "join_key": [
+      "query_id",
+      "video_id"
+    ],
+    "position_based_join": false,
+    "silent_zero_fill": false
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "repair_replay_results": {
+    "A_first_stage_baseline": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 71.6
+    },
+    "B_repaired_candidate_pool_oracle": {
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 0.0
+    },
+    "C_repaired_c22_native_retriever_available": {
+      "GT_video_mean_rank": 7.748,
+      "GT_video_median_rank": 3.0,
+      "VR_R@1": 28.4,
+      "VR_R@10": 78.6,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 63.9,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "score_collapse_ratio_std_lt_1e_6": 0.0,
+      "score_entropy_mean": 1.6143879691194742,
+      "score_std_mean": 1.0019012480974196,
+      "wrong_video_top1_rate": 71.6
+    },
+    "D_random_sanity": {
+      "GT_video_mean_rank": 63.826,
+      "GT_video_median_rank": 63.5,
+      "VR_R@1": 0.6,
+      "VR_R@10": 7.9,
+      "VR_R@100": 78.4,
+      "VR_R@128": 100.0,
+      "VR_R@5": 4.3,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "score_collapse_ratio_std_lt_1e_6": 0.0,
+      "score_entropy_mean": 4.464493056774139,
+      "score_std_mean": 0.9999999815225601,
+      "wrong_video_top1_rate": 99.4
+    },
+    "E_oracle_sanity": {
+      "GT_video_mean_rank": 1.0,
+      "GT_video_median_rank": 1.0,
+      "VR_R@1": 100.0,
+      "VR_R@10": 100.0,
+      "VR_R@100": 100.0,
+      "VR_R@128": 100.0,
+      "VR_R@5": 100.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 0.0
+    }
+  },
+  "schema_hash": "0f167bf06bba34f9c7a3c7fa2cfa1fbabfb7a2be0c30cca25016f00975557ba9",
+  "score_normalization_repair": {
+    "missing_scores_masked": true,
+    "raw_score_retained": true,
+    "silent_fill": false,
+    "within_query_minmax": true,
+    "within_query_softmax_top128": true,
+    "within_query_z_score": true
+  },
+  "seed": 2026,
+  "stage": "C22R-2",
+  "status": "C22R_ALIGNMENT_REPAIRED"
+}

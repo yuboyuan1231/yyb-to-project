@@ -1,0 +1,155 @@
+{
+  "dataset_schema_hash": "de791f34bf753899",
+  "dynamic_candidate_audit": {
+    "candidate_count_max": 200,
+    "candidate_count_min": 200,
+    "dynamic_topk": 200,
+    "encoded_bank_device": "cuda:0",
+    "gt_insert_for_training_loss": true,
+    "gt_insert_rate": 0.0,
+    "query_count": 64,
+    "static_top128_hard_gate_used": false,
+    "teacher_warm_start_query_rate": 100.0,
+    "teacher_warm_start_used_for_training": true,
+    "video_bank_encoded_once_per_refresh": true
+  },
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "old_cxx_table_as_training_main_data": false,
+  "promoted_system": "C7-B6 R1SelectiveTop1",
+  "proposal_audit": {
+    "max_spans_per_video": 64,
+    "one_span_materialization": false
+  },
+  "pseudo_official_holdout_used_for_selection": false,
+  "query_bank_audit": {
+    "sample_count": 8,
+    "sample_shapes": [
+      [
+        10,
+        768
+      ],
+      [
+        10,
+        768
+      ],
+      [
+        14,
+        768
+      ],
+      [
+        11,
+        768
+      ],
+      [
+        13,
+        768
+      ],
+      [
+        13,
+        768
+      ],
+      [
+        12,
+        768
+      ],
+      [
+        9,
+        768
+      ]
+    ],
+    "zero_fill": false
+  },
+  "split_audit": {
+    "pseudo_official_holdout_used_for_selection": false,
+    "split_counts": {
+      "calib_holdout": 4340,
+      "calib_select": 8677,
+      "pseudo_official_holdout": 4339,
+      "train_fit": 69428
+    },
+    "split_dir": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/splits"
+  },
+  "stage": "C28C-1",
+  "status": "C28C_DATA_READY",
+  "subtitle_bank_audit": {
+    "sample_count": 8,
+    "sample_shapes": [
+      [
+        60,
+        768
+      ],
+      [
+        60,
+        768
+      ],
+      [
+        60,
+        768
+      ],
+      [
+        60,
+        768
+      ],
+      [
+        60,
+        768
+      ],
+      [
+        40,
+        768
+      ],
+      [
+        40,
+        768
+      ],
+      [
+        40,
+        768
+      ]
+    ],
+    "zero_fill": false
+  },
+  "train_eval_inference_shared_feature_builder": true,
+  "video_bank_audit": {
+    "sample_count": 8,
+    "sample_shapes": [
+      [
+        60,
+        4352
+      ],
+      [
+        60,
+        4352
+      ],
+      [
+        60,
+        4352
+      ],
+      [
+        60,
+        4352
+      ],
+      [
+        60,
+        4352
+      ],
+      [
+        40,
+        4352
+      ],
+      [
+        40,
+        4352
+      ],
+      [
+        40,
+        4352
+      ]
+    ],
+    "train_video_count": 17435,
+    "zero_fill": false
+  }
+}

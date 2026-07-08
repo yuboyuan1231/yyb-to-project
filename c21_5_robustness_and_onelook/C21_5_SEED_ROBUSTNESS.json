@@ -1,0 +1,78 @@
+{
+  "calib_holdout": {
+    "2026": {
+      "VCMR_R@100_IoU0.5": 38.2,
+      "VCMR_R@100_IoU0.7": 22.9,
+      "VCMR_R@10_IoU0.5": 11.6,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 2.9,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 4.0,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.5,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 1000,
+      "wrong_video_high_score_rate": 71.7,
+      "wrong_video_top1_rate": 71.7
+    },
+    "2027": {
+      "VCMR_R@100_IoU0.5": 36.7,
+      "VCMR_R@100_IoU0.7": 22.4,
+      "VCMR_R@10_IoU0.5": 11.8,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 3.0,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 3.8,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.8,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 1000,
+      "wrong_video_high_score_rate": 71.8,
+      "wrong_video_top1_rate": 71.8
+    }
+  },
+  "calib_select": {
+    "2026": {
+      "VCMR_R@100_IoU0.5": 37.8,
+      "VCMR_R@100_IoU0.7": 24.0,
+      "VCMR_R@10_IoU0.5": 12.5,
+      "VCMR_R@10_IoU0.7": 6.6,
+      "VCMR_R@1_IoU0.5": 2.9,
+      "VCMR_R@1_IoU0.7": 0.9,
+      "VCMR_R@5_IoU0.5": 7.3,
+      "VCMR_R@5_IoU0.7": 3.8,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.7,
+      "promotion_precision": 14.285714285714286,
+      "promotion_recall": 0.1,
+      "query_count": 1000,
+      "wrong_video_high_score_rate": 71.5,
+      "wrong_video_top1_rate": 71.5
+    },
+    "2027": {
+      "VCMR_R@100_IoU0.5": 37.3,
+      "VCMR_R@100_IoU0.7": 23.4,
+      "VCMR_R@10_IoU0.5": 11.9,
+      "VCMR_R@10_IoU0.7": 6.5,
+      "VCMR_R@1_IoU0.5": 3.1,
+      "VCMR_R@1_IoU0.7": 1.0,
+      "VCMR_R@5_IoU0.5": 8.3,
+      "VCMR_R@5_IoU0.7": 4.2,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 1.0,
+      "promotion_precision": 10.0,
+      "promotion_recall": 0.1,
+      "query_count": 1000,
+      "wrong_video_high_score_rate": 71.6,
+      "wrong_video_top1_rate": 71.6
+    }
+  }
+}

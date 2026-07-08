@@ -1,0 +1,11 @@
+{
+  "features": [
+    "best_span_score",
+    "top2_span_mean",
+    "top4_span_mean",
+    "topK_span_logsumexp",
+    "span_score_margin",
+    "span_score_entropy",
+    "wrong_video_risk_score"
+  ]
+}

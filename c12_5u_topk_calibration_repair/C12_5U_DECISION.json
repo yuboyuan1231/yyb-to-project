@@ -1,0 +1,18 @@
+{
+  "allow_enter_c12_6": false,
+  "auc_iou07": 0.58348,
+  "best_iou05_top100": 77.05069124423963,
+  "best_iou07_top100": 53.31797235023041,
+  "best_iou07_top50": 38.963133640552996,
+  "best_iou_span_top100_rate": 42.78801843317972,
+  "best_iou_span_top50_rate": 27.83410138248848,
+  "best_variant": "U2_two_head_quality",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_val_used": false,
+  "pq_spearman": -0.14811460730177597,
+  "reason": "Selected on calib_select only. Holdout top100=53.3180, top50=38.9631, Spearman=-0.14811460730177597, AUC@0.7=0.58348.",
+  "short_iou07_top100": 38.98989898989899,
+  "stage": "C12-5U-F",
+  "status": "C12_SPAN_SCORE_STILL_UNRELIABLE_NEED_CONQUER_HIDDEN"
+}

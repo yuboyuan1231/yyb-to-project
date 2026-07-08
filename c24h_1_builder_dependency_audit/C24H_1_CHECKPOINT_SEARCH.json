@@ -1,0 +1,23 @@
+{
+  "bmn_b7_seed2026": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+    "readable": true,
+    "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e",
+    "size_bytes": 1766715
+  },
+  "t2_ranker": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_5t_T2_listwise_soft_iou.pt",
+    "readable": true,
+    "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80",
+    "size_bytes": 238487
+  },
+  "t2_teacher": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_models/c12_5_teacher_distilled.pt",
+    "readable": true,
+    "sha256": "f2048ae8331c9ded61def0880713b977070860cb6dbbddd0ee486ddfbdbf779f",
+    "size_bytes": 1210506
+  }
+}

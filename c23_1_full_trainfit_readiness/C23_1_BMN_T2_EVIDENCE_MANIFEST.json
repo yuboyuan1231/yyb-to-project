@@ -1,0 +1,17 @@
+{
+  "c17_score_medium": {
+    "exists": true,
+    "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 1006607541
+  },
+  "c19_canonical_medium": {
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 1447443108
+  },
+  "full_materialization_required_for_C23_3": true
+}

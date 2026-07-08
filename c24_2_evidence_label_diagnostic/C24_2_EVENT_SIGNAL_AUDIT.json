@@ -1,0 +1,8 @@
+{
+  "direct_event_columns_available": false,
+  "proxy_auc": {
+    "IoU>=0.5_AUC": 0.5258983837404229,
+    "IoU>=0.7_AUC": 0.5258303938859494,
+    "correct_video_AUC": 0.5052005946952425
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "evaluator_kind": "minimal native train-only VCMR evaluator",
+  "metric_schema_hash": "11c2044127d94a3d500467fee55c671f5088f5cf46a4466a106a7f76b7dd45f8",
+  "missing_capability": [
+    "C7-B6 train-only replay is only included if compatible local rows are present later"
+  ],
+  "mode": "medium",
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "stage": "C17-1",
+  "status": "C17_TRAIN_ONLY_EVALUATOR_READY"
+}

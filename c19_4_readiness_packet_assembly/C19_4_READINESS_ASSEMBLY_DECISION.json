@@ -1,0 +1,70 @@
+{
+  "artifact_manifest": {
+    "candidate_pool_hash": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+    "config_files": [
+      "c18_3_front_rank_hybrid_calibration/C18_3_SELECTED_CONFIG.json"
+    ],
+    "evaluator_command": "run_c19_official_readiness_blocker_closure.py --stage c19_2 --mode medium --seed 2026",
+    "files_not_committed_due_size": [
+      "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+      "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+      "/tmp/c18_score_cache/CONQUER-RLEM-c2c3/C18_PSEUDO_SCORE_TABLE_medium.local.parquet"
+    ],
+    "files_safe_to_commit": [
+      "run_c19_official_readiness_blocker_closure.py",
+      "c19_0_*",
+      "c19_1_*",
+      "c19_2_*",
+      "c19_3_*",
+      "c19_4_*",
+      "c19_5_*"
+    ],
+    "local_only_artifacts": [
+      "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+      "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+      "/tmp/c18_score_cache/CONQUER-RLEM-c2c3/C18_PSEUDO_SCORE_TABLE_medium.local.parquet"
+    ],
+    "missing_artifacts": [
+      "medium/cache evidence does not cover train_fit and/or has audited cross-source BMN/T2 missing values",
+      "C19_C7_B6_REPLAY_UNAVAILABLE_WITH_PROOF",
+      "C19_FRONT_RANK_RISK_WARNING"
+    ],
+    "pseudo_one_look_command_from_C18": "run_c18_full_hybrid_freeze_candidate.py --stage c18_4 --mode medium --seed 2026 --force",
+    "schema_hash": "34e567b94d3812c0a6667d959490d6abf5ea8da90ae164927674fcfee8b6ae82",
+    "score_table_local_hash": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98",
+    "score_table_local_path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "scripts": [
+      "run_c19_official_readiness_blocker_closure.py",
+      "run_c18_full_hybrid_freeze_candidate.py",
+      "run_c17_bmn_t2_native_vcmr_integration.py"
+    ],
+    "selected_weight_command": "C18 selected grid_a0.65_b0.25_g0.1 on calib_select",
+    "split_manifest_hash": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31"
+  },
+  "limitations": [
+    "full score blocker not fully closed",
+    "C7-B6 compatible train-only replay unavailable",
+    "front-rank/wrong-video risk remains"
+  ],
+  "mode": "medium",
+  "official_firewall": {
+    "c18_c19_promoted_system": false,
+    "evaluator_modified": false,
+    "nms_modified": false,
+    "official_prediction_pool_used": false,
+    "official_val_used": false,
+    "official_validation_may_be_run_by_this_script": false,
+    "post_val_adjustment_used": false,
+    "promoted_system_remains": "C7-B6 R1SelectiveTop1",
+    "second_official_used": false
+  },
+  "selection_firewall": {
+    "formula": "S_final = 0.65 S_retriever + 0.25 S_BMN + 0.10 S_T2",
+    "no_post_pseudo_adjustment": true,
+    "pseudo_official_holdout_not_used_for_selection": true,
+    "selected_config": "grid_a0.65_b0.25_g0.1",
+    "selected_config_source": "C18 calib_select"
+  },
+  "stage": "C19-4",
+  "status": "C19_READINESS_PACKET_ASSEMBLED_WITH_LIMITATIONS"
+}

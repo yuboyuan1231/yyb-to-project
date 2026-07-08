@@ -1,0 +1,31 @@
+{
+  "columns": [
+    "query_id",
+    "video_id",
+    "split",
+    "candidate_video_rank",
+    "first_stage_score",
+    "first_stage_rank",
+    "gt_video_id",
+    "gt_start",
+    "gt_end",
+    "video_duration",
+    "clip_length",
+    "num_visual_clips",
+    "num_subtitle_units",
+    "visual_feature_key",
+    "subtitle_feature_key",
+    "query_feature_key",
+    "has_visual_feature",
+    "has_subtitle_feature",
+    "has_query_feature",
+    "feature_missing_mask",
+    "time_alignment_status",
+    "query_type",
+    "duration_bucket",
+    "is_gt_video_diagnostic",
+    "schema_hash",
+    "config_hash"
+  ],
+  "schema_hash": "b03c9fabfd2c6910"
+}

@@ -1,0 +1,9 @@
+{
+  "inference_features_exclude_gt": true,
+  "train_label_columns": [
+    "is_gt_video_diagnostic",
+    "gt_start",
+    "gt_end",
+    "gt_video_id"
+  ]
+}

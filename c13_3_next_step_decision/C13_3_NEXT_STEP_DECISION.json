@@ -1,0 +1,17 @@
+{
+  "boundary_localizer_redesign_needed": true,
+  "c12_stopped": true,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "evaluator_modified": false,
+  "mavr_eventformer_minute_borrowable": true,
+  "multiscale_event_worth_doing": true,
+  "nms_modified": false,
+  "official_val_used": false,
+  "prem_reproducible_now": false,
+  "reason": "Strong feature pilot is feasible and directly targets the observed C12 bottleneck; PREM cannot be run directly, and a full architecture rewrite should wait for pilot signal.",
+  "selected_path": "Path B",
+  "stage": "C13-3",
+  "status": "C13_STRONG_FEATURE_EXTRACTION_THEN_NATIVE_RETRAIN",
+  "strong_text_subtitle_worth_doing": true,
+  "strong_visual_worth_doing": true
+}

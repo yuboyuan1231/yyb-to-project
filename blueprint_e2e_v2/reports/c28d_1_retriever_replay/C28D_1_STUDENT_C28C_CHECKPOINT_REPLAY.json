@@ -1,0 +1,661 @@
+{
+  "VR@1": 0.0,
+  "VR@10": 0.06912442396313365,
+  "VR@100": 1.0368663594470047,
+  "VR@200": 1.8433179723502304,
+  "VR@5": 0.02304147465437788,
+  "VR@50": 0.4838709677419355,
+  "checkpoint": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.pt",
+  "checkpoint_loaded": true,
+  "gt_rank_mean": 97.7,
+  "gt_rank_median": 93.5,
+  "gt_rank_p95": 184.0,
+  "kind": "R3_C28C_checkpoint",
+  "missing_gt_count": 4260,
+  "query_count": 4340,
+  "split": "calib_holdout",
+  "teacher_overlap_at_eval_k": 0.020672811059907835,
+  "wrong_examples": [
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.9974390268325806,
+      "gt_video_index": 13285,
+      "query_id": 365,
+      "top1_score": 4.414862632751465,
+      "top1_video_index": 12093
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.2186551094055176,
+      "gt_video_index": 13285,
+      "query_id": 366,
+      "top1_score": 4.131528854370117,
+      "top1_video_index": 12214
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.0879878997802734,
+      "gt_video_index": 13285,
+      "query_id": 367,
+      "top1_score": 4.471700668334961,
+      "top1_video_index": 13252
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1668312549591064,
+      "gt_video_index": 13285,
+      "query_id": 368,
+      "top1_score": 4.772232532501221,
+      "top1_video_index": 13563
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.2661951780319214,
+      "gt_video_index": 13285,
+      "query_id": 369,
+      "top1_score": 3.4724206924438477,
+      "top1_video_index": 13914
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.3077000379562378,
+      "gt_video_index": 17155,
+      "query_id": 690,
+      "top1_score": 3.9724278450012207,
+      "top1_video_index": 13372
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.4458670616149902,
+      "gt_video_index": 17155,
+      "query_id": 691,
+      "top1_score": 3.5167236328125,
+      "top1_video_index": 15044
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.238071918487549,
+      "gt_video_index": 17155,
+      "query_id": 692,
+      "top1_score": 4.1395063400268555,
+      "top1_video_index": 15487
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.9588239192962646,
+      "gt_video_index": 17155,
+      "query_id": 693,
+      "top1_score": 3.976003408432007,
+      "top1_video_index": 14437
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.8596011400222778,
+      "gt_video_index": 17155,
+      "query_id": 694,
+      "top1_score": 4.376847267150879,
+      "top1_video_index": 8758
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.7904911041259766,
+      "gt_video_index": 3916,
+      "query_id": 1135,
+      "top1_score": 4.9574151039123535,
+      "top1_video_index": 6688
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1806530952453613,
+      "gt_video_index": 3916,
+      "query_id": 1136,
+      "top1_score": 4.67815637588501,
+      "top1_video_index": 11953
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.102344036102295,
+      "gt_video_index": 3916,
+      "query_id": 1137,
+      "top1_score": 5.1752519607543945,
+      "top1_video_index": 6222
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.482664108276367,
+      "gt_video_index": 3916,
+      "query_id": 1138,
+      "top1_score": 4.853962421417236,
+      "top1_video_index": 12039
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.0732197761535645,
+      "gt_video_index": 3916,
+      "query_id": 1139,
+      "top1_score": 4.711014747619629,
+      "top1_video_index": 6688
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.209552049636841,
+      "gt_video_index": 3921,
+      "query_id": 1175,
+      "top1_score": 5.119296073913574,
+      "top1_video_index": 6313
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.6937428712844849,
+      "gt_video_index": 3921,
+      "query_id": 1176,
+      "top1_score": 3.869281768798828,
+      "top1_video_index": 6251
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.229285478591919,
+      "gt_video_index": 3921,
+      "query_id": 1177,
+      "top1_score": 4.080209255218506,
+      "top1_video_index": 9830
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1285159587860107,
+      "gt_video_index": 3921,
+      "query_id": 1178,
+      "top1_score": 4.961625576019287,
+      "top1_video_index": 6313
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.0241167545318604,
+      "gt_video_index": 3921,
+      "query_id": 1179,
+      "top1_score": 4.679751873016357,
+      "top1_video_index": 6688
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.460397720336914,
+      "gt_video_index": 3920,
+      "query_id": 1180,
+      "top1_score": 4.352347373962402,
+      "top1_video_index": 4326
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 4.035628795623779,
+      "gt_video_index": 3920,
+      "query_id": 1181,
+      "top1_score": 5.152609825134277,
+      "top1_video_index": 6659
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.980259418487549,
+      "gt_video_index": 3920,
+      "query_id": 1182,
+      "top1_score": 5.065946578979492,
+      "top1_video_index": 6124
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.5629873275756836,
+      "gt_video_index": 3920,
+      "query_id": 1183,
+      "top1_score": 4.044747829437256,
+      "top1_video_index": 5390
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.462012767791748,
+      "gt_video_index": 3920,
+      "query_id": 1184,
+      "top1_score": 4.373955249786377,
+      "top1_video_index": 6251
+    },
+    {
+      "gt_rank_within_topk": 93,
+      "gt_score": 3.768451452255249,
+      "gt_video_index": 15259,
+      "query_id": 1245,
+      "top1_score": 4.356678009033203,
+      "top1_video_index": 14162
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.693552851676941,
+      "gt_video_index": 15259,
+      "query_id": 1246,
+      "top1_score": 3.293630599975586,
+      "top1_video_index": 7176
+    },
+    {
+      "gt_rank_within_topk": 101,
+      "gt_score": 4.115705966949463,
+      "gt_video_index": 15259,
+      "query_id": 1247,
+      "top1_score": 4.5381340980529785,
+      "top1_video_index": 12854
+    },
+    {
+      "gt_rank_within_topk": 170,
+      "gt_score": 3.199885368347168,
+      "gt_video_index": 15259,
+      "query_id": 1248,
+      "top1_score": 3.836972713470459,
+      "top1_video_index": 4866
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.477269172668457,
+      "gt_video_index": 15259,
+      "query_id": 1249,
+      "top1_score": 4.07064962387085,
+      "top1_video_index": 13783
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.2766273021698,
+      "gt_video_index": 5291,
+      "query_id": 2750,
+      "top1_score": 4.356292724609375,
+      "top1_video_index": 523
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.703949213027954,
+      "gt_video_index": 5291,
+      "query_id": 2751,
+      "top1_score": 4.450071334838867,
+      "top1_video_index": 9352
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1501574516296387,
+      "gt_video_index": 5291,
+      "query_id": 2752,
+      "top1_score": 4.777193546295166,
+      "top1_video_index": 2778
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.987571120262146,
+      "gt_video_index": 5291,
+      "query_id": 2753,
+      "top1_score": 4.3553338050842285,
+      "top1_video_index": 12848
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.5669593811035156,
+      "gt_video_index": 5291,
+      "query_id": 2754,
+      "top1_score": 4.686522960662842,
+      "top1_video_index": 5274
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 0.2427028864622116,
+      "gt_video_index": 5100,
+      "query_id": 2780,
+      "top1_score": 4.529451370239258,
+      "top1_video_index": 2778
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.1521161794662476,
+      "gt_video_index": 5100,
+      "query_id": 2781,
+      "top1_score": 4.409383296966553,
+      "top1_video_index": 6795
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.687821388244629,
+      "gt_video_index": 5100,
+      "query_id": 2782,
+      "top1_score": 4.677417755126953,
+      "top1_video_index": 3009
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.4686262607574463,
+      "gt_video_index": 5100,
+      "query_id": 2783,
+      "top1_score": 4.770204067230225,
+      "top1_video_index": 6975
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.6169991493225098,
+      "gt_video_index": 5100,
+      "query_id": 2784,
+      "top1_score": 4.406027317047119,
+      "top1_video_index": 13209
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.039930582046509,
+      "gt_video_index": 5096,
+      "query_id": 2800,
+      "top1_score": 4.209214687347412,
+      "top1_video_index": 7417
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.2646865844726562,
+      "gt_video_index": 5096,
+      "query_id": 2801,
+      "top1_score": 5.281553268432617,
+      "top1_video_index": 5862
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.7076525688171387,
+      "gt_video_index": 5096,
+      "query_id": 2802,
+      "top1_score": 5.247753620147705,
+      "top1_video_index": 12039
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1307883262634277,
+      "gt_video_index": 5096,
+      "query_id": 2803,
+      "top1_score": 4.429542064666748,
+      "top1_video_index": 12214
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1876096725463867,
+      "gt_video_index": 5096,
+      "query_id": 2804,
+      "top1_score": 5.132233619689941,
+      "top1_video_index": 5432
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.9502954483032227,
+      "gt_video_index": 5093,
+      "query_id": 2815,
+      "top1_score": 4.327485084533691,
+      "top1_video_index": 7144
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.0135927200317383,
+      "gt_video_index": 5093,
+      "query_id": 2816,
+      "top1_score": 5.526040077209473,
+      "top1_video_index": 5717
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.311598777770996,
+      "gt_video_index": 5093,
+      "query_id": 2817,
+      "top1_score": 5.031992435455322,
+      "top1_video_index": 7194
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.136702299118042,
+      "gt_video_index": 5093,
+      "query_id": 2818,
+      "top1_score": 4.95820951461792,
+      "top1_video_index": 6020
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.6297444105148315,
+      "gt_video_index": 5093,
+      "query_id": 2819,
+      "top1_score": 4.18212890625,
+      "top1_video_index": 5424
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.4356324672698975,
+      "gt_video_index": 5095,
+      "query_id": 2825,
+      "top1_score": 5.06048583984375,
+      "top1_video_index": 6659
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1833882331848145,
+      "gt_video_index": 5095,
+      "query_id": 2826,
+      "top1_score": 4.990838527679443,
+      "top1_video_index": 3009
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.6578288078308105,
+      "gt_video_index": 5095,
+      "query_id": 2827,
+      "top1_score": 5.129359245300293,
+      "top1_video_index": 5274
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.5109918117523193,
+      "gt_video_index": 5095,
+      "query_id": 2828,
+      "top1_score": 4.179441928863525,
+      "top1_video_index": 4879
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.709095001220703,
+      "gt_video_index": 5095,
+      "query_id": 2829,
+      "top1_score": 4.208224296569824,
+      "top1_video_index": 7417
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.1579737663269043,
+      "gt_video_index": 14984,
+      "query_id": 2840,
+      "top1_score": 3.940129041671753,
+      "top1_video_index": 7417
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.037280559539795,
+      "gt_video_index": 14984,
+      "query_id": 2841,
+      "top1_score": 4.653049945831299,
+      "top1_video_index": 12907
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.2681281566619873,
+      "gt_video_index": 14984,
+      "query_id": 2842,
+      "top1_score": 3.7184553146362305,
+      "top1_video_index": 4866
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.221020460128784,
+      "gt_video_index": 14984,
+      "query_id": 2843,
+      "top1_score": 4.739467144012451,
+      "top1_video_index": 7132
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.013044834136963,
+      "gt_video_index": 14984,
+      "query_id": 2844,
+      "top1_score": 3.5973660945892334,
+      "top1_video_index": 4866
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.5080606937408447,
+      "gt_video_index": 15328,
+      "query_id": 2910,
+      "top1_score": 3.787201404571533,
+      "top1_video_index": 706
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.824105978012085,
+      "gt_video_index": 15328,
+      "query_id": 2911,
+      "top1_score": 5.019237995147705,
+      "top1_video_index": 12278
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.8597006797790527,
+      "gt_video_index": 15328,
+      "query_id": 2912,
+      "top1_score": 4.282695770263672,
+      "top1_video_index": 14750
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.2050857543945312,
+      "gt_video_index": 15328,
+      "query_id": 2913,
+      "top1_score": 4.385591506958008,
+      "top1_video_index": 14437
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.203819751739502,
+      "gt_video_index": 15328,
+      "query_id": 2914,
+      "top1_score": 3.7054975032806396,
+      "top1_video_index": 13020
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.907400369644165,
+      "gt_video_index": 13676,
+      "query_id": 2920,
+      "top1_score": 4.375574111938477,
+      "top1_video_index": 11839
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.8245229721069336,
+      "gt_video_index": 13676,
+      "query_id": 2921,
+      "top1_score": 4.328871726989746,
+      "top1_video_index": 13372
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.8353044986724854,
+      "gt_video_index": 13676,
+      "query_id": 2922,
+      "top1_score": 4.19439172744751,
+      "top1_video_index": 6754
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 3.1629467010498047,
+      "gt_video_index": 13676,
+      "query_id": 2923,
+      "top1_score": 4.644647121429443,
+      "top1_video_index": 11839
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.618060350418091,
+      "gt_video_index": 13676,
+      "query_id": 2924,
+      "top1_score": 4.140839099884033,
+      "top1_video_index": 13222
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.73786461353302,
+      "gt_video_index": 14981,
+      "query_id": 2935,
+      "top1_score": 4.705676078796387,
+      "top1_video_index": 6836
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.2547181844711304,
+      "gt_video_index": 14981,
+      "query_id": 2936,
+      "top1_score": 3.8272716999053955,
+      "top1_video_index": 12935
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.9566679000854492,
+      "gt_video_index": 14981,
+      "query_id": 2937,
+      "top1_score": 4.4121832847595215,
+      "top1_video_index": 3299
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.5201207399368286,
+      "gt_video_index": 14981,
+      "query_id": 2938,
+      "top1_score": 3.685235023498535,
+      "top1_video_index": 7144
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.042914390563965,
+      "gt_video_index": 14981,
+      "query_id": 2939,
+      "top1_score": 4.5631489753723145,
+      "top1_video_index": 6836
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.984674096107483,
+      "gt_video_index": 14089,
+      "query_id": 2965,
+      "top1_score": 3.659116506576538,
+      "top1_video_index": 3893
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.8152732849121094,
+      "gt_video_index": 14089,
+      "query_id": 2966,
+      "top1_score": 3.9237921237945557,
+      "top1_video_index": 14162
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.624873399734497,
+      "gt_video_index": 14089,
+      "query_id": 2967,
+      "top1_score": 3.2432689666748047,
+      "top1_video_index": 12986
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 2.2477200031280518,
+      "gt_video_index": 14089,
+      "query_id": 2968,
+      "top1_score": 4.2649335861206055,
+      "top1_video_index": 13874
+    },
+    {
+      "gt_rank_within_topk": null,
+      "gt_score": 1.7368558645248413,
+      "gt_video_index": 14089,
+      "query_id": 2969,
+      "top1_score": 3.680695056915283,
+      "top1_video_index": 7417
+    }
+  ],
+  "wrong_video_top1_rate": 100.0
+}

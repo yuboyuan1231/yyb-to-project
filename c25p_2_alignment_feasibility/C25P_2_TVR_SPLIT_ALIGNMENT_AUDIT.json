@@ -1,0 +1,28 @@
+{
+  "annotation_available": true,
+  "annotation_name_overlap_count": 0,
+  "sample_paths": [
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_general_paper_performance/inference_tvr_val_sample_predictions_VR_SVMR_VCMR_hero_nms_thd_0.7_metrics.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_general_paper_performance/opt.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_general_paper_performance/inference_tvr_val_sample_predictions_VR_SVMR_VCMR_hero_metrics.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_c0_repro_20260621/inference_tvr_val_None_predictions_VR_SVMR_VCMR_hero_nms_thd_0.7.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_c0_repro_20260621/inference_tvr_val_None_predictions_VR_SVMR_VCMR_hero_metrics.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_c0_repro_20260621/inference_tvr_val_None_predictions_VR_SVMR_VCMR_hero_nms_thd_0.7_metrics.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_c0_repro_20260621/opt.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/tvr-conquer_c0_repro_20260621/inference_tvr_val_None_predictions_VR_SVMR_VCMR_hero.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c25p_2_alignment_feasibility/C25P_2_TVR_SPLIT_ALIGNMENT_AUDIT.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_4_native_retriever/C12_4A_CORPUS_INDEX_AUDIT.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_4r_retriever_repair/C12_4R_A_CORPUS_INDEX_ALIGNMENT.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/config/tvr_data_config_nvme_c35.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/config/tvr_data_config.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/config/tvr_data_config_c5_nvme.json",
+    "/tmp/yyb_nvme_c35/tvr_feature_release/data/tvr_video2dur_idx.json",
+    "/tmp/yyb_nvme_c35/tvr_feature_release/data/tvr_train_select100_release.jsonl",
+    "/tmp/tvr_feature_release_c5/data/tvr_val_release.jsonl",
+    "/tmp/tvr_feature_release_c5/data/tvr_test_public_release.jsonl",
+    "/tmp/tvr_feature_release_c5/data/tvr_train_release.jsonl",
+    "/tmp/tvr_feature_release_c5/data/tvr_train_selected_release.jsonl",
+    "/tmp/tvr_feature_release_c5/data/tvr_video2dur_idx.json",
+    "/tmp/tvr_feature_release_c5/data/tvr_train_select100_release.jsonl"
+  ]
+}

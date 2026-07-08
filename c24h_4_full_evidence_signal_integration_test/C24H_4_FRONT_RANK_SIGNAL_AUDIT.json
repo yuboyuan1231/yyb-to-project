@@ -1,0 +1,59 @@
+{
+  "coverage": {
+    "bmn_missing_count": 0,
+    "duplicate_candidate_count": 0,
+    "event_direct_columns_present": true,
+    "event_missing_count": 0,
+    "evidence_by_split": {
+      "calib_holdout": {
+        "bmn_available_rows": 555520,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 555520,
+        "event_coverage": 1.0,
+        "queries": 4340,
+        "rows": 555520,
+        "t2_available_rows": 555520,
+        "t2_coverage": 1.0
+      },
+      "calib_select": {
+        "bmn_available_rows": 1110656,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 1110656,
+        "event_coverage": 1.0,
+        "queries": 8677,
+        "rows": 1110656,
+        "t2_available_rows": 1110656,
+        "t2_coverage": 1.0
+      },
+      "train_fit": {
+        "bmn_available_rows": 8886784,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 8886784,
+        "event_coverage": 1.0,
+        "queries": 69428,
+        "rows": 8886784,
+        "t2_available_rows": 8886784,
+        "t2_coverage": 1.0
+      }
+    },
+    "query_count": 82445,
+    "row_count": 10552960,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    },
+    "t2_missing_count": 0
+  },
+  "rebuilt_complete": true,
+  "table_ready": true
+}

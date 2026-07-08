@@ -1,0 +1,97 @@
+{
+  "A_first_stage_baseline_replay": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 71.6
+  },
+  "B_zero_delta_replay_if_available": {
+    "GT_video_mean_rank": 7.748,
+    "GT_video_median_rank": 3.0,
+    "VR_R@1": 28.4,
+    "VR_R@10": 78.6,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 63.9,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 71.6
+  },
+  "C_c19_c20_c21_hybrid_candidate_video_ranks": {
+    "c21_vcmr_final": {
+      "VCMR_R@100_IoU0.5": 37.45,
+      "VCMR_R@100_IoU0.7": 22.65,
+      "VCMR_R@10_IoU0.5": 11.7,
+      "VCMR_R@10_IoU0.7": 6.3,
+      "VCMR_R@1_IoU0.5": 2.95,
+      "VCMR_R@1_IoU0.7": 1.4,
+      "VCMR_R@5_IoU0.5": 8.0,
+      "VCMR_R@5_IoU0.7": 3.9,
+      "already_correct_anchor_harm_rate": 0.0,
+      "harmful_promotion_rate": 0.0,
+      "promotion_attempt_rate": 0.65,
+      "promotion_precision": 0.0,
+      "promotion_recall": 0.0,
+      "query_count": 2000,
+      "wrong_video_high_score_rate": 71.75,
+      "wrong_video_top1_rate": 71.75
+    },
+    "source": "C22/C21 final diagnostics"
+  },
+  "D_c22_native_retriever_full_library": {
+    "GT_video_mean_rank": 5789.952,
+    "GT_video_median_rank": 4679.0,
+    "VR_R@1": 0.0,
+    "VR_R@10": 0.2,
+    "VR_R@100": 1.7,
+    "VR_R@5": 0.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 100.0
+  },
+  "E_c22_native_restricted_to_first_stage_top128": {
+    "GT_video_mean_rank": 67.518,
+    "GT_video_median_rank": 69.0,
+    "VR_R@1": 0.2,
+    "VR_R@10": 5.1,
+    "VR_R@100": 77.9,
+    "VR_R@128": 100.0,
+    "VR_R@5": 1.4,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "score_collapse_ratio_std_lt_1e_6": 0.0,
+    "score_entropy_mean": 4.366710307598114,
+    "score_std_mean": 0.9999999821782112,
+    "wrong_video_top1_rate": 99.8
+  },
+  "F_random_score_sanity_within_top128": {
+    "GT_video_mean_rank": 65.052,
+    "GT_video_median_rank": 65.0,
+    "VR_R@1": 0.7,
+    "VR_R@10": 7.6,
+    "VR_R@100": 78.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 3.5,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 99.3
+  },
+  "G_oracle_gt_video_score_sanity_within_top128": {
+    "GT_video_mean_rank": 1.0,
+    "GT_video_median_rank": 1.0,
+    "VR_R@1": 100.0,
+    "VR_R@10": 100.0,
+    "VR_R@100": 100.0,
+    "VR_R@128": 100.0,
+    "VR_R@5": 100.0,
+    "missing_rank_count": 0,
+    "query_count": 1000,
+    "wrong_video_top1_rate": 0.0
+  }
+}

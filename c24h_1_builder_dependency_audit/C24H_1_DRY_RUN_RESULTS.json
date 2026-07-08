@@ -1,0 +1,7 @@
+{
+  "command": "internal:stage_c24h_2(mode=smoke, dry_run=True, max_queries=2, chunk_size=4, write_outputs=False)",
+  "exit_code": 0,
+  "runtime_sec": 7.262449502944946,
+  "stderr_summary": "",
+  "stdout_summary": "{\"status\": \"C24H_BMN_T2_REBUILD_PARTIAL\", \"coverage\": {\"row_count\": 4, \"query_count\": 1, \"split_coverage\": {\"train_fit\": {\"rows\": 4, \"queries\": 1}}, \"evidence_by_split\": {\"train_fit\": {\"rows\": 4, \"queries\": 1, \"bmn_available_rows\": 4, \"t2_available_rows\": 4, \"event_available_rows\": 0, \"bmn_coverage\": 1.0, \"t2_coverage\": 1.0, \"event_coverage\": 0.0}}, \"bmn_missing_count\": 0, \"t2_missing_count\": 0, \"event_missing_count\": 4, \"event_direct_columns_present\": false, \"duplicate_candidate_count\": 0}}"
+}

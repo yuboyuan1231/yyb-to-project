@@ -1,0 +1,6 @@
+{
+  "holdout_report_only": true,
+  "name": "B_C19_C21_hybrid",
+  "select_objective": 0.0,
+  "selection_split": "calib_select"
+}

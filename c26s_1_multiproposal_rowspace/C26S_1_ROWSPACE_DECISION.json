@@ -1,0 +1,64 @@
+{
+  "coverage": {
+    "has_train_fit": false,
+    "query_count": 1800,
+    "span_row_count": 10238083,
+    "split_query_coverage": {
+      "calib_holdout": 900,
+      "calib_select": 900
+    },
+    "video_candidate_count": 180000
+  },
+  "join_audit": {
+    "duplicate_span_count": 0,
+    "invalid_span_count": 0,
+    "position_based_join": false,
+    "silent_fill": false,
+    "train_fit_missing_reason": "C26R joined multi-span table only covers calib_select/calib_holdout; train_fit multi-span rebuild is required for READY/full training."
+  },
+  "manifest": {
+    "has_train_fit": false,
+    "local_only": true,
+    "local_path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_CANONICAL_MULTISPAN_medium_seed2026.local.parquet",
+    "query_count": 1800,
+    "row_count": 10238083,
+    "schema_hash": "1c11ee7e20167544",
+    "source": "/tmp/c26r_score_cache/CONQUER-RLEM-c2c3/C26R_C17_C26_JOINED_MULTI_SPAN_medium_seed2026.local.parquet",
+    "split_coverage": {
+      "calib_holdout": 900,
+      "calib_select": 900
+    }
+  },
+  "mode": "medium",
+  "nan_inf_numeric_count": 30231512,
+  "official_used": false,
+  "proposal_distribution": {
+    "query_video_pairs": 180000,
+    "rows": 10238083,
+    "span_count_per_query_video": {
+      "max": 64,
+      "median": 57.0,
+      "min": 3,
+      "p95": 61.0
+    },
+    "span_rows_per_query": {
+      "max": 6116,
+      "median": 5690.0,
+      "min": 5400,
+      "p95": 5855.0
+    },
+    "topm": {
+      "top16_per_video_rows": 2879868,
+      "top1_per_video_rows": 180000,
+      "top2_per_video_rows": 360000,
+      "top32_per_video_rows": 5759197,
+      "top4_per_video_rows": 719990,
+      "top64_per_video_rows": 10238083,
+      "top8_per_video_rows": 1439950
+    }
+  },
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26s_1_multiproposal_rowspace/C26S_1_ROWSPACE_SAMPLE.parquet",
+  "span_unit": "seconds",
+  "stage": "C26S-1",
+  "status": "C26S_MULTISPAN_ROWSPACE_PARTIAL"
+}

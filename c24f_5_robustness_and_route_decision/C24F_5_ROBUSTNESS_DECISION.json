@@ -1,0 +1,155 @@
+{
+  "c25_route_audit": {
+    "event_direct_columns_present": true,
+    "integration_promising": false,
+    "recommendation": "C24F_NEED_MORE_FULL_EVIDENCE_REPAIR"
+  },
+  "d_e_f_subset_audit": {
+    "correct_video_wrong_span_rows": 1810,
+    "gt_top5_not_top1_rows": 8000,
+    "wrong_video_high_score": {
+      "bmn_z": {
+        "available": true,
+        "iou07_false_positive_rate": 0.9996,
+        "rows": 20000,
+        "threshold_p90": 1.327252006530762,
+        "wrong_video_rate": 0.9917
+      },
+      "event_relevance_score": {
+        "available": true,
+        "iou07_false_positive_rate": 0.99955,
+        "rows": 20000,
+        "threshold_p90": 0.5055953025817871,
+        "wrong_video_rate": 0.9893
+      },
+      "event_z": {
+        "available": true,
+        "iou07_false_positive_rate": 0.9996,
+        "rows": 20000,
+        "threshold_p90": 1.311837234973863,
+        "wrong_video_rate": 0.9904
+      },
+      "t2_z": {
+        "available": true,
+        "iou07_false_positive_rate": 0.99985,
+        "rows": 20000,
+        "threshold_p90": 1.0208140850067142,
+        "wrong_video_rate": 0.9957
+      }
+    }
+  },
+  "evaluator_modified": false,
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "pseudo_onelook_diagnostic": {
+    "pseudo_official_not_used_for_selection": true,
+    "pseudo_one_look_executed": false
+  },
+  "query_duration_robustness": {
+    "source": "C24F-3 aggregate; detailed query/duration breakdown is in canonical table local-only"
+  },
+  "route_recommendation": "C24F_NEED_MORE_FULL_EVIDENCE_REPAIR",
+  "score_distribution_audit": {
+    "bmn_final_score": {
+      "count": 199999,
+      "mean": 0.4613111576654197,
+      "missing": 128001,
+      "p05": 0.2230473592877388,
+      "p50": 0.4179234504699707,
+      "p95": 0.8425103604793545
+    },
+    "bmn_z": {
+      "count": 328000,
+      "mean": 2.6749402692871627e-10,
+      "missing": 0,
+      "p05": -1.356920063495636,
+      "p50": 0.0,
+      "p95": 1.4357915401458736
+    },
+    "event_method_distribution": {
+      "E0_fixed_window_events": 204079,
+      "E1_visual_cosine_change_point_events": 32179,
+      "E2_subtitle_boundary_events": 29485,
+      "E3_multimodal_change_point_events": 31962,
+      "E4_hybrid_fixed_change_events": 30295
+    },
+    "event_overlap_proxy": {
+      "count": 328000,
+      "mean": 0.1559244631098004,
+      "missing": 0,
+      "p05": 0.0,
+      "p50": 0.0,
+      "p95": 0.800000011920929
+    },
+    "event_relevance_score": {
+      "count": 328000,
+      "mean": 0.4802372279019072,
+      "missing": 0,
+      "p05": 0.45200425386428833,
+      "p50": 0.47742269933223724,
+      "p95": 0.5196210771799087
+    },
+    "event_z": {
+      "count": 328000,
+      "mean": 1.8738398366844107e-18,
+      "missing": 0,
+      "p05": -1.3425644479848593,
+      "p50": -0.15005165655211483,
+      "p95": 1.8991311861486435
+    },
+    "first_stage_score": {
+      "count": 328000,
+      "mean": 9402.586415786744,
+      "missing": 0,
+      "p05": 1638.3568908691407,
+      "p50": 5159.7880859375,
+      "p95": 30254.414453125
+    },
+    "first_stage_z": {
+      "count": 328000,
+      "mean": -4.657520981354316e-19,
+      "missing": 0,
+      "p05": -0.6655305941694303,
+      "p50": -0.30617709348609207,
+      "p95": 1.7570864240110664
+    },
+    "t2_score": {
+      "count": 194433,
+      "mean": 0.8036310111092309,
+      "missing": 133567,
+      "p05": 0.6435937643051147,
+      "p50": 0.8120716214179993,
+      "p95": 0.9312169313430786
+    },
+    "t2_z": {
+      "count": 328000,
+      "mean": -1.356369128124868e-09,
+      "missing": 0,
+      "p05": -1.5132052361965178,
+      "p50": 0.0,
+      "p95": 1.0810983300209045
+    }
+  },
+  "seed": 2026,
+  "seed_robustness": {
+    "seed2026": {
+      "integration": "C24F_FULL_EVIDENCE_INTEGRATION_FRONT_RANK_WEAK",
+      "materialization": "C24F_EVIDENCE_MATERIALIZED_PARTIAL",
+      "signal": "C24F_EVIDENCE_SIGNAL_NOISY_OR_HARMFUL"
+    },
+    "seed2027": "not rerun; deterministic materialization",
+    "seed2028": "not rerun; deterministic materialization"
+  },
+  "selection_firewall_audit": {
+    "evaluator_modified": false,
+    "nms_modified": false,
+    "official_prediction_pool_used": false,
+    "official_val_used": false,
+    "pseudo_official_holdout_used_for_selection": false
+  },
+  "stage": "C24F-5",
+  "status": "C24F_ROBUSTNESS_PARTIAL"
+}

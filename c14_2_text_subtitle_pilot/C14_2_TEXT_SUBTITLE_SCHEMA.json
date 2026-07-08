@@ -1,0 +1,37 @@
+{
+  "feature_columns": [
+    "query_global_to_subtitle_clip_max",
+    "query_global_to_subtitle_clip_mean",
+    "query_to_subtitle_window_max",
+    "query_to_subtitle_window_mean",
+    "subtitle_mass_inside_span",
+    "subtitle_mean_inside_span",
+    "subtitle_max_inside_span",
+    "subtitle_peak_in_span",
+    "subtitle_inside_outside_contrast",
+    "subtitle_left_context_contrast",
+    "subtitle_right_context_contrast",
+    "subtitle_coverage_ratio",
+    "subtitle_missing_mask",
+    "qtype_v",
+    "qtype_t",
+    "qtype_vt",
+    "qtype_unknown",
+    "duration_bucket_short",
+    "duration_bucket_medium",
+    "duration_bucket_long",
+    "short_moment"
+  ],
+  "meta_columns": [
+    "base_score",
+    "c12_t2_score",
+    "rank_norm",
+    "span_duration_norm",
+    "center_norm",
+    "retriever_score_z"
+  ],
+  "official_val_used": false,
+  "parquet": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c14_2_text_subtitle_pilot/C14_2_TEXT_SUBTITLE_FEATURES.parquet",
+  "schema_hash": "9337e49d2fe51ca09751ef90f5a1976157d9d2e3e1b7ec7d9bdbbdcd9d966a7e",
+  "stage": "C14-2"
+}

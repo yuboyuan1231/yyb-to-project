@@ -1,0 +1,92 @@
+# C12-5U-E Results
+
+## C12_5_teacher_distilled_baseline
+- IoU@0.5 top100: 62.9954
+- IoU@0.7 top50: 30.3687
+- IoU@0.7 top100: 43.0876
+- IoU@0.7 top500: 74.5161
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 30.99078341013825 / 18.82488479262673 / 5.783410138248848
+- best-IoU mean/median rank: 302.0963133640553 / 228.0
+- short IoU@0.7 top100: 30.747474747474747
+- PQ Spearman: 0.07288033890707067
+- top100 Spearman: -0.08017211161589126
+- AUC@0.7: 0.53605
+
+## C12_5S_S2_span_context_contrast
+- IoU@0.5 top100: 71.6590
+- IoU@0.7 top50: 34.8848
+- IoU@0.7 top100: 48.3180
+- IoU@0.7 top500: 81.0829
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 35.16129032258065 / 22.71889400921659 / 7.027649769585254
+- best-IoU mean/median rank: 232.93433179723502 / 171.0
+- short IoU@0.7 top100: 32.56565656565657
+- PQ Spearman: -0.14603410660218127
+- top100 Spearman: 0.07597186105344814
+- AUC@0.7: 0.535025
+
+## C12_5T_T2_listwise_soft_iou
+- IoU@0.5 top100: 81.2442
+- IoU@0.7 top50: 38.8710
+- IoU@0.7 top100: 55.0000
+- IoU@0.7 top500: 82.4654
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 45.87557603686636 / 29.493087557603687 / 9.67741935483871
+- best-IoU mean/median rank: 194.03755760368662 / 119.0
+- short IoU@0.7 top100: 45.09090909090909
+- PQ Spearman: -0.1930954945834624
+- top100 Spearman: 0.033238826444936434
+- AUC@0.7: 0.549555
+
+## U1_two_head_select
+- IoU@0.5 top100: 70.1382
+- IoU@0.7 top50: 28.8018
+- IoU@0.7 top100: 42.6037
+- IoU@0.7 top500: 75.9908
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 32.764976958525345 / 21.359447004608295 / 6.8663594470046085
+- best-IoU mean/median rank: 292.60990783410136 / 197.0
+- short IoU@0.7 top100: 32.44444444444444
+- PQ Spearman: -0.14811460730177597
+- top100 Spearman: 0.13085859671444822
+- AUC@0.7: 0.58348
+
+## U2_two_head_quality
+- IoU@0.5 top100: 77.0507
+- IoU@0.7 top50: 38.9631
+- IoU@0.7 top100: 53.3180
+- IoU@0.7 top500: 80.0000
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 42.78801843317972 / 27.83410138248848 / 9.331797235023041
+- best-IoU mean/median rank: 225.8688940092166 / 135.0
+- short IoU@0.7 top100: 38.98989898989899
+- PQ Spearman: -0.14811460730177597
+- top100 Spearman: 0.06724012249382978
+- AUC@0.7: 0.58348
+
+## U3_select_then_quality_top100
+- IoU@0.5 top100: 70.1382
+- IoU@0.7 top50: 34.1244
+- IoU@0.7 top100: 42.6037
+- IoU@0.7 top500: 75.9908
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 32.764976958525345 / 23.317972350230416 / 9.03225806451613
+- best-IoU mean/median rank: 291.0490783410138 / 197.0
+- short IoU@0.7 top100: 32.44444444444444
+- PQ Spearman: -0.14811460730177597
+- top100 Spearman: 0.12950124770096824
+- AUC@0.7: 0.58348
+
+## U4_duration_bucket_quality
+- IoU@0.5 top100: 77.0507
+- IoU@0.7 top50: 38.9631
+- IoU@0.7 top100: 53.3180
+- IoU@0.7 top500: 80.0000
+- generated M1000 IoU@0.7: 85.0461
+- best-IoU top100/top50/top10: 42.78801843317972 / 27.83410138248848 / 9.331797235023041
+- best-IoU mean/median rank: 225.86382488479262 / 135.0
+- short IoU@0.7 top100: 38.98989898989899
+- PQ Spearman: -0.21281543808093217
+- top100 Spearman: 0.03232574213784362
+- AUC@0.7: 0.4931075

@@ -1,0 +1,13 @@
+{
+  "has_train_fit": false,
+  "local_only": true,
+  "local_path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_CANONICAL_MULTISPAN_medium_seed2026.local.parquet",
+  "query_count": 1800,
+  "row_count": 10238083,
+  "schema_hash": "1c11ee7e20167544",
+  "source": "/tmp/c26r_score_cache/CONQUER-RLEM-c2c3/C26R_C17_C26_JOINED_MULTI_SPAN_medium_seed2026.local.parquet",
+  "split_coverage": {
+    "calib_holdout": 900,
+    "calib_select": 900
+  }
+}

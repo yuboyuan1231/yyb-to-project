@@ -1,0 +1,85 @@
+{
+  "duration": {
+    "long": {
+      "GT_video_mean_rank": 5789.952,
+      "GT_video_median_rank": 4679.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.2,
+      "VR_R@100": 1.7,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 1000,
+      "wrong_video_top1_rate": 100.0
+    }
+  },
+  "hard_failure_D_E_F": {
+    "D": {
+      "GT_video_mean_rank": 5595.699404761905,
+      "GT_video_median_rank": 4359.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.2976190476190476,
+      "VR_R@100": 2.0833333333333335,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 336,
+      "wrong_video_top1_rate": 100.0
+    },
+    "E": {
+      "GT_video_mean_rank": 5360.220588235294,
+      "GT_video_median_rank": 3775.5,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.7352941176470589,
+      "VR_R@100": 3.676470588235294,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 136,
+      "wrong_video_top1_rate": 100.0
+    },
+    "F": {
+      "GT_video_mean_rank": 6104.135416666667,
+      "GT_video_median_rank": 4814.5,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.0,
+      "VR_R@100": 1.0416666666666667,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 96,
+      "wrong_video_top1_rate": 100.0
+    }
+  },
+  "query_type": {
+    "t": {
+      "GT_video_mean_rank": 4783.617647058823,
+      "GT_video_median_rank": 2934.5,
+      "VR_R@1": 0.0,
+      "VR_R@10": 1.4705882352941178,
+      "VR_R@100": 5.882352941176471,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 68,
+      "wrong_video_top1_rate": 100.0
+    },
+    "v": {
+      "GT_video_mean_rank": 6303.013175230567,
+      "GT_video_median_rank": 5316.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.0,
+      "VR_R@100": 0.922266139657444,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 759,
+      "wrong_video_top1_rate": 100.0
+    },
+    "vt": {
+      "GT_video_mean_rank": 3934.5606936416184,
+      "GT_video_median_rank": 2244.0,
+      "VR_R@1": 0.0,
+      "VR_R@10": 0.5780346820809249,
+      "VR_R@100": 3.468208092485549,
+      "VR_R@5": 0.0,
+      "missing_rank_count": 0,
+      "query_count": 173,
+      "wrong_video_top1_rate": 100.0
+    }
+  }
+}

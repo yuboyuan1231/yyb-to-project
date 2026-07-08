@@ -1,0 +1,38 @@
+{
+  "conda_prefix": "/home/a/miniconda3",
+  "disk_free_bytes": 657861263360,
+  "disk_total_bytes": 1967844950016,
+  "executable": "/home/a/miniconda3/envs/conquer-rlem/bin/python",
+  "ffmpeg_available": false,
+  "ffprobe_available": false,
+  "package_import_available": {
+    "clip": false,
+    "cv2": false,
+    "decord": false,
+    "dinov2": false,
+    "open_clip": false,
+    "timm": false,
+    "torch": true,
+    "torchvision": false,
+    "transformers": false
+  },
+  "pip_show": {
+    "decord": {
+      "available": false,
+      "summary": []
+    },
+    "open_clip_torch": {
+      "available": false,
+      "summary": []
+    },
+    "timm": {
+      "available": false,
+      "summary": []
+    },
+    "transformers": {
+      "available": false,
+      "summary": []
+    }
+  },
+  "python_version": "3.9.19 | packaged by conda-forge | (main, Mar 20 2024, 12:50:21) \n[GCC 12.3.0]"
+}

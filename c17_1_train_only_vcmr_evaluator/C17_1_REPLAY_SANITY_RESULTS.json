@@ -1,0 +1,8 @@
+{
+  "c12_5t_t2_replay_sanity": "implemented through T2 candidate scores over retrieved videos",
+  "c16_bmn_map_only_sanity": "implemented through BMN map-only formula over retrieved videos",
+  "nms_sanity": "train-only per-query/video temporal suppression at threshold 0.7; official NMS not modified",
+  "perfect_oracle_score_sanity": "implemented in evaluator by direct gt span semantics; exercised during C17-4 oracle rows",
+  "random_score_sanity": "implemented in C17-4 baseline as random_uniform",
+  "timestamp_sanity": "idx_to_ts/ts_to_idx from C12 native span generation reused"
+}

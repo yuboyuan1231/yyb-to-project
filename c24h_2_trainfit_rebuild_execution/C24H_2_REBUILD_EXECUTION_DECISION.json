@@ -1,0 +1,1180 @@
+{
+  "blocked_reason": null,
+  "bmn_rebuild_manifest": {
+    "active_splits": [
+      "train_fit",
+      "calib_select",
+      "calib_holdout"
+    ],
+    "bmn_checkpoint": {
+      "mode_in_checkpoint": "medium",
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+      "seed": 2026,
+      "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e"
+    },
+    "builder_functions": [
+      "build_candidate_batch",
+      "bmn_scores_for_batch",
+      "t2_scores_for_batch"
+    ],
+    "builder_path": "run_c17_bmn_t2_native_vcmr_integration.py",
+    "chunk_size": 2048,
+    "chunk_summary": {
+      "chunk_count": 5155,
+      "chunk_manifest_note": "Repository manifest is a compact summary; full per-chunk parquet/json sidecars stay local under /tmp/c24h_score_cache.",
+      "chunk_manifest_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_2_trainfit_rebuild_execution/C24H_2_CHUNK_MANIFEST.json",
+      "first_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 2048,
+        "candidate_row_count": 2048,
+        "chunk_size": 2048,
+        "chunk_start": 0,
+        "command": "internal:C17 builder split=train_fit start=0 count=2048",
+        "ended_at": "2026-07-06T21:33:48.566655+00:00",
+        "exit_code": 0,
+        "expected_row_count": 2048,
+        "first_stage_source": {
+          "expected_candidate_rows": 8886784,
+          "full_selected_query_count_before_slice": 69428,
+          "loaded_query_count": 69428,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 69428,
+          "query_slice_start": 0,
+          "requested_query_count": 69428,
+          "source_note": "split_specific_cache",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit"
+        },
+        "output_hash": "51f74f6e07410531fdd77c4a1591c023e20127e6231ea7ac0a8fbeeb5da46365",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/train_fit/chunk_000000000_002048.parquet",
+        "pair_count": 2048,
+        "query_count": 16,
+        "query_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resumed_from_existing": true,
+        "runtime_sec": 0.0075414180755615234,
+        "runtime_seconds": 0.007541656494140625,
+        "skipped_because_existing": true,
+        "split": "train_fit",
+        "started_at": "2026-07-06T21:33:48.559125+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=train_fit chunk_start=0 pairs=2048",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 2048
+      },
+      "last_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 512,
+        "candidate_row_count": 512,
+        "chunk_size": 2048,
+        "chunk_start": 555008,
+        "command": "internal:C17 builder split=calib_holdout start=555008 count=512",
+        "ended_at": "2026-07-06T22:58:43.917034+00:00",
+        "exit_code": 0,
+        "expected_row_count": 512,
+        "first_stage_source": {
+          "expected_candidate_rows": 555520,
+          "full_selected_query_count_before_slice": 4340,
+          "loaded_query_count": 4340,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 4340,
+          "query_slice_start": 0,
+          "requested_query_count": 4340,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_holdout"
+        },
+        "output_hash": "d2cfd72719ed3ecdbe5be467c737530a750b2721be6c3fcbdba784be3b5fec47",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/calib_holdout/chunk_000555008_002048.parquet",
+        "pair_count": 512,
+        "query_count": 4,
+        "query_ids": [
+          86961,
+          86962,
+          86963,
+          86964
+        ],
+        "resumed_from_existing": false,
+        "runtime_sec": 6.569215297698975,
+        "runtime_seconds": 6.569215536117554,
+        "skipped_because_existing": false,
+        "split": "calib_holdout",
+        "started_at": "2026-07-06T22:58:37.347829+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=calib_holdout chunk_start=555008 pairs=512",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 512
+      },
+      "split_counts": {
+        "calib_holdout": {
+          "chunks": 272,
+          "failed_chunks": 0,
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "chunks": 543,
+          "failed_chunks": 0,
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "chunks": 4340,
+          "failed_chunks": 0,
+          "queries": 69428,
+          "rows": 8886784
+        }
+      }
+    },
+    "combine": true,
+    "combined_output": {
+      "chunk_files_combined": 5155,
+      "exists": true,
+      "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+      "row_count": 10552960,
+      "sha256": "3f498a163716dca28a5e02f5b69ee32cb27c4122886ea3559ee7134cd1d006c3",
+      "size_bytes": 1381569634
+    },
+    "coverage": {
+      "bmn_missing_count": 0,
+      "duplicate_candidate_count": null,
+      "event_direct_columns_present": false,
+      "event_missing_count": null,
+      "evidence_by_split": {
+        "calib_holdout": {
+          "bmn_available_rows": 555520,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 4340,
+          "expected_rows": 555520,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 4340,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 555520,
+          "t2_available_rows": 555520,
+          "t2_coverage": 1.0
+        },
+        "calib_select": {
+          "bmn_available_rows": 1110656,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 8677,
+          "expected_rows": 1110656,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 8677,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 1110656,
+          "t2_available_rows": 1110656,
+          "t2_coverage": 1.0
+        },
+        "train_fit": {
+          "bmn_available_rows": 8886784,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 69428,
+          "expected_rows": 8886784,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 69428,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 8886784,
+          "t2_available_rows": 8886784,
+          "t2_coverage": 1.0
+        }
+      },
+      "expected_by_split": {
+        "calib_holdout": {
+          "expected_candidate_rows": 555520,
+          "full_selected_query_count_before_slice": 4340,
+          "loaded_query_count": 4340,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 4340,
+          "query_slice_start": 0,
+          "requested_query_count": 4340,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_holdout"
+        },
+        "calib_select": {
+          "expected_candidate_rows": 1110656,
+          "full_selected_query_count_before_slice": 8677,
+          "loaded_query_count": 8677,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 8677,
+          "query_slice_start": 0,
+          "requested_query_count": 8677,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_select"
+        },
+        "train_fit": {
+          "expected_candidate_rows": 8886784,
+          "full_selected_query_count_before_slice": 69428,
+          "loaded_query_count": 69428,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 69428,
+          "query_slice_start": 0,
+          "requested_query_count": 69428,
+          "source_note": "split_specific_cache",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit"
+        }
+      },
+      "query_count": 82445,
+      "row_count": 10552960,
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "queries": 69428,
+          "rows": 8886784
+        }
+      },
+      "t2_missing_count": 0
+    },
+    "dry_run": false,
+    "expected_by_split": {
+      "calib_holdout": {
+        "expected_candidate_rows": 555520,
+        "full_selected_query_count_before_slice": 4340,
+        "loaded_query_count": 4340,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 4340,
+        "query_slice_start": 0,
+        "requested_query_count": 4340,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_holdout"
+      },
+      "calib_select": {
+        "expected_candidate_rows": 1110656,
+        "full_selected_query_count_before_slice": 8677,
+        "loaded_query_count": 8677,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 8677,
+        "query_slice_start": 0,
+        "requested_query_count": 8677,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_select"
+      },
+      "train_fit": {
+        "expected_candidate_rows": 8886784,
+        "full_selected_query_count_before_slice": 69428,
+        "loaded_query_count": 69428,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 69428,
+        "query_slice_start": 0,
+        "requested_query_count": 69428,
+        "source_note": "split_specific_cache",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "train_fit"
+      }
+    },
+    "feature_read_paths": {
+      "ssd_feature_cache_used": true,
+      "subtitle_lmdb": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+      "visual_lmdb": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+    },
+    "force": false,
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24h_full_bmn_t2_trainfit_rebuild.py --stage c24h_2 --mode full --seed 2026 --max_queries None --chunk_size 2048 --resume",
+    "max_queries": null,
+    "mode": "full",
+    "official_prediction_pool_used": false,
+    "official_val_used": false,
+    "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+    "progress_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILD_PROGRESS_full.json",
+    "progress_tag": null,
+    "query_count": 82445,
+    "query_end": null,
+    "query_start": null,
+    "resume": true,
+    "row_count": 10552960,
+    "runtime_sec": 5123.9123520851135,
+    "seed": 2026,
+    "sha256": "3f498a163716dca28a5e02f5b69ee32cb27c4122886ea3559ee7134cd1d006c3",
+    "size_bytes": 1381569634,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    },
+    "t2_checkpoint": {
+      "path": "c12_models/c12_5t_T2_listwise_soft_iou.pt",
+      "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80"
+    }
+  },
+  "chunk_manifest": {
+    "chunk_count": 5155,
+    "chunk_manifest_note": "Repository manifest is a compact summary; full per-chunk parquet/json sidecars stay local under /tmp/c24h_score_cache.",
+    "chunk_manifest_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_2_trainfit_rebuild_execution/C24H_2_CHUNK_MANIFEST.json",
+    "first_chunk": {
+      "bmn_coverage": 1.0,
+      "bmn_rows_written": 2048,
+      "candidate_row_count": 2048,
+      "chunk_size": 2048,
+      "chunk_start": 0,
+      "command": "internal:C17 builder split=train_fit start=0 count=2048",
+      "ended_at": "2026-07-06T21:33:48.566655+00:00",
+      "exit_code": 0,
+      "expected_row_count": 2048,
+      "first_stage_source": {
+        "expected_candidate_rows": 8886784,
+        "full_selected_query_count_before_slice": 69428,
+        "loaded_query_count": 69428,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 69428,
+        "query_slice_start": 0,
+        "requested_query_count": 69428,
+        "source_note": "split_specific_cache",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "train_fit"
+      },
+      "output_hash": "51f74f6e07410531fdd77c4a1591c023e20127e6231ea7ac0a8fbeeb5da46365",
+      "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/train_fit/chunk_000000000_002048.parquet",
+      "pair_count": 2048,
+      "query_count": 16,
+      "query_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resumed_from_existing": true,
+      "runtime_sec": 0.0075414180755615234,
+      "runtime_seconds": 0.007541656494140625,
+      "skipped_because_existing": true,
+      "split": "train_fit",
+      "started_at": "2026-07-06T21:33:48.559125+00:00",
+      "stderr_summary": "",
+      "stdout_summary": "split=train_fit chunk_start=0 pairs=2048",
+      "t2_coverage": 1.0,
+      "t2_rows_written": 2048
+    },
+    "last_chunk": {
+      "bmn_coverage": 1.0,
+      "bmn_rows_written": 512,
+      "candidate_row_count": 512,
+      "chunk_size": 2048,
+      "chunk_start": 555008,
+      "command": "internal:C17 builder split=calib_holdout start=555008 count=512",
+      "ended_at": "2026-07-06T22:58:43.917034+00:00",
+      "exit_code": 0,
+      "expected_row_count": 512,
+      "first_stage_source": {
+        "expected_candidate_rows": 555520,
+        "full_selected_query_count_before_slice": 4340,
+        "loaded_query_count": 4340,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 4340,
+        "query_slice_start": 0,
+        "requested_query_count": 4340,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_holdout"
+      },
+      "output_hash": "d2cfd72719ed3ecdbe5be467c737530a750b2721be6c3fcbdba784be3b5fec47",
+      "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/calib_holdout/chunk_000555008_002048.parquet",
+      "pair_count": 512,
+      "query_count": 4,
+      "query_ids": [
+        86961,
+        86962,
+        86963,
+        86964
+      ],
+      "resumed_from_existing": false,
+      "runtime_sec": 6.569215297698975,
+      "runtime_seconds": 6.569215536117554,
+      "skipped_because_existing": false,
+      "split": "calib_holdout",
+      "started_at": "2026-07-06T22:58:37.347829+00:00",
+      "stderr_summary": "",
+      "stdout_summary": "split=calib_holdout chunk_start=555008 pairs=512",
+      "t2_coverage": 1.0,
+      "t2_rows_written": 512
+    },
+    "split_counts": {
+      "calib_holdout": {
+        "chunks": 272,
+        "failed_chunks": 0,
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "chunks": 543,
+        "failed_chunks": 0,
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "chunks": 4340,
+        "failed_chunks": 0,
+        "queries": 69428,
+        "rows": 8886784
+      }
+    }
+  },
+  "dry_run": false,
+  "mode": "full",
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "rebuild_actually_attempted": true,
+  "rebuild_coverage_audit": {
+    "bmn_missing_count": 0,
+    "duplicate_candidate_count": null,
+    "event_direct_columns_present": false,
+    "event_missing_count": null,
+    "evidence_by_split": {
+      "calib_holdout": {
+        "bmn_available_rows": 555520,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 0,
+        "event_coverage": 0.0,
+        "expected_queries": 4340,
+        "expected_rows": 555520,
+        "failed_chunks": 0,
+        "missing_source_query_count": 0,
+        "queries": 4340,
+        "query_space_coverage": 1.0,
+        "row_space_coverage": 1.0,
+        "rows": 555520,
+        "t2_available_rows": 555520,
+        "t2_coverage": 1.0
+      },
+      "calib_select": {
+        "bmn_available_rows": 1110656,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 0,
+        "event_coverage": 0.0,
+        "expected_queries": 8677,
+        "expected_rows": 1110656,
+        "failed_chunks": 0,
+        "missing_source_query_count": 0,
+        "queries": 8677,
+        "query_space_coverage": 1.0,
+        "row_space_coverage": 1.0,
+        "rows": 1110656,
+        "t2_available_rows": 1110656,
+        "t2_coverage": 1.0
+      },
+      "train_fit": {
+        "bmn_available_rows": 8886784,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 0,
+        "event_coverage": 0.0,
+        "expected_queries": 69428,
+        "expected_rows": 8886784,
+        "failed_chunks": 0,
+        "missing_source_query_count": 0,
+        "queries": 69428,
+        "query_space_coverage": 1.0,
+        "row_space_coverage": 1.0,
+        "rows": 8886784,
+        "t2_available_rows": 8886784,
+        "t2_coverage": 1.0
+      }
+    },
+    "expected_by_split": {
+      "calib_holdout": {
+        "expected_candidate_rows": 555520,
+        "full_selected_query_count_before_slice": 4340,
+        "loaded_query_count": 4340,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 4340,
+        "query_slice_start": 0,
+        "requested_query_count": 4340,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_holdout"
+      },
+      "calib_select": {
+        "expected_candidate_rows": 1110656,
+        "full_selected_query_count_before_slice": 8677,
+        "loaded_query_count": 8677,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 8677,
+        "query_slice_start": 0,
+        "requested_query_count": 8677,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_select"
+      },
+      "train_fit": {
+        "expected_candidate_rows": 8886784,
+        "full_selected_query_count_before_slice": 69428,
+        "loaded_query_count": 69428,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 69428,
+        "query_slice_start": 0,
+        "requested_query_count": 69428,
+        "source_note": "split_specific_cache",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "train_fit"
+      }
+    },
+    "query_count": 82445,
+    "row_count": 10552960,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    },
+    "t2_missing_count": 0
+  },
+  "rebuild_progress": {
+    "completed_chunks": 5155,
+    "completed_rows": 10552960,
+    "completed_splits": [
+      "calib_holdout",
+      "calib_select",
+      "train_fit"
+    ],
+    "dry_run": false,
+    "estimated_medium_row_space_rows": 328000,
+    "estimated_medium_row_space_runtime_sec": 210080.40643548965,
+    "estimated_remaining_note": "full requires all train_fit/calib_select/calib_holdout first-stage top128; completion is judged against expected row-space, not subset coverage",
+    "expected_by_split": {
+      "calib_holdout": {
+        "expected_candidate_rows": 555520,
+        "full_selected_query_count_before_slice": 4340,
+        "loaded_query_count": 4340,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 4340,
+        "query_slice_start": 0,
+        "requested_query_count": 4340,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_holdout"
+      },
+      "calib_select": {
+        "expected_candidate_rows": 1110656,
+        "full_selected_query_count_before_slice": 8677,
+        "loaded_query_count": 8677,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 8677,
+        "query_slice_start": 0,
+        "requested_query_count": 8677,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_select"
+      },
+      "train_fit": {
+        "expected_candidate_rows": 8886784,
+        "full_selected_query_count_before_slice": 69428,
+        "loaded_query_count": 69428,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 69428,
+        "query_slice_start": 0,
+        "requested_query_count": 69428,
+        "source_note": "split_specific_cache",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "train_fit"
+      }
+    },
+    "measured_rows_per_sec": 1.5613069565377125,
+    "resume_supported": true,
+    "resume_used": true,
+    "row_space_coverage_by_split": {
+      "calib_holdout": 1.0,
+      "calib_select": 1.0,
+      "train_fit": 1.0
+    }
+  },
+  "rebuild_runtime_audit": {
+    "chunk_summary": {
+      "chunk_count": 5155,
+      "chunk_manifest_note": "Repository manifest is a compact summary; full per-chunk parquet/json sidecars stay local under /tmp/c24h_score_cache.",
+      "chunk_manifest_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_2_trainfit_rebuild_execution/C24H_2_CHUNK_MANIFEST.json",
+      "first_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 2048,
+        "candidate_row_count": 2048,
+        "chunk_size": 2048,
+        "chunk_start": 0,
+        "command": "internal:C17 builder split=train_fit start=0 count=2048",
+        "ended_at": "2026-07-06T21:33:48.566655+00:00",
+        "exit_code": 0,
+        "expected_row_count": 2048,
+        "first_stage_source": {
+          "expected_candidate_rows": 8886784,
+          "full_selected_query_count_before_slice": 69428,
+          "loaded_query_count": 69428,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 69428,
+          "query_slice_start": 0,
+          "requested_query_count": 69428,
+          "source_note": "split_specific_cache",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit"
+        },
+        "output_hash": "51f74f6e07410531fdd77c4a1591c023e20127e6231ea7ac0a8fbeeb5da46365",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/train_fit/chunk_000000000_002048.parquet",
+        "pair_count": 2048,
+        "query_count": 16,
+        "query_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resumed_from_existing": true,
+        "runtime_sec": 0.0075414180755615234,
+        "runtime_seconds": 0.007541656494140625,
+        "skipped_because_existing": true,
+        "split": "train_fit",
+        "started_at": "2026-07-06T21:33:48.559125+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=train_fit chunk_start=0 pairs=2048",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 2048
+      },
+      "last_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 512,
+        "candidate_row_count": 512,
+        "chunk_size": 2048,
+        "chunk_start": 555008,
+        "command": "internal:C17 builder split=calib_holdout start=555008 count=512",
+        "ended_at": "2026-07-06T22:58:43.917034+00:00",
+        "exit_code": 0,
+        "expected_row_count": 512,
+        "first_stage_source": {
+          "expected_candidate_rows": 555520,
+          "full_selected_query_count_before_slice": 4340,
+          "loaded_query_count": 4340,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 4340,
+          "query_slice_start": 0,
+          "requested_query_count": 4340,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_holdout"
+        },
+        "output_hash": "d2cfd72719ed3ecdbe5be467c737530a750b2721be6c3fcbdba784be3b5fec47",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/calib_holdout/chunk_000555008_002048.parquet",
+        "pair_count": 512,
+        "query_count": 4,
+        "query_ids": [
+          86961,
+          86962,
+          86963,
+          86964
+        ],
+        "resumed_from_existing": false,
+        "runtime_sec": 6.569215297698975,
+        "runtime_seconds": 6.569215536117554,
+        "skipped_because_existing": false,
+        "split": "calib_holdout",
+        "started_at": "2026-07-06T22:58:37.347829+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=calib_holdout chunk_start=555008 pairs=512",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 512
+      },
+      "split_counts": {
+        "calib_holdout": {
+          "chunks": 272,
+          "failed_chunks": 0,
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "chunks": 543,
+          "failed_chunks": 0,
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "chunks": 4340,
+          "failed_chunks": 0,
+          "queries": 69428,
+          "rows": 8886784
+        }
+      }
+    },
+    "combined_output": {
+      "chunk_files_combined": 5155,
+      "exists": true,
+      "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+      "row_count": 10552960,
+      "sha256": "3f498a163716dca28a5e02f5b69ee32cb27c4122886ea3559ee7134cd1d006c3",
+      "size_bytes": 1381569634
+    },
+    "device": "cuda:0",
+    "runtime_sec": 5123.9123520851135,
+    "torch_cuda_available": true
+  },
+  "rebuild_sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_2_trainfit_rebuild_execution/C24H_2_REBUILD_SAMPLE.parquet",
+  "seed": 2026,
+  "stage": "C24H-2",
+  "status": "C24H_BMN_T2_REBUILD_COMPLETE",
+  "t2_rebuild_manifest": {
+    "active_splits": [
+      "train_fit",
+      "calib_select",
+      "calib_holdout"
+    ],
+    "bmn_checkpoint": {
+      "mode_in_checkpoint": "medium",
+      "path": "c12_models/c16_medium_B7_full_query_aware_rankloss_map_seed2026.pt",
+      "seed": 2026,
+      "sha256": "30457f2716249d0b865dfb698f5fd30cfe0d3dd44e561f554362168245aa305e"
+    },
+    "builder_functions": [
+      "build_candidate_batch",
+      "bmn_scores_for_batch",
+      "t2_scores_for_batch"
+    ],
+    "builder_path": "run_c17_bmn_t2_native_vcmr_integration.py",
+    "chunk_size": 2048,
+    "chunk_summary": {
+      "chunk_count": 5155,
+      "chunk_manifest_note": "Repository manifest is a compact summary; full per-chunk parquet/json sidecars stay local under /tmp/c24h_score_cache.",
+      "chunk_manifest_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_2_trainfit_rebuild_execution/C24H_2_CHUNK_MANIFEST.json",
+      "first_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 2048,
+        "candidate_row_count": 2048,
+        "chunk_size": 2048,
+        "chunk_start": 0,
+        "command": "internal:C17 builder split=train_fit start=0 count=2048",
+        "ended_at": "2026-07-06T21:33:48.566655+00:00",
+        "exit_code": 0,
+        "expected_row_count": 2048,
+        "first_stage_source": {
+          "expected_candidate_rows": 8886784,
+          "full_selected_query_count_before_slice": 69428,
+          "loaded_query_count": 69428,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 69428,
+          "query_slice_start": 0,
+          "requested_query_count": 69428,
+          "source_note": "split_specific_cache",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit"
+        },
+        "output_hash": "51f74f6e07410531fdd77c4a1591c023e20127e6231ea7ac0a8fbeeb5da46365",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/train_fit/chunk_000000000_002048.parquet",
+        "pair_count": 2048,
+        "query_count": 16,
+        "query_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resumed_from_existing": true,
+        "runtime_sec": 0.0075414180755615234,
+        "runtime_seconds": 0.007541656494140625,
+        "skipped_because_existing": true,
+        "split": "train_fit",
+        "started_at": "2026-07-06T21:33:48.559125+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=train_fit chunk_start=0 pairs=2048",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 2048
+      },
+      "last_chunk": {
+        "bmn_coverage": 1.0,
+        "bmn_rows_written": 512,
+        "candidate_row_count": 512,
+        "chunk_size": 2048,
+        "chunk_start": 555008,
+        "command": "internal:C17 builder split=calib_holdout start=555008 count=512",
+        "ended_at": "2026-07-06T22:58:43.917034+00:00",
+        "exit_code": 0,
+        "expected_row_count": 512,
+        "first_stage_source": {
+          "expected_candidate_rows": 555520,
+          "full_selected_query_count_before_slice": 4340,
+          "loaded_query_count": 4340,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 4340,
+          "query_slice_start": 0,
+          "requested_query_count": 4340,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_holdout"
+        },
+        "output_hash": "d2cfd72719ed3ecdbe5be467c737530a750b2721be6c3fcbdba784be3b5fec47",
+        "output_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.chunks/calib_holdout/chunk_000555008_002048.parquet",
+        "pair_count": 512,
+        "query_count": 4,
+        "query_ids": [
+          86961,
+          86962,
+          86963,
+          86964
+        ],
+        "resumed_from_existing": false,
+        "runtime_sec": 6.569215297698975,
+        "runtime_seconds": 6.569215536117554,
+        "skipped_because_existing": false,
+        "split": "calib_holdout",
+        "started_at": "2026-07-06T22:58:37.347829+00:00",
+        "stderr_summary": "",
+        "stdout_summary": "split=calib_holdout chunk_start=555008 pairs=512",
+        "t2_coverage": 1.0,
+        "t2_rows_written": 512
+      },
+      "split_counts": {
+        "calib_holdout": {
+          "chunks": 272,
+          "failed_chunks": 0,
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "chunks": 543,
+          "failed_chunks": 0,
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "chunks": 4340,
+          "failed_chunks": 0,
+          "queries": 69428,
+          "rows": 8886784
+        }
+      }
+    },
+    "combine": true,
+    "combined_output": {
+      "chunk_files_combined": 5155,
+      "exists": true,
+      "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+      "row_count": 10552960,
+      "sha256": "3f498a163716dca28a5e02f5b69ee32cb27c4122886ea3559ee7134cd1d006c3",
+      "size_bytes": 1381569634
+    },
+    "coverage": {
+      "bmn_missing_count": 0,
+      "duplicate_candidate_count": null,
+      "event_direct_columns_present": false,
+      "event_missing_count": null,
+      "evidence_by_split": {
+        "calib_holdout": {
+          "bmn_available_rows": 555520,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 4340,
+          "expected_rows": 555520,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 4340,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 555520,
+          "t2_available_rows": 555520,
+          "t2_coverage": 1.0
+        },
+        "calib_select": {
+          "bmn_available_rows": 1110656,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 8677,
+          "expected_rows": 1110656,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 8677,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 1110656,
+          "t2_available_rows": 1110656,
+          "t2_coverage": 1.0
+        },
+        "train_fit": {
+          "bmn_available_rows": 8886784,
+          "bmn_coverage": 1.0,
+          "event_available_rows": 0,
+          "event_coverage": 0.0,
+          "expected_queries": 69428,
+          "expected_rows": 8886784,
+          "failed_chunks": 0,
+          "missing_source_query_count": 0,
+          "queries": 69428,
+          "query_space_coverage": 1.0,
+          "row_space_coverage": 1.0,
+          "rows": 8886784,
+          "t2_available_rows": 8886784,
+          "t2_coverage": 1.0
+        }
+      },
+      "expected_by_split": {
+        "calib_holdout": {
+          "expected_candidate_rows": 555520,
+          "full_selected_query_count_before_slice": 4340,
+          "loaded_query_count": 4340,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 4340,
+          "query_slice_start": 0,
+          "requested_query_count": 4340,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_holdout"
+        },
+        "calib_select": {
+          "expected_candidate_rows": 1110656,
+          "full_selected_query_count_before_slice": 8677,
+          "loaded_query_count": 8677,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 8677,
+          "query_slice_start": 0,
+          "requested_query_count": 8677,
+          "source_note": "combined_train_calib_holdout_cache_fallback",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "calib_select"
+        },
+        "train_fit": {
+          "expected_candidate_rows": 8886784,
+          "full_selected_query_count_before_slice": 69428,
+          "loaded_query_count": 69428,
+          "missing_query_count": 0,
+          "missing_query_sample": [],
+          "mode": "full",
+          "query_slice_end": 69428,
+          "query_slice_start": 0,
+          "requested_query_count": 69428,
+          "source_note": "split_specific_cache",
+          "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+          "split": "train_fit"
+        }
+      },
+      "query_count": 82445,
+      "row_count": 10552960,
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "queries": 69428,
+          "rows": 8886784
+        }
+      },
+      "t2_missing_count": 0
+    },
+    "dry_run": false,
+    "expected_by_split": {
+      "calib_holdout": {
+        "expected_candidate_rows": 555520,
+        "full_selected_query_count_before_slice": 4340,
+        "loaded_query_count": 4340,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 4340,
+        "query_slice_start": 0,
+        "requested_query_count": 4340,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_holdout"
+      },
+      "calib_select": {
+        "expected_candidate_rows": 1110656,
+        "full_selected_query_count_before_slice": 8677,
+        "loaded_query_count": 8677,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 8677,
+        "query_slice_start": 0,
+        "requested_query_count": 8677,
+        "source_note": "combined_train_calib_holdout_cache_fallback",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "calib_select"
+      },
+      "train_fit": {
+        "expected_candidate_rows": 8886784,
+        "full_selected_query_count_before_slice": 69428,
+        "loaded_query_count": 69428,
+        "missing_query_count": 0,
+        "missing_query_sample": [],
+        "mode": "full",
+        "query_slice_end": 69428,
+        "query_slice_start": 0,
+        "requested_query_count": 69428,
+        "source_note": "split_specific_cache",
+        "source_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+        "split": "train_fit"
+      }
+    },
+    "feature_read_paths": {
+      "ssd_feature_cache_used": true,
+      "subtitle_lmdb": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+      "visual_lmdb": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+    },
+    "force": false,
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24h_full_bmn_t2_trainfit_rebuild.py --stage c24h_2 --mode full --seed 2026 --max_queries None --chunk_size 2048 --resume",
+    "max_queries": null,
+    "mode": "full",
+    "official_prediction_pool_used": false,
+    "official_val_used": false,
+    "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+    "progress_path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILD_PROGRESS_full.json",
+    "progress_tag": null,
+    "query_count": 82445,
+    "query_end": null,
+    "query_start": null,
+    "resume": true,
+    "row_count": 10552960,
+    "runtime_sec": 5123.9123520851135,
+    "seed": 2026,
+    "sha256": "3f498a163716dca28a5e02f5b69ee32cb27c4122886ea3559ee7134cd1d006c3",
+    "size_bytes": 1381569634,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    },
+    "t2_checkpoint": {
+      "path": "c12_models/c12_5t_T2_listwise_soft_iou.pt",
+      "sha256": "6cceba8a2049f23b62681ef5579a7be1b5c298262e41c24fe75a002a978c1b80"
+    }
+  },
+  "worker_only": false
+}

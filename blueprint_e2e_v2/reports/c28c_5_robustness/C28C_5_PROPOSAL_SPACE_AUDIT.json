@@ -1,0 +1,4 @@
+{
+  "max_spans_per_video": 64,
+  "one_span_materialization": false
+}

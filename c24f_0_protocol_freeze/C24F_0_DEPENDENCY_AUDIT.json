@@ -1,0 +1,131 @@
+{
+  "c19_medium": {
+    "columns": [
+      "query_id",
+      "video_id",
+      "span_start",
+      "span_end",
+      "span_duration",
+      "retriever_score",
+      "retriever_rank",
+      "bmn_pred_iou",
+      "bmn_p_iou_05",
+      "bmn_p_iou_07",
+      "bmn_rank_score",
+      "bmn_final_score",
+      "start_prob",
+      "end_prob",
+      "actionness_score",
+      "duration_score",
+      "t2_score",
+      "old_c12_score",
+      "span_map_rank",
+      "seed",
+      "split",
+      "schema_hash",
+      "config_hash",
+      "gt_video_id",
+      "gt_start",
+      "gt_end",
+      "query_type",
+      "duration_bucket",
+      "gt_video_rank",
+      "source_has_bmn",
+      "source_has_t2",
+      "retriever_norm",
+      "bmn_norm",
+      "t2_norm",
+      "old_norm",
+      "bmn_score",
+      "final_score"
+    ],
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "row_count": 22779481,
+    "row_groups": 22,
+    "schema_hash": "dbcf68fb6fde64cc",
+    "size_bytes": 1447443108
+  },
+  "c22r_alignment": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_2_alignment_repair/C22R_2_ALIGNMENT_DECISION.json",
+    "readable": true,
+    "sha256": "75e9f8d1c07ea4e86017427156eaa38fca9c9341cddc5efe74e1273f0b27e860",
+    "size_bytes": 3449
+  },
+  "c23_canonical_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c23_1_full_trainfit_readiness/C23_1_FIRST_STAGE_TOP128_MANIFEST.json",
+    "readable": true,
+    "sha256": "14272b1e27b371b9bd5043d8f129892af9828d830059a09f4d754e7e7c715df5",
+    "size_bytes": 738
+  },
+  "c24_1": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_1_full_evidence_source_audit/C24_1_EVIDENCE_SOURCE_DECISION.json",
+    "readable": true,
+    "sha256": "001a7bb6209967908019d09c36e4fd5a66aa9208d9da69c14dbbfe595efac81e",
+    "size_bytes": 85791
+  },
+  "c24_2": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_2_evidence_label_diagnostic/C24_2_DIAGNOSTIC_DECISION.json",
+    "readable": true,
+    "sha256": "fbe905df2e544e3c2841ab4bd76973dd27d49daa28520be951c499879c2dccbe",
+    "size_bytes": 36104
+  },
+  "c24_3": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_3_evidence_strengthening_probe/C24_3_STRENGTHENING_DECISION.json",
+    "readable": true,
+    "sha256": "ef03beca204e20e2893b72395de17fda631c090530b86a18865d7e56df9288ff",
+    "size_bytes": 14791
+  },
+  "c24_4": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_4_strengthened_integration_replay/C24_4_INTEGRATION_DECISION.json",
+    "readable": true,
+    "sha256": "9f9f84b53cbf981ec63bc5107461ceb3a7a7191caa5e0fb5d6fe7296e4f7d70b",
+    "size_bytes": 25713
+  },
+  "c24_5": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_5_robustness_and_route_decision/C24_5_ROBUSTNESS_DECISION.json",
+    "readable": true,
+    "sha256": "942c81148358aebd83ae80397793aa9d0463a0263ea2472f0fd17abf255e06bc",
+    "size_bytes": 7729
+  },
+  "c24_6_next": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_6_final_decision/C24_6_NEXT_STEP_DECISION.json",
+    "readable": true,
+    "sha256": "95576da8631dba1d0413cc5f17c702d3c5aa792a39cb49cceed6269d32f4d44c",
+    "size_bytes": 95
+  },
+  "c24_evidence_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24_1_full_evidence_source_audit/C24_1_EVIDENCE_SOURCE_DECISION.json",
+    "readable": true,
+    "sha256": "001a7bb6209967908019d09c36e4fd5a66aa9208d9da69c14dbbfe595efac81e",
+    "size_bytes": 85791
+  },
+  "first_stage_calib_holdout_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_holdout_top128.pkl",
+    "readable": true,
+    "size_bytes": 2068177
+  },
+  "first_stage_calib_select_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_select_top128.pkl",
+    "readable": true,
+    "size_bytes": 2067971
+  },
+  "first_stage_train_fit_top128": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+    "readable": true,
+    "size_bytes": 170397963
+  }
+}
