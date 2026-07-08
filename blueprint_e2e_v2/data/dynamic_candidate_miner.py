@@ -36,9 +36,10 @@ class DynamicCandidateMiner:
         query_ids: list[int],
         gt_video_ids: list[str],
         device: torch.device,
+        query_mask: torch.Tensor | None = None,
     ) -> dict[int, CandidateSet]:
         model.eval()
-        q = model.encode_query(query_tokens.to(device), qtypes.to(device))
+        q = model.encode_query(query_tokens.to(device), qtypes.to(device), query_mask.to(device) if query_mask is not None else None)
         scores_all = []
         for st in range(0, visual_bank.shape[0], self.chunk_size):
             visual = visual_bank[st: st + self.chunk_size].to(device, non_blocking=True)
@@ -73,4 +74,3 @@ class DynamicCandidateMiner:
             "gt_insert_rate": 100.0 * inserted / max(1, len(candidates)),
             "static_top128_hard_gate_used": False,
         }
-

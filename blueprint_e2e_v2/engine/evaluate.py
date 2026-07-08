@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -162,7 +163,8 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
     banks["video_bank"].video_to_idx = {v: i for i, v in enumerate(video_ids)}
     banks["video_bank"].idx_to_video = {i: v for v, i in banks["video_bank"].video_to_idx.items()}
     model = build_model(cfg, device)
-    ckpt_path = TMP_ROOT / "checkpoints" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.pt"
+    configured_ckpt = cfg.get("checkpoint_path") or cfg.get("c28e_retriever_checkpoint_path")
+    ckpt_path = Path(str(configured_ckpt)) if configured_ckpt else TMP_ROOT / "checkpoints" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.pt"
     ckpt_loaded = False
     if ckpt_path.exists():
         load_checkpoint(ckpt_path, model)
@@ -197,6 +199,18 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         max_videos=int(cfg.get("max_videos", 0) or 0) or None,
         force=False,
     )
+    visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(
+        video_ids,
+        target_len=64,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
+    subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(
+        video_ids,
+        target_len=64,
+        max_videos=int(cfg.get("max_videos", 0) or 0) or None,
+        force=False,
+    )
     banks["video_bank"].clear_sequence_cache()
     banks["subtitle_bank"].clear_sequence_cache()
     dataset = MultiSpanProposalDataset(
@@ -212,6 +226,8 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         insert_gt_for_training=False,
         visual_seq_bank=visual_seq_bank,
         subtitle_seq_bank=subtitle_seq_bank,
+        visual_seq_mask=visual_seq_mask,
+        subtitle_seq_mask=subtitle_seq_mask,
     )
     res = evaluate_model(model, dataset, device, batch_size=int(cfg.get("batch_size", 8)), seed=int(cfg.get("seed", 2026)))
     res["checkpoint_loaded"] = ckpt_loaded
@@ -220,4 +236,6 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
     res["dataset_audit"] = dataset.audit()
     res["visual_sequence_manifest"] = visual_seq_manifest
     res["subtitle_sequence_manifest"] = subtitle_seq_manifest
+    res["visual_sequence_mask_manifest"] = visual_mask_manifest
+    res["subtitle_sequence_mask_manifest"] = subtitle_mask_manifest
     return res

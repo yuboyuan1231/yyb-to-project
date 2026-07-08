@@ -10,16 +10,18 @@ from blueprint_e2e_v2.data.first_stage_reference import FirstStageReference
 from blueprint_e2e_v2.data.split_manager import SplitManager
 
 
-def _pad_query_tokens(rows: list[dict[str, Any]], query_cache: dict[int, Any]) -> tuple[torch.Tensor, torch.Tensor, list[int], list[str]]:
+def _pad_query_tokens(rows: list[dict[str, Any]], query_cache: dict[int, Any]) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, list[int], list[str]]:
     arrays = [query_cache[int(r["desc_id"])] for r in rows]
     max_len = max(a.shape[0] for a in arrays)
     dim = arrays[0].shape[1]
     tokens = np.zeros((len(arrays), max_len, dim), dtype=np.float32)
+    mask = np.zeros((len(arrays), max_len), dtype=np.bool_)
     qtypes = []
     for i, (a, r) in enumerate(zip(arrays, rows)):
         tokens[i, : a.shape[0]] = a
+        mask[i, : a.shape[0]] = True
         qtypes.append({"v": 0, "t": 1, "vt": 2}.get(str(r.get("type", "")), 3))
-    return torch.from_numpy(tokens), torch.tensor(qtypes, dtype=torch.long), [int(r["desc_id"]) for r in rows], [str(r["vid_name"]) for r in rows]
+    return torch.from_numpy(tokens), torch.from_numpy(mask), torch.tensor(qtypes, dtype=torch.long), [int(r["desc_id"]) for r in rows], [str(r["vid_name"]) for r in rows]
 
 
 def refresh_candidates(
@@ -60,8 +62,8 @@ def refresh_candidates(
     teacher_used = 0
     with torch.no_grad():
         for st in range(0, len(rows), batch_queries):
-            toks, qtypes, qids, gt_vids = _pad_query_tokens(rows[st: st + batch_queries], query_cache)
-            q = core.encode_query(toks.to(device, non_blocking=True), qtypes.to(device, non_blocking=True))
+            toks, qmask, qtypes, qids, gt_vids = _pad_query_tokens(rows[st: st + batch_queries], query_cache)
+            q = core.encode_query(toks.to(device, non_blocking=True), qtypes.to(device, non_blocking=True), qmask.to(device, non_blocking=True))
             scores = core.retriever.score_bank(q, bank)
             k = min(dynamic_topk, scores.shape[1])
             vals, idx = torch.topk(scores, k=k, dim=1)

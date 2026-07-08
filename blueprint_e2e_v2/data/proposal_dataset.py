@@ -36,6 +36,8 @@ class MultiSpanProposalDataset(Dataset):
         insert_gt_for_training: bool = True,
         visual_seq_bank: np.ndarray | None = None,
         subtitle_seq_bank: np.ndarray | None = None,
+        visual_seq_mask: np.ndarray | None = None,
+        subtitle_seq_mask: np.ndarray | None = None,
     ) -> None:
         self.split = split
         self.sm = split_manager
@@ -49,6 +51,8 @@ class MultiSpanProposalDataset(Dataset):
         self.insert_gt_for_training = bool(insert_gt_for_training)
         self.visual_seq_bank = visual_seq_bank
         self.subtitle_seq_bank = subtitle_seq_bank
+        self.visual_seq_mask = visual_seq_mask
+        self.subtitle_seq_mask = subtitle_seq_mask
         self.grid = TemporalGrid()
         self.video_duration_bank = dict(getattr(video_bank, "durations", {}))
 
@@ -60,6 +64,12 @@ class MultiSpanProposalDataset(Dataset):
             return seq[:target_len].astype(np.float32)
         out = np.zeros((target_len, seq.shape[1]), dtype=np.float32)
         out[: seq.shape[0]] = seq.astype(np.float32)
+        return out
+
+    @staticmethod
+    def _fit_mask(seq_len: int, target_len: int = 64) -> np.ndarray:
+        out = np.zeros((target_len,), dtype=np.bool_)
+        out[: min(int(seq_len), int(target_len))] = True
         return out
 
     def __len__(self) -> int:
@@ -100,12 +110,25 @@ class MultiSpanProposalDataset(Dataset):
             raise RuntimeError(f"C28C train target lost GT video for query {qid}: gt={gt_vid} candidates={video_ids[-5:]}")
         if self.visual_seq_bank is not None:
             visual = self.visual_seq_bank[np.asarray(video_indices, dtype=np.int64)].astype(np.float32, copy=False)
+            if self.visual_seq_mask is None:
+                visual_mask = np.ones(visual.shape[:2], dtype=np.bool_)
+            else:
+                visual_mask = self.visual_seq_mask[np.asarray(video_indices, dtype=np.int64)].astype(np.bool_, copy=False)
         else:
-            visual = np.stack([self._fit_seq(self.video_bank.sequence(v), self.grid.max_clips) for v in video_ids]).astype(np.float32)
+            visual_raw = [self.video_bank.sequence(v) for v in video_ids]
+            visual = np.stack([self._fit_seq(x, self.grid.max_clips) for x in visual_raw]).astype(np.float32)
+            visual_mask = np.stack([self._fit_mask(x.shape[0], self.grid.max_clips) for x in visual_raw]).astype(np.bool_)
         if self.subtitle_seq_bank is not None:
             subtitle = self.subtitle_seq_bank[np.asarray(video_indices, dtype=np.int64)].astype(np.float32, copy=False)
+            if self.subtitle_seq_mask is None:
+                subtitle_mask = np.ones(subtitle.shape[:2], dtype=np.bool_)
+            else:
+                subtitle_mask = self.subtitle_seq_mask[np.asarray(video_indices, dtype=np.int64)].astype(np.bool_, copy=False)
         else:
-            subtitle = np.stack([self._fit_seq(self.subtitle_bank.sequence(v), self.grid.max_clips) for v in video_ids]).astype(np.float32)
+            subtitle_raw = [self.subtitle_bank.sequence(v) for v in video_ids]
+            subtitle = np.stack([self._fit_seq(x, self.grid.max_clips) for x in subtitle_raw]).astype(np.float32)
+            subtitle_mask = np.stack([self._fit_mask(x.shape[0], self.grid.max_clips) for x in subtitle_raw]).astype(np.bool_)
+        clip_mask = np.logical_and(visual_mask, subtitle_mask)
         max_m = max(x.shape[0] for x in per_video_spans_clip)
         spans_clip_padded = np.zeros((len(video_ids), max_m, 2), dtype=np.int64)
         spans_sec_padded = np.zeros((len(video_ids), max_m, 2), dtype=np.float32)
@@ -131,6 +154,9 @@ class MultiSpanProposalDataset(Dataset):
             "video_indices": np.array(video_indices, dtype=np.int64),
             "visual": visual,
             "subtitle": subtitle,
+            "visual_clip_mask": visual_mask,
+            "subtitle_clip_mask": subtitle_mask,
+            "clip_mask": clip_mask,
             "spans_clip": spans_clip_padded.astype(np.int64),
             "spans_sec": spans_sec_padded.astype(np.float32),
             "span_mask": span_mask,
@@ -157,5 +183,6 @@ class MultiSpanProposalDataset(Dataset):
             "candidate_video_duration_bank_used": True,
             "candidate_proposals_use_candidate_video_duration": True,
             "preloaded_sequence_bank_used": self.visual_seq_bank is not None and self.subtitle_seq_bank is not None,
+            "clip_mask_used": True,
             "temporal_padding_policy": "pad/truncate release feature sequences to 64 clips for tensor batching; missing features still raise KeyError",
         }

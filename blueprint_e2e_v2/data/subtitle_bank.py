@@ -84,6 +84,13 @@ class SubtitleBank:
         out[: seq.shape[0]] = seq.astype(np.float32, copy=False)
         return out
 
+    @staticmethod
+    def _fit_mask(seq_len: int, target_len: int = 64) -> np.ndarray:
+        valid = min(int(seq_len), int(target_len))
+        out = np.zeros((int(target_len),), dtype=np.bool_)
+        out[:valid] = True
+        return out
+
     def build_or_load_sequence_bank(
         self,
         video_ids: list[str],
@@ -122,6 +129,44 @@ class SubtitleBank:
             "schema_hash": stable_hash({"video_count": len(vids), "target_len": int(target_len), "subtitle_dim": int(first.shape[1])}),
             "zero_fill": False,
             "source": "release_lmdb_preloaded_sequence_bank",
+        }
+        manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        return np.load(path), manifest
+
+    def build_or_load_sequence_mask(
+        self,
+        video_ids: list[str],
+        target_len: int = 64,
+        max_videos: int | None = None,
+        force: bool = False,
+    ) -> tuple[np.ndarray, dict[str, Any]]:
+        TMP_ROOT.mkdir(parents=True, exist_ok=True)
+        vids = video_ids[: int(max_videos)] if max_videos and max_videos > 0 else video_ids
+        suffix = "all" if not max_videos else f"top{int(max_videos)}"
+        path = TMP_ROOT / f"C28C_VIDEO_SUBTITLE_SEQ_MASK_{suffix}_T{int(target_len)}.npy"
+        manifest_path = TMP_ROOT / f"C28C_VIDEO_SUBTITLE_SEQ_MASK_{suffix}_T{int(target_len)}.manifest.json"
+        if path.exists() and manifest_path.exists() and not force:
+            return np.load(path), json.loads(manifest_path.read_text(encoding="utf-8"))
+        arr = np.lib.format.open_memmap(path, mode="w+", dtype=np.bool_, shape=(len(vids), int(target_len)))
+        old_cache_enabled = self.cache_enabled
+        self.cache_enabled = False
+        try:
+            for i, vid in enumerate(vids):
+                arr[i] = self._fit_mask(self.sequence(vid).shape[0], target_len)
+                if (i + 1) % 1000 == 0:
+                    print(f"C28C subtitle sequence mask: loaded {i + 1}/{len(vids)}", flush=True)
+            arr.flush()
+        finally:
+            self.cache_enabled = old_cache_enabled
+            self.clear_sequence_cache()
+        manifest = {
+            "path": str(path),
+            "video_count": len(vids),
+            "target_len": int(target_len),
+            "schema_hash": stable_hash({"video_count": len(vids), "target_len": int(target_len), "kind": "subtitle_sequence_mask"}),
+            "valid_clip_min": int(arr.sum(axis=1).min()) if len(vids) else 0,
+            "valid_clip_max": int(arr.sum(axis=1).max()) if len(vids) else 0,
+            "source": "release_lmdb_sequence_lengths",
         }
         manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         return np.load(path), manifest

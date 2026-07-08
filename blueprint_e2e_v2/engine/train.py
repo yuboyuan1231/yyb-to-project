@@ -33,6 +33,12 @@ def build_model(cfg: dict[str, Any], device: torch.device) -> torch.nn.Module:
         subtitle_dim=int(cfg.get("subtitle_dim", 768)),
         visual_dim=int(cfg.get("visual_dim", 4352)),
         hidden_dim=int(cfg.get("hidden_dim", 384)),
+        late_interaction_enabled=bool(cfg.get("late_interaction_enabled", False)),
+        late_soft_topk=int(cfg.get("late_soft_topk", 8)),
+        late_temperature=float(cfg.get("late_temperature", 0.07)),
+        token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),
+        pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
+        late_score_weight=float(cfg.get("late_score_weight", 0.0)),
     ).to(device)
     if device.type == "cuda" and torch.cuda.device_count() > 1 and bool(cfg.get("use_data_parallel", False)):
         model = torch.nn.DataParallel(model)
@@ -78,6 +84,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     subtitle_bank = torch.from_numpy(banks["subtitle_np"]["subtitle_mean"].astype(np.float32))
     visual_seq_bank = None
     subtitle_seq_bank = None
+    visual_seq_mask = None
+    subtitle_seq_mask = None
     seq_manifests: dict[str, Any] = {}
     if bool(work_cfg.get("preload_sequence_bank", True)):
         visual_seq_bank, visual_seq_manifest = banks["video_bank"].build_or_load_sequence_bank(
@@ -92,9 +100,26 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
             force=force,
         )
+        visual_seq_mask, visual_mask_manifest = banks["video_bank"].build_or_load_sequence_mask(
+            video_ids,
+            target_len=64,
+            max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
+            force=force,
+        )
+        subtitle_seq_mask, subtitle_mask_manifest = banks["subtitle_bank"].build_or_load_sequence_mask(
+            video_ids,
+            target_len=64,
+            max_videos=int(work_cfg.get("max_videos", 0) or 0) or None,
+            force=force,
+        )
         banks["video_bank"].clear_sequence_cache()
         banks["subtitle_bank"].clear_sequence_cache()
-        seq_manifests = {"visual_sequence_manifest": visual_seq_manifest, "subtitle_sequence_manifest": subtitle_seq_manifest}
+        seq_manifests = {
+            "visual_sequence_manifest": visual_seq_manifest,
+            "subtitle_sequence_manifest": subtitle_seq_manifest,
+            "visual_sequence_mask_manifest": visual_mask_manifest,
+            "subtitle_sequence_mask_manifest": subtitle_mask_manifest,
+        }
     model = build_model(cfg, device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=float(cfg.get("lr", 1.5e-4)), weight_decay=float(cfg.get("weight_decay", 0.01)))
     ckpt_dir = TMP_ROOT / "checkpoints"
@@ -151,6 +176,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             insert_gt_for_training=True,
             visual_seq_bank=visual_seq_bank,
             subtitle_seq_bank=subtitle_seq_bank,
+            visual_seq_mask=visual_seq_mask,
+            subtitle_seq_mask=subtitle_seq_mask,
         )
         loader = DataLoader(dataset, batch_size=int(cfg.get("batch_size", 8)), shuffle=True, collate_fn=c28c_collate, num_workers=0, pin_memory=device.type == "cuda")
         model.train()

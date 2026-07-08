@@ -57,6 +57,7 @@ def merge_args(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "broad_topk_eval",
         "late_topk",
         "late_soft_topk",
+        "candidate_encode_chunk",
         "teacher_topk",
         "teacher_anchor_topk",
         "grad_accum_steps",
@@ -96,6 +97,11 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "calib_holdout is final-report only and guarded by --allow_holdout_final",
             "resume appends prior training logs instead of silently overwriting them",
             "stage names use C28E consistently",
+            "clip masks are carried through sequence banks, late interaction, and full-model batches",
+            "late interaction retriever score is available inside C28CFullModel before localizer/feedback/VCMR scoring",
+            "raw candidate scoring uses candidate chunks so proposal count is preserved without a monolithic GPU tensor",
+            "candidate curriculum follows teacher-heavy to student-dynamic phases",
+            "broad pooled recall is audited separately from late rerank recall",
         ],
         "not_run_until_review_passes": True,
         "config": cfg,
@@ -109,9 +115,13 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- No checkpoints, raw predictions, official outputs, or large caches are committed.\n"
         "- Holdout is not used for checkpoint/config selection.\n"
         "- `late_interaction_enabled` maps to real clip-level visual/subtitle/joint scoring.\n"
+        "- Clip masks exclude padded release-feature positions from pooled, partial-relevance, late, and token scores.\n"
+        "- Late retriever score enters the full model before localizer, feedback, and joint VCMR scoring.\n"
         "- Training loss scores raw candidate clips through the trainable video encoder.\n"
+        "- Candidate scoring is chunked by candidate, preserving proposal count while controlling memory.\n"
+        "- Candidate curriculum is explicit and audited per epoch.\n"
         "- `calib_select` is the only selection split.\n"
-        "- Full mutual model remains gated until retriever gate passes.\n",
+        "- Full mutual experiments remain gated until retriever gate passes; full-model code path is present for review.\n",
     )
     return rec
 
@@ -138,12 +148,14 @@ def stage2(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "visual_clip_bank": "[N_video, 64, hidden_dim] encoded from release visual sequence features",
             "subtitle_clip_bank": "[N_video, 64, hidden_dim] encoded from release subtitle sequence features",
             "joint_clip_bank": "[N_video, 64, hidden_dim] encoded by VideoSubtitleEncoder temporal path",
+            "clip_masks": "[N_video, 64] visual/subtitle/joint masks exclude padded sequence positions",
             "storage_policy": "CPU float16 cache for review; chunked GPU scoring for train/eval",
         },
         "two_stage_contract": {
             "stage1": "current student pooled retriever broad_topK",
             "stage2": "clip-level late interaction reranks broad candidates",
             "static_teacher_hard_gate": False,
+            "broad_recall_audit": True,
         },
         **official_safety_manifest(),
     }
@@ -220,6 +232,7 @@ def main() -> None:
     parser.add_argument("--broad_topk_eval", type=int)
     parser.add_argument("--late_topk", type=int)
     parser.add_argument("--late_soft_topk", type=int)
+    parser.add_argument("--candidate_encode_chunk", type=int)
     parser.add_argument("--teacher_topk", type=int)
     parser.add_argument("--teacher_anchor_topk", type=int)
     parser.add_argument("--grad_accum_steps", type=int)

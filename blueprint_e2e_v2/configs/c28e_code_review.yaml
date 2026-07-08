@@ -1,6 +1,6 @@
 mode: code_review
 seed: 2026
-use_data_parallel: false
+use_data_parallel: true
 hidden_dim: 384
 query_dim: 768
 subtitle_dim: 768
@@ -22,6 +22,7 @@ candidate_topk_eval: 200
 eval_candidate_k: 200
 hard_negative_k: 64
 loss_negative_sample_k: 128
+candidate_encode_chunk: 32
 
 # Two-stage dynamic retrieval: current student broad retrieval, then clip late interaction.
 broad_topk_train: 1000
@@ -40,9 +41,11 @@ teacher_anchor_topk: 80
 teacher_score_temperature: 2.0
 random_negative_k: 64
 student_negative_k: 128
+use_candidate_curriculum: true
 
 # Distillation / ranking losses.
 lambda_gt_rank: 1.0
+lambda_pooled_rank: 0.4
 lambda_teacher_kl: 1.2
 lambda_teacher_pair: 0.5
 lambda_teacher_set: 0.4
