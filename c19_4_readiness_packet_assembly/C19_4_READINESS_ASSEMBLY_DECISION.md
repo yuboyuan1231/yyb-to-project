@@ -1,0 +1,3 @@
+# C19-4 Assembly Decision
+
+status: `C19_READINESS_PACKET_ASSEMBLED_WITH_LIMITATIONS`

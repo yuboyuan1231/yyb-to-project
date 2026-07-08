@@ -1,0 +1,11 @@
+{
+  "calib_holdout": 4340,
+  "calib_select": 8677,
+  "official_val_used": false,
+  "pseudo_official_holdout": {
+    "count": 4339,
+    "locked": true,
+    "used": false
+  },
+  "train_fit": 69428
+}

@@ -1,0 +1,14 @@
+{
+  "implemented": [
+    "P2_query_gated_multimodal_pool",
+    "P4_hard_negative_aware_training_proxy"
+  ],
+  "not_prem_reproduction": true,
+  "variants": [
+    "P0_max_pool",
+    "P1_soft_topk_pool",
+    "P2_query_gated_multimodal_pool",
+    "P3_relevant_scope_pool",
+    "P4_hard_negative_aware_pool"
+  ]
+}

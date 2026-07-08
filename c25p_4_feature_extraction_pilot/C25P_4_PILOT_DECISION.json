@@ -1,0 +1,7 @@
+{
+  "full_feature_extraction_run": false,
+  "gpu_pilot_authorized": false,
+  "pilot_cache_path": "/tmp/c25p_feature_cache/CONQUER-RLEM-c2c3",
+  "stage": "C25P-4",
+  "status": "C25P_FEATURE_PILOT_SKIPPED_NO_FRAMES"
+}

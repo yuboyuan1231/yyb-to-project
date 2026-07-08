@@ -1,0 +1,3 @@
+# C26-1 Alignment Decision
+
+Status: `C26_RELEASE_FEATURE_ALIGNMENT_READY`.

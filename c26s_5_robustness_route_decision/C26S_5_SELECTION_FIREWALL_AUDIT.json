@@ -1,0 +1,6 @@
+{
+  "official_used": false,
+  "pseudo_used_for_selection": false,
+  "report_split": "calib_holdout",
+  "selection_split": "calib_select"
+}

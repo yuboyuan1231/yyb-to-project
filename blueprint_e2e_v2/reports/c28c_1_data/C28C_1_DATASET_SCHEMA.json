@@ -1,0 +1,8 @@
+{
+  "forbidden_inference_labels": [
+    "gt",
+    "iou",
+    "correct_video"
+  ],
+  "schema_hash": "de791f34bf753899"
+}

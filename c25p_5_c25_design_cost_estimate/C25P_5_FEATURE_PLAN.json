@@ -1,0 +1,23 @@
+{
+  "plan_a_frames_available": [
+    "Extract CLIP frame features",
+    "Extract DINOv2 frame features",
+    "Optionally extract VideoMAE clip features",
+    "Aggregate to TVR clip-level features",
+    "Run top128 rerank pilot before train_fit full"
+  ],
+  "plan_b_raw_available_frames_missing": [
+    "Extract 3FPS frames with ffmpeg/decord",
+    "Build canonical frame manifest",
+    "Execute Plan A",
+    "Estimate frame extraction cost before full run"
+  ],
+  "plan_c_release_features_only": [
+    "Do not claim strong visual features",
+    "SlowFast temporal re-aggregation",
+    "Subtitle-event alignment",
+    "Event-level contrastive distillation",
+    "GenSpan-style motion prior feasibility only"
+  ],
+  "selected_recommendation": "Plan C"
+}

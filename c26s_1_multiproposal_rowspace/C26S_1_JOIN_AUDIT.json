@@ -1,0 +1,7 @@
+{
+  "duplicate_span_count": 0,
+  "invalid_span_count": 0,
+  "position_based_join": false,
+  "silent_fill": false,
+  "train_fit_missing_reason": "C26R joined multi-span table only covers calib_select/calib_holdout; train_fit multi-span rebuild is required for READY/full training."
+}

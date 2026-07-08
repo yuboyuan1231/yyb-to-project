@@ -1,0 +1,7 @@
+{
+  "invalid_span_count": 0,
+  "stage": "C16-1",
+  "status": "pass",
+  "timestamp_error_sample": [],
+  "timestamp_mapping": "C12 ts_to_idx/idx_to_ts"
+}

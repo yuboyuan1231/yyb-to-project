@@ -1,0 +1,3 @@
+# C26-2 Mining Decision
+
+Status: `C26_RELEVANT_CONTENT_MINING_READY`.

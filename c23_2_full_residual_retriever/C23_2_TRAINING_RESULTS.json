@@ -1,0 +1,3 @@
+{
+  "method": "deterministic residual replay over first-stage top128; no large checkpoint produced"
+}

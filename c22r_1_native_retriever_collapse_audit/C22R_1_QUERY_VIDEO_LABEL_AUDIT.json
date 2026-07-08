@@ -1,0 +1,7 @@
+{
+  "gt_video_join_key": "desc_id -> corpus.by_id[desc_id].vid_name",
+  "query_id_consistent": true,
+  "split_correct": true,
+  "train_calib_holdout_leakage_found": false,
+  "video_id_consistent": true
+}

@@ -1,0 +1,23 @@
+{
+  "allow_gpu_pilot": false,
+  "c24h_gpu_conflict_possible": true,
+  "gpu_processes": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "2190317, /home/a/miniconda3/envs/conquer-rlem/bin/python, 2484 MiB\n2190321, /home/a/miniconda3/envs/conquer-rlem/bin/python, 2484 MiB\n2190325, /home/a/miniconda3/envs/conquer-rlem/bin/python, 2484 MiB\n2190329, /home/a/miniconda3/envs/conquer-rlem/bin/python, 2484 MiB"
+  },
+  "no_gpu_requested": true,
+  "nvidia_smi": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "0, NVIDIA GeForce RTX 3090, 24576 MiB, 5007 MiB, 37 %\n1, NVIDIA GeForce RTX 3090, 24576 MiB, 4989 MiB, 34 %"
+  },
+  "recommended_no_gpu_dry_run": true,
+  "torch": {
+    "available": true,
+    "cuda_available": true,
+    "cuda_version": "11.7",
+    "device_count": 2,
+    "version": "2.0.1+cu117"
+  }
+}

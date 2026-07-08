@@ -1,0 +1,11 @@
+{
+  "anchor_type": "c19_hybrid_proxy",
+  "not_exact_c7_b6": true,
+  "source": {
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98",
+    "size_bytes": 1447443108
+  }
+}

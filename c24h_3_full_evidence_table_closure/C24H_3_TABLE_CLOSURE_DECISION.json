@@ -1,0 +1,362 @@
+{
+  "canonical_fallback_manifest": {
+    "config_hash": "aa4b4d4cee743878",
+    "event_manifest": {
+      "candidate_rows_with_event": 10552960,
+      "config_hash": "9376253ca7c54a2c",
+      "event_cache_reused": false,
+      "event_direct_columns_present": true,
+      "event_feature_matrix_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_FEATURES_full.local.npz",
+      "event_feature_matrix_sha256": "a07dee3aba8c7b29851e272e072c566b20e9405ebabe431bf20821c6e703c176",
+      "event_feature_matrix_size_bytes": 3227869591,
+      "event_rows": 313715,
+      "event_subtitle_feature_dim": 768,
+      "event_table_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_TABLE_full.local.parquet",
+      "event_table_sha256": "7b23ec37d1a9e523abbccf5125c1b3c115f112216f6868432e486c4ff20eb81b",
+      "event_table_size_bytes": 12349692,
+      "event_visual_feature_dim": 4352,
+      "event_worker_count": 24,
+      "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_2 --mode full --seed 2026 --force",
+      "method_coverage": {
+        "E0_fixed_window_events": 139424,
+        "E1_visual_cosine_change_point_events": 34864,
+        "E2_subtitle_boundary_events": 34858,
+        "E3_multimodal_change_point_events": 34850,
+        "E4_hybrid_fixed_change_events": 69719
+      },
+      "method_note": "EventFormer-inspired existing-feature event evidence; not EventFormer reproduction.",
+      "methods": [
+        "E0_fixed_window_events",
+        "E1_visual_cosine_change_point_events",
+        "E2_subtitle_boundary_events",
+        "E3_multimodal_change_point_events",
+        "E4_hybrid_fixed_change_events"
+      ],
+      "minimum_required_methods_present": true,
+      "missing_event_count": 0,
+      "missing_video_features": 0,
+      "missing_video_sample": [],
+      "normalization_method": "L2 normalize query, event subtitle pooled, event visual pooled, and projected query vectors",
+      "projection_method": "deterministic Gaussian query-to-visual projection seeded by 20260424 + visual_dim; subtitle uses native RoBERTa cosine",
+      "query_count": 82445,
+      "raw_video_used": false,
+      "runtime_sec": 254.45827174186707,
+      "schema_hash": "e5aef22d624248ff",
+      "similarity_function": "cosine",
+      "split_coverage": {
+        "calib_holdout": {
+          "queries": 4340,
+          "rows": 555520
+        },
+        "calib_select": {
+          "queries": 8677,
+          "rows": 1110656
+        },
+        "train_fit": {
+          "queries": 69428,
+          "rows": 8886784
+        }
+      },
+      "ssd_feature_cache_used": true,
+      "subtitle_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+      "topK": 5,
+      "unique_candidate_videos": 17435,
+      "video_count": 17435,
+      "visual_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+    },
+    "feature_paths": {
+      "query_all": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+      "subtitle_mean_max": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+      "visual_mean": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz"
+    },
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24h_full_bmn_t2_trainfit_rebuild.py --stage c24h_3 --mode full --seed 2026 --resume",
+    "local_only": true,
+    "note": "Built because C24F full canonical table was absent and C19 medium rows do not cover full calib splits.",
+    "path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_CANONICAL_FULL_EVIDENCE_TABLE_full.local.parquet",
+    "query_count": 82445,
+    "row_count": 10552960,
+    "runtime_sec": 288.46898770332336,
+    "schema_hash": "08bb2ca03038fc34",
+    "sha256": "a88f68ec0580c3e67f44389e25852e821cd59802a5b5e77fe8aab5585ac7621d",
+    "size_bytes": 2103055880,
+    "source_rebuilt_bmn_t2": {
+      "columns": [
+        "query_id",
+        "video_id",
+        "split",
+        "candidate_video_rank",
+        "first_stage_score",
+        "gt_video_id",
+        "gt_start",
+        "gt_end",
+        "query_type",
+        "duration_bucket",
+        "bmn_pred_iou",
+        "bmn_p_iou_05",
+        "bmn_p_iou_07",
+        "bmn_rank_score",
+        "bmn_final_score",
+        "bmn_span_rank",
+        "bmn_margin",
+        "start_prob",
+        "end_prob",
+        "actionness_score",
+        "best_bmn_span_start",
+        "best_bmn_span_end",
+        "bmn_available",
+        "bmn_missing_reason",
+        "t2_score",
+        "t2_margin",
+        "t2_agreement",
+        "t2_rank",
+        "t2_available",
+        "t2_missing_reason",
+        "builder_id",
+        "checkpoint_hash",
+        "feature_hash",
+        "schema_hash",
+        "config_hash",
+        "bmn_z",
+        "t2_z",
+        "first_stage_z"
+      ],
+      "exists": true,
+      "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_REBUILT_BMN_T2_full.local.parquet",
+      "readable": true,
+      "row_count": 10552960,
+      "row_groups": 5155,
+      "schema_hash": "a057d0c99cd3b7d6",
+      "size_bytes": 1381569634,
+      "stable_hash": "0cd7146e90fcb060"
+    },
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    }
+  },
+  "canonical_schema": {
+    "columns": [
+      "query_id",
+      "video_id",
+      "split",
+      "gt_video_id",
+      "gt_start",
+      "gt_end",
+      "candidate_video_rank",
+      "candidate_source",
+      "first_stage_score",
+      "first_stage_rank",
+      "visual_feature_key",
+      "subtitle_feature_key",
+      "query_feature_key",
+      "has_visual",
+      "has_subtitle",
+      "has_query",
+      "feature_missing_mask",
+      "event_source",
+      "span_start",
+      "span_end",
+      "span_duration",
+      "bmn_score_available",
+      "t2_score_available",
+      "event_score_available",
+      "best_bmn_span_iou_label",
+      "event_relevance_score",
+      "query_event_score",
+      "event_rank",
+      "best_event_id",
+      "best_event_start",
+      "best_event_end",
+      "best_event_duration",
+      "best_event_method",
+      "event_visual_relevance",
+      "event_subtitle_relevance",
+      "event_multimodal_relevance",
+      "event_margin",
+      "event_topk_mean_score",
+      "event_topk_max_score",
+      "event_score_z",
+      "event_score_softmax",
+      "event_overlap_proxy",
+      "best_event_gt_overlap",
+      "event_iou_with_gt",
+      "event_contains_gt",
+      "event_available",
+      "first_stage_z",
+      "bmn_z",
+      "t2_z",
+      "event_z",
+      "missing_bmn_mask",
+      "missing_t2_mask",
+      "missing_event_mask",
+      "query_type",
+      "duration_bucket",
+      "retriever_score",
+      "retriever_rank",
+      "event_missing_mask",
+      "bmn_pred_iou",
+      "bmn_p_iou_05",
+      "bmn_p_iou_07",
+      "bmn_rank_score",
+      "bmn_final_score",
+      "bmn_span_rank",
+      "bmn_margin",
+      "start_prob",
+      "end_prob",
+      "actionness_score",
+      "best_bmn_span_start",
+      "best_bmn_span_end",
+      "bmn_available",
+      "bmn_missing_reason",
+      "t2_score",
+      "t2_margin",
+      "t2_agreement",
+      "t2_rank",
+      "t2_available",
+      "t2_missing_reason",
+      "builder_id",
+      "checkpoint_hash",
+      "feature_hash",
+      "schema_hash",
+      "config_hash",
+      "candidate_iou",
+      "iou_ge_05",
+      "iou_ge_07",
+      "correct_video",
+      "correct_video_and_iou07"
+    ],
+    "diagnostic_only_columns": [
+      "gt_video_id",
+      "gt_start",
+      "gt_end",
+      "candidate_iou",
+      "iou_ge_05",
+      "iou_ge_07",
+      "correct_video",
+      "correct_video_and_iou07",
+      "event_overlap_proxy",
+      "best_bmn_span_iou_label"
+    ],
+    "feature_excludes_diagnostic_only": true,
+    "schema_hash": "97eec24fd1c6f80f"
+  },
+  "diagnostic_only_column_audit": [
+    "gt_video_id",
+    "gt_start",
+    "gt_end",
+    "candidate_iou",
+    "iou_ge_05",
+    "iou_ge_07",
+    "correct_video",
+    "correct_video_and_iou07",
+    "event_overlap_proxy",
+    "best_bmn_span_iou_label"
+  ],
+  "evidence_join_audit": {
+    "duplicate_rebuilt_rows_after_dedup": 0,
+    "fallback_source": "C24H rebuilt BMN/T2 full row-space direct event materialization",
+    "position_based_join": false,
+    "source": "C24F canonical table left-joined with C24H rebuilt BMN/T2 by split/query_id/video_id"
+  },
+  "missing_mask_audit": {
+    "bmn_missing": 0,
+    "event_missing": 0,
+    "t2_missing": 0
+  },
+  "mode": "full",
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c24h_3_full_evidence_table_closure/C24H_3_FULL_EVIDENCE_SAMPLE.parquet",
+  "seed": 2026,
+  "split_coverage_audit": {
+    "bmn_missing_count": 0,
+    "duplicate_candidate_count": 0,
+    "event_direct_columns_present": true,
+    "event_missing_count": 0,
+    "evidence_by_split": {
+      "calib_holdout": {
+        "bmn_available_rows": 555520,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 555520,
+        "event_coverage": 1.0,
+        "queries": 4340,
+        "rows": 555520,
+        "t2_available_rows": 555520,
+        "t2_coverage": 1.0
+      },
+      "calib_select": {
+        "bmn_available_rows": 1110656,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 1110656,
+        "event_coverage": 1.0,
+        "queries": 8677,
+        "rows": 1110656,
+        "t2_available_rows": 1110656,
+        "t2_coverage": 1.0
+      },
+      "train_fit": {
+        "bmn_available_rows": 8886784,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 8886784,
+        "event_coverage": 1.0,
+        "queries": 69428,
+        "rows": 8886784,
+        "t2_available_rows": 8886784,
+        "t2_coverage": 1.0
+      }
+    },
+    "query_count": 82445,
+    "row_count": 10552960,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    },
+    "t2_missing_count": 0
+  },
+  "stage": "C24H-3",
+  "status": "C24H_FULL_EVIDENCE_TABLE_READY",
+  "table_manifest": {
+    "config_hash": "4f61db219ea79ff2",
+    "local_only": true,
+    "path": "/tmp/c24h_score_cache/CONQUER-RLEM-c2c3/C24H_FULL_EVIDENCE_TABLE_full.local.parquet",
+    "query_count": 82445,
+    "row_count": 10552960,
+    "schema_hash": "97eec24fd1c6f80f",
+    "sha256": "bff18e08dc2314fef91284d6e7a21c7d42711f241dd2b3caa517b1e577ba431f",
+    "size_bytes": 2103754164,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 4340,
+        "rows": 555520
+      },
+      "calib_select": {
+        "queries": 8677,
+        "rows": 1110656
+      },
+      "train_fit": {
+        "queries": 69428,
+        "rows": 8886784
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_files": [
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_1_native_retriever_collapse_audit/C22R_1_COLLAPSE_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_2_alignment_repair/C22R_2_ALIGNMENT_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_3_first_stage_preserving_retriever/C22R_3_RETRIEVER_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_4_safe_joint_integration/C22R_4_JOINT_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_5_robustness_full_readiness/C22R_5_ROBUSTNESS_DECISION.json",
+    "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c22r_6_final_decision/C22R_6_FINAL_DECISION.json"
+  ],
+  "manual_authorization_required_before_official": true,
+  "official_still_forbidden": true,
+  "ready_for_c23_full_trainfit_native_coupling": true
+}

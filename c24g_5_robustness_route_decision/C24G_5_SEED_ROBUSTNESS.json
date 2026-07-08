@@ -1,0 +1,8 @@
+{
+  "seed2026": {
+    "materialization": "C24G_BMN_T2_MATERIALIZED_PARTIAL",
+    "reeval": "C24G_FULL_EVIDENCE_INCONCLUSIVE"
+  },
+  "seed2027": "not run; blocked by BMN/T2 materialization",
+  "seed2028": "not run; blocked by BMN/T2 materialization"
+}

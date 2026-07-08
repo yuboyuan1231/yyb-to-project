@@ -1,0 +1,13 @@
+{
+  "baselines": [
+    "C12_5T_T2_baseline",
+    "C16_BMN_map_only",
+    "C17_best_hybrid",
+    "C17_retriever_BMN",
+    "C17_retriever_BMN_T2",
+    "random_score_sanity",
+    "oracle_upper_bound_in_candidate_pool"
+  ],
+  "delta_vs_t2_R100_IoU0.7": 21.25,
+  "wrong_video_delta_vs_t2": -27.375
+}

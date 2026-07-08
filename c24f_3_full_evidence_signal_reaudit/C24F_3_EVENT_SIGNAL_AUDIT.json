@@ -1,0 +1,10 @@
+{
+  "auc": {
+    "IoU>=0.5_AUC": 0.5076924262259673,
+    "IoU>=0.7_AUC": 0.49181048376175696,
+    "correct_video_AUC": 0.4985807575757576,
+    "correct_video_and_iou07_AUC": 0.49181048376175696
+  },
+  "direct_columns_present": true,
+  "gain_vs_first_stage": -0.010107558733226885
+}

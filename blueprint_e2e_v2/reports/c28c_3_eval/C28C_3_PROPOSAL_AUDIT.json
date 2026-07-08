@@ -1,0 +1,12 @@
+{
+  "gt_aligned_span_inserted_for_training_loss": false,
+  "gt_oracle_used_as_inference_feature": false,
+  "gt_video_inserted_for_training_loss": false,
+  "max_candidates": 65,
+  "max_spans_per_video": 64,
+  "one_span_materialization": false,
+  "preloaded_sequence_bank_used": true,
+  "query_count": 4340,
+  "split": "calib_holdout",
+  "temporal_padding_policy": "pad/truncate release feature sequences to 64 clips for tensor batching; missing features still raise KeyError"
+}

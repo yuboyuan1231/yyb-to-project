@@ -1,0 +1,10 @@
+{
+  "command_hash": "416417f9a4898910bd9b8f0366ac37acd5d0d170ab34b67c519a30ee1a779153",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "no_post_onelook_adjustment": true,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_not_used_for_selection": true,
+  "selected_model_frozen_before_onelook": true
+}

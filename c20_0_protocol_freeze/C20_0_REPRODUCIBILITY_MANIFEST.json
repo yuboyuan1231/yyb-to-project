@@ -1,0 +1,20 @@
+{
+  "c19_canonical_cache": {
+    "exists": true,
+    "path": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3/C19_CANONICAL_SELECTED_SCORE_TABLE_medium.local.parquet",
+    "readable": true,
+    "sha256": "c425b5de993ced8bd861578f4074f5a8499bd34972977ac3a537df8222b99d98",
+    "size_bytes": 1447443108
+  },
+  "c19_score_cache_dir": "/tmp/c19_score_cache/CONQUER-RLEM-c2c3",
+  "device": "cuda:0",
+  "git_branch_vv": "c10-postofficial-repair-diagnostics    31a7023 Archive CONQUER-RLEM promoted C7-B6 system\n  c12-clean-native-vcmr                  6888730 [origin/c12-clean-native-vcmr] Add C13 handoff evidence packet\n  c14-strong-feature-pilot               c619bba [origin/c14-strong-feature-pilot] Run C14 strong feature event pilot\n  c15-boundary-localizer-redesign        90dcfbc [origin/c15-boundary-localizer-redesign] Run C15 boundary localizer redesign\n  c16-fullscale-bmn-native-localizer     f0642ef [origin/c16-fullscale-bmn-native-localizer] Run C16 fullscale BMN native localizer\n  c17-bmn-t2-native-vcmr-integration     87509b4 [origin/c17-bmn-t2-native-vcmr-integration] Run C17 BMN T2 native VCMR integration\n  c18-full-hybrid-freeze-candidate       96d8926 [origin/c18-full-hybrid-freeze-candidate] Run C18 full hybrid freeze candidate\n  c19-official-readiness-blocker-closure d1fad99 [origin/c19-official-readiness-blocker-closure] Run C19 official readiness blocker closure\n* c20-top1-safe-bmn-correction           d1fad99 Run C19 official readiness blocker closure\n  main                                   31a7023 [origin/main] Archive CONQUER-RLEM promoted C7-B6 system",
+  "git_log": "d1fad99 (HEAD -> c20-top1-safe-bmn-correction, origin/c19-official-readiness-blocker-closure, c19-official-readiness-blocker-closure) Run C19 official readiness blocker closure\n96d8926 (origin/c18-full-hybrid-freeze-candidate, c18-full-hybrid-freeze-candidate) Run C18 full hybrid freeze candidate\n87509b4 (origin/c17-bmn-t2-native-vcmr-integration, c17-bmn-t2-native-vcmr-integration) Run C17 BMN T2 native VCMR integration\nf0642ef (origin/c16-fullscale-bmn-native-localizer, c16-fullscale-bmn-native-localizer) Run C16 fullscale BMN native localizer\n90dcfbc (origin/c15-boundary-localizer-redesign, c15-boundary-localizer-redesign) Run C15 boundary localizer redesign",
+  "gpu": [
+    "0, NVIDIA GeForce RTX 3090, 24576 MiB, 24094 MiB",
+    "1, NVIDIA GeForce RTX 3090, 24576 MiB, 24113 MiB"
+  ],
+  "mode": "medium",
+  "python": "Python 3.9.19",
+  "seed": 2026
+}

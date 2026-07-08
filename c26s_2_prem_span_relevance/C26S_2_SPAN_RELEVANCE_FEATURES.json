@@ -1,0 +1,30 @@
+{
+  "diagnostic_columns_excluded_from_inference": [
+    "candidate_iou",
+    "iou_ge_05",
+    "iou_ge_07",
+    "correct_video"
+  ],
+  "duration_breakdown": {
+    "long": 163,
+    "medium": 629,
+    "short": 1008
+  },
+  "feature_info": {
+    "no_gt_inference_features": "candidate_iou/iou labels are not used",
+    "subtitle": "C26 subtitle relevance projected to spans with T2 score",
+    "visual": "C26 visual relevance projected to spans with actionness"
+  },
+  "local_path": "/tmp/c26s_score_cache/CONQUER-RLEM-c2c3/C26S_SPAN_RELEVANCE_medium_seed2026.local.parquet",
+  "official_used": false,
+  "query_type_breakdown": {
+    "t": 148,
+    "v": 1345,
+    "vt": 307
+  },
+  "sample_path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c26s_2_prem_span_relevance/C26S_2_SPAN_RELEVANCE_SAMPLE.parquet",
+  "stage": "C26S-2",
+  "status": "C26S_PREM_SPAN_RELEVANCE_READY",
+  "subtitle_coverage": 1.0,
+  "visual_coverage": 1.0
+}

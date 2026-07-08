@@ -1,0 +1,3 @@
+# C26S-1 Rowspace Decision
+
+Status: `C26S_MULTISPAN_ROWSPACE_PARTIAL`.

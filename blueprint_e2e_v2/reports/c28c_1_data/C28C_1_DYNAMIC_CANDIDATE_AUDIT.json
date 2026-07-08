@@ -1,0 +1,13 @@
+{
+  "candidate_count_max": 200,
+  "candidate_count_min": 200,
+  "dynamic_topk": 200,
+  "encoded_bank_device": "cuda:0",
+  "gt_insert_for_training_loss": true,
+  "gt_insert_rate": 0.0,
+  "query_count": 64,
+  "static_top128_hard_gate_used": false,
+  "teacher_warm_start_query_rate": 100.0,
+  "teacher_warm_start_used_for_training": true,
+  "video_bank_encoded_once_per_refresh": true
+}

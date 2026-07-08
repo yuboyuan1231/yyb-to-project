@@ -1,0 +1,12 @@
+{
+  "full_extraction_now": false,
+  "multiscale_event_worth_doing": true,
+  "official_val_used": false,
+  "pilot_first": true,
+  "reason": "Current TVR features are insufficient for independent retrieval and reliable span scoring, while C12 M1000 has large oracle headroom. A small pilot of stronger text/subtitle, visual, and multiscale event tokens is feasible and lower risk than another C12 ranker patch.",
+  "sample_coverage_audit": "C13_1_SAMPLE_COVERAGE_AUDIT.json",
+  "stage": "C13-1",
+  "status": "C13_STRONG_MULTISCALE_FEATURE_PROMISING",
+  "strong_text_subtitle_worth_doing": true,
+  "strong_visual_worth_doing": true
+}

@@ -1,0 +1,13 @@
+{
+  "policy_hash": "40544ebc031ee4b7bd86e2427da7fce8527de7bfad342927ee0f1421c301e854",
+  "selected_policy": {
+    "model": {
+      "name": "M0_logistic_regression_l2",
+      "spec_hash": "118b664270d954ec550d7289d5be1a44611d523bb7643a154a2988f814b69094",
+      "tau": 0.05,
+      "topk": 10
+    },
+    "name": "P3_best_learned_pairwise_policy",
+    "source": "learned"
+  }
+}

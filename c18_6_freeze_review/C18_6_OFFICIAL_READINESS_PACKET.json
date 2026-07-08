@@ -1,0 +1,48 @@
+{
+  "c18_0_protocol_status": "C18_PROTOCOL_READY",
+  "c18_1_full_score_status": "C18_FULL_SCORE_PARTIAL_REPRODUCIBLE",
+  "c18_2_baseline_replay_status": "C18_BASELINE_REPLAY_PARTIAL",
+  "c18_3_front_rank_status": "C18_FRONT_RANK_CALIBRATION_PROMISING",
+  "c18_4_pseudo_onelook_status": "C18_PSEUDO_ONELOOK_STABLE",
+  "c18_5_robustness_status": "C18_ROBUSTNESS_PASS",
+  "c18_is_promoted_system": false,
+  "candidate_pool_hash": "d55ce033a5bb60f4e640b715c17cbaeb9dd008dd4bd76dfed1b9062ed87635df",
+  "command_lines": [
+    "run_c18_full_hybrid_freeze_candidate.py --stage all --mode medium --seed 2026"
+  ],
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "evaluator_modified": false,
+  "final_decision": "C18_CONTINUE_FULL_HYBRID_TRAIN_ONLY",
+  "local_only_artifacts": [
+    "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+    "/tmp/c18_score_cache/CONQUER-RLEM-c2c3/C18_PSEUDO_SCORE_TABLE_medium.local.parquet"
+  ],
+  "missing_artifacts": [
+    "full all-split score table",
+    "compatible C7-B6 train-only replay"
+  ],
+  "mode": "medium",
+  "nms_modified": false,
+  "official_may_be_run_by_this_script": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "schema_hash": [
+    "bc7541d2f30ae646d0dadd606ecce9d6941ac42a80bb5a7158ed3ed90d5da95c"
+  ],
+  "score_manifest_hash": "07a125b2010a84a2cd6ef595019246aa543967f8bd53e35645819898cd7bf67c",
+  "seed": 2026,
+  "seed_list": [
+    2026,
+    2027
+  ],
+  "selected_config": "grid_a0.65_b0.25_g0.1",
+  "selected_formula": {
+    "alpha": 0.65,
+    "beta": 0.25,
+    "family": "G_retriever_BMN_T2",
+    "gamma": 0.1,
+    "name": "grid_a0.65_b0.25_g0.1"
+  },
+  "stage": "C18-6",
+  "status": "C18_CONTINUE_FULL_HYBRID_TRAIN_ONLY"
+}

@@ -1,0 +1,7 @@
+{
+  "epochs": 4,
+  "event_proxy": "subtitle_max_as_partial_event_token",
+  "hidden": 384,
+  "name": "P2_query_gated_multimodal_pool",
+  "top_hard_negatives": 96
+}

@@ -1,0 +1,31 @@
+{
+  "candidate_pool": "first_stage_top128",
+  "columns": [
+    "query_id",
+    "video_id",
+    "split",
+    "gt_video_id",
+    "gt_start",
+    "gt_end",
+    "candidate_video_rank",
+    "candidate_source",
+    "first_stage_score",
+    "first_stage_rank",
+    "visual_feature_key",
+    "subtitle_feature_key",
+    "query_feature_key",
+    "has_visual",
+    "has_subtitle",
+    "has_query",
+    "feature_missing_mask",
+    "event_source",
+    "bmn_score_available",
+    "t2_score_available",
+    "is_gt_video",
+    "schema_hash",
+    "config_hash"
+  ],
+  "no_position_based_join": true,
+  "no_silent_zero_fill": true,
+  "schema_hash": "dca539d2b456371f66378ef206fdc3821339acf8edb10fa61a685ed9284f7247"
+}

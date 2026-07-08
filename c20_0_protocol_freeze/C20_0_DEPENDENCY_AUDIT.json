@@ -1,0 +1,58 @@
+{
+  "c12_schema": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SCHEMA_MANIFEST.json",
+    "readable": true,
+    "sha256": "26d4997d2540bdb627436d4e2e2a3a9b0f2770c3903b6ee0b2d337b61b2d4c5c",
+    "size_bytes": 3336
+  },
+  "c12_split": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/C12_1_SPLIT_MANIFEST.json",
+    "readable": true,
+    "sha256": "ad397b296cd5309f9326f56bfd1dc7af9009dbc20dd66e2f7af12b3c4aea9c31",
+    "size_bytes": 1045
+  },
+  "c19_1": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_1_full_score_blocker_closure/C19_1_FULL_SCORE_DECISION.json",
+    "readable": true,
+    "sha256": "f1b7c9f231b75ee530601129c1fdce93c1f65a61bcff070953e00d15feb6aeac",
+    "size_bytes": 16855
+  },
+  "c19_2": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_2_baseline_replay_closure/C19_2_BASELINE_REPLAY_DECISION.json",
+    "readable": true,
+    "sha256": "659269b7d8833c730e2994c62f0ac67dda804697feffefbfcbd9b88bd4664376",
+    "size_bytes": 1633312
+  },
+  "c19_3": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_3_front_rank_risk_audit/C19_3_RISK_DECISION.json",
+    "readable": true,
+    "sha256": "6a7fde445de8b4aa4d2d512630e0cf281c3fd603a90330d56e7bf120199e1b34",
+    "size_bytes": 57280
+  },
+  "c19_4": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_4_readiness_packet_assembly/C19_4_READINESS_ASSEMBLY_DECISION.json",
+    "readable": true,
+    "sha256": "a48bc25d4f70f7919f55b7e514ea448d56c5b50bb753b7fcf43ae09cddf6fa93",
+    "size_bytes": 3167
+  },
+  "c19_5": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_5_final_blocker_decision/C19_5_NEXT_STEP_DECISION.json",
+    "readable": true,
+    "sha256": "bba95a0dd298601241b1e5c396fec0aea9aafdd46af0c8a6d98a7d4b2c942113",
+    "size_bytes": 11799
+  },
+  "c19_manifest": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c19_1_full_score_blocker_closure/C19_1_SCORE_CACHE_MANIFEST.json",
+    "readable": true,
+    "sha256": "b0febbec8635dcdb9d38caee6149823298ec1ccf17c8fad65283e9b938d0fcc5",
+    "size_bytes": 9540
+  }
+}

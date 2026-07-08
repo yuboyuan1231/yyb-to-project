@@ -1,0 +1,6 @@
+{
+  "duration_mismatch_examples": [],
+  "frame_count_sampled": 0,
+  "frame_timestamp_error_estimate_sec": null,
+  "three_fps_mapping_assumption": "timestamp_sec = frame_index / 3.0 when canonical fps3 frames are confirmed"
+}

@@ -1,0 +1,8 @@
+{
+  "duplicate_candidate_count": 0,
+  "invalid_span_count": 0,
+  "missing_scores_mask_required": true,
+  "position_based_join_detected": false,
+  "schema_mismatch": false,
+  "silent_zero_fill_detected": false
+}

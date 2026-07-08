@@ -1,0 +1,8 @@
+{
+  "decision": "C22_NEED_FULL_TRAINFIT_NATIVE_COUPLING",
+  "reason": [
+    "medium mode event representation is a pooled partial-event proxy",
+    "full shared BMN span-map joint optimizer was not run",
+    "C22 did not earn official review readiness"
+  ]
+}

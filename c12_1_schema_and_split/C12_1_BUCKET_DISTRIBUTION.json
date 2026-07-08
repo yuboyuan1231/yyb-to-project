@@ -1,0 +1,108 @@
+{
+  "b6_train_proxy_subset": {
+    "available": true,
+    "b6_top1_correct_iou07": 382,
+    "coverage_limitation": "Only a 1024-query train reconstruction exists; use as diagnostic proxy, not split selection.",
+    "official_val_used": false,
+    "query_count": 1024,
+    "source": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c8_8_exact_b6_feature_reexport/C8_8_EXACT_B6_TRAIN_NMS.json",
+    "video_correct_but_span_wrong_top1": 282,
+    "video_wrong_top1": 360
+  },
+  "first_stage_rank_error": null,
+  "first_stage_rank_source": "/home/a/yybwork/data/yyb/tvr_feature_release/data/train_select100_top2000",
+  "margin_quantiles": {
+    "p25": 5068.6708984375,
+    "p75": 31880.9921875
+  },
+  "splits": {
+    "calib_holdout": {
+      "buckets": {
+        "B6_top1_correct_unavailable_use_first_stage_proxy": 4340,
+        "first_stage_top1_correct": 1263,
+        "first_stage_top1_wrong": 3077,
+        "high_margin": 1142,
+        "low_margin": 1074,
+        "multi_verb": 546,
+        "positive_in_top10": 3437,
+        "positive_in_top100": 4340,
+        "positive_in_top5": 2799,
+        "subtitle_heavy": 1236,
+        "total": 4340,
+        "visual_action_heavy": 3669
+      },
+      "query_count": 4340,
+      "query_type": {
+        "t": 298,
+        "v": 3302,
+        "vt": 740
+      }
+    },
+    "calib_select": {
+      "buckets": {
+        "B6_top1_correct_unavailable_use_first_stage_proxy": 8677,
+        "first_stage_top1_correct": 2574,
+        "first_stage_top1_wrong": 6103,
+        "high_margin": 2257,
+        "low_margin": 2174,
+        "multi_verb": 1179,
+        "positive_in_top10": 6855,
+        "positive_in_top100": 8677,
+        "positive_in_top5": 5653,
+        "subtitle_heavy": 2528,
+        "total": 8677,
+        "visual_action_heavy": 7225
+      },
+      "query_count": 8677,
+      "query_type": {
+        "t": 682,
+        "v": 6511,
+        "vt": 1484
+      }
+    },
+    "pseudo_official_holdout": {
+      "buckets": {
+        "B6_top1_correct_unavailable_use_first_stage_proxy": 4339,
+        "first_stage_top1_correct": 1235,
+        "first_stage_top1_wrong": 3104,
+        "high_margin": 1123,
+        "low_margin": 1093,
+        "multi_verb": 566,
+        "positive_in_top10": 3409,
+        "positive_in_top100": 4339,
+        "positive_in_top5": 2736,
+        "subtitle_heavy": 1252,
+        "total": 4339,
+        "visual_action_heavy": 3625
+      },
+      "query_count": 4339,
+      "query_type": {
+        "t": 344,
+        "v": 3289,
+        "vt": 706
+      }
+    },
+    "train_fit": {
+      "buckets": {
+        "B6_top1_correct_unavailable_use_first_stage_proxy": 69428,
+        "first_stage_top1_correct": 22859,
+        "first_stage_top1_wrong": 46569,
+        "high_margin": 17174,
+        "low_margin": 17356,
+        "multi_verb": 8652,
+        "positive_in_top10": 56500,
+        "positive_in_top100": 69428,
+        "positive_in_top5": 47159,
+        "subtitle_heavy": 21386,
+        "total": 69428,
+        "visual_action_heavy": 57258
+      },
+      "query_count": 69428,
+      "query_type": {
+        "t": 6542,
+        "v": 51369,
+        "vt": 11517
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "loss_manifest": {
+    "L_no_regression": "guard against VR_R100 collapse and wrong-video increase",
+    "L_span_rank": "proposal-level ranking over BMN/T2/PREM span scores",
+    "L_span_to_video": "topK span distribution feedback consistency",
+    "oracle_excluded": true
+  },
+  "pseudo_used": false,
+  "report_split": "calib_holdout",
+  "selection_split": "calib_select"
+}

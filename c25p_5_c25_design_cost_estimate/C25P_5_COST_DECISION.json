@@ -1,0 +1,43 @@
+{
+  "costs": {
+    "chunking_strategy": "chunk by video_id shards, write resumable manifest per shard",
+    "estimated_frames": 900,
+    "estimated_videos": 1,
+    "feature_dims": {
+      "clip_vit_b32": 512,
+      "dinov2_vit_b14": 768,
+      "internvideo": 1024,
+      "videomae": 768
+    },
+    "io_risk": "high if frame tree is on shared or spinning disk",
+    "recommended_cache_path": "/tmp/c25p_feature_cache/CONQUER-RLEM-c2c3",
+    "resume_strategy": "skip feature rows with existing hash/schema and validate manifest joins before training",
+    "runtime_gpu_hours_rough": {
+      "clip": 0.0036,
+      "dinov2": 0.006,
+      "internvideo": 0.008333333333333333,
+      "videomae": 0.004
+    },
+    "storage_by_model": {
+      "clip_vit_b32": {
+        "float16_gb": 0.000858306884765625,
+        "float32_gb": 0.00171661376953125
+      },
+      "dinov2_vit_b14": {
+        "float16_gb": 0.0012874603271484375,
+        "float32_gb": 0.002574920654296875
+      },
+      "internvideo": {
+        "float16_gb": 0.00171661376953125,
+        "float32_gb": 0.0034332275390625
+      },
+      "videomae": {
+        "float16_gb": 0.0012874603271484375,
+        "float32_gb": 0.002574920654296875
+      }
+    }
+  },
+  "recommended_c25_plan": "Plan C",
+  "stage": "C25P-5",
+  "status": "C25P_C25_PLAN_READY"
+}

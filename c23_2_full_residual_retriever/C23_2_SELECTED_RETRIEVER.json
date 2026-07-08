@@ -1,0 +1,10 @@
+{
+  "formula": {
+    "base": 1.0,
+    "c22": 0.0,
+    "rank_prior": 0.01
+  },
+  "holdout_report_only": true,
+  "name": "R0_baseline_only",
+  "selection_split": "calib_select"
+}

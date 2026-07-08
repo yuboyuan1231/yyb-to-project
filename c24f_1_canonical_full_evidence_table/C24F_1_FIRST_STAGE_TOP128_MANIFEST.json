@@ -1,0 +1,20 @@
+{
+  "calib_holdout": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_holdout_top128.pkl",
+    "readable": true,
+    "size_bytes": 2068177
+  },
+  "calib_select": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_c17_medium_calib_select_top128.pkl",
+    "readable": true,
+    "size_bytes": 2067971
+  },
+  "train_fit": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/first_stage_train_calib_holdout_top128.pkl",
+    "readable": true,
+    "size_bytes": 170397963
+  }
+}

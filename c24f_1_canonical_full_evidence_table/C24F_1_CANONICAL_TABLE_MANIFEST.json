@@ -1,0 +1,88 @@
+{
+  "config_hash": "ee39453c45c708dc",
+  "event_manifest": {
+    "candidate_rows_with_event": 328000,
+    "config_hash": "9b805ca722aa0028",
+    "event_cache_reused": false,
+    "event_direct_columns_present": true,
+    "event_feature_matrix_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_FEATURES_medium.local.npz",
+    "event_feature_matrix_sha256": "e22346d54469112e0a4217c0a8831d6e52de2d94516be66a5d71597b757aaeb4",
+    "event_feature_matrix_size_bytes": 3224288940,
+    "event_rows": 313367,
+    "event_subtitle_feature_dim": 768,
+    "event_table_path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_DIRECT_EVENT_TABLE_medium.local.parquet",
+    "event_table_sha256": "a71161bf006369630387600c143362b1d114cf62c83aa0de32e5df1eef0b5f53",
+    "event_table_size_bytes": 12325963,
+    "event_visual_feature_dim": 4352,
+    "event_worker_count": 16,
+    "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_2 --mode medium --seed 2026 --force",
+    "method_coverage": {
+      "E0_fixed_window_events": 139268,
+      "E1_visual_cosine_change_point_events": 34824,
+      "E2_subtitle_boundary_events": 34820,
+      "E3_multimodal_change_point_events": 34812,
+      "E4_hybrid_fixed_change_events": 69643
+    },
+    "method_note": "EventFormer-inspired existing-feature event evidence; not EventFormer reproduction.",
+    "methods": [
+      "E0_fixed_window_events",
+      "E1_visual_cosine_change_point_events",
+      "E2_subtitle_boundary_events",
+      "E3_multimodal_change_point_events",
+      "E4_hybrid_fixed_change_events"
+    ],
+    "minimum_required_methods_present": true,
+    "missing_event_count": 0,
+    "missing_video_features": 0,
+    "missing_video_sample": [],
+    "normalization_method": "L2 normalize query, event subtitle pooled, event visual pooled, and projected query vectors",
+    "projection_method": "deterministic Gaussian query-to-visual projection seeded by 20260424 + visual_dim; subtitle uses native RoBERTa cosine",
+    "query_count": 3000,
+    "raw_video_used": false,
+    "runtime_sec": 104.60171604156494,
+    "schema_hash": "e5aef22d624248ff",
+    "similarity_function": "cosine",
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "ssd_feature_cache_used": true,
+    "subtitle_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/subtitle_lmdb",
+    "topK": 5,
+    "unique_candidate_videos": 17414,
+    "video_count": 17414,
+    "visual_lmdb_read_path": "/tmp/c24f_feature_lmdb_cache/visual_lmdb"
+  },
+  "generation_command": "/home/a/miniconda3/envs/conquer-rlem/bin/python run_c24f_full_evidence_materialization_repair.py --stage c24f_1 --mode medium --seed 2026 --force",
+  "local_only": true,
+  "path": "/tmp/c24f_score_cache/CONQUER-RLEM-c2c3/C24F_CANONICAL_FULL_EVIDENCE_TABLE_medium.local.parquet",
+  "query_count": 3000,
+  "row_count": 328000,
+  "schema_hash": "08bb2ca03038fc34",
+  "sha256": "f1ffa252b4f61a0dd97b622a7f2e1a6c9bf0d6a1000b92724184b9a3f4dbac9d",
+  "size_bytes": 67595646,
+  "split_coverage": {
+    "calib_holdout": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "calib_select": {
+      "queries": 1000,
+      "rows": 100000
+    },
+    "train_fit": {
+      "queries": 1000,
+      "rows": 128000
+    }
+  }
+}

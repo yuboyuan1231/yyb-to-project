@@ -1,0 +1,255 @@
+{
+  "best_select": null,
+  "checkpoint_manifest": {
+    "epoch": 5,
+    "metrics": {
+      "train_loss": {
+        "L_amd_diversity": 0.003137668449031159,
+        "L_amd_relevance": 0.0004482011990100439,
+        "L_hard_negative_video_span": 0.1979269413407349,
+        "L_joint_vcmr_ranking": 3.119874477661182,
+        "L_localization_to_retrieval_feedback": 0.04155341761592556,
+        "L_no_regression": 0.010653613357238025,
+        "L_partial_relevance": 0.001470938786478349,
+        "L_region": 0.09510299214314846,
+        "L_retrieval_guided_localization": 0.04555570935869749,
+        "L_span_localization": 0.003764291357881117,
+        "L_total": 15.355372367469462,
+        "L_video_retrieval": 0.6672921308854652,
+        "L_video_span_consistency": 0.3748503900005914
+      }
+    },
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.pt",
+    "size_bytes": 94147557
+  },
+  "data_parallel": false,
+  "device": "cuda:0",
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "promoted_system": "C7-B6 R1SelectiveTop1",
+  "pseudo_official_holdout_used_for_selection": false,
+  "stage": "C28C-2",
+  "status": "C28C_FULL_MODEL_TRAINED",
+  "subtitle_bank_manifest": {
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/C28C_VIDEO_SUBTITLE_BANK_all.npz",
+    "schema_hash": "af32c64903bf536f",
+    "subtitle_dim": 768,
+    "video_count": 17435,
+    "zero_fill": false
+  },
+  "subtitle_sequence_manifest": {
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/C28C_VIDEO_SUBTITLE_SEQ_all_T64.npy",
+    "schema_hash": "fe4b3387fd51dd41",
+    "source": "release_lmdb_preloaded_sequence_bank",
+    "subtitle_dim": 768,
+    "target_len": 64,
+    "video_count": 17435,
+    "zero_fill": false
+  },
+  "training_log": [
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.04897159647404505,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 0,
+      "loss": {
+        "L_amd_diversity": 0.0014649246107295824,
+        "L_amd_relevance": 0.0006577606333090998,
+        "L_hard_negative_video_span": 0.06442272694900963,
+        "L_joint_vcmr_ranking": 4.045601158293728,
+        "L_localization_to_retrieval_feedback": 0.01886050130684953,
+        "L_no_regression": 0.00427972448107466,
+        "L_partial_relevance": 0.002230039437880703,
+        "L_region": 0.010281319100437003,
+        "L_retrieval_guided_localization": 0.022004209969477967,
+        "L_span_localization": 0.0025445209174237864,
+        "L_total": 18.72623702630646,
+        "L_video_retrieval": 0.12783955763743632,
+        "L_video_span_consistency": 0.4150898939251611
+      }
+    },
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.047531255401279025,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 1,
+      "loss": {
+        "L_amd_diversity": 0.0017239367357620944,
+        "L_amd_relevance": 0.0005250497932155992,
+        "L_hard_negative_video_span": 0.3763913136052163,
+        "L_joint_vcmr_ranking": 4.217160183529876,
+        "L_localization_to_retrieval_feedback": 0.054719339026564624,
+        "L_no_regression": 0.013795610193731028,
+        "L_partial_relevance": 0.0015750780954963662,
+        "L_region": 0.015397222967491521,
+        "L_retrieval_guided_localization": 0.0749498176753181,
+        "L_span_localization": 0.005970680743925035,
+        "L_total": 21.064190446678044,
+        "L_video_retrieval": 0.8433300122751307,
+        "L_video_span_consistency": 0.9098586027441465
+      }
+    },
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.047531255401279025,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 2,
+      "loss": {
+        "L_amd_diversity": 0.0020916997678966046,
+        "L_amd_relevance": 0.0004795986055100328,
+        "L_hard_negative_video_span": 0.14048475627094742,
+        "L_joint_vcmr_ranking": 3.5218350391176965,
+        "L_localization_to_retrieval_feedback": 0.06575245581574155,
+        "L_no_regression": 0.016423576599783635,
+        "L_partial_relevance": 0.001584876479507439,
+        "L_region": 0.06770785115064752,
+        "L_retrieval_guided_localization": 0.06503902592051652,
+        "L_span_localization": 0.005595838379827711,
+        "L_total": 16.95088877492765,
+        "L_video_retrieval": 0.4751401372601142,
+        "L_video_span_consistency": 0.4261341189847782
+      }
+    },
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.047531255401279025,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 3,
+      "loss": {
+        "L_amd_diversity": 0.002301628850874046,
+        "L_amd_relevance": 0.0004655530101566597,
+        "L_hard_negative_video_span": 0.2925535824152208,
+        "L_joint_vcmr_ranking": 3.512252050138918,
+        "L_localization_to_retrieval_feedback": 0.05856468955700656,
+        "L_no_regression": 0.015482785323144777,
+        "L_partial_relevance": 0.001495296401023755,
+        "L_region": 0.15714151425297215,
+        "L_retrieval_guided_localization": 0.06886638830997405,
+        "L_span_localization": 0.005359923122555871,
+        "L_total": 17.58251702877519,
+        "L_video_retrieval": 0.8378896923547521,
+        "L_video_span_consistency": 0.5168811532484522
+      }
+    },
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.047531255401279025,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 4,
+      "loss": {
+        "L_amd_diversity": 0.002968537406203014,
+        "L_amd_relevance": 0.0004525513171475284,
+        "L_hard_negative_video_span": 0.19963190392501456,
+        "L_joint_vcmr_ranking": 3.2421483927737844,
+        "L_localization_to_retrieval_feedback": 0.048946439897741764,
+        "L_no_regression": 0.01211723821958361,
+        "L_partial_relevance": 0.001477717747184802,
+        "L_region": 0.11448576456545986,
+        "L_retrieval_guided_localization": 0.05240078656463658,
+        "L_span_localization": 0.0042593272413163985,
+        "L_total": 15.9569176301276,
+        "L_video_retrieval": 0.6849853540355966,
+        "L_video_span_consistency": 0.39048817287304255
+      }
+    },
+    {
+      "candidate_audit": {
+        "candidate_count_max": 200,
+        "candidate_count_min": 200,
+        "dynamic_topk": 200,
+        "encoded_bank_device": "cuda:0",
+        "gt_insert_for_training_loss": true,
+        "gt_insert_rate": 0.04897159647404505,
+        "query_count": 69428,
+        "static_top128_hard_gate_used": false,
+        "teacher_warm_start_query_rate": 100.0,
+        "teacher_warm_start_used_for_training": true,
+        "video_bank_encoded_once_per_refresh": true
+      },
+      "epoch": 5,
+      "loss": {
+        "L_amd_diversity": 0.003137668449031159,
+        "L_amd_relevance": 0.0004482011990100439,
+        "L_hard_negative_video_span": 0.1979269413407349,
+        "L_joint_vcmr_ranking": 3.119874477661182,
+        "L_localization_to_retrieval_feedback": 0.04155341761592556,
+        "L_no_regression": 0.010653613357238025,
+        "L_partial_relevance": 0.001470938786478349,
+        "L_region": 0.09510299214314846,
+        "L_retrieval_guided_localization": 0.04555570935869749,
+        "L_span_localization": 0.003764291357881117,
+        "L_total": 15.355372367469462,
+        "L_video_retrieval": 0.6672921308854652,
+        "L_video_span_consistency": 0.3748503900005914
+      }
+    }
+  ],
+  "visual_bank_manifest": {
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/C28C_VIDEO_VISUAL_BANK_all.npz",
+    "schema_hash": "17a362fb896ac365",
+    "video_count": 17435,
+    "visual_dim": 4352,
+    "zero_fill": false
+  },
+  "visual_sequence_manifest": {
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/C28C_VIDEO_VISUAL_SEQ_all_T64.npy",
+    "schema_hash": "bf8555bea6580052",
+    "source": "release_lmdb_preloaded_sequence_bank",
+    "target_len": 64,
+    "video_count": 17435,
+    "visual_dim": 4352,
+    "zero_fill": false
+  }
+}

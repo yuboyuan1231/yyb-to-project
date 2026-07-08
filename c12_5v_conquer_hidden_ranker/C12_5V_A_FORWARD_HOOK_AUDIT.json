@@ -1,0 +1,22 @@
+{
+  "available_keys": [
+    "begin",
+    "ctx_norm",
+    "ctx_query_dot",
+    "end",
+    "g_norm",
+    "q2v",
+    "qal_norm",
+    "qdf_norm",
+    "video_len"
+  ],
+  "nonfinite_count": 0,
+  "official_val_used": false,
+  "sample_desc_ids": [
+    365,
+    366,
+    367,
+    368
+  ],
+  "stage": "C12-5V-A"
+}

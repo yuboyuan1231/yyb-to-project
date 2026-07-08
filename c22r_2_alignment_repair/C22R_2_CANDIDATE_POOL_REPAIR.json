@@ -1,0 +1,7 @@
+{
+  "candidate_pool": "first_stage_top128",
+  "duplicate_candidate_overwrite": false,
+  "gt_coverage_top128": 100.0,
+  "invalid_video_id_count": 0,
+  "row_count": 128000
+}

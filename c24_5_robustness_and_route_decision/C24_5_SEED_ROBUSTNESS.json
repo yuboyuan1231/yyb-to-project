@@ -1,0 +1,9 @@
+{
+  "seed2026": {
+    "diagnostic": "C24_EVIDENCE_SIGNAL_FRONT_RANK_WEAK",
+    "integration": "C24_STRENGTHENED_INTEGRATION_WEAK",
+    "probe": "C24_EVIDENCE_STRENGTHENING_FRONT_RANK_WEAK"
+  },
+  "seed2027": "not rerun; deterministic evidence probe and partial source coverage",
+  "seed2028": "not rerun; deterministic evidence probe and partial source coverage"
+}

@@ -1,0 +1,148 @@
+{
+  "bmn_train_fit_coverage": 0.0,
+  "c24g_0_protocol_status": "C24G_PROTOCOL_READY",
+  "c24g_1_source_recovery_status": "C24G_BMN_T2_SOURCE_PARTIAL_REBUILD_NEEDED",
+  "c24g_2_bmn_t2_materialization_status": "C24G_BMN_T2_MATERIALIZED_PARTIAL",
+  "c24g_3_full_evidence_table_status": "C24G_FULL_EVIDENCE_TABLE_PARTIAL",
+  "c24g_4_signal_integration_status": "C24G_FULL_EVIDENCE_INCONCLUSIVE",
+  "c24g_5_robustness_route_status": "C24G_ROBUSTNESS_PARTIAL",
+  "c24g_is_promoted_system": false,
+  "c25_raw_frame_strong_feature_audit_recommended": false,
+  "current_promoted_system": "C7-B6 R1SelectiveTop1",
+  "delta_vs_c19_c21": {},
+  "delta_vs_c23": {},
+  "delta_vs_c24": {},
+  "delta_vs_c24f": {},
+  "evaluator_modified": false,
+  "event_direct_columns_present": true,
+  "evidence_signal_conclusion": {
+    "blocked_reason": "BMN/T2 train_fit evidence incomplete",
+    "materialized_full": false
+  },
+  "existing_feature_path_still_has_value": false,
+  "final_decision": "C24G_NEED_MORE_BMN_T2_MATERIALIZATION",
+  "final_vcmr_metrics": {},
+  "final_vr_metrics": {
+    "VR_R@1": null,
+    "VR_R@10": null,
+    "VR_R@100": null,
+    "VR_R@5": null
+  },
+  "full_evidence_coverage": {
+    "bmn_missing_count": 128001,
+    "duplicate_candidate_count": 0,
+    "event_direct_columns_present": true,
+    "event_missing_count": 0,
+    "evidence_by_split": {
+      "calib_holdout": {
+        "bmn_available_rows": 100000,
+        "bmn_coverage": 1.0,
+        "event_available_rows": 100000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 100000,
+        "t2_available_rows": 97429,
+        "t2_coverage": 0.97429
+      },
+      "calib_select": {
+        "bmn_available_rows": 99999,
+        "bmn_coverage": 0.99999,
+        "event_available_rows": 100000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 100000,
+        "t2_available_rows": 97004,
+        "t2_coverage": 0.97004
+      },
+      "train_fit": {
+        "bmn_available_rows": 0,
+        "bmn_coverage": 0.0,
+        "event_available_rows": 128000,
+        "event_coverage": 1.0,
+        "queries": 1000,
+        "rows": 128000,
+        "t2_available_rows": 0,
+        "t2_coverage": 0.0
+      }
+    },
+    "invalid_span_count": 0,
+    "query_count": 3000,
+    "row_count": 328000,
+    "split_coverage": {
+      "calib_holdout": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "calib_select": {
+        "queries": 1000,
+        "rows": 100000
+      },
+      "train_fit": {
+        "queries": 1000,
+        "rows": 128000
+      }
+    },
+    "t2_missing_count": 133567
+  },
+  "high_score_false_positive": {
+    "bmn": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99975,
+      "rows": 20000,
+      "threshold_p90": 1.3049026643084032,
+      "wrong_video_rate": 0.9916
+    },
+    "t2": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99985,
+      "rows": 20000,
+      "threshold_p90": 1.0856783939429937,
+      "wrong_video_rate": 0.9961
+    },
+    "wrong_video_top1_high_score": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99955,
+      "rows": 20000,
+      "threshold_p90": 0.5055953025817871,
+      "wrong_video_rate": 0.9893
+    }
+  },
+  "mode": "medium",
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed": 2026,
+  "selected_integration_formula": {
+    "name": null,
+    "reason": "BMN/T2 train_fit evidence is partial; selection is blocked by C24G constraints.",
+    "selected": false,
+    "selection_split": "calib_select"
+  },
+  "stage": "C24G-6",
+  "status": "C24G_NEED_MORE_BMN_T2_MATERIALIZATION",
+  "t2_train_fit_coverage": 0.0,
+  "wrong_video_risk": {
+    "bmn": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99975,
+      "rows": 20000,
+      "threshold_p90": 1.3049026643084032,
+      "wrong_video_rate": 0.9916
+    },
+    "t2": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99985,
+      "rows": 20000,
+      "threshold_p90": 1.0856783939429937,
+      "wrong_video_rate": 0.9961
+    },
+    "wrong_video_top1_high_score": {
+      "available": true,
+      "iou07_false_positive_rate": 0.99955,
+      "rows": 20000,
+      "threshold_p90": 0.5055953025817871,
+      "wrong_video_rate": 0.9893
+    }
+  }
+}

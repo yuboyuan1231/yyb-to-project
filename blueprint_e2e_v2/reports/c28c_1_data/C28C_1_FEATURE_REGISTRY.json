@@ -1,0 +1,82 @@
+{
+  "data_root": "/home/a/yybwork/data/yyb/tvr_feature_release",
+  "dependencies": {
+    "lmdb": true,
+    "msgpack": true,
+    "msgpack_numpy": true,
+    "numpy": true,
+    "pandas": true,
+    "torch": true
+  },
+  "missing_dependencies": [],
+  "missing_required": [],
+  "optional_reference_only": {
+    "c17_reference_score_table": {
+      "exists": true,
+      "path": "/tmp/c17_score_cache/CONQUER-RLEM-c2c3/C17_2_SCORE_TABLE_medium.local.parquet",
+      "size_bytes": 1006607541
+    },
+    "c26r_reference_multispan": {
+      "exists": true,
+      "path": "/tmp/c26r_score_cache/CONQUER-RLEM-c2c3/C26R_C17_C26_JOINED_MULTI_SPAN_medium_seed2026.local.parquet",
+      "size_bytes": 1014360104
+    },
+    "first_stage_rank_lmdb_data": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/train_select100_top2000/data.mdb",
+      "size_bytes": 2491342848
+    }
+  },
+  "registry_hash": "c78df5e2051fc64a",
+  "required": {
+    "calib_holdout_split": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/splits/calib_holdout_desc_ids.txt",
+      "sha256": "7d5dbe30a18ef6e6320a63521e872c362689a163c937af1d43038e73d34c2afa",
+      "size_bytes": 25756
+    },
+    "calib_select_split": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/splits/calib_select_desc_ids.txt",
+      "sha256": "b2c2a6ec3386d1ff7a3ffd409a8b0f3859ddfb7edddab34d607981b0345a467d",
+      "size_bytes": 50812
+    },
+    "query_lmdb_data": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_query_pretrained_w_sub_query/data.mdb",
+      "sha256": null,
+      "size_bytes": 5179449344
+    },
+    "subtitle_lmdb_data": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/sub_query_feature/tvr_sub_pretrained_w_sub_query_max_cl-1.5/data.mdb",
+      "sha256": null,
+      "size_bytes": 3495510016
+    },
+    "train_fit_split": {
+      "exists": true,
+      "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/c12_1_schema_and_split/splits/train_fit_desc_ids.txt",
+      "sha256": "24007d3f6f1159f55e68a8ee64c779436a34db4bff601f9d9cd74ee6e102bf0b",
+      "size_bytes": 407488
+    },
+    "train_jsonl": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_train_select100_release.jsonl",
+      "sha256": "af6457ac5051c34824563f47a4cb89e3e31c36f8a357375cef3e901e19815f98",
+      "size_bytes": 16627688
+    },
+    "video_meta": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/data/tvr_video2dur_idx.json",
+      "sha256": "b2ce724dbd0e6be11226ec1e97ad358ce79e1df94856569cff4e65125f063ae5",
+      "size_bytes": 990120
+    },
+    "visual_lmdb_data": {
+      "exists": true,
+      "path": "/home/a/yybwork/data/yyb/tvr_feature_release/video_feature/resnet_slowfast_1.5/data.mdb",
+      "sha256": null,
+      "size_bytes": 19393634304
+    }
+  },
+  "tmp_root": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3"
+}

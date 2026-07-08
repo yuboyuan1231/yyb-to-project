@@ -1,0 +1,6 @@
+{
+  "clip_vit_b32_gb": "4-8",
+  "dinov2_vit_b14_gb": "8-12",
+  "internvideo_gb": "24+",
+  "videomae_gb": "12-24"
+}

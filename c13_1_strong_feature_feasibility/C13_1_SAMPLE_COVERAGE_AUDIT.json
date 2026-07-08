@@ -1,0 +1,131 @@
+{
+  "coverage_by_duration": {
+    "long": 1,
+    "medium": 5,
+    "short": 4
+  },
+  "coverage_by_query_type": {
+    "t": 2,
+    "v": 7,
+    "vt": 1
+  },
+  "official_val_used": false,
+  "sample_count": 12,
+  "sample_policy": "train-release splits only; pseudo_official_holdout is not used for selection",
+  "samples": {
+    "b6_top1_correct_proxy": {
+      "coverage": true,
+      "desc_id": 365,
+      "duration_bucket": "medium",
+      "moment_duration": 8.91,
+      "note": "CONQUER/B6 top1_correct proxy",
+      "query_type": "v",
+      "source": "first_stage_calib_holdout_top128",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    "b6_top1_wrong_proxy": {
+      "coverage": true,
+      "desc_id": 366,
+      "duration_bucket": "short",
+      "moment_duration": 1.6499999999999986,
+      "note": "CONQUER/B6 top1_wrong proxy",
+      "query_type": "v",
+      "source": "first_stage_calib_holdout_top128",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    "c12_span_ranker_high_score_low_iou": {
+      "coverage": true,
+      "desc_id": 365,
+      "duration_bucket": "medium",
+      "moment_duration": 8.91,
+      "note": "hidden ranker high-score low-IoU failure",
+      "query_type": "v",
+      "source": "C12_5V_D_FAILURE_CASES",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    "c12_span_ranker_low_score_high_iou": {
+      "coverage": true,
+      "desc_id": 365,
+      "duration_bucket": "medium",
+      "moment_duration": 8.91,
+      "note": "hidden ranker low-score high-IoU failure",
+      "query_type": "v",
+      "source": "C12_5V_D_FAILURE_CASES",
+      "video": "met_s03e03_seg02_clip_11"
+    },
+    "duration_long": {
+      "coverage": true,
+      "desc_id": 24,
+      "duration_bucket": "long",
+      "moment_duration": 25.049999999999997,
+      "note": "moment duration coverage",
+      "query_type": "t",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_02"
+    },
+    "duration_medium": {
+      "coverage": true,
+      "desc_id": 0,
+      "duration_bucket": "medium",
+      "moment_duration": 8.099999999999998,
+      "note": "moment duration coverage",
+      "query_type": "v",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    "duration_short": {
+      "coverage": true,
+      "desc_id": 1,
+      "duration_bucket": "short",
+      "moment_duration": 2.25,
+      "note": "moment duration coverage",
+      "query_type": "v",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    "native_retriever_missed_top100_proxy": {
+      "coverage": true,
+      "native_best_GT_video_in_top100_rate": 6.751152073732719,
+      "native_best_median_rank": 1578.5,
+      "note": "aggregate proxy for positive not in native top100",
+      "source": "C12_4_RETRIEVER_DECISION"
+    },
+    "positive_not_in_b6_top100": {
+      "coverage": false,
+      "desc_id": null,
+      "note": "blocked_by_reference_top100_replay; C12-4R replay has 100% train-only GT-video top100 coverage",
+      "source": "first_stage_calib_holdout_top128"
+    },
+    "query_type_t": {
+      "coverage": true,
+      "desc_id": 4,
+      "duration_bucket": "short",
+      "moment_duration": 3.1499999999999986,
+      "note": "query type coverage",
+      "query_type": "t",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    "query_type_v": {
+      "coverage": true,
+      "desc_id": 0,
+      "duration_bucket": "medium",
+      "moment_duration": 8.099999999999998,
+      "note": "query type coverage",
+      "query_type": "v",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_06"
+    },
+    "query_type_vt": {
+      "coverage": true,
+      "desc_id": 3,
+      "duration_bucket": "short",
+      "moment_duration": 4.5,
+      "note": "query type coverage",
+      "query_type": "vt",
+      "source": "train_release",
+      "video": "castle_s06e04_seg02_clip_06"
+    }
+  },
+  "stage": "C13-1-sample"
+}

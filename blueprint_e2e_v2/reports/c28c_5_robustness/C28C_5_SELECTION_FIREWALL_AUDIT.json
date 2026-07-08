@@ -1,0 +1,8 @@
+{
+  "evaluator_modified": false,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "promoted_system": "C7-B6 R1SelectiveTop1",
+  "pseudo_official_holdout_used_for_selection": false
+}

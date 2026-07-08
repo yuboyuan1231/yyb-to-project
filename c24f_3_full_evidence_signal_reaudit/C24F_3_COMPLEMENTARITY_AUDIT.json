@@ -1,0 +1,30 @@
+{
+  "all_evidence": {
+    "IoU>=0.7_AUC": 0.9217633498026874,
+    "correct_video_AUC": 0.9212371085858586
+  },
+  "first_stage_BMN": {
+    "IoU>=0.7_AUC": 0.9252691164352994,
+    "correct_video_AUC": 0.9250732146464646
+  },
+  "first_stage_BMN_T2": {
+    "IoU>=0.7_AUC": 0.9251507752324795,
+    "correct_video_AUC": 0.9257568409090909
+  },
+  "first_stage_BMN_event": {
+    "IoU>=0.7_AUC": 0.921198606062632,
+    "correct_video_AUC": 0.9209393232323232
+  },
+  "first_stage_T2": {
+    "IoU>=0.7_AUC": 0.9262561674676861,
+    "correct_video_AUC": 0.929455553030303
+  },
+  "first_stage_event": {
+    "IoU>=0.7_AUC": 0.9207584865892577,
+    "correct_video_AUC": 0.9239652222222222
+  },
+  "first_stage_only": {
+    "IoU>=0.7_AUC": 0.9308660453224846,
+    "correct_video_AUC": 0.9334383383838384
+  }
+}

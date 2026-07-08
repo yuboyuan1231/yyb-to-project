@@ -1,0 +1,7 @@
+{
+  "cache_root": "/tmp/c25p_feature_cache/CONQUER-RLEM-c2c3",
+  "full_extraction_run": false,
+  "max_frames_per_video": 16,
+  "max_videos": 2,
+  "tiny_pilot_only": true
+}

@@ -1,0 +1,23 @@
+{
+  "query_all": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_query_mean_l2_all.npz",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 267295238
+  },
+  "subtitle_mean_max": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_subtitle_mean_max_l2.npz",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 107738120
+  },
+  "visual_mean": {
+    "exists": true,
+    "path": "/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/results/c12_feature_cache/train_video_visual_mean_l2.npz",
+    "readable": true,
+    "sha256": null,
+    "size_bytes": 304125722
+  }
+}
