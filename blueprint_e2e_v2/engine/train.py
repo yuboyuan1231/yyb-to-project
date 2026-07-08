@@ -154,10 +154,17 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     best_ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.best.pt"
     log_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.training_log.json"
     start_epoch = 0
+    resume_loaded = False
+    resume_error: str | None = None
     if resume and ckpt_path.exists() and not dry_run:
-        ckpt = load_checkpoint(ckpt_path, model, optimizer)
-        start_epoch = int(ckpt.get("epoch", -1)) + 1
-        print(f"C28C resume: loaded checkpoint {ckpt_path} starting epoch {start_epoch}", flush=True)
+        try:
+            ckpt = load_checkpoint(ckpt_path, model, optimizer)
+            start_epoch = int(ckpt.get("epoch", -1)) + 1
+            resume_loaded = True
+            print(f"C28C resume: loaded checkpoint {ckpt_path} starting epoch {start_epoch}", flush=True)
+        except RuntimeError as exc:
+            resume_error = str(exc).splitlines()[0]
+            print(f"C28C resume skipped incompatible checkpoint {ckpt_path}: {resume_error}; starting fresh", flush=True)
     if dry_run:
         return {
             "status": "C28C_FULL_MODEL_DRY_RUN_READY",
@@ -171,7 +178,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         }
     max_queries = int(cfg.get("max_queries", 0) or 0) or None
     max_candidates = int(cfg.get("candidate_topk_train", cfg.get("dynamic_topk", 200)))
-    existing_log = load_json(log_path, {}) if resume else {}
+    existing_log = load_json(log_path, {}) if resume_loaded else {}
     train_log: list[dict[str, Any]] = list(existing_log.get("training_log", []))
     best_select: dict[str, Any] | None = existing_log.get("best_select")
     best_manifest: dict[str, Any] | None = existing_log.get("best_checkpoint_manifest")
@@ -308,6 +315,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         train_log.append(epoch_rec)
         write_json(log_path, {
             "status": "running",
+            "resume_loaded": resume_loaded,
+            "resume_error": resume_error,
             "training_log": train_log,
             "checkpoint_manifest": latest_manifest,
             "best_select_score": best_score,
@@ -322,6 +331,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         "checkpoint_manifest": latest_manifest,
         "best_checkpoint_manifest": best_manifest,
         "training_log_path": str(log_path),
+        "resume_loaded": resume_loaded,
+        "resume_error": resume_error,
         "visual_bank_manifest": banks["visual_manifest"],
         "subtitle_bank_manifest": banks["subtitle_manifest"],
         **seq_manifests,
