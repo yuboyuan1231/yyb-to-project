@@ -1,0 +1,21 @@
+{
+  "VCMR_R@100_IoU0.5": 0.09216589861751152,
+  "VCMR_R@100_IoU0.7": 0.04608294930875576,
+  "VCMR_R@10_IoU0.5": 0.06912442396313365,
+  "VCMR_R@10_IoU0.7": 0.02304147465437788,
+  "VCMR_R@1_IoU0.5": 0.0,
+  "VCMR_R@1_IoU0.7": 0.0,
+  "VCMR_R@5_IoU0.5": 0.02304147465437788,
+  "VCMR_R@5_IoU0.7": 0.0,
+  "VR_R@1": 0.0,
+  "VR_R@10": 0.18433179723502305,
+  "VR_R@100": 0.4147465437788018,
+  "VR_R@5": 0.06912442396313365,
+  "correct_video_wrong_span_rate": 0.0,
+  "duplicate_span_count": 0,
+  "high_score_false_positive_rate": 100.0,
+  "invalid_span_count": 0,
+  "query_count": 4340,
+  "top1_mean_iou": 0.0,
+  "wrong_video_top1_rate": 100.0
+}

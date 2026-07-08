@@ -1,0 +1,18 @@
+{
+  "c25_frames_dependency": false,
+  "dynamic_topk": 200,
+  "evaluator_modified": false,
+  "max_spans_per_video": 64,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "promoted_system": "C7-B6 R1SelectiveTop1",
+  "pseudo_official_holdout_used_for_selection": false,
+  "seed_robustness": {
+    "seed2026": "C28C_FULL_MODEL_INCONCLUSIVE",
+    "seed2027": "not_run_yet",
+    "seed2028": "not_run_yet"
+  },
+  "stage": "C28C-5",
+  "status": "C28C_ROBUSTNESS_PARTIAL"
+}
