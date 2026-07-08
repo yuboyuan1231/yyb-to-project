@@ -128,6 +128,7 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling",
             "explicit cuda:N device disables DataParallel so single-card runs do not touch other GPUs",
             "dynamic candidate refresh pre-encodes current student clip bank once before late rerank",
+            "train/eval use GPU micro-batches to preserve candidate/proposal counts on one card",
             "stage names use C28E consistently",
             "clip masks are carried through sequence banks, late interaction, and full-model batches",
             "late interaction retriever score replaces the localizer's retrieval sims before feedback/VCMR scoring",
@@ -170,7 +171,8 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.\n"
         "- Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.\n"
         "- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.\n"
-        "- Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.\n",
+        "- Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.\n"
+        "- Train/eval use GPU micro-batches to fit one card while preserving candidate/proposal counts and effective batch semantics.\n",
     )
     return rec
 

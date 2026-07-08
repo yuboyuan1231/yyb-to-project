@@ -24,3 +24,4 @@
 - Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.
 - Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.
 - Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.
+- Train/eval use GPU micro-batches to fit one card while preserving candidate/proposal counts and effective batch semantics.

@@ -71,6 +71,18 @@ def full_candidate_teacher_warm_topk(epoch: int, cfg: dict[str, Any], candidate_
     return min(int(cfg.get("teacher_curriculum_phase3_topk", 0)), int(candidate_topk))
 
 
+def slice_batch_to_device(batch: dict[str, Any], start: int, end: int, device: torch.device) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    for key, val in batch.items():
+        if torch.is_tensor(val):
+            out[key] = val[start:end].to(device, non_blocking=True)
+        elif isinstance(val, list):
+            out[key] = val[start:end]
+        else:
+            out[key] = val
+    return out
+
+
 def prepare_banks(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
     paths = FeaturePaths()
     sm = SplitManager(paths)
@@ -240,31 +252,39 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         score_acc = ScoreScaleAccumulator(cfg)
         steps = 0
         grad_accum = int(cfg.get("grad_accum_steps", 1))
+        gpu_micro_batch = max(1, int(cfg.get("gpu_micro_batch_size", cfg.get("batch_size", 8))))
         for step, batch in enumerate(loader):
-            tensor_batch = {k: v.to(device, non_blocking=True) if torch.is_tensor(v) else v for k, v in batch.items()}
-            out = model(tensor_batch)
-            score_acc.update(out)
-            loss, metrics = compute_full_loss(out, tensor_batch, cfg)
-            (loss / grad_accum).backward()
+            batch_n = len(batch["query_ids"])
+            batch_metrics: dict[str, float] = {}
+            for micro_start in range(0, batch_n, gpu_micro_batch):
+                micro_end = min(micro_start + gpu_micro_batch, batch_n)
+                tensor_batch = slice_batch_to_device(batch, micro_start, micro_end, device)
+                out = model(tensor_batch)
+                score_acc.update(out)
+                loss, metrics = compute_full_loss(out, tensor_batch, cfg)
+                micro_weight = (micro_end - micro_start) / max(1, batch_n)
+                (loss * micro_weight / grad_accum).backward()
+                for k, v in metrics.items():
+                    batch_metrics[k] = batch_metrics.get(k, 0.0) + float(v) * micro_weight
             if (step + 1) % grad_accum == 0:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
                 optimizer.step()
                 optimizer.zero_grad(set_to_none=True)
-            for k, v in metrics.items():
+            for k, v in batch_metrics.items():
                 loss_acc[k] = loss_acc.get(k, 0.0) + float(v)
             steps += 1
-            if metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
-                top_parts = sorted(((k, v) for k, v in metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
-                pos_counts = tensor_batch["correct_video"].sum(dim=1).detach().cpu().tolist()
-                ge07_counts = tensor_batch["span_ge07"].sum(dim=(1, 2)).detach().cpu().tolist()
+            if batch_metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
+                top_parts = sorted(((k, v) for k, v in batch_metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
+                pos_counts = batch["correct_video"].sum(dim=1).detach().cpu().tolist()
+                ge07_counts = batch["span_ge07"].sum(dim=(1, 2)).detach().cpu().tolist()
                 print(
                     f"C28C loss spike diagnostic epoch {epoch} step {step + 1}: "
-                    f"L_total={metrics.get('L_total'):.4f} top_parts={top_parts} "
+                    f"L_total={batch_metrics.get('L_total'):.4f} top_parts={top_parts} "
                     f"query_ids={batch['query_ids']} pos_counts={pos_counts} ge07_counts={ge07_counts}",
                     flush=True,
                 )
             if (step + 1) % 100 == 0:
-                print(f"C28C training epoch {epoch} step {step + 1}: loss={metrics.get('L_total'):.4f}", flush=True)
+                print(f"C28C training epoch {epoch} step {step + 1}: loss={batch_metrics.get('L_total'):.4f}", flush=True)
         avg = {k: v / max(1, steps) for k, v in loss_acc.items()}
         score_scale = score_acc.summary()
         print(f"C28C training epoch {epoch} complete: avg_loss={avg.get('L_total'):.4f}", flush=True)
@@ -279,6 +299,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 "teacher_warm_topk": teacher_warm,
                 "student_dynamic_late_mining": bool(cand_audit.get("late_candidate_mining_used", False)),
                 "candidate_topk_train": max_candidates,
+                "gpu_micro_batch_size": gpu_micro_batch,
+                "effective_batch_size": int(cfg.get("batch_size", 8)) * grad_accum,
                 "phase": 0 if epoch <= 2 else 1 if epoch <= 5 else 2 if epoch <= 8 else 3,
             },
             "checkpoint_manifest": latest_manifest,
