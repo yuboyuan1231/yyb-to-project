@@ -1,0 +1,34 @@
+{
+  "candidate_topk_eval": 200,
+  "candidate_topk_train": 200,
+  "dataset_audit": {
+    "candidate_proposals_use_candidate_video_duration": true,
+    "candidate_video_duration_bank_used": true,
+    "gt_aligned_span_inserted_for_training_loss": true,
+    "gt_oracle_used_as_inference_feature": false,
+    "gt_video_inserted_for_training_loss": true,
+    "max_candidates": 200,
+    "max_spans_per_video": 64,
+    "one_span_materialization": false,
+    "preloaded_sequence_bank_used": false,
+    "query_count": 32,
+    "split": "train_fit",
+    "temporal_padding_policy": "pad/truncate release feature sequences to 64 clips for tensor batching; missing features still raise KeyError"
+  },
+  "eval_candidate_k": 200,
+  "evaluator_modified": false,
+  "hard_negative_k": 64,
+  "hard_negative_k_used_to_truncate_eval_candidates": false,
+  "nms_modified": false,
+  "official_prediction_pool_used": false,
+  "official_val_used": false,
+  "promoted_system": "C7-B6 R1SelectiveTop1",
+  "proposal_duration_audit": {
+    "candidate_duration_differs_from_query_duration_count": 6198,
+    "checked_candidate_videos": 6400,
+    "violations": []
+  },
+  "pseudo_official_holdout_used_for_selection": false,
+  "stage": "C28D-2",
+  "status": "C28D_CANDIDATE_PROPOSAL_REPAIR_READY"
+}

@@ -1,0 +1,311 @@
+{
+  "best_checkpoint_path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28D_RETRIEVER_medium_seed2026.best.pt",
+  "best_train_vr100": 75.79218759002131,
+  "checkpoint_manifest": {
+    "path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28D_RETRIEVER_medium_seed2026.best.pt",
+    "selection_metric": "pre_epoch_model_only_train_VR@100",
+    "selection_score": 75.79218759002131,
+    "source_checkpoint": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28D_RETRIEVER_medium_seed2026.epoch28.pt",
+    "source_epoch": 28
+  },
+  "checkpoint_path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28D_RETRIEVER_medium_seed2026.best.pt",
+  "device": "cuda:0",
+  "latest_checkpoint_path": "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28D_RETRIEVER_medium_seed2026.pt",
+  "status": "C28D_RETRIEVER_DISTILLATION_TRAINED",
+  "training_log": [
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 16,
+      "loss": {
+        "L_gt_rank": 4.622271190910269,
+        "L_teacher_KL": 13.558080838310564,
+        "L_teacher_pair": 1.770774418477854,
+        "L_total": 26.021857172086094
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 16.408365500950627,
+        "VR@10": 36.11223137638993,
+        "VR@100": 59.52929653742006,
+        "VR@200": 67.17030592844385,
+        "VR@5": 29.825142593766206
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 17,
+      "loss": {
+        "L_gt_rank": 4.569737365891261,
+        "L_teacher_KL": 13.432795162798072,
+        "L_teacher_pair": 1.814705227400497,
+        "L_total": 25.807753255573644
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 17.173186610589386,
+        "VR@10": 37.09454398801636,
+        "VR@100": 59.785677248372416,
+        "VR@200": 67.39932015901366,
+        "VR@5": 30.800253500028806
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 18,
+      "loss": {
+        "L_gt_rank": 4.53236048261105,
+        "L_teacher_KL": 13.387421230365339,
+        "L_teacher_pair": 1.8209812070344253,
+        "L_total": 25.70608114449798
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 17.84438555049836,
+        "VR@10": 38.477271417871755,
+        "VR@100": 61.744541107334214,
+        "VR@200": 69.25736014288184,
+        "VR@5": 31.805611568819497
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 19,
+      "loss": {
+        "L_gt_rank": 4.500702300343944,
+        "L_teacher_KL": 13.311635342311684,
+        "L_teacher_pair": 1.823524471804582,
+        "L_total": 25.562270036279386
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 18.70426917093968,
+        "VR@10": 39.36308117762286,
+        "VR@100": 62.2961917382036,
+        "VR@200": 69.77300224693208,
+        "VR@5": 32.8527395287204
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 20,
+      "loss": {
+        "L_gt_rank": 4.471028187437391,
+        "L_teacher_KL": 13.274382615835847,
+        "L_teacher_pair": 1.8339505272456076,
+        "L_total": 25.48297243135849
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 19.70098519329377,
+        "VR@10": 41.42132857060552,
+        "VR@100": 64.95074033531141,
+        "VR@200": 72.19421559025177,
+        "VR@5": 34.73382496975284
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 21,
+      "loss": {
+        "L_gt_rank": 4.445871098485002,
+        "L_teacher_KL": 13.246412974475277,
+        "L_teacher_pair": 1.8105282748382174,
+        "L_total": 25.401807493487336
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 20.534942674425302,
+        "VR@10": 42.606729273491965,
+        "VR@100": 66.14910410785274,
+        "VR@200": 73.41130379673906,
+        "VR@5": 35.695972806360544
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 22,
+      "loss": {
+        "L_gt_rank": 4.406174962691839,
+        "L_teacher_KL": 13.182494711480746,
+        "L_teacher_pair": 1.8167756271186675,
+        "L_total": 25.26998243806112
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 21.360258109120238,
+        "VR@10": 44.084519214149914,
+        "VR@100": 67.69747076107622,
+        "VR@200": 74.7839488390851,
+        "VR@5": 36.9951604539955
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 23,
+      "loss": {
+        "L_gt_rank": 4.388561192577495,
+        "L_teacher_KL": 13.158695793503117,
+        "L_teacher_pair": 1.8084572716092975,
+        "L_total": 25.211679268937086
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 22.711298035374778,
+        "VR@10": 45.769718269286166,
+        "VR@100": 69.4330817537593,
+        "VR@200": 76.43169902632944,
+        "VR@5": 38.69476291985942
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 24,
+      "loss": {
+        "L_gt_rank": 4.345328630443875,
+        "L_teacher_KL": 13.09502486585473,
+        "L_teacher_pair": 1.8064283736283389,
+        "L_total": 25.07172301065856
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 23.274471394826296,
+        "VR@10": 46.94791726680878,
+        "VR@100": 70.52341994584317,
+        "VR@200": 77.32038946822608,
+        "VR@5": 39.679956213631385
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 25,
+      "loss": {
+        "L_gt_rank": 4.327935671938058,
+        "L_teacher_KL": 13.075515552120313,
+        "L_teacher_pair": 1.793074352526094,
+        "L_total": 25.017053632226876
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 24.229417526070172,
+        "VR@10": 48.16788615544161,
+        "VR@100": 71.921991127499,
+        "VR@200": 78.55908279080487,
+        "VR@5": 40.76309270035144
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 26,
+      "loss": {
+        "L_gt_rank": 4.293363480717218,
+        "L_teacher_KL": 13.03288064257655,
+        "L_teacher_pair": 1.78587304250531,
+        "L_total": 24.914208399876266
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 25.10082387509362,
+        "VR@10": 49.6989687157919,
+        "VR@100": 73.28311344126288,
+        "VR@200": 79.9144437402777,
+        "VR@5": 42.305697989283864
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 27,
+      "loss": {
+        "L_gt_rank": 4.262125627331532,
+        "L_teacher_KL": 12.977695175297352,
+        "L_teacher_pair": 1.7804638215410995,
+        "L_total": 24.79694674862463
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 25.913176240133662,
+        "VR@10": 50.47531255401279,
+        "VR@100": 74.11995160453995,
+        "VR@200": 80.43728754969176,
+        "VR@5": 43.237598663363485
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 28,
+      "loss": {
+        "L_gt_rank": 4.225254743797344,
+        "L_teacher_KL": 12.930024292807113,
+        "L_teacher_pair": 1.7768358238055122,
+        "L_total": 24.68639271913532
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 26.764417814138387,
+        "VR@10": 51.856599642795416,
+        "VR@100": 75.0633750072017,
+        "VR@200": 81.22659445756756,
+        "VR@5": 44.33801924295673
+      }
+    },
+    {
+      "curriculum": {
+        "random_negative_k": 48,
+        "student_topk": 120,
+        "teacher_topk": 80
+      },
+      "epoch": 29,
+      "loss": {
+        "L_gt_rank": 4.196252828144895,
+        "L_teacher_KL": 12.888183500665766,
+        "L_teacher_pair": 1.764371769862939,
+        "L_total": 24.587151230589022
+      },
+      "model_only_train_dynamic_recall": {
+        "VR@1": 27.50331278446736,
+        "VR@10": 52.71648326323673,
+        "VR@100": 75.79218759002131,
+        "VR@200": 81.99429624935185,
+        "VR@5": 45.16045399550614
+      }
+    }
+  ]
+}
