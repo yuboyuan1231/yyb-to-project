@@ -23,3 +23,4 @@
 - C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.
 - Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.
 - Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.
+- Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.

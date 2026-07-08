@@ -127,6 +127,7 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
             "selection gate requires R@1/R@5/R@10 IoU0.7, VR@100, wrong-video, and high-score false-positive checks",
             "train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling",
             "explicit cuda:N device disables DataParallel so single-card runs do not touch other GPUs",
+            "dynamic candidate refresh pre-encodes current student clip bank once before late rerank",
             "stage names use C28E consistently",
             "clip masks are carried through sequence banks, late interaction, and full-model batches",
             "late interaction retriever score replaces the localizer's retrieval sims before feedback/VCMR scoring",
@@ -168,7 +169,8 @@ def stage0(cfg: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
         "- Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.\n"
         "- C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.\n"
         "- Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.\n"
-        "- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.\n",
+        "- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.\n"
+        "- Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.\n",
     )
     return rec
 

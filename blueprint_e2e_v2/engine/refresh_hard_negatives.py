@@ -21,6 +21,40 @@ def _safe_soft_topk(values: torch.Tensor, k: int, temperature: float, mask: torc
 
 
 @torch.no_grad()
+def _encode_clip_bank_for_refresh(
+    core: torch.nn.Module,
+    visual_seq_bank: np.ndarray,
+    subtitle_seq_bank: np.ndarray,
+    visual_seq_mask: np.ndarray | None,
+    subtitle_seq_mask: np.ndarray | None,
+    device: torch.device,
+    chunk_size: int,
+) -> dict[str, torch.Tensor]:
+    parts: dict[str, list[torch.Tensor]] = {"visual": [], "subtitle": [], "joint": []}
+    for st in range(0, visual_seq_bank.shape[0], max(1, int(chunk_size))):
+        ed = min(st + max(1, int(chunk_size)), visual_seq_bank.shape[0])
+        visual = torch.from_numpy(visual_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+        subtitle = torch.from_numpy(subtitle_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+        vmask = torch.from_numpy(visual_seq_mask[st:ed].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1) if visual_seq_mask is not None else None
+        smask = torch.from_numpy(subtitle_seq_mask[st:ed].astype(np.bool_, copy=False)).to(device, non_blocking=True).unsqueeze(1) if subtitle_seq_mask is not None else None
+        jmask = torch.logical_and(vmask, smask) if vmask is not None and smask is not None else vmask if vmask is not None else smask
+        enc = core.video_encoder(visual, subtitle, visual_mask=vmask, subtitle_mask=smask, clip_mask=jmask)
+        for key in parts:
+            parts[key].append(enc[key].squeeze(1).detach().cpu().to(torch.float16))
+        done = ed
+        if done % max(int(chunk_size) * 25, 1) == 0 or done == visual_seq_bank.shape[0]:
+            print(f"C28C clip refresh bank: encoded {done}/{visual_seq_bank.shape[0]} videos", flush=True)
+    out = {key: torch.cat(vals, dim=0) for key, vals in parts.items()}
+    if visual_seq_mask is not None:
+        out["visual_mask"] = torch.from_numpy(visual_seq_mask.astype(np.bool_, copy=False))
+    if subtitle_seq_mask is not None:
+        out["subtitle_mask"] = torch.from_numpy(subtitle_seq_mask.astype(np.bool_, copy=False))
+    if visual_seq_mask is not None and subtitle_seq_mask is not None:
+        out["joint_mask"] = torch.from_numpy(np.logical_and(visual_seq_mask, subtitle_seq_mask).astype(np.bool_, copy=False))
+    return out
+
+
+@torch.no_grad()
 def _late_scores_for_candidate_indices(
     core: torch.nn.Module,
     q: dict[str, torch.Tensor],
@@ -28,10 +62,7 @@ def _late_scores_for_candidate_indices(
     query_mask: torch.Tensor,
     candidate_indices: torch.Tensor,
     pooled_bank: dict[str, torch.Tensor],
-    visual_seq_bank: np.ndarray,
-    subtitle_seq_bank: np.ndarray,
-    visual_seq_mask: np.ndarray | None,
-    subtitle_seq_mask: np.ndarray | None,
+    clip_bank: dict[str, torch.Tensor],
     device: torch.device,
     candidate_encode_chunk: int,
     late_soft_topk: int,
@@ -50,19 +81,22 @@ def _late_scores_for_candidate_indices(
     for cs in range(0, cand_n, max(1, int(candidate_encode_chunk))):
         sub_idx = candidate_indices[:, cs: cs + max(1, int(candidate_encode_chunk))]
         sub_n = sub_idx.shape[1]
-        flat = sub_idx.detach().cpu().reshape(-1).numpy()
+        flat_cpu = sub_idx.detach().cpu().reshape(-1)
         flat_device = sub_idx.reshape(-1)
         pooled = {key: val.index_select(0, flat_device).reshape(bsz, sub_n, -1) for key, val in pooled_bank.items()}
         pooled_score = core.retriever.score_candidates(q, pooled)["retriever_score"]
-        visual = torch.from_numpy(visual_seq_bank[flat].astype(np.float32, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, visual_seq_bank.shape[1], visual_seq_bank.shape[2])
-        subtitle = torch.from_numpy(subtitle_seq_bank[flat].astype(np.float32, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, subtitle_seq_bank.shape[1], subtitle_seq_bank.shape[2])
-        visual_mask = torch.from_numpy(visual_seq_mask[flat].astype(np.bool_, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, visual_seq_bank.shape[1]) if visual_seq_mask is not None else None
-        subtitle_mask = torch.from_numpy(subtitle_seq_mask[flat].astype(np.bool_, copy=False)).to(device, non_blocking=True).reshape(bsz, sub_n, subtitle_seq_bank.shape[1]) if subtitle_seq_mask is not None else None
-        joint_mask = torch.logical_and(visual_mask, subtitle_mask) if visual_mask is not None and subtitle_mask is not None else visual_mask if visual_mask is not None else subtitle_mask
-        enc = core.video_encoder(visual, subtitle, visual_mask=visual_mask, subtitle_mask=subtitle_mask, clip_mask=joint_mask)
-        sv_t = torch.einsum("bd,bctd->bct", q["q_visual"], enc["visual"])
-        ss_t = torch.einsum("bd,bctd->bct", q["q_subtitle"], enc["subtitle"])
-        sj_t = torch.einsum("bd,bctd->bct", q["q_joint"], enc["joint"])
+        visual = clip_bank["visual"].index_select(0, flat_cpu).to(device, non_blocking=True).float().reshape(bsz, sub_n, -1, q["q_visual"].shape[-1])
+        subtitle = clip_bank["subtitle"].index_select(0, flat_cpu).to(device, non_blocking=True).float().reshape(bsz, sub_n, -1, q["q_subtitle"].shape[-1])
+        joint = clip_bank["joint"].index_select(0, flat_cpu).to(device, non_blocking=True).float().reshape(bsz, sub_n, -1, q["q_joint"].shape[-1])
+        visual_mask_src = clip_bank.get("visual_mask")
+        subtitle_mask_src = clip_bank.get("subtitle_mask")
+        joint_mask_src = clip_bank.get("joint_mask")
+        visual_mask = visual_mask_src.index_select(0, flat_cpu).to(device, non_blocking=True).reshape(bsz, sub_n, -1) if isinstance(visual_mask_src, torch.Tensor) else None
+        subtitle_mask = subtitle_mask_src.index_select(0, flat_cpu).to(device, non_blocking=True).reshape(bsz, sub_n, -1) if isinstance(subtitle_mask_src, torch.Tensor) else None
+        joint_mask = joint_mask_src.index_select(0, flat_cpu).to(device, non_blocking=True).reshape(bsz, sub_n, -1) if isinstance(joint_mask_src, torch.Tensor) else None
+        sv_t = torch.einsum("bd,bctd->bct", q["q_visual"], visual)
+        ss_t = torch.einsum("bd,bctd->bct", q["q_subtitle"], subtitle)
+        sj_t = torch.einsum("bd,bctd->bct", q["q_joint"], joint)
         sv = _safe_soft_topk(sv_t, late_soft_topk, late_temperature, visual_mask)
         ss = _safe_soft_topk(ss_t, late_soft_topk, late_temperature, subtitle_mask)
         sj = _safe_soft_topk(sj_t, late_soft_topk, late_temperature, joint_mask)
@@ -70,7 +104,7 @@ def _late_scores_for_candidate_indices(
         late_score = core.retriever.scale.clamp(1.0, 30.0) * (gate[:, 0:1] * sv + gate[:, 1:2] * ss + gate[:, 2:3] * sj)
         token_score = late_score.new_zeros(late_score.shape)
         if token_h is not None and qmask_f is not None:
-            token_sim = torch.einsum("bld,bctd->blct", token_h, enc["joint"])
+            token_sim = torch.einsum("bld,bctd->blct", token_h, joint)
             if joint_mask is not None:
                 token_sim = token_sim.masked_fill(~joint_mask.bool().unsqueeze(1), -1e4)
             token_sim = token_sim.max(dim=-1).values
@@ -117,6 +151,7 @@ def refresh_candidates(
     late_candidate_mining: bool = False,
     broad_topk: int | None = None,
     candidate_encode_chunk: int = 32,
+    clip_bank_encode_chunk: int = 128,
     late_soft_topk: int = 8,
     late_temperature: float = 0.07,
     token_maxsim_weight: float = 0.0,
@@ -148,6 +183,17 @@ def refresh_candidates(
         and subtitle_seq_bank is not None
         and bool(getattr(core, "late_interaction_enabled", False))
     )
+    clip_bank = None
+    if late_mining_used:
+        clip_bank = _encode_clip_bank_for_refresh(
+            core,
+            visual_seq_bank,
+            subtitle_seq_bank,
+            visual_seq_mask,
+            subtitle_seq_mask,
+            device,
+            max(1, int(clip_bank_encode_chunk)),
+        )
     broad_k = max(int(dynamic_topk), int(broad_topk or dynamic_topk))
     with torch.no_grad():
         for st in range(0, len(rows), batch_queries):
@@ -163,10 +209,7 @@ def refresh_candidates(
                     qmask,
                     broad_idx,
                     bank,
-                    visual_seq_bank,
-                    subtitle_seq_bank,
-                    visual_seq_mask,
-                    subtitle_seq_mask,
+                    clip_bank,
                     device,
                     candidate_encode_chunk,
                     late_soft_topk,
@@ -228,6 +271,8 @@ def refresh_candidates(
         "encoded_bank_device": str(device),
         "late_candidate_mining_requested": bool(late_candidate_mining),
         "late_candidate_mining_used": late_mining_used,
+        "clip_bank_preencoded_once_per_refresh": bool(clip_bank is not None),
+        "clip_bank_encode_chunk": int(clip_bank_encode_chunk) if late_mining_used else None,
         "broad_topk": broad_k if late_mining_used else int(dynamic_topk),
         "candidate_score_source": "pooled_broad_plus_clip_late_rerank" if late_mining_used else "pooled_retriever_only",
     }

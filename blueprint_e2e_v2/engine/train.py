@@ -209,6 +209,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             late_candidate_mining=bool(cfg.get("late_candidate_mining", cfg.get("late_interaction_enabled", False))),
             broad_topk=int(cfg.get("broad_topk_train", cfg.get("dynamic_topk", max_candidates))),
             candidate_encode_chunk=int(cfg.get("candidate_encode_chunk", 32)),
+            clip_bank_encode_chunk=int(cfg.get("clip_bank_encode_chunk", 128)),
             late_soft_topk=int(cfg.get("late_soft_topk", 8)),
             late_temperature=float(cfg.get("late_temperature", 0.07)),
             token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),

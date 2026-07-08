@@ -23,6 +23,7 @@ eval_candidate_k: 200
 hard_negative_k: 64
 loss_negative_sample_k: 128
 candidate_encode_chunk: 32
+clip_bank_encode_chunk: 128
 preload_sequence_bank: true
 target_len: 64
 
