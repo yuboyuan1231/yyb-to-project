@@ -50,6 +50,7 @@ class MultiSpanProposalDataset(Dataset):
         self.visual_seq_bank = visual_seq_bank
         self.subtitle_seq_bank = subtitle_seq_bank
         self.grid = TemporalGrid()
+        self.video_duration_bank = dict(getattr(video_bank, "durations", {}))
 
     @staticmethod
     def _fit_seq(seq: np.ndarray, target_len: int = 64) -> np.ndarray:
@@ -73,22 +74,28 @@ class MultiSpanProposalDataset(Dataset):
         if self.insert_gt_for_training and cand.gt_video_index not in video_indices:
             video_indices[-1] = cand.gt_video_index
         video_ids = [self.video_bank.idx_to_video[int(i)] for i in video_indices]
-        duration = float(row["duration"])
+        gt_duration = float(row["duration"])
         gt = (float(row["ts"][0]), float(row["ts"][1]))
-        spans_clip = self.grid.grid_spans(duration, max_spans=self.max_spans_per_video)
-        if self.insert_gt_for_training:
-            gt_clip = np.array([[int(np.floor(gt[0] / self.grid.clip_len)), max(int(np.ceil(gt[1] / self.grid.clip_len)), int(np.floor(gt[0] / self.grid.clip_len)) + 1)]], dtype=np.int32)
-            gt_clip[:, 0] = np.clip(gt_clip[:, 0], 0, self.grid.max_clips - 1)
-            gt_clip[:, 1] = np.clip(gt_clip[:, 1], gt_clip[:, 0] + 1, self.grid.max_clips)
-            if not ((spans_clip == gt_clip[0]).all(axis=1).any()):
-                spans_clip = np.concatenate([spans_clip, gt_clip], axis=0)
-        spans_sec = self.grid.clips_to_seconds(spans_clip.copy(), duration)
+        per_video_spans_clip = []
+        per_video_spans_sec = []
         labels = []
         correct = []
         for vid in video_ids:
-            ious, ge05, ge07 = DiagnosticLabelBuilder.span_labels(spans_sec, gt, str(vid) == gt_vid)
+            is_correct_video = str(vid) == gt_vid
+            duration = float(self.video_duration_bank.get(str(vid), gt_duration))
+            spans_clip = self.grid.grid_spans(duration, max_spans=self.max_spans_per_video)
+            if self.insert_gt_for_training and is_correct_video:
+                gt_clip = np.array([[int(np.floor(gt[0] / self.grid.clip_len)), max(int(np.ceil(gt[1] / self.grid.clip_len)), int(np.floor(gt[0] / self.grid.clip_len)) + 1)]], dtype=np.int32)
+                gt_clip[:, 0] = np.clip(gt_clip[:, 0], 0, self.grid.max_clips - 1)
+                gt_clip[:, 1] = np.clip(gt_clip[:, 1], gt_clip[:, 0] + 1, self.grid.max_clips)
+                if not ((spans_clip == gt_clip[0]).all(axis=1).any()):
+                    spans_clip = np.concatenate([spans_clip, gt_clip], axis=0)
+            spans_sec = self.grid.clips_to_seconds(spans_clip.copy(), duration)
+            per_video_spans_clip.append(spans_clip)
+            per_video_spans_sec.append(spans_sec)
+            ious, ge05, ge07 = DiagnosticLabelBuilder.span_labels(spans_sec, gt, is_correct_video)
             labels.append({"iou": ious, "ge05": ge05, "ge07": ge07})
-            correct.append(str(vid) == gt_vid)
+            correct.append(is_correct_video)
         if self.insert_gt_for_training and not any(correct):
             raise RuntimeError(f"C28C train target lost GT video for query {qid}: gt={gt_vid} candidates={video_ids[-5:]}")
         if self.visual_seq_bank is not None:
@@ -99,6 +106,23 @@ class MultiSpanProposalDataset(Dataset):
             subtitle = self.subtitle_seq_bank[np.asarray(video_indices, dtype=np.int64)].astype(np.float32, copy=False)
         else:
             subtitle = np.stack([self._fit_seq(self.subtitle_bank.sequence(v), self.grid.max_clips) for v in video_ids]).astype(np.float32)
+        max_m = max(x.shape[0] for x in per_video_spans_clip)
+        spans_clip_padded = np.zeros((len(video_ids), max_m, 2), dtype=np.int64)
+        spans_sec_padded = np.zeros((len(video_ids), max_m, 2), dtype=np.float32)
+        span_mask = np.zeros((len(video_ids), max_m), dtype=np.bool_)
+        label_padded: dict[str, list[np.ndarray]] = {"iou": [], "ge05": [], "ge07": []}
+        for i, (clip, sec, lab) in enumerate(zip(per_video_spans_clip, per_video_spans_sec, labels)):
+            n = clip.shape[0]
+            spans_clip_padded[i, :n] = clip.astype(np.int64)
+            spans_sec_padded[i, :n] = sec.astype(np.float32)
+            if n < max_m and n > 0:
+                spans_clip_padded[i, n:] = clip[-1]
+                spans_sec_padded[i, n:] = sec[-1]
+            span_mask[i, :n] = True
+            for key in label_padded:
+                pad = np.zeros((max_m,), dtype=lab[key].dtype)
+                pad[:n] = lab[key]
+                label_padded[key].append(pad)
         return {
             "query_id": qid,
             "query_tokens": self.query_bank.tokens(qid),
@@ -107,16 +131,17 @@ class MultiSpanProposalDataset(Dataset):
             "video_indices": np.array(video_indices, dtype=np.int64),
             "visual": visual,
             "subtitle": subtitle,
-            "spans_clip": spans_clip.astype(np.int64),
-            "spans_sec": spans_sec.astype(np.float32),
-            "span_iou": np.stack([x["iou"] for x in labels]).astype(np.float32),
-            "span_ge05": np.stack([x["ge05"] for x in labels]).astype(np.float32),
-            "span_ge07": np.stack([x["ge07"] for x in labels]).astype(np.float32),
+            "spans_clip": spans_clip_padded.astype(np.int64),
+            "spans_sec": spans_sec_padded.astype(np.float32),
+            "span_mask": span_mask,
+            "span_iou": np.stack(label_padded["iou"]).astype(np.float32),
+            "span_ge05": np.stack(label_padded["ge05"]).astype(np.float32),
+            "span_ge07": np.stack(label_padded["ge07"]).astype(np.float32),
             "correct_video": np.array(correct, dtype=np.bool_),
             "gt_video_id": gt_vid,
             "gt_start": gt[0],
             "gt_end": gt[1],
-            "duration": duration,
+            "duration": gt_duration,
         }
 
     def audit(self) -> dict[str, Any]:
@@ -129,6 +154,8 @@ class MultiSpanProposalDataset(Dataset):
             "gt_oracle_used_as_inference_feature": False,
             "gt_video_inserted_for_training_loss": self.insert_gt_for_training,
             "gt_aligned_span_inserted_for_training_loss": self.insert_gt_for_training,
+            "candidate_video_duration_bank_used": True,
+            "candidate_proposals_use_candidate_video_duration": True,
             "preloaded_sequence_bank_used": self.visual_seq_bank is not None and self.subtitle_seq_bank is not None,
             "temporal_padding_policy": "pad/truncate release feature sequences to 64 clips for tensor batching; missing features still raise KeyError",
         }

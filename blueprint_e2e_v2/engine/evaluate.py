@@ -207,7 +207,7 @@ def run_evaluation(cfg: dict[str, Any], split: str = "calib_holdout", device_arg
         banks["subtitle_bank"],
         candidates,
         max_queries=max_queries,
-        max_candidates=min(int(cfg.get("hard_negative_k", 64)) + 1, int(cfg.get("dynamic_topk", 200))),
+        max_candidates=int(cfg.get("eval_candidate_k", cfg.get("candidate_topk_eval", cfg.get("dynamic_topk", 200)))),
         max_spans_per_video=int(cfg.get("max_spans_per_video", 64)),
         insert_gt_for_training=False,
         visual_seq_bank=visual_seq_bank,

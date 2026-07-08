@@ -116,7 +116,7 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             "checkpoint_path": str(ckpt_path),
         }
     max_queries = int(cfg.get("max_queries", 0) or 0) or None
-    max_candidates = min(int(cfg.get("hard_negative_k", 64)) + 1, int(cfg.get("dynamic_topk", 200)))
+    max_candidates = int(cfg.get("candidate_topk_train", cfg.get("dynamic_topk", 200)))
     train_log: list[dict[str, Any]] = []
     best_select: dict[str, Any] | None = None
     best_manifest: dict[str, Any] | None = None

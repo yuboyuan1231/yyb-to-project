@@ -1,0 +1,59 @@
+mode: code_review
+seed: 2026
+use_data_parallel: false
+hidden_dim: 384
+query_dim: 768
+subtitle_dim: 768
+visual_dim: 4352
+
+# C28E is a code-review-first retriever repair. Do not run official validation.
+epochs: 8
+batch_size: 32
+grad_accum_steps: 1
+lr: 0.00012
+weight_decay: 0.01
+max_queries: 0
+max_videos: 0
+chunk_size: 256
+
+# Candidate counts are separated; hard_negative_k never truncates eval candidates.
+candidate_topk_train: 200
+candidate_topk_eval: 200
+eval_candidate_k: 200
+hard_negative_k: 64
+loss_negative_sample_k: 128
+
+# Two-stage dynamic retrieval: current student broad retrieval, then clip late interaction.
+broad_topk_train: 1000
+broad_topk_eval: 1000
+late_topk: 200
+late_interaction_enabled: true
+late_soft_topk: 8
+late_temperature: 0.07
+token_maxsim_weight: 0.25
+pooled_score_weight: 0.35
+late_score_weight: 0.65
+
+# Teacher is supervision/diagnostic only, never final static hard gate.
+teacher_topk: 200
+teacher_anchor_topk: 80
+teacher_score_temperature: 2.0
+random_negative_k: 64
+student_negative_k: 128
+
+# Distillation / ranking losses.
+lambda_gt_rank: 1.0
+lambda_teacher_kl: 1.2
+lambda_teacher_pair: 0.5
+lambda_teacher_set: 0.4
+
+# Selection firewall.
+selection_split: calib_select
+final_report_split: calib_holdout
+select_weight_vr10: 3.0
+select_weight_vr50: 2.0
+select_weight_vr100: 1.5
+select_weight_vr200: 1.0
+select_overfit_penalty: 0.5
+retriever_gate_absolute_vr100: 80.0
+retriever_gate_teacher_relative: 0.85

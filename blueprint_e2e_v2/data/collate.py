@@ -19,26 +19,42 @@ def _pad_tokens(xs: list[np.ndarray]) -> tuple[torch.Tensor, torch.Tensor]:
 
 def c28c_collate(batch: list[dict[str, Any]]) -> dict[str, Any]:
     q, qmask = _pad_tokens([b["query_tokens"] for b in batch])
-    max_m = max(b["spans_clip"].shape[0] for b in batch)
     cand_n = len(batch[0]["video_ids"])
+    max_m = max(b["spans_clip"].shape[-2] for b in batch)
 
-    def pad_spans(key: str, fill: float = 0.0) -> np.ndarray:
+    def pad_candidate_spans(key: str) -> np.ndarray:
         arrs = []
         for b in batch:
             x = b[key]
-            pad = np.zeros((max_m,) + x.shape[1:], dtype=x.dtype)
-            pad[: x.shape[0]] = x
-            if x.shape[0] < max_m and x.shape[0] > 0 and key.startswith("spans"):
-                pad[x.shape[0]:] = x[-1]
+            if x.ndim == 2:
+                pad = np.zeros((cand_n, max_m, x.shape[-1]), dtype=x.dtype)
+                n = x.shape[0]
+                pad[:, :n] = x[None, :, :]
+                if n < max_m and n > 0:
+                    pad[:, n:] = x[-1][None, None, :]
+            else:
+                pad = np.zeros((x.shape[0], max_m, x.shape[-1]), dtype=x.dtype)
+                n = x.shape[1]
+                pad[:, :n] = x
+                if n < max_m and n > 0:
+                    pad[:, n:] = x[:, -1:, :]
             arrs.append(pad)
         return np.stack(arrs)
 
-    spans_clip = torch.tensor(pad_spans("spans_clip"), dtype=torch.long).unsqueeze(1).repeat(1, cand_n, 1, 1)
-    spans_sec = torch.tensor(pad_spans("spans_sec"), dtype=torch.float32).unsqueeze(1).repeat(1, cand_n, 1, 1)
-    span_mask_base = np.zeros((len(batch), max_m), dtype=np.bool_)
-    for i, b in enumerate(batch):
-        span_mask_base[i, : b["spans_clip"].shape[0]] = True
-    span_mask = torch.tensor(span_mask_base, dtype=torch.bool).unsqueeze(1).repeat(1, cand_n, 1)
+    spans_clip = torch.tensor(pad_candidate_spans("spans_clip"), dtype=torch.long)
+    spans_sec = torch.tensor(pad_candidate_spans("spans_sec"), dtype=torch.float32)
+    span_mask_arrs = []
+    for b in batch:
+        if "span_mask" in b:
+            x = b["span_mask"]
+            pad = np.zeros((x.shape[0], max_m), dtype=np.bool_)
+            pad[:, : x.shape[1]] = x
+        else:
+            n = b["spans_clip"].shape[0]
+            pad = np.zeros((cand_n, max_m), dtype=np.bool_)
+            pad[:, :n] = True
+        span_mask_arrs.append(pad)
+    span_mask = torch.tensor(np.stack(span_mask_arrs), dtype=torch.bool)
 
     def pad_label(key: str, dtype: Any) -> torch.Tensor:
         arrs = []
