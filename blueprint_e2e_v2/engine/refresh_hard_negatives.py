@@ -6,7 +6,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from blueprint_e2e_v2.data.dynamic_candidate_miner import CandidateSet
+from blueprint_e2e_v2.data.dynamic_candidate_miner import CandidateSet, CompactCandidateStore
 from blueprint_e2e_v2.data.first_stage_reference import FirstStageReference
 from blueprint_e2e_v2.data.split_manager import SplitManager
 
@@ -157,7 +157,7 @@ def refresh_candidates(
     token_maxsim_weight: float = 0.0,
     pooled_score_weight: float = 1.0,
     late_score_weight: float = 0.0,
-) -> tuple[dict[int, CandidateSet], dict[str, Any]]:
+) -> tuple[dict[int, CandidateSet] | CompactCandidateStore, dict[str, Any]]:
     rows = split_manager.records(split, max_queries=max_queries)
     core = model.module if hasattr(model, "module") else model
     query_cache = query_bank.bulk_tokens([int(r["desc_id"]) for r in rows])
@@ -172,7 +172,11 @@ def refresh_candidates(
             for key in bank_parts:
                 bank_parts[key].append(enc[key].detach())
         bank = {k: torch.cat(v, dim=0) for k, v in bank_parts.items()}
-    out: dict[int, CandidateSet] = {}
+    out_query_ids: list[int] = []
+    out_video_indices: list[np.ndarray] = []
+    out_scores: list[np.ndarray] = []
+    out_gt_indices: list[int] = []
+    out_gt_inserted: list[bool] = []
     inserted = 0
     teacher_ref = FirstStageReference() if insert_gt_for_training and teacher_warm_topk > 0 else None
     teacher_cache = teacher_ref.bulk_top_indices([int(r["desc_id"]) for r in rows], video_to_idx, k=min(int(teacher_warm_topk), max(0, int(dynamic_topk) - 1))) if teacher_ref is not None else {}
@@ -228,42 +232,56 @@ def refresh_candidates(
             idx_cpu = idx.detach().cpu().numpy()
             vals_cpu = vals.detach().cpu().numpy()
             for row_i, qid in enumerate(qids):
-                vids = idx_cpu[row_i].astype(np.int64, copy=False).tolist()
-                vals_row = vals_cpu[row_i].astype(np.float32, copy=False).tolist()
-                score_lookup = {int(v): float(s) for v, s in zip(vids, vals_row)}
+                vids_arr = idx_cpu[row_i].astype(np.int32, copy=True)
+                vals_arr = vals_cpu[row_i].astype(np.float32, copy=True)
                 if teacher_ref is not None:
                     teacher = teacher_cache.get(int(qid), [])
                     if teacher:
                         keep_current = max(1, dynamic_topk - len(teacher))
                         merged: list[int] = []
-                        for v in vids[:keep_current] + teacher + vids[keep_current:]:
-                            if int(v) not in merged:
-                                merged.append(int(v))
+                        seen: set[int] = set()
+                        for v in vids_arr[:keep_current].tolist() + teacher + vids_arr[keep_current:].tolist():
+                            vi = int(v)
+                            if vi not in seen:
+                                merged.append(vi)
+                                seen.add(vi)
                             if len(merged) >= dynamic_topk:
                                 break
-                        vids = merged
-                        vals_row = [float(score_lookup.get(int(v), scores_cpu[row_i, int(v)])) for v in vids]
+                        vids_arr = np.asarray(merged, dtype=np.int32)
+                        vals_arr = scores_cpu[row_i, vids_arr].astype(np.float32, copy=True)
                         teacher_used += 1
                 gt_idx = video_to_idx[str(gt_vids[row_i])]
                 did_insert = False
-                if insert_gt_for_training and gt_idx not in vids:
-                    vids[-1] = gt_idx
-                    vals_row[-1] = float(scores_cpu[row_i, gt_idx])
+                if insert_gt_for_training and not bool((vids_arr == int(gt_idx)).any()):
+                    vids_arr[-1] = int(gt_idx)
+                    vals_arr[-1] = float(scores_cpu[row_i, gt_idx])
                     did_insert = True
                     inserted += 1
-                out[int(qid)] = CandidateSet(int(qid), [int(v) for v in vids], [float(v) for v in vals_row], int(gt_idx), did_insert)
+                out_query_ids.append(int(qid))
+                out_video_indices.append(vids_arr.astype(np.int32, copy=False))
+                out_scores.append(vals_arr.astype(np.float32, copy=False))
+                out_gt_indices.append(int(gt_idx))
+                out_gt_inserted.append(bool(did_insert))
             done = min(st + batch_queries, len(rows))
             if done % max(batch_queries * 25, 1) == 0 or done == len(rows):
                 print(f"C28C dynamic candidates: scored {done}/{len(rows)} queries", flush=True)
     if teacher_ref is not None:
         teacher_ref.close()
+    out = CompactCandidateStore(
+        np.asarray(out_query_ids, dtype=np.int64),
+        np.stack(out_video_indices).astype(np.int32, copy=False) if out_video_indices else np.zeros((0, int(dynamic_topk)), dtype=np.int32),
+        np.stack(out_scores).astype(np.float32, copy=False) if out_scores else np.zeros((0, int(dynamic_topk)), dtype=np.float32),
+        np.asarray(out_gt_indices, dtype=np.int32),
+        np.asarray(out_gt_inserted, dtype=np.bool_),
+    )
     audit = {
         "query_count": len(out),
         "dynamic_topk": int(dynamic_topk),
-        "candidate_count_min": min((len(c.video_indices) for c in out.values()), default=0),
-        "candidate_count_max": max((len(c.video_indices) for c in out.values()), default=0),
+        "candidate_count_min": out.candidate_count_min(),
+        "candidate_count_max": out.candidate_count_max(),
         "gt_insert_rate": 100.0 * inserted / max(1, len(out)),
         "gt_insert_for_training_loss": bool(insert_gt_for_training),
+        "candidate_store": "compact_numpy_matrix_v1",
         "static_top128_hard_gate_used": False,
         "teacher_warm_start_used_for_training": bool(teacher_ref is not None),
         "teacher_warm_start_query_rate": 100.0 * teacher_used / max(1, len(out)),

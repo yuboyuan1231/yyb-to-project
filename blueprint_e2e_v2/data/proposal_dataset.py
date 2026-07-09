@@ -6,7 +6,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 
-from blueprint_e2e_v2.data.dynamic_candidate_miner import CandidateSet
+from blueprint_e2e_v2.data.dynamic_candidate_miner import CandidateSet, CompactCandidateStore
 from blueprint_e2e_v2.data.query_bank import QueryBank
 from blueprint_e2e_v2.data.split_manager import SplitManager
 from blueprint_e2e_v2.data.subtitle_bank import SubtitleBank
@@ -29,7 +29,7 @@ class MultiSpanProposalDataset(Dataset):
         query_bank: QueryBank,
         video_bank: VideoBank,
         subtitle_bank: SubtitleBank,
-        candidates: dict[int, CandidateSet],
+        candidates: dict[int, CandidateSet] | CompactCandidateStore,
         max_queries: int | None = None,
         max_candidates: int = 32,
         max_spans_per_video: int = 64,
@@ -47,6 +47,7 @@ class MultiSpanProposalDataset(Dataset):
         self.subtitle_bank = subtitle_bank
         self.candidates = candidates
         self.records = self.sm.records(split, max_queries=max_queries)
+        self.qid_to_index = {int(r["desc_id"]): i for i, r in enumerate(self.records)}
         self.max_candidates = int(max_candidates)
         self.max_spans_per_video = int(max_spans_per_video)
         self.insert_gt_for_training = bool(insert_gt_for_training)
@@ -88,10 +89,16 @@ class MultiSpanProposalDataset(Dataset):
         row = self.records[idx]
         qid = int(row["desc_id"])
         gt_vid = str(row["vid_name"])
-        cand = self.candidates[qid]
-        video_indices = cand.video_indices[: self.max_candidates]
-        if self.insert_gt_for_training and cand.gt_video_index not in video_indices:
-            video_indices[-1] = cand.gt_video_index
+        if isinstance(self.candidates, CompactCandidateStore):
+            cand_indices, _cand_scores, gt_idx, _gt_inserted = self.candidates.arrays(qid)
+            video_indices = cand_indices[: self.max_candidates].astype(np.int64, copy=True)
+            gt_video_index = int(gt_idx)
+        else:
+            cand = self.candidates[qid]
+            video_indices = np.asarray(cand.video_indices[: self.max_candidates], dtype=np.int64)
+            gt_video_index = int(cand.gt_video_index)
+        if self.insert_gt_for_training and gt_video_index not in video_indices:
+            video_indices[-1] = gt_video_index
         video_ids = [self.video_bank.idx_to_video[int(i)] for i in video_indices]
         gt_duration = float(row["duration"])
         gt = (float(row["ts"][0]), float(row["ts"][1]))
@@ -175,6 +182,45 @@ class MultiSpanProposalDataset(Dataset):
             "gt_start": gt[0],
             "gt_end": gt[1],
             "duration": gt_duration,
+        }
+
+    def positive_retrieval_item(self, idx: int) -> dict[str, Any]:
+        row = self.records[idx]
+        qid = int(row["desc_id"])
+        gt_vid = str(row["vid_name"])
+        gt_idx = int(self.video_bank.video_to_idx[gt_vid])
+        if self.visual_seq_bank is not None:
+            visual = self.visual_seq_bank[gt_idx].astype(np.float32, copy=False)
+            visual_mask = (
+                np.ones(visual.shape[0], dtype=np.bool_)
+                if self.visual_seq_mask is None
+                else self.visual_seq_mask[gt_idx].astype(np.bool_, copy=False)
+            )
+        else:
+            visual_raw = self.video_bank.sequence(gt_vid)
+            visual = self._fit_seq(visual_raw, self.grid.max_clips)
+            visual_mask = self._fit_mask(visual_raw.shape[0], self.grid.max_clips)
+        if self.subtitle_seq_bank is not None:
+            subtitle = self.subtitle_seq_bank[gt_idx].astype(np.float32, copy=False)
+            subtitle_mask = (
+                np.ones(subtitle.shape[0], dtype=np.bool_)
+                if self.subtitle_seq_mask is None
+                else self.subtitle_seq_mask[gt_idx].astype(np.bool_, copy=False)
+            )
+        else:
+            subtitle_raw = self.subtitle_bank.sequence(gt_vid)
+            subtitle = self._fit_seq(subtitle_raw, self.grid.max_clips)
+            subtitle_mask = self._fit_mask(subtitle_raw.shape[0], self.grid.max_clips)
+        return {
+            "query_id": qid,
+            "query_tokens": self.query_bank.tokens(qid),
+            "query_type": {"v": 0, "t": 1, "vt": 2}.get(str(row.get("type", "")), 3),
+            "video_index": gt_idx,
+            "visual": visual,
+            "subtitle": subtitle,
+            "visual_clip_mask": visual_mask,
+            "subtitle_clip_mask": subtitle_mask,
+            "clip_mask": np.logical_and(visual_mask, subtitle_mask),
         }
 
     def audit(self) -> dict[str, Any]:

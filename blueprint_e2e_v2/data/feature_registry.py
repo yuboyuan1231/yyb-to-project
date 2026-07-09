@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -10,7 +11,7 @@ from blueprint_e2e_v2.utils.hashing import file_sha256, stable_hash
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_ROOT = Path("/home/a/yybwork/data/yyb/tvr_feature_release")
-TMP_ROOT = Path("/tmp/c28c_score_cache/CONQUER-RLEM-c2c3")
+TMP_ROOT = Path(os.environ.get("C28C_TMP_ROOT", "/tmp/c28c_score_cache/CONQUER-RLEM-c2c3"))
 
 
 @dataclass(frozen=True)
@@ -87,4 +88,3 @@ class FeatureRegistry:
             "missing_dependencies": missing_deps,
             "registry_hash": stable_hash({"required": required, "optional": optional, "deps": deps}),
         }
-

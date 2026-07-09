@@ -89,3 +89,20 @@ def c28c_collate(batch: list[dict[str, Any]]) -> dict[str, Any]:
         "gt_end": torch.tensor([float(b["gt_end"]) for b in batch], dtype=torch.float32),
         "duration": torch.tensor([float(b["duration"]) for b in batch], dtype=torch.float32),
     }
+
+
+def c28c_positive_collate(batch: list[dict[str, Any]]) -> dict[str, Any]:
+    q, qmask = _pad_tokens([b["query_tokens"] for b in batch])
+    return {
+        "query_ids": [int(b["query_id"]) for b in batch],
+        "query_tokens": q,
+        "query_mask": qmask,
+        "query_type": torch.tensor([int(b["query_type"]) for b in batch], dtype=torch.long),
+        "video_indices": torch.tensor([[int(b["video_index"])] for b in batch], dtype=torch.long),
+        "visual": torch.from_numpy(np.stack([b["visual"] for b in batch]).astype(np.float32, copy=False))[:, None],
+        "subtitle": torch.from_numpy(np.stack([b["subtitle"] for b in batch]).astype(np.float32, copy=False))[:, None],
+        "visual_clip_mask": torch.tensor(np.stack([b["visual_clip_mask"] for b in batch]), dtype=torch.bool)[:, None],
+        "subtitle_clip_mask": torch.tensor(np.stack([b["subtitle_clip_mask"] for b in batch]), dtype=torch.bool)[:, None],
+        "clip_mask": torch.tensor(np.stack([b["clip_mask"] for b in batch]), dtype=torch.bool)[:, None],
+        "correct_video": torch.ones((len(batch), 1), dtype=torch.bool),
+    }

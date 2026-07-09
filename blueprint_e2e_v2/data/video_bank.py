@@ -129,7 +129,7 @@ class VideoBank:
         path = TMP_ROOT / f"C28C_VIDEO_VISUAL_SEQ_{suffix}_T{int(target_len)}_{self.SEQ_CACHE_SCHEMA}.npy"
         manifest_path = TMP_ROOT / f"C28C_VIDEO_VISUAL_SEQ_{suffix}_T{int(target_len)}_{self.SEQ_CACHE_SCHEMA}.manifest.json"
         if path.exists() and manifest_path.exists() and not force:
-            arr = np.load(path)
+            arr = np.load(path, mmap_mode="r")
             self.clear_sequence_cache()
             return arr, json.loads(manifest_path.read_text(encoding="utf-8"))
         first = self._fit_seq(self.sequence(vids[0]), target_len)
@@ -158,7 +158,7 @@ class VideoBank:
             "long_sequence_policy": "mean-bin-resample-to-target-len",
         }
         manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-        return np.load(path), manifest
+        return np.load(path, mmap_mode="r"), manifest
 
     def build_or_load_sequence_mask(
         self,
@@ -173,7 +173,7 @@ class VideoBank:
         path = TMP_ROOT / f"C28C_VIDEO_VISUAL_SEQ_MASK_{suffix}_T{int(target_len)}_{self.SEQ_CACHE_SCHEMA}.npy"
         manifest_path = TMP_ROOT / f"C28C_VIDEO_VISUAL_SEQ_MASK_{suffix}_T{int(target_len)}_{self.SEQ_CACHE_SCHEMA}.manifest.json"
         if path.exists() and manifest_path.exists() and not force:
-            return np.load(path), json.loads(manifest_path.read_text(encoding="utf-8"))
+            return np.load(path, mmap_mode="r"), json.loads(manifest_path.read_text(encoding="utf-8"))
         arr = np.lib.format.open_memmap(path, mode="w+", dtype=np.bool_, shape=(len(vids), int(target_len)))
         old_cache_enabled = self.cache_enabled
         self.cache_enabled = False
@@ -198,7 +198,7 @@ class VideoBank:
             "long_sequence_policy": "mean-bin-resampled-long-videos-mark-all-target-clips-valid",
         }
         manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-        return np.load(path), manifest
+        return np.load(path, mmap_mode="r"), manifest
 
     def audit_sample(self, video_ids: list[str]) -> dict[str, Any]:
         shapes = []

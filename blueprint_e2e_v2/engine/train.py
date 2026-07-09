@@ -8,7 +8,7 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from blueprint_e2e_v2.data.collate import c28c_collate
+from blueprint_e2e_v2.data.collate import c28c_collate, c28c_positive_collate
 from blueprint_e2e_v2.data.feature_registry import FeaturePaths, TMP_ROOT
 from blueprint_e2e_v2.data.proposal_dataset import MultiSpanProposalDataset
 from blueprint_e2e_v2.data.query_bank import QueryBank
@@ -19,6 +19,7 @@ from blueprint_e2e_v2.engine.checkpoint import load_checkpoint, save_checkpoint
 from blueprint_e2e_v2.engine.refresh_hard_negatives import refresh_candidates
 from blueprint_e2e_v2.engine.score_audit import ScoreScaleAccumulator, loss_coupling_audit
 from blueprint_e2e_v2.losses.full_loss import compute_full_loss
+from blueprint_e2e_v2.losses.retrieval_loss import inbatch_video_retrieval_loss
 from blueprint_e2e_v2.models.full_model import C28CFullModel
 from blueprint_e2e_v2.utils.io import load_json, write_json
 from blueprint_e2e_v2.utils.seed import seed_all
@@ -81,6 +82,19 @@ def slice_batch_to_device(batch: dict[str, Any], start: int, end: int, device: t
         else:
             out[key] = val
     return out
+
+
+def positive_inbatch_loss(model: torch.nn.Module, batch: dict[str, torch.Tensor]) -> torch.Tensor:
+    core = model.module if hasattr(model, "module") else model
+    q = core.query_encoder(batch["query_tokens"], batch.get("query_mask"), batch["query_type"])
+    enc = core.video_encoder(
+        batch["visual"],
+        batch["subtitle"],
+        visual_mask=batch.get("visual_clip_mask"),
+        subtitle_mask=batch.get("subtitle_clip_mask"),
+        clip_mask=batch.get("clip_mask"),
+    )
+    return inbatch_video_retrieval_loss(q, enc, batch["correct_video"], batch.get("video_indices"))
 
 
 def prepare_banks(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
@@ -245,46 +259,117 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             subtitle_seq_mask=subtitle_seq_mask,
             target_len=target_len,
         )
-        loader = DataLoader(dataset, batch_size=int(cfg.get("batch_size", 8)), shuffle=True, collate_fn=c28c_collate, num_workers=0, pin_memory=device.type == "cuda")
+        batch_size_cfg = max(1, int(cfg.get("batch_size", 8)))
+        cpu_micro_batch = max(1, int(cfg.get("cpu_micro_batch_size", cfg.get("loader_micro_batch_size", batch_size_cfg))))
+        loader_batch_size = min(batch_size_cfg, cpu_micro_batch)
+        stream_effective_batch = loader_batch_size < batch_size_cfg
+        loader = DataLoader(
+            dataset,
+            batch_size=loader_batch_size,
+            shuffle=True,
+            collate_fn=c28c_collate,
+            num_workers=0,
+            pin_memory=device.type == "cuda" and not stream_effective_batch,
+        )
         model.train()
         optimizer.zero_grad(set_to_none=True)
         loss_acc: dict[str, float] = {}
         score_acc = ScoreScaleAccumulator(cfg)
         steps = 0
         grad_accum = int(cfg.get("grad_accum_steps", 1))
-        gpu_micro_batch = max(1, int(cfg.get("gpu_micro_batch_size", cfg.get("batch_size", 8))))
-        for step, batch in enumerate(loader):
-            batch_n = len(batch["query_ids"])
-            batch_metrics: dict[str, float] = {}
-            for micro_start in range(0, batch_n, gpu_micro_batch):
-                micro_end = min(micro_start + gpu_micro_batch, batch_n)
-                tensor_batch = slice_batch_to_device(batch, micro_start, micro_end, device)
-                out = model(tensor_batch)
-                score_acc.update(out)
-                loss, metrics = compute_full_loss(out, tensor_batch, cfg)
-                micro_weight = (micro_end - micro_start) / max(1, batch_n)
-                (loss * micro_weight / grad_accum).backward()
-                for k, v in metrics.items():
-                    batch_metrics[k] = batch_metrics.get(k, 0.0) + float(v) * micro_weight
-            if (step + 1) % grad_accum == 0:
+        gpu_micro_batch = max(1, int(cfg.get("gpu_micro_batch_size", batch_size_cfg)))
+        if stream_effective_batch:
+            no_inbatch_cfg = dict(cfg)
+            no_inbatch_cfg["skip_inbatch_retrieval"] = True
+            no_inbatch_cfg["lambda_inbatch"] = 0.0
+            processed = 0
+            virtual_qids: list[int] = []
+            virtual_metrics: dict[str, float] = {}
+            virtual_target = 0
+            for batch in loader:
+                if not virtual_qids:
+                    virtual_target = min(batch_size_cfg, len(dataset) - processed)
+                    virtual_target = max(1, int(virtual_target))
+                batch_n = len(batch["query_ids"])
+                for micro_start in range(0, batch_n, gpu_micro_batch):
+                    micro_end = min(micro_start + gpu_micro_batch, batch_n)
+                    tensor_batch = slice_batch_to_device(batch, micro_start, micro_end, device)
+                    out = model(tensor_batch)
+                    score_acc.update(out)
+                    loss, metrics = compute_full_loss(out, tensor_batch, no_inbatch_cfg)
+                    micro_weight = (micro_end - micro_start) / max(1, virtual_target)
+                    (loss * micro_weight / grad_accum).backward()
+                    for k, v in metrics.items():
+                        virtual_metrics[k] = virtual_metrics.get(k, 0.0) + float(v) * micro_weight
+                virtual_qids.extend(int(q) for q in batch["query_ids"])
+                processed += batch_n
+                if len(virtual_qids) >= virtual_target:
+                    pos_items = [dataset.positive_retrieval_item(dataset.qid_to_index[int(q)]) for q in virtual_qids]
+                    pos_batch = c28c_positive_collate(pos_items)
+                    pos_batch = slice_batch_to_device(pos_batch, 0, len(virtual_qids), device)
+                    inbatch_loss = positive_inbatch_loss(model, pos_batch)
+                    inbatch_value = float(inbatch_loss.detach().cpu().item())
+                    lambda_inbatch = float(cfg.get("lambda_inbatch", 0.3))
+                    (lambda_inbatch * inbatch_loss / grad_accum).backward()
+                    virtual_metrics["L_inbatch_retrieval"] = inbatch_value
+                    virtual_metrics["L_total"] = virtual_metrics.get("L_total", 0.0) + lambda_inbatch * inbatch_value
+                    if (steps + 1) % grad_accum == 0:
+                        torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+                        optimizer.step()
+                        optimizer.zero_grad(set_to_none=True)
+                    for k, v in virtual_metrics.items():
+                        loss_acc[k] = loss_acc.get(k, 0.0) + float(v)
+                    steps += 1
+                    if virtual_metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
+                        top_parts = sorted(((k, v) for k, v in virtual_metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
+                        print(
+                            f"C28C loss spike diagnostic epoch {epoch} step {steps}: "
+                            f"L_total={virtual_metrics.get('L_total'):.4f} top_parts={top_parts} "
+                            f"query_ids={virtual_qids[:8]}...",
+                            flush=True,
+                        )
+                    if steps % 100 == 0:
+                        print(f"C28C training epoch {epoch} step {steps}: loss={virtual_metrics.get('L_total'):.4f}", flush=True)
+                    virtual_qids = []
+                    virtual_metrics = {}
+                    virtual_target = 0
+            if steps % grad_accum != 0:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
                 optimizer.step()
                 optimizer.zero_grad(set_to_none=True)
-            for k, v in batch_metrics.items():
-                loss_acc[k] = loss_acc.get(k, 0.0) + float(v)
-            steps += 1
-            if batch_metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
-                top_parts = sorted(((k, v) for k, v in batch_metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
-                pos_counts = batch["correct_video"].sum(dim=1).detach().cpu().tolist()
-                ge07_counts = batch["span_ge07"].sum(dim=(1, 2)).detach().cpu().tolist()
-                print(
-                    f"C28C loss spike diagnostic epoch {epoch} step {step + 1}: "
-                    f"L_total={batch_metrics.get('L_total'):.4f} top_parts={top_parts} "
-                    f"query_ids={batch['query_ids']} pos_counts={pos_counts} ge07_counts={ge07_counts}",
-                    flush=True,
-                )
-            if (step + 1) % 100 == 0:
-                print(f"C28C training epoch {epoch} step {step + 1}: loss={batch_metrics.get('L_total'):.4f}", flush=True)
+        else:
+            for step, batch in enumerate(loader):
+                batch_n = len(batch["query_ids"])
+                batch_metrics: dict[str, float] = {}
+                for micro_start in range(0, batch_n, gpu_micro_batch):
+                    micro_end = min(micro_start + gpu_micro_batch, batch_n)
+                    tensor_batch = slice_batch_to_device(batch, micro_start, micro_end, device)
+                    out = model(tensor_batch)
+                    score_acc.update(out)
+                    loss, metrics = compute_full_loss(out, tensor_batch, cfg)
+                    micro_weight = (micro_end - micro_start) / max(1, batch_n)
+                    (loss * micro_weight / grad_accum).backward()
+                    for k, v in metrics.items():
+                        batch_metrics[k] = batch_metrics.get(k, 0.0) + float(v) * micro_weight
+                if (step + 1) % grad_accum == 0:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+                    optimizer.step()
+                    optimizer.zero_grad(set_to_none=True)
+                for k, v in batch_metrics.items():
+                    loss_acc[k] = loss_acc.get(k, 0.0) + float(v)
+                steps += 1
+                if batch_metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
+                    top_parts = sorted(((k, v) for k, v in batch_metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
+                    pos_counts = batch["correct_video"].sum(dim=1).detach().cpu().tolist()
+                    ge07_counts = batch["span_ge07"].sum(dim=(1, 2)).detach().cpu().tolist()
+                    print(
+                        f"C28C loss spike diagnostic epoch {epoch} step {step + 1}: "
+                        f"L_total={batch_metrics.get('L_total'):.4f} top_parts={top_parts} "
+                        f"query_ids={batch['query_ids']} pos_counts={pos_counts} ge07_counts={ge07_counts}",
+                        flush=True,
+                    )
+                if (step + 1) % 100 == 0:
+                    print(f"C28C training epoch {epoch} step {step + 1}: loss={batch_metrics.get('L_total'):.4f}", flush=True)
         avg = {k: v / max(1, steps) for k, v in loss_acc.items()}
         score_scale = score_acc.summary()
         print(f"C28C training epoch {epoch} complete: avg_loss={avg.get('L_total'):.4f}", flush=True)
@@ -299,8 +384,11 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 "teacher_warm_topk": teacher_warm,
                 "student_dynamic_late_mining": bool(cand_audit.get("late_candidate_mining_used", False)),
                 "candidate_topk_train": max_candidates,
+                "cpu_micro_batch_size": loader_batch_size,
                 "gpu_micro_batch_size": gpu_micro_batch,
-                "effective_batch_size": int(cfg.get("batch_size", 8)) * grad_accum,
+                "stream_effective_batch": bool(stream_effective_batch),
+                "effective_batch_size": batch_size_cfg * grad_accum,
+                "effective_inbatch_retrieval_batch_size": batch_size_cfg,
                 "phase": 0 if epoch <= 2 else 1 if epoch <= 5 else 2 if epoch <= 8 else 3,
             },
             "checkpoint_manifest": latest_manifest,

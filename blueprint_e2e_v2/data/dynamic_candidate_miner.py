@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Iterator, Mapping
 from dataclasses import dataclass
 from typing import Any
 
@@ -14,6 +15,65 @@ class CandidateSet:
     scores: list[float]
     gt_video_index: int
     gt_inserted: bool
+
+
+class CompactCandidateStore(Mapping[int, CandidateSet]):
+    """Matrix-backed candidate store for full-scale C28E refreshes.
+
+    The train split carries roughly 69k queries x 200 candidates. Keeping that
+    as per-query Python lists costs several extra GB and can be killed by the
+    OS after refresh. This store preserves the same candidate contents while
+    materializing Python lists only for the sampled query.
+    """
+
+    def __init__(
+        self,
+        query_ids: np.ndarray,
+        video_indices: np.ndarray,
+        scores: np.ndarray,
+        gt_video_indices: np.ndarray,
+        gt_inserted: np.ndarray,
+    ) -> None:
+        self.query_ids = np.asarray(query_ids, dtype=np.int64)
+        self.video_indices = np.asarray(video_indices, dtype=np.int32)
+        self.scores = np.asarray(scores, dtype=np.float32)
+        self.gt_video_indices = np.asarray(gt_video_indices, dtype=np.int32)
+        self.gt_inserted = np.asarray(gt_inserted, dtype=np.bool_)
+        self._row = {int(q): int(i) for i, q in enumerate(self.query_ids.tolist())}
+
+    def __len__(self) -> int:
+        return int(self.query_ids.shape[0])
+
+    def __iter__(self) -> Iterator[int]:
+        return (int(q) for q in self.query_ids)
+
+    def __getitem__(self, query_id: int) -> CandidateSet:
+        row = self._row[int(query_id)]
+        return CandidateSet(
+            int(query_id),
+            self.video_indices[row].astype(np.int64, copy=False).tolist(),
+            self.scores[row].astype(np.float32, copy=False).tolist(),
+            int(self.gt_video_indices[row]),
+            bool(self.gt_inserted[row]),
+        )
+
+    def arrays(self, query_id: int) -> tuple[np.ndarray, np.ndarray, int, bool]:
+        row = self._row[int(query_id)]
+        return (
+            self.video_indices[row],
+            self.scores[row],
+            int(self.gt_video_indices[row]),
+            bool(self.gt_inserted[row]),
+        )
+
+    def candidate_count_min(self) -> int:
+        return int(self.video_indices.shape[1]) if self.video_indices.ndim == 2 and len(self) else 0
+
+    def candidate_count_max(self) -> int:
+        return int(self.video_indices.shape[1]) if self.video_indices.ndim == 2 and len(self) else 0
+
+    def inserted_count(self) -> int:
+        return int(self.gt_inserted.sum())
 
 
 class DynamicCandidateMiner:
