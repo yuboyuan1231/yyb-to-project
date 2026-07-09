@@ -1,14 +1,17 @@
 from __future__ import annotations
 
 import math
+import random
 import shutil
+from pathlib import Path
 from typing import Any
 
 import numpy as np
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Subset
 
 from blueprint_e2e_v2.data.collate import c28c_collate, c28c_positive_collate
+from blueprint_e2e_v2.data.dynamic_candidate_miner import CandidateSet, CompactCandidateStore
 from blueprint_e2e_v2.data.feature_registry import FeaturePaths, TMP_ROOT
 from blueprint_e2e_v2.data.proposal_dataset import MultiSpanProposalDataset
 from blueprint_e2e_v2.data.query_bank import QueryBank
@@ -97,6 +100,154 @@ def positive_inbatch_loss(model: torch.nn.Module, batch: dict[str, torch.Tensor]
     return inbatch_video_retrieval_loss(q, enc, batch["correct_video"], batch.get("video_indices"))
 
 
+def _rng_state() -> dict[str, Any]:
+    return {
+        "python": random.getstate(),
+        "numpy": np.random.get_state(),
+        "torch": torch.get_rng_state(),
+        "cuda": torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None,
+    }
+
+
+def _restore_rng_state(state: dict[str, Any] | None) -> None:
+    if not state:
+        return
+    if "python" in state:
+        random.setstate(state["python"])
+    if "numpy" in state:
+        np.random.set_state(state["numpy"])
+    if "torch" in state:
+        torch.set_rng_state(state["torch"])
+    if torch.cuda.is_available() and state.get("cuda") is not None:
+        torch.cuda.set_rng_state_all(state["cuda"])
+
+
+def _atomic_torch_save(obj: dict[str, Any], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    torch.save(obj, tmp)
+    tmp.replace(path)
+
+
+def _checkpoint_epoch(path: Path) -> int | None:
+    if not path.exists():
+        return None
+    try:
+        ckpt = torch.load(path, map_location="cpu")
+    except Exception:
+        return None
+    try:
+        return int(ckpt.get("epoch", -1))
+    except Exception:
+        return None
+
+
+def _score_acc_state(score_acc: ScoreScaleAccumulator) -> dict[str, Any]:
+    return {str(k): dict(v) for k, v in getattr(score_acc, "_stats", {}).items()}
+
+
+def _restore_score_acc(score_acc: ScoreScaleAccumulator, state: dict[str, Any] | None) -> None:
+    if state:
+        score_acc._stats = {str(k): {str(sk): float(sv) for sk, sv in dict(v).items()} for k, v in state.items()}
+
+
+def _save_candidate_store(path: Path, candidates: dict[int, CandidateSet] | CompactCandidateStore) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp.npz")
+    if isinstance(candidates, CompactCandidateStore):
+        query_ids = candidates.query_ids
+        video_indices = candidates.video_indices
+        scores = candidates.scores
+        gt_video_indices = candidates.gt_video_indices
+        gt_inserted = candidates.gt_inserted
+    else:
+        ordered = [candidates[int(qid)] for qid in sorted(candidates)]
+        query_ids = np.asarray([c.query_id for c in ordered], dtype=np.int64)
+        video_indices = np.stack([np.asarray(c.video_indices, dtype=np.int32) for c in ordered]) if ordered else np.zeros((0, 0), dtype=np.int32)
+        scores = np.stack([np.asarray(c.scores, dtype=np.float32) for c in ordered]) if ordered else np.zeros((0, 0), dtype=np.float32)
+        gt_video_indices = np.asarray([c.gt_video_index for c in ordered], dtype=np.int32)
+        gt_inserted = np.asarray([c.gt_inserted for c in ordered], dtype=np.bool_)
+    np.savez(
+        tmp,
+        query_ids=np.asarray(query_ids, dtype=np.int64),
+        video_indices=np.asarray(video_indices, dtype=np.int32),
+        scores=np.asarray(scores, dtype=np.float32),
+        gt_video_indices=np.asarray(gt_video_indices, dtype=np.int32),
+        gt_inserted=np.asarray(gt_inserted, dtype=np.bool_),
+    )
+    tmp.replace(path)
+
+
+def _load_candidate_store(path: Path) -> CompactCandidateStore:
+    with np.load(path, allow_pickle=False) as arr:
+        return CompactCandidateStore(
+            arr["query_ids"],
+            arr["video_indices"],
+            arr["scores"],
+            arr["gt_video_indices"],
+            arr["gt_inserted"],
+        )
+
+
+def _save_recovery_checkpoint(
+    path: Path,
+    progress_path: Path,
+    model: torch.nn.Module,
+    optimizer: torch.optim.Optimizer,
+    epoch: int,
+    completed_steps: int,
+    completed_cursor: int,
+    total_queries: int,
+    loss_acc: dict[str, float],
+    score_acc: ScoreScaleAccumulator,
+    candidate_store_path: Path,
+    cand_audit: dict[str, Any],
+    train_order: list[int],
+    cfg: dict[str, Any],
+) -> dict[str, Any]:
+    core = model.module if hasattr(model, "module") else model
+    rec = {
+        "kind": "c28c_step_recovery",
+        "model": core.state_dict(),
+        "optimizer": optimizer.state_dict(),
+        "epoch": int(epoch),
+        "completed_steps": int(completed_steps),
+        "completed_cursor": int(completed_cursor),
+        "total_queries": int(total_queries),
+        "loss_acc": {str(k): float(v) for k, v in loss_acc.items()},
+        "score_acc_state": _score_acc_state(score_acc),
+        "candidate_store_path": str(candidate_store_path),
+        "candidate_audit": cand_audit,
+        "train_order": np.asarray(train_order, dtype=np.int64),
+        "rng_state": _rng_state(),
+        "cfg_summary": {
+            "batch_size": int(cfg.get("batch_size", 8)),
+            "cpu_micro_batch_size": int(cfg.get("cpu_micro_batch_size", cfg.get("loader_micro_batch_size", cfg.get("batch_size", 8)))),
+            "gpu_micro_batch_size": int(cfg.get("gpu_micro_batch_size", cfg.get("batch_size", 8))),
+            "candidate_topk_train": int(cfg.get("candidate_topk_train", cfg.get("dynamic_topk", 200))),
+            "broad_topk_train": int(cfg.get("broad_topk_train", cfg.get("dynamic_topk", 200))),
+        },
+    }
+    _atomic_torch_save(rec, path)
+    manifest = {
+        "status": "running",
+        "recovery_checkpoint_path": str(path),
+        "candidate_store_path": str(candidate_store_path),
+        "epoch": int(epoch),
+        "completed_steps": int(completed_steps),
+        "completed_cursor": int(completed_cursor),
+        "total_queries": int(total_queries),
+        "checkpoint_size_bytes": path.stat().st_size,
+    }
+    write_json(progress_path, manifest)
+    print(
+        f"C28C recovery checkpoint epoch {epoch} step {completed_steps}: "
+        f"cursor={completed_cursor}/{total_queries} path={path}",
+        flush=True,
+    )
+    return manifest
+
+
 def prepare_banks(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
     paths = FeaturePaths()
     sm = SplitManager(paths)
@@ -176,9 +327,14 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     ckpt_dir = TMP_ROOT / "checkpoints"
     ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.pt"
     best_ckpt_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.best.pt"
+    recovery_path = ckpt_dir / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.recovery.pt"
+    recovery_progress_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.recovery.json"
+    recovery_candidate_dir = TMP_ROOT / "candidate_recovery"
     log_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.training_log.json"
     start_epoch = 0
     resume_loaded = False
+    recovery_loaded = False
+    recovery_state: dict[str, Any] | None = None
     resume_error: str | None = None
     if resume and ckpt_path.exists() and not dry_run:
         try:
@@ -189,6 +345,33 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         except RuntimeError as exc:
             resume_error = str(exc).splitlines()[0]
             print(f"C28C resume skipped incompatible checkpoint {ckpt_path}: {resume_error}; starting fresh", flush=True)
+    if resume and recovery_path.exists() and not dry_run:
+        try:
+            rec = torch.load(recovery_path, map_location="cpu")
+            rec_epoch = int(rec.get("epoch", -1))
+            latest_epoch = _checkpoint_epoch(ckpt_path)
+            if rec_epoch > (-1 if latest_epoch is None else int(latest_epoch)):
+                core = model.module if hasattr(model, "module") else model
+                core.load_state_dict(rec["model"])
+                optimizer.load_state_dict(rec["optimizer"])
+                _restore_rng_state(rec.get("rng_state"))
+                start_epoch = rec_epoch
+                recovery_loaded = True
+                recovery_state = rec
+                print(
+                    f"C28C recovery resume: loaded {recovery_path} "
+                    f"epoch {rec_epoch} completed_step {int(rec.get('completed_steps', 0))}",
+                    flush=True,
+                )
+            else:
+                print(
+                    f"C28C recovery resume: skipped stale recovery epoch {rec_epoch}; "
+                    f"latest epoch checkpoint {latest_epoch}",
+                    flush=True,
+                )
+        except Exception as exc:
+            resume_error = str(exc).splitlines()[0]
+            print(f"C28C recovery resume skipped incompatible checkpoint {recovery_path}: {resume_error}", flush=True)
     if dry_run:
         return {
             "status": "C28C_FULL_MODEL_DRY_RUN_READY",
@@ -202,44 +385,59 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         }
     max_queries = int(cfg.get("max_queries", 0) or 0) or None
     max_candidates = int(cfg.get("candidate_topk_train", cfg.get("dynamic_topk", 200)))
-    existing_log = load_json(log_path, {}) if resume_loaded else {}
+    existing_log = load_json(log_path, {}) if resume_loaded or recovery_loaded else {}
     train_log: list[dict[str, Any]] = list(existing_log.get("training_log", []))
     best_select: dict[str, Any] | None = existing_log.get("best_select")
     best_manifest: dict[str, Any] | None = existing_log.get("best_checkpoint_manifest")
     best_score = float(existing_log.get("best_select_score", -math.inf))
     latest_manifest: dict[str, Any] | None = existing_log.get("checkpoint_manifest")
+    step_checkpoint_every = max(0, int(cfg.get("step_checkpoint_every", cfg.get("checkpoint_every_steps", 100))))
     for epoch in range(start_epoch, int(cfg.get("epochs", 1))):
-        print(f"C28C training epoch {epoch}: refreshing dynamic candidates", flush=True)
         teacher_warm = full_candidate_teacher_warm_topk(epoch, cfg, max_candidates)
-        candidates, cand_audit = refresh_candidates(
-            model,
-            banks["split_manager"],
-            banks["query_bank"],
-            video_ids,
-            banks["video_bank"].video_to_idx,
-            visual_bank,
-            subtitle_bank,
-            "train_fit",
-            max_queries=max_queries,
-            dynamic_topk=max_candidates,
-            chunk_size=int(cfg.get("chunk_size", 256)),
-            device=device,
-            insert_gt_for_training=True,
-            teacher_warm_topk=teacher_warm,
-            visual_seq_bank=visual_seq_bank,
-            subtitle_seq_bank=subtitle_seq_bank,
-            visual_seq_mask=visual_seq_mask,
-            subtitle_seq_mask=subtitle_seq_mask,
-            late_candidate_mining=bool(cfg.get("late_candidate_mining", cfg.get("late_interaction_enabled", False))),
-            broad_topk=int(cfg.get("broad_topk_train", cfg.get("dynamic_topk", max_candidates))),
-            candidate_encode_chunk=int(cfg.get("candidate_encode_chunk", 32)),
-            clip_bank_encode_chunk=int(cfg.get("clip_bank_encode_chunk", 128)),
-            late_soft_topk=int(cfg.get("late_soft_topk", 8)),
-            late_temperature=float(cfg.get("late_temperature", 0.07)),
-            token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),
-            pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
-            late_score_weight=float(cfg.get("late_score_weight", 0.0)),
-        )
+        use_recovery_epoch = recovery_loaded and recovery_state is not None and epoch == int(recovery_state.get("epoch", -1))
+        if use_recovery_epoch:
+            candidate_store_path = Path(str(recovery_state["candidate_store_path"]))
+            if not candidate_store_path.exists():
+                raise FileNotFoundError(f"C28C recovery candidate store missing: {candidate_store_path}")
+            print(f"C28C recovery resume epoch {epoch}: loading cached dynamic candidates {candidate_store_path}", flush=True)
+            candidates = _load_candidate_store(candidate_store_path)
+            cand_audit = dict(recovery_state.get("candidate_audit", {}))
+        else:
+            print(f"C28C training epoch {epoch}: refreshing dynamic candidates", flush=True)
+            candidates, cand_audit = refresh_candidates(
+                model,
+                banks["split_manager"],
+                banks["query_bank"],
+                video_ids,
+                banks["video_bank"].video_to_idx,
+                visual_bank,
+                subtitle_bank,
+                "train_fit",
+                max_queries=max_queries,
+                dynamic_topk=max_candidates,
+                chunk_size=int(cfg.get("chunk_size", 256)),
+                device=device,
+                insert_gt_for_training=True,
+                teacher_warm_topk=teacher_warm,
+                visual_seq_bank=visual_seq_bank,
+                subtitle_seq_bank=subtitle_seq_bank,
+                visual_seq_mask=visual_seq_mask,
+                subtitle_seq_mask=subtitle_seq_mask,
+                late_candidate_mining=bool(cfg.get("late_candidate_mining", cfg.get("late_interaction_enabled", False))),
+                broad_topk=int(cfg.get("broad_topk_train", cfg.get("dynamic_topk", max_candidates))),
+                candidate_encode_chunk=int(cfg.get("candidate_encode_chunk", 32)),
+                clip_bank_encode_chunk=int(cfg.get("clip_bank_encode_chunk", 128)),
+                late_soft_topk=int(cfg.get("late_soft_topk", 8)),
+                late_temperature=float(cfg.get("late_temperature", 0.07)),
+                token_maxsim_weight=float(cfg.get("token_maxsim_weight", 0.0)),
+                pooled_score_weight=float(cfg.get("pooled_score_weight", 1.0)),
+                late_score_weight=float(cfg.get("late_score_weight", 0.0)),
+            )
+            candidate_store_path = recovery_candidate_dir / (
+                f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}_epoch{epoch}.candidates.npz"
+            )
+            _save_candidate_store(candidate_store_path, candidates)
+            print(f"C28C recovery candidate store epoch {epoch}: saved {candidate_store_path}", flush=True)
         dataset = MultiSpanProposalDataset(
             "train_fit",
             banks["split_manager"],
@@ -261,26 +459,61 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         cpu_micro_batch = max(1, int(cfg.get("cpu_micro_batch_size", cfg.get("loader_micro_batch_size", batch_size_cfg))))
         loader_batch_size = min(batch_size_cfg, cpu_micro_batch)
         stream_effective_batch = loader_batch_size < batch_size_cfg
+        if use_recovery_epoch:
+            train_order = [int(x) for x in recovery_state.get("train_order", [])]
+            if len(train_order) != len(dataset):
+                raise RuntimeError(f"C28C recovery train_order length mismatch: {len(train_order)} != {len(dataset)}")
+            completed_cursor = min(int(recovery_state.get("completed_cursor", 0)), len(dataset))
+            remaining_indices = train_order[completed_cursor:]
+        else:
+            order_gen = torch.Generator()
+            order_gen.manual_seed(int(cfg.get("seed", 2026)) + epoch * 1_000_003)
+            train_order = [int(x) for x in torch.randperm(len(dataset), generator=order_gen).tolist()]
+            completed_cursor = 0
+            remaining_indices = train_order
         loader = DataLoader(
-            dataset,
+            Subset(dataset, remaining_indices),
             batch_size=loader_batch_size,
-            shuffle=True,
+            shuffle=False,
             collate_fn=c28c_collate,
             num_workers=0,
             pin_memory=device.type == "cuda" and not stream_effective_batch,
         )
         model.train()
         optimizer.zero_grad(set_to_none=True)
-        loss_acc: dict[str, float] = {}
+        loss_acc: dict[str, float] = (
+            {str(k): float(v) for k, v in dict(recovery_state.get("loss_acc", {})).items()}
+            if use_recovery_epoch
+            else {}
+        )
         score_acc = ScoreScaleAccumulator(cfg)
-        steps = 0
+        if use_recovery_epoch:
+            _restore_score_acc(score_acc, recovery_state.get("score_acc_state"))
+        steps = int(recovery_state.get("completed_steps", 0)) if use_recovery_epoch else 0
         grad_accum = int(cfg.get("grad_accum_steps", 1))
         gpu_micro_batch = max(1, int(cfg.get("gpu_micro_batch_size", batch_size_cfg)))
+        if step_checkpoint_every > 0 and not use_recovery_epoch:
+            _save_recovery_checkpoint(
+                recovery_path,
+                recovery_progress_path,
+                model,
+                optimizer,
+                epoch,
+                steps,
+                completed_cursor,
+                len(dataset),
+                loss_acc,
+                score_acc,
+                candidate_store_path,
+                cand_audit,
+                train_order,
+                cfg,
+            )
         if stream_effective_batch:
             no_inbatch_cfg = dict(cfg)
             no_inbatch_cfg["skip_inbatch_retrieval"] = True
             no_inbatch_cfg["lambda_inbatch"] = 0.0
-            processed = 0
+            processed = completed_cursor
             virtual_qids: list[int] = []
             virtual_metrics: dict[str, float] = {}
             virtual_target = 0
@@ -328,6 +561,23 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                         )
                     if steps % 100 == 0:
                         print(f"C28C training epoch {epoch} step {steps}: loss={virtual_metrics.get('L_total'):.4f}", flush=True)
+                    if step_checkpoint_every > 0 and (steps % step_checkpoint_every == 0 or processed >= len(dataset)):
+                        _save_recovery_checkpoint(
+                            recovery_path,
+                            recovery_progress_path,
+                            model,
+                            optimizer,
+                            epoch,
+                            steps,
+                            processed,
+                            len(dataset),
+                            loss_acc,
+                            score_acc,
+                            candidate_store_path,
+                            cand_audit,
+                            train_order,
+                            cfg,
+                        )
                     virtual_qids = []
                     virtual_metrics = {}
                     virtual_target = 0
@@ -336,7 +586,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 optimizer.step()
                 optimizer.zero_grad(set_to_none=True)
         else:
-            for step, batch in enumerate(loader):
+            processed = completed_cursor
+            for batch in loader:
                 batch_n = len(batch["query_ids"])
                 batch_metrics: dict[str, float] = {}
                 for micro_start in range(0, batch_n, gpu_micro_batch):
@@ -356,22 +607,50 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 for k, v in batch_metrics.items():
                     loss_acc[k] = loss_acc.get(k, 0.0) + float(v)
                 steps += 1
+                processed += batch_n
                 if batch_metrics.get("L_total", 0.0) > float(cfg.get("loss_spike_log_threshold", 200.0)):
                     top_parts = sorted(((k, v) for k, v in batch_metrics.items() if k != "L_total"), key=lambda x: abs(x[1]), reverse=True)[:5]
                     pos_counts = batch["correct_video"].sum(dim=1).detach().cpu().tolist()
                     ge07_counts = batch["span_ge07"].sum(dim=(1, 2)).detach().cpu().tolist()
                     print(
-                        f"C28C loss spike diagnostic epoch {epoch} step {step + 1}: "
+                        f"C28C loss spike diagnostic epoch {epoch} step {steps}: "
                         f"L_total={batch_metrics.get('L_total'):.4f} top_parts={top_parts} "
                         f"query_ids={batch['query_ids']} pos_counts={pos_counts} ge07_counts={ge07_counts}",
                         flush=True,
                     )
-                if (step + 1) % 100 == 0:
-                    print(f"C28C training epoch {epoch} step {step + 1}: loss={batch_metrics.get('L_total'):.4f}", flush=True)
+                if steps % 100 == 0:
+                    print(f"C28C training epoch {epoch} step {steps}: loss={batch_metrics.get('L_total'):.4f}", flush=True)
+                if step_checkpoint_every > 0 and (steps % step_checkpoint_every == 0 or processed >= len(dataset)):
+                    _save_recovery_checkpoint(
+                        recovery_path,
+                        recovery_progress_path,
+                        model,
+                        optimizer,
+                        epoch,
+                        steps,
+                        processed,
+                        len(dataset),
+                        loss_acc,
+                        score_acc,
+                        candidate_store_path,
+                        cand_audit,
+                        train_order,
+                        cfg,
+                    )
         avg = {k: v / max(1, steps) for k, v in loss_acc.items()}
         score_scale = score_acc.summary()
         print(f"C28C training epoch {epoch} complete: avg_loss={avg.get('L_total'):.4f}", flush=True)
         latest_manifest = save_checkpoint(ckpt_path, model, optimizer, epoch, {"train_loss": avg})
+        write_json(recovery_progress_path, {
+            "status": "epoch_checkpoint_saved",
+            "epoch": epoch,
+            "completed_steps": steps,
+            "completed_cursor": len(dataset),
+            "total_queries": len(dataset),
+            "checkpoint_manifest": latest_manifest,
+            "recovery_checkpoint_path": str(recovery_path),
+            "candidate_store_path": str(candidate_store_path),
+        })
         epoch_rec: dict[str, Any] = {
             "epoch": epoch,
             "loss": avg,
@@ -425,9 +704,12 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         write_json(log_path, {
             "status": "running",
             "resume_loaded": resume_loaded,
+            "recovery_loaded": recovery_loaded,
             "resume_error": resume_error,
             "training_log": train_log,
             "checkpoint_manifest": latest_manifest,
+            "recovery_checkpoint_path": str(recovery_path),
+            "recovery_progress_path": str(recovery_progress_path),
             "best_select_score": best_score,
             "best_select": best_select,
             "best_checkpoint_manifest": best_manifest,
@@ -439,8 +721,11 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
         "training_log": train_log,
         "checkpoint_manifest": latest_manifest,
         "best_checkpoint_manifest": best_manifest,
+        "recovery_checkpoint_path": str(recovery_path),
+        "recovery_progress_path": str(recovery_progress_path),
         "training_log_path": str(log_path),
         "resume_loaded": resume_loaded,
+        "recovery_loaded": recovery_loaded,
         "resume_error": resume_error,
         "visual_bank_manifest": banks["visual_manifest"],
         "subtitle_bank_manifest": banks["subtitle_manifest"],

@@ -10,6 +10,7 @@ visual_dim: 4352
 epochs: 8
 batch_size: 32
 grad_accum_steps: 1
+step_checkpoint_every: 100
 cpu_micro_batch_size: 2
 gpu_micro_batch_size: 2
 lr: 0.00012
