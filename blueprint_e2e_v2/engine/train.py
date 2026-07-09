@@ -103,8 +103,6 @@ def prepare_banks(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
     qb = QueryBank(paths)
     vb = VideoBank(paths)
     sb = SubtitleBank(paths)
-    vb.enable_sequence_cache()
-    sb.enable_sequence_cache()
     max_videos = int(cfg.get("max_videos", 0) or 0)
     visual, visual_manifest = vb.build_or_load_pooled(max_videos=max_videos or None, force=force)
     subtitle, subtitle_manifest = sb.build_or_load_pooled([str(x) for x in visual["video_ids"].tolist()], max_videos=max_videos or None, force=force)
