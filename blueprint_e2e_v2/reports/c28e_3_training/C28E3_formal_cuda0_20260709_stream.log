@@ -1,0 +1,1078 @@
+C28C visual sequence bank: loaded 1000/17435
+C28C visual sequence bank: loaded 2000/17435
+C28C visual sequence bank: loaded 3000/17435
+C28C visual sequence bank: loaded 4000/17435
+C28C visual sequence bank: loaded 5000/17435
+C28C visual sequence bank: loaded 6000/17435
+C28C visual sequence bank: loaded 7000/17435
+C28C visual sequence bank: loaded 8000/17435
+C28C visual sequence bank: loaded 9000/17435
+C28C visual sequence bank: loaded 10000/17435
+C28C visual sequence bank: loaded 11000/17435
+C28C visual sequence bank: loaded 12000/17435
+C28C visual sequence bank: loaded 13000/17435
+C28C visual sequence bank: loaded 14000/17435
+C28C visual sequence bank: loaded 15000/17435
+C28C visual sequence bank: loaded 16000/17435
+C28C visual sequence bank: loaded 17000/17435
+C28C subtitle sequence bank: loaded 1000/17435
+C28C subtitle sequence bank: loaded 2000/17435
+C28C subtitle sequence bank: loaded 3000/17435
+C28C subtitle sequence bank: loaded 4000/17435
+C28C subtitle sequence bank: loaded 5000/17435
+C28C subtitle sequence bank: loaded 6000/17435
+C28C subtitle sequence bank: loaded 7000/17435
+C28C subtitle sequence bank: loaded 8000/17435
+C28C subtitle sequence bank: loaded 9000/17435
+C28C subtitle sequence bank: loaded 10000/17435
+C28C subtitle sequence bank: loaded 11000/17435
+C28C subtitle sequence bank: loaded 12000/17435
+C28C subtitle sequence bank: loaded 13000/17435
+C28C subtitle sequence bank: loaded 14000/17435
+C28C subtitle sequence bank: loaded 15000/17435
+C28C subtitle sequence bank: loaded 16000/17435
+C28C subtitle sequence bank: loaded 17000/17435
+C28C visual sequence mask: loaded 1000/17435
+C28C visual sequence mask: loaded 2000/17435
+C28C visual sequence mask: loaded 3000/17435
+C28C visual sequence mask: loaded 4000/17435
+C28C visual sequence mask: loaded 5000/17435
+C28C visual sequence mask: loaded 6000/17435
+C28C visual sequence mask: loaded 7000/17435
+C28C visual sequence mask: loaded 8000/17435
+C28C visual sequence mask: loaded 9000/17435
+C28C visual sequence mask: loaded 10000/17435
+C28C visual sequence mask: loaded 11000/17435
+C28C visual sequence mask: loaded 12000/17435
+C28C visual sequence mask: loaded 13000/17435
+C28C visual sequence mask: loaded 14000/17435
+C28C visual sequence mask: loaded 15000/17435
+C28C visual sequence mask: loaded 16000/17435
+C28C visual sequence mask: loaded 17000/17435
+C28C subtitle sequence mask: loaded 1000/17435
+C28C subtitle sequence mask: loaded 2000/17435
+C28C subtitle sequence mask: loaded 3000/17435
+C28C subtitle sequence mask: loaded 4000/17435
+C28C subtitle sequence mask: loaded 5000/17435
+C28C subtitle sequence mask: loaded 6000/17435
+C28C subtitle sequence mask: loaded 7000/17435
+C28C subtitle sequence mask: loaded 8000/17435
+C28C subtitle sequence mask: loaded 9000/17435
+C28C subtitle sequence mask: loaded 10000/17435
+C28C subtitle sequence mask: loaded 11000/17435
+C28C subtitle sequence mask: loaded 12000/17435
+C28C subtitle sequence mask: loaded 13000/17435
+C28C subtitle sequence mask: loaded 14000/17435
+C28C subtitle sequence mask: loaded 15000/17435
+C28C subtitle sequence mask: loaded 16000/17435
+C28C subtitle sequence mask: loaded 17000/17435
+C28C training epoch 0: refreshing dynamic candidates
+C28C query cache: loaded 10000/69428 missing query features
+C28C query cache: loaded 20000/69428 missing query features
+C28C query cache: loaded 30000/69428 missing query features
+C28C query cache: loaded 40000/69428 missing query features
+C28C query cache: loaded 50000/69428 missing query features
+C28C query cache: loaded 60000/69428 missing query features
+C28C teacher warm-start cache: loaded 10000/69428 queries
+C28C teacher warm-start cache: loaded 20000/69428 queries
+C28C teacher warm-start cache: loaded 30000/69428 queries
+C28C teacher warm-start cache: loaded 40000/69428 queries
+C28C teacher warm-start cache: loaded 50000/69428 queries
+C28C teacher warm-start cache: loaded 60000/69428 queries
+/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/blueprint_e2e_v2/engine/refresh_hard_negatives.py:36: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  visual = torch.from_numpy(visual_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C training epoch 0 step 100: loss=46.2190
+C28C training epoch 0 step 200: loss=45.4527
+C28C training epoch 0 step 300: loss=45.4878
+C28C training epoch 0 step 400: loss=45.0995
+C28C training epoch 0 step 500: loss=45.5263
+C28C training epoch 0 step 600: loss=44.5926
+C28C training epoch 0 step 700: loss=44.5076
+C28C training epoch 0 step 800: loss=44.5220
+C28C training epoch 0 step 900: loss=44.8083
+C28C training epoch 0 step 1000: loss=44.1955
+C28C training epoch 0 step 1100: loss=44.2685
+C28C training epoch 0 step 1200: loss=44.6201
+C28C training epoch 0 step 1300: loss=44.1412
+C28C training epoch 0 step 1400: loss=43.8475
+C28C training epoch 0 step 1500: loss=44.3528
+C28C training epoch 0 step 1600: loss=43.8189
+C28C training epoch 0 step 1700: loss=43.9852
+C28C training epoch 0 step 1800: loss=44.2236
+C28C training epoch 0 step 1900: loss=44.9820
+C28C training epoch 0 step 2000: loss=43.3846
+C28C training epoch 0 step 2100: loss=43.9999
+C28C training epoch 0 complete: avg_loss=44.7158
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 1: refreshing dynamic candidates
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C training epoch 1 step 100: loss=45.5358
+C28C training epoch 1 step 200: loss=45.5569
+C28C training epoch 1 step 300: loss=46.0475
+C28C training epoch 1 step 400: loss=46.0016
+C28C training epoch 1 step 500: loss=45.2892
+C28C training epoch 1 step 600: loss=45.4040
+C28C training epoch 1 step 700: loss=45.3347
+C28C training epoch 1 step 800: loss=44.9136
+C28C training epoch 1 step 900: loss=44.1216
+C28C training epoch 1 step 1000: loss=45.4825
+C28C training epoch 1 step 1100: loss=45.8517
+C28C training epoch 1 step 1200: loss=45.0593
+C28C training epoch 1 step 1300: loss=44.7339
+C28C training epoch 1 step 1400: loss=45.3845
+C28C training epoch 1 step 1500: loss=44.3247
+C28C training epoch 1 step 1600: loss=44.9326
+
+=== C28E3 resume after crash 2026-07-09 22:41:51 CST ===
+C28C resume: loaded checkpoint /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.pt starting epoch 1
+C28C training epoch 1: refreshing dynamic candidates
+C28C query cache: loaded 10000/69428 missing query features
+C28C query cache: loaded 20000/69428 missing query features
+C28C query cache: loaded 30000/69428 missing query features
+C28C query cache: loaded 40000/69428 missing query features
+C28C query cache: loaded 50000/69428 missing query features
+C28C query cache: loaded 60000/69428 missing query features
+/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/blueprint_e2e_v2/engine/refresh_hard_negatives.py:36: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  visual = torch.from_numpy(visual_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 1: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch1.candidates.npz
+C28C recovery checkpoint epoch 1 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 100: loss=45.2602
+C28C recovery checkpoint epoch 1 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 200: loss=45.2469
+C28C recovery checkpoint epoch 1 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 300: loss=45.2880
+C28C recovery checkpoint epoch 1 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 400: loss=45.5909
+C28C recovery checkpoint epoch 1 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 500: loss=45.0277
+C28C recovery checkpoint epoch 1 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 600: loss=44.8042
+C28C recovery checkpoint epoch 1 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 700: loss=46.4180
+C28C recovery checkpoint epoch 1 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 800: loss=45.7211
+C28C recovery checkpoint epoch 1 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 900: loss=45.0867
+C28C recovery checkpoint epoch 1 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1000: loss=45.0431
+C28C recovery checkpoint epoch 1 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1100: loss=44.8772
+C28C recovery checkpoint epoch 1 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1200: loss=44.2638
+C28C recovery checkpoint epoch 1 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1300: loss=44.3698
+C28C recovery checkpoint epoch 1 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1400: loss=44.4067
+C28C recovery checkpoint epoch 1 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1500: loss=45.4954
+C28C recovery checkpoint epoch 1 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1600: loss=44.4660
+C28C recovery checkpoint epoch 1 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1700: loss=45.8818
+C28C recovery checkpoint epoch 1 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1800: loss=44.9370
+C28C recovery checkpoint epoch 1 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 1900: loss=44.7469
+C28C recovery checkpoint epoch 1 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 2000: loss=45.2588
+C28C recovery checkpoint epoch 1 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 step 2100: loss=44.7628
+C28C recovery checkpoint epoch 1 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 1 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 1 complete: avg_loss=45.1482
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 2: refreshing dynamic candidates
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 2: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch2.candidates.npz
+C28C recovery checkpoint epoch 2 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 100: loss=46.7153
+C28C recovery checkpoint epoch 2 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 200: loss=45.4290
+C28C recovery checkpoint epoch 2 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 300: loss=45.1400
+C28C recovery checkpoint epoch 2 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 400: loss=45.1500
+C28C recovery checkpoint epoch 2 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 500: loss=45.3964
+C28C recovery checkpoint epoch 2 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 600: loss=44.3935
+C28C recovery checkpoint epoch 2 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 700: loss=44.7588
+C28C recovery checkpoint epoch 2 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 800: loss=44.4013
+C28C recovery checkpoint epoch 2 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 900: loss=45.2384
+C28C recovery checkpoint epoch 2 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1000: loss=45.0545
+C28C recovery checkpoint epoch 2 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1100: loss=44.3116
+C28C recovery checkpoint epoch 2 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1200: loss=45.4098
+C28C recovery checkpoint epoch 2 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1300: loss=44.8605
+C28C recovery checkpoint epoch 2 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1400: loss=44.1717
+C28C recovery checkpoint epoch 2 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1500: loss=45.1363
+C28C recovery checkpoint epoch 2 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1600: loss=45.7807
+C28C recovery checkpoint epoch 2 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1700: loss=44.3610
+C28C recovery checkpoint epoch 2 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1800: loss=45.6038
+C28C recovery checkpoint epoch 2 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 1900: loss=45.3823
+C28C recovery checkpoint epoch 2 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 2000: loss=43.9139
+C28C recovery checkpoint epoch 2 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 step 2100: loss=44.5292
+C28C recovery checkpoint epoch 2 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 2 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 2 complete: avg_loss=44.7955
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 3: refreshing dynamic candidates
+C28C teacher warm-start cache: loaded 10000/69428 queries
+C28C teacher warm-start cache: loaded 20000/69428 queries
+C28C teacher warm-start cache: loaded 30000/69428 queries
+C28C teacher warm-start cache: loaded 40000/69428 queries
+C28C teacher warm-start cache: loaded 50000/69428 queries
+C28C teacher warm-start cache: loaded 60000/69428 queries
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 3: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch3.candidates.npz
+C28C recovery checkpoint epoch 3 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 100: loss=43.9310
+C28C recovery checkpoint epoch 3 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 200: loss=44.8294
+C28C recovery checkpoint epoch 3 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 300: loss=43.3407
+C28C recovery checkpoint epoch 3 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 400: loss=44.2591
+C28C recovery checkpoint epoch 3 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 500: loss=42.4470
+C28C recovery checkpoint epoch 3 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 600: loss=43.7416
+C28C recovery checkpoint epoch 3 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 700: loss=42.3401
+C28C recovery checkpoint epoch 3 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 800: loss=43.2896
+C28C recovery checkpoint epoch 3 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 900: loss=45.1921
+C28C recovery checkpoint epoch 3 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1000: loss=43.3195
+C28C recovery checkpoint epoch 3 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1100: loss=43.3074
+C28C recovery checkpoint epoch 3 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1200: loss=43.1997
+C28C recovery checkpoint epoch 3 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1300: loss=43.3071
+C28C recovery checkpoint epoch 3 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1400: loss=42.5638
+C28C recovery checkpoint epoch 3 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1500: loss=44.1215
+C28C recovery checkpoint epoch 3 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1600: loss=43.6413
+C28C recovery checkpoint epoch 3 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1700: loss=42.9846
+C28C recovery checkpoint epoch 3 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1800: loss=42.7182
+C28C recovery checkpoint epoch 3 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 1900: loss=42.5510
+C28C recovery checkpoint epoch 3 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 2000: loss=44.0893
+C28C recovery checkpoint epoch 3 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 step 2100: loss=42.2079
+C28C recovery checkpoint epoch 3 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 3 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 3 complete: avg_loss=43.4786
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 4: refreshing dynamic candidates
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 4: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch4.candidates.npz
+C28C recovery checkpoint epoch 4 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 100: loss=43.2677
+C28C recovery checkpoint epoch 4 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 200: loss=44.1133
+C28C recovery checkpoint epoch 4 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 300: loss=45.7510
+C28C recovery checkpoint epoch 4 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 400: loss=43.8150
+C28C recovery checkpoint epoch 4 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 500: loss=42.9324
+C28C recovery checkpoint epoch 4 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 600: loss=45.2359
+C28C recovery checkpoint epoch 4 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 700: loss=43.1520
+C28C recovery checkpoint epoch 4 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 800: loss=44.0871
+C28C recovery checkpoint epoch 4 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 900: loss=44.4428
+C28C recovery checkpoint epoch 4 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1000: loss=42.5863
+C28C recovery checkpoint epoch 4 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1100: loss=44.5643
+C28C recovery checkpoint epoch 4 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1200: loss=44.6389
+C28C recovery checkpoint epoch 4 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1300: loss=43.2762
+C28C recovery checkpoint epoch 4 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1400: loss=41.8295
+C28C recovery checkpoint epoch 4 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1500: loss=41.9364
+C28C recovery checkpoint epoch 4 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1600: loss=42.7476
+C28C recovery checkpoint epoch 4 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1700: loss=41.3271
+C28C recovery checkpoint epoch 4 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1800: loss=44.6330
+C28C recovery checkpoint epoch 4 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 1900: loss=42.9546
+C28C recovery checkpoint epoch 4 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 2000: loss=44.3274
+C28C recovery checkpoint epoch 4 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 step 2100: loss=43.0993
+C28C recovery checkpoint epoch 4 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 4 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 4 complete: avg_loss=43.3751
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 5: refreshing dynamic candidates
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 5: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch5.candidates.npz
+C28C recovery checkpoint epoch 5 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 100: loss=42.9134
+C28C recovery checkpoint epoch 5 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 200: loss=43.3755
+C28C recovery checkpoint epoch 5 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 300: loss=42.4814
+C28C recovery checkpoint epoch 5 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 400: loss=44.0191
+C28C recovery checkpoint epoch 5 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 500: loss=41.3736
+C28C recovery checkpoint epoch 5 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 600: loss=40.4828
+C28C recovery checkpoint epoch 5 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 700: loss=43.1148
+C28C recovery checkpoint epoch 5 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 800: loss=43.1485
+C28C recovery checkpoint epoch 5 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 900: loss=41.1640
+C28C recovery checkpoint epoch 5 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1000: loss=42.4311
+C28C recovery checkpoint epoch 5 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1100: loss=43.1050
+C28C recovery checkpoint epoch 5 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1200: loss=43.6556
+C28C recovery checkpoint epoch 5 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1300: loss=42.4173
+C28C recovery checkpoint epoch 5 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1400: loss=42.6911
+C28C recovery checkpoint epoch 5 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1500: loss=40.3500
+C28C recovery checkpoint epoch 5 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1600: loss=42.1239
+C28C recovery checkpoint epoch 5 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1700: loss=40.7096
+C28C recovery checkpoint epoch 5 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1800: loss=42.8010
+C28C recovery checkpoint epoch 5 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 1900: loss=39.8898
+C28C recovery checkpoint epoch 5 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 2000: loss=43.0905
+C28C recovery checkpoint epoch 5 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 step 2100: loss=40.1656
+C28C recovery checkpoint epoch 5 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 5 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 5 complete: avg_loss=42.4838
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 6: refreshing dynamic candidates
+C28C teacher warm-start cache: loaded 10000/69428 queries
+C28C teacher warm-start cache: loaded 20000/69428 queries
+C28C teacher warm-start cache: loaded 30000/69428 queries
+C28C teacher warm-start cache: loaded 40000/69428 queries
+C28C teacher warm-start cache: loaded 50000/69428 queries
+C28C teacher warm-start cache: loaded 60000/69428 queries
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 6: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch6.candidates.npz
+C28C recovery checkpoint epoch 6 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 100: loss=42.3704
+C28C recovery checkpoint epoch 6 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 200: loss=41.6811
+C28C recovery checkpoint epoch 6 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 300: loss=42.4578
+C28C recovery checkpoint epoch 6 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 400: loss=42.5410
+C28C recovery checkpoint epoch 6 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 500: loss=42.4040
+C28C recovery checkpoint epoch 6 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 600: loss=40.8844
+C28C recovery checkpoint epoch 6 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 700: loss=41.4712
+C28C recovery checkpoint epoch 6 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 800: loss=38.7834
+C28C recovery checkpoint epoch 6 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 900: loss=40.7587
+C28C recovery checkpoint epoch 6 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1000: loss=40.9495
+C28C recovery checkpoint epoch 6 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1100: loss=40.0285
+C28C recovery checkpoint epoch 6 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1200: loss=41.1611
+C28C recovery checkpoint epoch 6 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1300: loss=39.2909
+C28C recovery checkpoint epoch 6 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1400: loss=42.9239
+C28C recovery checkpoint epoch 6 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1500: loss=41.7498
+C28C recovery checkpoint epoch 6 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1600: loss=41.8231
+C28C recovery checkpoint epoch 6 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1700: loss=41.7051
+C28C recovery checkpoint epoch 6 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1800: loss=41.4209
+C28C recovery checkpoint epoch 6 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 1900: loss=38.7090
+C28C recovery checkpoint epoch 6 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C resume: loaded checkpoint /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.pt starting epoch 6
+C28C recovery resume: loaded /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt epoch 6 completed_step 1900
+C28C recovery resume epoch 6: loading cached dynamic candidates /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch6.candidates.npz
+C28C training epoch 6 step 2000: loss=42.5897
+C28C recovery checkpoint epoch 6 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 step 2100: loss=41.3600
+C28C recovery checkpoint epoch 6 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 6 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 6 complete: avg_loss=41.4286
+/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/blueprint_e2e_v2/engine/refresh_hard_negatives.py:36: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  visual = torch.from_numpy(visual_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C resume: loaded checkpoint /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.pt starting epoch 7
+C28C recovery resume: loaded /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt epoch 6 completed_step 2170 pending epoch finalization
+C28C recovery resume epoch 6: loading cached dynamic candidates /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch6.candidates.npz
+C28C training epoch 6 complete: avg_loss=41.4286
+/home/a/yybwork/yybcounter/CONQUER-RLEM-c2c3/blueprint_e2e_v2/engine/refresh_hard_negatives.py:36: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  visual = torch.from_numpy(visual_seq_bank[st:ed].astype(np.float32, copy=False)).to(device, non_blocking=True).unsqueeze(1)
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+C28C training epoch 7: refreshing dynamic candidates
+C28C query cache: loaded 10000/69428 missing query features
+C28C query cache: loaded 20000/69428 missing query features
+C28C query cache: loaded 30000/69428 missing query features
+C28C query cache: loaded 40000/69428 missing query features
+C28C query cache: loaded 50000/69428 missing query features
+C28C query cache: loaded 60000/69428 missing query features
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/69428 queries
+C28C dynamic candidates: scored 3200/69428 queries
+C28C dynamic candidates: scored 4800/69428 queries
+C28C dynamic candidates: scored 6400/69428 queries
+C28C dynamic candidates: scored 8000/69428 queries
+C28C dynamic candidates: scored 9600/69428 queries
+C28C dynamic candidates: scored 11200/69428 queries
+C28C dynamic candidates: scored 12800/69428 queries
+C28C dynamic candidates: scored 14400/69428 queries
+C28C dynamic candidates: scored 16000/69428 queries
+C28C dynamic candidates: scored 17600/69428 queries
+C28C dynamic candidates: scored 19200/69428 queries
+C28C dynamic candidates: scored 20800/69428 queries
+C28C dynamic candidates: scored 22400/69428 queries
+C28C dynamic candidates: scored 24000/69428 queries
+C28C dynamic candidates: scored 25600/69428 queries
+C28C dynamic candidates: scored 27200/69428 queries
+C28C dynamic candidates: scored 28800/69428 queries
+C28C dynamic candidates: scored 30400/69428 queries
+C28C dynamic candidates: scored 32000/69428 queries
+C28C dynamic candidates: scored 33600/69428 queries
+C28C dynamic candidates: scored 35200/69428 queries
+C28C dynamic candidates: scored 36800/69428 queries
+C28C dynamic candidates: scored 38400/69428 queries
+C28C dynamic candidates: scored 40000/69428 queries
+C28C dynamic candidates: scored 41600/69428 queries
+C28C dynamic candidates: scored 43200/69428 queries
+C28C dynamic candidates: scored 44800/69428 queries
+C28C dynamic candidates: scored 46400/69428 queries
+C28C dynamic candidates: scored 48000/69428 queries
+C28C dynamic candidates: scored 49600/69428 queries
+C28C dynamic candidates: scored 51200/69428 queries
+C28C dynamic candidates: scored 52800/69428 queries
+C28C dynamic candidates: scored 54400/69428 queries
+C28C dynamic candidates: scored 56000/69428 queries
+C28C dynamic candidates: scored 57600/69428 queries
+C28C dynamic candidates: scored 59200/69428 queries
+C28C dynamic candidates: scored 60800/69428 queries
+C28C dynamic candidates: scored 62400/69428 queries
+C28C dynamic candidates: scored 64000/69428 queries
+C28C dynamic candidates: scored 65600/69428 queries
+C28C dynamic candidates: scored 67200/69428 queries
+C28C dynamic candidates: scored 68800/69428 queries
+C28C dynamic candidates: scored 69428/69428 queries
+C28C recovery candidate store epoch 7: saved /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/candidate_recovery/C28C_FULL_medium_seed2026_epoch7.candidates.npz
+C28C recovery checkpoint epoch 7 step 0: cursor=0/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 100: loss=41.9426
+C28C recovery checkpoint epoch 7 step 100: cursor=3200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 200: loss=40.0117
+C28C recovery checkpoint epoch 7 step 200: cursor=6400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 300: loss=40.5156
+C28C recovery checkpoint epoch 7 step 300: cursor=9600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 400: loss=40.2222
+C28C recovery checkpoint epoch 7 step 400: cursor=12800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 500: loss=39.1466
+C28C recovery checkpoint epoch 7 step 500: cursor=16000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 600: loss=39.6064
+C28C recovery checkpoint epoch 7 step 600: cursor=19200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 700: loss=40.6816
+C28C recovery checkpoint epoch 7 step 700: cursor=22400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 800: loss=39.8439
+C28C recovery checkpoint epoch 7 step 800: cursor=25600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 900: loss=39.3191
+C28C recovery checkpoint epoch 7 step 900: cursor=28800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1000: loss=37.8695
+C28C recovery checkpoint epoch 7 step 1000: cursor=32000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1100: loss=40.8887
+C28C recovery checkpoint epoch 7 step 1100: cursor=35200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1200: loss=39.7008
+C28C recovery checkpoint epoch 7 step 1200: cursor=38400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1300: loss=39.0965
+C28C recovery checkpoint epoch 7 step 1300: cursor=41600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1400: loss=43.5445
+C28C recovery checkpoint epoch 7 step 1400: cursor=44800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1500: loss=38.4094
+C28C recovery checkpoint epoch 7 step 1500: cursor=48000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1600: loss=37.8842
+C28C recovery checkpoint epoch 7 step 1600: cursor=51200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1700: loss=40.7199
+C28C recovery checkpoint epoch 7 step 1700: cursor=54400/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1800: loss=38.8528
+C28C recovery checkpoint epoch 7 step 1800: cursor=57600/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 1900: loss=42.3127
+C28C recovery checkpoint epoch 7 step 1900: cursor=60800/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 2000: loss=39.1745
+C28C recovery checkpoint epoch 7 step 2000: cursor=64000/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 step 2100: loss=38.6387
+C28C recovery checkpoint epoch 7 step 2100: cursor=67200/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C recovery checkpoint epoch 7 step 2170: cursor=69428/69428 path=/home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3/checkpoints/C28C_FULL_medium_seed2026.recovery.pt
+C28C training epoch 7 complete: avg_loss=39.7513
+C28C clip refresh bank: encoded 3200/17435 videos
+C28C clip refresh bank: encoded 6400/17435 videos
+C28C clip refresh bank: encoded 9600/17435 videos
+C28C clip refresh bank: encoded 12800/17435 videos
+C28C clip refresh bank: encoded 16000/17435 videos
+C28C clip refresh bank: encoded 17435/17435 videos
+C28C dynamic candidates: scored 1600/8677 queries
+C28C dynamic candidates: scored 3200/8677 queries
+C28C dynamic candidates: scored 4800/8677 queries
+C28C dynamic candidates: scored 6400/8677 queries
+C28C dynamic candidates: scored 8000/8677 queries
+C28C dynamic candidates: scored 8677/8677 queries
+C28C eval calib_select: scored 3200/8677 queries
+C28C eval calib_select: scored 6400/8677 queries
+C28C eval calib_select: scored 8677/8677 queries
+c28e_3: C28E_FULL_E2E_TRAINING_COMPLETE
+branch: c28e-code-review-clip-late-interaction
+commit: 963b95d
+elapsed_seconds: 17665.68
+local_tmp_root: /home/a/yybwork/yybcounter/c28c_score_cache/CONQUER-RLEM-c2c3
