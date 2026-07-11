@@ -331,6 +331,13 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
     recovery_progress_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.recovery.json"
     recovery_candidate_dir = TMP_ROOT / "candidate_recovery"
     log_path = TMP_ROOT / "training_logs" / f"C28C_FULL_{cfg.get('mode','medium')}_seed{cfg.get('seed',2026)}.training_log.json"
+    existing_log_at_resume = load_json(log_path, {}) if log_path.exists() else {}
+    logged_epochs = [
+        int(rec["epoch"])
+        for rec in existing_log_at_resume.get("training_log", [])
+        if isinstance(rec, dict) and rec.get("epoch") is not None
+    ]
+    last_logged_epoch = max(logged_epochs, default=-1)
     start_epoch = 0
     resume_loaded = False
     recovery_loaded = False
@@ -350,7 +357,14 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
             rec = torch.load(recovery_path, map_location="cpu")
             rec_epoch = int(rec.get("epoch", -1))
             latest_epoch = _checkpoint_epoch(ckpt_path)
-            if rec_epoch > (-1 if latest_epoch is None else int(latest_epoch)):
+            latest_epoch_value = -1 if latest_epoch is None else int(latest_epoch)
+            recovery_finishes_unlogged_epoch = (
+                rec_epoch == latest_epoch_value
+                and rec_epoch > last_logged_epoch
+                and int(rec.get("total_queries", 0)) > 0
+                and int(rec.get("completed_cursor", 0)) >= int(rec.get("total_queries", 0))
+            )
+            if rec_epoch > latest_epoch_value or recovery_finishes_unlogged_epoch:
                 core = model.module if hasattr(model, "module") else model
                 core.load_state_dict(rec["model"])
                 optimizer.load_state_dict(rec["optimizer"])
@@ -360,7 +374,8 @@ def run_full_training(cfg: dict[str, Any], dry_run: bool = False, force: bool = 
                 recovery_state = rec
                 print(
                     f"C28C recovery resume: loaded {recovery_path} "
-                    f"epoch {rec_epoch} completed_step {int(rec.get('completed_steps', 0))}",
+                    f"epoch {rec_epoch} completed_step {int(rec.get('completed_steps', 0))}"
+                    + (" pending epoch finalization" if recovery_finishes_unlogged_epoch else ""),
                     flush=True,
                 )
             else:
