@@ -1,0 +1,152 @@
+{
+  "schema_version": "c28f_v5_a4_synthetic_security_fixture_v1",
+  "synthetic_only": true,
+  "contains_real_protected_mapping": false,
+  "goal_id": "SYNTHETIC-C28F-GOAL",
+  "authority_id": "SYNTHETIC-AUTH-F0-F1",
+  "scope_id": "SYNTHETIC-G1-FIREWALL",
+  "forbidden_split_aliases": [
+    "calib_holdout",
+    "pseudo_official_holdout",
+    "official",
+    "official.validation"
+  ],
+  "split_capability": {
+    "capability_id": "CAP-F0A-CALIB-SELECT",
+    "split_id": "calib_select",
+    "split_manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "purpose": "F0A_TEACHER_FREE_FORENSICS",
+    "goal_id": "SYNTHETIC-C28F-GOAL",
+    "authority_id": "SYNTHETIC-AUTH-F0-F1",
+    "budget_token_id": "TOKEN-F0A",
+    "protected": false,
+    "query_entity_namespace": "query_desc_id",
+    "candidate_corpus_manifest_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "allow_model_forward": true
+  },
+  "metadata_dry_run_request": {
+    "request_id": "REQ-F0A-DRY-RUN",
+    "capability_id": "CAP-F0A-CALIB-SELECT",
+    "split_id": "calib_select",
+    "split_manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "purpose": "F0A_TEACHER_FREE_FORENSICS",
+    "goal_id": "SYNTHETIC-C28F-GOAL",
+    "authority_id": "SYNTHETIC-AUTH-F0-F1",
+    "budget_token_id": "TOKEN-F0A",
+    "candidate_corpus_manifest_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "mode": "METADATA_DRY_RUN",
+    "eval_id": "SYNTHETIC-EVAL-F0A"
+  },
+  "lmdb_key_fixture": {
+    "source_id": "SYNTHETIC-QUERY-LMDB",
+    "source_identity_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+    "key_manifest_sha256": "1dec4ab0e1a038ba3f815fce33978a39f6572c74538df908af9964858d08393e",
+    "split_authorization_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+    "entity_namespace": "query_desc_id",
+    "key_encoding": "ASCII_CANONICAL_UINT",
+    "allowed_synthetic_keys": [
+      "1001",
+      "1002"
+    ],
+    "denied_synthetic_keys": [
+      "01001",
+      "1003",
+      "not-an-id"
+    ]
+  },
+  "minimal_id_map": {
+    "grammar": "exactly desc_id:uint64 and video_id:safe-ascii-id; no other fields",
+    "accepted": [
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\"}",
+        "desc_id": 1001,
+        "video_id": "synthetic-video-01"
+      },
+      {
+        "line": " { \"video_id\" : \"synthetic.video:02\" , \"desc_id\" : 0 } ",
+        "desc_id": 0,
+        "video_id": "synthetic.video:02"
+      }
+    ],
+    "rejected": [
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"query\":\"SENSITIVE_SENTINEL_QUERY\"}",
+        "code": "IDMAP_UNEXPECTED_FIELD",
+        "sentinel_not_in_error": "SENSITIVE_SENTINEL_QUERY"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"timestamp\":9.5}",
+        "code": "IDMAP_UNEXPECTED_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"feature\":[1,2]}",
+        "code": "IDMAP_UNEXPECTED_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"label\":1}",
+        "code": "IDMAP_UNEXPECTED_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"metric\":0.9}",
+        "code": "IDMAP_UNEXPECTED_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\",\"prediction\":{}}",
+        "code": "IDMAP_UNEXPECTED_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":01,\"video_id\":\"synthetic-video-01\"}",
+        "code": "IDMAP_DESC_ID_NONCANONICAL"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"desc_id\":1002,\"video_id\":\"synthetic-video-01\"}",
+        "code": "IDMAP_DUPLICATE_FIELD"
+      },
+      {
+        "line": "{\"desc_id\":1001}",
+        "code": "IDMAP_REQUIRED_FIELD_MISSING"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"bad id with spaces\"}",
+        "code": "IDMAP_VIDEO_ID_NONCANONICAL"
+      },
+      {
+        "line": "{\"desc_id\":1001,\"video_id\":\"synthetic-video-01\"} trailing",
+        "code": "IDMAP_TRAILING_CONTENT"
+      }
+    ]
+  },
+  "legacy_marker_payloads": [
+    {
+      "allow_holdout_final": true
+    },
+    {
+      "nested": {
+        "official_authorized": false
+      }
+    },
+    {
+      "AUTH-HOLDOUT": "legacy-marker"
+    }
+  ],
+  "invalid_launcher_argv": [
+    [],
+    [
+      "--stage",
+      "all"
+    ],
+    [
+      "--stage",
+      "holdout"
+    ],
+    [
+      "--action",
+      "G1_FAIL_CLOSED_GUARD",
+      "--allow_holdout_final"
+    ],
+    [
+      "--action",
+      "formal"
+    ]
+  ]
+}

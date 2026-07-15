@@ -1,0 +1,51 @@
+{
+  "schema_version": "c28f_metric_fixture_v1",
+  "unit": "ratio",
+  "queries": [
+    {
+      "query_id": 101,
+      "gt_video_id": "v1",
+      "gt_span_sec": [0.0, 2.0],
+      "pooled_video_order": ["v1", "v2", "v3", "v4"],
+      "late_video_order": ["v2", "v1", "v3", "v4"],
+      "final_video_order": ["v2", "v1", "v3", "v4"],
+      "joint_proposals": [
+        ["v2", 0.0, 2.0, 4.0, 0.55],
+        ["v1", 0.0, 2.0, 3.0, 0.30],
+        ["v1", 3.0, 4.0, 2.0, 0.10],
+        ["v3", 0.0, 1.0, 1.0, 0.05]
+      ]
+    },
+    {
+      "query_id": 102,
+      "gt_video_id": "v2",
+      "gt_span_sec": [5.0, 8.0],
+      "pooled_video_order": ["v3", "v2", "v1", "v4"],
+      "late_video_order": ["v2", "v3", "v1", "v4"],
+      "final_video_order": ["v2", "v3", "v1", "v4"],
+      "joint_proposals": [
+        ["v2", 0.0, 2.0, 4.0, 0.50],
+        ["v2", 0.0, 2.0, 4.0, 0.20],
+        ["v3", 5.0, 8.0, 3.0, 0.20],
+        ["v2", 5.0, 8.0, 2.0, 0.10]
+      ]
+    },
+    {
+      "query_id": 103,
+      "gt_video_id": "v4",
+      "gt_span_sec": [1.0, 3.0],
+      "pooled_video_order": ["v1", "v2", "v3"],
+      "late_video_order": ["v3", "v2", "v1"],
+      "final_video_order": ["v3", "v2", "v1"],
+      "joint_proposals": [
+        ["v3", 1.0, 3.0, 3.0, 0.70],
+        ["v2", 0.0, 1.0, 2.0, 0.20],
+        ["v1", 1.0, 3.0, 1.0, 0.10]
+      ]
+    }
+  ],
+  "high_confidence": {
+    "status_without_prefit_temperature": "unavailable",
+    "quantile": 0.9
+  }
+}

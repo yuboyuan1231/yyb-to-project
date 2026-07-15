@@ -1,0 +1,20 @@
+{
+  "schema_version": "c28f_state_fixture_v1",
+  "synthetic_only": true,
+  "max_optimizer_updates": 64,
+  "scheduler_boundaries": [0.0, 0.1, 0.25, 0.4, 0.599999, 0.600001, 0.749999, 0.750001, 1.0],
+  "temporal_cases": [
+    {"duration_sec": 2.02, "raw_feature_len": 2, "target_lens": [64, 96, 128]},
+    {"duration_sec": 77.02, "raw_feature_len": 52, "target_lens": [64, 96, 128]},
+    {"duration_sec": 272.02, "raw_feature_len": 182, "target_lens": [64, 96, 128]}
+  ],
+  "interruptions": ["before_checkpoint", "after_checkpoint_before_manifest", "mid_eval", "before_status_rename"],
+  "formal_shape_contract": {
+    "broad_topk": 1000,
+    "candidate_topk": 200,
+    "proposals_per_video": 64,
+    "retrieval_target_len": 64,
+    "hidden_dim": 384,
+    "effective_batch": 32
+  }
+}
