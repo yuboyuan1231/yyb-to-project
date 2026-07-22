@@ -5,8 +5,8 @@ import torch.nn.functional as F
 
 
 def active_moment_diversity_loss(anchor_centers: torch.Tensor, anchor_widths: torch.Tensor) -> torch.Tensor:
-    centers = anchor_centers.sort(dim=1).values
-    diffs = centers[:, 1:] - centers[:, :-1]
+    centers = anchor_centers.sort(dim=-1).values
+    diffs = centers[..., 1:] - centers[..., :-1]
     return F.relu(0.05 - diffs).mean() + F.relu(0.03 - anchor_widths).mean()
 
 

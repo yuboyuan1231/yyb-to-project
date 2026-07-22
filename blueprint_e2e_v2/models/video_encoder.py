@@ -13,22 +13,57 @@ class VideoSubtitleEncoder(nn.Module):
         self.joint_proj = nn.Sequential(nn.LayerNorm(hidden_dim * 2), nn.Linear(hidden_dim * 2, hidden_dim), nn.GELU(), nn.Dropout(dropout), nn.LayerNorm(hidden_dim))
         self.temporal = nn.Sequential(nn.LayerNorm(hidden_dim), nn.Linear(hidden_dim, hidden_dim), nn.GELU(), nn.Dropout(dropout), nn.Linear(hidden_dim, hidden_dim), nn.LayerNorm(hidden_dim))
 
-    def forward(self, visual: torch.Tensor, subtitle: torch.Tensor) -> dict[str, torch.Tensor]:
+    @staticmethod
+    def _apply_mask(x: torch.Tensor, mask: torch.Tensor | None) -> torch.Tensor:
+        if mask is None:
+            return x
+        return x * mask.bool().unsqueeze(-1)
+
+    @staticmethod
+    def _masked_pool(x: torch.Tensor, mask: torch.Tensor | None) -> torch.Tensor:
+        if mask is None:
+            return F.normalize(x.mean(dim=2), dim=-1)
+        m = mask.to(device=x.device, dtype=x.dtype).unsqueeze(-1)
+        return F.normalize((x * m).sum(dim=2) / m.sum(dim=2).clamp_min(1.0), dim=-1)
+
+    def forward(
+        self,
+        visual: torch.Tensor,
+        subtitle: torch.Tensor,
+        visual_mask: torch.Tensor | None = None,
+        subtitle_mask: torch.Tensor | None = None,
+        clip_mask: torch.Tensor | None = None,
+    ) -> dict[str, torch.Tensor]:
         b, c, t, _ = visual.shape
-        vh = self.visual_proj(visual)
-        sh = self.subtitle_proj(subtitle)
+        vh = self._apply_mask(self.visual_proj(visual), visual_mask)
+        sh = self._apply_mask(self.subtitle_proj(subtitle), subtitle_mask)
         jh = self.joint_proj(torch.cat([vh, sh], dim=-1))
+        if clip_mask is None:
+            if visual_mask is not None and subtitle_mask is not None:
+                clip_mask = torch.logical_and(visual_mask.bool(), subtitle_mask.bool())
+            elif visual_mask is not None:
+                clip_mask = visual_mask.bool()
+            elif subtitle_mask is not None:
+                clip_mask = subtitle_mask.bool()
+        jh = self._apply_mask(jh, clip_mask)
         prev = torch.cat([jh[:, :, :1], jh[:, :, :-1]], dim=2)
         nxt = torch.cat([jh[:, :, 1:], jh[:, :, -1:]], dim=2)
-        mixed = (jh + prev + nxt) / 3.0
+        if clip_mask is None:
+            mixed = (jh + prev + nxt) / 3.0
+        else:
+            m = clip_mask.to(dtype=jh.dtype, device=jh.device).unsqueeze(-1)
+            prev_m = torch.cat([m[:, :, :1], m[:, :, :-1]], dim=2)
+            nxt_m = torch.cat([m[:, :, 1:], m[:, :, -1:]], dim=2)
+            mixed = (jh * m + prev * prev_m + nxt * nxt_m) / (m + prev_m + nxt_m).clamp_min(1.0)
         th = (self.temporal(mixed) + jh) * 0.5
+        th = self._apply_mask(th, clip_mask)
         return {
             "visual": F.normalize(vh, dim=-1),
             "subtitle": F.normalize(sh, dim=-1),
             "joint": F.normalize(th, dim=-1),
-            "visual_pool": F.normalize(vh.mean(dim=2), dim=-1),
-            "subtitle_pool": F.normalize(sh.mean(dim=2), dim=-1),
-            "joint_pool": F.normalize(th.mean(dim=2), dim=-1),
+            "visual_pool": self._masked_pool(vh, visual_mask),
+            "subtitle_pool": self._masked_pool(sh, subtitle_mask),
+            "joint_pool": self._masked_pool(th, clip_mask),
         }
 
     def encode_pooled_bank(self, visual_mean: torch.Tensor, subtitle_mean: torch.Tensor | None = None) -> dict[str, torch.Tensor]:

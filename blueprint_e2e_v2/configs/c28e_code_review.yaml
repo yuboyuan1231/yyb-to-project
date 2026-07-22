@@ -1,0 +1,96 @@
+mode: code_review
+seed: 2026
+use_data_parallel: true
+hidden_dim: 384
+query_dim: 768
+subtitle_dim: 768
+visual_dim: 4352
+
+# C28E is a code-review-first full E2E mechanism repair. Do not run official validation.
+epochs: 8
+batch_size: 32
+grad_accum_steps: 1
+step_checkpoint_every: 100
+cpu_micro_batch_size: 2
+gpu_micro_batch_size: 2
+lr: 0.00012
+weight_decay: 0.01
+max_queries: 0
+max_videos: 0
+chunk_size: 256
+
+# Candidate counts are separated; hard_negative_k never truncates eval candidates.
+candidate_topk_train: 200
+candidate_topk_eval: 200
+eval_candidate_k: 200
+hard_negative_k: 64
+loss_negative_sample_k: 128
+candidate_encode_chunk: 32
+clip_bank_encode_chunk: 128
+preload_sequence_bank: true
+target_len: 64
+
+# Two-stage dynamic retrieval: current student broad retrieval, then clip late interaction.
+broad_topk_train: 1000
+broad_topk_eval: 1000
+late_topk: 200
+late_interaction_enabled: true
+late_candidate_mining: true
+late_soft_topk: 8
+late_temperature: 0.07
+token_maxsim_weight: 0.25
+pooled_score_weight: 0.35
+late_score_weight: 0.65
+
+# Teacher is supervision/diagnostic only, never final static hard gate.
+teacher_topk: 200
+teacher_anchor_topk: 80
+teacher_score_temperature: 2.0
+use_teacher_score_field: false
+teacher_score_higher_is_better: true
+teacher_curriculum_phase0_topk: 120
+teacher_curriculum_phase1_topk: 80
+teacher_curriculum_phase2_topk: 40
+teacher_curriculum_phase3_topk: 0
+random_negative_k: 64
+student_negative_k: 128
+use_candidate_curriculum: true
+
+# Full E2E loss weights. Teacher-specific distillation losses live only in the
+# reference retriever diagnostic helper, not in the C28E full runner.
+front_rank_weight: 10.0
+lambda_inbatch: 0.3
+lambda_span: 2.0
+lambda_vcmr: 4.0
+lambda_pr: 0.5
+lambda_reg: 0.4
+lambda_amd_div: 0.2
+lambda_amd_rel: 0.5
+lambda_rg: 0.5
+lambda_fb: 0.8
+lambda_hn: 1.2
+lambda_cons: 0.5
+lambda_ng: 0.8
+
+# Selection firewall.
+selection_split: calib_select
+final_report_split: calib_holdout
+full_select_every: 1
+full_select_weight_vcmr_r1_iou07: 4.0
+full_select_weight_vcmr_r5_iou07: 3.0
+full_select_weight_vcmr_r10_iou07: 2.0
+full_select_weight_vr_r100: 1.0
+full_select_weight_wrong_video_top1: 0.5
+full_gate_vcmr_r1_iou07: 3.0
+full_gate_vcmr_r5_iou07: 8.0
+full_gate_vcmr_r10_iou07: 12.0
+full_gate_vr_r100: 80.0
+full_gate_wrong_video_top1_max: 95.0
+full_gate_high_score_false_positive_max: 95.0
+select_weight_vr10: 3.0
+select_weight_vr50: 2.0
+select_weight_vr100: 1.5
+select_weight_vr200: 1.0
+select_overfit_penalty: 0.5
+retriever_gate_absolute_vr100: 80.0
+retriever_gate_teacher_relative: 0.85

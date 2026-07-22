@@ -1,0 +1,27 @@
+# C28E Code Review Checklist
+
+- PR base is `c28c-cleanroom-e2e-blueprint-v2`.
+- No checkpoints, raw predictions, official outputs, or large caches are committed.
+- Holdout is not used for checkpoint/config selection.
+- `late_interaction_enabled` maps to real clip-level visual/subtitle/joint scoring.
+- Clip masks exclude padded release-feature positions from pooled, partial-relevance, late, and token scores.
+- Late retriever score is the retrieval evidence consumed by the localizer, feedback, and joint VCMR scoring.
+- C28E-3 runs `run_full_training` and `compute_full_loss`, not retriever-only distillation.
+- Full retriever optimization includes duplicate-safe in-batch video negatives as well as candidate-set negatives.
+- Full train/eval candidate mining reranks broad pooled candidates with clip late interaction.
+- Training loss scores raw candidate clips through the trainable video encoder.
+- Two-stage retrieval reports broad pooled recall separately from late rerank recall.
+- Teacher rankings are supervision/diagnostic only, never final static hard gates.
+- Long videos use duration-aware 64-bin resampling and GT span insertion uses the same grid.
+- ActiveMoment is candidate-video-conditioned.
+- Candidate scoring is chunked by candidate, preserving proposal count while controlling memory.
+- Candidate curriculum is explicit and audited per epoch.
+- `calib_select` is the only selection split.
+- Full E2E checkpoint selection uses `calib_select`; final holdout still requires `--allow_holdout_final`.
+- Ablation helpers must report pending evidence rather than positive contribution when toggled runs are missing.
+- Legacy pooled miner/retriever trainer code is diagnostic-only and not the C28E-3 training owner.
+- C28E-4 uses a multi-metric gate, not only `VCMR_R@1_IoU0.7`.
+- Train/eval reports include pooled/late/token/combined score scale audit and in-batch loss coupling.
+- Explicit `--device cuda:N` keeps training on one GPU and disables `DataParallel`.
+- Dynamic candidate refresh pre-encodes the current student clip bank once before late rerank.
+- Train/eval use GPU micro-batches to fit one card while preserving candidate/proposal counts and effective batch semantics.

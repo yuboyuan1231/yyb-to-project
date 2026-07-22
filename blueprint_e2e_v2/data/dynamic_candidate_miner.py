@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Iterator, Mapping
 from dataclasses import dataclass
 from typing import Any
 
@@ -16,8 +17,71 @@ class CandidateSet:
     gt_inserted: bool
 
 
+class CompactCandidateStore(Mapping[int, CandidateSet]):
+    """Matrix-backed candidate store for full-scale C28E refreshes.
+
+    The train split carries roughly 69k queries x 200 candidates. Keeping that
+    as per-query Python lists costs several extra GB and can be killed by the
+    OS after refresh. This store preserves the same candidate contents while
+    materializing Python lists only for the sampled query.
+    """
+
+    def __init__(
+        self,
+        query_ids: np.ndarray,
+        video_indices: np.ndarray,
+        scores: np.ndarray,
+        gt_video_indices: np.ndarray,
+        gt_inserted: np.ndarray,
+    ) -> None:
+        self.query_ids = np.asarray(query_ids, dtype=np.int64)
+        self.video_indices = np.asarray(video_indices, dtype=np.int32)
+        self.scores = np.asarray(scores, dtype=np.float32)
+        self.gt_video_indices = np.asarray(gt_video_indices, dtype=np.int32)
+        self.gt_inserted = np.asarray(gt_inserted, dtype=np.bool_)
+        self._row = {int(q): int(i) for i, q in enumerate(self.query_ids.tolist())}
+
+    def __len__(self) -> int:
+        return int(self.query_ids.shape[0])
+
+    def __iter__(self) -> Iterator[int]:
+        return (int(q) for q in self.query_ids)
+
+    def __getitem__(self, query_id: int) -> CandidateSet:
+        row = self._row[int(query_id)]
+        return CandidateSet(
+            int(query_id),
+            self.video_indices[row].astype(np.int64, copy=False).tolist(),
+            self.scores[row].astype(np.float32, copy=False).tolist(),
+            int(self.gt_video_indices[row]),
+            bool(self.gt_inserted[row]),
+        )
+
+    def arrays(self, query_id: int) -> tuple[np.ndarray, np.ndarray, int, bool]:
+        row = self._row[int(query_id)]
+        return (
+            self.video_indices[row],
+            self.scores[row],
+            int(self.gt_video_indices[row]),
+            bool(self.gt_inserted[row]),
+        )
+
+    def candidate_count_min(self) -> int:
+        return int(self.video_indices.shape[1]) if self.video_indices.ndim == 2 and len(self) else 0
+
+    def candidate_count_max(self) -> int:
+        return int(self.video_indices.shape[1]) if self.video_indices.ndim == 2 and len(self) else 0
+
+    def inserted_count(self) -> int:
+        return int(self.gt_inserted.sum())
+
+
 class DynamicCandidateMiner:
-    """Chunked current-retriever topK miner over the train video bank."""
+    """Legacy pooled miner retained for diagnostics.
+
+    C28E full train/eval uses ``engine.refresh_hard_negatives.refresh_candidates``,
+    which performs broad pooled recall followed by clip late-interaction rerank.
+    """
 
     def __init__(self, video_ids: list[str], video_to_idx: dict[str, int], dynamic_topk: int = 200, chunk_size: int = 256) -> None:
         self.video_ids = video_ids
@@ -36,9 +100,10 @@ class DynamicCandidateMiner:
         query_ids: list[int],
         gt_video_ids: list[str],
         device: torch.device,
+        query_mask: torch.Tensor | None = None,
     ) -> dict[int, CandidateSet]:
         model.eval()
-        q = model.encode_query(query_tokens.to(device), qtypes.to(device))
+        q = model.encode_query(query_tokens.to(device), qtypes.to(device), query_mask.to(device) if query_mask is not None else None)
         scores_all = []
         for st in range(0, visual_bank.shape[0], self.chunk_size):
             visual = visual_bank[st: st + self.chunk_size].to(device, non_blocking=True)
@@ -73,4 +138,3 @@ class DynamicCandidateMiner:
             "gt_insert_rate": 100.0 * inserted / max(1, len(candidates)),
             "static_top128_hard_gate_used": False,
         }
-

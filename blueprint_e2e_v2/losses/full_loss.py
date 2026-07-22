@@ -10,7 +10,7 @@ from blueprint_e2e_v2.losses.mutual_consistency_loss import localization_to_retr
 from blueprint_e2e_v2.losses.no_regression_loss import no_regression_loss
 from blueprint_e2e_v2.losses.partial_relevance_loss import partial_relevance_loss
 from blueprint_e2e_v2.losses.region_loss import region_loss
-from blueprint_e2e_v2.losses.retrieval_loss import video_retrieval_loss
+from blueprint_e2e_v2.losses.retrieval_loss import inbatch_video_retrieval_loss, video_retrieval_loss
 from blueprint_e2e_v2.losses.span_localization_loss import span_localization_loss
 from blueprint_e2e_v2.losses.vcmr_ranking_loss import joint_vcmr_ranking_loss
 
@@ -25,8 +25,14 @@ def compute_full_loss(out: dict[str, Any], batch: dict[str, torch.Tensor], cfg: 
     correct_video = batch["correct_video"].to(score["vcmr_score"].device)
     span_mask = batch.get("span_mask")
     span_mask = span_mask.to(score["vcmr_score"].device) if span_mask is not None else None
+    inbatch_loss = (
+        out["enc"]["joint_pool"].sum() * 0.0
+        if bool(cfg.get("skip_inbatch_retrieval", False))
+        else inbatch_video_retrieval_loss(out["query"], out["enc"], correct_video, batch.get("video_indices"))
+    )
     parts = {
         "L_video_retrieval": video_retrieval_loss(retr["retriever_score"], correct_video, cfg.get("front_rank_weight", 10.0)),
+        "L_inbatch_retrieval": inbatch_loss,
         "L_span_localization": span_localization_loss(local["span_score"], span_iou, span_ge07, span_mask),
         "L_joint_vcmr_ranking": joint_vcmr_ranking_loss(score["vcmr_score"], span_iou, span_ge07, correct_video, cfg.get("front_rank_weight", 10.0), span_mask),
         "L_partial_relevance": partial_relevance_loss(local["prem_span"], span_iou, correct_video, span_mask),
@@ -40,6 +46,7 @@ def compute_full_loss(out: dict[str, Any], batch: dict[str, torch.Tensor], cfg: 
         "L_no_regression": no_regression_loss(score["video_final"], retr["retriever_score"], correct_video),
     }
     weights = {
+        "L_inbatch_retrieval": cfg.get("lambda_inbatch", 0.3),
         "L_span_localization": cfg.get("lambda_span", 2.0),
         "L_joint_vcmr_ranking": cfg.get("lambda_vcmr", 4.0),
         "L_partial_relevance": cfg.get("lambda_pr", 0.5),
